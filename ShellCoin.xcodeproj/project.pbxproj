@@ -1,0 +1,547 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BC4AABDF1E4D69E2006568A6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BC4AABDE1E4D69E2006568A6 /* main.m */; };
+		BC4AABE21E4D69E2006568A6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BC4AABE11E4D69E2006568A6 /* AppDelegate.m */; };
+		BC4AABE51E4D69E2006568A6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC4AABE41E4D69E2006568A6 /* ViewController.m */; };
+		BC4AABE81E4D69E2006568A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC4AABE61E4D69E2006568A6 /* Main.storyboard */; };
+		BC4AABEB1E4D69E2006568A6 /* ShellCoin.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BC4AABE91E4D69E2006568A6 /* ShellCoin.xcdatamodeld */; };
+		BC4AABED1E4D69E2006568A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC4AABEC1E4D69E2006568A6 /* Assets.xcassets */; };
+		BC4AABF01E4D69E2006568A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC4AABEE1E4D69E2006568A6 /* LaunchScreen.storyboard */; };
+		BC4AABFB1E4D69E2006568A6 /* ShellCoinTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BC4AABFA1E4D69E2006568A6 /* ShellCoinTests.m */; };
+		BC4AAC061E4D69E2006568A6 /* ShellCoinUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BC4AAC051E4D69E2006568A6 /* ShellCoinUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BC4AABF71E4D69E2006568A6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC4AABD21E4D69E1006568A6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BC4AABD91E4D69E1006568A6;
+			remoteInfo = ShellCoin;
+		};
+		BC4AAC021E4D69E2006568A6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC4AABD21E4D69E1006568A6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BC4AABD91E4D69E1006568A6;
+			remoteInfo = ShellCoin;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BC4AABDA1E4D69E2006568A6 /* ShellCoin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShellCoin.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC4AABDE1E4D69E2006568A6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BC4AABE01E4D69E2006568A6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BC4AABE11E4D69E2006568A6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BC4AABE31E4D69E2006568A6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		BC4AABE41E4D69E2006568A6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		BC4AABE71E4D69E2006568A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BC4AABEA1E4D69E2006568A6 /* ShellCoin.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ShellCoin.xcdatamodel; sourceTree = "<group>"; };
+		BC4AABEC1E4D69E2006568A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BC4AABEF1E4D69E2006568A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BC4AABF11E4D69E2006568A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC4AABF61E4D69E2006568A6 /* ShellCoinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShellCoinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC4AABFA1E4D69E2006568A6 /* ShellCoinTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShellCoinTests.m; sourceTree = "<group>"; };
+		BC4AABFC1E4D69E2006568A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC4AAC011E4D69E2006568A6 /* ShellCoinUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShellCoinUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC4AAC051E4D69E2006568A6 /* ShellCoinUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShellCoinUITests.m; sourceTree = "<group>"; };
+		BC4AAC071E4D69E2006568A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BC4AABD71E4D69E1006568A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC4AABF31E4D69E2006568A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC4AABFE1E4D69E2006568A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BC4AABD11E4D69E1006568A6 = {
+			isa = PBXGroup;
+			children = (
+				BC4AABDC1E4D69E2006568A6 /* ShellCoin */,
+				BC4AABF91E4D69E2006568A6 /* ShellCoinTests */,
+				BC4AAC041E4D69E2006568A6 /* ShellCoinUITests */,
+				BC4AABDB1E4D69E2006568A6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BC4AABDB1E4D69E2006568A6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BC4AABDA1E4D69E2006568A6 /* ShellCoin.app */,
+				BC4AABF61E4D69E2006568A6 /* ShellCoinTests.xctest */,
+				BC4AAC011E4D69E2006568A6 /* ShellCoinUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BC4AABDC1E4D69E2006568A6 /* ShellCoin */ = {
+			isa = PBXGroup;
+			children = (
+				BC4AABE01E4D69E2006568A6 /* AppDelegate.h */,
+				BC4AABE11E4D69E2006568A6 /* AppDelegate.m */,
+				BC4AABE31E4D69E2006568A6 /* ViewController.h */,
+				BC4AABE41E4D69E2006568A6 /* ViewController.m */,
+				BC4AABE61E4D69E2006568A6 /* Main.storyboard */,
+				BC4AABEC1E4D69E2006568A6 /* Assets.xcassets */,
+				BC4AABEE1E4D69E2006568A6 /* LaunchScreen.storyboard */,
+				BC4AABF11E4D69E2006568A6 /* Info.plist */,
+				BC4AABE91E4D69E2006568A6 /* ShellCoin.xcdatamodeld */,
+				BC4AABDD1E4D69E2006568A6 /* Supporting Files */,
+			);
+			path = ShellCoin;
+			sourceTree = "<group>";
+		};
+		BC4AABDD1E4D69E2006568A6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BC4AABDE1E4D69E2006568A6 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BC4AABF91E4D69E2006568A6 /* ShellCoinTests */ = {
+			isa = PBXGroup;
+			children = (
+				BC4AABFA1E4D69E2006568A6 /* ShellCoinTests.m */,
+				BC4AABFC1E4D69E2006568A6 /* Info.plist */,
+			);
+			path = ShellCoinTests;
+			sourceTree = "<group>";
+		};
+		BC4AAC041E4D69E2006568A6 /* ShellCoinUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BC4AAC051E4D69E2006568A6 /* ShellCoinUITests.m */,
+				BC4AAC071E4D69E2006568A6 /* Info.plist */,
+			);
+			path = ShellCoinUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BC4AABD91E4D69E1006568A6 /* ShellCoin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BC4AAC0A1E4D69E2006568A6 /* Build configuration list for PBXNativeTarget "ShellCoin" */;
+			buildPhases = (
+				BC4AABD61E4D69E1006568A6 /* Sources */,
+				BC4AABD71E4D69E1006568A6 /* Frameworks */,
+				BC4AABD81E4D69E1006568A6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ShellCoin;
+			productName = ShellCoin;
+			productReference = BC4AABDA1E4D69E2006568A6 /* ShellCoin.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BC4AABF51E4D69E2006568A6 /* ShellCoinTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BC4AAC0D1E4D69E2006568A6 /* Build configuration list for PBXNativeTarget "ShellCoinTests" */;
+			buildPhases = (
+				BC4AABF21E4D69E2006568A6 /* Sources */,
+				BC4AABF31E4D69E2006568A6 /* Frameworks */,
+				BC4AABF41E4D69E2006568A6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BC4AABF81E4D69E2006568A6 /* PBXTargetDependency */,
+			);
+			name = ShellCoinTests;
+			productName = ShellCoinTests;
+			productReference = BC4AABF61E4D69E2006568A6 /* ShellCoinTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BC4AAC001E4D69E2006568A6 /* ShellCoinUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BC4AAC101E4D69E2006568A6 /* Build configuration list for PBXNativeTarget "ShellCoinUITests" */;
+			buildPhases = (
+				BC4AABFD1E4D69E2006568A6 /* Sources */,
+				BC4AABFE1E4D69E2006568A6 /* Frameworks */,
+				BC4AABFF1E4D69E2006568A6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BC4AAC031E4D69E2006568A6 /* PBXTargetDependency */,
+			);
+			name = ShellCoinUITests;
+			productName = ShellCoinUITests;
+			productReference = BC4AAC011E4D69E2006568A6 /* ShellCoinUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BC4AABD21E4D69E1006568A6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = Guo;
+				TargetAttributes = {
+					BC4AABD91E4D69E1006568A6 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					BC4AABF51E4D69E2006568A6 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = BC4AABD91E4D69E1006568A6;
+					};
+					BC4AAC001E4D69E2006568A6 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = BC4AABD91E4D69E1006568A6;
+					};
+				};
+			};
+			buildConfigurationList = BC4AABD51E4D69E1006568A6 /* Build configuration list for PBXProject "ShellCoin" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BC4AABD11E4D69E1006568A6;
+			productRefGroup = BC4AABDB1E4D69E2006568A6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BC4AABD91E4D69E1006568A6 /* ShellCoin */,
+				BC4AABF51E4D69E2006568A6 /* ShellCoinTests */,
+				BC4AAC001E4D69E2006568A6 /* ShellCoinUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BC4AABD81E4D69E1006568A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC4AABF01E4D69E2006568A6 /* LaunchScreen.storyboard in Resources */,
+				BC4AABED1E4D69E2006568A6 /* Assets.xcassets in Resources */,
+				BC4AABE81E4D69E2006568A6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC4AABF41E4D69E2006568A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC4AABFF1E4D69E2006568A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BC4AABD61E4D69E1006568A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC4AABE51E4D69E2006568A6 /* ViewController.m in Sources */,
+				BC4AABE21E4D69E2006568A6 /* AppDelegate.m in Sources */,
+				BC4AABDF1E4D69E2006568A6 /* main.m in Sources */,
+				BC4AABEB1E4D69E2006568A6 /* ShellCoin.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC4AABF21E4D69E2006568A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC4AABFB1E4D69E2006568A6 /* ShellCoinTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC4AABFD1E4D69E2006568A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC4AAC061E4D69E2006568A6 /* ShellCoinUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BC4AABF81E4D69E2006568A6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BC4AABD91E4D69E1006568A6 /* ShellCoin */;
+			targetProxy = BC4AABF71E4D69E2006568A6 /* PBXContainerItemProxy */;
+		};
+		BC4AAC031E4D69E2006568A6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BC4AABD91E4D69E1006568A6 /* ShellCoin */;
+			targetProxy = BC4AAC021E4D69E2006568A6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BC4AABE61E4D69E2006568A6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BC4AABE71E4D69E2006568A6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BC4AABEE1E4D69E2006568A6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BC4AABEF1E4D69E2006568A6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BC4AAC081E4D69E2006568A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BC4AAC091E4D69E2006568A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BC4AAC0B1E4D69E2006568A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ShellCoin/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.guo.icon.ShellCoin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BC4AAC0C1E4D69E2006568A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ShellCoin/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.guo.icon.ShellCoin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		BC4AAC0E1E4D69E2006568A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ShellCoinTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.guo.icon.ShellCoinTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShellCoin.app/ShellCoin";
+			};
+			name = Debug;
+		};
+		BC4AAC0F1E4D69E2006568A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ShellCoinTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.guo.icon.ShellCoinTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShellCoin.app/ShellCoin";
+			};
+			name = Release;
+		};
+		BC4AAC111E4D69E2006568A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ShellCoinUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.guo.icon.ShellCoinUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ShellCoin;
+			};
+			name = Debug;
+		};
+		BC4AAC121E4D69E2006568A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ShellCoinUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.guo.icon.ShellCoinUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ShellCoin;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BC4AABD51E4D69E1006568A6 /* Build configuration list for PBXProject "ShellCoin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC4AAC081E4D69E2006568A6 /* Debug */,
+				BC4AAC091E4D69E2006568A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BC4AAC0A1E4D69E2006568A6 /* Build configuration list for PBXNativeTarget "ShellCoin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC4AAC0B1E4D69E2006568A6 /* Debug */,
+				BC4AAC0C1E4D69E2006568A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BC4AAC0D1E4D69E2006568A6 /* Build configuration list for PBXNativeTarget "ShellCoinTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC4AAC0E1E4D69E2006568A6 /* Debug */,
+				BC4AAC0F1E4D69E2006568A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BC4AAC101E4D69E2006568A6 /* Build configuration list for PBXNativeTarget "ShellCoinUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC4AAC111E4D69E2006568A6 /* Debug */,
+				BC4AAC121E4D69E2006568A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BC4AABE91E4D69E2006568A6 /* ShellCoin.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BC4AABEA1E4D69E2006568A6 /* ShellCoin.xcdatamodel */,
+			);
+			currentVersion = BC4AABEA1E4D69E2006568A6 /* ShellCoin.xcdatamodel */;
+			path = ShellCoin.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = BC4AABD21E4D69E1006568A6 /* Project object */;
+}
