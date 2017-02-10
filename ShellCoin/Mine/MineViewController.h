@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  MineViewController.h
 //  ShellCoin
 //
 //  Created by Guo on 2017/2/10.
@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface MineViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
-
