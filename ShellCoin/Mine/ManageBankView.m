@@ -7,6 +7,7 @@
 //
 
 #import "ManageBankView.h"
+#import "EditBankInfoViewController.h"
 
 @implementation ManageBankView
 - (void)awakeFromNib
@@ -26,5 +27,7 @@
 }
 
 - (IBAction)editBtn:(id)sender {
+    EditBankInfoViewController *editBankVC = [[EditBankInfoViewController alloc]init];
+    [self.viewController.navigationController pushViewController:editBankVC animated:YES];
 }
 @end

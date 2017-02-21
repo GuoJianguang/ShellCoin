@@ -26,7 +26,7 @@
     self.naviBar = [BaseNavigationBar navigationBar];
     self.naviBar.back_btn.backgroundColor = [UIColor clearColor];
 //    self.naviBar.backgroundColor = [UIColor colorFromHexString:@"007aff"];
-    self.naviBar.backgroundColor = [UIColor whiteColor];
+    self.naviBar.backgroundColor = [UIColor redColor];
     [self.view addSubview:self.naviBar];
     [self.naviBar mas_makeConstraints:^(MASConstraintMaker *make) {
         make.leading.equalTo(self.view);

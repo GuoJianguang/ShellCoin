@@ -8,6 +8,7 @@
 
 #import "MineTableViewCell.h"
 #import "ManagerBankCardViewController.h"
+#import "PersonCenterViewController.h"
 
 
 @implementation MineTableViewCell
@@ -47,8 +48,8 @@
 
 //个人中心
 - (IBAction)personCenterAction:(id)sender {
-    ManagerBankCardViewController *manageBankVC = [[ManagerBankCardViewController alloc]init];
-    [self.viewController.navigationController pushViewController:manageBankVC animated:YES];
+    PersonCenterViewController *personVC = [[PersonCenterViewController alloc]init];
+    [self.viewController.navigationController pushViewController:personVC animated:YES];
 }
 
 //推荐收益

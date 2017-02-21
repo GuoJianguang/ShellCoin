@@ -10,8 +10,9 @@
 #import "NewPagedFlowView.h"
 #import "PGIndexBannerSubiew.h"
 #import "ManageBankView.h"
+#import "BanCardDetailTableViewCell.h"
 
-@interface ManagerBankCardViewController ()<NewPagedFlowViewDelegate, NewPagedFlowViewDataSource,BasenavigationDelegate>
+@interface ManagerBankCardViewController ()<NewPagedFlowViewDelegate, NewPagedFlowViewDataSource,BasenavigationDelegate,UITableViewDelegate,UITableViewDataSource>
 
 /**
  *  图片数组
@@ -19,6 +20,8 @@
 @property (nonatomic, strong) NSMutableArray *imageArray;
 
 @property (nonatomic, strong) ManageBankView *manageView;
+
+@property (nonatomic, strong)UITableView *talbeView;
 
 
 @end
@@ -85,6 +88,20 @@
     self.manageView.frame = CGRectMake(0, (TWitdh - 130) * 9 / 16 + 24 + 80, TWitdh, 80);
     [self.view addSubview:self.manageView];
     [self.view bringSubviewToFront:self.manageView];
+    
+    self.talbeView.frame = CGRectMake(0, CGRectGetMaxY(self.manageView.frame), TWitdh, THeight - CGRectGetMaxY(self.manageView.frame));
+    [self.view addSubview:self.talbeView];
+    self.talbeView.delegate = self;
+    self.talbeView.dataSource = self;
+    self.talbeView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
+}
+#pragma mark --懒加载
+- (NSMutableArray *)imageArray {
+    if (_imageArray == nil) {
+        _imageArray = [NSMutableArray array];
+    }
+    return _imageArray;
 }
 
 
@@ -96,6 +113,14 @@
     return _manageView;
 }
 
+
+- (UITableView *)talbeView
+{
+    if (!_talbeView) {
+        _talbeView = [[UITableView alloc]init];
+    }
+    return _talbeView;
+}
 
 
 #pragma mark NewPagedFlowView Delegate
@@ -136,12 +161,26 @@
     NSLog(@"ViewController 滚动到了第%ld页",pageNumber);
 }
 
-#pragma mark --懒加载
-- (NSMutableArray *)imageArray {
-    if (_imageArray == nil) {
-        _imageArray = [NSMutableArray array];
+
+
+#pragma mark - UITableView
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 1;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    BanCardDetailTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[BanCardDetailTableViewCell indentify]];
+    if (!cell) {
+        cell = [BanCardDetailTableViewCell newCell];
     }
-    return _imageArray;
+    return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return THeight - 200;
 }
 
 

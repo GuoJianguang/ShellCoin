@@ -25,6 +25,14 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(UIStatusBarStyle)preferredStatusBarStyle
+
+{
+    
+    return UIStatusBarStyleLightContent;  //默认的值是黑色的
+    
+}
+
 /*
 #pragma mark - Navigation
 

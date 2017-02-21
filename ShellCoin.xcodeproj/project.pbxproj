@@ -35,6 +35,19 @@
 		BC4AAC381E4D8D51006568A6 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC4AAC371E4D8D51006568A6 /* MineViewController.m */; };
 		BC4AAC3C1E4D8F7B006568A6 /* MineTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC4AAC3A1E4D8F7B006568A6 /* MineTableViewCell.m */; };
 		BC4AAC3D1E4D8F7B006568A6 /* MineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC4AAC3B1E4D8F7B006568A6 /* MineTableViewCell.xib */; };
+		BCBFF3CD1E5C207D00AFFE36 /* BanCardDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBFF3CB1E5C207D00AFFE36 /* BanCardDetailTableViewCell.m */; };
+		BCBFF3CE1E5C207D00AFFE36 /* BanCardDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCBFF3CC1E5C207D00AFFE36 /* BanCardDetailTableViewCell.xib */; };
+		BCBFF3D31E5C24A000AFFE36 /* PersonCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBFF3D11E5C24A000AFFE36 /* PersonCenterViewController.m */; };
+		BCBFF3D41E5C24A000AFFE36 /* PersonCenterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCBFF3D21E5C24A000AFFE36 /* PersonCenterViewController.xib */; };
+		BCBFF3D81E5C2B7500AFFE36 /* PersonCenterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBFF3D61E5C2B7500AFFE36 /* PersonCenterTableViewCell.m */; };
+		BCBFF3D91E5C2B7500AFFE36 /* PersonCenterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCBFF3D71E5C2B7500AFFE36 /* PersonCenterTableViewCell.xib */; };
+		BCBFF3DB1E5C2E9300AFFE36 /* header.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BCBFF3DA1E5C2E9300AFFE36 /* header.jpg */; };
+		BCBFF3DF1E5C370700AFFE36 /* EditBankInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBFF3DD1E5C370700AFFE36 /* EditBankInfoViewController.m */; };
+		BCBFF3E01E5C370700AFFE36 /* EditBankInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCBFF3DE1E5C370700AFFE36 /* EditBankInfoViewController.xib */; };
+		BCCAF40F1E5C381100E08A99 /* EditbankInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCAF40D1E5C381100E08A99 /* EditbankInfoTableViewCell.m */; };
+		BCCAF4101E5C381100E08A99 /* EditbankInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCCAF40E1E5C381100E08A99 /* EditbankInfoTableViewCell.xib */; };
+		BCE5EED71E5C41030055D828 /* Colours.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE5EED61E5C41030055D828 /* Colours.m */; };
+		BCE5EED91E5C41900055D828 /* Mine.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCE5EED81E5C41900055D828 /* Mine.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +120,25 @@
 		BC4AAC391E4D8F7B006568A6 /* MineTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineTableViewCell.h; sourceTree = "<group>"; };
 		BC4AAC3A1E4D8F7B006568A6 /* MineTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineTableViewCell.m; sourceTree = "<group>"; };
 		BC4AAC3B1E4D8F7B006568A6 /* MineTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MineTableViewCell.xib; sourceTree = "<group>"; };
+		BCBFF3CA1E5C207D00AFFE36 /* BanCardDetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BanCardDetailTableViewCell.h; sourceTree = "<group>"; };
+		BCBFF3CB1E5C207D00AFFE36 /* BanCardDetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BanCardDetailTableViewCell.m; sourceTree = "<group>"; };
+		BCBFF3CC1E5C207D00AFFE36 /* BanCardDetailTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BanCardDetailTableViewCell.xib; sourceTree = "<group>"; };
+		BCBFF3D01E5C24A000AFFE36 /* PersonCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonCenterViewController.h; sourceTree = "<group>"; };
+		BCBFF3D11E5C24A000AFFE36 /* PersonCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonCenterViewController.m; sourceTree = "<group>"; };
+		BCBFF3D21E5C24A000AFFE36 /* PersonCenterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonCenterViewController.xib; sourceTree = "<group>"; };
+		BCBFF3D51E5C2B7500AFFE36 /* PersonCenterTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonCenterTableViewCell.h; sourceTree = "<group>"; };
+		BCBFF3D61E5C2B7500AFFE36 /* PersonCenterTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonCenterTableViewCell.m; sourceTree = "<group>"; };
+		BCBFF3D71E5C2B7500AFFE36 /* PersonCenterTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonCenterTableViewCell.xib; sourceTree = "<group>"; };
+		BCBFF3DA1E5C2E9300AFFE36 /* header.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = header.jpg; sourceTree = "<group>"; };
+		BCBFF3DC1E5C370700AFFE36 /* EditBankInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditBankInfoViewController.h; sourceTree = "<group>"; };
+		BCBFF3DD1E5C370700AFFE36 /* EditBankInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditBankInfoViewController.m; sourceTree = "<group>"; };
+		BCBFF3DE1E5C370700AFFE36 /* EditBankInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditBankInfoViewController.xib; sourceTree = "<group>"; };
+		BCCAF40C1E5C381100E08A99 /* EditbankInfoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditbankInfoTableViewCell.h; sourceTree = "<group>"; };
+		BCCAF40D1E5C381100E08A99 /* EditbankInfoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditbankInfoTableViewCell.m; sourceTree = "<group>"; };
+		BCCAF40E1E5C381100E08A99 /* EditbankInfoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditbankInfoTableViewCell.xib; sourceTree = "<group>"; };
+		BCE5EED51E5C41030055D828 /* Colours.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Colours.h; sourceTree = "<group>"; };
+		BCE5EED61E5C41030055D828 /* Colours.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Colours.m; sourceTree = "<group>"; };
+		BCE5EED81E5C41900055D828 /* Mine.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Mine.xcassets; sourceTree = "<group>"; };
 		BEFB67E1918B5BA80284D66F /* libPods-ShellCoin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ShellCoin.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C11C2EEE802957925FA5F0C7 /* Pods-ShellCoin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShellCoin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShellCoin/Pods-ShellCoin.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -186,6 +218,7 @@
 				BC4AAC171E4D6E31006568A6 /* Mine */,
 				BC4AAC1B1E4D6E7D006568A6 /* Base */,
 				BC4AAC321E4D7556006568A6 /* Public */,
+				BC54EEBF1E5C40A200407AC5 /* ThirdAPI */,
 				BC4AABDD1E4D69E2006568A6 /* Supporting Files */,
 			);
 			path = ShellCoin;
@@ -229,6 +262,7 @@
 		BC4AAC171E4D6E31006568A6 /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				BCBFF3CF1E5C244D00AFFE36 /* PersonalCenter */,
 				BC4AAC361E4D8D51006568A6 /* MineViewController.h */,
 				BC4AAC371E4D8D51006568A6 /* MineViewController.m */,
 				BC4AAC391E4D8F7B006568A6 /* MineTableViewCell.h */,
@@ -240,6 +274,10 @@
 				BC07FC601E4DBF0A00F1B0FA /* ManageBankView.h */,
 				BC07FC611E4DBF0A00F1B0FA /* ManageBankView.m */,
 				BC07FC631E4DBF1A00F1B0FA /* ManageBankView.xib */,
+				BCBFF3CA1E5C207D00AFFE36 /* BanCardDetailTableViewCell.h */,
+				BCBFF3CB1E5C207D00AFFE36 /* BanCardDetailTableViewCell.m */,
+				BCBFF3CC1E5C207D00AFFE36 /* BanCardDetailTableViewCell.xib */,
+				BCE5EED81E5C41900055D828 /* Mine.xcassets */,
 			);
 			path = Mine;
 			sourceTree = "<group>";
@@ -275,6 +313,43 @@
 				BC2C219C1E4DAF1900AAFEFE /* NewPagedFlowView.m */,
 			);
 			path = Public;
+			sourceTree = "<group>";
+		};
+		BC54EEBF1E5C40A200407AC5 /* ThirdAPI */ = {
+			isa = PBXGroup;
+			children = (
+				BCE5EED41E5C41030055D828 /* Colours */,
+			);
+			path = ThirdAPI;
+			sourceTree = "<group>";
+		};
+		BCBFF3CF1E5C244D00AFFE36 /* PersonalCenter */ = {
+			isa = PBXGroup;
+			children = (
+				BCBFF3D01E5C24A000AFFE36 /* PersonCenterViewController.h */,
+				BCBFF3D11E5C24A000AFFE36 /* PersonCenterViewController.m */,
+				BCBFF3D21E5C24A000AFFE36 /* PersonCenterViewController.xib */,
+				BCBFF3D51E5C2B7500AFFE36 /* PersonCenterTableViewCell.h */,
+				BCBFF3D61E5C2B7500AFFE36 /* PersonCenterTableViewCell.m */,
+				BCBFF3D71E5C2B7500AFFE36 /* PersonCenterTableViewCell.xib */,
+				BCBFF3DC1E5C370700AFFE36 /* EditBankInfoViewController.h */,
+				BCBFF3DD1E5C370700AFFE36 /* EditBankInfoViewController.m */,
+				BCBFF3DE1E5C370700AFFE36 /* EditBankInfoViewController.xib */,
+				BCCAF40C1E5C381100E08A99 /* EditbankInfoTableViewCell.h */,
+				BCCAF40D1E5C381100E08A99 /* EditbankInfoTableViewCell.m */,
+				BCCAF40E1E5C381100E08A99 /* EditbankInfoTableViewCell.xib */,
+				BCBFF3DA1E5C2E9300AFFE36 /* header.jpg */,
+			);
+			path = PersonalCenter;
+			sourceTree = "<group>";
+		};
+		BCE5EED41E5C41030055D828 /* Colours */ = {
+			isa = PBXGroup;
+			children = (
+				BCE5EED51E5C41030055D828 /* Colours.h */,
+				BCE5EED61E5C41030055D828 /* Colours.m */,
+			);
+			path = Colours;
 			sourceTree = "<group>";
 		};
 		FF957477FB6E2C96A62B1F6D /* Frameworks */ = {
@@ -394,11 +469,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCBFF3CE1E5C207D00AFFE36 /* BanCardDetailTableViewCell.xib in Resources */,
+				BCBFF3D41E5C24A000AFFE36 /* PersonCenterViewController.xib in Resources */,
 				BC4AABF01E4D69E2006568A6 /* LaunchScreen.storyboard in Resources */,
 				BC4AABED1E4D69E2006568A6 /* Assets.xcassets in Resources */,
 				BC07FC641E4DBF1A00F1B0FA /* ManageBankView.xib in Resources */,
 				BC4AAC3D1E4D8F7B006568A6 /* MineTableViewCell.xib in Resources */,
+				BCBFF3DB1E5C2E9300AFFE36 /* header.jpg in Resources */,
 				BC4AAC2D1E4D6E7D006568A6 /* BaseNavigationBar.xib in Resources */,
+				BCE5EED91E5C41900055D828 /* Mine.xcassets in Resources */,
+				BCCAF4101E5C381100E08A99 /* EditbankInfoTableViewCell.xib in Resources */,
+				BCBFF3E01E5C370700AFFE36 /* EditBankInfoViewController.xib in Resources */,
+				BCBFF3D91E5C2B7500AFFE36 /* PersonCenterTableViewCell.xib in Resources */,
 				BC2C21971E4DAD3700AAFEFE /* ManagerBankCardViewController.xib in Resources */,
 				BC4AABE81E4D69E2006568A6 /* Main.storyboard in Resources */,
 			);
@@ -475,18 +557,24 @@
 			files = (
 				BC2C219D1E4DAF1900AAFEFE /* NewPagedFlowView.m in Sources */,
 				BC4AAC2E1E4D6E7D006568A6 /* BaseTableViewCell.m in Sources */,
+				BCBFF3D31E5C24A000AFFE36 /* PersonCenterViewController.m in Sources */,
 				BC4AAC2A1E4D6E7D006568A6 /* BaseHtmlViewController.m in Sources */,
 				BC4AAC381E4D8D51006568A6 /* MineViewController.m in Sources */,
 				BC4AAC351E4D7562006568A6 /* JAlertViewHelper.m in Sources */,
 				BC07FC621E4DBF0A00F1B0FA /* ManageBankView.m in Sources */,
 				BC2C219A1E4DAF1300AAFEFE /* PGIndexBannerSubiew.m in Sources */,
 				BC4AAC3C1E4D8F7B006568A6 /* MineTableViewCell.m in Sources */,
+				BCCAF40F1E5C381100E08A99 /* EditbankInfoTableViewCell.m in Sources */,
 				BC4AAC2F1E4D6E7D006568A6 /* BaseViewController.m in Sources */,
+				BCBFF3DF1E5C370700AFFE36 /* EditBankInfoViewController.m in Sources */,
 				BC2C21961E4DAD3700AAFEFE /* ManagerBankCardViewController.m in Sources */,
 				BC4AABE21E4D69E2006568A6 /* AppDelegate.m in Sources */,
+				BCBFF3CD1E5C207D00AFFE36 /* BanCardDetailTableViewCell.m in Sources */,
 				BC4AAC2B1E4D6E7D006568A6 /* BaseModel.m in Sources */,
+				BCBFF3D81E5C2B7500AFFE36 /* PersonCenterTableViewCell.m in Sources */,
 				BC4AAC291E4D6E7D006568A6 /* BaseCollectionViewCell.m in Sources */,
 				BC4AAC2C1E4D6E7D006568A6 /* BaseNavigationBar.m in Sources */,
+				BCE5EED71E5C41030055D828 /* Colours.m in Sources */,
 				BC4AABDF1E4D69E2006568A6 /* main.m in Sources */,
 				BC4AAC151E4D6DBB006568A6 /* RootViewController.m in Sources */,
 				BC4AAC1A1E4D6E5B006568A6 /* HomeViewController.m in Sources */,
