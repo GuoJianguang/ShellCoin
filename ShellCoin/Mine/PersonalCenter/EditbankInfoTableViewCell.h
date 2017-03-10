@@ -30,9 +30,21 @@
 
 @property (weak, nonatomic) IBOutlet UIView *view8;
 
+
+@property (weak, nonatomic) IBOutlet UITextField *bankCardNu;
+@property (weak, nonatomic) IBOutlet UITextField *bankLabel;
+@property (weak, nonatomic) IBOutlet UITextField *provincesTF;
+@property (weak, nonatomic) IBOutlet UITextField *nameTF;
+@property (weak, nonatomic) IBOutlet UITextField *kaihuhangTF;
+@property (weak, nonatomic) IBOutlet UITextField *kaihuhangNumdTF;
+@property (weak, nonatomic) IBOutlet UITextField *wangdianTF;
+@property (weak, nonatomic) IBOutlet UITextField *inputKaihuhangTF;
+
+
 @property (weak, nonatomic) IBOutlet UIButton *selcetZHNumBtn;
 
 - (IBAction)selcetZHNumBtn:(UIButton *)sender;
 
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *top8Height;
 
 @end

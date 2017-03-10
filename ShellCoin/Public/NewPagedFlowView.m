@@ -155,8 +155,6 @@
                     CGFloat inset = _pageSize.width * (1 - _minimumPageScale) / 2.0 ;
                     cell.layer.transform = CATransform3DMakeScale((_pageSize.width-inset*2)/_pageSize.width,(_pageSize.height-inset*2)/_pageSize.height, 1.0);
                     cell.frame = UIEdgeInsetsInsetRect(originCellFrame, UIEdgeInsetsMake(inset, inset, inset, inset));
-
-                    
                 }
 
             }

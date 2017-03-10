@@ -15,8 +15,9 @@
 #import <KeyboardManager.h>
 #import "BaseViewController.h"
 #import "BaseTableViewCell.h"
-
-
+#import "HttpClient.h"
+#import "AutoScroller.h"
+#import "SwipeView.h"
 
 
 // Include any system framework and library headers here that should be included in all compilation units.

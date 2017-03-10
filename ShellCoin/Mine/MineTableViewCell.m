@@ -9,6 +9,8 @@
 #import "MineTableViewCell.h"
 #import "ManagerBankCardViewController.h"
 #import "PersonCenterViewController.h"
+#import "SetViewController.h"
+#import "BillViewController.h"
 
 
 @implementation MineTableViewCell
@@ -58,11 +60,13 @@
 }
 //账单
 - (IBAction)billAction:(id)sender {
+    BillViewController *billVC = [[BillViewController alloc]init];
+    [self.viewController.navigationController pushViewController:billVC animated:YES];
     
 }
 //设置
 - (IBAction)setAction:(id)sender {
-    
-    
+    SetViewController *setVC = [[SetViewController alloc]init];
+    [self.viewController.navigationController pushViewController:setVC animated:YES];
 }
 @end

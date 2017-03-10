@@ -425,7 +425,7 @@
                 <outlet property="yestodayEarningsLabel" destination="3R2-hj-qC0" id="tYt-P9-Vds"/>
                 <outlet property="yestodyEarningsMoneyLabel" destination="FlV-8v-zOC" id="Ddh-Bo-vI9"/>
             </connections>
-            <point key="canvasLocation" x="-97" y="91"/>
+            <point key="canvasLocation" x="52" y="-45"/>
         </tableViewCell>
     </objects>
     <resources>

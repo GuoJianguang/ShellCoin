@@ -274,7 +274,6 @@
                     <constraint firstItem="VaB-zS-ary" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="Cr6-A5-iqR"/>
                     <constraint firstItem="gYQ-Nw-Cek" firstAttribute="top" secondItem="eWh-8T-wbU" secondAttribute="bottom" id="HKy-0y-JgJ"/>
                     <constraint firstAttribute="trailing" secondItem="gYQ-Nw-Cek" secondAttribute="trailing" constant="15" id="I3D-16-oTB"/>
-                    <constraint firstItem="VaB-zS-ary" firstAttribute="top" secondItem="a22-hQ-ipF" secondAttribute="bottom" constant="8" id="Ics-fu-efU"/>
                     <constraint firstItem="eWh-8T-wbU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Pv2-ZB-WRQ"/>
                     <constraint firstItem="eWh-8T-wbU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="WDr-3k-JD5"/>
                     <constraint firstAttribute="trailing" secondItem="VaB-zS-ary" secondAttribute="trailing" constant="15" id="YbF-wB-4zE"/>
@@ -282,10 +281,19 @@
                     <constraint firstItem="a22-hQ-ipF" firstAttribute="top" secondItem="gYQ-Nw-Cek" secondAttribute="bottom" constant="8" id="ej8-pm-LFn"/>
                     <constraint firstItem="gYQ-Nw-Cek" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="jWd-Fa-bdN"/>
                     <constraint firstAttribute="trailing" secondItem="eWh-8T-wbU" secondAttribute="trailing" id="og3-u0-xRz"/>
+                    <constraint firstItem="VaB-zS-ary" firstAttribute="top" secondItem="gYQ-Nw-Cek" secondAttribute="bottom" constant="73" id="yvi-Av-Puf"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="bankCardNu" destination="ZY3-Ea-43D" id="e9l-in-KJW"/>
+                <outlet property="bankLabel" destination="cLn-lS-wr4" id="G9w-21-esP"/>
+                <outlet property="inputKaihuhangTF" destination="2pP-oa-BRu" id="BVZ-KT-pTh"/>
+                <outlet property="kaihuhangNumdTF" destination="Rk4-td-2FM" id="FJK-v0-dCi"/>
+                <outlet property="kaihuhangTF" destination="yo0-7b-9HE" id="9ox-sH-059"/>
+                <outlet property="nameTF" destination="MvD-6X-Fug" id="QKN-HZ-NaH"/>
+                <outlet property="provincesTF" destination="98f-RI-nOn" id="Zst-2T-fBI"/>
                 <outlet property="selcetZHNumBtn" destination="gYQ-Nw-Cek" id="v0d-dI-se0"/>
+                <outlet property="top8Height" destination="yvi-Av-Puf" id="eGZ-er-9qO"/>
                 <outlet property="upView" destination="eWh-8T-wbU" id="usf-zM-qwY"/>
                 <outlet property="upViewHeight" destination="Dw0-MQ-dlR" id="HB4-Kd-mb8"/>
                 <outlet property="view1" destination="P1t-yX-HRn" id="iCc-SH-9pQ"/>
@@ -296,8 +304,9 @@
                 <outlet property="view6" destination="X80-mT-8Xx" id="29u-uc-sao"/>
                 <outlet property="view7" destination="a22-hQ-ipF" id="nmn-89-KB1"/>
                 <outlet property="view8" destination="VaB-zS-ary" id="imm-xy-bHx"/>
+                <outlet property="wangdianTF" destination="qGg-Og-bmY" id="zD7-rQ-ehe"/>
             </connections>
-            <point key="canvasLocation" x="-221" y="-51"/>
+            <point key="canvasLocation" x="-661" y="-328"/>
         </tableViewCell>
     </objects>
     <resources>
