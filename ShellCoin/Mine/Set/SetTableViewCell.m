@@ -7,6 +7,8 @@
 //
 
 #import "SetTableViewCell.h"
+#import "EditPhoneNumberViewController.h"
+#import "SetPasswordViewController.h"
 
 @implementation SetTableViewCell
 
@@ -30,9 +32,13 @@
 }
 
 - (IBAction)phoneBtn:(id)sender {
+    EditPhoneNumberViewController *phoneVC = [[EditPhoneNumberViewController alloc]init];
+    [self.viewController.navigationController pushViewController:phoneVC animated:YES];
     
 }
 - (IBAction)passwordBtn:(id)sender {
+    SetPasswordViewController *setPasswordVC = [[SetPasswordViewController alloc]init];
+    [self.viewController.navigationController pushViewController:setPasswordVC animated:YES];
     
 }
 

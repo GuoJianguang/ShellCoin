@@ -36,4 +36,8 @@
 
 - (IBAction)qrCodeBtn:(id)sender;
 
+@property (weak, nonatomic) IBOutlet UILabel *myCollectionlabel;
+
+- (IBAction)mycollectionBtn:(id)sender;
+
 @end

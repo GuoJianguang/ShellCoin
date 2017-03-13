@@ -11,6 +11,7 @@
 #import "PersonCenterViewController.h"
 #import "SetViewController.h"
 #import "BillViewController.h"
+#import "RecommentEarningsViewController.h"
 
 
 @implementation MineTableViewCell
@@ -56,7 +57,8 @@
 
 //推荐收益
 - (IBAction)recommendEarningsAction:(id)sender {
-    
+    RecommentEarningsViewController *recommentVC = [[RecommentEarningsViewController alloc]init];
+    [self.viewController.navigationController pushViewController:recommentVC animated:YES];
 }
 //账单
 - (IBAction)billAction:(id)sender {

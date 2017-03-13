@@ -8,6 +8,15 @@
 
 #import "PersonCenterTableViewCell.h"
 #import "ManagerBankCardViewController.h"
+#import "RealnameViewController.h"
+#import "NoBankCardViewController.h"
+#import "MyQrCodeViewController.h"
+
+@interface PersonCenterTableViewCell()
+
+@property (nonatomic, assign)BOOL isHaveBankCard;
+
+@end
 
 @implementation PersonCenterTableViewCell
 
@@ -17,7 +26,7 @@
     self.headImageView.layer.masksToBounds = YES;
     self.headImageView.layer.borderColor = [UIColor whiteColor].CGColor;
     self.headImageView.layer.borderWidth = 5;
-    self.headImageView.layer.cornerRadius = TWitdh*(180/750.)/2.;
+    self.headImageView.layer.cornerRadius = TWitdh*(10/15.) * (6/10.) /2.;
     
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(changeHead)];
@@ -43,12 +52,17 @@
     [self.viewController.navigationController popViewControllerAnimated:YES];
 }
 - (IBAction)realNameBtn:(id)sender {
-    
-    
+    RealnameViewController *realnameVC = [[RealnameViewController alloc]init];
+    [self.viewController.navigationController pushViewController:realnameVC animated:YES];
 }
 - (IBAction)bankBtn:(id)sender {
-    ManagerBankCardViewController *manageVC = [[ManagerBankCardViewController alloc]init];
-    [self.viewController.navigationController pushViewController:manageVC animated:YES];
+    if (self.isHaveBankCard) {
+        ManagerBankCardViewController *manageVC = [[ManagerBankCardViewController alloc]init];
+        [self.viewController.navigationController pushViewController:manageVC animated:YES];
+        return;
+    }
+    NoBankCardViewController *noBancardVC = [[NoBankCardViewController alloc]init];
+    [self.viewController.navigationController pushViewController:noBancardVC animated:YES];
     
 }
 - (IBAction)vipBtn:(id)sender {
@@ -56,11 +70,16 @@
     
 }
 - (IBAction)realNameManageBtn:(id)sender{
-    
+    RealnameViewController *realnameVC = [[RealnameViewController alloc]init];
+    [self.viewController.navigationController pushViewController:realnameVC animated:YES];
     
 }
 
 
 - (IBAction)qrCodeBtn:(id)sender {
+    MyQrCodeViewController *qrCodeVC = [[MyQrCodeViewController alloc]init];
+    [self.viewController.navigationController pushViewController:qrCodeVC animated:YES];
+}
+- (IBAction)mycollectionBtn:(id)sender {
 }
 @end

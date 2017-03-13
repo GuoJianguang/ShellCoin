@@ -18,6 +18,9 @@
 #import "HttpClient.h"
 #import "AutoScroller.h"
 #import "SwipeView.h"
+#import "Colours.h"
+#import <MJRefresh.h>
+
 
 
 // Include any system framework and library headers here that should be included in all compilation units.
