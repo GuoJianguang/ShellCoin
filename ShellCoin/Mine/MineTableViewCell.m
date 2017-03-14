@@ -12,6 +12,7 @@
 #import "SetViewController.h"
 #import "BillViewController.h"
 #import "RecommentEarningsViewController.h"
+#import "TradInViewController.h"
 
 
 @implementation MineTableViewCell
@@ -47,6 +48,8 @@
 }
 //抵换
 - (IBAction)tradeInBtn:(id)sender {
+    TradInViewController *tradInVC = [[TradInViewController alloc]init];
+    [self.viewController.navigationController pushViewController:tradInVC animated:YES];
 }
 
 //个人中心

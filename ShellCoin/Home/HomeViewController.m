@@ -7,8 +7,9 @@
 //
 
 #import "HomeViewController.h"
+#import "MineViewController.h"
 
-@interface HomeViewController ()
+@interface HomeViewController ()<UITabBarControllerDelegate>
 
 @end
 
@@ -19,7 +20,26 @@
     // Do any additional setup after loading the view.
     self.naviBar.title = @"首页";
     self.naviBar.hiddenBackBtn = YES;
+    
+    self.tabBarController.delegate = self;
 }
+
+
+#pragma mark - UITabBarDelegate
+
+- (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController
+{
+//    if([viewController isMemberOfClass:[MineViewController class]]){
+//        if (![ShellCoinUserInfo shareUserInfos].currentLogined) {
+//            //判断是否先登录
+//            UINavigationController *navc = [LoginViewController controller];
+//            [self presentViewController:navc animated:YES completion:NULL];
+//            return NO;
+//        }
+//    }
+    return YES;
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

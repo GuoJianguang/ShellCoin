@@ -2,13 +2,20 @@
 //  SetPasswordViewController.m
 //  ShellCoin
 //
-//  Created by Guo on 2017/3/13.
+//  Created by Guo on 2017/3/14.
 //  Copyright © 2017年 Guo. All rights reserved.
 //
 
 #import "SetPasswordViewController.h"
+#import "SetPayPasswordViewController.h"
+#import "ChangeLoginPasswordViewController.h"
+#import "ChangePayPasswordViewController.h"
 
-@interface SetPasswordViewController ()<BasenavigationDelegate>
+
+
+@interface SetPasswordViewController ()
+
+@property (nonatomic, assign)BOOL isHavePayPassowrd;
 
 @end
 
@@ -17,28 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.naviBar.title = @"设置支付密码";
-    self.naviBar.hiddenDetailBtn = NO;
-    self.naviBar.detailTitle = @"确认";
-    self.naviBar.delegate = self;
-    [self setLayerWithbor:self.view1];
-    [self setLayerWithbor:self.view2];
-
 }
-
-- (void)setLayerWithbor:(UIView*)view
-{
-    view.layer.borderWidth = 1;
-    view.backgroundColor = [UIColor whiteColor];
-    view.layer.borderColor = [UIColor colorFromHexString:@"#e6e6e6"].CGColor;
-}
-
-#pragma mark - 确认按钮
-- (void)detailBtnClick
-{
-    
-}
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -55,6 +41,19 @@
 }
 */
 
-- (IBAction)openSwitch:(id)sender {
+- (IBAction)loginBtn:(id)sender {
+    ChangeLoginPasswordViewController *changeLoginVC = [[ChangeLoginPasswordViewController alloc]init];
+    [self.navigationController pushViewController:changeLoginVC animated:YES];
+}
+
+- (IBAction)paypasswordBtn:(id)sender {
+    self.isHavePayPassowrd = YES;
+    if (self.isHavePayPassowrd) {
+        ChangePayPasswordViewController *changePasswordVC = [[ChangePayPasswordViewController alloc]init];
+        [self.navigationController pushViewController:changePasswordVC animated:YES];
+        return;
+    }
+    SetPayPasswordViewController *setPayPasswordVC = [[SetPayPasswordViewController alloc]init];
+    [self.navigationController pushViewController:setPayPasswordVC animated:YES];
 }
 @end

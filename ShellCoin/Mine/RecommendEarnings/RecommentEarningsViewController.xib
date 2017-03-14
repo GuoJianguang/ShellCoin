@@ -19,6 +19,7 @@
                 <outlet property="titleLabel" destination="kXF-co-qpv" id="Wbd-qY-ouo"/>
                 <outlet property="totalMoneyLabel" destination="OuX-eU-69L" id="f5j-cn-FHK"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="withdrawalBtn" destination="bqD-qG-G8v" id="Eec-Gf-YzZ"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -113,18 +114,27 @@
                         <outlet property="delegate" destination="-1" id="vdi-0G-PMT"/>
                     </connections>
                 </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bqD-qG-G8v">
+                    <rect key="frame" x="324" y="617" width="31" height="30"/>
+                    <state key="normal" title="提现"/>
+                    <connections>
+                        <action selector="withdrawalBtn:" destination="-1" eventType="touchUpInside" id="LXX-WB-uzW"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstAttribute="bottom" secondItem="bqD-qG-G8v" secondAttribute="bottom" constant="20" id="CAp-nH-ZpW"/>
                 <constraint firstItem="12y-cT-VCo" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="KN1-GV-Jvx"/>
                 <constraint firstItem="12y-cT-VCo" firstAttribute="top" secondItem="u30-fR-wo4" secondAttribute="bottom" id="MdV-WN-uXy"/>
                 <constraint firstItem="u30-fR-wo4" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="YDb-Xe-GpP"/>
                 <constraint firstAttribute="trailing" secondItem="u30-fR-wo4" secondAttribute="trailing" id="cd4-Kl-SVF"/>
+                <constraint firstAttribute="trailing" secondItem="bqD-qG-G8v" secondAttribute="trailing" constant="20" id="fCc-2h-VFb"/>
                 <constraint firstAttribute="bottom" secondItem="12y-cT-VCo" secondAttribute="bottom" id="qOh-CT-8vB"/>
                 <constraint firstItem="u30-fR-wo4" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="tz4-FH-dKo"/>
                 <constraint firstAttribute="trailing" secondItem="12y-cT-VCo" secondAttribute="trailing" id="yxQ-eE-5m3"/>
             </constraints>
-            <point key="canvasLocation" x="358" y="-156"/>
+            <point key="canvasLocation" x="139" y="-212"/>
         </view>
     </objects>
 </document>

@@ -16,7 +16,7 @@
             <rect key="frame" x="0.0" y="0.0" width="492" height="803"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="492" height="802"/>
+                <rect key="frame" x="0.0" y="0.0" width="492" height="802.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YTb-4c-3Gm">
@@ -70,10 +70,10 @@
                         <rect key="frame" x="0.0" y="327.5" width="492" height="65"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_scan_weixin_payment_sel" translatesAutoresizingMaskIntoConstraints="NO" id="Tny-w8-H1B">
-                                <rect key="frame" x="20" y="18.5" width="30" height="30"/>
+                                <rect key="frame" x="20" y="17.5" width="30" height="30"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_right" translatesAutoresizingMaskIntoConstraints="NO" id="XJG-rj-EKd">
-                                <rect key="frame" x="462" y="24.5" width="10" height="18"/>
+                                <rect key="frame" x="462" y="23.5" width="10" height="18"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="手机号" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3kE-oN-9Wf">
                                 <rect key="frame" x="60" y="24" width="46" height="18"/>
@@ -257,7 +257,7 @@
                 <outlet property="phoneLabel" destination="3kE-oN-9Wf" id="pVv-Xa-q09"/>
                 <outlet property="setLabel" destination="bld-Zf-PXa" id="M9q-lu-Mjr"/>
             </connections>
-            <point key="canvasLocation" x="104" y="-455"/>
+            <point key="canvasLocation" x="356" y="-522"/>
         </tableViewCell>
     </objects>
     <resources>

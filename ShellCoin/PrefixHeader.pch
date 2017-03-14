@@ -20,7 +20,12 @@
 #import "SwipeView.h"
 #import "Colours.h"
 #import <MJRefresh.h>
-
+#import "BaseModel.h"
+#import <SVProgressHUD.h>
+#import "BaseHtmlViewController.h"
+#import "ShellCoinUserInfo.h"
+#import "Verify.h"
+#import "LoginViewController.h"
 
 
 // Include any system framework and library headers here that should be included in all compilation units.

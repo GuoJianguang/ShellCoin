@@ -82,10 +82,40 @@
 		BC9B3E041E7698CC003DC241 /* ManageBankView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC9B3DFD1E7698CC003DC241 /* ManageBankView.xib */; };
 		BC9B3E051E7698CC003DC241 /* ManagerBankCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9B3DFF1E7698CC003DC241 /* ManagerBankCardViewController.m */; };
 		BC9B3E061E7698CC003DC241 /* ManagerBankCardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC9B3E001E7698CC003DC241 /* ManagerBankCardViewController.xib */; };
-		BC9B3E0A1E769D44003DC241 /* SetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9B3E081E769D44003DC241 /* SetPasswordViewController.m */; };
-		BC9B3E0B1E769D44003DC241 /* SetPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC9B3E091E769D44003DC241 /* SetPasswordViewController.xib */; };
+		BC9B3E0A1E769D44003DC241 /* SetPayPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9B3E081E769D44003DC241 /* SetPayPasswordViewController.m */; };
+		BC9B3E0B1E769D44003DC241 /* SetPayPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC9B3E091E769D44003DC241 /* SetPayPasswordViewController.xib */; };
 		BCE5EED71E5C41030055D828 /* Colours.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE5EED61E5C41030055D828 /* Colours.m */; };
 		BCE5EED91E5C41900055D828 /* Mine.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCE5EED81E5C41900055D828 /* Mine.xcassets */; };
+		BCFE20551E778CA9002BC28C /* SetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCFE20531E778CA9002BC28C /* SetPasswordViewController.m */; };
+		BCFE20561E778CA9002BC28C /* SetPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCFE20541E778CA9002BC28C /* SetPasswordViewController.xib */; };
+		BCFE205A1E778F45002BC28C /* ChangeLoginPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCFE20581E778F45002BC28C /* ChangeLoginPasswordViewController.m */; };
+		BCFE205B1E778F45002BC28C /* ChangeLoginPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCFE20591E778F45002BC28C /* ChangeLoginPasswordViewController.xib */; };
+		BCFE205F1E779283002BC28C /* ChangePayPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCFE205D1E779283002BC28C /* ChangePayPasswordViewController.m */; };
+		BCFE20601E779283002BC28C /* ChangePayPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCFE205E1E779283002BC28C /* ChangePayPasswordViewController.xib */; };
+		BCFE20651E7798D6002BC28C /* TradInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCFE20631E7798D6002BC28C /* TradInViewController.m */; };
+		BCFE20661E7798D6002BC28C /* TradInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCFE20641E7798D6002BC28C /* TradInViewController.xib */; };
+		BCFE206A1E77BC83002BC28C /* TradInTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BCFE20681E77BC83002BC28C /* TradInTableViewCell.m */; };
+		BCFE206B1E77BC83002BC28C /* TradInTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCFE20691E77BC83002BC28C /* TradInTableViewCell.xib */; };
+		BCFE206E1E77C7D6002BC28C /* SelectBanCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = BCFE206D1E77C7D6002BC28C /* SelectBanCardView.m */; };
+		BCFE20701E77C7E6002BC28C /* SelectBanCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCFE206F1E77C7E6002BC28C /* SelectBanCardView.xib */; };
+		BCFE20741E77C9F6002BC28C /* SecletBankCardTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BCFE20721E77C9F6002BC28C /* SecletBankCardTableViewCell.m */; };
+		BCFE20751E77C9F6002BC28C /* SecletBankCardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCFE20731E77C9F6002BC28C /* SecletBankCardTableViewCell.xib */; };
+		BCFE20781E77D437002BC28C /* SureTradInView.m in Sources */ = {isa = PBXBuildFile; fileRef = BCFE20771E77D437002BC28C /* SureTradInView.m */; };
+		BCFE207A1E77D443002BC28C /* SureTradInView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCFE20791E77D443002BC28C /* SureTradInView.xib */; };
+		BCFE208B1E77E206002BC28C /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCFE207C1E77E206002BC28C /* Login.storyboard */; };
+		BCFE208C1E77E206002BC28C /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCFE207E1E77E206002BC28C /* LoginViewController.m */; };
+		BCFE208D1E77E206002BC28C /* RegisterOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCFE20801E77E206002BC28C /* RegisterOneViewController.m */; };
+		BCFE208E1E77E206002BC28C /* RegisterOneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCFE20811E77E206002BC28C /* RegisterOneViewController.xib */; };
+		BCFE208F1E77E206002BC28C /* RegisterTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCFE20831E77E206002BC28C /* RegisterTwoViewController.m */; };
+		BCFE20901E77E206002BC28C /* RegisterTwoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCFE20841E77E206002BC28C /* RegisterTwoViewController.xib */; };
+		BCFE20911E77E206002BC28C /* ForgetPasswordOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCFE20861E77E206002BC28C /* ForgetPasswordOneViewController.m */; };
+		BCFE20921E77E206002BC28C /* ForgetPasswordOneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCFE20871E77E206002BC28C /* ForgetPasswordOneViewController.xib */; };
+		BCFE20931E77E206002BC28C /* ForgetPasswordTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCFE20891E77E206002BC28C /* ForgetPasswordTwoViewController.m */; };
+		BCFE20941E77E206002BC28C /* ForgetPasswordTwoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCFE208A1E77E206002BC28C /* ForgetPasswordTwoViewController.xib */; };
+		BCFE20971E77E329002BC28C /* ShellCoinUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = BCFE20961E77E329002BC28C /* ShellCoinUserInfo.m */; };
+		BCFE209A1E77E4A6002BC28C /* Verify.m in Sources */ = {isa = PBXBuildFile; fileRef = BCFE20991E77E4A6002BC28C /* Verify.m */; };
+		BCFE209E1E77EF2A002BC28C /* WithdrawalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCFE209C1E77EF2A002BC28C /* WithdrawalViewController.m */; };
+		BCFE209F1E77EF2A002BC28C /* WithdrawalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCFE209D1E77EF2A002BC28C /* WithdrawalViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -232,12 +262,58 @@
 		BC9B3DFE1E7698CC003DC241 /* ManagerBankCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManagerBankCardViewController.h; sourceTree = "<group>"; };
 		BC9B3DFF1E7698CC003DC241 /* ManagerBankCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManagerBankCardViewController.m; sourceTree = "<group>"; };
 		BC9B3E001E7698CC003DC241 /* ManagerBankCardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ManagerBankCardViewController.xib; sourceTree = "<group>"; };
-		BC9B3E071E769D44003DC241 /* SetPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetPasswordViewController.h; sourceTree = "<group>"; };
-		BC9B3E081E769D44003DC241 /* SetPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetPasswordViewController.m; sourceTree = "<group>"; };
-		BC9B3E091E769D44003DC241 /* SetPasswordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SetPasswordViewController.xib; sourceTree = "<group>"; };
+		BC9B3E071E769D44003DC241 /* SetPayPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetPayPasswordViewController.h; sourceTree = "<group>"; };
+		BC9B3E081E769D44003DC241 /* SetPayPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetPayPasswordViewController.m; sourceTree = "<group>"; };
+		BC9B3E091E769D44003DC241 /* SetPayPasswordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SetPayPasswordViewController.xib; sourceTree = "<group>"; };
 		BCE5EED51E5C41030055D828 /* Colours.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Colours.h; sourceTree = "<group>"; };
 		BCE5EED61E5C41030055D828 /* Colours.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Colours.m; sourceTree = "<group>"; };
 		BCE5EED81E5C41900055D828 /* Mine.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Mine.xcassets; sourceTree = "<group>"; };
+		BCFE20521E778CA9002BC28C /* SetPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetPasswordViewController.h; sourceTree = "<group>"; };
+		BCFE20531E778CA9002BC28C /* SetPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetPasswordViewController.m; sourceTree = "<group>"; };
+		BCFE20541E778CA9002BC28C /* SetPasswordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SetPasswordViewController.xib; sourceTree = "<group>"; };
+		BCFE20571E778F45002BC28C /* ChangeLoginPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangeLoginPasswordViewController.h; sourceTree = "<group>"; };
+		BCFE20581E778F45002BC28C /* ChangeLoginPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangeLoginPasswordViewController.m; sourceTree = "<group>"; };
+		BCFE20591E778F45002BC28C /* ChangeLoginPasswordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChangeLoginPasswordViewController.xib; sourceTree = "<group>"; };
+		BCFE205C1E779283002BC28C /* ChangePayPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangePayPasswordViewController.h; sourceTree = "<group>"; };
+		BCFE205D1E779283002BC28C /* ChangePayPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangePayPasswordViewController.m; sourceTree = "<group>"; };
+		BCFE205E1E779283002BC28C /* ChangePayPasswordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChangePayPasswordViewController.xib; sourceTree = "<group>"; };
+		BCFE20621E7798D6002BC28C /* TradInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TradInViewController.h; sourceTree = "<group>"; };
+		BCFE20631E7798D6002BC28C /* TradInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TradInViewController.m; sourceTree = "<group>"; };
+		BCFE20641E7798D6002BC28C /* TradInViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TradInViewController.xib; sourceTree = "<group>"; };
+		BCFE20671E77BC83002BC28C /* TradInTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TradInTableViewCell.h; sourceTree = "<group>"; };
+		BCFE20681E77BC83002BC28C /* TradInTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TradInTableViewCell.m; sourceTree = "<group>"; };
+		BCFE20691E77BC83002BC28C /* TradInTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TradInTableViewCell.xib; sourceTree = "<group>"; };
+		BCFE206C1E77C7D6002BC28C /* SelectBanCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectBanCardView.h; sourceTree = "<group>"; };
+		BCFE206D1E77C7D6002BC28C /* SelectBanCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectBanCardView.m; sourceTree = "<group>"; };
+		BCFE206F1E77C7E6002BC28C /* SelectBanCardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectBanCardView.xib; sourceTree = "<group>"; };
+		BCFE20711E77C9F6002BC28C /* SecletBankCardTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecletBankCardTableViewCell.h; sourceTree = "<group>"; };
+		BCFE20721E77C9F6002BC28C /* SecletBankCardTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecletBankCardTableViewCell.m; sourceTree = "<group>"; };
+		BCFE20731E77C9F6002BC28C /* SecletBankCardTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecletBankCardTableViewCell.xib; sourceTree = "<group>"; };
+		BCFE20761E77D437002BC28C /* SureTradInView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SureTradInView.h; sourceTree = "<group>"; };
+		BCFE20771E77D437002BC28C /* SureTradInView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SureTradInView.m; sourceTree = "<group>"; };
+		BCFE20791E77D443002BC28C /* SureTradInView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SureTradInView.xib; sourceTree = "<group>"; };
+		BCFE207C1E77E206002BC28C /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		BCFE207D1E77E206002BC28C /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		BCFE207E1E77E206002BC28C /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		BCFE207F1E77E206002BC28C /* RegisterOneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterOneViewController.h; sourceTree = "<group>"; };
+		BCFE20801E77E206002BC28C /* RegisterOneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterOneViewController.m; sourceTree = "<group>"; };
+		BCFE20811E77E206002BC28C /* RegisterOneViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterOneViewController.xib; sourceTree = "<group>"; };
+		BCFE20821E77E206002BC28C /* RegisterTwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterTwoViewController.h; sourceTree = "<group>"; };
+		BCFE20831E77E206002BC28C /* RegisterTwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterTwoViewController.m; sourceTree = "<group>"; };
+		BCFE20841E77E206002BC28C /* RegisterTwoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterTwoViewController.xib; sourceTree = "<group>"; };
+		BCFE20851E77E206002BC28C /* ForgetPasswordOneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetPasswordOneViewController.h; sourceTree = "<group>"; };
+		BCFE20861E77E206002BC28C /* ForgetPasswordOneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetPasswordOneViewController.m; sourceTree = "<group>"; };
+		BCFE20871E77E206002BC28C /* ForgetPasswordOneViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForgetPasswordOneViewController.xib; sourceTree = "<group>"; };
+		BCFE20881E77E206002BC28C /* ForgetPasswordTwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetPasswordTwoViewController.h; sourceTree = "<group>"; };
+		BCFE20891E77E206002BC28C /* ForgetPasswordTwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetPasswordTwoViewController.m; sourceTree = "<group>"; };
+		BCFE208A1E77E206002BC28C /* ForgetPasswordTwoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForgetPasswordTwoViewController.xib; sourceTree = "<group>"; };
+		BCFE20951E77E329002BC28C /* ShellCoinUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShellCoinUserInfo.h; sourceTree = "<group>"; };
+		BCFE20961E77E329002BC28C /* ShellCoinUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShellCoinUserInfo.m; sourceTree = "<group>"; };
+		BCFE20981E77E4A6002BC28C /* Verify.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Verify.h; sourceTree = "<group>"; };
+		BCFE20991E77E4A6002BC28C /* Verify.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Verify.m; sourceTree = "<group>"; };
+		BCFE209B1E77EF2A002BC28C /* WithdrawalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WithdrawalViewController.h; sourceTree = "<group>"; };
+		BCFE209C1E77EF2A002BC28C /* WithdrawalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WithdrawalViewController.m; sourceTree = "<group>"; };
+		BCFE209D1E77EF2A002BC28C /* WithdrawalViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WithdrawalViewController.xib; sourceTree = "<group>"; };
 		BEFB67E1918B5BA80284D66F /* libPods-ShellCoin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ShellCoin.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C11C2EEE802957925FA5F0C7 /* Pods-ShellCoin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShellCoin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShellCoin/Pods-ShellCoin.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -306,9 +382,18 @@
 				BC9B3DF31E76982B003DC241 /* EditPhoneNumberViewController.h */,
 				BC9B3DF41E76982B003DC241 /* EditPhoneNumberViewController.m */,
 				BC9B3DF51E76982B003DC241 /* EditPhoneNumberViewController.xib */,
-				BC9B3E071E769D44003DC241 /* SetPasswordViewController.h */,
-				BC9B3E081E769D44003DC241 /* SetPasswordViewController.m */,
-				BC9B3E091E769D44003DC241 /* SetPasswordViewController.xib */,
+				BCFE20521E778CA9002BC28C /* SetPasswordViewController.h */,
+				BCFE20531E778CA9002BC28C /* SetPasswordViewController.m */,
+				BCFE20541E778CA9002BC28C /* SetPasswordViewController.xib */,
+				BCFE20571E778F45002BC28C /* ChangeLoginPasswordViewController.h */,
+				BCFE20581E778F45002BC28C /* ChangeLoginPasswordViewController.m */,
+				BCFE20591E778F45002BC28C /* ChangeLoginPasswordViewController.xib */,
+				BC9B3E071E769D44003DC241 /* SetPayPasswordViewController.h */,
+				BC9B3E081E769D44003DC241 /* SetPayPasswordViewController.m */,
+				BC9B3E091E769D44003DC241 /* SetPayPasswordViewController.xib */,
+				BCFE205C1E779283002BC28C /* ChangePayPasswordViewController.h */,
+				BCFE205D1E779283002BC28C /* ChangePayPasswordViewController.m */,
+				BCFE205E1E779283002BC28C /* ChangePayPasswordViewController.xib */,
 			);
 			path = Set;
 			sourceTree = "<group>";
@@ -365,6 +450,7 @@
 				BC4AABE91E4D69E2006568A6 /* ShellCoin.xcdatamodeld */,
 				BC4AAC301E4D7006006568A6 /* PrefixHeader.pch */,
 				BC4AAC311E4D74FD006568A6 /* TTXMacro.h */,
+				BCFE207B1E77DE53002BC28C /* Login */,
 				BC4AAC161E4D6E31006568A6 /* Home */,
 				BC4AAC171E4D6E31006568A6 /* Mine */,
 				BC4AAC1B1E4D6E7D006568A6 /* Base */,
@@ -413,6 +499,7 @@
 		BC4AAC171E4D6E31006568A6 /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				BCFE20611E7798C4002BC28C /* trade-in */,
 				BC9B3DE81E7690D5003DC241 /* RecommendEarnings */,
 				BC0A583A1E728D3E0077C8A9 /* Bill */,
 				BC0A582C1E7282180077C8A9 /* Set */,
@@ -443,6 +530,8 @@
 				BC4AAC261E4D6E7D006568A6 /* BaseTableViewCell.m */,
 				BC4AAC271E4D6E7D006568A6 /* BaseViewController.h */,
 				BC4AAC281E4D6E7D006568A6 /* BaseViewController.m */,
+				BCFE20951E77E329002BC28C /* ShellCoinUserInfo.h */,
+				BCFE20961E77E329002BC28C /* ShellCoinUserInfo.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -463,6 +552,8 @@
 				BC0A58411E728F050077C8A9 /* SwipeView.m */,
 				BC0A58431E728F2C0077C8A9 /* AutoScroller.h */,
 				BC0A58441E728F2C0077C8A9 /* AutoScroller.m */,
+				BCFE20981E77E4A6002BC28C /* Verify.h */,
+				BCFE20991E77E4A6002BC28C /* Verify.m */,
 			);
 			path = Public;
 			sourceTree = "<group>";
@@ -539,6 +630,9 @@
 				BC9B3DEE1E7693E0003DC241 /* RecommendTableViewCell.h */,
 				BC9B3DEF1E7693E0003DC241 /* RecommendTableViewCell.m */,
 				BC9B3DF01E7693E0003DC241 /* RecommendTableViewCell.xib */,
+				BCFE209B1E77EF2A002BC28C /* WithdrawalViewController.h */,
+				BCFE209C1E77EF2A002BC28C /* WithdrawalViewController.m */,
+				BCFE209D1E77EF2A002BC28C /* WithdrawalViewController.xib */,
 			);
 			path = RecommendEarnings;
 			sourceTree = "<group>";
@@ -566,6 +660,50 @@
 				BCE5EED61E5C41030055D828 /* Colours.m */,
 			);
 			path = Colours;
+			sourceTree = "<group>";
+		};
+		BCFE20611E7798C4002BC28C /* trade-in */ = {
+			isa = PBXGroup;
+			children = (
+				BCFE20621E7798D6002BC28C /* TradInViewController.h */,
+				BCFE20631E7798D6002BC28C /* TradInViewController.m */,
+				BCFE20641E7798D6002BC28C /* TradInViewController.xib */,
+				BCFE20671E77BC83002BC28C /* TradInTableViewCell.h */,
+				BCFE20681E77BC83002BC28C /* TradInTableViewCell.m */,
+				BCFE20691E77BC83002BC28C /* TradInTableViewCell.xib */,
+				BCFE206C1E77C7D6002BC28C /* SelectBanCardView.h */,
+				BCFE206D1E77C7D6002BC28C /* SelectBanCardView.m */,
+				BCFE206F1E77C7E6002BC28C /* SelectBanCardView.xib */,
+				BCFE20761E77D437002BC28C /* SureTradInView.h */,
+				BCFE20771E77D437002BC28C /* SureTradInView.m */,
+				BCFE20791E77D443002BC28C /* SureTradInView.xib */,
+				BCFE20711E77C9F6002BC28C /* SecletBankCardTableViewCell.h */,
+				BCFE20721E77C9F6002BC28C /* SecletBankCardTableViewCell.m */,
+				BCFE20731E77C9F6002BC28C /* SecletBankCardTableViewCell.xib */,
+			);
+			path = "trade-in";
+			sourceTree = "<group>";
+		};
+		BCFE207B1E77DE53002BC28C /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				BCFE207C1E77E206002BC28C /* Login.storyboard */,
+				BCFE207D1E77E206002BC28C /* LoginViewController.h */,
+				BCFE207E1E77E206002BC28C /* LoginViewController.m */,
+				BCFE207F1E77E206002BC28C /* RegisterOneViewController.h */,
+				BCFE20801E77E206002BC28C /* RegisterOneViewController.m */,
+				BCFE20811E77E206002BC28C /* RegisterOneViewController.xib */,
+				BCFE20821E77E206002BC28C /* RegisterTwoViewController.h */,
+				BCFE20831E77E206002BC28C /* RegisterTwoViewController.m */,
+				BCFE20841E77E206002BC28C /* RegisterTwoViewController.xib */,
+				BCFE20851E77E206002BC28C /* ForgetPasswordOneViewController.h */,
+				BCFE20861E77E206002BC28C /* ForgetPasswordOneViewController.m */,
+				BCFE20871E77E206002BC28C /* ForgetPasswordOneViewController.xib */,
+				BCFE20881E77E206002BC28C /* ForgetPasswordTwoViewController.h */,
+				BCFE20891E77E206002BC28C /* ForgetPasswordTwoViewController.m */,
+				BCFE208A1E77E206002BC28C /* ForgetPasswordTwoViewController.xib */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		FF957477FB6E2C96A62B1F6D /* Frameworks */ = {
@@ -688,31 +826,45 @@
 				BC9B3DCE1E76837B003DC241 /* header.jpg in Resources */,
 				BC0A58361E72832E0077C8A9 /* SetTableViewCell.xib in Resources */,
 				BC9B3DB11E7648AF003DC241 /* RealNameAutResultView.xib in Resources */,
+				BCFE20701E77C7E6002BC28C /* SelectBanCardView.xib in Resources */,
 				BC9B3DED1E7690F2003DC241 /* RecommentEarningsViewController.xib in Resources */,
 				BC9B3E061E7698CC003DC241 /* ManagerBankCardViewController.xib in Resources */,
 				BC0A584F1E72A0680077C8A9 /* BillConsumptionTableViewCell.xib in Resources */,
+				BCFE20751E77C9F6002BC28C /* SecletBankCardTableViewCell.xib in Resources */,
+				BCFE208B1E77E206002BC28C /* Login.storyboard in Resources */,
 				BC9B3DCB1E76837B003DC241 /* EditbankInfoTableViewCell.xib in Resources */,
 				BC4AABF01E4D69E2006568A6 /* LaunchScreen.storyboard in Resources */,
 				BC9B3DCD1E76837B003DC241 /* EditBankInfoViewController.xib in Resources */,
 				BC9B3E021E7698CC003DC241 /* BanCardDetailTableViewCell.xib in Resources */,
 				BC4AABED1E4D69E2006568A6 /* Assets.xcassets in Resources */,
 				BC9B3DE71E76892C003DC241 /* MyQrCodeViewController.xib in Resources */,
+				BCFE20561E778CA9002BC28C /* SetPasswordViewController.xib in Resources */,
 				BC4AAC3D1E4D8F7B006568A6 /* MineTableViewCell.xib in Resources */,
 				BC9B3DAC1E763AF4003DC241 /* RealnameViewController.xib in Resources */,
 				BC9B3DB61E767A9E003DC241 /* ManualCertificationViewController.xib in Resources */,
+				BCFE20601E779283002BC28C /* ChangePayPasswordViewController.xib in Resources */,
 				BC0A583F1E728D520077C8A9 /* BillViewController.xib in Resources */,
 				BC4AAC2D1E4D6E7D006568A6 /* BaseNavigationBar.xib in Resources */,
+				BCFE207A1E77D443002BC28C /* SureTradInView.xib in Resources */,
 				BCE5EED91E5C41900055D828 /* Mine.xcassets in Resources */,
 				BC9B3DE11E7688AD003DC241 /* PersonCenterViewController.xib in Resources */,
+				BCFE206B1E77BC83002BC28C /* TradInTableViewCell.xib in Resources */,
 				BC9B3E041E7698CC003DC241 /* ManageBankView.xib in Resources */,
 				BC0A584A1E7299900077C8A9 /* BillTableViewCell.xib in Resources */,
 				BC4AABE81E4D69E2006568A6 /* Main.storyboard in Resources */,
+				BCFE208E1E77E206002BC28C /* RegisterOneViewController.xib in Resources */,
+				BCFE209F1E77EF2A002BC28C /* WithdrawalViewController.xib in Resources */,
+				BCFE20921E77E206002BC28C /* ForgetPasswordOneViewController.xib in Resources */,
+				BCFE205B1E778F45002BC28C /* ChangeLoginPasswordViewController.xib in Resources */,
 				BC9B3DF71E76982B003DC241 /* EditPhoneNumberViewController.xib in Resources */,
-				BC9B3E0B1E769D44003DC241 /* SetPasswordViewController.xib in Resources */,
+				BC9B3E0B1E769D44003DC241 /* SetPayPasswordViewController.xib in Resources */,
 				BC0A58221E724ADA0077C8A9 /* 213955937960616.cer in Resources */,
+				BCFE20661E7798D6002BC28C /* TradInViewController.xib in Resources */,
 				BC9B3DC91E76837B003DC241 /* city.plist in Resources */,
 				BC9B3DD71E7683B7003DC241 /* NoBankCardViewController.xib in Resources */,
 				BC9B3DDF1E7688AD003DC241 /* PersonCenterTableViewCell.xib in Resources */,
+				BCFE20941E77E206002BC28C /* ForgetPasswordTwoViewController.xib in Resources */,
+				BCFE20901E77E206002BC28C /* RegisterTwoViewController.xib in Resources */,
 				BC9B3DF21E7693E0003DC241 /* RecommendTableViewCell.xib in Resources */,
 				BC0A58251E724ADA0077C8A9 /* HttpClient_Readme.txt in Resources */,
 				BC0A58311E7282250077C8A9 /* SetViewController.xib in Resources */,
@@ -791,7 +943,9 @@
 				BC2C219D1E4DAF1900AAFEFE /* NewPagedFlowView.m in Sources */,
 				BC4AAC2E1E4D6E7D006568A6 /* BaseTableViewCell.m in Sources */,
 				BC0A58301E7282250077C8A9 /* SetViewController.m in Sources */,
+				BCFE20931E77E206002BC28C /* ForgetPasswordTwoViewController.m in Sources */,
 				BC0A58231E724ADA0077C8A9 /* BaseHttpClient.m in Sources */,
+				BCFE208F1E77E206002BC28C /* RegisterTwoViewController.m in Sources */,
 				BC9B3DC81E76837B003DC241 /* BankPickView.m in Sources */,
 				BC4AAC2A1E4D6E7D006568A6 /* BaseHtmlViewController.m in Sources */,
 				BC0A584E1E72A0680077C8A9 /* BillConsumptionTableViewCell.m in Sources */,
@@ -802,33 +956,47 @@
 				BC2C219A1E4DAF1300AAFEFE /* PGIndexBannerSubiew.m in Sources */,
 				BC4AAC3C1E4D8F7B006568A6 /* MineTableViewCell.m in Sources */,
 				BC9B3DEC1E7690F2003DC241 /* RecommentEarningsViewController.m in Sources */,
+				BCFE209A1E77E4A6002BC28C /* Verify.m in Sources */,
 				BC9B3DAF1E7648A2003DC241 /* RealNameAutResultView.m in Sources */,
 				BC0A58421E728F050077C8A9 /* SwipeView.m in Sources */,
+				BCFE20971E77E329002BC28C /* ShellCoinUserInfo.m in Sources */,
 				BC9B3E011E7698CC003DC241 /* BanCardDetailTableViewCell.m in Sources */,
 				BC4AAC2F1E4D6E7D006568A6 /* BaseViewController.m in Sources */,
 				BC9B3DCC1E76837B003DC241 /* EditBankInfoViewController.m in Sources */,
 				BC9B3DCA1E76837B003DC241 /* EditbankInfoTableViewCell.m in Sources */,
-				BC9B3E0A1E769D44003DC241 /* SetPasswordViewController.m in Sources */,
+				BC9B3E0A1E769D44003DC241 /* SetPayPasswordViewController.m in Sources */,
 				BC0A58261E724ADA0077C8A9 /* HttpClientAlertViewHelper.m in Sources */,
+				BCFE20911E77E206002BC28C /* ForgetPasswordOneViewController.m in Sources */,
 				BC0A583E1E728D520077C8A9 /* BillViewController.m in Sources */,
 				BC9B3DE01E7688AD003DC241 /* PersonCenterViewController.m in Sources */,
+				BCFE205A1E778F45002BC28C /* ChangeLoginPasswordViewController.m in Sources */,
 				BC9B3DE61E76892C003DC241 /* MyQrCodeViewController.m in Sources */,
 				BC4AABE21E4D69E2006568A6 /* AppDelegate.m in Sources */,
+				BCFE209E1E77EF2A002BC28C /* WithdrawalViewController.m in Sources */,
 				BC9B3DF61E76982B003DC241 /* EditPhoneNumberViewController.m in Sources */,
 				BC0A58351E72832E0077C8A9 /* SetTableViewCell.m in Sources */,
+				BCFE20651E7798D6002BC28C /* TradInViewController.m in Sources */,
 				BC0A58491E7299900077C8A9 /* BillTableViewCell.m in Sources */,
 				BC9B3DB51E767A9E003DC241 /* ManualCertificationViewController.m in Sources */,
+				BCFE208C1E77E206002BC28C /* LoginViewController.m in Sources */,
+				BCFE20781E77D437002BC28C /* SureTradInView.m in Sources */,
 				BC9B3DAB1E763AF4003DC241 /* RealnameViewController.m in Sources */,
+				BCFE206A1E77BC83002BC28C /* TradInTableViewCell.m in Sources */,
 				BC9B3E031E7698CC003DC241 /* ManageBankView.m in Sources */,
 				BC4AAC2B1E4D6E7D006568A6 /* BaseModel.m in Sources */,
 				BC4AAC291E4D6E7D006568A6 /* BaseCollectionViewCell.m in Sources */,
 				BC4AAC2C1E4D6E7D006568A6 /* BaseNavigationBar.m in Sources */,
+				BCFE208D1E77E206002BC28C /* RegisterOneViewController.m in Sources */,
 				BC0A58451E728F2C0077C8A9 /* AutoScroller.m in Sources */,
 				BCE5EED71E5C41030055D828 /* Colours.m in Sources */,
 				BC4AABDF1E4D69E2006568A6 /* main.m in Sources */,
+				BCFE20741E77C9F6002BC28C /* SecletBankCardTableViewCell.m in Sources */,
 				BC0A58391E728C510077C8A9 /* SortButtonSwitchView.m in Sources */,
 				BC9B3E051E7698CC003DC241 /* ManagerBankCardViewController.m in Sources */,
+				BCFE20551E778CA9002BC28C /* SetPasswordViewController.m in Sources */,
+				BCFE205F1E779283002BC28C /* ChangePayPasswordViewController.m in Sources */,
 				BC4AAC151E4D6DBB006568A6 /* RootViewController.m in Sources */,
+				BCFE206E1E77C7D6002BC28C /* SelectBanCardView.m in Sources */,
 				BC4AAC1A1E4D6E5B006568A6 /* HomeViewController.m in Sources */,
 				BC9B3DF11E7693E0003DC241 /* RecommendTableViewCell.m in Sources */,
 				BC0A58241E724ADA0077C8A9 /* HttpClient.m in Sources */,
@@ -985,7 +1153,7 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/ShellCoin/PrefixHeader.pch";
 				INFOPLIST_FILE = ShellCoin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.guo.icon.ShellCoin;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Letopop.ShellCoin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -998,7 +1166,7 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/ShellCoin/PrefixHeader.pch";
 				INFOPLIST_FILE = ShellCoin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.guo.icon.ShellCoin;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Letopop.ShellCoin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

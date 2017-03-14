@@ -9,6 +9,8 @@
 #import "RecommentEarningsViewController.h"
 #import "RecommendTableViewCell.h"
 #import "MyQrCodeViewController.h"
+#import "WithdrawalViewController.h"
+
 
 @interface RecommentEarningsViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -86,5 +88,11 @@
 - (IBAction)qrcodeBtn:(id)sender {
     MyQrCodeViewController *myQrVC = [[MyQrCodeViewController alloc]init];
     [self.navigationController pushViewController:myQrVC animated:YES];
+}
+
+#pragma mark - 提现
+- (IBAction)withdrawalBtn:(UIButton *)sender {
+    WithdrawalViewController *withDrawVC = [[WithdrawalViewController alloc]init];
+    [self.navigationController pushViewController:withDrawVC animated:YES];
 }
 @end

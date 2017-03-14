@@ -21,6 +21,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *totalMoneyLabel;
 @property (weak, nonatomic) IBOutlet UITableView *talbeView;
 
-
+@property (weak, nonatomic) IBOutlet UIButton *withdrawalBtn;
+- (IBAction)withdrawalBtn:(UIButton *)sender;
 
 @end

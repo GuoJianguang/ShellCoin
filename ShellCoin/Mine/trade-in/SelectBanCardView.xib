@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SelectBanCardView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.55000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s0c-O2-WkJ">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NKm-6p-wAF">
+                    <rect key="frame" x="0.0" y="407" width="375" height="260"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uVg-fv-5Qq">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DUS-bM-ep7">
+                                    <rect key="frame" x="16" y="15" width="31" height="30"/>
+                                    <state key="normal" title="取消"/>
+                                    <connections>
+                                        <action selector="cancelBtn:" destination="iN0-l3-epB" eventType="touchUpInside" id="ky4-AL-qbd"/>
+                                    </connections>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="选择银行卡" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gyd-2E-0Dr">
+                                    <rect key="frame" x="149.5" y="21" width="76.5" height="18"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PcG-IH-1R8">
+                                    <rect key="frame" x="328" y="15" width="31" height="30"/>
+                                    <state key="normal" title="确认"/>
+                                    <connections>
+                                        <action selector="sureBtn:" destination="iN0-l3-epB" eventType="touchUpInside" id="fXP-JR-0o2"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="gyd-2E-0Dr" firstAttribute="centerY" secondItem="uVg-fv-5Qq" secondAttribute="centerY" id="NT2-Sh-nTe"/>
+                                <constraint firstItem="gyd-2E-0Dr" firstAttribute="centerX" secondItem="uVg-fv-5Qq" secondAttribute="centerX" id="WOL-7B-Zox"/>
+                                <constraint firstItem="PcG-IH-1R8" firstAttribute="centerY" secondItem="uVg-fv-5Qq" secondAttribute="centerY" id="YB2-dI-Hch"/>
+                                <constraint firstItem="DUS-bM-ep7" firstAttribute="centerY" secondItem="uVg-fv-5Qq" secondAttribute="centerY" id="ayE-bZ-O1X"/>
+                                <constraint firstItem="DUS-bM-ep7" firstAttribute="leading" secondItem="uVg-fv-5Qq" secondAttribute="leading" constant="16" id="foM-kf-T0F"/>
+                                <constraint firstAttribute="width" secondItem="uVg-fv-5Qq" secondAttribute="height" multiplier="375:60" id="pqN-Zh-R8c"/>
+                                <constraint firstAttribute="trailing" secondItem="PcG-IH-1R8" secondAttribute="trailing" constant="16" id="s0R-Cy-OBa"/>
+                            </constraints>
+                        </view>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="odC-HK-Ms7">
+                            <rect key="frame" x="0.0" y="60" width="375" height="200"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="odC-HK-Ms7" firstAttribute="leading" secondItem="NKm-6p-wAF" secondAttribute="leading" id="COH-Nj-Sgd"/>
+                        <constraint firstAttribute="trailing" secondItem="odC-HK-Ms7" secondAttribute="trailing" id="JN1-Z6-pfb"/>
+                        <constraint firstAttribute="bottom" secondItem="odC-HK-Ms7" secondAttribute="bottom" id="QT9-mb-TJz"/>
+                        <constraint firstItem="odC-HK-Ms7" firstAttribute="top" secondItem="uVg-fv-5Qq" secondAttribute="bottom" id="RBI-cI-rUc"/>
+                        <constraint firstAttribute="trailing" secondItem="uVg-fv-5Qq" secondAttribute="trailing" id="eb5-Bl-myr"/>
+                        <constraint firstItem="uVg-fv-5Qq" firstAttribute="top" secondItem="NKm-6p-wAF" secondAttribute="top" id="qTK-RC-933"/>
+                        <constraint firstAttribute="width" secondItem="NKm-6p-wAF" secondAttribute="height" multiplier="375/260" id="u2u-Eb-Kho"/>
+                        <constraint firstItem="uVg-fv-5Qq" firstAttribute="leading" secondItem="NKm-6p-wAF" secondAttribute="leading" id="x2x-hD-TmL"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="NKm-6p-wAF" secondAttribute="trailing" id="AgZ-E9-Bsw"/>
+                <constraint firstAttribute="bottom" secondItem="s0c-O2-WkJ" secondAttribute="bottom" id="CUf-5r-fnX"/>
+                <constraint firstItem="s0c-O2-WkJ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="DIh-mS-3kn"/>
+                <constraint firstItem="s0c-O2-WkJ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="b9y-Dd-MaF"/>
+                <constraint firstAttribute="trailing" secondItem="s0c-O2-WkJ" secondAttribute="trailing" id="d34-VB-F25"/>
+                <constraint firstAttribute="bottom" secondItem="NKm-6p-wAF" secondAttribute="bottom" id="daB-3M-BFi"/>
+                <constraint firstItem="NKm-6p-wAF" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="umD-kU-t3w"/>
+            </constraints>
+            <connections>
+                <outlet property="blackBackgoundView" destination="s0c-O2-WkJ" id="jHn-JO-5ey"/>
+                <outlet property="cancelBtn" destination="DUS-bM-ep7" id="VLZ-ft-aGy"/>
+                <outlet property="itemView" destination="NKm-6p-wAF" id="s5I-IR-0OQ"/>
+                <outlet property="sureBtn" destination="PcG-IH-1R8" id="EmN-g3-BPF"/>
+                <outlet property="tableView" destination="odC-HK-Ms7" id="5EY-ud-djL"/>
+                <outlet property="titelLabel" destination="gyd-2E-0Dr" id="diy-eA-k1n"/>
+            </connections>
+            <point key="canvasLocation" x="30" y="-606"/>
+        </view>
+    </objects>
+</document>

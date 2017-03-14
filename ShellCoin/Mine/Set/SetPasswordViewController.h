@@ -2,24 +2,19 @@
 //  SetPasswordViewController.h
 //  ShellCoin
 //
-//  Created by Guo on 2017/3/13.
+//  Created by Guo on 2017/3/14.
 //  Copyright © 2017年 Guo. All rights reserved.
 //
 
 #import "BaseViewController.h"
 
 @interface SetPasswordViewController : BaseViewController
+@property (weak, nonatomic) IBOutlet UILabel *payPasswordLabel;
 
-@property (weak, nonatomic) IBOutlet UIView *view1;
+@property (weak, nonatomic) IBOutlet UILabel *payloginPasswordLabel;
 
-@property (weak, nonatomic) IBOutlet UIView *view2;
-
-@property (weak, nonatomic) IBOutlet UILabel *setPasswordLabel;
-@property (weak, nonatomic) IBOutlet UITextField *setpasswordTF;
-@property (weak, nonatomic) IBOutlet UILabel *surePasswrodLabel;
-@property (weak, nonatomic) IBOutlet UITextField *surePasswordTF;
-@property (weak, nonatomic) IBOutlet UILabel *openFingerprintlabel;
-@property (weak, nonatomic) IBOutlet UISwitch *openSwitch;
-- (IBAction)openSwitch:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *loginBtn;
+- (IBAction)loginBtn:(id)sender;
+- (IBAction)paypasswordBtn:(id)sender;
 
 @end

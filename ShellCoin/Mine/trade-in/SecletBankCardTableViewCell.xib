@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="57" id="KGk-i7-Jjw" customClass="SecletBankCardTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="57"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="56.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_scan_weixin_payment_sel" translatesAutoresizingMaskIntoConstraints="NO" id="Gnb-AP-Ezu">
+                        <rect key="frame" x="10" y="14" width="30" height="30"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="中国工商银行 （7984）" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RVH-U3-l5L">
+                        <rect key="frame" x="48" y="20" width="163" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_right" translatesAutoresizingMaskIntoConstraints="NO" id="XJr-Fk-RAt">
+                        <rect key="frame" x="300" y="20" width="10" height="18"/>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nsR-c2-RTT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="1"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="Ci0-Yf-pXY"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Gnb-AP-Ezu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="0yq-po-Yfv"/>
+                    <constraint firstItem="RVH-U3-l5L" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="7o4-eL-EsF"/>
+                    <constraint firstAttribute="trailing" secondItem="nsR-c2-RTT" secondAttribute="trailing" id="ISf-OA-IBD"/>
+                    <constraint firstItem="Gnb-AP-Ezu" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="RDs-s4-5Xd"/>
+                    <constraint firstItem="nsR-c2-RTT" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="a5n-Dw-oCT"/>
+                    <constraint firstItem="RVH-U3-l5L" firstAttribute="leading" secondItem="Gnb-AP-Ezu" secondAttribute="trailing" constant="8" id="f7w-wZ-kiL"/>
+                    <constraint firstItem="XJr-Fk-RAt" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="iwQ-7H-yKW"/>
+                    <constraint firstAttribute="trailing" secondItem="XJr-Fk-RAt" secondAttribute="trailing" constant="10" id="qq5-Et-0Mq"/>
+                    <constraint firstItem="nsR-c2-RTT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="ttn-8W-zFl"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="bankCardLabel" destination="RVH-U3-l5L" id="fOs-58-iUS"/>
+                <outlet property="banklogImage" destination="Gnb-AP-Ezu" id="xyK-Hg-WYI"/>
+                <outlet property="selcetmarkIamge" destination="XJr-Fk-RAt" id="TNu-li-QbH"/>
+            </connections>
+            <point key="canvasLocation" x="-136" y="14"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="icon_right" width="10" height="18"/>
+        <image name="icon_scan_weixin_payment_sel" width="30" height="30"/>
+    </resources>
+</document>
