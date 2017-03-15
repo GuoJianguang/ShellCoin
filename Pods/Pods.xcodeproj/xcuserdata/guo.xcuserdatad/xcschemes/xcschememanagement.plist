@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>HappyDNS.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>IQKeyboardManager.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -29,7 +34,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Qiniu.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SVProgressHUD-0.8.1.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ZXingObjC.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -47,12 +62,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>091A568969B020C6D4E1F2838AE711E5</key>
+		<key>443E55FD19D0664D8CB75B5EC82D31ED</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>1F2BEDC998A5AF449FEB580826141AEE</key>
+		<key>53B2B897D64E4516E75AC86348B86622</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>59DAFEAF0F71FA79EB8240A73F17EAE5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8A22360B28D591A5D47A275FF6B02C33</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -63,6 +88,11 @@
 			<true/>
 		</dict>
 		<key>9E033EDB5EC0819481B0546434FA577B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E0E367E81B81DA88F6DE0E99DAD3E3A5</key>
 		<dict>
 			<key>primary</key>
 			<true/>

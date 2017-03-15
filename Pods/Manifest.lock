@@ -14,25 +14,37 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - HappyDNS (0.3.10)
   - IQKeyboardManager (3.3.7)
   - Masonry (1.0.2)
   - MJRefresh (3.1.12)
+  - Qiniu (7.1.1):
+    - AFNetworking (~> 3)
+    - HappyDNS (~> 0.3)
   - SVProgressHUD-0.8.1 (0.8)
+  - ZXingObjC (3.1.0):
+    - ZXingObjC/All (= 3.1.0)
+  - ZXingObjC/All (3.1.0)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
   - IQKeyboardManager (~> 3.3.7)
   - Masonry (~> 1.0.2)
   - MJRefresh (~> 3.1.12)
+  - Qiniu (~> 7.1.1)
   - SVProgressHUD-0.8.1
+  - ZXingObjC (~> 3.1.0)
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  HappyDNS: 06a9fed2796663fd87626dbf02552933265bf059
   IQKeyboardManager: 249c3946acf61345c18b038eb50863fe2793e3a8
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
+  Qiniu: 5e5d7d759d22393bb4b87cdfacf8fab951260f3e
   SVProgressHUD-0.8.1: ee9e6e58b5b5ffaf3f1a62c2dc409763470df143
+  ZXingObjC: bf15b3814f7a105b6d99f47da2333c93a063650a
 
-PODFILE CHECKSUM: b43ff7fd7984f0b389afefcde4059e04027d3295
+PODFILE CHECKSUM: 1a1a2e07b6e743c749fe9ef632ef54166afd65ee
 
 COCOAPODS: 1.2.0

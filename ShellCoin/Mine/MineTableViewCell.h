@@ -48,7 +48,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *setLabel;
 
 
+- (IBAction)showYestodayEBtn:(id)sender;
 
+@property (weak, nonatomic) IBOutlet UIButton *showYestodayEBtn;
 
 
 

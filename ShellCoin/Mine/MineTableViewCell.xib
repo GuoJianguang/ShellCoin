@@ -41,17 +41,8 @@
                                             <action selector="messageBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="9qy-D1-UwB"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="buB-fl-Xy3">
-                                        <rect key="frame" x="318" y="27" width="46" height="30"/>
-                                        <state key="normal" title="条形码">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="barCodeBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="yK0-q3-w6N"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qbr-8f-yJK">
-                                        <rect key="frame" x="264" y="27" width="46" height="30"/>
+                                        <rect key="frame" x="318" y="27" width="46" height="30"/>
                                         <state key="normal" title="二维码">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -63,12 +54,10 @@
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="B1C-Mz-F1f" firstAttribute="centerX" secondItem="lv2-ba-sJh" secondAttribute="centerX" id="Aof-BB-KDE"/>
-                                    <constraint firstItem="buB-fl-Xy3" firstAttribute="leading" secondItem="Qbr-8f-yJK" secondAttribute="trailing" constant="8" id="DaN-Xm-s3U"/>
                                     <constraint firstItem="q3N-gS-VIV" firstAttribute="centerY" secondItem="lv2-ba-sJh" secondAttribute="centerY" constant="10" id="E2l-qw-vjm"/>
                                     <constraint firstItem="q3N-gS-VIV" firstAttribute="leading" secondItem="lv2-ba-sJh" secondAttribute="leading" constant="16" id="JPq-GE-dVZ"/>
                                     <constraint firstAttribute="height" constant="64" id="Jd9-93-MfY"/>
-                                    <constraint firstItem="buB-fl-Xy3" firstAttribute="centerY" secondItem="lv2-ba-sJh" secondAttribute="centerY" constant="10" id="Mcz-Kc-Jb0"/>
-                                    <constraint firstAttribute="trailing" secondItem="buB-fl-Xy3" secondAttribute="trailing" constant="16" id="Zih-O6-lxA"/>
+                                    <constraint firstAttribute="trailing" secondItem="Qbr-8f-yJK" secondAttribute="trailing" constant="16" id="b4T-il-AZc"/>
                                     <constraint firstItem="Qbr-8f-yJK" firstAttribute="centerY" secondItem="lv2-ba-sJh" secondAttribute="centerY" constant="10" id="tNX-NG-CD2"/>
                                     <constraint firstItem="B1C-Mz-F1f" firstAttribute="centerY" secondItem="lv2-ba-sJh" secondAttribute="centerY" constant="10" id="tYv-Vv-Qr7"/>
                                 </constraints>
@@ -185,6 +174,12 @@
                                         <color key="textColor" red="0.95913404229999999" green="0.28341728449999998" blue="0.25551366809999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fx3-a8-zE2">
+                                        <rect key="frame" x="0.0" y="0.0" width="189.5" height="101"/>
+                                        <connections>
+                                            <action selector="showYestodayEBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="ZfU-BH-eQb"/>
+                                        </connections>
+                                    </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p8X-MN-7xo">
                                         <rect key="frame" x="-0.5" y="50" width="189.5" height="1"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -195,6 +190,7 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="fx3-a8-zE2" firstAttribute="leading" secondItem="NeO-4w-0SL" secondAttribute="leading" id="3b8-RU-JgO"/>
                                     <constraint firstItem="F8L-Ma-lNH" firstAttribute="centerX" secondItem="NeO-4w-0SL" secondAttribute="centerX" id="5Tq-6c-FSg"/>
                                     <constraint firstItem="1r5-me-zOb" firstAttribute="centerX" secondItem="NeO-4w-0SL" secondAttribute="centerX" id="JWg-DU-aEm"/>
                                     <constraint firstItem="p8X-MN-7xo" firstAttribute="centerY" secondItem="NeO-4w-0SL" secondAttribute="centerY" id="LX0-Rn-m9d"/>
@@ -202,6 +198,9 @@
                                     <constraint firstItem="p8X-MN-7xo" firstAttribute="top" secondItem="1r5-me-zOb" secondAttribute="bottom" constant="10" id="gWF-13-bUd"/>
                                     <constraint firstItem="p8X-MN-7xo" firstAttribute="leading" secondItem="NeO-4w-0SL" secondAttribute="leading" id="qYF-cG-LZL"/>
                                     <constraint firstAttribute="trailing" secondItem="p8X-MN-7xo" secondAttribute="trailing" id="sFc-7X-2M9"/>
+                                    <constraint firstAttribute="trailing" secondItem="fx3-a8-zE2" secondAttribute="trailing" id="yC2-b2-kQv"/>
+                                    <constraint firstAttribute="bottom" secondItem="fx3-a8-zE2" secondAttribute="bottom" id="zKf-3y-z40"/>
+                                    <constraint firstItem="fx3-a8-zE2" firstAttribute="top" secondItem="NeO-4w-0SL" secondAttribute="top" id="zek-3x-zAH"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -408,7 +407,6 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="barCodeBtn" destination="buB-fl-Xy3" id="7vp-dw-Iwd"/>
                 <outlet property="billLabel" destination="K5V-Uy-tVp" id="Pm3-Qw-c4q"/>
                 <outlet property="helpBtn" destination="eYB-5i-9ur" id="WFS-XM-cgW"/>
                 <outlet property="integralLabel" destination="TSg-Gj-tm8" id="gVh-eC-9Tg"/>
@@ -420,12 +418,13 @@
                 <outlet property="setLabel" destination="dNq-So-tZL" id="jLC-RS-kmw"/>
                 <outlet property="showIntergralLabel" destination="Wnk-P8-arX" id="vRl-i0-bbv"/>
                 <outlet property="showProportionLabel" destination="F8L-Ma-lNH" id="JSA-Ro-GiE"/>
+                <outlet property="showYestodayEBtn" destination="fx3-a8-zE2" id="hYi-d0-hIW"/>
                 <outlet property="totalMoneyLabel" destination="nhh-Sd-QQa" id="NqZ-HP-is7"/>
                 <outlet property="tradeInBtn" destination="gNR-9J-TrL" id="O2d-Vf-bFu"/>
                 <outlet property="yestodayEarningsLabel" destination="3R2-hj-qC0" id="tYt-P9-Vds"/>
                 <outlet property="yestodyEarningsMoneyLabel" destination="FlV-8v-zOC" id="Ddh-Bo-vI9"/>
             </connections>
-            <point key="canvasLocation" x="52" y="-45"/>
+            <point key="canvasLocation" x="-40" y="-72"/>
         </tableViewCell>
     </objects>
     <resources>
