@@ -14,6 +14,11 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - AMapFoundation (1.2.0)
+  - AMapLocation (2.1.1):
+    - AMapFoundation (~> 1.2)
+  - AMapSearch (4.2.0):
+    - AMapFoundation (~> 1.0)
   - HappyDNS (0.3.10)
   - IQKeyboardManager (3.3.7)
   - Masonry (1.0.2)
@@ -21,6 +26,9 @@ PODS:
   - Qiniu (7.1.1):
     - AFNetworking (~> 3)
     - HappyDNS (~> 0.3)
+  - SDWebImage (3.8.2):
+    - SDWebImage/Core (= 3.8.2)
+  - SDWebImage/Core (3.8.2)
   - SVProgressHUD-0.8.1 (0.8)
   - ZXingObjC (3.1.0):
     - ZXingObjC/All (= 3.1.0)
@@ -28,23 +36,30 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
+  - AMapLocation
+  - AMapSearch
   - IQKeyboardManager (~> 3.3.7)
   - Masonry (~> 1.0.2)
   - MJRefresh (~> 3.1.12)
   - Qiniu (~> 7.1.1)
+  - SDWebImage (~> 3.8.2)
   - SVProgressHUD-0.8.1
   - ZXingObjC (~> 3.1.0)
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  AMapFoundation: 8acc2bf4eed79aab4d21002ddb8b24a6f3f3621c
+  AMapLocation: dd203f76b034ef5cb546600f4e1ffad2a3a14072
+  AMapSearch: 788020fca7ed18819e8bc2bfca716a6775a05ada
   HappyDNS: 06a9fed2796663fd87626dbf02552933265bf059
   IQKeyboardManager: 249c3946acf61345c18b038eb50863fe2793e3a8
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
   Qiniu: 5e5d7d759d22393bb4b87cdfacf8fab951260f3e
+  SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   SVProgressHUD-0.8.1: ee9e6e58b5b5ffaf3f1a62c2dc409763470df143
   ZXingObjC: bf15b3814f7a105b6d99f47da2333c93a063650a
 
-PODFILE CHECKSUM: 1a1a2e07b6e743c749fe9ef632ef54166afd65ee
+PODFILE CHECKSUM: 134d6b689a616753a3b9bc01412b0deb13911128
 
 COCOAPODS: 1.2.0

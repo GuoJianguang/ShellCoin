@@ -18,7 +18,13 @@
 /**
  友盟appstore的key
  */
-#define YoumengKey @"5678f07be0f55a4808000dcb"
+#define YoumengKey @"58ca3298f43e487d560016d0"
+/**
+微信支付的key
+ */
+#define WXApiKey @"wx0032c653b99c31f1"
+
+
 /**
  友盟企业版的key
  */
