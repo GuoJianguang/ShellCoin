@@ -26,6 +26,8 @@
 #import "ShellCoinUserInfo.h"
 #import "Verify.h"
 #import "LoginViewController.h"
+#import "ShellCoinPageControlView.h"
+#import "BaseCollectionViewCell.h"
 
 
 // Include any system framework and library headers here that should be included in all compilation units.

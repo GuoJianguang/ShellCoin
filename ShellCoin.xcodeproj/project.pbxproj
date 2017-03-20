@@ -67,6 +67,24 @@
 		BC4AAC381E4D8D51006568A6 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC4AAC371E4D8D51006568A6 /* MineViewController.m */; };
 		BC4AAC3C1E4D8F7B006568A6 /* MineTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC4AAC3A1E4D8F7B006568A6 /* MineTableViewCell.m */; };
 		BC4AAC3D1E4D8F7B006568A6 /* MineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC4AAC3B1E4D8F7B006568A6 /* MineTableViewCell.xib */; };
+		BC57B6F01E7F7745006AF4D1 /* pagecurrent.png in Resources */ = {isa = PBXBuildFile; fileRef = BC57B6EE1E7F7745006AF4D1 /* pagecurrent.png */; };
+		BC57B6F31E7F779D006AF4D1 /* pagedefault.png in Resources */ = {isa = PBXBuildFile; fileRef = BC57B6F21E7F779D006AF4D1 /* pagedefault.png */; };
+		BC57B6FA1E7FA9DC006AF4D1 /* ShellCoinPageControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC57B6F91E7FA9DC006AF4D1 /* ShellCoinPageControlView.m */; };
+		BC57B6FE1E7FBFEA006AF4D1 /* HomeBannerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC57B6FC1E7FBFEA006AF4D1 /* HomeBannerTableViewCell.m */; };
+		BC57B6FF1E7FBFEA006AF4D1 /* HomeBannerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC57B6FD1E7FBFEA006AF4D1 /* HomeBannerTableViewCell.xib */; };
+		BC57B7031E7FC348006AF4D1 /* HomeIndustryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC57B7011E7FC348006AF4D1 /* HomeIndustryTableViewCell.m */; };
+		BC57B7041E7FC348006AF4D1 /* HomeIndustryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC57B7021E7FC348006AF4D1 /* HomeIndustryTableViewCell.xib */; };
+		BC57B7071E7FC357006AF4D1 /* SquaredUpView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC57B7061E7FC357006AF4D1 /* SquaredUpView.m */; };
+		BC57B70A1E7FC35E006AF4D1 /* CustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BC57B7091E7FC35E006AF4D1 /* CustomButton.m */; };
+		BC57B70E1E7FC937006AF4D1 /* HomeRecommendedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC57B70C1E7FC937006AF4D1 /* HomeRecommendedTableViewCell.m */; };
+		BC57B70F1E7FC937006AF4D1 /* HomeRecommendedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC57B70D1E7FC937006AF4D1 /* HomeRecommendedTableViewCell.xib */; };
+		BC57B7131E7FCC7E006AF4D1 /* HighQualityCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC57B7111E7FCC7E006AF4D1 /* HighQualityCollectionViewCell.m */; };
+		BC57B7141E7FCC7E006AF4D1 /* HighQualityCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC57B7121E7FCC7E006AF4D1 /* HighQualityCollectionViewCell.xib */; };
+		BC57B7161E7FCDB6006AF4D1 /* hot.png in Resources */ = {isa = PBXBuildFile; fileRef = BC57B7151E7FCDB6006AF4D1 /* hot.png */; };
+		BC57B71A1E7FCE34006AF4D1 /* ForyouCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC57B7181E7FCE34006AF4D1 /* ForyouCollectionViewCell.m */; };
+		BC57B71B1E7FCE34006AF4D1 /* ForyouCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC57B7191E7FCE34006AF4D1 /* ForyouCollectionViewCell.xib */; };
+		BC57B71F1E7FD62A006AF4D1 /* HomeMerchantTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC57B71D1E7FD62A006AF4D1 /* HomeMerchantTableViewCell.m */; };
+		BC57B7201E7FD62A006AF4D1 /* HomeMerchantTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC57B71E1E7FD62A006AF4D1 /* HomeMerchantTableViewCell.xib */; };
 		BC77C66A1E7A316400DC9EAC /* libUMessage_Sdk_1.4.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BC77C65B1E7A316400DC9EAC /* libUMessage_Sdk_1.4.0.a */; };
 		BC77C66B1E7A316400DC9EAC /* UMSocialCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC77C6601E7A316400DC9EAC /* UMSocialCore.framework */; };
 		BC77C66C1E7A316400DC9EAC /* UMSocialNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC77C6611E7A316400DC9EAC /* UMSocialNetwork.framework */; };
@@ -291,6 +309,33 @@
 		BC4AAC391E4D8F7B006568A6 /* MineTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineTableViewCell.h; sourceTree = "<group>"; };
 		BC4AAC3A1E4D8F7B006568A6 /* MineTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineTableViewCell.m; sourceTree = "<group>"; };
 		BC4AAC3B1E4D8F7B006568A6 /* MineTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MineTableViewCell.xib; sourceTree = "<group>"; };
+		BC57B6EE1E7F7745006AF4D1 /* pagecurrent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pagecurrent.png; sourceTree = "<group>"; };
+		BC57B6F21E7F779D006AF4D1 /* pagedefault.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pagedefault.png; sourceTree = "<group>"; };
+		BC57B6F81E7FA9DC006AF4D1 /* ShellCoinPageControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShellCoinPageControlView.h; sourceTree = "<group>"; };
+		BC57B6F91E7FA9DC006AF4D1 /* ShellCoinPageControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShellCoinPageControlView.m; sourceTree = "<group>"; };
+		BC57B6FB1E7FBFEA006AF4D1 /* HomeBannerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeBannerTableViewCell.h; sourceTree = "<group>"; };
+		BC57B6FC1E7FBFEA006AF4D1 /* HomeBannerTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeBannerTableViewCell.m; sourceTree = "<group>"; };
+		BC57B6FD1E7FBFEA006AF4D1 /* HomeBannerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeBannerTableViewCell.xib; sourceTree = "<group>"; };
+		BC57B7001E7FC348006AF4D1 /* HomeIndustryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeIndustryTableViewCell.h; sourceTree = "<group>"; };
+		BC57B7011E7FC348006AF4D1 /* HomeIndustryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeIndustryTableViewCell.m; sourceTree = "<group>"; };
+		BC57B7021E7FC348006AF4D1 /* HomeIndustryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeIndustryTableViewCell.xib; sourceTree = "<group>"; };
+		BC57B7051E7FC357006AF4D1 /* SquaredUpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SquaredUpView.h; sourceTree = "<group>"; };
+		BC57B7061E7FC357006AF4D1 /* SquaredUpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SquaredUpView.m; sourceTree = "<group>"; };
+		BC57B7081E7FC35E006AF4D1 /* CustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomButton.h; sourceTree = "<group>"; };
+		BC57B7091E7FC35E006AF4D1 /* CustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomButton.m; sourceTree = "<group>"; };
+		BC57B70B1E7FC937006AF4D1 /* HomeRecommendedTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeRecommendedTableViewCell.h; sourceTree = "<group>"; };
+		BC57B70C1E7FC937006AF4D1 /* HomeRecommendedTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeRecommendedTableViewCell.m; sourceTree = "<group>"; };
+		BC57B70D1E7FC937006AF4D1 /* HomeRecommendedTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeRecommendedTableViewCell.xib; sourceTree = "<group>"; };
+		BC57B7101E7FCC7E006AF4D1 /* HighQualityCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HighQualityCollectionViewCell.h; sourceTree = "<group>"; };
+		BC57B7111E7FCC7E006AF4D1 /* HighQualityCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HighQualityCollectionViewCell.m; sourceTree = "<group>"; };
+		BC57B7121E7FCC7E006AF4D1 /* HighQualityCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HighQualityCollectionViewCell.xib; sourceTree = "<group>"; };
+		BC57B7151E7FCDB6006AF4D1 /* hot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hot.png; sourceTree = "<group>"; };
+		BC57B7171E7FCE34006AF4D1 /* ForyouCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForyouCollectionViewCell.h; sourceTree = "<group>"; };
+		BC57B7181E7FCE34006AF4D1 /* ForyouCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForyouCollectionViewCell.m; sourceTree = "<group>"; };
+		BC57B7191E7FCE34006AF4D1 /* ForyouCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForyouCollectionViewCell.xib; sourceTree = "<group>"; };
+		BC57B71C1E7FD62A006AF4D1 /* HomeMerchantTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeMerchantTableViewCell.h; sourceTree = "<group>"; };
+		BC57B71D1E7FD62A006AF4D1 /* HomeMerchantTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeMerchantTableViewCell.m; sourceTree = "<group>"; };
+		BC57B71E1E7FD62A006AF4D1 /* HomeMerchantTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeMerchantTableViewCell.xib; sourceTree = "<group>"; };
 		BC77C65B1E7A316400DC9EAC /* libUMessage_Sdk_1.4.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libUMessage_Sdk_1.4.0.a; sourceTree = "<group>"; };
 		BC77C65C1E7A316400DC9EAC /* UMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMessage.h; sourceTree = "<group>"; };
 		BC77C6601E7A316400DC9EAC /* UMSocialCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UMSocialCore.framework; sourceTree = "<group>"; };
@@ -623,6 +668,9 @@
 			isa = PBXGroup;
 			children = (
 				BC77C6921E7A393C00DC9EAC /* ShellCoin.entitlements */,
+				BC57B6EE1E7F7745006AF4D1 /* pagecurrent.png */,
+				BC57B6F21E7F779D006AF4D1 /* pagedefault.png */,
+				BC57B7151E7FCDB6006AF4D1 /* hot.png */,
 				BC4AABE01E4D69E2006568A6 /* AppDelegate.h */,
 				BC4AABE11E4D69E2006568A6 /* AppDelegate.m */,
 				BC4AAC131E4D6DBB006568A6 /* RootViewController.h */,
@@ -676,6 +724,28 @@
 			children = (
 				BC4AAC181E4D6E5B006568A6 /* HomeViewController.h */,
 				BC4AAC191E4D6E5B006568A6 /* HomeViewController.m */,
+				BC57B6FB1E7FBFEA006AF4D1 /* HomeBannerTableViewCell.h */,
+				BC57B6FC1E7FBFEA006AF4D1 /* HomeBannerTableViewCell.m */,
+				BC57B6FD1E7FBFEA006AF4D1 /* HomeBannerTableViewCell.xib */,
+				BC57B7001E7FC348006AF4D1 /* HomeIndustryTableViewCell.h */,
+				BC57B7011E7FC348006AF4D1 /* HomeIndustryTableViewCell.m */,
+				BC57B7021E7FC348006AF4D1 /* HomeIndustryTableViewCell.xib */,
+				BC57B7051E7FC357006AF4D1 /* SquaredUpView.h */,
+				BC57B7061E7FC357006AF4D1 /* SquaredUpView.m */,
+				BC57B7081E7FC35E006AF4D1 /* CustomButton.h */,
+				BC57B7091E7FC35E006AF4D1 /* CustomButton.m */,
+				BC57B70B1E7FC937006AF4D1 /* HomeRecommendedTableViewCell.h */,
+				BC57B70C1E7FC937006AF4D1 /* HomeRecommendedTableViewCell.m */,
+				BC57B70D1E7FC937006AF4D1 /* HomeRecommendedTableViewCell.xib */,
+				BC57B7101E7FCC7E006AF4D1 /* HighQualityCollectionViewCell.h */,
+				BC57B7111E7FCC7E006AF4D1 /* HighQualityCollectionViewCell.m */,
+				BC57B7121E7FCC7E006AF4D1 /* HighQualityCollectionViewCell.xib */,
+				BC57B7171E7FCE34006AF4D1 /* ForyouCollectionViewCell.h */,
+				BC57B7181E7FCE34006AF4D1 /* ForyouCollectionViewCell.m */,
+				BC57B7191E7FCE34006AF4D1 /* ForyouCollectionViewCell.xib */,
+				BC57B71C1E7FD62A006AF4D1 /* HomeMerchantTableViewCell.h */,
+				BC57B71D1E7FD62A006AF4D1 /* HomeMerchantTableViewCell.m */,
+				BC57B71E1E7FD62A006AF4D1 /* HomeMerchantTableViewCell.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -747,6 +817,8 @@
 				BCFE20991E77E4A6002BC28C /* Verify.m */,
 				BC23C9E71E7933B700E90B43 /* LSPaoMaView.h */,
 				BC23C9E81E7933B700E90B43 /* LSPaoMaView.m */,
+				BC57B6F81E7FA9DC006AF4D1 /* ShellCoinPageControlView.h */,
+				BC57B6F91E7FA9DC006AF4D1 /* ShellCoinPageControlView.m */,
 			);
 			path = Public;
 			sourceTree = "<group>";
@@ -1111,11 +1183,13 @@
 			files = (
 				BC9B3DCE1E76837B003DC241 /* header.jpg in Resources */,
 				BC0A58361E72832E0077C8A9 /* SetTableViewCell.xib in Resources */,
+				BC57B70F1E7FC937006AF4D1 /* HomeRecommendedTableViewCell.xib in Resources */,
 				BC9B3DB11E7648AF003DC241 /* RealNameAutResultView.xib in Resources */,
 				BC23C9D61E79153E00E90B43 /* CodeScan.bundle in Resources */,
 				BCFE20701E77C7E6002BC28C /* SelectBanCardView.xib in Resources */,
 				BC9B3DED1E7690F2003DC241 /* RecommentEarningsViewController.xib in Resources */,
 				BC9B3E061E7698CC003DC241 /* ManagerBankCardViewController.xib in Resources */,
+				BC57B71B1E7FCE34006AF4D1 /* ForyouCollectionViewCell.xib in Resources */,
 				BC0A584F1E72A0680077C8A9 /* BillConsumptionTableViewCell.xib in Resources */,
 				BCFE20751E77C9F6002BC28C /* SecletBankCardTableViewCell.xib in Resources */,
 				BCFE208B1E77E206002BC28C /* Login.storyboard in Resources */,
@@ -1137,6 +1211,7 @@
 				BC9B3DE11E7688AD003DC241 /* PersonCenterViewController.xib in Resources */,
 				BCFE206B1E77BC83002BC28C /* TradInTableViewCell.xib in Resources */,
 				BC9B3E041E7698CC003DC241 /* ManageBankView.xib in Resources */,
+				BC57B6FF1E7FBFEA006AF4D1 /* HomeBannerTableViewCell.xib in Resources */,
 				BC0A584A1E7299900077C8A9 /* BillTableViewCell.xib in Resources */,
 				BC77C66D1E7A316400DC9EAC /* UMSocialSDKResources.bundle in Resources */,
 				BC4AABE81E4D69E2006568A6 /* Main.storyboard in Resources */,
@@ -1146,12 +1221,18 @@
 				BCFE205B1E778F45002BC28C /* ChangeLoginPasswordViewController.xib in Resources */,
 				BC9B3DF71E76982B003DC241 /* EditPhoneNumberViewController.xib in Resources */,
 				BC9B3E0B1E769D44003DC241 /* SetPayPasswordViewController.xib in Resources */,
+				BC57B7201E7FD62A006AF4D1 /* HomeMerchantTableViewCell.xib in Resources */,
 				BC0A58221E724ADA0077C8A9 /* 213955937960616.cer in Resources */,
+				BC57B7141E7FCC7E006AF4D1 /* HighQualityCollectionViewCell.xib in Resources */,
 				BCFE20661E7798D6002BC28C /* TradInViewController.xib in Resources */,
+				BC57B7161E7FCDB6006AF4D1 /* hot.png in Resources */,
+				BC57B7041E7FC348006AF4D1 /* HomeIndustryTableViewCell.xib in Resources */,
 				BC9B3DC91E76837B003DC241 /* city.plist in Resources */,
 				BC9B3DD71E7683B7003DC241 /* NoBankCardViewController.xib in Resources */,
 				BC23C9EE1E79396500E90B43 /* YesTodayEarningsAlerView.xib in Resources */,
+				BC57B6F31E7F779D006AF4D1 /* pagedefault.png in Resources */,
 				BC9B3DDF1E7688AD003DC241 /* PersonCenterTableViewCell.xib in Resources */,
+				BC57B6F01E7F7745006AF4D1 /* pagecurrent.png in Resources */,
 				BCFE20941E77E206002BC28C /* ForgetPasswordTwoViewController.xib in Resources */,
 				BCFE20901E77E206002BC28C /* RegisterTwoViewController.xib in Resources */,
 				BC9B3DF21E7693E0003DC241 /* RecommendTableViewCell.xib in Resources */,
@@ -1231,6 +1312,7 @@
 			files = (
 				BC2C219D1E4DAF1900AAFEFE /* NewPagedFlowView.m in Sources */,
 				BC4AAC2E1E4D6E7D006568A6 /* BaseTableViewCell.m in Sources */,
+				BC57B7071E7FC357006AF4D1 /* SquaredUpView.m in Sources */,
 				BC0A58301E7282250077C8A9 /* SetViewController.m in Sources */,
 				BCFE20931E77E206002BC28C /* ForgetPasswordTwoViewController.m in Sources */,
 				BC0A58231E724ADA0077C8A9 /* BaseHttpClient.m in Sources */,
@@ -1240,6 +1322,7 @@
 				BC9B3DC81E76837B003DC241 /* BankPickView.m in Sources */,
 				BC4AAC2A1E4D6E7D006568A6 /* BaseHtmlViewController.m in Sources */,
 				BC0A584E1E72A0680077C8A9 /* BillConsumptionTableViewCell.m in Sources */,
+				BC57B70E1E7FC937006AF4D1 /* HomeRecommendedTableViewCell.m in Sources */,
 				BC9B3DD61E7683B7003DC241 /* NoBankCardViewController.m in Sources */,
 				BC9B3DDE1E7688AD003DC241 /* PersonCenterTableViewCell.m in Sources */,
 				BC4AAC381E4D8D51006568A6 /* MineViewController.m in Sources */,
@@ -1251,6 +1334,7 @@
 				BC23C9DD1E79153E00E90B43 /* LBXScanResult.m in Sources */,
 				BC9B3DEC1E7690F2003DC241 /* RecommentEarningsViewController.m in Sources */,
 				BCFE209A1E77E4A6002BC28C /* Verify.m in Sources */,
+				BC57B70A1E7FC35E006AF4D1 /* CustomButton.m in Sources */,
 				BC9B3DAF1E7648A2003DC241 /* RealNameAutResultView.m in Sources */,
 				BC0A58421E728F050077C8A9 /* SwipeView.m in Sources */,
 				BCFE20971E77E329002BC28C /* ShellCoinUserInfo.m in Sources */,
@@ -1259,9 +1343,11 @@
 				BC4AAC2F1E4D6E7D006568A6 /* BaseViewController.m in Sources */,
 				BC9B3DCC1E76837B003DC241 /* EditBankInfoViewController.m in Sources */,
 				BC9B3DCA1E76837B003DC241 /* EditbankInfoTableViewCell.m in Sources */,
+				BC57B6FA1E7FA9DC006AF4D1 /* ShellCoinPageControlView.m in Sources */,
 				BC9B3E0A1E769D44003DC241 /* SetPayPasswordViewController.m in Sources */,
 				BC0A58261E724ADA0077C8A9 /* HttpClientAlertViewHelper.m in Sources */,
 				BCFE20911E77E206002BC28C /* ForgetPasswordOneViewController.m in Sources */,
+				BC57B71F1E7FD62A006AF4D1 /* HomeMerchantTableViewCell.m in Sources */,
 				BC0A583E1E728D520077C8A9 /* BillViewController.m in Sources */,
 				BC9B3DE01E7688AD003DC241 /* PersonCenterViewController.m in Sources */,
 				BC23C9E31E79153E00E90B43 /* ZXingWrapper.m in Sources */,
@@ -1279,6 +1365,7 @@
 				BCFE208C1E77E206002BC28C /* LoginViewController.m in Sources */,
 				BC23C9D91E79153E00E90B43 /* LBXAlertAction.m in Sources */,
 				BCFE20781E77D437002BC28C /* SureTradInView.m in Sources */,
+				BC57B7131E7FCC7E006AF4D1 /* HighQualityCollectionViewCell.m in Sources */,
 				BC9B3DAB1E763AF4003DC241 /* RealnameViewController.m in Sources */,
 				BCFE206A1E77BC83002BC28C /* TradInTableViewCell.m in Sources */,
 				BC9B3E031E7698CC003DC241 /* ManageBankView.m in Sources */,
@@ -1295,6 +1382,7 @@
 				BC9B3E051E7698CC003DC241 /* ManagerBankCardViewController.m in Sources */,
 				BC23C9E01E79153E00E90B43 /* LBXScanViewStyle.m in Sources */,
 				BCFE20551E778CA9002BC28C /* SetPasswordViewController.m in Sources */,
+				BC57B6FE1E7FBFEA006AF4D1 /* HomeBannerTableViewCell.m in Sources */,
 				BC23C9E91E7933B700E90B43 /* LSPaoMaView.m in Sources */,
 				BC23C9D81E79153E00E90B43 /* UIAlertView+LBXAlertAction.m in Sources */,
 				BCFE205F1E779283002BC28C /* ChangePayPasswordViewController.m in Sources */,
@@ -1304,6 +1392,8 @@
 				BC4AAC1A1E4D6E5B006568A6 /* HomeViewController.m in Sources */,
 				BC9B3DF11E7693E0003DC241 /* RecommendTableViewCell.m in Sources */,
 				BC0A58241E724ADA0077C8A9 /* HttpClient.m in Sources */,
+				BC57B7031E7FC348006AF4D1 /* HomeIndustryTableViewCell.m in Sources */,
+				BC57B71A1E7FCE34006AF4D1 /* ForyouCollectionViewCell.m in Sources */,
 				BC4AABEB1E4D69E2006568A6 /* ShellCoin.xcdatamodeld in Sources */,
 				BC23C9D71E79153E00E90B43 /* UIActionSheet+LBXAlertAction.m in Sources */,
 				BC23C9E11E79153E00E90B43 /* LBXScanWrapper.m in Sources */,

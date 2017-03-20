@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HomeViewController : BaseViewController
+@interface HomeViewController : UIViewController
+
+
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
