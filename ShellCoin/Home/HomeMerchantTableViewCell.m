@@ -25,4 +25,9 @@
     // Configure the view for the selected state
 }
 
+- (void)setDataModel:(RecommentModel *)dataModel
+{
+    _dataModel = dataModel;
+}
+
 @end

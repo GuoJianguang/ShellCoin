@@ -16,7 +16,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="387"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="386.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="386"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zgx-i1-vxH">
@@ -145,13 +145,23 @@
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Of8-00-vfM">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="26"/>
+                                <connections>
+                                    <action selector="talentReBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="T8n-Rr-spV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Of8-00-vfM" secondAttribute="trailing" id="4hQ-aU-NFi"/>
                             <constraint firstItem="TzC-z6-Qxp" firstAttribute="centerY" secondItem="hJE-Vx-GSj" secondAttribute="centerY" id="6oH-Cr-HTw"/>
                             <constraint firstItem="TzC-z6-Qxp" firstAttribute="leading" secondItem="hJE-Vx-GSj" secondAttribute="leading" constant="12" id="94N-St-Bys"/>
                             <constraint firstItem="iPu-ep-TNQ" firstAttribute="leading" secondItem="TzC-z6-Qxp" secondAttribute="trailing" constant="10" id="A5Y-wa-HcC"/>
+                            <constraint firstItem="Of8-00-vfM" firstAttribute="leading" secondItem="hJE-Vx-GSj" secondAttribute="leading" id="C7b-t7-X9Q"/>
+                            <constraint firstItem="Of8-00-vfM" firstAttribute="top" secondItem="hJE-Vx-GSj" secondAttribute="top" id="FMn-C8-YNR"/>
                             <constraint firstItem="iPu-ep-TNQ" firstAttribute="centerY" secondItem="hJE-Vx-GSj" secondAttribute="centerY" id="IfC-1u-IBC"/>
+                            <constraint firstAttribute="bottom" secondItem="Of8-00-vfM" secondAttribute="bottom" id="LSx-48-juw"/>
                             <constraint firstAttribute="width" secondItem="hJE-Vx-GSj" secondAttribute="height" multiplier="120:10" id="bva-JA-gX5"/>
                         </constraints>
                     </view>
@@ -172,7 +182,7 @@
                 <outlet property="foryouCollectionView" destination="EXV-JR-BSj" id="oAh-hQ-I6b"/>
                 <outlet property="highqualityCollectionVIew" destination="Ndu-yh-6Qy" id="LeL-f5-yFO"/>
             </connections>
-            <point key="canvasLocation" x="-81" y="-292"/>
+            <point key="canvasLocation" x="-179" y="-347"/>
         </tableViewCell>
     </objects>
 </document>

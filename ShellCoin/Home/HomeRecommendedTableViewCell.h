@@ -13,5 +13,6 @@
 @property (weak, nonatomic) IBOutlet UICollectionView *highqualityCollectionVIew;
 
 @property (weak, nonatomic) IBOutlet UICollectionView *foryouCollectionView;
+- (IBAction)talentReBtn:(id)sender;
 
 @end

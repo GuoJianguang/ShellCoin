@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="BillAmountDisciplineView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="lAb-5Z-Cr9">
+                    <rect key="frame" x="30" y="10" width="315" height="41"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="mTq-O0-kzz"/>
+                    </constraints>
+                    <segments>
+                        <segment title="消费记录"/>
+                        <segment title="抵换记录"/>
+                        <segment title="收益提现记录"/>
+                    </segments>
+                    <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <action selector="switchView:" destination="iN0-l3-epB" eventType="valueChanged" id="dIW-UF-WIW"/>
+                    </connections>
+                </segmentedControl>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k1b-im-Lgu" customClass="SwipeView">
+                    <rect key="frame" x="0.0" y="70" width="375" height="597"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="lAb-5Z-Cr9" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="30" id="0bP-It-TQO"/>
+                <constraint firstAttribute="bottom" secondItem="k1b-im-Lgu" secondAttribute="bottom" id="B9i-9r-YFM"/>
+                <constraint firstItem="lAb-5Z-Cr9" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="a1D-JW-3qv"/>
+                <constraint firstItem="k1b-im-Lgu" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="fes-US-btG"/>
+                <constraint firstItem="k1b-im-Lgu" firstAttribute="top" secondItem="lAb-5Z-Cr9" secondAttribute="bottom" constant="20" id="lUr-Mh-irr"/>
+                <constraint firstAttribute="trailing" secondItem="lAb-5Z-Cr9" secondAttribute="trailing" constant="30" id="pdh-TE-AWa"/>
+                <constraint firstAttribute="trailing" secondItem="k1b-im-Lgu" secondAttribute="trailing" id="sAS-b0-Kqq"/>
+            </constraints>
+            <connections>
+                <outlet property="swipeView" destination="k1b-im-Lgu" id="tqA-41-Qlz"/>
+                <outlet property="switchView" destination="lAb-5Z-Cr9" id="kcA-OK-vo9"/>
+            </connections>
+            <point key="canvasLocation" x="-149" y="27"/>
+        </view>
+    </objects>
+</document>

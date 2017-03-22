@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="BillIntegralDisciplineView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Jik-6c-UlR">
+                    <rect key="frame" x="30" y="10" width="315" height="41"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="Tcg-NC-kJP"/>
+                    </constraints>
+                    <segments>
+                        <segment title="积分动态"/>
+                        <segment title="贝壳币动态"/>
+                    </segments>
+                    <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <action selector="switchView:" destination="iN0-l3-epB" eventType="valueChanged" id="KOZ-4M-dyI"/>
+                    </connections>
+                </segmentedControl>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Zi-xy-SYd" customClass="SwipeView">
+                    <rect key="frame" x="0.0" y="70" width="375" height="597"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Jik-6c-UlR" secondAttribute="trailing" constant="30" id="5qJ-40-rm4"/>
+                <constraint firstAttribute="trailing" secondItem="8Zi-xy-SYd" secondAttribute="trailing" id="6Yf-z5-xBz"/>
+                <constraint firstItem="8Zi-xy-SYd" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="NBW-dG-4wf"/>
+                <constraint firstAttribute="bottom" secondItem="8Zi-xy-SYd" secondAttribute="bottom" id="Nd2-mh-VWf"/>
+                <constraint firstItem="Jik-6c-UlR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="OIi-Vd-rQl"/>
+                <constraint firstItem="8Zi-xy-SYd" firstAttribute="top" secondItem="Jik-6c-UlR" secondAttribute="bottom" constant="20" id="mSf-pu-vzd"/>
+                <constraint firstItem="Jik-6c-UlR" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="30" id="y3X-Y2-CNM"/>
+            </constraints>
+            <connections>
+                <outlet property="swipeView" destination="8Zi-xy-SYd" id="ZUW-t5-fiN"/>
+                <outlet property="switchView" destination="Jik-6c-UlR" id="IUF-Jw-iWI"/>
+            </connections>
+            <point key="canvasLocation" x="-189" y="-450"/>
+        </view>
+    </objects>
+</document>

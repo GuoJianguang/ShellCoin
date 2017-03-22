@@ -1,28 +1,27 @@
 //
-//  HomeRecommendedTableViewCell.m
+//  RecommentDefaltTableViewCell.m
 //  ShellCoin
 //
-//  Created by Guo on 2017/3/20.
+//  Created by Guo on 2017/3/21.
 //  Copyright © 2017年 Guo. All rights reserved.
 //
 
-#import "HomeRecommendedTableViewCell.h"
-#import "HighQualityCollectionViewCell.h"
-#import "ForyouCollectionViewCell.h"
-#import "TalentRecommentViewController.h"
+#import "RecommentSpecialTableViewCell.h"
+#import "RecommentSpecilCollectionViewCell.h"
 
-@interface HomeRecommendedTableViewCell()<UICollectionViewDelegate,UICollectionViewDataSource>
+
+@interface RecommentSpecialTableViewCell()<UICollectionViewDataSource,UICollectionViewDelegate>
 
 @end
-@implementation HomeRecommendedTableViewCell
+
+@implementation RecommentSpecialTableViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
-    self.highqualityCollectionVIew.delegate = self;
-    self.highqualityCollectionVIew.dataSource = self;
-    self.foryouCollectionView.delegate = self;
-    self.foryouCollectionView.dataSource = self;
+    self.detailCollectionView.delegate = self;
+    self.detailCollectionView.dataSource = self;
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -45,31 +44,17 @@
 //每个UICollectionView展示的内容
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
- 
-    if (self.foryouCollectionView == collectionView) {
-        NSString *identifier =[ForyouCollectionViewCell indentify];
-        static BOOL nibri =NO;
-        if(!nibri)
-        {
-            UINib *nib = [ForyouCollectionViewCell newCell];
-            [collectionView registerNib:nib forCellWithReuseIdentifier:identifier];
-            nibri =YES;
-        }
-        ForyouCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
-        //    cell.dataModel = self.privteDataSouceArray[indexPath.item];
-        nibri=NO;
-        return cell;
-    }
-    NSString *identifier =[HighQualityCollectionViewCell indentify];
+    
+    NSString *identifier =[RecommentSpecilCollectionViewCell indentify];
     static BOOL nibri =NO;
     if(!nibri)
     {
-        UINib *nib = [HighQualityCollectionViewCell newCell];
+        UINib *nib = [RecommentSpecilCollectionViewCell newCell];
         [collectionView registerNib:nib forCellWithReuseIdentifier:identifier];
         nibri =YES;
     }
-    HighQualityCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
-//    cell.dataModel = self.privteDataSouceArray[indexPath.item];
+    RecommentSpecilCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
+    //    cell.dataModel = self.privteDataSouceArray[indexPath.item];
     nibri=NO;
     return cell;
 }
@@ -85,9 +70,9 @@
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     //    if (self.sortDataSouceArray.count < 5) {
-    //        return CGSizeMake(TWitdh/self.sortDataSouceArray.count, 50);
+    //        return CGSizeMake(TWitdh/self.sortDataSouceA rray.count, 50);
     //    }
-    return CGSizeMake((TWitdh- 24 - 12)/3., TWitdh * (35/64.) -  TWitdh * (10/120.));
+    return CGSizeMake((TWitdh- 16 - 12)/3., TWitdh * (130/320.) - 8- TWitdh * (50/304.));
 }
 
 
@@ -113,8 +98,4 @@ minimumLineSpacingForSectionAtIndex:(NSInteger)section
 }
 
 
-- (IBAction)talentReBtn:(id)sender {
-    TalentRecommentViewController *talentVC = [[TalentRecommentViewController alloc]init];
-    [self.viewController.navigationController pushViewController:talentVC animated:YES];
-}
 @end

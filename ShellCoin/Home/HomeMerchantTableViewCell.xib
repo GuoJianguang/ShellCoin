@@ -16,11 +16,11 @@
             <rect key="frame" x="0.0" y="0.0" width="353" height="137"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="353" height="136.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="353" height="136"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MM9-af-njl">
-                        <rect key="frame" x="12" y="15" width="329" height="121"/>
+                        <rect key="frame" x="8" y="15" width="337" height="121"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="header.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="S2W-e6-urw">
                                 <rect key="frame" x="8" y="10" width="101" height="101"/>
@@ -29,19 +29,19 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="水果的不同颜色对应不同功效？" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VSH-X8-IsL">
-                                <rect key="frame" x="121" y="10" width="186" height="20"/>
+                                <rect key="frame" x="121" y="10" width="194" height="20"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="水果为什么颜色不一样？1、因为我也不知道" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a7q-7C-cFm">
-                                <rect key="frame" x="121" y="97.5" width="186" height="13.5"/>
+                                <rect key="frame" x="121" y="97.5" width="194" height="13.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_right" translatesAutoresizingMaskIntoConstraints="NO" id="Z77-Vj-lMS">
-                                <rect key="frame" x="315" y="52" width="9" height="18"/>
+                                <rect key="frame" x="323" y="52" width="9" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="9" id="ehn-X8-tDm"/>
                                 </constraints>
@@ -64,10 +64,10 @@
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="MM9-af-njl" secondAttribute="trailing" constant="12" id="Glt-P0-ptE"/>
+                    <constraint firstAttribute="trailing" secondItem="MM9-af-njl" secondAttribute="trailing" constant="8" id="Glt-P0-ptE"/>
                     <constraint firstAttribute="bottom" secondItem="MM9-af-njl" secondAttribute="bottom" id="Tb5-Cs-wol"/>
                     <constraint firstItem="MM9-af-njl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="jgI-s5-kY1"/>
-                    <constraint firstItem="MM9-af-njl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="lzv-vh-TSo"/>
+                    <constraint firstItem="MM9-af-njl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="lzv-vh-TSo"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

@@ -1,42 +1,36 @@
 //
-//  BillViewController.m
+//  BillAmountDisciplineView.m
 //  ShellCoin
 //
-//  Created by Guo on 2017/3/10.
+//  Created by Guo on 2017/3/22.
 //  Copyright © 2017年 Guo. All rights reserved.
 //
 
-#import "BillViewController.h"
-#import "BillTableViewCell.h"
-#import "BillConsumptionTableViewCell.h"
-#import "BillIntegralDisciplineView.h"
 #import "BillAmountDisciplineView.h"
+#import "BillConsumptionTableViewCell.h"
+#import "BillTableViewCell.h"
 
-
-@interface BillViewController ()<SwipeViewDelegate,SwipeViewDataSource,UITableViewDataSource,UITableViewDelegate,SortButtonSwitchViewDelegate>
+@interface BillAmountDisciplineView ()<SwipeViewDataSource,SwipeViewDelegate,UITableViewDataSource,UITableViewDelegate>
 
 @property (nonatomic, strong)UITableView *talbeView1;
 @property (nonatomic, strong)UITableView *talbeView2;
 @property (nonatomic, strong)UITableView *talbeView3;
 
-
-@property (nonatomic, strong)BillIntegralDisciplineView *intergralView;
-@property (nonatomic, strong)BillAmountDisciplineView *amountDisciplineView;
 @end
+@implementation BillAmountDisciplineView
 
-@implementation BillViewController
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    self.naviBar.title = @"账单";
-    self.sortView.titleArray = @[@"金额记录",@"积分记录"];
-    self.naviBar.lineVIew.hidden = YES;
-    self.swipeView.dataSource = self;
-    self.swipeView.delegate = self;
-    self.talbeView1.backgroundColor = self.talbeView2.backgroundColor = self.talbeView3.backgroundColor = [UIColor clearColor];
-    // Do any additional setup after loading the view from its nib.
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self = [[NSBundle mainBundle]loadNibNamed:@"BillAmountDisciplineView" owner:nil options:nil][0];
+        self.talbeView1.backgroundColor = self.talbeView2.backgroundColor =self.talbeView3.backgroundColor = [UIColor clearColor];
+        self.backgroundColor = [UIColor clearColor];
+        self.swipeView.delegate = self;
+        self.swipeView.dataSource = self;
+    }
+    return self;
 }
-
 
 #pragma mark - 懒加载
 - (UITableView *)talbeView1
@@ -67,31 +61,9 @@
         _talbeView3.separatorStyle = UITableViewCellSeparatorStyleNone;
         _talbeView3.delegate = self;
         _talbeView3.dataSource = self;
+        
     }
     return _talbeView3;
-}
-
-- (BillIntegralDisciplineView *)intergralView
-{
-    if (!_intergralView) {
-        _intergralView =[[BillIntegralDisciplineView alloc]init];
-    }
-    return _intergralView;
-}
-
-
-- (BillAmountDisciplineView *)amountDisciplineView{
-    if (!_amountDisciplineView) {
-        _amountDisciplineView = [[BillAmountDisciplineView alloc]init];
-    }
-    return _amountDisciplineView;
-}
-
-#pragma mark - SortViewDelegate
-- (void)sortBtnDselect:(SortButtonSwitchView *)sortView withSortId:(NSString *)sortId
-{
-    [self.swipeView scrollToPage:[sortId integerValue] -1 duration:0.5];
-
 }
 
 #pragma mark - SwipeView
@@ -107,35 +79,50 @@
     UIEdgeInsets insets = UIEdgeInsetsMake(0, 0, 0, 0);
     switch (index) {
         case 0:{
-            [view addSubview:self.amountDisciplineView];
-            [self.amountDisciplineView mas_makeConstraints:^(MASConstraintMaker *make) {
+            [view addSubview:self.talbeView1];
+            [self.talbeView1 mas_makeConstraints:^(MASConstraintMaker *make) {
                 make.edges.equalTo(view).insets(insets);
             }];
         }
             break;
         case 1:{
-            [view addSubview:self.intergralView];
-            [self.intergralView mas_makeConstraints:^(MASConstraintMaker *make) {
+            [view addSubview:self.talbeView2];
+            [self.talbeView2 mas_makeConstraints:^(MASConstraintMaker *make) {
                 make.edges.equalTo(view).insets(insets);
             }];
-
+            
         }
             break;
-       
+        case 2:{
+            [view addSubview:self.talbeView3];
+            [self.talbeView3 mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.edges.equalTo(view).insets(insets);
+            }];
+            
+        }
+            break;
         default:
             break;
     }
-
+    
     return view;
 }
 
 - (NSInteger)numberOfItemsInSwipeView:(SwipeView *)swipeView
 {
-    return 2;
+    return 3;
 }
 - (void)swipeViewCurrentItemIndexDidChange:(SwipeView *)swipeView
 {
-    [self.sortView selectItem:swipeView.currentItemIndex ];
+    self.switchView.selectedSegmentIndex = swipeView.currentItemIndex;
+}
+
+
+
+
+- (IBAction)switchView:(id)sender {
+    [self.swipeView scrollToPage:self.switchView.selectedSegmentIndex duration:0.5];
+
 }
 
 
@@ -173,19 +160,5 @@
     return cell;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
