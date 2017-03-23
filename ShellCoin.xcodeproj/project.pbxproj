@@ -46,6 +46,7 @@
 		BC23C9EE1E79396500E90B43 /* YesTodayEarningsAlerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC23C9ED1E79396500E90B43 /* YesTodayEarningsAlerView.xib */; };
 		BC2C219A1E4DAF1300AAFEFE /* PGIndexBannerSubiew.m in Sources */ = {isa = PBXBuildFile; fileRef = BC2C21991E4DAF1300AAFEFE /* PGIndexBannerSubiew.m */; };
 		BC2C219D1E4DAF1900AAFEFE /* NewPagedFlowView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC2C219C1E4DAF1900AAFEFE /* NewPagedFlowView.m */; };
+		BC2F17751E839CF300657C51 /* BillAmountDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BC2F17741E839CF300657C51 /* BillAmountDataModel.m */; };
 		BC36CFE71E80C9AD00A51BF4 /* RecommentSpecilCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC36CFE51E80C9AD00A51BF4 /* RecommentSpecilCollectionViewCell.m */; };
 		BC36CFE81E80C9AD00A51BF4 /* RecommentSpecilCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC36CFE61E80C9AD00A51BF4 /* RecommentSpecilCollectionViewCell.xib */; };
 		BC36CFEB1E80CB4300A51BF4 /* RecommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BC36CFEA1E80CB4300A51BF4 /* RecommentModel.m */; };
@@ -158,6 +159,9 @@
 		BCAC5D101E825DC5003CACF8 /* BillAmountDisciplineView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCAC5D0F1E825DC5003CACF8 /* BillAmountDisciplineView.xib */; };
 		BCE5EED71E5C41030055D828 /* Colours.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE5EED61E5C41030055D828 /* Colours.m */; };
 		BCE5EED91E5C41900055D828 /* Mine.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCE5EED81E5C41900055D828 /* Mine.xcassets */; };
+		BCEC06991E83B6FA0059C2C4 /* BillIntegaralModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEC06981E83B6FA0059C2C4 /* BillIntegaralModel.m */; };
+		BCEC069D1E83BFF20059C2C4 /* IntergralRecordTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEC069B1E83BFF20059C2C4 /* IntergralRecordTableViewCell.m */; };
+		BCEC069E1E83BFF20059C2C4 /* IntergralRecordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCEC069C1E83BFF20059C2C4 /* IntergralRecordTableViewCell.xib */; };
 		BCFE20551E778CA9002BC28C /* SetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCFE20531E778CA9002BC28C /* SetPasswordViewController.m */; };
 		BCFE20561E778CA9002BC28C /* SetPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCFE20541E778CA9002BC28C /* SetPasswordViewController.xib */; };
 		BCFE205A1E778F45002BC28C /* ChangeLoginPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCFE20581E778F45002BC28C /* ChangeLoginPasswordViewController.m */; };
@@ -279,6 +283,8 @@
 		BC2C21991E4DAF1300AAFEFE /* PGIndexBannerSubiew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGIndexBannerSubiew.m; sourceTree = "<group>"; };
 		BC2C219B1E4DAF1900AAFEFE /* NewPagedFlowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewPagedFlowView.h; sourceTree = "<group>"; };
 		BC2C219C1E4DAF1900AAFEFE /* NewPagedFlowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewPagedFlowView.m; sourceTree = "<group>"; };
+		BC2F17731E839CF300657C51 /* BillAmountDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BillAmountDataModel.h; sourceTree = "<group>"; };
+		BC2F17741E839CF300657C51 /* BillAmountDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BillAmountDataModel.m; sourceTree = "<group>"; };
 		BC36CFE41E80C9AD00A51BF4 /* RecommentSpecilCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommentSpecilCollectionViewCell.h; sourceTree = "<group>"; };
 		BC36CFE51E80C9AD00A51BF4 /* RecommentSpecilCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommentSpecilCollectionViewCell.m; sourceTree = "<group>"; };
 		BC36CFE61E80C9AD00A51BF4 /* RecommentSpecilCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecommentSpecilCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -450,6 +456,11 @@
 		BCE5EED51E5C41030055D828 /* Colours.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Colours.h; sourceTree = "<group>"; };
 		BCE5EED61E5C41030055D828 /* Colours.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Colours.m; sourceTree = "<group>"; };
 		BCE5EED81E5C41900055D828 /* Mine.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Mine.xcassets; sourceTree = "<group>"; };
+		BCEC06971E83B6FA0059C2C4 /* BillIntegaralModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BillIntegaralModel.h; sourceTree = "<group>"; };
+		BCEC06981E83B6FA0059C2C4 /* BillIntegaralModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BillIntegaralModel.m; sourceTree = "<group>"; };
+		BCEC069A1E83BFF20059C2C4 /* IntergralRecordTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntergralRecordTableViewCell.h; sourceTree = "<group>"; };
+		BCEC069B1E83BFF20059C2C4 /* IntergralRecordTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntergralRecordTableViewCell.m; sourceTree = "<group>"; };
+		BCEC069C1E83BFF20059C2C4 /* IntergralRecordTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IntergralRecordTableViewCell.xib; sourceTree = "<group>"; };
 		BCFE20521E778CA9002BC28C /* SetPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetPasswordViewController.h; sourceTree = "<group>"; };
 		BCFE20531E778CA9002BC28C /* SetPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetPasswordViewController.m; sourceTree = "<group>"; };
 		BCFE20541E778CA9002BC28C /* SetPasswordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SetPasswordViewController.xib; sourceTree = "<group>"; };
@@ -618,9 +629,16 @@
 				BCAC5D071E825870003CACF8 /* BillIntegralDisciplineView.h */,
 				BCAC5D081E825870003CACF8 /* BillIntegralDisciplineView.m */,
 				BCAC5D0A1E82587F003CACF8 /* BillIntegralDisciplineView.xib */,
+				BCEC069A1E83BFF20059C2C4 /* IntergralRecordTableViewCell.h */,
+				BCEC069B1E83BFF20059C2C4 /* IntergralRecordTableViewCell.m */,
+				BCEC069C1E83BFF20059C2C4 /* IntergralRecordTableViewCell.xib */,
 				BCAC5D0C1E825DBB003CACF8 /* BillAmountDisciplineView.h */,
 				BCAC5D0D1E825DBB003CACF8 /* BillAmountDisciplineView.m */,
 				BCAC5D0F1E825DC5003CACF8 /* BillAmountDisciplineView.xib */,
+				BC2F17731E839CF300657C51 /* BillAmountDataModel.h */,
+				BC2F17741E839CF300657C51 /* BillAmountDataModel.m */,
+				BCEC06971E83B6FA0059C2C4 /* BillIntegaralModel.h */,
+				BCEC06981E83B6FA0059C2C4 /* BillIntegaralModel.m */,
 			);
 			path = Bill;
 			sourceTree = "<group>";
@@ -1263,6 +1281,7 @@
 				BC0A583F1E728D520077C8A9 /* BillViewController.xib in Resources */,
 				BC4AAC2D1E4D6E7D006568A6 /* BaseNavigationBar.xib in Resources */,
 				BCFE207A1E77D443002BC28C /* SureTradInView.xib in Resources */,
+				BCEC069E1E83BFF20059C2C4 /* IntergralRecordTableViewCell.xib in Resources */,
 				BCE5EED91E5C41900055D828 /* Mine.xcassets in Resources */,
 				BC9B3DE11E7688AD003DC241 /* PersonCenterViewController.xib in Resources */,
 				BCFE206B1E77BC83002BC28C /* TradInTableViewCell.xib in Resources */,
@@ -1430,10 +1449,12 @@
 				BCFE206A1E77BC83002BC28C /* TradInTableViewCell.m in Sources */,
 				BC9B3E031E7698CC003DC241 /* ManageBankView.m in Sources */,
 				BC4AAC2B1E4D6E7D006568A6 /* BaseModel.m in Sources */,
+				BC2F17751E839CF300657C51 /* BillAmountDataModel.m in Sources */,
 				BC4AAC291E4D6E7D006568A6 /* BaseCollectionViewCell.m in Sources */,
 				BCAC5D091E825870003CACF8 /* BillIntegralDisciplineView.m in Sources */,
 				BC4AAC2C1E4D6E7D006568A6 /* BaseNavigationBar.m in Sources */,
 				BCFE208D1E77E206002BC28C /* RegisterOneViewController.m in Sources */,
+				BCEC069D1E83BFF20059C2C4 /* IntergralRecordTableViewCell.m in Sources */,
 				BC23C9E21E79153E00E90B43 /* LBXZXCapture.m in Sources */,
 				BC36CFE71E80C9AD00A51BF4 /* RecommentSpecilCollectionViewCell.m in Sources */,
 				BC0A58451E728F2C0077C8A9 /* AutoScroller.m in Sources */,
@@ -1461,6 +1482,7 @@
 				BC4AABEB1E4D69E2006568A6 /* ShellCoin.xcdatamodeld in Sources */,
 				BC23C9D71E79153E00E90B43 /* UIActionSheet+LBXAlertAction.m in Sources */,
 				BC23C9E11E79153E00E90B43 /* LBXScanWrapper.m in Sources */,
+				BCEC06991E83B6FA0059C2C4 /* BillIntegaralModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

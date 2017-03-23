@@ -14,6 +14,8 @@
 @property (weak, nonatomic) IBOutlet SwipeView *swipeView;
 
 @property (weak, nonatomic) IBOutlet UISegmentedControl *switchView;
+
 - (IBAction)switchView:(id)sender;
+
 
 @end

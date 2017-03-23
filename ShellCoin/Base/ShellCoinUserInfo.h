@@ -15,6 +15,8 @@
 @property (nonatomic, assign)BOOL currentLogined;
 @property (nonatomic, copy)NSString *devicetoken;
 
+@property (nonatomic, copy)NSString *token;
+
 - (void)setUserinfoWithdic:(NSDictionary *)dic;
 
 @end

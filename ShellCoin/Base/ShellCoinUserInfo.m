@@ -25,6 +25,8 @@ static ShellCoinUserInfo *instance;
 - (void)setUserinfoWithdic:(NSDictionary *)dic
 {
     
+    instance.token = NullToSpace(dic[@"token"]);
+    
 }
 
 @end

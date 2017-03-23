@@ -8,11 +8,19 @@
 
 #import "BillIntegralDisciplineView.h"
 #import "BillConsumptionTableViewCell.h"
+#import "BillIntegaralModel.h"
+#import "IntergralRecordTableViewCell.h"
 
 @interface BillIntegralDisciplineView()<UITableViewDelegate,UITableViewDataSource,SwipeViewDelegate,SwipeViewDataSource>
 @property (nonatomic, strong)UITableView *talbeView1;
 @property (nonatomic, strong)UITableView *talbeView2;
 
+@property (nonatomic, assign)NSInteger page1;
+@property (nonatomic, assign)NSInteger page2;
+
+
+@property (nonatomic, strong)NSMutableArray *dataSouceArray1;
+@property (nonatomic, strong)NSMutableArray *dataSouceArray2;
 @end
 @implementation BillIntegralDisciplineView
 
@@ -27,9 +35,105 @@
         self.swipeView.dataSource = self;
         self.swipeView.backgroundColor = [UIColor clearColor];
 
+        __weak BillIntegralDisciplineView *weak_self = self;
+        
+        self.talbeView1.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+            weak_self.page1 = 1;
+            [weak_self getIntegralDongtaiRequest:YES];
+        }];
+        self.talbeView1.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
+            [weak_self getIntegralDongtaiRequest:NO];
+        }];
+        [self.talbeView1.mj_header beginRefreshing];
+        
+        self.talbeView2.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+            weak_self.page2 = 1;
+            [weak_self getShellCoinDongtaiRequest:YES];
+        }];
+        self.talbeView2.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
+            [weak_self getShellCoinDongtaiRequest:NO];
+        }];
+
     }
     return self;
 }
+
+- (void)getIntegralDongtaiRequest:(BOOL)isHeader
+{
+    NSDictionary *prams = @{@"pageNo":@(self.page1),
+                            @"pageSize":MacoRequestPageCount,
+                            @"token":[ShellCoinUserInfo shareUserInfos].token};
+    [HttpClient POST:@"user/accumulateLog/get" parameters:prams success:^(NSURLSessionDataTask *operation, id jsonObject) {
+        if (IsRequestTrue) {
+            if (isHeader) {
+                [self.dataSouceArray1 removeAllObjects];
+            }
+            NSArray *array =jsonObject[@"data"][@"data"];
+            if (array.count > 0) {
+                self.page1 ++;
+            }
+            for (NSDictionary *dic in array) {
+                BillIntegaralModel *model = [BillIntegaralModel modelWithDic:dic];
+                [self.dataSouceArray1 addObject:model];
+            }
+            [self.talbeView1 reloadData];
+        }
+        if (isHeader) {
+            [self.talbeView1.mj_header endRefreshing];
+        }else{
+            [self.talbeView1.mj_footer endRefreshing];
+            
+        }
+    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
+        
+        if (isHeader) {
+            [self.talbeView1.mj_header endRefreshing];
+        }else{
+            [self.talbeView1.mj_footer endRefreshing];
+            
+        }
+    }];
+
+}
+
+- (void)getShellCoinDongtaiRequest:(BOOL)isHeader
+{
+    NSDictionary *prams = @{@"pageNo":@(self.page2),
+                            @"pageSize":MacoRequestPageCount,
+                            @"token":[ShellCoinUserInfo shareUserInfos].token};
+    [HttpClient POST:@"user/shellsAmountLog/get" parameters:prams success:^(NSURLSessionDataTask *operation, id jsonObject) {
+        if (IsRequestTrue) {
+            if (isHeader) {
+                [self.dataSouceArray2 removeAllObjects];
+            }
+            NSArray *array =jsonObject[@"data"][@"data"];
+            if (array.count > 0) {
+                self.page2 ++;
+            }
+            for (NSDictionary *dic in array) {
+                IntegralShellCoinModel *model = [IntegralShellCoinModel modelWithDic:dic];
+                [self.dataSouceArray2 addObject:model];
+            }
+            [self.talbeView2 reloadData];
+        }
+        if (isHeader) {
+            [self.talbeView2.mj_header endRefreshing];
+        }else{
+            [self.talbeView2.mj_footer endRefreshing];
+            
+        }
+    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
+        
+        if (isHeader) {
+            [self.talbeView2.mj_header endRefreshing];
+        }else{
+            [self.talbeView2.mj_footer endRefreshing];
+            
+        }
+    }];
+
+}
+
 
 #pragma mark - 懒加载
 - (UITableView *)talbeView1
@@ -54,17 +158,42 @@
     return _talbeView2;
 }
 
+- (NSMutableArray *)dataSouceArray1
+{
+    if (!_dataSouceArray1) {
+        _dataSouceArray1 = [NSMutableArray array];
+    }
+    return _dataSouceArray1;
+}
+
+- (NSMutableArray *)dataSouceArray2
+{
+    if (!_dataSouceArray2) {
+        _dataSouceArray2 = [NSMutableArray array];
+    }
+    return _dataSouceArray2;
+}
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 10;
+    if (self.talbeView1 == tableView) {
+      return self.dataSouceArray1.count;
+    }else{
+        return self.dataSouceArray2.count;
+
+    }
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    BillConsumptionTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[BillConsumptionTableViewCell indentify]];
+    IntergralRecordTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[IntergralRecordTableViewCell indentify]];
     if (!cell) {
-        cell = [BillConsumptionTableViewCell newCell];
+        cell = [IntergralRecordTableViewCell newCell];
+    }
+    if (tableView==self.talbeView1) {
+        cell.integaralModel = self.dataSouceArray1[indexPath.row];
+    }else{
+        cell.shellCoinModel = self.dataSouceArray2[indexPath.row];
     }
     cell.backgroundColor = [UIColor clearColor];
     return cell;
@@ -117,11 +246,27 @@
 - (void)swipeViewCurrentItemIndexDidChange:(SwipeView *)swipeView
 {
     self.switchView.selectedSegmentIndex = swipeView.currentItemIndex;
+    switch (swipeView.currentItemIndex) {
+        case 0:
+        {
+            [self.talbeView1.mj_header beginRefreshing];
+        }
+            break;
+        case 1:
+        {
+            [self.talbeView2.mj_header beginRefreshing];
+        }
+            
+            break;
+        default:
+            break;
+    }
 }
 
 
 - (IBAction)switchView:(id)sender {
     [self.swipeView scrollToPage:self.switchView.selectedSegmentIndex duration:0.5];
+
 
 }
 @end

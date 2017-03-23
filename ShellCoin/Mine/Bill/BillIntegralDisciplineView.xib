@@ -49,7 +49,7 @@
                 <outlet property="swipeView" destination="8Zi-xy-SYd" id="ZUW-t5-fiN"/>
                 <outlet property="switchView" destination="Jik-6c-UlR" id="IUF-Jw-iWI"/>
             </connections>
-            <point key="canvasLocation" x="-189" y="-450"/>
+            <point key="canvasLocation" x="-262" y="-529"/>
         </view>
     </objects>
 </document>

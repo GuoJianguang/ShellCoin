@@ -92,14 +92,14 @@
 
 - (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController
 {
-//    if([viewController isMemberOfClass:[MineViewController class]]){
-//        if (![ShellCoinUserInfo shareUserInfos].currentLogined) {
-//            //判断是否先登录
-//            UINavigationController *navc = [LoginViewController controller];
-//            [self presentViewController:navc animated:YES completion:NULL];
-//            return NO;
-//        }
-//    }
+    if([viewController isMemberOfClass:[MineViewController class]]){
+        if (![ShellCoinUserInfo shareUserInfos].currentLogined) {
+            //判断是否先登录
+            UINavigationController *navc = [LoginViewController controller];
+            [self presentViewController:navc animated:YES completion:NULL];
+            return NO;
+        }
+    }
     return YES;
 }
 
