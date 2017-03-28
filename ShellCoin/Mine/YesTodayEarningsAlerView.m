@@ -29,6 +29,10 @@
 - (void)awakeFromNib
 {
     [super awakeFromNib];
+    
+    self.showyestodayELabel.text = [NSString stringWithFormat:@"%@%@",[ShellCoinUserInfo shareUserInfos].totalRate,@"%"];
+    self.showJichuLabel.text = [NSString stringWithFormat:@"%@%@",[ShellCoinUserInfo shareUserInfos].baseRate,@"%"];
+    self.showDengjiLabel.text = [NSString stringWithFormat:@"%@%@",[ShellCoinUserInfo shareUserInfos].plusRate,@"%"];
 }
 
 - (void)tap{

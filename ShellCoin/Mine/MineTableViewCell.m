@@ -26,7 +26,48 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    self.contentView.backgroundColor = [UIColor colorFromHexString:@"#faf8f6"];
+    self.personCenterLabel.textColor = self.recommendLabel.textColor = self.billLabel.textColor = self.setLabel.textColor = self.integralLabel.textColor = self.proportionLabel.textColor= MacoTitleColor;
+    
+    self.totalMoneyLabel.text = [NSString stringWithFormat:@"总贝壳币：%ld",[[ShellCoinUserInfo shareUserInfos].totalRate integerValue]];
+    self.totalMoneyLabel.adjustsFontSizeToFitWidth = self.showIntergralLabel.adjustsFontSizeToFitWidth = YES;
+    self.showIntergralLabel.text = [ShellCoinUserInfo shareUserInfos].totalAccumulateAmount;
+    self.showProportionLabel.text = [NSString stringWithFormat:@"%@%@",[ShellCoinUserInfo shareUserInfos].totalRate,@"%"];
+    
+    
+    
+//    if ([[ShellCoinUserInfo shareUserInfos].plusRate isEqualToString:@"0"]) {
+//        self.showProPortionImageView.hidden = YES;
+//        self.showYestodayEBtn.enabled = NO;
+//    }else{
+//        self.showProPortionImageView.hidden = NO;
+//        self.showYestodayEBtn.enabled = YES;
+//    }
+    self.showProPortionImageView.hidden = YES;
+    self.showYestodayEBtn.enabled = NO;
+    
+    [self searchUserInfor];
 }
+
+- (void)searchUserInfor
+{
+    NSString *token = [ShellCoinUserInfo shareUserInfos].token;
+    //获取用户最新消息
+    [HttpClient POST:@"user/userBaseInfo/get" parameters:@{@"token":token} success:^(NSURLSessionDataTask *operation, id jsonObject) {
+        if (IsRequestTrue) {
+            [[ShellCoinUserInfo shareUserInfos]setUserinfoWithdic:jsonObject[@"data"]];
+            self.showIntergralLabel.text = [NSString stringWithFormat:@"%.2f",[[ShellCoinUserInfo shareUserInfos].totalExpectAmount doubleValue] + [[ShellCoinUserInfo shareUserInfos].wiatJoinAmunt doubleValue]];
+            self.showProportionLabel.text = [NSString stringWithFormat:@"%.2f",[[ShellCoinUserInfo shareUserInfos].totalConsumeAmount doubleValue]];
+            [ShellCoinUserInfo shareUserInfos].token = token;
+
+        
+        }
+    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
+    }];
+    
+    
+}
+
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];

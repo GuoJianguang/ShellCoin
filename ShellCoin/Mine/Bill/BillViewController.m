@@ -11,6 +11,8 @@
 #import "BillConsumptionTableViewCell.h"
 #import "BillIntegralDisciplineView.h"
 #import "BillAmountDisciplineView.h"
+#import "Bill1View.h"
+#import "Bill12View.h"
 
 
 @interface BillViewController ()<SwipeViewDelegate,SwipeViewDataSource,UITableViewDataSource,UITableViewDelegate,SortButtonSwitchViewDelegate>
@@ -20,8 +22,8 @@
 @property (nonatomic, strong)UITableView *talbeView3;
 
 
-@property (nonatomic, strong)BillIntegralDisciplineView *intergralView;
-@property (nonatomic, strong)BillAmountDisciplineView *amountDisciplineView;
+@property (nonatomic, strong)Bill12View *intergralView;
+@property (nonatomic, strong)Bill1View *amountDisciplineView;
 @end
 
 @implementation BillViewController
@@ -71,18 +73,18 @@
     return _talbeView3;
 }
 
-- (BillIntegralDisciplineView *)intergralView
+- (Bill12View *)intergralView
 {
     if (!_intergralView) {
-        _intergralView =[[BillIntegralDisciplineView alloc]init];
+        _intergralView =[[Bill12View alloc]init];
     }
     return _intergralView;
 }
 
 
-- (BillAmountDisciplineView *)amountDisciplineView{
+- (Bill1View *)amountDisciplineView{
     if (!_amountDisciplineView) {
-        _amountDisciplineView = [[BillAmountDisciplineView alloc]init];
+        _amountDisciplineView = [[Bill1View alloc]init];
     }
     return _amountDisciplineView;
 }

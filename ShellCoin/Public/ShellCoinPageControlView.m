@@ -36,8 +36,7 @@
 {
     self = [super initWithCoder:aDecoder];
     if (self) {
-//        self.backgroundColor = [UIColor cyanColor];
-        
+        self.backgroundColor = [UIColor clearColor];
     }
     return self;
 }

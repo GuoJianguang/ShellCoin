@@ -15,7 +15,8 @@
 
 
 @interface HomeViewController ()<UITabBarControllerDelegate,UITableViewDelegate,UITableViewDataSource>
-
+@property (nonatomic, strong)NSMutableArray *privteDataSouceArray;
+@property (nonatomic, strong)NSMutableArray *popularDataSouceArray;
 @end
 
 @implementation HomeViewController
@@ -26,8 +27,40 @@
     self.view.backgroundColor = [UIColor colorWithRed:241/255. green:247/255. blue:247/255. alpha:1.];
     self.tableView.backgroundColor = [UIColor clearColor];
     self.tabBarController.delegate = self;
+    
+    UIColor *itemSelectTintColor = [UIColor redColor];
+//    [[UITabBarItem appearance] setTitleTextAttributes:
+//     [NSDictionary dictionaryWithObjectsAndKeys:
+//      itemSelectTintColor,
+//      NSForegroundColorAttributeName,
+//      [UIFont boldSystemFontOfSize:15],
+//      NSFontAttributeName
+//      ,nil] forState:UIControlStateSelected];
+    self.tabBarController.tabBar.tintColor = itemSelectTintColor;
+    [[UITabBar appearance] setShadowImage:[[UIImage alloc]init]];
+    [[UITabBar appearance] setShadowImage:[UIImage imageWithColor:itemSelectTintColor frame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 44)]];
+    [ShellCoinUserInfo shareUserInfos].locationCity = @"成都";
+
+    [self getPopularMRequest];
 }
 
+
+#pragma mark - 懒加载
+- (NSMutableArray *)privteDataSouceArray
+{
+    if (!_privteDataSouceArray) {
+        _privteDataSouceArray = [NSMutableArray array];
+    }
+    return _privteDataSouceArray;
+}
+
+- (NSMutableArray *)popularDataSouceArray
+{
+    if (!_popularDataSouceArray) {
+        _popularDataSouceArray = [NSMutableArray array];
+    }
+    return _popularDataSouceArray;
+}
 
 #pragma mark - UITableView
 
@@ -54,6 +87,7 @@
         if (!cell) {
             cell = [HomeRecommendedTableViewCell newCell];
         }
+        cell.jingpinArray = self.popularDataSouceArray;
         return cell;
         
     }else{
@@ -102,6 +136,53 @@
     }
     return YES;
 }
+
+
+
+
+#pragma mark - 数据请求
+#pragma mark - 请求人气商家，私人定制接口
+
+//- (void)getPersonalRequest{
+//    
+//    NSDictionary *parms = @{@"longitude":NullToNumber(@([ShellCoinUserInfo shareUserInfos].locationCoordinate.longitude)),
+//                            @"latitude":NullToNumber(@([ShellCoinUserInfo shareUserInfos].locationCoordinate.latitude))};
+//    [HttpClient POST:@"user/personal" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
+//        if (IsRequestTrue) {
+//            [self.privteDataSouceArray removeAllObjects];
+//            NSArray *array = jsonObject[@"data"];
+//            for (NSDictionary *dic in array) {
+//                [self.privteDataSouceArray addObject:[SecondACtivityModel modelWithDic:dic]];
+//            }
+//            [self.tableView reloadData];
+//        }
+//        
+//    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
+//        
+//    }];
+//}
+
+
+
+- (void)getPopularMRequest{
+    NSDictionary *parms = @{@"city":[ShellCoinUserInfo shareUserInfos].locationCity};
+    [HttpClient POST:@"mch/hotMchs" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
+        if (IsRequestTrue) {
+            [self.popularDataSouceArray removeAllObjects];
+            for (NSDictionary *dic in jsonObject[@"data"]) {
+                PopularMerModel *model = [PopularMerModel modelWithDic:dic];
+                [self.popularDataSouceArray addObject:model];
+            }
+            [self.tableView reloadData];
+//            [self getPersonalRequest];
+        }
+        
+    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
+        
+    }];
+    
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

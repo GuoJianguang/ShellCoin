@@ -26,7 +26,7 @@
             </objects>
             <point key="canvasLocation" x="-1106" y="-452"/>
         </scene>
-        <!--个人中心-->
+        <!--我的-->
         <scene sceneID="8v0-As-adJ">
             <objects>
                 <viewController wantsFullScreenLayout="YES" id="Bn5-tb-kXy" customClass="MineViewController" sceneMemberID="viewController">
@@ -56,7 +56,7 @@
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
-                    <tabBarItem key="tabBarItem" title="个人中心" id="saf-hx-FXC"/>
+                    <tabBarItem key="tabBarItem" title="我的" image="mine_nor" selectedImage="mine_sel" id="saf-hx-FXC"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -88,7 +88,7 @@
             </objects>
             <point key="canvasLocation" x="-90" y="-949"/>
         </scene>
-        <!--首页-->
+        <!--商家-->
         <scene sceneID="ZDF-hZ-8z1">
             <objects>
                 <viewController id="PoU-1Z-qcq" customClass="HomeViewController" sceneMemberID="viewController">
@@ -176,16 +176,16 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="jW6-Hd-o8Q" firstAttribute="top" secondItem="g7c-rF-TjS" secondAttribute="bottom" id="7rs-sp-kFg"/>
                             <constraint firstItem="Kej-bz-OuB" firstAttribute="top" secondItem="ysa-Rl-5Ds" secondAttribute="top" id="9PW-2X-e2E"/>
                             <constraint firstAttribute="trailing" secondItem="Kej-bz-OuB" secondAttribute="trailing" id="AuB-lq-vaT"/>
                             <constraint firstAttribute="trailing" secondItem="g7c-rF-TjS" secondAttribute="trailing" id="EpF-Vi-5bf"/>
+                            <constraint firstItem="jW6-Hd-o8Q" firstAttribute="top" secondItem="g7c-rF-TjS" secondAttribute="bottom" id="NHc-tS-H2i"/>
                             <constraint firstItem="g7c-rF-TjS" firstAttribute="top" secondItem="ysa-Rl-5Ds" secondAttribute="top" constant="64" id="Oco-Wv-pyx"/>
                             <constraint firstItem="Kej-bz-OuB" firstAttribute="leading" secondItem="ysa-Rl-5Ds" secondAttribute="leading" id="Us0-fB-4hj"/>
                             <constraint firstItem="g7c-rF-TjS" firstAttribute="leading" secondItem="ysa-Rl-5Ds" secondAttribute="leading" id="age-uS-Xgx"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="首页" image="tab_home_nor" selectedImage="tab_home_sel" id="dA3-ac-kv0"/>
+                    <tabBarItem key="tabBarItem" title="商家" image="seller_nor" selectedImage="seller_sel" id="dA3-ac-kv0"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="g7c-rF-TjS" id="6wG-SX-Y6R"/>
@@ -198,7 +198,9 @@
     </scenes>
     <resources>
         <image name="icon_home_pulldown" width="16" height="16"/>
-        <image name="tab_home_nor" width="16" height="16"/>
-        <image name="tab_home_sel" width="16" height="16"/>
+        <image name="mine_nor" width="49" height="49"/>
+        <image name="mine_sel" width="49" height="49"/>
+        <image name="seller_nor" width="49" height="49"/>
+        <image name="seller_sel" width="49" height="49"/>
     </resources>
 </document>

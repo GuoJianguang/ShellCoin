@@ -8,6 +8,7 @@
 
 #import "BillConsumptionTableViewCell.h"
 #import "BillAmountDataModel.h"
+#import "BillDataModel.h"
 
 @implementation BillConsumptionTableViewCell
 
@@ -21,14 +22,14 @@
 
 }
 
-- (void)setXiaofeijiluModel:(BillAmountDataModel *)xiaofeijiluModel
+- (void)setXiaofeijiluModel:(BillDataModel *)xiaofeijiluModel
 {
     _xiaofeijiluModel = xiaofeijiluModel;
     self.markLabel.text = _xiaofeijiluModel.mchName;
     self.timeLabel.text = _xiaofeijiluModel.tranTime;
     NSString *statusStr = [NSString string];
     
-    switch ([_xiaofeijiluModel.state integerValue]) {
+    switch ([_xiaofeijiluModel.channel integerValue]) {
         case 0:
             statusStr = @"未支付";
             break;
@@ -49,7 +50,7 @@
             break;
     }
     self.statusLabel.text = statusStr;
-    self.moneyLabel.text = [NSString stringWithFormat:@"¥%@",_xiaofeijiluModel.totalAmount];
+    self.moneyLabel.text = [NSString stringWithFormat:@"¥%@",_xiaofeijiluModel.balanceAmount];
 }
 
 @end

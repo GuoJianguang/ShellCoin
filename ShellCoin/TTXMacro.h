@@ -31,7 +31,7 @@
 #define YoumengKey_Inhouse @"56a9b2dae0f55ae6190022b1"
 //密码md5加密key
 #define PasswordKey @"SV245HYJH"
-
+//PW2017$LY
 //生成订单md5加密key
 #define OrderWithMd5Key @"T2t0X16"
 
@@ -47,8 +47,8 @@
 
 
 //加载失败的图片
-#define LoadingErrorImage ([UIImage imageNamed:@"loading_error"])
-#define BannerLoadingErrorImage ([UIImage imageNamed:@"banner_loading_error"])
+#define LoadingErrorDefaultImageCircular ([UIImage imageNamed:@"defaultImagecircular"])
+#define LoadingErrorDefaultImageSquare ([UIImage imageNamed:@"defaultImageSquare"])
 #define HeaderLoadingErrorImage ([UIImage imageNamed:@"user_defalut_icon"])
 #define AppIconImage ([UIImage imageNamed:@"AppIcon"])
 
@@ -87,7 +87,7 @@
 
 #define TWitdh  [UIScreen mainScreen].bounds.size.width
 #define THeight [UIScreen mainScreen].bounds.size.height
-#define MacoColor [UIColor colorFromHexString:@"f27242"]
+#define MacoColor [UIColor redColor]
 #define MacoPriceColor [UIColor colorFromHexString:@"f27242"]
 
 

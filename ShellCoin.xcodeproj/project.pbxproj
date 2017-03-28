@@ -8,6 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		2FF6447AE4B485C166C57676 /* libPods-ShellCoin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BEFB67E1918B5BA80284D66F /* libPods-ShellCoin.a */; };
+		BC054D421E8A039600062AC5 /* EnterInputMoneyView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC054D411E8A039600062AC5 /* EnterInputMoneyView.m */; };
+		BC054D441E8A03A200062AC5 /* EnterInputMoneyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC054D431E8A03A200062AC5 /* EnterInputMoneyView.xib */; };
+		BC054D481E8A095B00062AC5 /* OnlinePayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC054D461E8A095B00062AC5 /* OnlinePayViewController.m */; };
+		BC054D491E8A095B00062AC5 /* OnlinePayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC054D471E8A095B00062AC5 /* OnlinePayViewController.xib */; };
+		BC054D4B1E8A2F1600062AC5 /* Merchant.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC054D4A1E8A2F1600062AC5 /* Merchant.xcassets */; };
+		BC054D4E1E8A3D2600062AC5 /* Bill1View.m in Sources */ = {isa = PBXBuildFile; fileRef = BC054D4D1E8A3D2600062AC5 /* Bill1View.m */; };
+		BC054D501E8A3D3600062AC5 /* Bill1View.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC054D4F1E8A3D3600062AC5 /* Bill1View.xib */; };
+		BC054D541E8A402E00062AC5 /* Bill12View.m in Sources */ = {isa = PBXBuildFile; fileRef = BC054D511E8A402E00062AC5 /* Bill12View.m */; };
+		BC054D551E8A402E00062AC5 /* Bill12View.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC054D531E8A402E00062AC5 /* Bill12View.xib */; };
+		BC054D581E8A418F00062AC5 /* BillDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BC054D571E8A418F00062AC5 /* BillDataModel.m */; };
 		BC0A58221E724ADA0077C8A9 /* 213955937960616.cer in Resources */ = {isa = PBXBuildFile; fileRef = BC0A58181E724ADA0077C8A9 /* 213955937960616.cer */; };
 		BC0A58231E724ADA0077C8A9 /* BaseHttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0A581A1E724ADA0077C8A9 /* BaseHttpClient.m */; };
 		BC0A58241E724ADA0077C8A9 /* HttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0A581C1E724ADA0077C8A9 /* HttpClient.m */; };
@@ -157,6 +167,15 @@
 		BCAC5D0B1E82587F003CACF8 /* BillIntegralDisciplineView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCAC5D0A1E82587F003CACF8 /* BillIntegralDisciplineView.xib */; };
 		BCAC5D0E1E825DBB003CACF8 /* BillAmountDisciplineView.m in Sources */ = {isa = PBXBuildFile; fileRef = BCAC5D0D1E825DBB003CACF8 /* BillAmountDisciplineView.m */; };
 		BCAC5D101E825DC5003CACF8 /* BillAmountDisciplineView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCAC5D0F1E825DC5003CACF8 /* BillAmountDisciplineView.xib */; };
+		BCB9A7C51E89F4B600F3E966 /* Public.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCB9A7C41E89F4B600F3E966 /* Public.xcassets */; };
+		BCB9A7C91E89F77100F3E966 /* MerchantDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCB9A7C71E89F77100F3E966 /* MerchantDetailViewController.m */; };
+		BCB9A7CA1E89F77100F3E966 /* MerchantDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCB9A7C81E89F77100F3E966 /* MerchantDetailViewController.xib */; };
+		BCC8E1971E88F2A4004DBDA3 /* UIImage+ColorImage.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC8E1961E88F2A4004DBDA3 /* UIImage+ColorImage.m */; };
+		BCC8E19C1E88FDCF004DBDA3 /* MerchantListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC8E19A1E88FDCF004DBDA3 /* MerchantListViewController.m */; };
+		BCC8E19D1E88FDCF004DBDA3 /* MerchantListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCC8E19B1E88FDCF004DBDA3 /* MerchantListViewController.xib */; };
+		BCC8E1A11E88FFB7004DBDA3 /* MerchantTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC8E19F1E88FFB7004DBDA3 /* MerchantTableViewCell.m */; };
+		BCC8E1A21E88FFB7004DBDA3 /* MerchantTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCC8E1A01E88FFB7004DBDA3 /* MerchantTableViewCell.xib */; };
+		BCC8E1A51E89027A004DBDA3 /* MerchantModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC8E1A41E89027A004DBDA3 /* MerchantModel.m */; };
 		BCE5EED71E5C41030055D828 /* Colours.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE5EED61E5C41030055D828 /* Colours.m */; };
 		BCE5EED91E5C41900055D828 /* Mine.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCE5EED81E5C41900055D828 /* Mine.xcassets */; };
 		BCEC06991E83B6FA0059C2C4 /* BillIntegaralModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEC06981E83B6FA0059C2C4 /* BillIntegaralModel.m */; };
@@ -213,6 +232,21 @@
 
 /* Begin PBXFileReference section */
 		5674F83A9666780E4483DE0A /* Pods-ShellCoin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShellCoin.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShellCoin/Pods-ShellCoin.release.xcconfig"; sourceTree = "<group>"; };
+		BC054D401E8A039600062AC5 /* EnterInputMoneyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnterInputMoneyView.h; sourceTree = "<group>"; };
+		BC054D411E8A039600062AC5 /* EnterInputMoneyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnterInputMoneyView.m; sourceTree = "<group>"; };
+		BC054D431E8A03A200062AC5 /* EnterInputMoneyView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EnterInputMoneyView.xib; sourceTree = "<group>"; };
+		BC054D451E8A095B00062AC5 /* OnlinePayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnlinePayViewController.h; sourceTree = "<group>"; };
+		BC054D461E8A095B00062AC5 /* OnlinePayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnlinePayViewController.m; sourceTree = "<group>"; };
+		BC054D471E8A095B00062AC5 /* OnlinePayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OnlinePayViewController.xib; sourceTree = "<group>"; };
+		BC054D4A1E8A2F1600062AC5 /* Merchant.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Merchant.xcassets; sourceTree = "<group>"; };
+		BC054D4C1E8A3D2600062AC5 /* Bill1View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bill1View.h; sourceTree = "<group>"; };
+		BC054D4D1E8A3D2600062AC5 /* Bill1View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bill1View.m; sourceTree = "<group>"; };
+		BC054D4F1E8A3D3600062AC5 /* Bill1View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Bill1View.xib; sourceTree = "<group>"; };
+		BC054D511E8A402E00062AC5 /* Bill12View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bill12View.m; sourceTree = "<group>"; };
+		BC054D521E8A402E00062AC5 /* Bill12View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bill12View.h; sourceTree = "<group>"; };
+		BC054D531E8A402E00062AC5 /* Bill12View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Bill12View.xib; sourceTree = "<group>"; };
+		BC054D561E8A418F00062AC5 /* BillDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BillDataModel.h; sourceTree = "<group>"; };
+		BC054D571E8A418F00062AC5 /* BillDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BillDataModel.m; sourceTree = "<group>"; };
 		BC0A58181E724ADA0077C8A9 /* 213955937960616.cer */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 213955937960616.cer; sourceTree = "<group>"; };
 		BC0A58191E724ADA0077C8A9 /* BaseHttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseHttpClient.h; sourceTree = "<group>"; };
 		BC0A581A1E724ADA0077C8A9 /* BaseHttpClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseHttpClient.m; sourceTree = "<group>"; };
@@ -453,6 +487,20 @@
 		BCAC5D0C1E825DBB003CACF8 /* BillAmountDisciplineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BillAmountDisciplineView.h; sourceTree = "<group>"; };
 		BCAC5D0D1E825DBB003CACF8 /* BillAmountDisciplineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BillAmountDisciplineView.m; sourceTree = "<group>"; };
 		BCAC5D0F1E825DC5003CACF8 /* BillAmountDisciplineView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BillAmountDisciplineView.xib; sourceTree = "<group>"; };
+		BCB9A7C41E89F4B600F3E966 /* Public.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Public.xcassets; sourceTree = "<group>"; };
+		BCB9A7C61E89F77100F3E966 /* MerchantDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MerchantDetailViewController.h; sourceTree = "<group>"; };
+		BCB9A7C71E89F77100F3E966 /* MerchantDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MerchantDetailViewController.m; sourceTree = "<group>"; };
+		BCB9A7C81E89F77100F3E966 /* MerchantDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MerchantDetailViewController.xib; sourceTree = "<group>"; };
+		BCC8E1951E88F2A4004DBDA3 /* UIImage+ColorImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ColorImage.h"; sourceTree = "<group>"; };
+		BCC8E1961E88F2A4004DBDA3 /* UIImage+ColorImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ColorImage.m"; sourceTree = "<group>"; };
+		BCC8E1991E88FDCF004DBDA3 /* MerchantListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MerchantListViewController.h; sourceTree = "<group>"; };
+		BCC8E19A1E88FDCF004DBDA3 /* MerchantListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MerchantListViewController.m; sourceTree = "<group>"; };
+		BCC8E19B1E88FDCF004DBDA3 /* MerchantListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MerchantListViewController.xib; sourceTree = "<group>"; };
+		BCC8E19E1E88FFB7004DBDA3 /* MerchantTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MerchantTableViewCell.h; sourceTree = "<group>"; };
+		BCC8E19F1E88FFB7004DBDA3 /* MerchantTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MerchantTableViewCell.m; sourceTree = "<group>"; };
+		BCC8E1A01E88FFB7004DBDA3 /* MerchantTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MerchantTableViewCell.xib; sourceTree = "<group>"; };
+		BCC8E1A31E89027A004DBDA3 /* MerchantModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MerchantModel.h; sourceTree = "<group>"; };
+		BCC8E1A41E89027A004DBDA3 /* MerchantModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MerchantModel.m; sourceTree = "<group>"; };
 		BCE5EED51E5C41030055D828 /* Colours.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Colours.h; sourceTree = "<group>"; };
 		BCE5EED61E5C41030055D828 /* Colours.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Colours.m; sourceTree = "<group>"; };
 		BCE5EED81E5C41900055D828 /* Mine.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Mine.xcassets; sourceTree = "<group>"; };
@@ -639,6 +687,14 @@
 				BC2F17741E839CF300657C51 /* BillAmountDataModel.m */,
 				BCEC06971E83B6FA0059C2C4 /* BillIntegaralModel.h */,
 				BCEC06981E83B6FA0059C2C4 /* BillIntegaralModel.m */,
+				BC054D4C1E8A3D2600062AC5 /* Bill1View.h */,
+				BC054D4D1E8A3D2600062AC5 /* Bill1View.m */,
+				BC054D4F1E8A3D3600062AC5 /* Bill1View.xib */,
+				BC054D521E8A402E00062AC5 /* Bill12View.h */,
+				BC054D511E8A402E00062AC5 /* Bill12View.m */,
+				BC054D531E8A402E00062AC5 /* Bill12View.xib */,
+				BC054D561E8A418F00062AC5 /* BillDataModel.h */,
+				BC054D571E8A418F00062AC5 /* BillDataModel.m */,
 			);
 			path = Bill;
 			sourceTree = "<group>";
@@ -774,6 +830,7 @@
 		BC4AAC161E4D6E31006568A6 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				BCC8E1981E88FDB8004DBDA3 /* Merchant */,
 				BC4E25291E80C3F8005BE142 /* TalentRecommendation */,
 				BC4AAC181E4D6E5B006568A6 /* HomeViewController.h */,
 				BC4AAC191E4D6E5B006568A6 /* HomeViewController.m */,
@@ -851,9 +908,9 @@
 		BC4AAC321E4D7556006568A6 /* Public */ = {
 			isa = PBXGroup;
 			children = (
+				BC0A58171E724ADA0077C8A9 /* HttpClient */,
 				BC77C6981E7A6D8600DC9EAC /* WeXinPayObject.h */,
 				BC77C6991E7A6D8600DC9EAC /* WeXinPayObject.m */,
-				BC0A58171E724ADA0077C8A9 /* HttpClient */,
 				BC4AAC331E4D7562006568A6 /* JAlertViewHelper.h */,
 				BC4AAC341E4D7562006568A6 /* JAlertViewHelper.m */,
 				BC2C21981E4DAF1300AAFEFE /* PGIndexBannerSubiew.h */,
@@ -872,6 +929,9 @@
 				BC23C9E81E7933B700E90B43 /* LSPaoMaView.m */,
 				BC57B6F81E7FA9DC006AF4D1 /* ShellCoinPageControlView.h */,
 				BC57B6F91E7FA9DC006AF4D1 /* ShellCoinPageControlView.m */,
+				BCC8E1951E88F2A4004DBDA3 /* UIImage+ColorImage.h */,
+				BCC8E1961E88F2A4004DBDA3 /* UIImage+ColorImage.m */,
+				BCB9A7C41E89F4B600F3E966 /* Public.xcassets */,
 			);
 			path = Public;
 			sourceTree = "<group>";
@@ -1056,6 +1116,31 @@
 				BC9B3DA71E763AC5003DC241 /* Realname authentication */,
 			);
 			path = PersonalCenter;
+			sourceTree = "<group>";
+		};
+		BCC8E1981E88FDB8004DBDA3 /* Merchant */ = {
+			isa = PBXGroup;
+			children = (
+				BCC8E1991E88FDCF004DBDA3 /* MerchantListViewController.h */,
+				BCC8E19A1E88FDCF004DBDA3 /* MerchantListViewController.m */,
+				BCC8E19B1E88FDCF004DBDA3 /* MerchantListViewController.xib */,
+				BCC8E19E1E88FFB7004DBDA3 /* MerchantTableViewCell.h */,
+				BCC8E19F1E88FFB7004DBDA3 /* MerchantTableViewCell.m */,
+				BCC8E1A01E88FFB7004DBDA3 /* MerchantTableViewCell.xib */,
+				BCC8E1A31E89027A004DBDA3 /* MerchantModel.h */,
+				BCC8E1A41E89027A004DBDA3 /* MerchantModel.m */,
+				BCB9A7C61E89F77100F3E966 /* MerchantDetailViewController.h */,
+				BCB9A7C71E89F77100F3E966 /* MerchantDetailViewController.m */,
+				BCB9A7C81E89F77100F3E966 /* MerchantDetailViewController.xib */,
+				BC054D401E8A039600062AC5 /* EnterInputMoneyView.h */,
+				BC054D411E8A039600062AC5 /* EnterInputMoneyView.m */,
+				BC054D431E8A03A200062AC5 /* EnterInputMoneyView.xib */,
+				BC054D451E8A095B00062AC5 /* OnlinePayViewController.h */,
+				BC054D461E8A095B00062AC5 /* OnlinePayViewController.m */,
+				BC054D471E8A095B00062AC5 /* OnlinePayViewController.xib */,
+				BC054D4A1E8A2F1600062AC5 /* Merchant.xcassets */,
+			);
+			path = Merchant;
 			sourceTree = "<group>";
 		};
 		BCE5EED41E5C41030055D828 /* Colours */ = {
@@ -1253,6 +1338,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC9B3DCE1E76837B003DC241 /* header.jpg in Resources */,
+				BCB9A7CA1E89F77100F3E966 /* MerchantDetailViewController.xib in Resources */,
 				BC0A58361E72832E0077C8A9 /* SetTableViewCell.xib in Resources */,
 				BC57B70F1E7FC937006AF4D1 /* HomeRecommendedTableViewCell.xib in Resources */,
 				BC9B3DB11E7648AF003DC241 /* RealNameAutResultView.xib in Resources */,
@@ -1275,11 +1361,15 @@
 				BC9B3DE71E76892C003DC241 /* MyQrCodeViewController.xib in Resources */,
 				BCFE20561E778CA9002BC28C /* SetPasswordViewController.xib in Resources */,
 				BC4AAC3D1E4D8F7B006568A6 /* MineTableViewCell.xib in Resources */,
+				BC054D551E8A402E00062AC5 /* Bill12View.xib in Resources */,
+				BC054D491E8A095B00062AC5 /* OnlinePayViewController.xib in Resources */,
 				BC9B3DAC1E763AF4003DC241 /* RealnameViewController.xib in Resources */,
 				BC9B3DB61E767A9E003DC241 /* ManualCertificationViewController.xib in Resources */,
 				BCFE20601E779283002BC28C /* ChangePayPasswordViewController.xib in Resources */,
 				BC0A583F1E728D520077C8A9 /* BillViewController.xib in Resources */,
 				BC4AAC2D1E4D6E7D006568A6 /* BaseNavigationBar.xib in Resources */,
+				BC054D441E8A03A200062AC5 /* EnterInputMoneyView.xib in Resources */,
+				BCC8E19D1E88FDCF004DBDA3 /* MerchantListViewController.xib in Resources */,
 				BCFE207A1E77D443002BC28C /* SureTradInView.xib in Resources */,
 				BCEC069E1E83BFF20059C2C4 /* IntergralRecordTableViewCell.xib in Resources */,
 				BCE5EED91E5C41900055D828 /* Mine.xcassets in Resources */,
@@ -1293,10 +1383,12 @@
 				BC4AABE81E4D69E2006568A6 /* Main.storyboard in Resources */,
 				BCFE208E1E77E206002BC28C /* RegisterOneViewController.xib in Resources */,
 				BCFE209F1E77EF2A002BC28C /* WithdrawalViewController.xib in Resources */,
+				BC054D501E8A3D3600062AC5 /* Bill1View.xib in Resources */,
 				BCFE20921E77E206002BC28C /* ForgetPasswordOneViewController.xib in Resources */,
 				BCFE205B1E778F45002BC28C /* ChangeLoginPasswordViewController.xib in Resources */,
 				BC9B3DF71E76982B003DC241 /* EditPhoneNumberViewController.xib in Resources */,
 				BC9B3E0B1E769D44003DC241 /* SetPayPasswordViewController.xib in Resources */,
+				BCC8E1A21E88FFB7004DBDA3 /* MerchantTableViewCell.xib in Resources */,
 				BC57B7201E7FD62A006AF4D1 /* HomeMerchantTableViewCell.xib in Resources */,
 				BC0A58221E724ADA0077C8A9 /* 213955937960616.cer in Resources */,
 				BC57B7141E7FCC7E006AF4D1 /* HighQualityCollectionViewCell.xib in Resources */,
@@ -1306,7 +1398,9 @@
 				BC9B3DC91E76837B003DC241 /* city.plist in Resources */,
 				BC9B3DD71E7683B7003DC241 /* NoBankCardViewController.xib in Resources */,
 				BC23C9EE1E79396500E90B43 /* YesTodayEarningsAlerView.xib in Resources */,
+				BCB9A7C51E89F4B600F3E966 /* Public.xcassets in Resources */,
 				BC57B6F31E7F779D006AF4D1 /* pagedefault.png in Resources */,
+				BC054D4B1E8A2F1600062AC5 /* Merchant.xcassets in Resources */,
 				BC9B3DDF1E7688AD003DC241 /* PersonCenterTableViewCell.xib in Resources */,
 				BC57B6F01E7F7745006AF4D1 /* pagecurrent.png in Resources */,
 				BCFE20941E77E206002BC28C /* ForgetPasswordTwoViewController.xib in Resources */,
@@ -1415,10 +1509,12 @@
 				BC36CFEB1E80CB4300A51BF4 /* RecommentModel.m in Sources */,
 				BC9B3DAF1E7648A2003DC241 /* RealNameAutResultView.m in Sources */,
 				BC0A58421E728F050077C8A9 /* SwipeView.m in Sources */,
+				BCB9A7C91E89F77100F3E966 /* MerchantDetailViewController.m in Sources */,
 				BCFE20971E77E329002BC28C /* ShellCoinUserInfo.m in Sources */,
 				BC23C9DC1E79153E00E90B43 /* LBXScanNetAnimation.m in Sources */,
 				BC9B3E011E7698CC003DC241 /* BanCardDetailTableViewCell.m in Sources */,
 				BC4AAC2F1E4D6E7D006568A6 /* BaseViewController.m in Sources */,
+				BCC8E19C1E88FDCF004DBDA3 /* MerchantListViewController.m in Sources */,
 				BC9B3DCC1E76837B003DC241 /* EditBankInfoViewController.m in Sources */,
 				BC9B3DCA1E76837B003DC241 /* EditbankInfoTableViewCell.m in Sources */,
 				BC57B6FA1E7FA9DC006AF4D1 /* ShellCoinPageControlView.m in Sources */,
@@ -1434,11 +1530,13 @@
 				BC23C9DE1E79153E00E90B43 /* LBXScanView.m in Sources */,
 				BC4E25321E80C50D005BE142 /* RecommentSpecialTableViewCell.m in Sources */,
 				BC23C9DB1E79153E00E90B43 /* LBXScanNative.m in Sources */,
+				BC054D541E8A402E00062AC5 /* Bill12View.m in Sources */,
 				BC4AABE21E4D69E2006568A6 /* AppDelegate.m in Sources */,
 				BCFE209E1E77EF2A002BC28C /* WithdrawalViewController.m in Sources */,
 				BC9B3DF61E76982B003DC241 /* EditPhoneNumberViewController.m in Sources */,
 				BC0A58351E72832E0077C8A9 /* SetTableViewCell.m in Sources */,
 				BCFE20651E7798D6002BC28C /* TradInViewController.m in Sources */,
+				BCC8E1A51E89027A004DBDA3 /* MerchantModel.m in Sources */,
 				BC0A58491E7299900077C8A9 /* BillTableViewCell.m in Sources */,
 				BC9B3DB51E767A9E003DC241 /* ManualCertificationViewController.m in Sources */,
 				BCFE208C1E77E206002BC28C /* LoginViewController.m in Sources */,
@@ -1446,6 +1544,7 @@
 				BCFE20781E77D437002BC28C /* SureTradInView.m in Sources */,
 				BC57B7131E7FCC7E006AF4D1 /* HighQualityCollectionViewCell.m in Sources */,
 				BC9B3DAB1E763AF4003DC241 /* RealnameViewController.m in Sources */,
+				BCC8E1A11E88FFB7004DBDA3 /* MerchantTableViewCell.m in Sources */,
 				BCFE206A1E77BC83002BC28C /* TradInTableViewCell.m in Sources */,
 				BC9B3E031E7698CC003DC241 /* ManageBankView.m in Sources */,
 				BC4AAC2B1E4D6E7D006568A6 /* BaseModel.m in Sources */,
@@ -1453,8 +1552,10 @@
 				BC4AAC291E4D6E7D006568A6 /* BaseCollectionViewCell.m in Sources */,
 				BCAC5D091E825870003CACF8 /* BillIntegralDisciplineView.m in Sources */,
 				BC4AAC2C1E4D6E7D006568A6 /* BaseNavigationBar.m in Sources */,
+				BC054D481E8A095B00062AC5 /* OnlinePayViewController.m in Sources */,
 				BCFE208D1E77E206002BC28C /* RegisterOneViewController.m in Sources */,
 				BCEC069D1E83BFF20059C2C4 /* IntergralRecordTableViewCell.m in Sources */,
+				BC054D581E8A418F00062AC5 /* BillDataModel.m in Sources */,
 				BC23C9E21E79153E00E90B43 /* LBXZXCapture.m in Sources */,
 				BC36CFE71E80C9AD00A51BF4 /* RecommentSpecilCollectionViewCell.m in Sources */,
 				BC0A58451E728F2C0077C8A9 /* AutoScroller.m in Sources */,
@@ -1467,10 +1568,13 @@
 				BC23C9E01E79153E00E90B43 /* LBXScanViewStyle.m in Sources */,
 				BCFE20551E778CA9002BC28C /* SetPasswordViewController.m in Sources */,
 				BC57B6FE1E7FBFEA006AF4D1 /* HomeBannerTableViewCell.m in Sources */,
+				BC054D4E1E8A3D2600062AC5 /* Bill1View.m in Sources */,
 				BC23C9E91E7933B700E90B43 /* LSPaoMaView.m in Sources */,
 				BC23C9D81E79153E00E90B43 /* UIAlertView+LBXAlertAction.m in Sources */,
 				BC4E252D1E80C41E005BE142 /* TalentRecommentViewController.m in Sources */,
+				BC054D421E8A039600062AC5 /* EnterInputMoneyView.m in Sources */,
 				BCFE205F1E779283002BC28C /* ChangePayPasswordViewController.m in Sources */,
+				BCC8E1971E88F2A4004DBDA3 /* UIImage+ColorImage.m in Sources */,
 				BC23C9DF1E79153E00E90B43 /* LBXScanViewController.m in Sources */,
 				BC4AAC151E4D6DBB006568A6 /* RootViewController.m in Sources */,
 				BCFE206E1E77C7D6002BC28C /* SelectBanCardView.m in Sources */,

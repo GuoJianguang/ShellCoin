@@ -11,6 +11,20 @@
 #import "ForyouCollectionViewCell.h"
 #import "TalentRecommentViewController.h"
 
+@implementation PopularMerModel
+
++ (id)modelWithDic:(NSDictionary *)dic
+{
+    PopularMerModel *model  = [[PopularMerModel alloc]init];
+    model.aviableBalance = NullToNumber(dic[@"aviableBalance"]);
+    model.mchCode = NullToSpace(dic[@"mchCode"]);
+    model.mchName = NullToSpace(dic[@"mchName"]);
+    model.pic = NullToSpace(dic[@"pic"]);
+    return model;
+}
+@end
+
+
 @interface HomeRecommendedTableViewCell()<UICollectionViewDelegate,UICollectionViewDataSource>
 
 @end
@@ -25,6 +39,12 @@
     self.foryouCollectionView.dataSource = self;
 }
 
+- (void)setJingpinArray:(NSMutableArray *)jingpinArray
+{
+    _jingpinArray = jingpinArray;
+    [self.highqualityCollectionVIew reloadData];
+}
+
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 
@@ -33,7 +53,9 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    
+    if (collectionView == self.highqualityCollectionVIew) {
+        return self.jingpinArray.count;
+    }
     return 3;
 }
 
@@ -69,7 +91,9 @@
         nibri =YES;
     }
     HighQualityCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
-//    cell.dataModel = self.privteDataSouceArray[indexPath.item];
+    if (self.jingpinArray.count > 0) {
+        cell.dataModel = self.jingpinArray[indexPath.item];
+    }
     nibri=NO;
     return cell;
 }

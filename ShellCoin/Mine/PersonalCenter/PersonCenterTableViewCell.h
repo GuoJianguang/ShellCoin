@@ -17,6 +17,7 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *realNameBtn;
 - (IBAction)realNameBtn:(id)sender;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 
 @property (weak, nonatomic) IBOutlet UIImageView *headImageView;
 
@@ -31,6 +32,9 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *realNameLabel;
 - (IBAction)realNameManageBtn:(id)sender;
+
+@property (weak, nonatomic) IBOutlet UIImageView *realNameMarkImageView;
+
 
 @property (weak, nonatomic) IBOutlet UILabel *qrCodeLabel;
 

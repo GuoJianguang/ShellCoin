@@ -182,7 +182,7 @@
                 <outlet property="foryouCollectionView" destination="EXV-JR-BSj" id="oAh-hQ-I6b"/>
                 <outlet property="highqualityCollectionVIew" destination="Ndu-yh-6Qy" id="LeL-f5-yFO"/>
             </connections>
-            <point key="canvasLocation" x="-179" y="-347"/>
+            <point key="canvasLocation" x="93" y="-385"/>
         </tableViewCell>
     </objects>
 </document>

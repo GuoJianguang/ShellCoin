@@ -358,10 +358,10 @@
         cell = [BillTableViewCell newCell];
     }
     if (self.talbeView2 == tableView) {
-        cell.dihuanModel = self.dataSouceArray2[indexPath.row];
+//        cell.dihuanModel = self.dataSouceArray2[indexPath.row];
     }
     if (self.talbeView3 == tableView) {
-        cell.dihuanModel = self.dataSouceArray3[indexPath.row];
+//        cell.dihuanModel = self.dataSouceArray3[indexPath.row];
     }
     
     

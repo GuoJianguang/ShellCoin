@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-@class BillAmountDataModel;
+@class BillDataModel;
 
 @interface BillConsumptionTableViewCell : BaseTableViewCell
 
@@ -20,6 +20,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *sortImageview;
 @property (weak, nonatomic) IBOutlet UILabel *statusLabel;
 
-@property (nonatomic, strong)BillAmountDataModel *xiaofeijiluModel;
+@property (nonatomic, strong)BillDataModel *xiaofeijiluModel;
 
 @end

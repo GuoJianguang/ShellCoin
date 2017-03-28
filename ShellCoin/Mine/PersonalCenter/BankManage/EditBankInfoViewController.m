@@ -9,7 +9,7 @@
 #import "EditBankInfoViewController.h"
 #import "EditbankInfoTableViewCell.h"
 
-@interface EditBankInfoViewController ()<UITableViewDataSource,UITableViewDelegate>
+@interface EditBankInfoViewController ()<UITableViewDataSource,UITableViewDelegate,BasenavigationDelegate>
 
 @end
 
@@ -19,9 +19,18 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.naviBar.title = @"编辑银行卡";
+    
+    self.naviBar.hiddenDetailBtn = NO;
+    self.naviBar.detailTitle = @"提交";
+    self.naviBar.delegate = self;
+    
 }
 
-
+- (void)detailBtnClick
+{
+    EditbankInfoTableViewCell *cell = self.tableView.visibleCells[0];
+    [cell sureEdit];
+}
 
 #pragma mark - UITableView
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section

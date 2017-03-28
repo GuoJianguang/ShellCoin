@@ -40,7 +40,6 @@
         _sureTradInView = [[SureTradInView alloc]init];
     }
     return _sureTradInView;
-    
 }
 
 #pragma mark - 选择银行

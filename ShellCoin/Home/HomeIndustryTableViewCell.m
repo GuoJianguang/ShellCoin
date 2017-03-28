@@ -10,7 +10,7 @@
 #import "SquaredUpView.h"
 #import "CustomButton.h"
 #import <SDWebImage/UIButton+WebCache.h>
-//#import "MerchantSearchResultViewController.h"
+#import "MerchantListViewController.h"
 
 
 @implementation NewHomeActivityModel
@@ -71,11 +71,11 @@
 - (void)jSquaredUpViewCell:(CustomButton *)cell didSelectedAtIndex:(NSInteger)index
 {
     NewHomeActivityModel *model = self.sortDataSouceArray[cell.tag];
-//    MerchantSearchResultViewController *resultVC = [[MerchantSearchResultViewController alloc]init];
-//    resultVC.currentIndustry = model.name;
-//    resultVC.keyWord = @"";
-//    resultVC.currentCity = [TTXUserInfo shareUserInfos].locationCity;
-//    [self.viewController.navigationController pushViewController:resultVC animated:YES];
+    MerchantListViewController *resultVC = [[MerchantListViewController alloc]init];
+    resultVC.currentIndustry = model.name;
+    resultVC.keyWord = @"";
+    resultVC.currentCity = [ShellCoinUserInfo shareUserInfos].locationCity;
+    [self.viewController.navigationController pushViewController:resultVC animated:YES];
 }
 
 

@@ -47,4 +47,7 @@
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *top8Height;
 
+- (void)sureEdit;
+
+
 @end

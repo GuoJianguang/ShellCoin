@@ -52,7 +52,12 @@
                 <constraint firstAttribute="trailing" secondItem="Myk-lu-Sen" secondAttribute="trailing" constant="8" id="yJc-oz-Xvj"/>
             </constraints>
             <size key="customSize" width="159" height="162"/>
-            <point key="canvasLocation" x="-53.5" y="71"/>
+            <connections>
+                <outlet property="markImageView" destination="xaa-Ax-hHN" id="1KA-69-bZo"/>
+                <outlet property="merchantImageView" destination="dmd-WD-K92" id="S3a-kL-eiU"/>
+                <outlet property="name" destination="Myk-lu-Sen" id="Tgy-Gc-bmU"/>
+            </connections>
+            <point key="canvasLocation" x="-302" y="72"/>
         </collectionViewCell>
     </objects>
     <resources>

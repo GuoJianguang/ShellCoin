@@ -8,7 +8,23 @@
 
 #import <UIKit/UIKit.h>
 
+
+@interface PopularMerModel : BaseModel
+
+@property (nonatomic, copy)NSString *aviableBalance;
+//商户号
+@property (nonatomic, copy)NSString *mchCode;
+//商户名
+@property (nonatomic, copy)NSString *mchName;
+//封面图
+@property (nonatomic, copy)NSString *pic;
+
+
+@end
+
 @interface HomeRecommendedTableViewCell : BaseTableViewCell
+
+@property (nonatomic, strong)NSMutableArray *jingpinArray;
 
 @property (weak, nonatomic) IBOutlet UICollectionView *highqualityCollectionVIew;
 

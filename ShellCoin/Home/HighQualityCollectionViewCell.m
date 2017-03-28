@@ -17,9 +17,13 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
-    self.contentView.backgroundColor = [UIColor cyanColor];
 }
 
-
+- (void)setDataModel:(PopularMerModel *)dataModel
+{
+    _dataModel = dataModel;
+    [self.merchantImageView sd_setImageWithURL:[NSURL URLWithString:_dataModel.pic] placeholderImage:LoadingErrorDefaultImageCircular];
+    self.name.text = _dataModel.mchName;
+}
 
 @end

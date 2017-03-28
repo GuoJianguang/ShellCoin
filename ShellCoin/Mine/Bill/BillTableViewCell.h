@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "BillAmountDataModel.h"
+#import "BillDataModel.h"
 
 
 @interface BillTableViewCell : BaseTableViewCell
@@ -18,9 +18,8 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *moneyLabel;
 
-@property (nonatomic, strong)BillDihuanModel *dihuanModel;
 
 
-@property (nonatomic, strong)BillDihuanModel *tixianModel;
+@property (nonatomic, strong)TixianModel *tixianModel;
 
 @end

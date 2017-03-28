@@ -42,7 +42,8 @@
 
 //#define formal_html_base @"https://test.p.tiantianxcn.com/ttx-api/"
 #define formal_html_base @"https://api.tiantianxcn.com/ttx-api/"
-#define formal_base @"http://121.40.78.45:8081/ly-api/1.0.0/"
+//#define formal_base @"http://121.40.78.45:8081/ly-api/1.0.0/"
+#define formal_base @"https://test.p.tiantianxcn.com/ttx-api/3.0.1/"
 //#define formal_base @"https://api.tiantianxcn.com/ttx-api/3.0.0/"
 ////正式
 #define HttpClient_BaseUrl formal_base

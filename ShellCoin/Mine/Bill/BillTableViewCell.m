@@ -20,34 +20,8 @@
 
 }
 
-- (void)setDihuanModel:(BillDihuanModel *)dihuanModel
-{
-    _dihuanModel = dihuanModel;
-    NSString *markStr = [NSString string];
-    switch ([_dihuanModel.state integerValue]) {
-        case 0:
-            markStr = @"待审核";
-            break;
-        case 1:
-            markStr = @"抵换中";
-            break;
-        case 2:
-            markStr = @"抵换成功";
-            break;
-        case 3:
-            markStr = @"抵换失败";
-            break;
-        default:
-            break;
-    }
-    
-    self.markLabel.text = markStr;
-    self.timeLabel.text = _dihuanModel.successTime;
-    self.moneyLabel.text = [NSString stringWithFormat:@"¥%@",_dihuanModel.withdrawAmout];
-}
 
-
-- (void)setTixianModel:(BillDihuanModel *)tixianModel
+- (void)setTixianModel:(TixianModel *)tixianModel
 {
     _tixianModel = tixianModel;
     NSString *markStr = [NSString string];

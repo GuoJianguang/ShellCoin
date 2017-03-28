@@ -24,6 +24,10 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *yestodyEarningsMoneyLabel;
 @property (weak, nonatomic) IBOutlet UILabel *totalMoneyLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *yesTodayBuyCardLabel;
+@property (weak, nonatomic) IBOutlet UILabel *totalBuyCardLabel;
+
 @property (weak, nonatomic) IBOutlet UIButton *helpBtn;
 - (IBAction)helpBtn:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *tradeInBtn;
@@ -33,6 +37,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *showIntergralLabel;
 @property (weak, nonatomic) IBOutlet UILabel *proportionLabel;
 @property (weak, nonatomic) IBOutlet UILabel *showProportionLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *showProPortionImageView;
 
 
 - (IBAction)personCenterAction:(id)sender;
@@ -52,6 +57,7 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *showYestodayEBtn;
 
+@property (weak, nonatomic) IBOutlet UIButton *recomendMark;
 
 
 @end

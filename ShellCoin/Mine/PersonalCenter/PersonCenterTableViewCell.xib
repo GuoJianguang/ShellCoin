@@ -89,6 +89,20 @@
                                     <action selector="realNameBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="zzs-4q-GdE"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BGV-8d-UDj">
+                                <rect key="frame" x="102" y="178" width="60" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="BvJ-Ve-vgE"/>
+                                    <constraint firstAttribute="width" constant="60" id="UjS-Ag-fNu"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eCl-Db-lDj">
+                                <rect key="frame" x="67" y="183.5" width="15" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -96,10 +110,14 @@
                             <constraint firstAttribute="bottom" secondItem="9aE-Sd-aUR" secondAttribute="bottom" constant="10" id="5PI-Jb-CA7"/>
                             <constraint firstAttribute="width" secondItem="es1-fi-1Tn" secondAttribute="height" multiplier="15:10" id="BNO-PY-bLP"/>
                             <constraint firstAttribute="bottom" secondItem="9wI-H9-EAH" secondAttribute="bottom" id="EV3-Ox-gaV"/>
+                            <constraint firstAttribute="bottom" secondItem="eCl-Db-lDj" secondAttribute="bottom" constant="10" id="Lyu-3M-Xfp"/>
+                            <constraint firstItem="BGV-8d-UDj" firstAttribute="centerY" secondItem="eCl-Db-lDj" secondAttribute="centerY" id="OFv-IW-O0C"/>
                             <constraint firstAttribute="trailing" secondItem="9wI-H9-EAH" secondAttribute="trailing" constant="20" id="WWT-N3-sWh"/>
                             <constraint firstItem="LSd-rv-JwB" firstAttribute="top" secondItem="es1-fi-1Tn" secondAttribute="top" id="aLR-ES-rg3"/>
                             <constraint firstItem="9wI-H9-EAH" firstAttribute="height" secondItem="es1-fi-1Tn" secondAttribute="height" multiplier="6/10" id="iWt-yG-cH2"/>
                             <constraint firstItem="9wI-H9-EAH" firstAttribute="leading" secondItem="9aE-Sd-aUR" secondAttribute="trailing" id="iXK-QQ-o3P"/>
+                            <constraint firstItem="9wI-H9-EAH" firstAttribute="leading" secondItem="BGV-8d-UDj" secondAttribute="trailing" constant="10" id="lSk-b5-Je7"/>
+                            <constraint firstItem="BGV-8d-UDj" firstAttribute="leading" secondItem="eCl-Db-lDj" secondAttribute="trailing" constant="20" id="vZN-9E-g3c"/>
                             <constraint firstAttribute="trailing" secondItem="LSd-rv-JwB" secondAttribute="trailing" id="yqg-jq-LnL"/>
                             <constraint firstItem="LSd-rv-JwB" firstAttribute="leading" secondItem="es1-fi-1Tn" secondAttribute="leading" id="zB2-Wp-tgU"/>
                         </constraints>
@@ -329,12 +347,14 @@
                 <outlet property="bankLabel" destination="PdR-rh-R8S" id="zEH-5U-eyp"/>
                 <outlet property="headImageView" destination="9wI-H9-EAH" id="Gev-qO-SeD"/>
                 <outlet property="myCollectionlabel" destination="sjV-ze-Tm2" id="1Kj-Km-BPU"/>
+                <outlet property="nameLabel" destination="eCl-Db-lDj" id="7vH-DK-1Ws"/>
                 <outlet property="qrCodeLabel" destination="xh5-kh-pZV" id="gLW-2q-epJ"/>
                 <outlet property="realNameBtn" destination="9aE-Sd-aUR" id="OIz-Wg-W4P"/>
-                <outlet property="realNameLabel" destination="7gI-Kr-ry1" id="99u-5x-hdC"/>
+                <outlet property="realNameLabel" destination="7gI-Kr-ry1" id="XAw-Lk-JzE"/>
+                <outlet property="realNameMarkImageView" destination="BGV-8d-UDj" id="MCU-5B-Nyl"/>
                 <outlet property="vipLabel" destination="EDa-bI-XnQ" id="qQ9-Z2-iV7"/>
             </connections>
-            <point key="canvasLocation" x="149" y="158"/>
+            <point key="canvasLocation" x="-88" y="163"/>
         </tableViewCell>
     </objects>
     <resources>
