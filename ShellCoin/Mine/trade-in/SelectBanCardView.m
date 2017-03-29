@@ -23,6 +23,9 @@
         self.tableView.delegate = self;
         self.tableView.dataSource = self;
         self.blackBackgoundView.backgroundColor = [UIColor colorFromHexString:@"#ccd8e2"];
+        [self.sureBtn setTitleColor:MacoColor forState:UIControlStateNormal];
+        [self.cancelBtn setTitleColor:MacoColor forState:UIControlStateNormal];
+        self.titelLabel.textColor = MacoTitleColor;
         self.backgroundColor = [UIColor clearColor];
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tap)];
         [self.blackBackgoundView addGestureRecognizer:tap];
@@ -114,7 +117,7 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    return 58.;
+    return TWitdh*(120/750.);
     
 }
 

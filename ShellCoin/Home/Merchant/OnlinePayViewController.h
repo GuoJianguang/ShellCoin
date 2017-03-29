@@ -48,4 +48,9 @@ typedef NS_ENUM(NSInteger,Payway_type){
 
 //支付方式
 @property (nonatomic, assign)Payway_type payWay_type;
+@property (weak, nonatomic) IBOutlet UIButton *sureBtn;
+
+- (IBAction)sureBtn:(UIButton *)sender;
+
+
 @end

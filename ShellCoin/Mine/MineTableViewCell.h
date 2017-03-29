@@ -58,6 +58,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *showYestodayEBtn;
 
 @property (weak, nonatomic) IBOutlet UIButton *recomendMark;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *viewHeight;
 
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *imageViewHeight;
 
 @end

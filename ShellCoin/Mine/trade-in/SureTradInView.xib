@@ -26,9 +26,16 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DfE-fU-5WJ">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZcR-kT-PGl">
-                                    <rect key="frame" x="16" y="15" width="31" height="30"/>
-                                    <state key="normal" title="取消"/>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zwQ-EX-JYH">
+                                    <rect key="frame" x="0.0" y="59" width="375" height="1"/>
+                                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="1" id="Ryf-1S-4cq"/>
+                                    </constraints>
+                                </view>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZcR-kT-PGl">
+                                    <rect key="frame" x="0.0" y="8" width="44" height="44"/>
+                                    <state key="normal" image="icon_close"/>
                                     <connections>
                                         <action selector="cancelBtn:" destination="WdS-Sa-txd" eventType="touchUpInside" id="eid-NG-YUQ"/>
                                     </connections>
@@ -50,25 +57,29 @@
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="DfE-fU-5WJ" secondAttribute="height" multiplier="375:60" id="I26-k2-Z0q"/>
+                                <constraint firstAttribute="bottom" secondItem="zwQ-EX-JYH" secondAttribute="bottom" id="KIO-SN-Pjn"/>
+                                <constraint firstAttribute="trailing" secondItem="zwQ-EX-JYH" secondAttribute="trailing" id="QBZ-ec-rhy"/>
+                                <constraint firstItem="zwQ-EX-JYH" firstAttribute="leading" secondItem="DfE-fU-5WJ" secondAttribute="leading" id="aEm-QT-PI2"/>
                                 <constraint firstItem="TOR-Ll-Sen" firstAttribute="centerY" secondItem="DfE-fU-5WJ" secondAttribute="centerY" id="f1s-re-m4f"/>
                                 <constraint firstItem="9pT-Pc-t3K" firstAttribute="centerY" secondItem="DfE-fU-5WJ" secondAttribute="centerY" id="nHn-2y-ZP4"/>
                                 <constraint firstAttribute="trailing" secondItem="9pT-Pc-t3K" secondAttribute="trailing" constant="16" id="osj-fC-7P9"/>
-                                <constraint firstItem="ZcR-kT-PGl" firstAttribute="leading" secondItem="DfE-fU-5WJ" secondAttribute="leading" constant="16" id="uPh-S5-hE9"/>
+                                <constraint firstItem="ZcR-kT-PGl" firstAttribute="leading" secondItem="DfE-fU-5WJ" secondAttribute="leading" id="uPh-S5-hE9"/>
                                 <constraint firstItem="ZcR-kT-PGl" firstAttribute="centerY" secondItem="DfE-fU-5WJ" secondAttribute="centerY" id="vg4-O2-Yhn"/>
                                 <constraint firstItem="TOR-Ll-Sen" firstAttribute="centerX" secondItem="DfE-fU-5WJ" secondAttribute="centerX" id="vpS-gO-9ov"/>
                             </constraints>
                         </view>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入支付密码" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rm0-vT-mST">
-                            <rect key="frame" x="60" y="90" width="255" height="53.5"/>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入支付密码" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rm0-vT-mST">
+                            <rect key="frame" x="60" y="85" width="255" height="39"/>
                             <constraints>
-                                <constraint firstAttribute="width" secondItem="Rm0-vT-mST" secondAttribute="height" multiplier="110:23" id="rjF-ZC-NEn"/>
+                                <constraint firstAttribute="width" secondItem="Rm0-vT-mST" secondAttribute="height" multiplier="52/8" id="rjF-ZC-NEn"/>
                             </constraints>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                         </textField>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ZC-xM-kYu">
-                            <rect key="frame" x="238" y="164" width="77" height="30"/>
+                            <rect key="frame" x="243" y="139" width="72" height="29"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <state key="normal" title="忘记密码？"/>
                             <connections>
                                 <action selector="forgetBtn:" destination="WdS-Sa-txd" eventType="touchUpInside" id="xua-Zd-Gs1"/>
@@ -81,9 +92,9 @@
                         <constraint firstItem="DfE-fU-5WJ" firstAttribute="top" secondItem="XWf-rI-sDP" secondAttribute="top" id="86V-1O-VAY"/>
                         <constraint firstItem="Rm0-vT-mST" firstAttribute="leading" secondItem="XWf-rI-sDP" secondAttribute="leading" constant="60" id="Do5-sc-Uti"/>
                         <constraint firstAttribute="width" secondItem="XWf-rI-sDP" secondAttribute="height" multiplier="375/260" id="FiU-DI-ta8"/>
-                        <constraint firstItem="3ZC-xM-kYu" firstAttribute="top" secondItem="Rm0-vT-mST" secondAttribute="bottom" constant="20" id="Mis-pf-ee9"/>
+                        <constraint firstItem="3ZC-xM-kYu" firstAttribute="top" secondItem="Rm0-vT-mST" secondAttribute="bottom" constant="15" id="Mis-pf-ee9"/>
                         <constraint firstAttribute="trailing" secondItem="Rm0-vT-mST" secondAttribute="trailing" constant="60" id="RlX-XG-sHm"/>
-                        <constraint firstItem="Rm0-vT-mST" firstAttribute="top" secondItem="DfE-fU-5WJ" secondAttribute="bottom" constant="30" id="SBa-hR-a08"/>
+                        <constraint firstItem="Rm0-vT-mST" firstAttribute="top" secondItem="DfE-fU-5WJ" secondAttribute="bottom" constant="25" id="SBa-hR-a08"/>
                         <constraint firstItem="DfE-fU-5WJ" firstAttribute="leading" secondItem="XWf-rI-sDP" secondAttribute="leading" id="fUg-Ar-9aS"/>
                         <constraint firstAttribute="trailing" secondItem="3ZC-xM-kYu" secondAttribute="trailing" constant="60" id="vrV-Yb-6JO"/>
                     </constraints>
@@ -111,4 +122,7 @@
             <point key="canvasLocation" x="-805" y="-1250"/>
         </view>
     </objects>
+    <resources>
+        <image name="icon_close" width="44" height="44"/>
+    </resources>
 </document>

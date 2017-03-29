@@ -14,6 +14,9 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
+    self.timeLabel.textColor = MacoDetailColor;
+    self.moneyLabel.textColor = MacoColor;
+    self.markLabel.textColor = MacoTitleColor;
     
 }
 
@@ -27,6 +30,7 @@
     _xiaofeijiluModel = xiaofeijiluModel;
     self.markLabel.text = _xiaofeijiluModel.mchName;
     self.timeLabel.text = _xiaofeijiluModel.tranTime;
+    self.buyCardLabel.text = @"";
     NSString *statusStr = [NSString string];
     
     switch ([_xiaofeijiluModel.channel integerValue]) {

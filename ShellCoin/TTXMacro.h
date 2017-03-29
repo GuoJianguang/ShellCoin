@@ -87,7 +87,7 @@
 
 #define TWitdh  [UIScreen mainScreen].bounds.size.width
 #define THeight [UIScreen mainScreen].bounds.size.height
-#define MacoColor [UIColor redColor]
+#define MacoColor [UIColor colorFromHexString:@"#ea3d3a"]
 #define MacoPriceColor [UIColor colorFromHexString:@"f27242"]
 
 
@@ -96,7 +96,7 @@
 //标题的颜色
 #define MacoTitleColor [UIColor colorFromHexString:@"#424242"]
 //详情的字体颜色
-#define MacoDetailColor [UIColor colorFromHexString:@"#878787"]
+#define MacoDetailColor [UIColor colorFromHexString:@"#969696"]
 //介绍的字体颜色
 #define MacoIntrodouceColor [UIColor colorFromHexString:@"#b4b4b4"]
 //边框的颜色

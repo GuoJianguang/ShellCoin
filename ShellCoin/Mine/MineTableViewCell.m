@@ -16,6 +16,7 @@
 #import "LBXScanViewStyle.h"
 #import "SubLBXScanViewController.h"
 #import "YesTodayEarningsAlerView.h"
+#import "WithdrawalViewController.h"
 
 
 @interface MineTableViewCell()
@@ -28,21 +29,20 @@
     // Initialization code
     self.contentView.backgroundColor = [UIColor colorFromHexString:@"#faf8f6"];
     self.personCenterLabel.textColor = self.recommendLabel.textColor = self.billLabel.textColor = self.setLabel.textColor = self.integralLabel.textColor = self.proportionLabel.textColor= MacoTitleColor;
-    
+    self.showIntergralLabel.textColor = self.showProportionLabel.textColor = MacoColor;
     self.totalMoneyLabel.text = [NSString stringWithFormat:@"总贝壳币：%ld",[[ShellCoinUserInfo shareUserInfos].totalRate integerValue]];
     self.totalMoneyLabel.adjustsFontSizeToFitWidth = self.showIntergralLabel.adjustsFontSizeToFitWidth = YES;
     self.showIntergralLabel.text = [ShellCoinUserInfo shareUserInfos].totalAccumulateAmount;
     self.showProportionLabel.text = [NSString stringWithFormat:@"%@%@",[ShellCoinUserInfo shareUserInfos].totalRate,@"%"];
     
-    
-    
-//    if ([[ShellCoinUserInfo shareUserInfos].plusRate isEqualToString:@"0"]) {
-//        self.showProPortionImageView.hidden = YES;
-//        self.showYestodayEBtn.enabled = NO;
-//    }else{
-//        self.showProPortionImageView.hidden = NO;
-//        self.showYestodayEBtn.enabled = YES;
-//    }
+    if (TWitdh > 320) {
+        self.viewHeight.constant = TWitdh*1.05;
+        self.imageViewHeight.constant = TWitdh*(446/750.);
+    }else{
+        self.viewHeight.constant = TWitdh*1.15;
+        self.imageViewHeight.constant = TWitdh*(480/750.);
+    }
+
     self.showProPortionImageView.hidden = YES;
     self.showYestodayEBtn.enabled = NO;
     
@@ -127,7 +127,9 @@
 }
 //抵换
 - (IBAction)tradeInBtn:(id)sender {
-    TradInViewController *tradInVC = [[TradInViewController alloc]init];
+//    TradInViewController *tradInVC = [[TradInViewController alloc]init];
+//    [self.viewController.navigationController pushViewController:tradInVC animated:YES];
+    WithdrawalViewController *tradInVC = [[WithdrawalViewController alloc]init];
     [self.viewController.navigationController pushViewController:tradInVC animated:YES];
 }
 

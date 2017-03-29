@@ -7,6 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+typedef NS_ENUM(NSInteger,Password_type){
+    Password_type_withdraw = 1,//提现
+    Password_type_MerchantOnlinePay = 2,//商家支付
+};
 
 @interface SureTradInView : UIView
 
@@ -28,6 +32,9 @@
 @property (weak, nonatomic) IBOutlet UIButton *forgetBtn;
 - (IBAction)forgetBtn:(UIButton *)sender;
 
+@property (nonatomic,strong)NSMutableDictionary *mallOrderParms;
+
+@property (nonatomic, assign)Password_type inputType;
 
 
 @end

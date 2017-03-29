@@ -7,10 +7,12 @@
 //
 
 #import "OnlinePayViewController.h"
+#import "SureTradInView.h"
 
 @interface OnlinePayViewController ()
 
 @property (nonatomic, assign)double xiaofeiJinMoney;
+@property (nonatomic, strong)SureTradInView *inputPasswordView;
 
 @end
 
@@ -22,6 +24,14 @@
     self.merchantName.text = self.dataModel.name;
     self.moneyLabel.text = [NSString stringWithFormat:@"¥%@",self.money];
     [self setPayWay];
+}
+
+- (SureTradInView *)inputPasswordView
+{
+    if (!_inputPasswordView) {
+        _inputPasswordView = [[SureTradInView alloc]init];
+    }
+    return _inputPasswordView;
 }
 
 #pragma mark - 设置支付规则
@@ -76,18 +86,9 @@
 
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 - (IBAction)yuEBtn:(UIButton *)sender {
-    
+    self.payWay_type = Payway_type_banlance;
     self.wechatBtn.selected = NO;
     self.yuEImage.image = [UIImage imageNamed:@"icon_scan_balance_payment_sel"];
     self.wechatImage.image = [UIImage imageNamed:@"icon_scan_weixin_payment_nor"];
@@ -98,6 +99,7 @@
 }
 - (IBAction)wechatBtn:(UIButton *)sender {
     
+    self.payWay_type = Payway_type_wechat;
     self.yuEImage.image = [UIImage imageNamed:@"icon_scan_balance_payment_nor"];
     self.wechatImage.image = [UIImage imageNamed:@"icon_scan_weixin_payment_sel"];
     self.yuEMarkBtn.hidden = YES;
@@ -108,7 +110,13 @@
 }
 
 - (IBAction)cashBtn:(UIButton *)sender {
-    if (self.payWay_type == Payway_type_wechat) {
+    self.payWay_type = Payway_type_cash;
+
+}
+- (IBAction)sureBtn:(UIButton *)sender {
+    
+    switch (self.payWay_type) {
+        case Payway_type_wechat:
         {
             NSString *totalMoney = NullToNumber(self.money);
             NSString *md5Str = [NSString stringWithFormat:@"%@%@",[[NSUserDefaults standardUserDefaults]objectForKey:LoginUserPassword],PasswordKey];
@@ -120,7 +128,43 @@
                                     @"password":sign};
             [WeXinPayObject srarMachantWexinPay:prams];
         }
-        return;
+            break;
+        case Payway_type_cash:
+        {
+            [self surePay];
+
+        }
+            break;
+        case Payway_type_banlance:
+        {
+            [self surePay];
+        }
+            break;
+            
+        default:
+            break;
     }
 }
+
+- (void)surePay
+{
+    [self.view addSubview:self.inputPasswordView];
+    NSString *totalMoney = [NSString stringWithFormat:@"%.2f",[self.money doubleValue]];
+
+    NSDictionary *prams = @{@"token":[ShellCoinUserInfo shareUserInfos].token,
+                            @"mchCode":NullToSpace(self.dataModel.code),
+                            @"tranAmount":totalMoney};
+    self.inputPasswordView.mallOrderParms = [NSMutableDictionary dictionaryWithDictionary:prams];
+    self.inputPasswordView.inputType = Password_type_MerchantOnlinePay;
+    UIEdgeInsets insets = UIEdgeInsetsMake(0, 0, 0, 0);
+    [self.inputPasswordView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.view).insets(insets);
+    }];
+    self.inputPasswordView.itemView.frame = CGRectMake(0, THeight , TWitdh, TWitdh*(260/375.));
+    [UIView animateWithDuration:0.5 animations:^{
+        self.inputPasswordView.itemView.frame = CGRectMake(0, THeight - (TWitdh*(260/375.)), TWitdh, TWitdh*(260/375.));
+    }];
+}
+
+
 @end

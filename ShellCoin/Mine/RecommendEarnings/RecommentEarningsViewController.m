@@ -15,6 +15,8 @@
 @interface RecommentEarningsViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong)NSMutableArray *dataSouceArray;
+@property (nonatomic, assign)NSInteger page;//页数
+
 
 @end
 
@@ -49,6 +51,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return 10;
+    return self.dataSouceArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -63,7 +66,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return TWitdh*(170/750.);
+    return TWitdh*(165/750.);
 }
 
 - (void)didReceiveMemoryWarning {

@@ -39,6 +39,7 @@
  * 商品规格
  */
 @property (nonatomic,copy)NSString *spec;
+
 @end
 
 #pragma mark - 提现记录的model

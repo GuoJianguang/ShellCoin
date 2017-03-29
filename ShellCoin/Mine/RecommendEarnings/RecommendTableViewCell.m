@@ -13,6 +13,10 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    self.moneyLabel.textColor = MacoColor;
+    self.timeLabel.textColor = MacoDetailColor;
+    self.markLabel.textColor = MacoTitleColor;
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

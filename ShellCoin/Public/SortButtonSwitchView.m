@@ -64,7 +64,6 @@
 //    }else{
 //        self.markImageView.image = [UIImage imageNamed:@"switch"];
 //    }
-    self.markImageView.backgroundColor = [UIColor cyanColor];
 
     CGFloat segmentWidth = 1;
     CGFloat segmentHeight = 10;
@@ -95,6 +94,7 @@
     CGFloat btnWidth = TWitdh/_titleArray.count;
     self.markImageView = [[UIImageView alloc]init];
     self.markImageView.frame = CGRectMake(0, self.frame.size.height - markHeight, btnWidth, markHeight);
+    self.markImageView.image = [UIImage imageNamed:@"icon_mark"];
     [self addSubview:self.markImageView];
 }
 

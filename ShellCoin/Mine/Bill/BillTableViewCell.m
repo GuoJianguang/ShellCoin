@@ -13,6 +13,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    self.timeLabel.textColor = MacoDetailColor;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

@@ -35,13 +35,15 @@
 
 - (void)awakeFromNib
 {
+    [super awakeFromNib];
     self.detail_btn.hidden = YES;
     //添加点击事件
+    [self sendSubviewToBack:self.mineBgImageview];
     UITapGestureRecognizer *ges = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(back_title:)];
     self.back_title.userInteractionEnabled = YES;
     [self.back_title addGestureRecognizer:ges];
-    self.backgroundColor = [UIColor redColor];
-    self.title_label.textColor = [UIColor blackColor];
+    self.backgroundColor = [UIColor clearColor];
+    self.title_label.textColor = [UIColor whiteColor];
     self.back_title.textColor = [UIColor blackColor];
     [self.detail_btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
 }

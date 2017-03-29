@@ -18,6 +18,7 @@
                 <outlet property="cashMarkBtn" destination="hs7-0T-cTG" id="3Cv-oq-KDD"/>
                 <outlet property="merchantName" destination="GSd-v9-KZK" id="1Sb-PV-Eco"/>
                 <outlet property="moneyLabel" destination="D1Q-vw-W6V" id="oDs-sg-CWm"/>
+                <outlet property="sureBtn" destination="KWO-DM-bng" id="YRv-IE-tmP"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="wechatBtn" destination="Rxv-C3-Lqh" id="gWp-TP-fQQ"/>
                 <outlet property="wechatImage" destination="Pos-FZ-8nb" id="xLr-R3-bqe"/>
@@ -246,6 +247,9 @@
                         <constraint firstAttribute="width" secondItem="KWO-DM-bng" secondAttribute="height" multiplier="223:30" id="0HX-T7-GYm"/>
                     </constraints>
                     <state key="normal" title="确认支付"/>
+                    <connections>
+                        <action selector="sureBtn:" destination="-1" eventType="touchUpInside" id="0kz-wy-dUK"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -265,7 +269,7 @@
                 <constraint firstAttribute="trailing" secondItem="RIV-iJ-t8X" secondAttribute="trailing" id="sfi-7k-vbl"/>
                 <constraint firstAttribute="trailing" secondItem="4WO-0x-qJX" secondAttribute="trailing" id="tXU-2c-XGN"/>
             </constraints>
-            <point key="canvasLocation" x="-20" y="-35"/>
+            <point key="canvasLocation" x="-7" y="-244"/>
         </view>
     </objects>
     <resources>

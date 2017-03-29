@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -15,12 +15,15 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mine_bg2" translatesAutoresizingMaskIntoConstraints="NO" id="fEV-h9-1Q9">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sBy-hR-jrp">
                     <rect key="frame" x="0.0" y="20" width="414" height="40"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H0p-Vc-A75">
                             <rect key="frame" x="64" y="20" width="286" height="0.0"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -42,7 +45,6 @@
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="unU-Qd-L89">
                             <rect key="frame" x="0.0" y="-2" width="44" height="44"/>
-                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="44" id="lqk-d5-gbR"/>
                                 <constraint firstAttribute="height" constant="44" id="u9p-iy-8HL"/>
@@ -80,11 +82,15 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="sBy-hR-jrp" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="CIM-be-mNp"/>
+                <constraint firstAttribute="bottom" secondItem="fEV-h9-1Q9" secondAttribute="bottom" id="Fhh-ah-vW8"/>
                 <constraint firstAttribute="trailing" secondItem="Pte-a8-YHc" secondAttribute="trailing" id="RGP-zG-RMM"/>
                 <constraint firstItem="Pte-a8-YHc" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="RT6-VP-gga"/>
                 <constraint firstAttribute="bottom" secondItem="Pte-a8-YHc" secondAttribute="bottom" id="Un1-ie-6FT"/>
+                <constraint firstAttribute="trailing" secondItem="fEV-h9-1Q9" secondAttribute="trailing" id="a6p-YL-EpW"/>
+                <constraint firstItem="fEV-h9-1Q9" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="jkO-8X-guz"/>
                 <constraint firstItem="sBy-hR-jrp" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="rwc-k5-xfb"/>
                 <constraint firstAttribute="trailing" secondItem="sBy-hR-jrp" secondAttribute="trailing" id="rxG-J8-3H8"/>
+                <constraint firstItem="fEV-h9-1Q9" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="wCG-4W-gEq"/>
                 <constraint firstAttribute="bottom" secondItem="sBy-hR-jrp" secondAttribute="bottom" id="zqS-1f-fjh"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -94,12 +100,14 @@
                 <outlet property="backtitle_leading" destination="NQ1-hw-XRp" id="5mg-C7-wlH"/>
                 <outlet property="detail_btn" destination="Gai-NO-g82" id="NHs-hx-u47"/>
                 <outlet property="lineVIew" destination="Pte-a8-YHc" id="6Na-93-ahw"/>
+                <outlet property="mineBgImageview" destination="fEV-h9-1Q9" id="3dN-bE-tWd"/>
                 <outlet property="title_label" destination="H0p-Vc-A75" id="d8W-MH-cdg"/>
             </connections>
-            <point key="canvasLocation" x="46" y="-270"/>
+            <point key="canvasLocation" x="95" y="-284"/>
         </view>
     </objects>
     <resources>
-        <image name="icon_back" width="40" height="40"/>
+        <image name="icon_back" width="44" height="44"/>
+        <image name="mine_bg2" width="375" height="64"/>
     </resources>
 </document>

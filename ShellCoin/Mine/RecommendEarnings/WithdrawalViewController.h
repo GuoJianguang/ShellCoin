@@ -30,6 +30,9 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *canWithDrawLabel;
 
+@property (weak, nonatomic) IBOutlet UILabel *poundageLabel;
+
+
 
 
 @end

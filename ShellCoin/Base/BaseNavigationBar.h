@@ -68,6 +68,7 @@ typedef void(^DetailButtonClick)(void);
 
 @property (weak, nonatomic) IBOutlet UIView *lineVIew;
 
+@property (weak, nonatomic) IBOutlet UIImageView *mineBgImageview;
 
 //设置渐变颜色
 @property (nonatomic, assign)BOOL showJianbianColor;

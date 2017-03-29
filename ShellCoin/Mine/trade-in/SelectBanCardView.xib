@@ -26,9 +26,9 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uVg-fv-5Qq">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DUS-bM-ep7">
-                                    <rect key="frame" x="16" y="15" width="31" height="30"/>
-                                    <state key="normal" title="取消"/>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DUS-bM-ep7">
+                                    <rect key="frame" x="0.0" y="8" width="44" height="44"/>
+                                    <state key="normal" image="icon_close"/>
                                     <connections>
                                         <action selector="cancelBtn:" destination="iN0-l3-epB" eventType="touchUpInside" id="ky4-AL-qbd"/>
                                     </connections>
@@ -53,7 +53,7 @@
                                 <constraint firstItem="gyd-2E-0Dr" firstAttribute="centerX" secondItem="uVg-fv-5Qq" secondAttribute="centerX" id="WOL-7B-Zox"/>
                                 <constraint firstItem="PcG-IH-1R8" firstAttribute="centerY" secondItem="uVg-fv-5Qq" secondAttribute="centerY" id="YB2-dI-Hch"/>
                                 <constraint firstItem="DUS-bM-ep7" firstAttribute="centerY" secondItem="uVg-fv-5Qq" secondAttribute="centerY" id="ayE-bZ-O1X"/>
-                                <constraint firstItem="DUS-bM-ep7" firstAttribute="leading" secondItem="uVg-fv-5Qq" secondAttribute="leading" constant="16" id="foM-kf-T0F"/>
+                                <constraint firstItem="DUS-bM-ep7" firstAttribute="leading" secondItem="uVg-fv-5Qq" secondAttribute="leading" id="foM-kf-T0F"/>
                                 <constraint firstAttribute="width" secondItem="uVg-fv-5Qq" secondAttribute="height" multiplier="375:60" id="pqN-Zh-R8c"/>
                                 <constraint firstAttribute="trailing" secondItem="PcG-IH-1R8" secondAttribute="trailing" constant="16" id="s0R-Cy-OBa"/>
                             </constraints>
@@ -97,4 +97,7 @@
             <point key="canvasLocation" x="30" y="-606"/>
         </view>
     </objects>
+    <resources>
+        <image name="icon_close" width="44" height="44"/>
+    </resources>
 </document>

@@ -23,6 +23,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    self.bankCardLabel.textColor = MacoTitleColor;
 }
 
 - (void)setDataModel:(BankInfoModel *)dataModel

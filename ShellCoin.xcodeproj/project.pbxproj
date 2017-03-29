@@ -57,6 +57,11 @@
 		BC2C219A1E4DAF1300AAFEFE /* PGIndexBannerSubiew.m in Sources */ = {isa = PBXBuildFile; fileRef = BC2C21991E4DAF1300AAFEFE /* PGIndexBannerSubiew.m */; };
 		BC2C219D1E4DAF1900AAFEFE /* NewPagedFlowView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC2C219C1E4DAF1900AAFEFE /* NewPagedFlowView.m */; };
 		BC2F17751E839CF300657C51 /* BillAmountDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BC2F17741E839CF300657C51 /* BillAmountDataModel.m */; };
+		BC34ECA61E8B88EC00613D35 /* AboutUSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC34ECA41E8B88EC00613D35 /* AboutUSViewController.m */; };
+		BC34ECA71E8B88EC00613D35 /* AboutUSViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC34ECA51E8B88EC00613D35 /* AboutUSViewController.xib */; };
+		BC34ECAB1E8B891E00613D35 /* AboutsUsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC34ECA91E8B891E00613D35 /* AboutsUsTableViewCell.m */; };
+		BC34ECAC1E8B891E00613D35 /* AboutsUsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC34ECAA1E8B891E00613D35 /* AboutsUsTableViewCell.xib */; };
+		BC34ECAE1E8BA17B00613D35 /* Set.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC34ECAD1E8BA17B00613D35 /* Set.xcassets */; };
 		BC36CFE71E80C9AD00A51BF4 /* RecommentSpecilCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC36CFE51E80C9AD00A51BF4 /* RecommentSpecilCollectionViewCell.m */; };
 		BC36CFE81E80C9AD00A51BF4 /* RecommentSpecilCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC36CFE61E80C9AD00A51BF4 /* RecommentSpecilCollectionViewCell.xib */; };
 		BC36CFEB1E80CB4300A51BF4 /* RecommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BC36CFEA1E80CB4300A51BF4 /* RecommentModel.m */; };
@@ -163,6 +168,7 @@
 		BC9B3E061E7698CC003DC241 /* ManagerBankCardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC9B3E001E7698CC003DC241 /* ManagerBankCardViewController.xib */; };
 		BC9B3E0A1E769D44003DC241 /* SetPayPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9B3E081E769D44003DC241 /* SetPayPasswordViewController.m */; };
 		BC9B3E0B1E769D44003DC241 /* SetPayPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC9B3E091E769D44003DC241 /* SetPayPasswordViewController.xib */; };
+		BCA17DDB1E8BB2AD00B4AFDA /* Bill.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCA17DDA1E8BB2AD00B4AFDA /* Bill.xcassets */; };
 		BCAC5D091E825870003CACF8 /* BillIntegralDisciplineView.m in Sources */ = {isa = PBXBuildFile; fileRef = BCAC5D081E825870003CACF8 /* BillIntegralDisciplineView.m */; };
 		BCAC5D0B1E82587F003CACF8 /* BillIntegralDisciplineView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCAC5D0A1E82587F003CACF8 /* BillIntegralDisciplineView.xib */; };
 		BCAC5D0E1E825DBB003CACF8 /* BillAmountDisciplineView.m in Sources */ = {isa = PBXBuildFile; fileRef = BCAC5D0D1E825DBB003CACF8 /* BillAmountDisciplineView.m */; };
@@ -319,6 +325,13 @@
 		BC2C219C1E4DAF1900AAFEFE /* NewPagedFlowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewPagedFlowView.m; sourceTree = "<group>"; };
 		BC2F17731E839CF300657C51 /* BillAmountDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BillAmountDataModel.h; sourceTree = "<group>"; };
 		BC2F17741E839CF300657C51 /* BillAmountDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BillAmountDataModel.m; sourceTree = "<group>"; };
+		BC34ECA31E8B88EC00613D35 /* AboutUSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutUSViewController.h; sourceTree = "<group>"; };
+		BC34ECA41E8B88EC00613D35 /* AboutUSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutUSViewController.m; sourceTree = "<group>"; };
+		BC34ECA51E8B88EC00613D35 /* AboutUSViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutUSViewController.xib; sourceTree = "<group>"; };
+		BC34ECA81E8B891E00613D35 /* AboutsUsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutsUsTableViewCell.h; sourceTree = "<group>"; };
+		BC34ECA91E8B891E00613D35 /* AboutsUsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutsUsTableViewCell.m; sourceTree = "<group>"; };
+		BC34ECAA1E8B891E00613D35 /* AboutsUsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutsUsTableViewCell.xib; sourceTree = "<group>"; };
+		BC34ECAD1E8BA17B00613D35 /* Set.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Set.xcassets; sourceTree = "<group>"; };
 		BC36CFE41E80C9AD00A51BF4 /* RecommentSpecilCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommentSpecilCollectionViewCell.h; sourceTree = "<group>"; };
 		BC36CFE51E80C9AD00A51BF4 /* RecommentSpecilCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommentSpecilCollectionViewCell.m; sourceTree = "<group>"; };
 		BC36CFE61E80C9AD00A51BF4 /* RecommentSpecilCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecommentSpecilCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -481,6 +494,7 @@
 		BC9B3E071E769D44003DC241 /* SetPayPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetPayPasswordViewController.h; sourceTree = "<group>"; };
 		BC9B3E081E769D44003DC241 /* SetPayPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetPayPasswordViewController.m; sourceTree = "<group>"; };
 		BC9B3E091E769D44003DC241 /* SetPayPasswordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SetPayPasswordViewController.xib; sourceTree = "<group>"; };
+		BCA17DDA1E8BB2AD00B4AFDA /* Bill.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Bill.xcassets; sourceTree = "<group>"; };
 		BCAC5D071E825870003CACF8 /* BillIntegralDisciplineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BillIntegralDisciplineView.h; sourceTree = "<group>"; };
 		BCAC5D081E825870003CACF8 /* BillIntegralDisciplineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BillIntegralDisciplineView.m; sourceTree = "<group>"; };
 		BCAC5D0A1E82587F003CACF8 /* BillIntegralDisciplineView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BillIntegralDisciplineView.xib; sourceTree = "<group>"; };
@@ -658,6 +672,13 @@
 				BCFE205C1E779283002BC28C /* ChangePayPasswordViewController.h */,
 				BCFE205D1E779283002BC28C /* ChangePayPasswordViewController.m */,
 				BCFE205E1E779283002BC28C /* ChangePayPasswordViewController.xib */,
+				BC34ECA31E8B88EC00613D35 /* AboutUSViewController.h */,
+				BC34ECA41E8B88EC00613D35 /* AboutUSViewController.m */,
+				BC34ECA51E8B88EC00613D35 /* AboutUSViewController.xib */,
+				BC34ECA81E8B891E00613D35 /* AboutsUsTableViewCell.h */,
+				BC34ECA91E8B891E00613D35 /* AboutsUsTableViewCell.m */,
+				BC34ECAA1E8B891E00613D35 /* AboutsUsTableViewCell.xib */,
+				BC34ECAD1E8BA17B00613D35 /* Set.xcassets */,
 			);
 			path = Set;
 			sourceTree = "<group>";
@@ -695,6 +716,7 @@
 				BC054D531E8A402E00062AC5 /* Bill12View.xib */,
 				BC054D561E8A418F00062AC5 /* BillDataModel.h */,
 				BC054D571E8A418F00062AC5 /* BillDataModel.m */,
+				BCA17DDA1E8BB2AD00B4AFDA /* Bill.xcassets */,
 			);
 			path = Bill;
 			sourceTree = "<group>";
@@ -1359,6 +1381,7 @@
 				BC9B3E021E7698CC003DC241 /* BanCardDetailTableViewCell.xib in Resources */,
 				BC4AABED1E4D69E2006568A6 /* Assets.xcassets in Resources */,
 				BC9B3DE71E76892C003DC241 /* MyQrCodeViewController.xib in Resources */,
+				BC34ECA71E8B88EC00613D35 /* AboutUSViewController.xib in Resources */,
 				BCFE20561E778CA9002BC28C /* SetPasswordViewController.xib in Resources */,
 				BC4AAC3D1E4D8F7B006568A6 /* MineTableViewCell.xib in Resources */,
 				BC054D551E8A402E00062AC5 /* Bill12View.xib in Resources */,
@@ -1384,6 +1407,7 @@
 				BCFE208E1E77E206002BC28C /* RegisterOneViewController.xib in Resources */,
 				BCFE209F1E77EF2A002BC28C /* WithdrawalViewController.xib in Resources */,
 				BC054D501E8A3D3600062AC5 /* Bill1View.xib in Resources */,
+				BCA17DDB1E8BB2AD00B4AFDA /* Bill.xcassets in Resources */,
 				BCFE20921E77E206002BC28C /* ForgetPasswordOneViewController.xib in Resources */,
 				BCFE205B1E778F45002BC28C /* ChangeLoginPasswordViewController.xib in Resources */,
 				BC9B3DF71E76982B003DC241 /* EditPhoneNumberViewController.xib in Resources */,
@@ -1393,6 +1417,7 @@
 				BC0A58221E724ADA0077C8A9 /* 213955937960616.cer in Resources */,
 				BC57B7141E7FCC7E006AF4D1 /* HighQualityCollectionViewCell.xib in Resources */,
 				BCFE20661E7798D6002BC28C /* TradInViewController.xib in Resources */,
+				BC34ECAC1E8B891E00613D35 /* AboutsUsTableViewCell.xib in Resources */,
 				BC57B7161E7FCDB6006AF4D1 /* hot.png in Resources */,
 				BC57B7041E7FC348006AF4D1 /* HomeIndustryTableViewCell.xib in Resources */,
 				BC9B3DC91E76837B003DC241 /* city.plist in Resources */,
@@ -1406,6 +1431,7 @@
 				BCFE20941E77E206002BC28C /* ForgetPasswordTwoViewController.xib in Resources */,
 				BCFE20901E77E206002BC28C /* RegisterTwoViewController.xib in Resources */,
 				BC9B3DF21E7693E0003DC241 /* RecommendTableViewCell.xib in Resources */,
+				BC34ECAE1E8BA17B00613D35 /* Set.xcassets in Resources */,
 				BC4E252E1E80C41E005BE142 /* TalentRecommentViewController.xib in Resources */,
 				BC0A58251E724ADA0077C8A9 /* HttpClient_Readme.txt in Resources */,
 				BC0A58311E7282250077C8A9 /* SetViewController.xib in Resources */,
@@ -1532,6 +1558,7 @@
 				BC23C9DB1E79153E00E90B43 /* LBXScanNative.m in Sources */,
 				BC054D541E8A402E00062AC5 /* Bill12View.m in Sources */,
 				BC4AABE21E4D69E2006568A6 /* AppDelegate.m in Sources */,
+				BC34ECA61E8B88EC00613D35 /* AboutUSViewController.m in Sources */,
 				BCFE209E1E77EF2A002BC28C /* WithdrawalViewController.m in Sources */,
 				BC9B3DF61E76982B003DC241 /* EditPhoneNumberViewController.m in Sources */,
 				BC0A58351E72832E0077C8A9 /* SetTableViewCell.m in Sources */,
@@ -1579,6 +1606,7 @@
 				BC4AAC151E4D6DBB006568A6 /* RootViewController.m in Sources */,
 				BCFE206E1E77C7D6002BC28C /* SelectBanCardView.m in Sources */,
 				BC4AAC1A1E4D6E5B006568A6 /* HomeViewController.m in Sources */,
+				BC34ECAB1E8B891E00613D35 /* AboutsUsTableViewCell.m in Sources */,
 				BC9B3DF11E7693E0003DC241 /* RecommendTableViewCell.m in Sources */,
 				BC0A58241E724ADA0077C8A9 /* HttpClient.m in Sources */,
 				BC57B7031E7FC348006AF4D1 /* HomeIndustryTableViewCell.m in Sources */,
@@ -1683,7 +1711,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE = "5d662d1b-be80-456d-a853-07f67132a217";
@@ -1728,7 +1756,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PROVISIONING_PROFILE = "5d662d1b-be80-456d-a853-07f67132a217";
 				SDKROOT = iphoneos;
@@ -1754,7 +1782,7 @@
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/ShellCoin/PrefixHeader.pch";
 				INFOPLIST_FILE = ShellCoin/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1786,7 +1814,7 @@
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/ShellCoin/PrefixHeader.pch";
 				INFOPLIST_FILE = ShellCoin/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
