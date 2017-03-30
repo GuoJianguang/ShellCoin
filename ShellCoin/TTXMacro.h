@@ -30,7 +30,9 @@
  */
 #define YoumengKey_Inhouse @"56a9b2dae0f55ae6190022b1"
 //密码md5加密key
-#define PasswordKey @"SV245HYJH"
+//#define PasswordKey @"SV245HYJH"
+#define PasswordKey @"PW2017$LY"
+
 //PW2017$LY
 //生成订单md5加密key
 #define OrderWithMd5Key @"T2t0X16"

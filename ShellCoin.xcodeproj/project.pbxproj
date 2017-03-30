@@ -54,8 +54,6 @@
 		BC23C9E91E7933B700E90B43 /* LSPaoMaView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC23C9E81E7933B700E90B43 /* LSPaoMaView.m */; };
 		BC23C9EC1E79395A00E90B43 /* YesTodayEarningsAlerView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC23C9EB1E79395A00E90B43 /* YesTodayEarningsAlerView.m */; };
 		BC23C9EE1E79396500E90B43 /* YesTodayEarningsAlerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC23C9ED1E79396500E90B43 /* YesTodayEarningsAlerView.xib */; };
-		BC2C219A1E4DAF1300AAFEFE /* PGIndexBannerSubiew.m in Sources */ = {isa = PBXBuildFile; fileRef = BC2C21991E4DAF1300AAFEFE /* PGIndexBannerSubiew.m */; };
-		BC2C219D1E4DAF1900AAFEFE /* NewPagedFlowView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC2C219C1E4DAF1900AAFEFE /* NewPagedFlowView.m */; };
 		BC2F17751E839CF300657C51 /* BillAmountDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BC2F17741E839CF300657C51 /* BillAmountDataModel.m */; };
 		BC34ECA61E8B88EC00613D35 /* AboutUSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC34ECA41E8B88EC00613D35 /* AboutUSViewController.m */; };
 		BC34ECA71E8B88EC00613D35 /* AboutUSViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC34ECA51E8B88EC00613D35 /* AboutUSViewController.xib */; };
@@ -108,6 +106,11 @@
 		BC57B71B1E7FCE34006AF4D1 /* ForyouCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC57B7191E7FCE34006AF4D1 /* ForyouCollectionViewCell.xib */; };
 		BC57B71F1E7FD62A006AF4D1 /* HomeMerchantTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC57B71D1E7FD62A006AF4D1 /* HomeMerchantTableViewCell.m */; };
 		BC57B7201E7FD62A006AF4D1 /* HomeMerchantTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC57B71E1E7FD62A006AF4D1 /* HomeMerchantTableViewCell.xib */; };
+		BC6EA5961E8CF2200073027C /* BankCardDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6EA5951E8CF2200073027C /* BankCardDetailView.m */; };
+		BC6EA5981E8CF2340073027C /* BankCardDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC6EA5971E8CF2340073027C /* BankCardDetailView.xib */; };
+		BC6EA59D1E8CFAE60073027C /* NewPagedFlowView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6EA59A1E8CFAE60073027C /* NewPagedFlowView.m */; };
+		BC6EA59E1E8CFAE60073027C /* PGIndexBannerSubiew.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6EA59C1E8CFAE60073027C /* PGIndexBannerSubiew.m */; };
+		BC6EA5A11E8CFB170073027C /* BankCardInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6EA5A01E8CFB170073027C /* BankCardInfoModel.m */; };
 		BC77C66A1E7A316400DC9EAC /* libUMessage_Sdk_1.4.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BC77C65B1E7A316400DC9EAC /* libUMessage_Sdk_1.4.0.a */; };
 		BC77C66B1E7A316400DC9EAC /* UMSocialCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC77C6601E7A316400DC9EAC /* UMSocialCore.framework */; };
 		BC77C66C1E7A316400DC9EAC /* UMSocialNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC77C6611E7A316400DC9EAC /* UMSocialNetwork.framework */; };
@@ -319,10 +322,6 @@
 		BC23C9EA1E79395A00E90B43 /* YesTodayEarningsAlerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YesTodayEarningsAlerView.h; sourceTree = "<group>"; };
 		BC23C9EB1E79395A00E90B43 /* YesTodayEarningsAlerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YesTodayEarningsAlerView.m; sourceTree = "<group>"; };
 		BC23C9ED1E79396500E90B43 /* YesTodayEarningsAlerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YesTodayEarningsAlerView.xib; sourceTree = "<group>"; };
-		BC2C21981E4DAF1300AAFEFE /* PGIndexBannerSubiew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGIndexBannerSubiew.h; sourceTree = "<group>"; };
-		BC2C21991E4DAF1300AAFEFE /* PGIndexBannerSubiew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGIndexBannerSubiew.m; sourceTree = "<group>"; };
-		BC2C219B1E4DAF1900AAFEFE /* NewPagedFlowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewPagedFlowView.h; sourceTree = "<group>"; };
-		BC2C219C1E4DAF1900AAFEFE /* NewPagedFlowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewPagedFlowView.m; sourceTree = "<group>"; };
 		BC2F17731E839CF300657C51 /* BillAmountDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BillAmountDataModel.h; sourceTree = "<group>"; };
 		BC2F17741E839CF300657C51 /* BillAmountDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BillAmountDataModel.m; sourceTree = "<group>"; };
 		BC34ECA31E8B88EC00613D35 /* AboutUSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutUSViewController.h; sourceTree = "<group>"; };
@@ -411,6 +410,15 @@
 		BC57B71C1E7FD62A006AF4D1 /* HomeMerchantTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeMerchantTableViewCell.h; sourceTree = "<group>"; };
 		BC57B71D1E7FD62A006AF4D1 /* HomeMerchantTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeMerchantTableViewCell.m; sourceTree = "<group>"; };
 		BC57B71E1E7FD62A006AF4D1 /* HomeMerchantTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeMerchantTableViewCell.xib; sourceTree = "<group>"; };
+		BC6EA5941E8CF2200073027C /* BankCardDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankCardDetailView.h; sourceTree = "<group>"; };
+		BC6EA5951E8CF2200073027C /* BankCardDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankCardDetailView.m; sourceTree = "<group>"; };
+		BC6EA5971E8CF2340073027C /* BankCardDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BankCardDetailView.xib; sourceTree = "<group>"; };
+		BC6EA5991E8CFAE60073027C /* NewPagedFlowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewPagedFlowView.h; sourceTree = "<group>"; };
+		BC6EA59A1E8CFAE60073027C /* NewPagedFlowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewPagedFlowView.m; sourceTree = "<group>"; };
+		BC6EA59B1E8CFAE60073027C /* PGIndexBannerSubiew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGIndexBannerSubiew.h; sourceTree = "<group>"; };
+		BC6EA59C1E8CFAE60073027C /* PGIndexBannerSubiew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGIndexBannerSubiew.m; sourceTree = "<group>"; };
+		BC6EA59F1E8CFB170073027C /* BankCardInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankCardInfoModel.h; sourceTree = "<group>"; };
+		BC6EA5A01E8CFB170073027C /* BankCardInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankCardInfoModel.m; sourceTree = "<group>"; };
 		BC77C65B1E7A316400DC9EAC /* libUMessage_Sdk_1.4.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libUMessage_Sdk_1.4.0.a; sourceTree = "<group>"; };
 		BC77C65C1E7A316400DC9EAC /* UMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMessage.h; sourceTree = "<group>"; };
 		BC77C6601E7A316400DC9EAC /* UMSocialCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UMSocialCore.framework; sourceTree = "<group>"; };
@@ -935,10 +943,6 @@
 				BC77C6991E7A6D8600DC9EAC /* WeXinPayObject.m */,
 				BC4AAC331E4D7562006568A6 /* JAlertViewHelper.h */,
 				BC4AAC341E4D7562006568A6 /* JAlertViewHelper.m */,
-				BC2C21981E4DAF1300AAFEFE /* PGIndexBannerSubiew.h */,
-				BC2C21991E4DAF1300AAFEFE /* PGIndexBannerSubiew.m */,
-				BC2C219B1E4DAF1900AAFEFE /* NewPagedFlowView.h */,
-				BC2C219C1E4DAF1900AAFEFE /* NewPagedFlowView.m */,
 				BC0A58371E728C510077C8A9 /* SortButtonSwitchView.h */,
 				BC0A58381E728C510077C8A9 /* SortButtonSwitchView.m */,
 				BC0A58401E728F050077C8A9 /* SwipeView.h */,
@@ -1072,15 +1076,18 @@
 		BC9B3DB71E76837B003DC241 /* BankManage */ = {
 			isa = PBXGroup;
 			children = (
+				BC9B3DFE1E7698CC003DC241 /* ManagerBankCardViewController.h */,
+				BC9B3DFF1E7698CC003DC241 /* ManagerBankCardViewController.m */,
+				BC9B3E001E7698CC003DC241 /* ManagerBankCardViewController.xib */,
 				BC9B3DF81E7698CC003DC241 /* BanCardDetailTableViewCell.h */,
 				BC9B3DF91E7698CC003DC241 /* BanCardDetailTableViewCell.m */,
 				BC9B3DFA1E7698CC003DC241 /* BanCardDetailTableViewCell.xib */,
 				BC9B3DFB1E7698CC003DC241 /* ManageBankView.h */,
 				BC9B3DFC1E7698CC003DC241 /* ManageBankView.m */,
 				BC9B3DFD1E7698CC003DC241 /* ManageBankView.xib */,
-				BC9B3DFE1E7698CC003DC241 /* ManagerBankCardViewController.h */,
-				BC9B3DFF1E7698CC003DC241 /* ManagerBankCardViewController.m */,
-				BC9B3E001E7698CC003DC241 /* ManagerBankCardViewController.xib */,
+				BC6EA5941E8CF2200073027C /* BankCardDetailView.h */,
+				BC6EA5951E8CF2200073027C /* BankCardDetailView.m */,
+				BC6EA5971E8CF2340073027C /* BankCardDetailView.xib */,
 				BC9B3DB81E76837B003DC241 /* BankPickView.h */,
 				BC9B3DB91E76837B003DC241 /* BankPickView.m */,
 				BC9B3DBA1E76837B003DC241 /* city.plist */,
@@ -1094,6 +1101,12 @@
 				BC9B3DD31E7683B7003DC241 /* NoBankCardViewController.h */,
 				BC9B3DD41E7683B7003DC241 /* NoBankCardViewController.m */,
 				BC9B3DD51E7683B7003DC241 /* NoBankCardViewController.xib */,
+				BC6EA5991E8CFAE60073027C /* NewPagedFlowView.h */,
+				BC6EA59A1E8CFAE60073027C /* NewPagedFlowView.m */,
+				BC6EA59B1E8CFAE60073027C /* PGIndexBannerSubiew.h */,
+				BC6EA59C1E8CFAE60073027C /* PGIndexBannerSubiew.m */,
+				BC6EA59F1E8CFB170073027C /* BankCardInfoModel.h */,
+				BC6EA5A01E8CFB170073027C /* BankCardInfoModel.m */,
 			);
 			path = BankManage;
 			sourceTree = "<group>";
@@ -1384,6 +1397,7 @@
 				BC34ECA71E8B88EC00613D35 /* AboutUSViewController.xib in Resources */,
 				BCFE20561E778CA9002BC28C /* SetPasswordViewController.xib in Resources */,
 				BC4AAC3D1E4D8F7B006568A6 /* MineTableViewCell.xib in Resources */,
+				BC6EA5981E8CF2340073027C /* BankCardDetailView.xib in Resources */,
 				BC054D551E8A402E00062AC5 /* Bill12View.xib in Resources */,
 				BC054D491E8A095B00062AC5 /* OnlinePayViewController.xib in Resources */,
 				BC9B3DAC1E763AF4003DC241 /* RealnameViewController.xib in Resources */,
@@ -1507,7 +1521,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC2C219D1E4DAF1900AAFEFE /* NewPagedFlowView.m in Sources */,
 				BC4AAC2E1E4D6E7D006568A6 /* BaseTableViewCell.m in Sources */,
 				BC57B7071E7FC357006AF4D1 /* SquaredUpView.m in Sources */,
 				BC0A58301E7282250077C8A9 /* SetViewController.m in Sources */,
@@ -1526,7 +1539,6 @@
 				BC23C9EC1E79395A00E90B43 /* YesTodayEarningsAlerView.m in Sources */,
 				BC4AAC351E4D7562006568A6 /* JAlertViewHelper.m in Sources */,
 				BC23C9E61E792BD700E90B43 /* SubLBXScanViewController.m in Sources */,
-				BC2C219A1E4DAF1300AAFEFE /* PGIndexBannerSubiew.m in Sources */,
 				BC4AAC3C1E4D8F7B006568A6 /* MineTableViewCell.m in Sources */,
 				BC23C9DD1E79153E00E90B43 /* LBXScanResult.m in Sources */,
 				BC9B3DEC1E7690F2003DC241 /* RecommentEarningsViewController.m in Sources */,
@@ -1554,6 +1566,7 @@
 				BCFE205A1E778F45002BC28C /* ChangeLoginPasswordViewController.m in Sources */,
 				BC9B3DE61E76892C003DC241 /* MyQrCodeViewController.m in Sources */,
 				BC23C9DE1E79153E00E90B43 /* LBXScanView.m in Sources */,
+				BC6EA59D1E8CFAE60073027C /* NewPagedFlowView.m in Sources */,
 				BC4E25321E80C50D005BE142 /* RecommentSpecialTableViewCell.m in Sources */,
 				BC23C9DB1E79153E00E90B43 /* LBXScanNative.m in Sources */,
 				BC054D541E8A402E00062AC5 /* Bill12View.m in Sources */,
@@ -1562,6 +1575,7 @@
 				BCFE209E1E77EF2A002BC28C /* WithdrawalViewController.m in Sources */,
 				BC9B3DF61E76982B003DC241 /* EditPhoneNumberViewController.m in Sources */,
 				BC0A58351E72832E0077C8A9 /* SetTableViewCell.m in Sources */,
+				BC6EA59E1E8CFAE60073027C /* PGIndexBannerSubiew.m in Sources */,
 				BCFE20651E7798D6002BC28C /* TradInViewController.m in Sources */,
 				BCC8E1A51E89027A004DBDA3 /* MerchantModel.m in Sources */,
 				BC0A58491E7299900077C8A9 /* BillTableViewCell.m in Sources */,
@@ -1574,6 +1588,7 @@
 				BCC8E1A11E88FFB7004DBDA3 /* MerchantTableViewCell.m in Sources */,
 				BCFE206A1E77BC83002BC28C /* TradInTableViewCell.m in Sources */,
 				BC9B3E031E7698CC003DC241 /* ManageBankView.m in Sources */,
+				BC6EA5A11E8CFB170073027C /* BankCardInfoModel.m in Sources */,
 				BC4AAC2B1E4D6E7D006568A6 /* BaseModel.m in Sources */,
 				BC2F17751E839CF300657C51 /* BillAmountDataModel.m in Sources */,
 				BC4AAC291E4D6E7D006568A6 /* BaseCollectionViewCell.m in Sources */,
@@ -1588,6 +1603,7 @@
 				BC0A58451E728F2C0077C8A9 /* AutoScroller.m in Sources */,
 				BCE5EED71E5C41030055D828 /* Colours.m in Sources */,
 				BCAC5D0E1E825DBB003CACF8 /* BillAmountDisciplineView.m in Sources */,
+				BC6EA5961E8CF2200073027C /* BankCardDetailView.m in Sources */,
 				BC4AABDF1E4D69E2006568A6 /* main.m in Sources */,
 				BCFE20741E77C9F6002BC28C /* SecletBankCardTableViewCell.m in Sources */,
 				BC0A58391E728C510077C8A9 /* SortButtonSwitchView.m in Sources */,

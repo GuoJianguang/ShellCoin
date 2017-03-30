@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+@class BankCardInfoModel;
 
 @interface EditbankInfoTableViewCell : BaseTableViewCell
 
@@ -49,5 +50,6 @@
 
 - (void)sureEdit;
 
+@property (nonatomic, strong)BankCardInfoModel *bankModel;
 
 @end

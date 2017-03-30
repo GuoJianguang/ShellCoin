@@ -55,14 +55,14 @@
 {
     _isAddressPicker = isAddressPicker;
     if (!self.isAddressPicker) {
-        self.dataSouceArray = [NSMutableArray arrayWithArray:@[@{@"bankId":@"1",@"bankName":@"中国银行"},
-                                                               @{@"bankId":@"2",@"bankName":@"农业银行"},
-                                                               @{@"bankId":@"3",@"bankName":@"工商银行"},
-                                                               @{@"bankId":@"4",@"bankName":@"建设银行"},
-                                                               @{@"bankId":@"5",@"bankName":@"招商银行"},
-                                                               @{@"bankId":@"6",@"bankName":@"成都银行"},
-                                                               @{@"bankId":@"7",@"bankName":@"民生银行"},
-                                                               @{@"bankId":@"30",@"bankName":@"交通银行"}]];
+//        self.dataSouceArray = [NSMutableArray arrayWithArray:@[@{@"bankId":@"1",@"bankName":@"中国银行"},
+//                                                               @{@"bankId":@"2",@"bankName":@"农业银行"},
+//                                                               @{@"bankId":@"3",@"bankName":@"工商银行"},
+//                                                               @{@"bankId":@"4",@"bankName":@"建设银行"},
+//                                                               @{@"bankId":@"5",@"bankName":@"招商银行"},
+//                                                               @{@"bankId":@"6",@"bankName":@"成都银行"},
+//                                                               @{@"bankId":@"7",@"bankName":@"民生银行"},
+//                                                               @{@"bankId":@"30",@"bankName":@"交通银行"}]];
 //        @{@"bankId":@"8",@"bankName":@"邮储银行"},
 //        @{@"bankId":@"9",@"bankName":@"农村信用社"}
     }else{

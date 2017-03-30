@@ -23,6 +23,9 @@
     self.naviBar.delegate = self;
     [self setLayerWithbor:self.view1];
     [self setLayerWithbor:self.view2];
+    
+    self.surePasswrodLabel.textColor = self.setPasswordLabel.textColor =MacoDetailColor;
+    self.surePasswordTF.textColor = self.setpasswordTF.textColor =self.openFingerprintlabel.textColor= MacoTitleColor;
 
 }
 

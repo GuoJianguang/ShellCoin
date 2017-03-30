@@ -22,6 +22,9 @@
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eLl-TO-8Zs">
                         <rect key="frame" x="270" y="8" width="31" height="30"/>
                         <state key="normal" title="删除"/>
+                        <connections>
+                            <action selector="deletBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="13n-5k-wy6"/>
+                        </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="持卡人" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z6H-fb-hf1">
                         <rect key="frame" x="16" y="8" width="37" height="14.5"/>
@@ -141,7 +144,24 @@
                     <constraint firstItem="nLn-9o-rXM" firstAttribute="top" secondItem="Q96-NN-3VN" secondAttribute="bottom" constant="16" id="yqF-JU-CHf"/>
                 </constraints>
             </tableViewCellContentView>
-            <point key="canvasLocation" x="186" y="-61"/>
+            <connections>
+                <outlet property="addresslabel" destination="fJa-oJ-fL2" id="Gcd-Ko-kfo"/>
+                <outlet property="alerLabel1" destination="Z6H-fb-hf1" id="OgZ-Du-OyQ"/>
+                <outlet property="alerLabel2" destination="9a8-Df-WKc" id="zTx-yT-qYx"/>
+                <outlet property="alerLabel3" destination="vBW-BC-2kI" id="caT-Ts-hik"/>
+                <outlet property="alerLabel4" destination="HR7-WV-IA8" id="MnC-Va-DET"/>
+                <outlet property="alerLabel5" destination="6NA-43-peS" id="H5o-Ix-MiP"/>
+                <outlet property="alerLabel6" destination="mXg-cd-eq5" id="41g-Ls-KzG"/>
+                <outlet property="alerLabel7" destination="nLn-9o-rXM" id="22q-a1-URQ"/>
+                <outlet property="bankLabel" destination="3Lp-J5-HOl" id="PVc-D3-DdJ"/>
+                <outlet property="cardNumLabel" destination="ze3-xf-nbD" id="I0W-ZL-Pho"/>
+                <outlet property="deletBtn" destination="eLl-TO-8Zs" id="sbG-3Z-CKy"/>
+                <outlet property="hanghaoLabel" destination="dZS-fh-b3n" id="976-R7-SWq"/>
+                <outlet property="kaihuhangLabel" destination="Q96-NN-3VN" id="MdT-1J-njX"/>
+                <outlet property="realNameLabel" destination="swp-68-jCR" id="gdK-1Q-AON"/>
+                <outlet property="wangdianLabel" destination="MFX-WM-dbE" id="XYt-WX-223"/>
+            </connections>
+            <point key="canvasLocation" x="-321" y="-181"/>
         </tableViewCell>
     </objects>
 </document>

@@ -8,6 +8,7 @@
 
 #import "EditBankInfoViewController.h"
 #import "EditbankInfoTableViewCell.h"
+#import "BankCardInfoModel.h"
 
 @interface EditBankInfoViewController ()<UITableViewDataSource,UITableViewDelegate,BasenavigationDelegate>
 
@@ -26,6 +27,7 @@
     
 }
 
+
 - (void)detailBtnClick
 {
     EditbankInfoTableViewCell *cell = self.tableView.visibleCells[0];
@@ -43,6 +45,9 @@
     EditbankInfoTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[EditbankInfoTableViewCell indentify]];
     if (!cell) {
         cell = [EditbankInfoTableViewCell newCell];
+    }
+    if (self.isYetBingdingCard) {
+        cell.bankModel = self.bankModel;
     }
     return cell;
     

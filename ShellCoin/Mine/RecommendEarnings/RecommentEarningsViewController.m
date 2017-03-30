@@ -29,12 +29,14 @@
     self.talbeView.backgroundColor = [UIColor clearColor];
     __weak RecommentEarningsViewController *weak_self = self;
     self.talbeView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
-        [weak_self.talbeView.mj_header endRefreshing];
+        weak_self.page = 1;
+        [weak_self getRequest:YES];
     }];
     self.talbeView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
-        [weak_self.talbeView.mj_footer endRefreshing];
-    }];
+        [weak_self getRequest:NO];
 
+    }];
+    [self.talbeView.mj_header beginRefreshing];
 }
 
 
@@ -46,11 +48,48 @@
     return _dataSouceArray;
 }
 
+- (void)getRequest:(BOOL)isHeader
+{
+    NSDictionary *prams = @{@"pageNo":@(self.page),
+                            @"pageSize":MacoRequestPageCount,
+                            @"token":[ShellCoinUserInfo shareUserInfos].token};
+    [HttpClient POST:@"user/wallet/withdraw/get" parameters:prams success:^(NSURLSessionDataTask *operation, id jsonObject) {
+        if (IsRequestTrue) {
+            if (isHeader) {
+                [self.dataSouceArray removeAllObjects];
+            }
+            NSArray *array =jsonObject[@"data"][@"data"];
+            if (array.count > 0) {
+                self.page ++;
+            }
+            for (NSDictionary *dic in array) {
+                RecommendModel *model = [RecommendModel modelWithDic:dic];
+                [self.dataSouceArray addObject:model];
+            }
+            [self.talbeView reloadData];
+        }
+        if (isHeader) {
+            [self.talbeView.mj_header endRefreshing];
+        }else{
+            [self.talbeView.mj_footer endRefreshing];
+            
+        }
+    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
+        
+        if (isHeader) {
+            [self.talbeView.mj_header endRefreshing];
+        }else{
+            [self.talbeView.mj_footer endRefreshing];
+            
+        }
+    }];
+}
+
 #pragma mark - UITableView
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 10;
+//    return 10;
     return self.dataSouceArray.count;
 }
 
@@ -60,7 +99,9 @@
     if (!cell) {
         cell = [RecommendTableViewCell newCell];
     }
-
+    if (self.dataSouceArray.count > 0) {
+        cell.dataModel = self.dataSouceArray[indexPath.row];
+    }
     return cell;
 }
 

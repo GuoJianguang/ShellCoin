@@ -8,11 +8,12 @@
 
 #import "BaseViewController.h"
 
+@class BankCardInfoModel;
 @interface EditBankInfoViewController : BaseViewController
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
-
-
+@property (nonatomic, strong)BankCardInfoModel *bankModel;
+@property (nonatomic, assign)BOOL isYetBingdingCard;
 
 @end

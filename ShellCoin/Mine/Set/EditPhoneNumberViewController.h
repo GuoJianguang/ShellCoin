@@ -31,4 +31,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *sendNewCodeBtn;
 - (IBAction)sendNewCodeBtn:(id)sender;
 
+@property (weak, nonatomic) IBOutlet UILabel *alerLabel;
+
+
+
 @end

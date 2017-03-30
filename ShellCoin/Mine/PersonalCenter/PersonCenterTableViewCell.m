@@ -87,7 +87,8 @@
     [self.viewController.navigationController pushViewController:realnameVC animated:YES];
 }
 - (IBAction)bankBtn:(id)sender {
-    if (self.isHaveBankCard) {
+    
+    if ([ShellCoinUserInfo shareUserInfos].bindingFlag) {
         ManagerBankCardViewController *manageVC = [[ManagerBankCardViewController alloc]init];
         [self.viewController.navigationController pushViewController:manageVC animated:YES];
         return;

@@ -8,6 +8,20 @@
 
 #import "RecommendTableViewCell.h"
 
+@implementation RecommendModel
+
++ (id)modelWithDic:(NSDictionary *)dic
+{
+    RecommendModel *model = [[RecommendModel alloc]init];
+    model.tranTime = NullToSpace(dic[@"tranTime"]);
+    model.phone = NullToSpace(dic[@"phone"]);
+    model.tranAmount = NullToSpace(dic[@"tranAmount"]);
+    model.totalqueryAmount = NullToNumber(dic[@"totalqueryAmount"]);
+    return model;
+}
+
+@end
+
 @implementation RecommendTableViewCell
 
 - (void)awakeFromNib {
@@ -16,6 +30,15 @@
     self.moneyLabel.textColor = MacoColor;
     self.timeLabel.textColor = MacoDetailColor;
     self.markLabel.textColor = MacoTitleColor;
+    
+}
+
+- (void)setDataModel:(RecommendModel *)dataModel
+{
+    _dataModel = dataModel;
+    self.markLabel.text = _dataModel.phone;
+    self.timeLabel.text = _dataModel.tranTime;
+    self.moneyLabel.text = [NSString stringWithFormat:@"+¥%@",_dataModel.tranAmount];
     
 }
 

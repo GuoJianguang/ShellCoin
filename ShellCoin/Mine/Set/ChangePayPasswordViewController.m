@@ -26,6 +26,10 @@
     [self setLayerWithbor:self.view3];
     [self setLayerWithbor:self.view4];
 
+    [self.verCodeBtn setTitleColor:MacoColor forState:UIControlStateNormal];
+    
+    self.phoneTF.textColor = self.xinPayTF.textColor = self.verCodeTF.textColor = self.sureNewPayTF.textColor = self.fingerCodeLabel.textColor =MacoTitleColor;
+    self.phoneLabel.textColor = self.xinPayLabel.textColor = self.verCodeLabel.textColor = self.sureNewPayLabel.textColor= MacoDetailColor;
 }
 
 - (void)detailBtnClick

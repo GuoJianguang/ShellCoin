@@ -8,6 +8,7 @@
 
 #import "EditbankInfoTableViewCell.h"
 #import "BankPickView.h"
+#import "BankCardInfoModel.h"
 
 
 @interface EditbankInfoTableViewCell()<BankPickViewDelegate,UITextFieldDelegate>
@@ -23,6 +24,9 @@
 @property (strong, nonatomic)BankPickView *wangdianPicker;
 @property (strong, nonatomic)BankPickView *kaihuhangPicker;
 
+
+@property (copy,nonatomic)NSString *bank_id;
+
 @end
 
 @implementation EditbankInfoTableViewCell
@@ -30,7 +34,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
-    self.upViewHeight.constant = (TWitdh-30)*(55/278.)*6 + 20 + 6*8;
+    self.upViewHeight.constant = (TWitdh-30)*(12/65.)*6 + 20 + 6*8;
     [self setLayerWithbor:self.view1];
     [self setLayerWithbor:self.view2];
     [self setLayerWithbor:self.view3];
@@ -56,11 +60,15 @@
     
     self.tempProName = self.cityPicker.dataSouceArray[0][@"bankName"];
     self.tempBankName = @"";
-    self.tempBankName = @"中国银行";
+    self.tempBankName = @"";
     self.bankCardNu.delegate = self;
-    
+    self.bank_id = @"";
+
     self.view7.hidden = YES;
     self.top8Height.constant = 8;
+    
+    self.nameTF.text = [ShellCoinUserInfo shareUserInfos].idcardName;
+    self.nameTF.enabled = NO;
 
 }
 
@@ -77,19 +85,70 @@
 }
 
 
+- (void)setBankModel:(BankCardInfoModel *)bankModel
+{
+    _bankModel = bankModel;
+    self.bank_id = _bankModel.bankId;
+    NSString *shengName = [NullToSpace(_bankModel.bankAccountPro) stringByReplacingOccurrencesOfString:@"省" withString:@""];
+    shengName = [shengName stringByReplacingOccurrencesOfString:@"市" withString:@""];
+    
+    NSString *bankName = NullToSpace(_bankModel.bankName);
+    if (![bankName isEqualToString:@"中国银行"]) {
+        bankName = [bankName stringByReplacingOccurrencesOfString:@"中国" withString:@""];
+    }
+    if ([bankName isEqualToString:@"中国邮政储蓄银行"] || [bankName isEqualToString:@"邮政储蓄银行"]||[bankName isEqualToString:@"中国邮政储蓄"]||[bankName isEqualToString:@"邮政储蓄"]) {
+        bankName =  @"邮储银行";
+    }
+    
+    self.bankLabel.text = bankName;
+    self.bankCardNu.text = [self normalNumToBankNum: _bankModel.bankAccount];
+    self.provincesTF.text = _bankModel.bankAccountPro;
+    self.nameTF.text = _bankModel.realName;
+    self.kaihuhangNumdTF.text = _bankModel.bankBranchNo;
+    self.kaihuhangTF.text  =_bankModel.bankPointBranch;
+    self.wangdianTF.text = _bankModel.bankPoint;
+    if ([self.wangdianTF.text isEqualToString:@""]) {
+        self.inputKaihuhangTF.text = _bankModel.bankBranch;
+        self.selcetZHNumBtn.selected = YES;
+        self.upViewHeight.constant = (TWitdh-30)*(12/65.)*4 + 20 + 5*8;
+        self.view6.hidden = self.view5.hidden = YES;
+        self.view7.hidden  = NO;
+        self.top8Height.constant = 8 + (TWitdh-30)*(12/65.) + 8;
+    }else{
+        self.upViewHeight.constant = (TWitdh-30)*(12/65.)*6 + 20 + 5*8;
+        self.view6.hidden = self.view5.hidden = NO;
+        self.selcetZHNumBtn.selected = NO;
+        self.view7.hidden = YES;
+        self.top8Height.constant = 8;
+    }
+}
+
+- (NSString *)normalNumToBankNum:(NSString *)num
+{
+    if (num.length < 7) {
+        return num;
+    }
+    NSNumber *number = @([num longLongValue]);
+    NSNumberFormatter *formatter = [NSNumberFormatter new];
+    [formatter setUsesGroupingSeparator:YES];
+    [formatter setGroupingSize:4];
+    [formatter setGroupingSeparator:@" "];
+    return [formatter stringFromNumber:number];
+}
+
 #pragma mark - 是否手动输入
 
 - (IBAction)selcetZHNumBtn:(UIButton *)sender {
     
     sender.selected = !sender.selected;
     if (sender.selected) {
-        self.upViewHeight.constant = (TWitdh-30)*(55/278.)*4 + 20 + 5*8;
+        self.upViewHeight.constant = (TWitdh-30)*(12/65.)*4 + 20 + 5*8;
         self.view6.hidden = self.view5.hidden = YES;
         self.view7.hidden  = NO;
-        self.top8Height.constant = 8 + (TWitdh-30)*(55/278.) + 8;
+        self.top8Height.constant = 8 + (TWitdh-30)*(12/65.) + 8;
 
     }else{
-        self.upViewHeight.constant = (TWitdh-30)*(55/278.)*6 + 20 + 5*8;
+        self.upViewHeight.constant = (TWitdh-30)*(12/65.)*6 + 20 + 5*8;
         self.view6.hidden = self.view5.hidden = NO;
         self.view7.hidden = YES;
         self.top8Height.constant = 8;
@@ -182,6 +241,7 @@
     if (picker == self.bankPicker) {
         self.kaihuhangTF.text = @"";
         self.wangdianTF.text = @"";
+        self.bank_id = bankId;
         self.bankLabel.text = bankName;
         self.tempBankName = bankName;
     }else if(picker == self.cityPicker){
@@ -199,14 +259,33 @@
     }
 }
 
-
+#pragma mark - 获取所有银行卡
+- (void)getAllBankRequest
+{
+    [HttpClient POST:@"user/banks/get" parameters:nil success:^(NSURLSessionDataTask *operation, id jsonObject) {
+        if (IsRequestTrue) {
+            NSArray *array = jsonObject[@"data"];
+            NSMutableArray *datasoucearray = [NSMutableArray array];
+            for (NSDictionary *dic in array) {
+                NSDictionary *iteDic =  @{@"bankId":NullToNumber(dic[@"id"]),@"bankName":NullToSpace(dic[@"bankName"])};
+                [datasoucearray addObject:iteDic];
+            }
+            self.bankPicker.dataSouceArray = datasoucearray;
+            self.tempBankName = datasoucearray[0][@"bankName"];
+            self.bank_id = datasoucearray[0][@"bankId"];
+            self.bankPicker.isAddressPicker = NO;
+        }
+    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
+        [[JAlertViewHelper shareAlterHelper]showTint:@"抱歉,暂时获取不到银行信息" duration:2.0];
+        [self.wangdianTF resignFirstResponder];
+    }];
+}
 
 #pragma mark - 获取银行网点支行的网络请求
 - (void)getBankPointRequest
 {
     NSDictionary *parms = @{@"bank":NullToSpace(self.bankLabel.text),
                             @"province":NullToSpace(self.provincesTF.text)};
-    
     [HttpClient POST:@"user/withdraw/bindBankcard/getBankPoint" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
         if (IsRequestTrue) {
             NSArray *array = jsonObject[@"data"][@"points"];
@@ -339,6 +418,7 @@
         self.tempKaihuwangdianName = @"";
         self.kaihuhangTF.text = @"";
         self.wangdianTF.text = @"";
+        [self getAllBankRequest];
     }
     if (textField == self.wangdianTF) {
         self.kaihuhangTF.text = @"";
@@ -406,6 +486,92 @@
 - (void)sureEdit
 {
     
+    if ([self valueValidated]) {
+        NSString *bankNum = [self.bankCardNu.text stringByReplacingOccurrencesOfString:@" " withString:@""];
+        NSString *kaihuhNum = [self.kaihuhangNumdTF.text stringByReplacingOccurrencesOfString:@" " withString:@""];
+        if (self.selcetZHNumBtn.selected) {
+            self.wangdianTF.text = @"";
+            self.kaihuhangTF.text = @"";
+        }else{
+            self.inputKaihuhangTF.text = @"";
+        }
+        NSDictionary *parms = @{@"bankId":self.bank_id,
+                                @"bankAccount":bankNum,
+                                @"identity":@"",
+                                @"bankPhone":@"",
+                                @"realName":self.nameTF.text,
+                                @"bankAccountPro":self.provincesTF.text,
+                                @"token":[ShellCoinUserInfo shareUserInfos].token,
+                                @"bankPoint":NullToSpace(self.wangdianTF.text),
+                                @"bankPointBranch":NullToSpace(self.kaihuhangTF.text),
+                                @"bankBranch":NullToSpace(self.inputKaihuhangTF.text),
+                                @"bankBranchNo":NullToSpace(kaihuhNum)};
+        [SVProgressHUD showWithStatus:@"正在提交..." maskType:SVProgressHUDMaskTypeBlack];
+        
+        [HttpClient POST:@"user/withdraw/bindBankcard/add" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
+            [SVProgressHUD dismiss];
+            if (IsRequestTrue) {
+//                [ShellCoinUserInfo shareUserInfos].bankname= self.bank_id;
+                
+                [[JAlertViewHelper shareAlterHelper]showTint:@"绑定成功" duration:1.5];
+                [ShellCoinUserInfo shareUserInfos].bindingFlag = YES;
+                [ShellCoinUserInfo shareUserInfos].bankAccount = bankNum;
+                [ShellCoinUserInfo shareUserInfos].bankAccountRealName = self.nameTF.text;
+                [ShellCoinUserInfo shareUserInfos].bindingFlag = @"1";
+//                [self.viewController.navigationController popViewControllerAnimated:YES];
+            }
+        } failure:^(NSURLSessionDataTask *operation, NSError *error) {
+            [SVProgressHUD dismiss];
+            
+        }];
+    }
+    
+}
+
+-(BOOL) valueValidated {
+    
+    NSString *kaihuhNum = [self.kaihuhangNumdTF.text stringByReplacingOccurrencesOfString:@" " withString:@""];
+    // 判断电话号码是否合格
+    if ([self emptyTextOfTextField:self.bankCardNu]) {
+        [[JAlertViewHelper shareAlterHelper]showTint:@"请输入银行卡号" duration:1.];
+        return NO;
+    }else if ([self emptyTextOfTextField:self.provincesTF]) {
+        [[JAlertViewHelper shareAlterHelper]showTint:@"请选择开户地址" duration:1.];
+        return NO;
+    }else if ([self emptyTextOfTextField:self.bankLabel]) {
+        [[JAlertViewHelper shareAlterHelper]showTint:@"请选择发卡银行" duration:1.];
+        return NO;
+    }else if ([self emptyTextOfTextField:self.nameTF]) {
+        [[JAlertViewHelper shareAlterHelper]showTint:@"请输入持卡人姓名" duration:1.];
+        return NO;
+    }else if (kaihuhNum.length !=0 && kaihuhNum.length !=12){
+        [[JAlertViewHelper shareAlterHelper]showTint:@"您输入的开户行号只能是12位的数字" duration:1.];
+        return NO;
+    }
+    //    if (![self.bank_id isEqualToString:@"2"]) {
+    //        [[JAlertViewHelper shareAlterHelper]showTint:@"您只能绑定农业银行的银行卡" duration:1.5];
+    //        return NO;
+    //    }
+    if (!self.selcetZHNumBtn.selected) {
+        if ([self emptyTextOfTextField:self.wangdianTF]) {
+            [[JAlertViewHelper shareAlterHelper]showTint:@"请选择开户网点" duration:1.];
+            return NO;
+        }else if ([self emptyTextOfTextField:self.kaihuhangTF]) {
+            [[JAlertViewHelper shareAlterHelper]showTint:@"请输入开户银行" duration:1.];
+            return NO;
+        }
+        else if ([self emptyTextOfTextField:self.wangdianTF]) {
+            [[JAlertViewHelper shareAlterHelper]showTint:@"请选择开户网点" duration:1.];
+            return NO;
+        }
+    }else{
+        if ([self emptyTextOfTextField:self.inputKaihuhangTF]) {
+            [[JAlertViewHelper shareAlterHelper]showTint:@"请手动输入对应支行" duration:1.];
+            return NO;
+        }
+    }
+    
+    return YES;
 }
 
 @end

@@ -37,8 +37,8 @@
                             <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="推荐收益" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kXF-co-qpv">
-                                    <rect key="frame" x="152.5" y="12" width="70" height="21"/>
-                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                    <rect key="frame" x="151" y="12" width="73.5" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>
@@ -77,14 +77,14 @@
                             <rect key="frame" x="0.0" y="64" width="375" height="61"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¥ --" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OuX-eU-69L">
-                                    <rect key="frame" x="275.5" y="1" width="71.5" height="48"/>
+                                    <rect key="frame" x="293.5" y="6" width="71.5" height="48"/>
                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="总推荐收益" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TEy-d8-dpy">
                                     <rect key="frame" x="12" y="30" width="71.5" height="17"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>
@@ -92,8 +92,8 @@
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstItem="TEy-d8-dpy" firstAttribute="leading" secondItem="tPv-uM-EZg" secondAttribute="leading" constant="12" id="4UR-Ie-5n7"/>
-                                <constraint firstAttribute="bottom" secondItem="OuX-eU-69L" secondAttribute="bottom" constant="12" id="aw4-ry-lWF"/>
-                                <constraint firstAttribute="trailing" secondItem="OuX-eU-69L" secondAttribute="trailing" constant="28" id="iis-05-FYe"/>
+                                <constraint firstAttribute="bottom" secondItem="OuX-eU-69L" secondAttribute="bottom" constant="7" id="aw4-ry-lWF"/>
+                                <constraint firstAttribute="trailing" secondItem="OuX-eU-69L" secondAttribute="trailing" constant="10" id="iis-05-FYe"/>
                                 <constraint firstAttribute="bottom" secondItem="TEy-d8-dpy" secondAttribute="bottom" constant="14" id="nIg-Ry-xHe"/>
                             </constraints>
                         </view>

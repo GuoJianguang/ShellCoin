@@ -11,18 +11,24 @@
 #import "PGIndexBannerSubiew.h"
 #import "ManageBankView.h"
 #import "BanCardDetailTableViewCell.h"
+#import "EditBankInfoViewController.h"
+#import "BankCardDetailView.h"
+#import "BankCardInfoModel.h"
 
 @interface ManagerBankCardViewController ()<NewPagedFlowViewDelegate, NewPagedFlowViewDataSource,BasenavigationDelegate,UITableViewDelegate,UITableViewDataSource>
 
 /**
  *  图片数组
  */
-@property (nonatomic, strong) NSMutableArray *imageArray;
+@property (nonatomic, strong) NSMutableArray *dataSouceArray;
 
 @property (nonatomic, strong) ManageBankView *manageView;
 
 @property (nonatomic, strong)UITableView *talbeView;
 
+@property (nonatomic, assign)NSInteger currentPage;
+
+@property (nonatomic, strong)NewPagedFlowView *pageFlowView;
 
 @end
 
@@ -33,45 +39,37 @@
     // Do any additional setup after loading the view from its nib.
     self.naviBar.title = @"银行卡";
     self.naviBar.delegate = self;
-    for (int index = 0; index < 3; index++) {
-        UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"Yosemite%02d",index]];
-        [self.imageArray addObject:image];
-    }
+
+    self.view.backgroundColor = [UIColor colorFromHexString:@"#faf8f6"];
     
+    self.naviBar.hiddenDetailBtn = NO;
+    self.naviBar.detailTitle = @"添加";
+    self.currentPage = 0;
     [self setupUI];
-    [self.view bringSubviewToFront:self.naviBar];
-    self.view.backgroundColor = [UIColor whiteColor];
-    
+    [self getmyBankCardRequest];
+
 }
 
-- (void)backBtnClick
+#pragma  mark - 添加银行卡
+- (void)detailBtnClick
 {
-    [self.navigationController popViewControllerAnimated:YES];
+    EditBankInfoViewController *editBankInfoVC = [[EditBankInfoViewController alloc]init];
+    [self.navigationController pushViewController:editBankInfoVC animated:YES];
 }
+
 
 - (void)setupUI {
-    
-    
-    NewPagedFlowView *pageFlowView = [[NewPagedFlowView alloc] initWithFrame:CGRectMake(0, 80, TWitdh, (TWitdh - 130) * 9 / 16 + 24)];
-    pageFlowView.backgroundColor = [UIColor whiteColor];
-    pageFlowView.delegate = self;
-    pageFlowView.dataSource = self;
-    pageFlowView.minimumPageAlpha = 0.1;
-    pageFlowView.minimumPageScale = 0.93;
-    pageFlowView.isCarousel = NO;
-    pageFlowView.orientation = NewPagedFlowViewOrientationHorizontal;
-    
+    self.pageFlowView.frame =  CGRectMake(0, 70, TWitdh, (TWitdh - 130) * 9 / 16 + 24);
+    self.pageFlowView.delegate = self;
+    self.pageFlowView.dataSource = self;
+    self.pageFlowView.minimumPageAlpha = 0.1;
+    self.pageFlowView.minimumPageScale = 0.93;
+    self.pageFlowView.isCarousel = NO;
+    self.pageFlowView.orientation = NewPagedFlowViewOrientationHorizontal;
     //提前告诉有多少页
-    //    pageFlowView.orginPageCount = self.imageArray.count;
-    
-    pageFlowView.isOpenAutoScroll = YES;
-    
-    //初始化pageControl
-    UIPageControl *pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(0, pageFlowView.frame.size.height - 24 - 8, TWitdh, 8)];
-    pageFlowView.pageControl = pageControl;
-    pageFlowView.backgroundColor = [UIColor colorWithRed:241/255. green:247/255. blue:247/255. alpha:1.];
-    [pageFlowView addSubview:pageControl];
-    
+    self.pageFlowView.orginPageCount = self.dataSouceArray.count;
+    self.manageView.pageContrlVIew.numberPages = self.dataSouceArray.count;
+    self.pageFlowView.isOpenAutoScroll = YES;
     /****************************
      使用导航控制器(UINavigationController)
      如果控制器中不存在UIScrollView或者继承自UIScrollView的UI控件
@@ -79,29 +77,42 @@
      *****************************/
     
     UIScrollView *bottomScrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
-    [bottomScrollView addSubview:pageFlowView];
+    [bottomScrollView addSubview:self.pageFlowView];
     
-    [pageFlowView reloadData];
+    [self.pageFlowView reloadData];
     
     [self.view addSubview:bottomScrollView];
     
-    self.manageView.frame = CGRectMake(0, (TWitdh - 130) * 9 / 16 + 24 + 80, TWitdh, 80);
+    self.manageView.frame = CGRectMake(0, (TWitdh - 130) * 9 / 16 + 24 + 64, TWitdh, 78);
+    self.manageView.layer.masksToBounds = YES;
     [self.view addSubview:self.manageView];
-    [self.view bringSubviewToFront:self.manageView];
     
     self.talbeView.frame = CGRectMake(0, CGRectGetMaxY(self.manageView.frame), TWitdh, THeight - CGRectGetMaxY(self.manageView.frame));
     [self.view addSubview:self.talbeView];
     self.talbeView.delegate = self;
     self.talbeView.dataSource = self;
     self.talbeView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    
+    [self.view bringSubviewToFront:self.manageView];
+
+    [self.view bringSubviewToFront:self.naviBar];
+
 }
 #pragma mark --懒加载
-- (NSMutableArray *)imageArray {
-    if (_imageArray == nil) {
-        _imageArray = [NSMutableArray array];
+
+- (NewPagedFlowView *)pageFlowView
+{
+    if (!_pageFlowView) {
+        _pageFlowView = [[NewPagedFlowView alloc]init];
+        self.pageFlowView.backgroundColor = [UIColor colorFromHexString:@"#faf8f6"];
+
     }
-    return _imageArray;
+    return _pageFlowView;
+}
+- (NSMutableArray *)dataSouceArray {
+    if (_dataSouceArray == nil) {
+        _dataSouceArray = [NSMutableArray array];
+    }
+    return _dataSouceArray;
 }
 
 
@@ -137,7 +148,7 @@
 #pragma mark NewPagedFlowView Datasource
 - (NSInteger)numberOfPagesInFlowView:(NewPagedFlowView *)flowView {
     
-    return self.imageArray.count;
+    return self.dataSouceArray.count;
     
 }
 
@@ -149,16 +160,28 @@
         bannerView.layer.cornerRadius = 4;
         bannerView.layer.masksToBounds = YES;
     }
+    bannerView.frame = bannerView.mainImageView.frame;
+    bannerView.banView.dataModel = self.dataSouceArray[index];
     //在这里下载网络图片
     //  [bannerView.mainImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:hostUrlsImg,imageDict[@"img"]]] placeholderImage:[UIImage imageNamed:@""]];
-    bannerView.mainImageView.image = self.imageArray[index];
-    
     return bannerView;
 }
 
 - (void)didScrollToPage:(NSInteger)pageNumber inFlowView:(NewPagedFlowView *)flowView {
     
-    NSLog(@"ViewController 滚动到了第%ld页",pageNumber);
+ 
+    if (pageNumber < 0) {
+        self.currentPage = 0;
+        self.manageView.pageContrlVIew.currentPage = 0;
+        
+        [self.talbeView reloadData];
+        self.manageView.bankModel = self.dataSouceArray[self.currentPage];
+        return;
+    }
+    self.currentPage = pageNumber;
+    self.manageView.pageContrlVIew.currentPage = pageNumber;
+    self.manageView.bankModel = self.dataSouceArray[self.currentPage];
+    [self.talbeView reloadData];
 }
 
 
@@ -175,6 +198,9 @@
     if (!cell) {
         cell = [BanCardDetailTableViewCell newCell];
     }
+    if (self.dataSouceArray.count > 0) {
+        cell.dataModel = self.dataSouceArray[self.currentPage];
+    }
     return cell;
 }
 
@@ -183,6 +209,25 @@
     return THeight - 200;
 }
 
+
+#pragma mark - 获取我的银行卡
+- (void)getmyBankCardRequest
+{
+    [HttpClient POST:@"user/withdraw/bindBankcard/get" parameters:@{@"token":[ShellCoinUserInfo shareUserInfos].token} success:^(NSURLSessionDataTask *operation, id jsonObject) {
+        if (IsRequestTrue) {
+            [self.dataSouceArray removeAllObjects];
+            NSArray *array = jsonObject[@"data"];
+            for (NSDictionary *dic in array) {
+                [self.dataSouceArray addObject:[BankCardInfoModel modelWithDic:dic]];
+            }
+            self.manageView.bankModel = self.dataSouceArray[self.currentPage];
+            [self.pageFlowView reloadData];
+            [self.talbeView reloadData];
+        }
+    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
+        
+    }];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
