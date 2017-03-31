@@ -22,7 +22,7 @@
     self.naviBar.title = @"编辑银行卡";
     
     self.naviBar.hiddenDetailBtn = NO;
-    self.naviBar.detailTitle = @"提交";
+    self.naviBar.detailImage = [UIImage imageNamed:@"icon_confirm"];
     self.naviBar.delegate = self;
     
 }
@@ -48,7 +48,9 @@
     }
     if (self.isYetBingdingCard) {
         cell.bankModel = self.bankModel;
+        cell.isYetBingdingCard = YES;
     }
+    cell.isFromRoomPage = self.isFromRoomPage;
     return cell;
     
 }

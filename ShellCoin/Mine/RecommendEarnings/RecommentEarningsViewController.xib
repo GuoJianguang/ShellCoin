@@ -51,9 +51,9 @@
                                         <action selector="backBtn:" destination="-1" eventType="touchUpInside" id="KAt-BX-xXB"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H0F-1D-934">
-                                    <rect key="frame" x="313" y="7" width="46" height="30"/>
-                                    <state key="normal" title="二维码">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H0F-1D-934">
+                                    <rect key="frame" x="331" y="0.0" width="44" height="44"/>
+                                    <state key="normal" image="icon_recommended_qrcode">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
                                     <connections>
@@ -63,10 +63,11 @@
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
+                                <constraint firstItem="H0F-1D-934" firstAttribute="top" secondItem="1bX-lk-QVK" secondAttribute="top" id="2xc-hJ-yx8"/>
                                 <constraint firstItem="kXF-co-qpv" firstAttribute="centerY" secondItem="1bX-lk-QVK" secondAttribute="centerY" id="99T-rJ-24X"/>
                                 <constraint firstAttribute="height" constant="44" id="E0L-7m-KbS"/>
-                                <constraint firstAttribute="trailing" secondItem="H0F-1D-934" secondAttribute="trailing" constant="16" id="EAk-YQ-npu"/>
-                                <constraint firstItem="H0F-1D-934" firstAttribute="centerY" secondItem="1bX-lk-QVK" secondAttribute="centerY" id="G5A-jK-Mkx"/>
+                                <constraint firstAttribute="trailing" secondItem="H0F-1D-934" secondAttribute="trailing" id="EAk-YQ-npu"/>
+                                <constraint firstAttribute="bottom" secondItem="H0F-1D-934" secondAttribute="bottom" id="GsK-Ix-dfs"/>
                                 <constraint firstItem="Bo1-tC-aC1" firstAttribute="top" secondItem="1bX-lk-QVK" secondAttribute="top" id="LR7-r1-3qk"/>
                                 <constraint firstItem="kXF-co-qpv" firstAttribute="centerX" secondItem="1bX-lk-QVK" secondAttribute="centerX" id="RFG-gR-ePs"/>
                                 <constraint firstAttribute="bottom" secondItem="Bo1-tC-aC1" secondAttribute="bottom" id="p7q-DE-zJ0"/>
@@ -146,6 +147,7 @@
     </objects>
     <resources>
         <image name="icon_back" width="44" height="44"/>
+        <image name="icon_recommended_qrcode" width="44" height="44"/>
         <image name="mine_withdraw_bg1" width="375" height="260"/>
     </resources>
 </document>

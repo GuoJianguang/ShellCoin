@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '59A2D0966684A02DCE87DFD7AF63BB79'
+               BlueprintIdentifier = '377AB1A939CA4B3959CA4C317B80C169'
                BlueprintName = 'Pods-ShellCoin'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libPods-ShellCoin.a'>

@@ -14,6 +14,7 @@
 #import "EditBankInfoViewController.h"
 #import "BankCardDetailView.h"
 #import "BankCardInfoModel.h"
+#import "NoBankCardViewController.h"
 
 @interface ManagerBankCardViewController ()<NewPagedFlowViewDelegate, NewPagedFlowViewDataSource,BasenavigationDelegate,UITableViewDelegate,UITableViewDataSource>
 
@@ -26,7 +27,6 @@
 
 @property (nonatomic, strong)UITableView *talbeView;
 
-@property (nonatomic, assign)NSInteger currentPage;
 
 @property (nonatomic, strong)NewPagedFlowView *pageFlowView;
 
@@ -43,10 +43,9 @@
     self.view.backgroundColor = [UIColor colorFromHexString:@"#faf8f6"];
     
     self.naviBar.hiddenDetailBtn = NO;
-    self.naviBar.detailTitle = @"添加";
+    self.naviBar.detailImage = [UIImage imageNamed:@"icon_add"];
     self.currentPage = 0;
     [self setupUI];
-    [self getmyBankCardRequest];
 
 }
 
@@ -68,7 +67,7 @@
     self.pageFlowView.orientation = NewPagedFlowViewOrientationHorizontal;
     //提前告诉有多少页
     self.pageFlowView.orginPageCount = self.dataSouceArray.count;
-    self.manageView.pageContrlVIew.numberPages = self.dataSouceArray.count;
+//    self.manageView.pageContrlVIew.numberPages = self.dataSouceArray.count;
     self.pageFlowView.isOpenAutoScroll = YES;
     /****************************
      使用导航控制器(UINavigationController)
@@ -95,6 +94,15 @@
     [self.view bringSubviewToFront:self.manageView];
 
     [self.view bringSubviewToFront:self.naviBar];
+    [self getmyBankCardRequest];
+
+
+}
+
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
 
 }
 #pragma mark --懒加载
@@ -103,8 +111,8 @@
 {
     if (!_pageFlowView) {
         _pageFlowView = [[NewPagedFlowView alloc]init];
-        self.pageFlowView.backgroundColor = [UIColor colorFromHexString:@"#faf8f6"];
-
+        _pageFlowView.backgroundColor = [UIColor colorFromHexString:@"#faf8f6"];
+        
     }
     return _pageFlowView;
 }
@@ -179,8 +187,8 @@
         return;
     }
     self.currentPage = pageNumber;
-    self.manageView.pageContrlVIew.currentPage = pageNumber;
     self.manageView.bankModel = self.dataSouceArray[self.currentPage];
+    self.manageView.pageContrlVIew.currentPage = pageNumber;
     [self.talbeView reloadData];
 }
 
@@ -213,27 +221,44 @@
 #pragma mark - 获取我的银行卡
 - (void)getmyBankCardRequest
 {
+    [SVProgressHUD showWithStatus:@"正在加载..." maskType:SVProgressHUDMaskTypeBlack];
+    self.currentPage = 0;
     [HttpClient POST:@"user/withdraw/bindBankcard/get" parameters:@{@"token":[ShellCoinUserInfo shareUserInfos].token} success:^(NSURLSessionDataTask *operation, id jsonObject) {
+        [SVProgressHUD dismiss];
         if (IsRequestTrue) {
             [self.dataSouceArray removeAllObjects];
             NSArray *array = jsonObject[@"data"];
+            if (array.count == 0) {
+                [ShellCoinUserInfo shareUserInfos].bindingFlag = NO;
+                NoBankCardViewController *noBancardVC = [[NoBankCardViewController alloc]init];
+                [self.navigationController pushViewController:noBancardVC animated:YES];
+                return;
+            }
             for (NSDictionary *dic in array) {
                 [self.dataSouceArray addObject:[BankCardInfoModel modelWithDic:dic]];
             }
+            self.manageView.pageContrlVIew.numberPages = self.dataSouceArray.count;
             self.manageView.bankModel = self.dataSouceArray[self.currentPage];
             [self.pageFlowView reloadData];
             [self.talbeView reloadData];
         }
     } failure:^(NSURLSessionDataTask *operation, NSError *error) {
-        
+        [SVProgressHUD dismiss];
     }];
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [SVProgressHUD dismiss];
+}
 /*
 #pragma mark - Navigation
 

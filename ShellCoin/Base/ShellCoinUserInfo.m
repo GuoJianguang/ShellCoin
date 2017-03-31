@@ -30,7 +30,7 @@ static ShellCoinUserInfo *instance;
 //    instance.nickName = NullToSpace(dic[@"nickName"]);
 //    instance.vipLevel = NullToNumber(dic[@"vipLevel"]);
 //    instance.password = NullToSpace(dic[@"password"]);
-//    instance.payPassword = NullToSpace(dic[@"payPassword"]);
+    instance.payPassword = NullToSpace(dic[@"payPassword"]);
 //    instance.recommendAmount = NullToSpace(dic[@"recommendAmount"]);
 //    
 //    if ([NullToNumber(dic[@"idVerifyReqFlag"]) isEqualToString:@"1"]) {
@@ -74,7 +74,11 @@ static ShellCoinUserInfo *instance;
     instance.zone = NullToSpace(dic[@"zone"]);
     instance.phone = NullToSpace(dic[@"phone"]);
     
-    instance.bindingFlag = NullToNumber(dic[@"bindingFlag"]);
+    if ([NullToNumber(dic[@"bindingFlag"]) isEqualToString:@"1"]) {
+        instance.bindingFlag = YES;
+    }else{
+        instance.bindingFlag = NO;
+    }
     instance.grade = NullToNumber(dic[@"grade"]);
     instance.integral = NullToNumber(dic[@"integral"]);
     instance.bankAccount = NullToSpace(dic[@"bankAccount"]);
@@ -108,6 +112,12 @@ static ShellCoinUserInfo *instance;
         instance.idVerifyReqFlag = NO;
     }
     
+    if ([NullToNumber(dic[@"payPwdFlag"]) isEqualToString:@"1"]) {
+        instance.payPwdFlag = YES;
+    }else{
+        instance.payPwdFlag = NO;
+
+    }
     instance.wiatJoinAmunt = NullToNumber(dic[@"waitJoinAmount"]);
     
     if ([dic[@"unreadMsgCountVo"] isKindOfClass:[NSDictionary class]]) {

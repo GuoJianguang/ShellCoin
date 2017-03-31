@@ -179,6 +179,7 @@
  * 实名认证申请标志(0无待审核请求   1有待审核请求  )
  */
 
+
 /*
  所绑定银行卡的银行名字
  */
@@ -187,6 +188,8 @@
 //手机号
 @property (nonatomic, copy)NSString *phone;
 
+//是否免密
+@property (nonatomic, assign)BOOL payPwdFlag;
 
 
 @end

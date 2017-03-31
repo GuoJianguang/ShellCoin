@@ -106,11 +106,8 @@
 
 //appStore地址
 #define AppStoreDetailUrl @"https://itunes.apple.com/us/app/tian-tian-xin/id1079754747?l=zh&ls=1&mt=8"
-
 //列表请求每页的条数
 //每页条数
 #define MacoRequestPageCount @"20"
-
-
 
 #endif /* TTXMacro_h */

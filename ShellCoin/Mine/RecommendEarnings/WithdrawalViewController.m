@@ -9,6 +9,7 @@
 #import "WithdrawalViewController.h"
 #import "SelectBanCardView.h"
 #import "SureTradInView.h"
+#import "SetPayPasswordViewController.h"
 
 @interface WithdrawalViewController ()<UITextFieldDelegate>
 @property (nonatomic, strong)SelectBanCardView *selectBancardView;
@@ -28,8 +29,10 @@
     self.inputAmountTF.delegate = self;
     self.canWithDrawLabel.adjustsFontSizeToFitWidth = YES;
     self.canWithDrawLabel.text = [NSString stringWithFormat:@"%.2f",[[ShellCoinUserInfo shareUserInfos].aviableBalance doubleValue]];
-
+    self.view.backgroundColor = [UIColor whiteColor];
+    [self getmyBankCardRequest];
 }
+
 
 - (SureTradInView *)passwordView
 {
@@ -50,10 +53,26 @@
 
 - (IBAction)sureBtn:(UIButton *)sender
 {
+    if ([[ShellCoinUserInfo shareUserInfos].payPassword isEqualToString:@""]) {
+        UIAlertController *alertcontroller = [UIAlertController alertControllerWithTitle:@"重要提示" message:@"提现之前请先设置您的支付密码" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+        }];
+        UIAlertAction *otherAction = [UIAlertAction actionWithTitle:@"去设置" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+            SetPayPasswordViewController *setPayPasswordVC = [[SetPayPasswordViewController alloc]init];
+            [self.navigationController pushViewController:setPayPasswordVC animated:YES];
+            
+        }];
+        [alertcontroller addAction:cancelAction];
+        [alertcontroller addAction:otherAction];
+        [self presentViewController:alertcontroller animated:YES completion:NULL];
+        return;
+    }
+    
     [self.inputAmountTF resignFirstResponder];
     if ([self valueValidated]) {
         NSDictionary *parms = @{@"token":[ShellCoinUserInfo shareUserInfos].token,
-                                       @"withdrawAmount":self.inputAmountTF.text};
+                                       @"withdrawAmount":self.inputAmountTF.text,
+                                @"id":self.bankModel.bankinfoid};
         [self.view addSubview:self.passwordView];
         self.passwordView.mallOrderParms = [NSMutableDictionary dictionaryWithDictionary:parms];
         self.passwordView.inputType = Password_type_withdraw;
@@ -66,8 +85,6 @@
             self.passwordView.itemView.frame = CGRectMake(0, THeight - (TWitdh*(260/375.)), TWitdh, TWitdh*(260/375.));
         }];
     }
-    
-    
 }
 
 #pragma mark - 限制提现资格
@@ -94,7 +111,6 @@
         return YES;
     }
     return NO;
-    
 }
 
 - (IBAction)backBtn:(UIButton *)sender
@@ -173,6 +189,40 @@
     return YES;
 }
 
+- (void)setBankModel:(BankCardInfoModel *)bankModel
+{
+    _bankModel = bankModel;
+    
+    self.bankLabel.text = _bankModel.bankName;
+    NSString *count = [_bankModel.bankAccount substringFromIndex:_bankModel.bankAccount.length-4];
+    self.bankCardNumLabel.text = [NSString stringWithFormat:@"(%@)",count];
+}
+
+
+#pragma mark - 获取我的所有银行卡
+
+- (void)getmyBankCardRequest
+{
+    [SVProgressHUD showWithStatus:@"正在加载..." maskType:SVProgressHUDMaskTypeBlack];
+    [HttpClient POST:@"user/withdraw/bindBankcard/get" parameters:@{@"token":[ShellCoinUserInfo shareUserInfos].token} success:^(NSURLSessionDataTask *operation, id jsonObject) {
+        [SVProgressHUD dismiss];
+        if (IsRequestTrue) {
+            [self.selectBancardView.dataSouceArray removeAllObjects];
+            NSArray *array = jsonObject[@"data"];
+            for (NSDictionary *dic in array) {
+                BankCardInfoModel *model = [BankCardInfoModel modelWithDic:dic];
+                if ([model.state isEqualToString:@"1"]) {
+                    self.bankModel = model;
+                    model.isSeclet = YES;
+                }
+                [self.selectBancardView.dataSouceArray addObject:model];
+            }
+            [self.selectBancardView.tableView reloadData];
+        }
+    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
+        [SVProgressHUD dismiss];
+    }];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

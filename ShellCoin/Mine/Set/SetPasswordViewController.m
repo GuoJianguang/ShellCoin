@@ -25,6 +25,15 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.payPasswordLabel.textColor = self.payloginPasswordLabel.textColor = MacoTitleColor;
+    
+    if ([[ShellCoinUserInfo shareUserInfos].payPassword isEqualToString:@""]) {
+        self.payPasswordLabel.text = @"设置支付密码";
+        self.isHavePayPassowrd = NO;
+    }else{
+        self.isHavePayPassowrd = YES;
+        self.payPasswordLabel.text = @"重制支付密码";
+
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -48,7 +57,6 @@
 }
 
 - (IBAction)paypasswordBtn:(id)sender {
-    self.isHavePayPassowrd = YES;
     if (self.isHavePayPassowrd) {
         ChangePayPasswordViewController *changePasswordVC = [[ChangePayPasswordViewController alloc]init];
         [self.navigationController pushViewController:changePasswordVC animated:YES];

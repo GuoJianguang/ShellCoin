@@ -16,4 +16,5 @@
 @property (nonatomic, strong)BankCardInfoModel *bankModel;
 @property (nonatomic, assign)BOOL isYetBingdingCard;
 
+@property (nonatomic, assign)BOOL isFromRoomPage;
 @end

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface SelectBanCardView : UIView
 
 @property (weak, nonatomic) IBOutlet UIView *blackBackgoundView;

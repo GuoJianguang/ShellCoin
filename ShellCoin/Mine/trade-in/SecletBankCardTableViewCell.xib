@@ -23,12 +23,12 @@
                         <rect key="frame" x="22" y="16" width="30" height="26"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="中国工商银行 （7984）" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RVH-U3-l5L">
-                        <rect key="frame" x="62" y="19.5" width="173.5" height="19.5"/>
+                        <rect key="frame" x="62" y="18.5" width="173.5" height="19.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_pull_down" translatesAutoresizingMaskIntoConstraints="NO" id="XJr-Fk-RAt">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_tick" translatesAutoresizingMaskIntoConstraints="NO" id="XJr-Fk-RAt">
                         <rect key="frame" x="264.5" y="1" width="55.5" height="55.5"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="XJr-Fk-RAt" secondAttribute="height" id="1UH-1U-mBf"/>
@@ -64,7 +64,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="icon_pull_down" width="35" height="35"/>
+        <image name="icon_tick" width="60" height="60"/>
         <image name="icon_yinlian" width="30" height="26"/>
     </resources>
 </document>

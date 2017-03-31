@@ -7,7 +7,7 @@
 //
 
 #import "SecletBankCardTableViewCell.h"
-
+#import "BankCardInfoModel.h"
 
 @implementation BankInfoModel
 + (id)modelWithDic:(NSDictionary *)dic
@@ -26,11 +26,13 @@
     self.bankCardLabel.textColor = MacoTitleColor;
 }
 
-- (void)setDataModel:(BankInfoModel *)dataModel
+- (void)setDataModel:(BankCardInfoModel *)dataModel
 {
     _dataModel = dataModel;
-    self.bankCardLabel.text = [NSString stringWithFormat:@"%@ (%@)",_dataModel.bankName,_dataModel.bankCardNum];
+    NSString *count = [_dataModel.bankAccount substringFromIndex:_dataModel.bankAccount.length-4];
+    self.bankCardLabel.text = [NSString stringWithFormat:@"%@ (%@)",_dataModel.bankName,count];
     self.selcetmarkIamge.hidden = !_dataModel.isSeclet;
+    [self.banklogImage sd_setImageWithURL:[NSURL URLWithString:_dataModel.bankImg] placeholderImage:[UIImage imageNamed:@"icon_yinlian"]];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

@@ -19,15 +19,13 @@
     // Do any additional setup after loading the view from its nib.
     self.naviBar.title = @"修改登录密码";
     self.naviBar.delegate = self;
-    self.naviBar.detailTitle = @"确认";
+    self.naviBar.detailImage = [UIImage imageNamed:@"icon_confirm"];
     self.naviBar.hiddenDetailBtn = NO;
     [self setLayerWithbor:self.view1];
     [self setLayerWithbor:self.view2];
     [self setLayerWithbor:self.view3];
-    
     self.oldPasswordLabel.textColor = self.xinPassowrdLabel.textColor = self.surePasswrodLabel.textColor  = MacoDetailColor;
     self.xinPasswordTF.textColor = self.oldPassowrodTF.textColor = self.surePasswordTF.textColor  = MacoTitleColor;
-
 }
 
 - (void)setLayerWithbor:(UIView*)view
@@ -66,21 +64,20 @@
 
 
 -(BOOL) valueValidated {
-    // 判断电话号码是否合格
     if ([self emptyTextOfTextField:self.oldPassowrodTF]) {
-        [[JAlertViewHelper shareAlterHelper]showTint:@"请输入旧密码" duration:1.];
+        [[JAlertViewHelper shareAlterHelper]showTint:@"请输入旧密码" duration:2.];
         return NO;
     }else if ([self emptyTextOfTextField:self.xinPasswordTF]) {
-        [[JAlertViewHelper shareAlterHelper]showTint:@"请输入新密码" duration:1.];
+        [[JAlertViewHelper shareAlterHelper]showTint:@"请输入新密码" duration:2.];
         return NO;
     }else if (self.xinPasswordTF.text.length<6 || self.xinPasswordTF.text.length > 18){
-        [[JAlertViewHelper shareAlterHelper]showTint:@"您的密码必须在6-18位之间" duration:1.];
+        [[JAlertViewHelper shareAlterHelper]showTint:@"您的密码必须在6-18位之间" duration:2.];
         return NO;
     }else if ([self emptyTextOfTextField:self.surePasswordTF]) {
-        [[JAlertViewHelper shareAlterHelper]showTint:@"请重复新密码" duration:1.];
+        [[JAlertViewHelper shareAlterHelper]showTint:@"请重复新密码" duration:2.];
         return NO;
     }else if (![self.xinPasswordTF.text isEqualToString:self.surePasswordTF.text]){
-        [[JAlertViewHelper shareAlterHelper]showTint:@"两次输入的密码不一致" duration:1.];
+        [[JAlertViewHelper shareAlterHelper]showTint:@"两次输入的密码不一致" duration:2.];
         return NO;
     }
     return YES;
@@ -101,6 +98,12 @@
     }
     return YES;
 }
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [SVProgressHUD dismiss];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

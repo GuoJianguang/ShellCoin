@@ -25,8 +25,8 @@
     model.bankName = NullToSpace(dic[@"bankName"]);
     model.bankPoint = NullToSpace(dic[@"bankPoint"]);
     model.bankPointBranch = NullToSpace(dic[@"bankPointBranch"]);
-    model.state = NullToSpace(dic[@"state"]);
-
+    model.state = NullToNumber(dic[@"state"]);
+    model.bankImg = NullToNumber(dic[@"bankImg"]);
     return model;
 }
 

@@ -36,20 +36,6 @@
 		BC0A584A1E7299900077C8A9 /* BillTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC0A58481E7299900077C8A9 /* BillTableViewCell.xib */; };
 		BC0A584E1E72A0680077C8A9 /* BillConsumptionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0A584C1E72A0680077C8A9 /* BillConsumptionTableViewCell.m */; };
 		BC0A584F1E72A0680077C8A9 /* BillConsumptionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC0A584D1E72A0680077C8A9 /* BillConsumptionTableViewCell.xib */; };
-		BC23C9D61E79153E00E90B43 /* CodeScan.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BC23C9B81E79153E00E90B43 /* CodeScan.bundle */; };
-		BC23C9D71E79153E00E90B43 /* UIActionSheet+LBXAlertAction.m in Sources */ = {isa = PBXBuildFile; fileRef = BC23C9BC1E79153E00E90B43 /* UIActionSheet+LBXAlertAction.m */; };
-		BC23C9D81E79153E00E90B43 /* UIAlertView+LBXAlertAction.m in Sources */ = {isa = PBXBuildFile; fileRef = BC23C9BE1E79153E00E90B43 /* UIAlertView+LBXAlertAction.m */; };
-		BC23C9D91E79153E00E90B43 /* LBXAlertAction.m in Sources */ = {isa = PBXBuildFile; fileRef = BC23C9C01E79153E00E90B43 /* LBXAlertAction.m */; };
-		BC23C9DA1E79153E00E90B43 /* LBXScanLineAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = BC23C9C21E79153E00E90B43 /* LBXScanLineAnimation.m */; };
-		BC23C9DB1E79153E00E90B43 /* LBXScanNative.m in Sources */ = {isa = PBXBuildFile; fileRef = BC23C9C41E79153E00E90B43 /* LBXScanNative.m */; };
-		BC23C9DC1E79153E00E90B43 /* LBXScanNetAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = BC23C9C61E79153E00E90B43 /* LBXScanNetAnimation.m */; };
-		BC23C9DD1E79153E00E90B43 /* LBXScanResult.m in Sources */ = {isa = PBXBuildFile; fileRef = BC23C9C81E79153E00E90B43 /* LBXScanResult.m */; };
-		BC23C9DE1E79153E00E90B43 /* LBXScanView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC23C9CA1E79153E00E90B43 /* LBXScanView.m */; };
-		BC23C9DF1E79153E00E90B43 /* LBXScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC23C9CC1E79153E00E90B43 /* LBXScanViewController.m */; };
-		BC23C9E01E79153E00E90B43 /* LBXScanViewStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = BC23C9CE1E79153E00E90B43 /* LBXScanViewStyle.m */; };
-		BC23C9E11E79153E00E90B43 /* LBXScanWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = BC23C9D01E79153E00E90B43 /* LBXScanWrapper.m */; };
-		BC23C9E21E79153E00E90B43 /* LBXZXCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = BC23C9D21E79153E00E90B43 /* LBXZXCapture.m */; };
-		BC23C9E31E79153E00E90B43 /* ZXingWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = BC23C9D51E79153E00E90B43 /* ZXingWrapper.m */; };
 		BC23C9E61E792BD700E90B43 /* SubLBXScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC23C9E51E792BD700E90B43 /* SubLBXScanViewController.m */; };
 		BC23C9E91E7933B700E90B43 /* LSPaoMaView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC23C9E81E7933B700E90B43 /* LSPaoMaView.m */; };
 		BC23C9EC1E79395A00E90B43 /* YesTodayEarningsAlerView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC23C9EB1E79395A00E90B43 /* YesTodayEarningsAlerView.m */; };
@@ -88,6 +74,21 @@
 		BC4E252E1E80C41E005BE142 /* TalentRecommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC4E252C1E80C41E005BE142 /* TalentRecommentViewController.xib */; };
 		BC4E25321E80C50D005BE142 /* RecommentSpecialTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC4E25301E80C50D005BE142 /* RecommentSpecialTableViewCell.m */; };
 		BC4E25331E80C50D005BE142 /* RecommentSpecialTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC4E25311E80C50D005BE142 /* RecommentSpecialTableViewCell.xib */; };
+		BC5278FE1E8DF8BF004DD703 /* PersonalCenter.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC5278FD1E8DF8BF004DD703 /* PersonalCenter.xcassets */; };
+		BC5279411E8E7E4E004DD703 /* CodeScan.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BC5279231E8E7E4E004DD703 /* CodeScan.bundle */; };
+		BC5279421E8E7E4E004DD703 /* UIActionSheet+LBXAlertAction.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5279271E8E7E4E004DD703 /* UIActionSheet+LBXAlertAction.m */; };
+		BC5279431E8E7E4E004DD703 /* UIAlertView+LBXAlertAction.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5279291E8E7E4E004DD703 /* UIAlertView+LBXAlertAction.m */; };
+		BC5279441E8E7E4E004DD703 /* LBXAlertAction.m in Sources */ = {isa = PBXBuildFile; fileRef = BC52792B1E8E7E4E004DD703 /* LBXAlertAction.m */; };
+		BC5279451E8E7E4E004DD703 /* LBXScanLineAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = BC52792D1E8E7E4E004DD703 /* LBXScanLineAnimation.m */; };
+		BC5279461E8E7E4E004DD703 /* LBXScanNative.m in Sources */ = {isa = PBXBuildFile; fileRef = BC52792F1E8E7E4E004DD703 /* LBXScanNative.m */; };
+		BC5279471E8E7E4E004DD703 /* LBXScanNetAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5279311E8E7E4E004DD703 /* LBXScanNetAnimation.m */; };
+		BC5279481E8E7E4E004DD703 /* LBXScanResult.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5279331E8E7E4E004DD703 /* LBXScanResult.m */; };
+		BC5279491E8E7E4E004DD703 /* LBXScanView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5279351E8E7E4E004DD703 /* LBXScanView.m */; };
+		BC52794A1E8E7E4E004DD703 /* LBXScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5279371E8E7E4E004DD703 /* LBXScanViewController.m */; };
+		BC52794B1E8E7E4E004DD703 /* LBXScanViewStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5279391E8E7E4E004DD703 /* LBXScanViewStyle.m */; };
+		BC52794C1E8E7E4E004DD703 /* LBXScanWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = BC52793B1E8E7E4E004DD703 /* LBXScanWrapper.m */; };
+		BC52794D1E8E7E4E004DD703 /* LBXZXCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = BC52793D1E8E7E4E004DD703 /* LBXZXCapture.m */; };
+		BC52794E1E8E7E4E004DD703 /* ZXingWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5279401E8E7E4E004DD703 /* ZXingWrapper.m */; };
 		BC57B6F01E7F7745006AF4D1 /* pagecurrent.png in Resources */ = {isa = PBXBuildFile; fileRef = BC57B6EE1E7F7745006AF4D1 /* pagecurrent.png */; };
 		BC57B6F31E7F779D006AF4D1 /* pagedefault.png in Resources */ = {isa = PBXBuildFile; fileRef = BC57B6F21E7F779D006AF4D1 /* pagedefault.png */; };
 		BC57B6FA1E7FA9DC006AF4D1 /* ShellCoinPageControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC57B6F91E7FA9DC006AF4D1 /* ShellCoinPageControlView.m */; };
@@ -287,34 +288,6 @@
 		BC0A584B1E72A0680077C8A9 /* BillConsumptionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BillConsumptionTableViewCell.h; sourceTree = "<group>"; };
 		BC0A584C1E72A0680077C8A9 /* BillConsumptionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BillConsumptionTableViewCell.m; sourceTree = "<group>"; };
 		BC0A584D1E72A0680077C8A9 /* BillConsumptionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BillConsumptionTableViewCell.xib; sourceTree = "<group>"; };
-		BC23C9B81E79153E00E90B43 /* CodeScan.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CodeScan.bundle; sourceTree = "<group>"; };
-		BC23C9BB1E79153E00E90B43 /* UIActionSheet+LBXAlertAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIActionSheet+LBXAlertAction.h"; sourceTree = "<group>"; };
-		BC23C9BC1E79153E00E90B43 /* UIActionSheet+LBXAlertAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIActionSheet+LBXAlertAction.m"; sourceTree = "<group>"; };
-		BC23C9BD1E79153E00E90B43 /* UIAlertView+LBXAlertAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+LBXAlertAction.h"; sourceTree = "<group>"; };
-		BC23C9BE1E79153E00E90B43 /* UIAlertView+LBXAlertAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+LBXAlertAction.m"; sourceTree = "<group>"; };
-		BC23C9BF1E79153E00E90B43 /* LBXAlertAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXAlertAction.h; sourceTree = "<group>"; };
-		BC23C9C01E79153E00E90B43 /* LBXAlertAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXAlertAction.m; sourceTree = "<group>"; };
-		BC23C9C11E79153E00E90B43 /* LBXScanLineAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXScanLineAnimation.h; sourceTree = "<group>"; };
-		BC23C9C21E79153E00E90B43 /* LBXScanLineAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXScanLineAnimation.m; sourceTree = "<group>"; };
-		BC23C9C31E79153E00E90B43 /* LBXScanNative.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXScanNative.h; sourceTree = "<group>"; };
-		BC23C9C41E79153E00E90B43 /* LBXScanNative.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXScanNative.m; sourceTree = "<group>"; };
-		BC23C9C51E79153E00E90B43 /* LBXScanNetAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXScanNetAnimation.h; sourceTree = "<group>"; };
-		BC23C9C61E79153E00E90B43 /* LBXScanNetAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXScanNetAnimation.m; sourceTree = "<group>"; };
-		BC23C9C71E79153E00E90B43 /* LBXScanResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXScanResult.h; sourceTree = "<group>"; };
-		BC23C9C81E79153E00E90B43 /* LBXScanResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXScanResult.m; sourceTree = "<group>"; };
-		BC23C9C91E79153E00E90B43 /* LBXScanView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXScanView.h; sourceTree = "<group>"; };
-		BC23C9CA1E79153E00E90B43 /* LBXScanView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXScanView.m; sourceTree = "<group>"; };
-		BC23C9CB1E79153E00E90B43 /* LBXScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXScanViewController.h; sourceTree = "<group>"; };
-		BC23C9CC1E79153E00E90B43 /* LBXScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXScanViewController.m; sourceTree = "<group>"; };
-		BC23C9CD1E79153E00E90B43 /* LBXScanViewStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXScanViewStyle.h; sourceTree = "<group>"; };
-		BC23C9CE1E79153E00E90B43 /* LBXScanViewStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXScanViewStyle.m; sourceTree = "<group>"; };
-		BC23C9CF1E79153E00E90B43 /* LBXScanWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXScanWrapper.h; sourceTree = "<group>"; };
-		BC23C9D01E79153E00E90B43 /* LBXScanWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXScanWrapper.m; sourceTree = "<group>"; };
-		BC23C9D11E79153E00E90B43 /* LBXZXCapture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXZXCapture.h; sourceTree = "<group>"; };
-		BC23C9D21E79153E00E90B43 /* LBXZXCapture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXZXCapture.m; sourceTree = "<group>"; };
-		BC23C9D31E79153E00E90B43 /* LBXZXCaptureDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXZXCaptureDelegate.h; sourceTree = "<group>"; };
-		BC23C9D41E79153E00E90B43 /* ZXingWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXingWrapper.h; sourceTree = "<group>"; };
-		BC23C9D51E79153E00E90B43 /* ZXingWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXingWrapper.m; sourceTree = "<group>"; };
 		BC23C9E41E792BD700E90B43 /* SubLBXScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubLBXScanViewController.h; sourceTree = "<group>"; };
 		BC23C9E51E792BD700E90B43 /* SubLBXScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubLBXScanViewController.m; sourceTree = "<group>"; };
 		BC23C9E71E7933B700E90B43 /* LSPaoMaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSPaoMaView.h; sourceTree = "<group>"; };
@@ -383,6 +356,35 @@
 		BC4E252F1E80C50D005BE142 /* RecommentSpecialTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommentSpecialTableViewCell.h; sourceTree = "<group>"; };
 		BC4E25301E80C50D005BE142 /* RecommentSpecialTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommentSpecialTableViewCell.m; sourceTree = "<group>"; };
 		BC4E25311E80C50D005BE142 /* RecommentSpecialTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecommentSpecialTableViewCell.xib; sourceTree = "<group>"; };
+		BC5278FD1E8DF8BF004DD703 /* PersonalCenter.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = PersonalCenter.xcassets; sourceTree = "<group>"; };
+		BC5279231E8E7E4E004DD703 /* CodeScan.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CodeScan.bundle; sourceTree = "<group>"; };
+		BC5279261E8E7E4E004DD703 /* UIActionSheet+LBXAlertAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIActionSheet+LBXAlertAction.h"; sourceTree = "<group>"; };
+		BC5279271E8E7E4E004DD703 /* UIActionSheet+LBXAlertAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIActionSheet+LBXAlertAction.m"; sourceTree = "<group>"; };
+		BC5279281E8E7E4E004DD703 /* UIAlertView+LBXAlertAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+LBXAlertAction.h"; sourceTree = "<group>"; };
+		BC5279291E8E7E4E004DD703 /* UIAlertView+LBXAlertAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+LBXAlertAction.m"; sourceTree = "<group>"; };
+		BC52792A1E8E7E4E004DD703 /* LBXAlertAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXAlertAction.h; sourceTree = "<group>"; };
+		BC52792B1E8E7E4E004DD703 /* LBXAlertAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXAlertAction.m; sourceTree = "<group>"; };
+		BC52792C1E8E7E4E004DD703 /* LBXScanLineAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXScanLineAnimation.h; sourceTree = "<group>"; };
+		BC52792D1E8E7E4E004DD703 /* LBXScanLineAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXScanLineAnimation.m; sourceTree = "<group>"; };
+		BC52792E1E8E7E4E004DD703 /* LBXScanNative.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXScanNative.h; sourceTree = "<group>"; };
+		BC52792F1E8E7E4E004DD703 /* LBXScanNative.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXScanNative.m; sourceTree = "<group>"; };
+		BC5279301E8E7E4E004DD703 /* LBXScanNetAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXScanNetAnimation.h; sourceTree = "<group>"; };
+		BC5279311E8E7E4E004DD703 /* LBXScanNetAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXScanNetAnimation.m; sourceTree = "<group>"; };
+		BC5279321E8E7E4E004DD703 /* LBXScanResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXScanResult.h; sourceTree = "<group>"; };
+		BC5279331E8E7E4E004DD703 /* LBXScanResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXScanResult.m; sourceTree = "<group>"; };
+		BC5279341E8E7E4E004DD703 /* LBXScanView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXScanView.h; sourceTree = "<group>"; };
+		BC5279351E8E7E4E004DD703 /* LBXScanView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXScanView.m; sourceTree = "<group>"; };
+		BC5279361E8E7E4E004DD703 /* LBXScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXScanViewController.h; sourceTree = "<group>"; };
+		BC5279371E8E7E4E004DD703 /* LBXScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXScanViewController.m; sourceTree = "<group>"; };
+		BC5279381E8E7E4E004DD703 /* LBXScanViewStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXScanViewStyle.h; sourceTree = "<group>"; };
+		BC5279391E8E7E4E004DD703 /* LBXScanViewStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXScanViewStyle.m; sourceTree = "<group>"; };
+		BC52793A1E8E7E4E004DD703 /* LBXScanWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXScanWrapper.h; sourceTree = "<group>"; };
+		BC52793B1E8E7E4E004DD703 /* LBXScanWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXScanWrapper.m; sourceTree = "<group>"; };
+		BC52793C1E8E7E4E004DD703 /* LBXZXCapture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXZXCapture.h; sourceTree = "<group>"; };
+		BC52793D1E8E7E4E004DD703 /* LBXZXCapture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXZXCapture.m; sourceTree = "<group>"; };
+		BC52793E1E8E7E4E004DD703 /* LBXZXCaptureDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXZXCaptureDelegate.h; sourceTree = "<group>"; };
+		BC52793F1E8E7E4E004DD703 /* ZXingWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXingWrapper.h; sourceTree = "<group>"; };
+		BC5279401E8E7E4E004DD703 /* ZXingWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXingWrapper.m; sourceTree = "<group>"; };
 		BC57B6EE1E7F7745006AF4D1 /* pagecurrent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pagecurrent.png; sourceTree = "<group>"; };
 		BC57B6F21E7F779D006AF4D1 /* pagedefault.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pagedefault.png; sourceTree = "<group>"; };
 		BC57B6F81E7FA9DC006AF4D1 /* ShellCoinPageControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShellCoinPageControlView.h; sourceTree = "<group>"; };
@@ -729,57 +731,6 @@
 			path = Bill;
 			sourceTree = "<group>";
 		};
-		BC23C9B71E79153E00E90B43 /* LBXScan */ = {
-			isa = PBXGroup;
-			children = (
-				BC23C9B81E79153E00E90B43 /* CodeScan.bundle */,
-				BC23C9B91E79153E00E90B43 /* LBXAlertAction */,
-				BC23C9C11E79153E00E90B43 /* LBXScanLineAnimation.h */,
-				BC23C9C21E79153E00E90B43 /* LBXScanLineAnimation.m */,
-				BC23C9C31E79153E00E90B43 /* LBXScanNative.h */,
-				BC23C9C41E79153E00E90B43 /* LBXScanNative.m */,
-				BC23C9C51E79153E00E90B43 /* LBXScanNetAnimation.h */,
-				BC23C9C61E79153E00E90B43 /* LBXScanNetAnimation.m */,
-				BC23C9C71E79153E00E90B43 /* LBXScanResult.h */,
-				BC23C9C81E79153E00E90B43 /* LBXScanResult.m */,
-				BC23C9C91E79153E00E90B43 /* LBXScanView.h */,
-				BC23C9CA1E79153E00E90B43 /* LBXScanView.m */,
-				BC23C9CB1E79153E00E90B43 /* LBXScanViewController.h */,
-				BC23C9CC1E79153E00E90B43 /* LBXScanViewController.m */,
-				BC23C9CD1E79153E00E90B43 /* LBXScanViewStyle.h */,
-				BC23C9CE1E79153E00E90B43 /* LBXScanViewStyle.m */,
-				BC23C9CF1E79153E00E90B43 /* LBXScanWrapper.h */,
-				BC23C9D01E79153E00E90B43 /* LBXScanWrapper.m */,
-				BC23C9D11E79153E00E90B43 /* LBXZXCapture.h */,
-				BC23C9D21E79153E00E90B43 /* LBXZXCapture.m */,
-				BC23C9D31E79153E00E90B43 /* LBXZXCaptureDelegate.h */,
-				BC23C9D41E79153E00E90B43 /* ZXingWrapper.h */,
-				BC23C9D51E79153E00E90B43 /* ZXingWrapper.m */,
-			);
-			path = LBXScan;
-			sourceTree = "<group>";
-		};
-		BC23C9B91E79153E00E90B43 /* LBXAlertAction */ = {
-			isa = PBXGroup;
-			children = (
-				BC23C9BA1E79153E00E90B43 /* Class */,
-				BC23C9BF1E79153E00E90B43 /* LBXAlertAction.h */,
-				BC23C9C01E79153E00E90B43 /* LBXAlertAction.m */,
-			);
-			path = LBXAlertAction;
-			sourceTree = "<group>";
-		};
-		BC23C9BA1E79153E00E90B43 /* Class */ = {
-			isa = PBXGroup;
-			children = (
-				BC23C9BB1E79153E00E90B43 /* UIActionSheet+LBXAlertAction.h */,
-				BC23C9BC1E79153E00E90B43 /* UIActionSheet+LBXAlertAction.m */,
-				BC23C9BD1E79153E00E90B43 /* UIAlertView+LBXAlertAction.h */,
-				BC23C9BE1E79153E00E90B43 /* UIAlertView+LBXAlertAction.m */,
-			);
-			path = Class;
-			sourceTree = "<group>";
-		};
 		BC4AABD11E4D69E1006568A6 = {
 			isa = PBXGroup;
 			children = (
@@ -980,12 +931,63 @@
 			path = TalentRecommendation;
 			sourceTree = "<group>";
 		};
+		BC5279221E8E7E4E004DD703 /* LBXScan */ = {
+			isa = PBXGroup;
+			children = (
+				BC5279231E8E7E4E004DD703 /* CodeScan.bundle */,
+				BC5279241E8E7E4E004DD703 /* LBXAlertAction */,
+				BC52792C1E8E7E4E004DD703 /* LBXScanLineAnimation.h */,
+				BC52792D1E8E7E4E004DD703 /* LBXScanLineAnimation.m */,
+				BC52792E1E8E7E4E004DD703 /* LBXScanNative.h */,
+				BC52792F1E8E7E4E004DD703 /* LBXScanNative.m */,
+				BC5279301E8E7E4E004DD703 /* LBXScanNetAnimation.h */,
+				BC5279311E8E7E4E004DD703 /* LBXScanNetAnimation.m */,
+				BC5279321E8E7E4E004DD703 /* LBXScanResult.h */,
+				BC5279331E8E7E4E004DD703 /* LBXScanResult.m */,
+				BC5279341E8E7E4E004DD703 /* LBXScanView.h */,
+				BC5279351E8E7E4E004DD703 /* LBXScanView.m */,
+				BC5279361E8E7E4E004DD703 /* LBXScanViewController.h */,
+				BC5279371E8E7E4E004DD703 /* LBXScanViewController.m */,
+				BC5279381E8E7E4E004DD703 /* LBXScanViewStyle.h */,
+				BC5279391E8E7E4E004DD703 /* LBXScanViewStyle.m */,
+				BC52793A1E8E7E4E004DD703 /* LBXScanWrapper.h */,
+				BC52793B1E8E7E4E004DD703 /* LBXScanWrapper.m */,
+				BC52793C1E8E7E4E004DD703 /* LBXZXCapture.h */,
+				BC52793D1E8E7E4E004DD703 /* LBXZXCapture.m */,
+				BC52793E1E8E7E4E004DD703 /* LBXZXCaptureDelegate.h */,
+				BC52793F1E8E7E4E004DD703 /* ZXingWrapper.h */,
+				BC5279401E8E7E4E004DD703 /* ZXingWrapper.m */,
+			);
+			path = LBXScan;
+			sourceTree = "<group>";
+		};
+		BC5279241E8E7E4E004DD703 /* LBXAlertAction */ = {
+			isa = PBXGroup;
+			children = (
+				BC5279251E8E7E4E004DD703 /* Class */,
+				BC52792A1E8E7E4E004DD703 /* LBXAlertAction.h */,
+				BC52792B1E8E7E4E004DD703 /* LBXAlertAction.m */,
+			);
+			path = LBXAlertAction;
+			sourceTree = "<group>";
+		};
+		BC5279251E8E7E4E004DD703 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				BC5279261E8E7E4E004DD703 /* UIActionSheet+LBXAlertAction.h */,
+				BC5279271E8E7E4E004DD703 /* UIActionSheet+LBXAlertAction.m */,
+				BC5279281E8E7E4E004DD703 /* UIAlertView+LBXAlertAction.h */,
+				BC5279291E8E7E4E004DD703 /* UIAlertView+LBXAlertAction.m */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
 		BC54EEBF1E5C40A200407AC5 /* ThirdAPI */ = {
 			isa = PBXGroup;
 			children = (
+				BC5279221E8E7E4E004DD703 /* LBXScan */,
 				BC77C68F1E7A33E700DC9EAC /* UMStatistics_4.1.4 */,
 				BC77C6581E7A316400DC9EAC /* share */,
-				BC23C9B71E79153E00E90B43 /* LBXScan */,
 				BCE5EED41E5C41030055D828 /* Colours */,
 			);
 			path = ThirdAPI;
@@ -1149,6 +1151,7 @@
 				BC9B3DE21E768919003DC241 /* myQrCode */,
 				BC9B3DB71E76837B003DC241 /* BankManage */,
 				BC9B3DA71E763AC5003DC241 /* Realname authentication */,
+				BC5278FD1E8DF8BF004DD703 /* PersonalCenter.xcassets */,
 			);
 			path = PersonalCenter;
 			sourceTree = "<group>";
@@ -1376,8 +1379,8 @@
 				BCB9A7CA1E89F77100F3E966 /* MerchantDetailViewController.xib in Resources */,
 				BC0A58361E72832E0077C8A9 /* SetTableViewCell.xib in Resources */,
 				BC57B70F1E7FC937006AF4D1 /* HomeRecommendedTableViewCell.xib in Resources */,
+				BC5278FE1E8DF8BF004DD703 /* PersonalCenter.xcassets in Resources */,
 				BC9B3DB11E7648AF003DC241 /* RealNameAutResultView.xib in Resources */,
-				BC23C9D61E79153E00E90B43 /* CodeScan.bundle in Resources */,
 				BCFE20701E77C7E6002BC28C /* SelectBanCardView.xib in Resources */,
 				BC9B3DED1E7690F2003DC241 /* RecommentEarningsViewController.xib in Resources */,
 				BC9B3E061E7698CC003DC241 /* ManagerBankCardViewController.xib in Resources */,
@@ -1415,6 +1418,7 @@
 				BC9B3E041E7698CC003DC241 /* ManageBankView.xib in Resources */,
 				BC57B6FF1E7FBFEA006AF4D1 /* HomeBannerTableViewCell.xib in Resources */,
 				BC0A584A1E7299900077C8A9 /* BillTableViewCell.xib in Resources */,
+				BC5279411E8E7E4E004DD703 /* CodeScan.bundle in Resources */,
 				BC77C66D1E7A316400DC9EAC /* UMSocialSDKResources.bundle in Resources */,
 				BCAC5D0B1E82587F003CACF8 /* BillIntegralDisciplineView.xib in Resources */,
 				BC4AABE81E4D69E2006568A6 /* Main.storyboard in Resources */,
@@ -1527,7 +1531,6 @@
 				BCFE20931E77E206002BC28C /* ForgetPasswordTwoViewController.m in Sources */,
 				BC0A58231E724ADA0077C8A9 /* BaseHttpClient.m in Sources */,
 				BCFE208F1E77E206002BC28C /* RegisterTwoViewController.m in Sources */,
-				BC23C9DA1E79153E00E90B43 /* LBXScanLineAnimation.m in Sources */,
 				BC77C69A1E7A6D8600DC9EAC /* WeXinPayObject.m in Sources */,
 				BC9B3DC81E76837B003DC241 /* BankPickView.m in Sources */,
 				BC4AAC2A1E4D6E7D006568A6 /* BaseHtmlViewController.m in Sources */,
@@ -1540,38 +1543,37 @@
 				BC4AAC351E4D7562006568A6 /* JAlertViewHelper.m in Sources */,
 				BC23C9E61E792BD700E90B43 /* SubLBXScanViewController.m in Sources */,
 				BC4AAC3C1E4D8F7B006568A6 /* MineTableViewCell.m in Sources */,
-				BC23C9DD1E79153E00E90B43 /* LBXScanResult.m in Sources */,
 				BC9B3DEC1E7690F2003DC241 /* RecommentEarningsViewController.m in Sources */,
 				BCFE209A1E77E4A6002BC28C /* Verify.m in Sources */,
 				BC57B70A1E7FC35E006AF4D1 /* CustomButton.m in Sources */,
 				BC36CFEB1E80CB4300A51BF4 /* RecommentModel.m in Sources */,
 				BC9B3DAF1E7648A2003DC241 /* RealNameAutResultView.m in Sources */,
 				BC0A58421E728F050077C8A9 /* SwipeView.m in Sources */,
+				BC52794A1E8E7E4E004DD703 /* LBXScanViewController.m in Sources */,
 				BCB9A7C91E89F77100F3E966 /* MerchantDetailViewController.m in Sources */,
 				BCFE20971E77E329002BC28C /* ShellCoinUserInfo.m in Sources */,
-				BC23C9DC1E79153E00E90B43 /* LBXScanNetAnimation.m in Sources */,
 				BC9B3E011E7698CC003DC241 /* BanCardDetailTableViewCell.m in Sources */,
+				BC5279431E8E7E4E004DD703 /* UIAlertView+LBXAlertAction.m in Sources */,
 				BC4AAC2F1E4D6E7D006568A6 /* BaseViewController.m in Sources */,
 				BCC8E19C1E88FDCF004DBDA3 /* MerchantListViewController.m in Sources */,
 				BC9B3DCC1E76837B003DC241 /* EditBankInfoViewController.m in Sources */,
 				BC9B3DCA1E76837B003DC241 /* EditbankInfoTableViewCell.m in Sources */,
 				BC57B6FA1E7FA9DC006AF4D1 /* ShellCoinPageControlView.m in Sources */,
 				BC9B3E0A1E769D44003DC241 /* SetPayPasswordViewController.m in Sources */,
+				BC52794C1E8E7E4E004DD703 /* LBXScanWrapper.m in Sources */,
 				BC0A58261E724ADA0077C8A9 /* HttpClientAlertViewHelper.m in Sources */,
 				BCFE20911E77E206002BC28C /* ForgetPasswordOneViewController.m in Sources */,
 				BC57B71F1E7FD62A006AF4D1 /* HomeMerchantTableViewCell.m in Sources */,
 				BC0A583E1E728D520077C8A9 /* BillViewController.m in Sources */,
 				BC9B3DE01E7688AD003DC241 /* PersonCenterViewController.m in Sources */,
-				BC23C9E31E79153E00E90B43 /* ZXingWrapper.m in Sources */,
 				BCFE205A1E778F45002BC28C /* ChangeLoginPasswordViewController.m in Sources */,
 				BC9B3DE61E76892C003DC241 /* MyQrCodeViewController.m in Sources */,
-				BC23C9DE1E79153E00E90B43 /* LBXScanView.m in Sources */,
 				BC6EA59D1E8CFAE60073027C /* NewPagedFlowView.m in Sources */,
 				BC4E25321E80C50D005BE142 /* RecommentSpecialTableViewCell.m in Sources */,
-				BC23C9DB1E79153E00E90B43 /* LBXScanNative.m in Sources */,
 				BC054D541E8A402E00062AC5 /* Bill12View.m in Sources */,
 				BC4AABE21E4D69E2006568A6 /* AppDelegate.m in Sources */,
 				BC34ECA61E8B88EC00613D35 /* AboutUSViewController.m in Sources */,
+				BC5279491E8E7E4E004DD703 /* LBXScanView.m in Sources */,
 				BCFE209E1E77EF2A002BC28C /* WithdrawalViewController.m in Sources */,
 				BC9B3DF61E76982B003DC241 /* EditPhoneNumberViewController.m in Sources */,
 				BC0A58351E72832E0077C8A9 /* SetTableViewCell.m in Sources */,
@@ -1581,44 +1583,48 @@
 				BC0A58491E7299900077C8A9 /* BillTableViewCell.m in Sources */,
 				BC9B3DB51E767A9E003DC241 /* ManualCertificationViewController.m in Sources */,
 				BCFE208C1E77E206002BC28C /* LoginViewController.m in Sources */,
-				BC23C9D91E79153E00E90B43 /* LBXAlertAction.m in Sources */,
 				BCFE20781E77D437002BC28C /* SureTradInView.m in Sources */,
+				BC5279461E8E7E4E004DD703 /* LBXScanNative.m in Sources */,
 				BC57B7131E7FCC7E006AF4D1 /* HighQualityCollectionViewCell.m in Sources */,
 				BC9B3DAB1E763AF4003DC241 /* RealnameViewController.m in Sources */,
+				BC5279421E8E7E4E004DD703 /* UIActionSheet+LBXAlertAction.m in Sources */,
 				BCC8E1A11E88FFB7004DBDA3 /* MerchantTableViewCell.m in Sources */,
 				BCFE206A1E77BC83002BC28C /* TradInTableViewCell.m in Sources */,
 				BC9B3E031E7698CC003DC241 /* ManageBankView.m in Sources */,
 				BC6EA5A11E8CFB170073027C /* BankCardInfoModel.m in Sources */,
+				BC5279441E8E7E4E004DD703 /* LBXAlertAction.m in Sources */,
 				BC4AAC2B1E4D6E7D006568A6 /* BaseModel.m in Sources */,
 				BC2F17751E839CF300657C51 /* BillAmountDataModel.m in Sources */,
 				BC4AAC291E4D6E7D006568A6 /* BaseCollectionViewCell.m in Sources */,
 				BCAC5D091E825870003CACF8 /* BillIntegralDisciplineView.m in Sources */,
+				BC52794B1E8E7E4E004DD703 /* LBXScanViewStyle.m in Sources */,
 				BC4AAC2C1E4D6E7D006568A6 /* BaseNavigationBar.m in Sources */,
 				BC054D481E8A095B00062AC5 /* OnlinePayViewController.m in Sources */,
 				BCFE208D1E77E206002BC28C /* RegisterOneViewController.m in Sources */,
 				BCEC069D1E83BFF20059C2C4 /* IntergralRecordTableViewCell.m in Sources */,
 				BC054D581E8A418F00062AC5 /* BillDataModel.m in Sources */,
-				BC23C9E21E79153E00E90B43 /* LBXZXCapture.m in Sources */,
 				BC36CFE71E80C9AD00A51BF4 /* RecommentSpecilCollectionViewCell.m in Sources */,
 				BC0A58451E728F2C0077C8A9 /* AutoScroller.m in Sources */,
+				BC5279481E8E7E4E004DD703 /* LBXScanResult.m in Sources */,
 				BCE5EED71E5C41030055D828 /* Colours.m in Sources */,
 				BCAC5D0E1E825DBB003CACF8 /* BillAmountDisciplineView.m in Sources */,
 				BC6EA5961E8CF2200073027C /* BankCardDetailView.m in Sources */,
 				BC4AABDF1E4D69E2006568A6 /* main.m in Sources */,
 				BCFE20741E77C9F6002BC28C /* SecletBankCardTableViewCell.m in Sources */,
 				BC0A58391E728C510077C8A9 /* SortButtonSwitchView.m in Sources */,
+				BC5279451E8E7E4E004DD703 /* LBXScanLineAnimation.m in Sources */,
 				BC9B3E051E7698CC003DC241 /* ManagerBankCardViewController.m in Sources */,
-				BC23C9E01E79153E00E90B43 /* LBXScanViewStyle.m in Sources */,
+				BC52794D1E8E7E4E004DD703 /* LBXZXCapture.m in Sources */,
 				BCFE20551E778CA9002BC28C /* SetPasswordViewController.m in Sources */,
 				BC57B6FE1E7FBFEA006AF4D1 /* HomeBannerTableViewCell.m in Sources */,
+				BC52794E1E8E7E4E004DD703 /* ZXingWrapper.m in Sources */,
+				BC5279471E8E7E4E004DD703 /* LBXScanNetAnimation.m in Sources */,
 				BC054D4E1E8A3D2600062AC5 /* Bill1View.m in Sources */,
 				BC23C9E91E7933B700E90B43 /* LSPaoMaView.m in Sources */,
-				BC23C9D81E79153E00E90B43 /* UIAlertView+LBXAlertAction.m in Sources */,
 				BC4E252D1E80C41E005BE142 /* TalentRecommentViewController.m in Sources */,
 				BC054D421E8A039600062AC5 /* EnterInputMoneyView.m in Sources */,
 				BCFE205F1E779283002BC28C /* ChangePayPasswordViewController.m in Sources */,
 				BCC8E1971E88F2A4004DBDA3 /* UIImage+ColorImage.m in Sources */,
-				BC23C9DF1E79153E00E90B43 /* LBXScanViewController.m in Sources */,
 				BC4AAC151E4D6DBB006568A6 /* RootViewController.m in Sources */,
 				BCFE206E1E77C7D6002BC28C /* SelectBanCardView.m in Sources */,
 				BC4AAC1A1E4D6E5B006568A6 /* HomeViewController.m in Sources */,
@@ -1628,8 +1634,6 @@
 				BC57B7031E7FC348006AF4D1 /* HomeIndustryTableViewCell.m in Sources */,
 				BC57B71A1E7FCE34006AF4D1 /* ForyouCollectionViewCell.m in Sources */,
 				BC4AABEB1E4D69E2006568A6 /* ShellCoin.xcdatamodeld in Sources */,
-				BC23C9D71E79153E00E90B43 /* UIActionSheet+LBXAlertAction.m in Sources */,
-				BC23C9E11E79153E00E90B43 /* LBXScanWrapper.m in Sources */,
 				BCEC06991E83B6FA0059C2C4 /* BillIntegaralModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

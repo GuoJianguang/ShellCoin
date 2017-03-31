@@ -17,6 +17,8 @@
 #import "SubLBXScanViewController.h"
 #import "YesTodayEarningsAlerView.h"
 #import "WithdrawalViewController.h"
+#import "RealnameViewController.h"
+#import "EditBankInfoViewController.h"
 
 
 @interface MineTableViewCell()
@@ -59,8 +61,6 @@
             self.showIntergralLabel.text = [NSString stringWithFormat:@"%.2f",[[ShellCoinUserInfo shareUserInfos].totalExpectAmount doubleValue] + [[ShellCoinUserInfo shareUserInfos].wiatJoinAmunt doubleValue]];
             self.showProportionLabel.text = [NSString stringWithFormat:@"%.2f",[[ShellCoinUserInfo shareUserInfos].totalConsumeAmount doubleValue]];
             [ShellCoinUserInfo shareUserInfos].token = token;
-
-        
         }
     } failure:^(NSURLSessionDataTask *operation, NSError *error) {
     }];
@@ -129,6 +129,14 @@
 - (IBAction)tradeInBtn:(id)sender {
 //    TradInViewController *tradInVC = [[TradInViewController alloc]init];
 //    [self.viewController.navigationController pushViewController:tradInVC animated:YES];
+    //首先判断用户时候已经实名认证
+    if ([self gotRealNameRu:@"在您申请提现之前,请先进行实名认证"]){
+        return;
+    }
+    //再判断是否绑定银行卡
+    if (![ShellCoinUserInfo shareUserInfos].bindingFlag){
+        [self goBingdingBank:@"您还未绑定银行卡，请先绑定银行卡"];
+    }
     WithdrawalViewController *tradInVC = [[WithdrawalViewController alloc]init];
     [self.viewController.navigationController pushViewController:tradInVC animated:YES];
 }
@@ -168,4 +176,53 @@
     
     [self.viewController.navigationController.view addSubview:self.showYestodayView];
 }
+
+
+#pragma mark - 去进行实名认证
+- (BOOL)gotRealNameRu:(NSString *)alerTitle
+{
+    if (![ShellCoinUserInfo shareUserInfos].identityFlag) {
+        UIAlertController *alertcontroller = [UIAlertController alertControllerWithTitle:@"重要提示" message:alerTitle preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+        }];
+        UIAlertAction *otherAction = [UIAlertAction actionWithTitle:@"去认证" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+            //去进行实名认证
+            
+            if ([ShellCoinUserInfo shareUserInfos].idVerifyReqFlag) {
+                RealnameViewController *realnameVC = [[RealnameViewController alloc]init];
+                realnameVC.isWaitAut = YES;
+                [self.viewController.navigationController pushViewController:realnameVC animated:YES];
+                
+                return;
+            }
+            RealnameViewController *realnameVC = [[RealnameViewController alloc]init];
+            realnameVC.isYetAut = NO;
+            [self.viewController.navigationController pushViewController:realnameVC animated:YES];
+            
+        }];
+        [alertcontroller addAction:cancelAction];
+        [alertcontroller addAction:otherAction];
+        [self.viewController presentViewController:alertcontroller animated:YES completion:NULL];
+        return YES;
+    }
+    return NO;
+}
+
+#pragma mark - 去绑定银行卡
+- (void)goBingdingBank:(NSString *)alerTitle
+{
+    UIAlertController *alertcontroller = [UIAlertController alertControllerWithTitle:@"重要提示" message:alerTitle preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+    }];
+    UIAlertAction *otherAction = [UIAlertAction actionWithTitle:@"去绑定" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        //去绑定银行卡
+        EditBankInfoViewController *bankcardVC = [[EditBankInfoViewController alloc]init];
+        bankcardVC.isFromRoomPage = YES;
+        [self.viewController.navigationController pushViewController:bankcardVC animated:YES];
+    }];
+    [alertcontroller addAction:cancelAction];
+    [alertcontroller addAction:otherAction];
+    [self.viewController presentViewController:alertcontroller animated:YES completion:NULL];
+}
+
 @end

@@ -23,5 +23,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *phoneLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *qrCodeImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *headerBgImageView;
+
+@property (weak, nonatomic) IBOutlet UIView *itemVIew;
+
 
 @end

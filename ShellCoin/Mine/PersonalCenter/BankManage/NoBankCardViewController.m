@@ -9,7 +9,7 @@
 #import "NoBankCardViewController.h"
 #import "EditBankInfoViewController.h"
 
-@interface NoBankCardViewController ()
+@interface NoBankCardViewController ()<BasenavigationDelegate>
 
 @end
 
@@ -19,6 +19,12 @@
     [super viewDidLoad];
     self.naviBar.title = @"银行卡";
     // Do any additional setup after loading the view from its nib.
+    self.naviBar.delegate = self;
+}
+- (void)backBtnClick
+{
+    [self.navigationController popToViewController:self.navigationController.viewControllers[1] animated:YES];
+
 }
 
 - (void)didReceiveMemoryWarning {

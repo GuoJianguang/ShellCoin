@@ -72,8 +72,12 @@
 /**
  * 状态（0普通 1默认卡）
  */
-
 @property (nonatomic, copy)NSString *state;
+
+
+@property (nonatomic, copy)NSString *bankImg;
 //@property (nonatomic, copy)NSString *bankAccount;
+@property (nonatomic, assign)BOOL isSeclet;
+
 
 @end

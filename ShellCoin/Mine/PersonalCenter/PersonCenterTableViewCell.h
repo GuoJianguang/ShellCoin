@@ -34,6 +34,7 @@
 - (IBAction)realNameManageBtn:(id)sender;
 
 @property (weak, nonatomic) IBOutlet UIImageView *realNameMarkImageView;
+@property (weak, nonatomic) IBOutlet UIButton *yetRMarkBtn;
 
 
 @property (weak, nonatomic) IBOutlet UILabel *qrCodeLabel;

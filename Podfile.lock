@@ -33,6 +33,7 @@ PODS:
   - ZXingObjC (3.1.0):
     - ZXingObjC/All (= 3.1.0)
   - ZXingObjC/All (3.1.0)
+  - ZYCornerRadius (0.8.1)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
@@ -45,6 +46,17 @@ DEPENDENCIES:
   - SDWebImage (~> 3.8.2)
   - SVProgressHUD-0.8.1
   - ZXingObjC (~> 3.1.0)
+  - ZYCornerRadius (from `https://github.com/liuzhiyi1992/ZYCornerRadius.git`, tag `0.9.1`)
+
+EXTERNAL SOURCES:
+  ZYCornerRadius:
+    :git: https://github.com/liuzhiyi1992/ZYCornerRadius.git
+    :tag: 0.9.1
+
+CHECKOUT OPTIONS:
+  ZYCornerRadius:
+    :git: https://github.com/liuzhiyi1992/ZYCornerRadius.git
+    :tag: 0.9.1
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
@@ -59,7 +71,8 @@ SPEC CHECKSUMS:
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   SVProgressHUD-0.8.1: ee9e6e58b5b5ffaf3f1a62c2dc409763470df143
   ZXingObjC: bf15b3814f7a105b6d99f47da2333c93a063650a
+  ZYCornerRadius: 485a8e9304d16d1620641054a08b9c0f55dd512c
 
-PODFILE CHECKSUM: 134d6b689a616753a3b9bc01412b0deb13911128
+PODFILE CHECKSUM: 7e859b20276165b654f5f8741810a7a7323aba95
 
 COCOAPODS: 1.2.0

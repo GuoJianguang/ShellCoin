@@ -7,6 +7,7 @@
 //
 
 #import "BaseViewController.h"
+#import "BankCardInfoModel.h"
 
 @interface WithdrawalViewController : BaseViewController
 
@@ -33,6 +34,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *poundageLabel;
 
 
-
+@property (nonatomic, strong)BankCardInfoModel *bankModel;
 
 @end

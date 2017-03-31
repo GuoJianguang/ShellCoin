@@ -26,6 +26,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    self.yetRMarkBtn.enabled = YES;
     self.headImageView.layer.masksToBounds = YES;
     self.headImageView.layer.borderColor = [UIColor whiteColor].CGColor;
     self.headImageView.layer.borderWidth = 5;
@@ -35,6 +36,9 @@
     
     [self.headImageView sd_setImageWithURL:[NSURL URLWithString:[ShellCoinUserInfo shareUserInfos].avatar] placeholderImage:[UIImage imageNamed:@"header.jpg"] completed:NULL];
 
+    self.bankLabel.textColor = self.vipLabel.textColor = self.realNameLabel.textColor = self.qrCodeLabel.textColor = self.myCollectionlabel.textColor = MacoTitleColor;
+    [self.realNameBtn setTitleColor:MacoColor forState:UIControlStateNormal];
+    
     [self setRealNameInfo];
     
 }
@@ -58,12 +62,12 @@
         [ShellCoinUserInfo shareUserInfos].token = token;
         if ([ShellCoinUserInfo shareUserInfos].identityFlag) {
             self.nameLabel.hidden = NO;
-            self.realNameMarkImageView.hidden = NO;
+            self.yetRMarkBtn.hidden = NO;
             self.nameLabel.text = [ShellCoinUserInfo shareUserInfos].idcardName;
             self.realNameBtn.hidden = YES;
             }else{
                 self.nameLabel.hidden = YES;
-                self.realNameMarkImageView.hidden = YES;
+                self.yetRMarkBtn.hidden = YES;
                 self.realNameBtn.hidden = NO;
             }
         }
@@ -83,7 +87,20 @@
     [self.viewController.navigationController popViewControllerAnimated:YES];
 }
 - (IBAction)realNameBtn:(id)sender {
+    if ([ShellCoinUserInfo shareUserInfos].idVerifyReqFlag) {
+        RealnameViewController *realnameVC = [[RealnameViewController alloc]init];
+        realnameVC.isWaitAut = YES;
+        [self.viewController.navigationController pushViewController:realnameVC animated:YES];
+        
+        return;
+    }
+    
     RealnameViewController *realnameVC = [[RealnameViewController alloc]init];
+    if ([ShellCoinUserInfo shareUserInfos].identityFlag) {
+        realnameVC.isYetAut = YES;
+    }else{
+        realnameVC.isYetAut = NO;
+    }
     [self.viewController.navigationController pushViewController:realnameVC animated:YES];
 }
 - (IBAction)bankBtn:(id)sender {
@@ -103,7 +120,21 @@
     
 }
 - (IBAction)realNameManageBtn:(id)sender{
+    
+    if ([ShellCoinUserInfo shareUserInfos].idVerifyReqFlag) {
+        RealnameViewController *realnameVC = [[RealnameViewController alloc]init];
+        realnameVC.isWaitAut = YES;
+        [self.viewController.navigationController pushViewController:realnameVC animated:YES];
+
+        return;
+    }
+    
     RealnameViewController *realnameVC = [[RealnameViewController alloc]init];
+    if ([ShellCoinUserInfo shareUserInfos].identityFlag) {
+        realnameVC.isYetAut = YES;
+    }else{
+        realnameVC.isYetAut = NO;
+    }
     [self.viewController.navigationController pushViewController:realnameVC animated:YES];
     
 }

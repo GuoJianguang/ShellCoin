@@ -1,4 +1,5 @@
 target 'ShellCoin' do
+pod 'ZYCornerRadius', git:'https://github.com/liuzhiyi1992/ZYCornerRadius.git',tag:'0.9.1'
 pod 'AMapLocation'
 pod 'AMapSearch'
 pod 'SDWebImage', '~> 3.8.2'

@@ -10,12 +10,14 @@
 #import "TradInTableViewCell.h"
 #import "SelectBanCardView.h"
 #import "SureTradInView.h"
-
+#import "BankCardInfoModel.h"
 
 @interface TradInViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong)SelectBanCardView *selectBancardView;
 @property (nonatomic, strong)SureTradInView *sureTradInView;
+
+
 @end
 
 @implementation TradInViewController
@@ -24,6 +26,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.naviBar.hidden= YES;
+    [self getmyBankCardRequest];
 }
 
 - (SelectBanCardView *)selectBancardView
@@ -71,6 +74,7 @@
     }];
 }
 
+
 #pragma mark - UITableView
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -95,6 +99,26 @@
 }
 
 
+#pragma mark - 获取我的所有银行卡
+
+- (void)getmyBankCardRequest
+{
+    [SVProgressHUD showWithStatus:@"正在加载..." maskType:SVProgressHUDMaskTypeBlack];
+    [HttpClient POST:@"user/withdraw/bindBankcard/get" parameters:@{@"token":[ShellCoinUserInfo shareUserInfos].token} success:^(NSURLSessionDataTask *operation, id jsonObject) {
+        [SVProgressHUD dismiss];
+        if (IsRequestTrue) {
+            [self.selectBancardView.dataSouceArray removeAllObjects];
+            NSArray *array = jsonObject[@"data"];
+            for (NSDictionary *dic in array) {
+                [self.selectBancardView.dataSouceArray addObject:[BankCardInfoModel modelWithDic:dic]];
+            }
+            ((BankCardInfoModel *)self.selectBancardView.dataSouceArray[0]).isSeclet = YES;
+            [self.selectBancardView.tableView reloadData];
+        }
+    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
+        [SVProgressHUD dismiss];
+    }];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

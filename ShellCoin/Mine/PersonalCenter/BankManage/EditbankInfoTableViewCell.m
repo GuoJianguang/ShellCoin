@@ -78,6 +78,12 @@
     view.backgroundColor = [UIColor whiteColor];
     view.layer.borderColor = [UIColor colorFromHexString:@"#e6e6e6"].CGColor;
 }
+
+
+- (void)setIsYetBingdingCard:(BOOL)isYetBingdingCard
+{
+    _isYetBingdingCard = isYetBingdingCard;
+}
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 
@@ -123,17 +129,25 @@
     }
 }
 
-- (NSString *)normalNumToBankNum:(NSString *)num
+-(NSString *)normalNumToBankNum:(NSString *)tmpStr
 {
-    if (num.length < 7) {
-        return num;
+    //    NSString *tmpStr = [self bankNumToNormalNum];
+    if (tmpStr.length < 7) {
+        return tmpStr;
     }
-    NSNumber *number = @([num longLongValue]);
-    NSNumberFormatter *formatter = [NSNumberFormatter new];
-    [formatter setUsesGroupingSeparator:YES];
-    [formatter setGroupingSize:4];
-    [formatter setGroupingSeparator:@" "];
-    return [formatter stringFromNumber:number];
+    NSInteger size = (tmpStr.length / 4);
+    
+    NSMutableArray *tmpStrArr = [[NSMutableArray alloc] init];
+    for (int n = 0;n < size; n++)
+    {
+        [tmpStrArr addObject:[tmpStr substringWithRange:NSMakeRange(n*4, 4)]];
+    }
+    
+    [tmpStrArr addObject:[tmpStr substringWithRange:NSMakeRange(size*4, (tmpStr.length % 4))]];
+    
+    tmpStr = [tmpStrArr componentsJoinedByString:@" "];
+    
+    return tmpStr;
 }
 
 #pragma mark - 是否手动输入
@@ -495,6 +509,43 @@
         }else{
             self.inputKaihuhangTF.text = @"";
         }
+        if (self.isYetBingdingCard) {
+            NSDictionary *changeParms = @{@"bankId":self.bank_id,
+                                          @"id":self.bankModel.bankinfoid,
+                                    @"bankAccount":bankNum,
+                                    @"identity":@"",
+                                    @"bankPhone":@"",
+                                    @"realName":self.nameTF.text,
+                                    @"bankAccountPro":self.provincesTF.text,
+                                    @"token":[ShellCoinUserInfo shareUserInfos].token,
+                                    @"bankPoint":NullToSpace(self.wangdianTF.text),
+                                    @"bankPointBranch":NullToSpace(self.kaihuhangTF.text),
+                                    @"bankBranch":NullToSpace(self.inputKaihuhangTF.text),
+                                    @"bankBranchNo":NullToSpace(kaihuhNum)};
+            [SVProgressHUD showWithStatus:@"正在提交..." maskType:SVProgressHUDMaskTypeBlack];
+            [HttpClient POST:@"user/withdraw/bindBankcard/update" parameters:changeParms success:^(NSURLSessionDataTask *operation, id jsonObject) {
+                [SVProgressHUD dismiss];
+                if (IsRequestTrue) {
+                    [[JAlertViewHelper shareAlterHelper]showTint:@"修改成功" duration:1.5];
+                    [ShellCoinUserInfo shareUserInfos].bankAccount = bankNum;
+                    [ShellCoinUserInfo shareUserInfos].bankAccountRealName = self.nameTF.text;
+                    [ShellCoinUserInfo shareUserInfos].bindingFlag = YES;
+                    [ShellCoinUserInfo shareUserInfos].bankname= self.bank_id;
+//                    [self.viewController.navigationController popViewControllerAnimated:YES];
+                    if (self.isFromRoomPage) {
+                        [self.viewController.navigationController popToRootViewControllerAnimated:YES];
+                        return ;
+                    }
+                    [self.viewController.navigationController popToViewController:self.viewController.navigationController.viewControllers[1] animated:YES];
+
+                }
+            } failure:^(NSURLSessionDataTask *operation, NSError *error) {
+                [SVProgressHUD dismiss];
+                
+            }];
+            return;
+        }
+        
         NSDictionary *parms = @{@"bankId":self.bank_id,
                                 @"bankAccount":bankNum,
                                 @"identity":@"",
@@ -511,13 +562,16 @@
         [HttpClient POST:@"user/withdraw/bindBankcard/add" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
             [SVProgressHUD dismiss];
             if (IsRequestTrue) {
-//                [ShellCoinUserInfo shareUserInfos].bankname= self.bank_id;
-                
                 [[JAlertViewHelper shareAlterHelper]showTint:@"绑定成功" duration:1.5];
                 [ShellCoinUserInfo shareUserInfos].bindingFlag = YES;
                 [ShellCoinUserInfo shareUserInfos].bankAccount = bankNum;
                 [ShellCoinUserInfo shareUserInfos].bankAccountRealName = self.nameTF.text;
                 [ShellCoinUserInfo shareUserInfos].bindingFlag = @"1";
+                if (self.isFromRoomPage) {
+                    [self.viewController.navigationController popToRootViewControllerAnimated:YES];
+                    return ;
+                }
+                [self.viewController.navigationController popToViewController:self.viewController.navigationController.viewControllers[1] animated:YES];
 //                [self.viewController.navigationController popViewControllerAnimated:YES];
             }
         } failure:^(NSURLSessionDataTask *operation, NSError *error) {

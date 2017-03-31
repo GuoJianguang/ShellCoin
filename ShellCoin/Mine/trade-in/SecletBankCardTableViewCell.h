@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class BankCardInfoModel;
 @interface BankInfoModel : BaseModel
 @property (nonatomic, copy)NSString *logicon;
 @property (nonatomic, copy)NSString *bankName;
@@ -24,7 +24,7 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *selcetmarkIamge;
 
-@property (nonatomic, strong)BankInfoModel *dataModel;
+@property (nonatomic, strong)BankCardInfoModel *dataModel;
 
 
 

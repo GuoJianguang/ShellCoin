@@ -19,9 +19,9 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="391"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eLl-TO-8Zs">
-                        <rect key="frame" x="270" y="8" width="31" height="30"/>
-                        <state key="normal" title="删除"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eLl-TO-8Zs">
+                        <rect key="frame" x="257" y="8" width="44" height="44"/>
+                        <state key="normal" image="icon_delete"/>
                         <connections>
                             <action selector="deletBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="13n-5k-wy6"/>
                         </connections>
@@ -164,4 +164,7 @@
             <point key="canvasLocation" x="-321" y="-181"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="icon_delete" width="44" height="44"/>
+    </resources>
 </document>

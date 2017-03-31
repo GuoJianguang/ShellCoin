@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -37,7 +38,10 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gai-NO-g82">
-                            <rect key="frame" x="376" y="5" width="30" height="30"/>
+                            <rect key="frame" x="374" y="0.0" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="Gai-NO-g82" secondAttribute="height" id="qYl-PC-k2A"/>
+                            </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <connections>
                                 <action selector="detail_btn:" destination="iN0-l3-epB" eventType="touchUpInside" id="J3p-J5-Thc"/>
@@ -62,12 +66,13 @@
                     <constraints>
                         <constraint firstItem="H0p-Vc-A75" firstAttribute="centerY" secondItem="sBy-hR-jrp" secondAttribute="centerY" id="0ri-Li-7nJ"/>
                         <constraint firstItem="unU-Qd-L89" firstAttribute="centerY" secondItem="sBy-hR-jrp" secondAttribute="centerY" id="AZA-zc-NcD"/>
+                        <constraint firstItem="Gai-NO-g82" firstAttribute="top" secondItem="sBy-hR-jrp" secondAttribute="top" id="Liy-Z4-EoF"/>
                         <constraint firstItem="nBr-I4-X2h" firstAttribute="leading" secondItem="unU-Qd-L89" secondAttribute="trailing" id="NQ1-hw-XRp"/>
-                        <constraint firstAttribute="trailing" secondItem="Gai-NO-g82" secondAttribute="trailing" constant="8" id="Rbg-e7-Efc"/>
+                        <constraint firstAttribute="trailing" secondItem="Gai-NO-g82" secondAttribute="trailing" id="Rbg-e7-Efc"/>
+                        <constraint firstAttribute="bottom" secondItem="Gai-NO-g82" secondAttribute="bottom" id="SHt-bu-ZeI"/>
                         <constraint firstItem="H0p-Vc-A75" firstAttribute="leading" secondItem="unU-Qd-L89" secondAttribute="trailing" constant="20" id="dP1-1F-WYF"/>
                         <constraint firstItem="unU-Qd-L89" firstAttribute="leading" secondItem="sBy-hR-jrp" secondAttribute="leading" id="fHV-rN-uvr"/>
                         <constraint firstItem="nBr-I4-X2h" firstAttribute="centerY" secondItem="sBy-hR-jrp" secondAttribute="centerY" id="gM5-nU-3aG"/>
-                        <constraint firstItem="Gai-NO-g82" firstAttribute="centerY" secondItem="sBy-hR-jrp" secondAttribute="centerY" id="ppq-QT-c9i"/>
                         <constraint firstAttribute="trailing" secondItem="H0p-Vc-A75" secondAttribute="trailing" constant="64" id="q1w-pB-uwR"/>
                     </constraints>
                 </view>

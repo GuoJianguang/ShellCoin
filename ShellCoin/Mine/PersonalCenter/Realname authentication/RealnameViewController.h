@@ -22,5 +22,12 @@
 @property (weak, nonatomic) IBOutlet UITextField *nameTF;
 @property (weak, nonatomic) IBOutlet UITextField *idcardTF;
 
+@property (weak, nonatomic) IBOutlet UIButton *yetRMarkBtn;
+
+@property (nonatomic, assign)BOOL isYetAut;
+
+@property (nonatomic, assign)BOOL isWaitAut;
+
+
 
 @end

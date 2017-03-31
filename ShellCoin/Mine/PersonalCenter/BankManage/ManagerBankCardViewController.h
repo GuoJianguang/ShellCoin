@@ -9,5 +9,6 @@
 #import "BaseViewController.h"
 
 @interface ManagerBankCardViewController : BaseViewController
-
+@property (nonatomic, assign)NSInteger currentPage;
+- (void)getmyBankCardRequest;
 @end

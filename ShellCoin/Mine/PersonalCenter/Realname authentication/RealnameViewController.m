@@ -25,17 +25,44 @@
     [self setLayerWithbor:self.view2];
     self.naviBar.delegate = self;
     self.naviBar.hiddenDetailBtn = NO;
-    self.naviBar.detailTitle = @"提交";
+    self.naviBar.detailImage = [UIImage imageNamed:@"icon_confirm"];
+//    self.yetRMarkBtn.enabled = NO;
     
+    if (self.isWaitAut) {
+        self.yetRMarkBtn.hidden = YES;
+        
+        self.resultView.isSuccess = Authentication_wait_audit;
+        [self authenSuccess];
+        return;
+    }
     
+    self.yetRMarkBtn.hidden = !self.isYetAut;
+    if (self.isYetAut) {
+        self.nameTF.text = [ShellCoinUserInfo shareUserInfos].idcardName;
+        self.idcardTF.text = [ShellCoinUserInfo shareUserInfos].idcard;
+        self.nameTF.enabled  = NO;
+        self.idcardTF.enabled  = NO;
+        self.alerLabel.hidden = YES;
+        self.starLabel.hidden = YES;
+        self.naviBar.hiddenDetailBtn = YES;
+        [self hideIDCardNum];
+        return;
+    }
     UIAlertController *alertcontroller = [UIAlertController alertControllerWithTitle:@"重要提示" message:@"您每天有3次机会可以进行实名认证，请仔细核实您的实名认证信息" preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"知道了" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
     }];
     [alertcontroller addAction:cancelAction];
     [self presentViewController:alertcontroller animated:YES completion:NULL];
     
 }
 
+- (void)hideIDCardNum
+{
+    if (self.idcardTF.text.length == 18) {
+        self.idcardTF.text = [self.idcardTF.text stringByReplacingCharactersInRange:NSMakeRange(1, 16) withString:@"****************"];
+    }
+    
+}
 - (RealNameAutResultView *)resultView
 {
     if (!_resultView) {
@@ -80,35 +107,55 @@
                     return;
                 }
                 if ([NullToNumber(jsonObject[@"code"]) isEqualToString:@"0"]) {
-
-                    [ShellCoinUserInfo shareUserInfos].idVerifyReqFlag = YES;
+                    self.resultView.isSuccess = Authentication_type_success;
+                    [ShellCoinUserInfo shareUserInfos].idcardName = self.nameTF.text;
+                    [ShellCoinUserInfo shareUserInfos].idcard = self.idcardTF.text;
+                    [ShellCoinUserInfo shareUserInfos].identityFlag = YES;
                     [self authenSuccess];
                     return;
                 }
                 //                    2035,"身份证实名认证失败"
                 else if ([NullToNumber(jsonObject[@"code"]) isEqualToString:@"2035"]) {
-                    [[JAlertViewHelper shareAlterHelper]showTint:jsonObject[@"message"] duration:1.5];
+                    self.resultView.isSuccess = Authentication_type_fail;
+                    [self authenSuccess];
+//                    [[JAlertViewHelper shareAlterHelper]showTint:jsonObject[@"message"] duration:1.5];
                     return;
                 }
                 //                    2036,"实名认证失败,身份证与姓名不匹配"
                 else if ([NullToNumber(jsonObject[@"code"]) isEqualToString:@"2036"]) {
-                    [[JAlertViewHelper shareAlterHelper]showTint:jsonObject[@"message"] duration:1.5];
-                    return;
+                    self.resultView.isSuccess = Authentication_type_fail;
+                    [self authenSuccess];
+//                    [[JAlertViewHelper shareAlterHelper]showTint:jsonObject[@"message"] duration:1.5];
+//                    return;
                 }
                 //                    2037,"未绑卡，现在去绑定银行卡吗？"
                 else if ([NullToNumber(jsonObject[@"code"]) isEqualToString:@"2037"]) {
-                    [ShellCoinUserInfo shareUserInfos].idVerifyReqFlag = YES;
+                    self.resultView.isSuccess = Authentication_type_success;
+                    [ShellCoinUserInfo shareUserInfos].idcardName = self.nameTF.text;
+                    [ShellCoinUserInfo shareUserInfos].idcard = self.idcardTF.text;
+                    [ShellCoinUserInfo shareUserInfos].identityFlag = YES;
                     [self authenSuccess];
                     return;
                 }
                 //2039,"实名认证信息与之前绑定银行卡信息不一致，银行卡信息已清空，是否现在去重新绑定？"
                 else if ([NullToNumber(jsonObject[@"code"]) isEqualToString:@"2039"]) {
 
-                    [ShellCoinUserInfo shareUserInfos].idVerifyReqFlag = YES;
+                    [ShellCoinUserInfo shareUserInfos].identityFlag = YES;
+                    [ShellCoinUserInfo shareUserInfos].idcardName = self.nameTF.text;
+                    [ShellCoinUserInfo shareUserInfos].idcard = self.idcardTF.text;
+                    self.resultView.isSuccess = Authentication_type_success;
                     [self authenSuccess];
                     return;
-                }else{
+                     //2047,"三次机会用完"
+                }else if ([NullToNumber(jsonObject[@"code"]) isEqualToString:@"2047"]){
+//                    self.resultView.isSuccess = Authentication_type_fail;
+//                    [self authenSuccess];
                     [[JAlertViewHelper shareAlterHelper]showTint:jsonObject[@"message"] duration:1.5];
+                    return;
+                }else{
+                    self.resultView.isSuccess = Authentication_type_fail;
+                    [self authenSuccess];
+                    //                    [[JAlertViewHelper shareAlterHelper]showTint:jsonObject[@"message"] duration:1.5];
                     return;
                 }
             }
@@ -177,7 +224,7 @@
 #pragma makr - 认证成功
 - (void)authenSuccess
 {
-    self.resultView.isSuccess = NO;
+    self.naviBar.hiddenDetailBtn = YES;
     [self.view addSubview:self.resultView];
     UIEdgeInsets insets = UIEdgeInsetsMake(64, 0, 0, 0);
     [self.resultView mas_makeConstraints:^(MASConstraintMaker *make) {

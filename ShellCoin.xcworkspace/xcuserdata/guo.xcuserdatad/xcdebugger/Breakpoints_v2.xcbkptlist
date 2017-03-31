@@ -48,16 +48,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ShellCoin/Mine/Set/EditPhoneNumberViewController.m"
-            timestampString = "512533398.477759"
+            filePath = "ShellCoin/Mine/PersonalCenter/Realname authentication/ManualCertificationViewController.m"
+            timestampString = "512628293.184132"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
-            landmarkName = "-callCustomerService"
+            startingLineNumber = "141"
+            endingLineNumber = "141"
+            landmarkName = "-upLoadImage:withToken:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -67,13 +67,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ShellCoin/Login/LoginViewController.m"
-            timestampString = "512535667.74238"
+            filePath = "ShellCoin/Mine/PersonalCenter/Realname authentication/ManualCertificationViewController.m"
+            timestampString = "512628358.699261"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "89"
-            endingLineNumber = "89"
-            landmarkName = "-login_btn:"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "-detailBtnClick"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -83,13 +83,125 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ShellCoin/Mine/PersonalCenter/BankManage/EditbankInfoTableViewCell.m"
-            timestampString = "512560020.851111"
+            filePath = "ShellCoin/Mine/PersonalCenter/Realname authentication/ManualCertificationViewController.m"
+            timestampString = "512628359.242269"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "313"
-            endingLineNumber = "313"
-            landmarkName = "-getBankPointRequest"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "-detailBtnClick"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[ManualCertificationViewController detailBtnClick]"
+                  moduleName = "ShellCoin"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/guo/Desktop/ShellCoin/ShellCoin/Mine/PersonalCenter/Realname%20authentication/ManualCertificationViewController.m"
+                  timestampString = "512657338.207019"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "288">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__51-[ManualCertificationViewController detailBtnClick]_block_invoke"
+                  moduleName = "ShellCoin"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/guo/Desktop/ShellCoin/ShellCoin/Mine/PersonalCenter/Realname%20authentication/ManualCertificationViewController.m"
+                  timestampString = "512657338.208984"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ShellCoin/Mine/trade-in/TradInViewController.m"
+            timestampString = "512640361.921289"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
+            landmarkName = "-getmyBankCardRequest"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ShellCoin/Mine/trade-in/TradInViewController.m"
+            timestampString = "512640362.57035"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
+            landmarkName = "-getmyBankCardRequest"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[TradInViewController getmyBankCardRequest]"
+                  moduleName = "ShellCoin"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/guo/Desktop/ShellCoin/ShellCoin/Mine/trade-in/TradInViewController.m"
+                  timestampString = "512657338.217986"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "107"
+                  endingLineNumber = "107"
+                  offsetFromSymbolStart = "81">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__44-[TradInViewController getmyBankCardRequest]_block_invoke"
+                  moduleName = "ShellCoin"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/guo/Desktop/ShellCoin/ShellCoin/Mine/trade-in/TradInViewController.m"
+                  timestampString = "512657338.219921"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "108"
+                  endingLineNumber = "108"
+                  offsetFromSymbolStart = "116">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ShellCoin/Mine/PersonalCenter/BankManage/ManagerBankCardViewController.m"
+            timestampString = "512650952.579262"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "230"
+            endingLineNumber = "230"
+            landmarkName = "-getmyBankCardRequest"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

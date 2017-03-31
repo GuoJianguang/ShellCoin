@@ -48,7 +48,7 @@
     [self setUMPush:launchOptions];
     //
     //    //设置微信AppId，设置分享url，默认使用友盟的网址
-    [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_WechatSession appKey:@"wxcc1bde9f6a54571b" appSecret:@"171a3f441c98d00c3d48790758a3a41c" redirectURL:@"http://mobile.umeng.com/social"];
+    [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_WechatSession appKey:WXApiKey appSecret:@"171a3f441c98d00c3d48790758a3a41c" redirectURL:@"http://mobile.umeng.com/social"];
     [ShellCoinUserInfo shareUserInfos].devicetoken = @"1ab38c03b38f4461725d39d8fb143b898279eaa0ee59ea90e057a536a1aecfbd";
 }
 #pragma mark - 设置友盟推送

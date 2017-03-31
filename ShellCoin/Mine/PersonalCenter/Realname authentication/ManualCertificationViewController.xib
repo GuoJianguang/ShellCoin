@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -84,7 +85,7 @@
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MMG-sZ-e9M">
-                    <rect key="frame" x="12" y="376" width="12" height="28"/>
+                    <rect key="frame" x="12" y="375.5" width="12" height="28"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="11.5" id="h9u-7T-X1j"/>
                     </constraints>
@@ -93,13 +94,13 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="为保障您的资金安全需要进行实名认证，一经认证不可修改。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fpa-EI-akX">
-                    <rect key="frame" x="32" y="376" width="331" height="31.5"/>
+                    <rect key="frame" x="32" y="375.5" width="331" height="31.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Nd-0a-Ga1">
-                    <rect key="frame" x="97.5" y="258" width="180" height="98"/>
+                    <rect key="frame" x="97.5" y="258" width="180" height="97.5"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="4Nd-0a-Ga1" secondAttribute="height" multiplier="162:88" id="Xcu-W4-JDK"/>
                     </constraints>
@@ -122,6 +123,7 @@
                 <constraint firstItem="4Nd-0a-Ga1" firstAttribute="centerX" secondItem="qdn-Bu-9xe" secondAttribute="centerX" id="VuE-ju-aGl"/>
                 <constraint firstItem="5Do-GO-EGf" firstAttribute="leading" secondItem="qdn-Bu-9xe" secondAttribute="leading" constant="12" id="dc1-4C-bbR"/>
                 <constraint firstAttribute="trailing" secondItem="Fpa-EI-akX" secondAttribute="trailing" constant="12" id="jgO-qu-O6h"/>
+                <constraint firstItem="4Nd-0a-Ga1" firstAttribute="width" secondItem="qdn-Bu-9xe" secondAttribute="width" multiplier="4.8/10" id="o2U-eu-BN1"/>
                 <constraint firstAttribute="trailing" secondItem="fYM-Z9-rMA" secondAttribute="trailing" constant="12" id="ub8-at-9Wy"/>
                 <constraint firstItem="Fpa-EI-akX" firstAttribute="top" secondItem="4Nd-0a-Ga1" secondAttribute="bottom" constant="20" id="y0a-La-AmS"/>
             </constraints>

@@ -72,6 +72,9 @@
 - (void)setNumberPages:(NSInteger)numberPages
 {
     _numberPages = numberPages;
+    for (UIView *obj in self.subviews) {
+        [obj removeFromSuperview];
+    }
     UIView *view = [[UIView alloc]init];
     CGFloat viewWidth = ShellCoinPageControlView_BigWidth + (_numberPages - 1)*(ShellCoinPageControlView_DefaultMargin+ShellCoinPageControlView_DefaultWidth);
     view.frame = CGRectMake((TWitdh - viewWidth)/2., 0, viewWidth, self.frame.size.height);
@@ -87,13 +90,9 @@
         }else{
             imageView.frame = CGRectMake(CGRectGetMaxX([view viewWithTag:10+i -1].frame) + ShellCoinPageControlView_DefaultMargin, (self.frame.size.height - ShellCoinPageControlView_DefaultHeight)/2., ShellCoinPageControlView_DefaultWidth, ShellCoinPageControlView_DefaultHeight);
             imageView.image = [UIImage imageNamed:@"pagedefault"];
-
         }
     }
 }
-
-
-
 
 
 @end
