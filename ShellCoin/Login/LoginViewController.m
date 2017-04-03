@@ -21,8 +21,7 @@
     // Do any additional setup after loading the view.
     self.navigationController.navigationBar.hidden = YES;
 
-    self.imageHeight.constant = TWitdh*(66/75.);
-    self.bgimage.image = [UIImage imageNamed:@"bg_login.jpg"];
+    self.imageHeight.constant = TWitdh*(72/75.);
     
     self.loginWidth.constant = TWitdh*(526/750.);
     
@@ -38,10 +37,10 @@
     
     self.sureWidth.constant = TWitdh*(400/750.);
     CGFloat  sureBtnWidth = TWitdh*(400/750.);
-    self.login_btn.bounds = CGRectMake(0, 0, sureBtnWidth, sureBtnWidth/5.);
-    self.login_btn.layer.cornerRadius = self.login_btn.bounds.size.height/2.;
+    self.login_btn.bounds = CGRectMake(0, 0, sureBtnWidth, sureBtnWidth/(177/594.));
+//    self.login_btn.layer.cornerRadius = self.login_btn.bounds.size.height/2.;
     self.login_btn.layer.masksToBounds = YES;
-    self.login_btn.backgroundColor = MacoColor;
+//    self.login_btn.backgroundColor = MacoColor;
     
     if ([[NSUserDefaults standardUserDefaults]objectForKey:LoginUserName]) {
         self.user_tf.text = [[NSUserDefaults standardUserDefaults]objectForKey:LoginUserName];

@@ -146,7 +146,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     MerchantDetailViewController *merchantDetailVC = [[MerchantDetailViewController alloc]init];
-    merchantDetailVC.dataModel = self.dataSouceArray[indexPath.row];
+    merchantDetailVC.mchCode = ((MerchantModel *)self.dataSouceArray[indexPath.row]).code;
     [self.navigationController pushViewController:merchantDetailVC animated:YES];
 }
 

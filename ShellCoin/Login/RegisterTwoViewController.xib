@@ -31,11 +31,11 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z1i-R2-IDb">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="281.5"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z1i-R2-IDb">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="281.5"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dsC-4h-OMZ">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="281.5"/>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pic3_login" translatesAutoresizingMaskIntoConstraints="NO" id="dsC-4h-OMZ">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="281.5"/>
                         </imageView>
                     </subviews>
                     <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -47,10 +47,10 @@
                         <constraint firstAttribute="bottom" secondItem="dsC-4h-OMZ" secondAttribute="bottom" id="nFI-US-T10"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W5s-mN-G7m">
-                    <rect key="frame" x="60" y="311" width="200" height="33.5"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W5s-mN-G7m">
+                    <rect key="frame" x="87.5" y="311" width="200" height="33.5"/>
                     <subviews>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入密码" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="VZY-8y-lax">
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入密码" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="VZY-8y-lax">
                             <rect key="frame" x="15" y="0.0" width="170" height="34"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -66,10 +66,10 @@
                         <constraint firstAttribute="width" secondItem="W5s-mN-G7m" secondAttribute="height" multiplier="526/88" id="zZT-Kb-BXK"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nwa-H0-oAh">
-                    <rect key="frame" x="60" y="364.5" width="200" height="33.5"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nwa-H0-oAh">
+                    <rect key="frame" x="87.5" y="364.5" width="200" height="33.5"/>
                     <subviews>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请确认密码" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="9mR-N8-wCv">
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请确认密码" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="9mR-N8-wCv">
                             <rect key="frame" x="15" y="0.0" width="170" height="33"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -83,20 +83,19 @@
                         <constraint firstAttribute="trailing" secondItem="9mR-N8-wCv" secondAttribute="trailing" constant="15" id="TOy-ot-4kO"/>
                     </constraints>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="注册即表示同意《用户使用条款及服务协议》" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dgh-aj-R1y">
-                    <rect key="frame" x="60" y="408" width="200" height="31.5"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="注册即表示同意《用户使用条款及服务协议》" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dgh-aj-R1y">
+                    <rect key="frame" x="60" y="408" width="255" height="31.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="juP-dz-FYf">
-                    <rect key="frame" x="75" y="460" width="170" height="34"/>
-                    <color key="backgroundColor" red="0.8862745098" green="0.36470588240000001" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="juP-dz-FYf">
+                    <rect key="frame" x="102.5" y="460" width="170" height="50.5"/>
                     <constraints>
-                        <constraint firstAttribute="width" secondItem="juP-dz-FYf" secondAttribute="height" multiplier="5" id="QCK-Ln-Qos"/>
+                        <constraint firstAttribute="width" secondItem="juP-dz-FYf" secondAttribute="height" multiplier="594/177" id="QCK-Ln-Qos"/>
                         <constraint firstAttribute="width" constant="170" id="WTV-FT-cey"/>
                     </constraints>
-                    <state key="normal" title="注册">
+                    <state key="normal" title="注册" backgroundImage="btn_nor">
                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <connections>
@@ -124,4 +123,8 @@
             <point key="canvasLocation" x="248" y="64"/>
         </view>
     </objects>
+    <resources>
+        <image name="btn_nor" width="198" height="59"/>
+        <image name="pic3_login" width="375" height="362"/>
+    </resources>
 </document>

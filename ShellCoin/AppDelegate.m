@@ -11,6 +11,8 @@
 #import "UMessage.h"
 #import "WXApi.h"
 #import "WeXinPayObject.h"
+#import <AMapLocationKit/AMapLocationKit.h>
+#import <AMapFoundationKit/AMapFoundationKit.h>
 
 #define UMSYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
 @interface AppDelegate ()
@@ -29,6 +31,9 @@
 
 #pragma mark - 设置一些第三方库的key
 - (void)SetTheThirdParty:(NSDictionary*)launchOptions{
+    //高德地图
+    [[AMapServices sharedServices] setEnableHTTPS:YES];
+    [AMapServices sharedServices].apiKey = MAP_APPKEY_APPSTORE;
     //友盟分享的key
     [[UMSocialManager defaultManager] setUmSocialAppkey:YoumengKey];
     
@@ -48,7 +53,7 @@
     [self setUMPush:launchOptions];
     //
     //    //设置微信AppId，设置分享url，默认使用友盟的网址
-    [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_WechatSession appKey:WXApiKey appSecret:@"171a3f441c98d00c3d48790758a3a41c" redirectURL:@"http://mobile.umeng.com/social"];
+    [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_WechatSession appKey:WXApiKey appSecret:@"420511a3e2cf3c3dc547f787146837a3" redirectURL:@"http://mobile.umeng.com/social"];
     [ShellCoinUserInfo shareUserInfos].devicetoken = @"1ab38c03b38f4461725d39d8fb143b898279eaa0ee59ea90e057a536a1aecfbd";
 }
 #pragma mark - 设置友盟推送

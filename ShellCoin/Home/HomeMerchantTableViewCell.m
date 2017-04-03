@@ -16,6 +16,8 @@
     
     self.headIamgeView.layer.cornerRadius = (TWitdh*(95/320.) - 15 - 20)/2.;
     self.headIamgeView.layer.masksToBounds = YES;
+    self.title_label.textColor = MacoTitleColor;
+    self.detail_label.textColor = MacoDetailColor;
     
 }
 

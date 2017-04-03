@@ -36,13 +36,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="120" height="35.5"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ahd-iE-VzK">
-                                <rect key="frame" x="22" y="6" width="76" height="22"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="22" id="pQE-DT-Q8K"/>
-                                </constraints>
+                                <rect key="frame" x="22" y="1.5" width="76" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                <state key="normal" title="娱乐">
+                                <state key="normal" title="娱乐" backgroundImage="bg1_seller">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
@@ -50,12 +46,13 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Ahd-iE-VzK" secondAttribute="trailing" constant="22" id="KHW-an-Kc7"/>
-                            <constraint firstItem="Ahd-iE-VzK" firstAttribute="centerY" secondItem="rm2-EC-a9J" secondAttribute="centerY" id="TMK-SQ-4vn"/>
+                            <constraint firstAttribute="bottom" secondItem="Ahd-iE-VzK" secondAttribute="bottom" id="W75-Ca-qzr"/>
                             <constraint firstItem="Ahd-iE-VzK" firstAttribute="leading" secondItem="rm2-EC-a9J" secondAttribute="leading" constant="22" id="so8-k9-ALo"/>
                         </constraints>
                     </view>
                 </subviews>
             </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="oQn-Ab-L5B" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="12" id="7xC-Hx-h7t"/>
                 <constraint firstAttribute="trailing" secondItem="bCu-kE-hPu" secondAttribute="trailing" constant="8" id="993-uu-NSN"/>
@@ -75,10 +72,11 @@
                 <outlet property="markBtn" destination="Ahd-iE-VzK" id="tnB-Fo-wsD"/>
                 <outlet property="nameLabel" destination="oQn-Ab-L5B" id="L9q-Vn-iSm"/>
             </connections>
-            <point key="canvasLocation" x="-173" y="164"/>
+            <point key="canvasLocation" x="-56" y="164"/>
         </collectionViewCell>
     </objects>
     <resources>
+        <image name="bg1_seller" width="80" height="34"/>
         <image name="header.jpg" width="200" height="200"/>
     </resources>
 </document>

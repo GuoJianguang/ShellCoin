@@ -27,6 +27,7 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *recommendImage;
 
+@property (weak, nonatomic) IBOutlet UILabel *checkDetailLabe;
 
 @property (nonatomic, strong)MerchantModel *dataModel;
 

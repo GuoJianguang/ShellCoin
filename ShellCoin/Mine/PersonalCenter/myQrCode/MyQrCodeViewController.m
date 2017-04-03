@@ -74,7 +74,6 @@
     UMShareWebpageObject *shareObject = [UMShareWebpageObject shareObjectWithTitle:title descr:@"欢迎关注" thumImage:AppIconImage];
     //设置网页地址
     shareObject.webpageUrl = url;
-    
     //分享消息对象设置分享内容对象
     messageObject.shareObject = shareObject;
     //调用分享接口
@@ -96,8 +95,8 @@
         [[JAlertViewHelper shareAlterHelper]showTint:@"分享失败，请重试..." duration:2.];
         //        [self alertWithError:error];
     }];
-    
 }
+
 - (void)getShareRequest
 {
     NSDictionary *parms = @{@"token":[ShellCoinUserInfo shareUserInfos].token};
@@ -120,6 +119,8 @@
     UIImageView* imageView = [self roundCornerWithImage:[UIImage imageNamed:@"logo.JPG"] size:logoSize];
 //    [LBXScanWrapper addImageViewLogo:self.qrCodeImageView centerLogoImageView:imageView logoSize:logoSize];
 }
+
+
 - (UIImageView*)roundCornerWithImage:(UIImage*)logoImg size:(CGSize)size
 {
     //logo圆角
@@ -133,8 +134,6 @@
     logImage.frame = CGRectMake(diff, diff, size.width - 2 * diff, size.height - 2 * diff);
     
     [backImage addSubview:logImage];
-    
-    
     return backImage;
 }
 

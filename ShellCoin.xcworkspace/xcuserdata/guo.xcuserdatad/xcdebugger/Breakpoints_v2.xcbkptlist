@@ -48,22 +48,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ShellCoin/Mine/PersonalCenter/Realname authentication/ManualCertificationViewController.m"
-            timestampString = "512628293.184132"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "141"
-            endingLineNumber = "141"
-            landmarkName = "-upLoadImage:withToken:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -100,12 +84,12 @@
                   moduleName = "ShellCoin"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/guo/Desktop/ShellCoin/ShellCoin/Mine/PersonalCenter/Realname%20authentication/ManualCertificationViewController.m"
-                  timestampString = "512657338.207019"
+                  timestampString = "512913841.476065"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "50"
                   endingLineNumber = "50"
-                  offsetFromSymbolStart = "288">
+                  offsetFromSymbolStart = "256">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -115,12 +99,12 @@
                   moduleName = "ShellCoin"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/guo/Desktop/ShellCoin/ShellCoin/Mine/PersonalCenter/Realname%20authentication/ManualCertificationViewController.m"
-                  timestampString = "512657338.208984"
+                  timestampString = "512913841.480479"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "50"
                   endingLineNumber = "50"
-                  offsetFromSymbolStart = "16">
+                  offsetFromSymbolStart = "24">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -164,12 +148,12 @@
                   moduleName = "ShellCoin"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/guo/Desktop/ShellCoin/ShellCoin/Mine/trade-in/TradInViewController.m"
-                  timestampString = "512657338.217986"
+                  timestampString = "512913841.493226"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "107"
                   endingLineNumber = "107"
-                  offsetFromSymbolStart = "81">
+                  offsetFromSymbolStart = "128">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -179,7 +163,7 @@
                   moduleName = "ShellCoin"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/guo/Desktop/ShellCoin/ShellCoin/Mine/trade-in/TradInViewController.m"
-                  timestampString = "512657338.219921"
+                  timestampString = "512913841.496727"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "108"
@@ -192,16 +176,64 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ShellCoin/Mine/PersonalCenter/BankManage/ManagerBankCardViewController.m"
-            timestampString = "512650952.579262"
+            filePath = "ShellCoin/Base/LocationManager.m"
+            timestampString = "512913759.616392"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "230"
-            endingLineNumber = "230"
-            landmarkName = "-getmyBankCardRequest"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "-locationManager:didUpdateLocations:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[LocationManager locationManager:didUpdateLocations:]"
+                  moduleName = "ShellCoin"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/guo/Desktop/ShellCoin/ShellCoin/Base/LocationManager.m"
+                  timestampString = "512913841.525139"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "73"
+                  endingLineNumber = "73"
+                  offsetFromSymbolStart = "476">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__54-[LocationManager locationManager:didUpdateLocations:]_block_invoke"
+                  moduleName = "ShellCoin"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/guo/Desktop/ShellCoin/ShellCoin/Base/LocationManager.m"
+                  timestampString = "512913841.527492"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "74"
+                  endingLineNumber = "74"
+                  offsetFromSymbolStart = "92">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ShellCoin/Base/LocationManager.m"
+            timestampString = "512913760.640276"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "-locationManager:didUpdateLocations:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

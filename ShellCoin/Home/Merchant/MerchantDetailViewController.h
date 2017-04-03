@@ -28,7 +28,7 @@
 - (IBAction)payBtn:(UIButton *)sender;
 - (IBAction)addressBtn:(id)sender;
 
+@property (nonatomic, copy)NSString *mchCode;
 
-@property (nonatomic, strong)MerchantModel *dataModel;
 
 @end

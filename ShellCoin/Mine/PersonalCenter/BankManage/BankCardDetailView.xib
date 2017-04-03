@@ -15,64 +15,65 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="196"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Yosemite01" translatesAutoresizingMaskIntoConstraints="NO" id="eYr-OK-hxS">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pic_bank_green" translatesAutoresizingMaskIntoConstraints="NO" id="eYr-OK-hxS">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="196"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2233 2332 3223 208" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bba-WK-wfC">
-                    <rect key="frame" x="20" y="32" width="335" height="24"/>
+                    <rect key="frame" x="20" y="38" width="335" height="24"/>
                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="胡一刀" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9rY-Ww-KH1">
-                    <rect key="frame" x="35" y="170.5" width="34" height="13.5"/>
+                    <rect key="frame" x="38" y="147.5" width="34" height="13.5"/>
                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="11"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ICBC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Rv-X5-cHP">
-                    <rect key="frame" x="35" y="138.5" width="34" height="17"/>
+                    <rect key="frame" x="38" y="115.5" width="34" height="17"/>
                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="中国工商银行" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jrG-Sy-3Ph">
-                    <rect key="frame" x="89" y="138.5" width="86" height="17"/>
+                    <rect key="frame" x="90" y="115.5" width="86" height="17"/>
                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_yinlian" translatesAutoresizingMaskIntoConstraints="NO" id="iHy-1Z-Zfm">
-                    <rect key="frame" x="325" y="150" width="30" height="26"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pic_bankcard_yinlian" translatesAutoresizingMaskIntoConstraints="NO" id="iHy-1Z-Zfm">
+                    <rect key="frame" x="297" y="129" width="47" height="32"/>
                 </imageView>
             </subviews>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="iHy-1Z-Zfm" secondAttribute="trailing" constant="20" id="CJX-dc-CLW"/>
+                <constraint firstAttribute="trailing" secondItem="iHy-1Z-Zfm" secondAttribute="trailing" constant="31" id="CJX-dc-CLW"/>
                 <constraint firstItem="bba-WK-wfC" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="FAo-Ee-zgi"/>
                 <constraint firstItem="jrG-Sy-3Ph" firstAttribute="centerY" secondItem="4Rv-X5-cHP" secondAttribute="centerY" id="I5n-UZ-ecs"/>
+                <constraint firstItem="iHy-1Z-Zfm" firstAttribute="bottom" secondItem="9rY-Ww-KH1" secondAttribute="bottom" id="IOn-Bb-LWf"/>
                 <constraint firstAttribute="trailing" secondItem="bba-WK-wfC" secondAttribute="trailing" constant="20" id="N6n-0b-tQE"/>
-                <constraint firstItem="jrG-Sy-3Ph" firstAttribute="leading" secondItem="4Rv-X5-cHP" secondAttribute="trailing" constant="20" id="Oyk-Ua-MbL"/>
-                <constraint firstItem="bba-WK-wfC" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="32" id="UfS-bk-xKB"/>
+                <constraint firstItem="jrG-Sy-3Ph" firstAttribute="leading" secondItem="4Rv-X5-cHP" secondAttribute="trailing" constant="18" id="Oyk-Ua-MbL"/>
+                <constraint firstItem="bba-WK-wfC" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="38" id="UfS-bk-xKB"/>
                 <constraint firstItem="9rY-Ww-KH1" firstAttribute="top" secondItem="4Rv-X5-cHP" secondAttribute="bottom" constant="15" id="XPy-Br-DN0"/>
-                <constraint firstAttribute="bottom" secondItem="iHy-1Z-Zfm" secondAttribute="bottom" constant="20" id="cUj-la-s3j"/>
-                <constraint firstItem="9rY-Ww-KH1" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="35" id="fN8-K0-Fkt"/>
-                <constraint firstItem="4Rv-X5-cHP" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="35" id="lV3-eU-Ou4"/>
-                <constraint firstAttribute="bottom" secondItem="9rY-Ww-KH1" secondAttribute="bottom" constant="12" id="qMA-BD-W6q"/>
+                <constraint firstItem="9rY-Ww-KH1" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="38" id="fN8-K0-Fkt"/>
+                <constraint firstItem="4Rv-X5-cHP" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="38" id="lV3-eU-Ou4"/>
+                <constraint firstAttribute="bottom" secondItem="9rY-Ww-KH1" secondAttribute="bottom" constant="35" id="qMA-BD-W6q"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="backgoundImageView" destination="eYr-OK-hxS" id="Alw-Dt-A1j"/>
                 <outlet property="bankMarkImageView" destination="iHy-1Z-Zfm" id="asJ-En-1hW"/>
                 <outlet property="bankMarkLabel" destination="4Rv-X5-cHP" id="Qe4-Mc-vdO"/>
                 <outlet property="bankNameLabel" destination="jrG-Sy-3Ph" id="nUy-BS-kJL"/>
                 <outlet property="cardNumLabel" destination="bba-WK-wfC" id="G3i-uE-m0J"/>
                 <outlet property="nameLabel" destination="9rY-Ww-KH1" id="vaO-vF-oI9"/>
             </connections>
-            <point key="canvasLocation" x="-77.5" y="-399"/>
+            <point key="canvasLocation" x="-173" y="-410"/>
         </view>
     </objects>
     <resources>
-        <image name="Yosemite01" width="898" height="598"/>
-        <image name="icon_yinlian" width="30" height="26"/>
+        <image name="pic_bank_green" width="288" height="157"/>
+        <image name="pic_bankcard_yinlian" width="47" height="32"/>
     </resources>
 </document>

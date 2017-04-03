@@ -16,5 +16,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *bankMarkImageView;
 @property (nonatomic, strong)BankCardInfoModel *dataModel;
+@property (weak, nonatomic) IBOutlet UIImageView *backgoundImageView;
+
+@property (nonatomic, assign)NSInteger count;
 
 @end

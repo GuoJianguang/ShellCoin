@@ -16,11 +16,11 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="178"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="177.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="177"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CFR-Uz-pmc">
-                        <rect key="frame" x="8" y="8" width="304" height="169.5"/>
+                        <rect key="frame" x="8" y="0.0" width="304" height="169.5"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DSI-OH-PVp">
                                 <rect key="frame" x="0.0" y="0.0" width="304" height="50"/>
@@ -32,8 +32,8 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="水果颜色为什么不一样，答：1、色戒科举考试；2、我也不懂还要多久" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fXJ-hP-o9y">
-                                        <rect key="frame" x="8" y="33" width="288" height="16"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <rect key="frame" x="8" y="33" width="288" height="14.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -73,10 +73,10 @@
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="CFR-Uz-pmc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="F2S-rc-q3Q"/>
+                    <constraint firstItem="CFR-Uz-pmc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="F2S-rc-q3Q"/>
                     <constraint firstItem="CFR-Uz-pmc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="LUC-mC-iUB"/>
                     <constraint firstAttribute="trailing" secondItem="CFR-Uz-pmc" secondAttribute="trailing" constant="8" id="abC-if-YNm"/>
-                    <constraint firstAttribute="bottom" secondItem="CFR-Uz-pmc" secondAttribute="bottom" id="nxV-Gw-jkC"/>
+                    <constraint firstAttribute="bottom" secondItem="CFR-Uz-pmc" secondAttribute="bottom" constant="8" id="nxV-Gw-jkC"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

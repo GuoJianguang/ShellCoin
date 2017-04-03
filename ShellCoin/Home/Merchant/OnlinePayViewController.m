@@ -22,8 +22,11 @@
     [super viewDidLoad];
     self.naviBar.title = @"支付";
     self.merchantName.text = self.dataModel.name;
+    self.merchantName.textColor = self.moneyLabel.textColor = MacoTitleColor;
     self.moneyLabel.text = [NSString stringWithFormat:@"¥%@",self.money];
     [self setPayWay];
+    self.yuELabel.adjustsFontSizeToFitWidth = YES;
+    
 }
 
 - (SureTradInView *)inputPasswordView
@@ -37,13 +40,13 @@
 #pragma mark - 设置支付规则
 - (void)setPayWay{
     self.wechatBtn.selected = NO;
-    self.yuEImage.image = [UIImage imageNamed:@"icon_scan_balance_payment_sel"];
-    self.wechatImage.image = [UIImage imageNamed:@"icon_scan_weixin_payment_nor"];
+    self.yuEImage.image = [UIImage imageNamed:@"icon_balance_payment_sel"];
+    self.wechatImage.image = [UIImage imageNamed:@"icon_wechat_payment_nor"];
+    self.cashImage.image = [UIImage imageNamed:@"icon_cash_payment_nor"];
     self.yuEMarkBtn.hidden = NO;
     self.yuELabel.textColor = MacoColor;
-    self.wechatLabel.textColor = MacoTitleColor;
-    self.wechatMarkBtn.hidden = YES;
-    
+    self.wechatLabel.textColor = self.cashLabel.textColor = MacoTitleColor;
+    self.wechatMarkBtn.hidden = self.cashMarkBtn.hidden = YES;
     //默认余额支付
     self.payWay_type = Payway_type_banlance;
     double xiaofeiJin = [[ShellCoinUserInfo shareUserInfos].consumeBalance doubleValue];
@@ -61,12 +64,13 @@
         self.yuELabel.text = [NSString stringWithFormat:@"余额支付(余额%.2f元)",payMoney];
         self.xiaofeiJinMoney = 0;
     }else if(payMoney > yuE + xiaofeiJin){
-        self.yuELabel.text = [NSString stringWithFormat:@"余额和消费金额不足，请用微信支付"];
+        self.yuELabel.text = [NSString stringWithFormat:@"余额和消费金额不足，请用微信或者现金支付"];
         
         self.payWay_type = Payway_type_wechat;
-        self.yuEImage.image = [UIImage imageNamed:@"icon_scan_balance_payment_nor"];
-        self.wechatImage.image = [UIImage imageNamed:@"icon_scan_weixin_payment_sel"];
-        self.yuEMarkBtn.hidden = YES;
+        self.yuEImage.image = [UIImage imageNamed:@"icon_balance_payment_nor"];
+        self.wechatImage.image = [UIImage imageNamed:@"icon_wechat_payment_sel"];
+        self.cashImage.image = [UIImage imageNamed:@"icon_cash_payment_nor"];
+        self.yuEMarkBtn.hidden = self.cashMarkBtn.hidden= YES;
         self.wechatBtn.selected = YES;
         self.wechatLabel.textColor = MacoColor;
         self.yuELabel.textColor = MacoTitleColor;
@@ -90,27 +94,38 @@
 - (IBAction)yuEBtn:(UIButton *)sender {
     self.payWay_type = Payway_type_banlance;
     self.wechatBtn.selected = NO;
-    self.yuEImage.image = [UIImage imageNamed:@"icon_scan_balance_payment_sel"];
-    self.wechatImage.image = [UIImage imageNamed:@"icon_scan_weixin_payment_nor"];
+    self.yuEImage.image = [UIImage imageNamed:@"icon_balance_payment_sel"];
+    self.wechatImage.image = [UIImage imageNamed:@"icon_wechat_payment_nor"];
+    self.cashImage.image = [UIImage imageNamed:@"icon_cash_payment_nor"];
     self.yuEMarkBtn.hidden = NO;
     self.yuELabel.textColor = MacoColor;
-    self.wechatLabel.textColor = MacoTitleColor;
-    self.wechatMarkBtn.hidden = YES;
+    self.wechatLabel.textColor = self.cashLabel.textColor = MacoTitleColor;
+    self.wechatMarkBtn.hidden = self.cashMarkBtn.hidden = YES;
 }
 - (IBAction)wechatBtn:(UIButton *)sender {
     
     self.payWay_type = Payway_type_wechat;
-    self.yuEImage.image = [UIImage imageNamed:@"icon_scan_balance_payment_nor"];
-    self.wechatImage.image = [UIImage imageNamed:@"icon_scan_weixin_payment_sel"];
-    self.yuEMarkBtn.hidden = YES;
+    self.yuEImage.image = [UIImage imageNamed:@"icon_balance_payment_nor"];
+    self.wechatImage.image = [UIImage imageNamed:@"icon_wechat_payment_sel"];
+    self.cashImage.image = [UIImage imageNamed:@"icon_cash_payment_nor"];
+    self.yuEMarkBtn.hidden = self.cashMarkBtn.hidden= YES;
     self.wechatBtn.selected = YES;
     self.wechatLabel.textColor = MacoColor;
-    self.yuELabel.textColor = MacoTitleColor;
+    self.yuELabel.textColor = self.cashLabel.textColor=MacoTitleColor;
     self.wechatMarkBtn.hidden = NO;
 }
 
 - (IBAction)cashBtn:(UIButton *)sender {
     self.payWay_type = Payway_type_cash;
+    self.payWay_type = Payway_type_wechat;
+    self.yuEImage.image = [UIImage imageNamed:@"icon_balance_payment_nor"];
+    self.wechatImage.image = [UIImage imageNamed:@"icon_wechat_payment_nor"];
+    self.cashImage.image = [UIImage imageNamed:@"icon_cash_payment_sel"];
+    self.yuEMarkBtn.hidden = self.wechatMarkBtn.hidden = YES;
+    self.cashMarkBtn.hidden = NO;
+    self.wechatBtn.selected = YES;
+    self.cashLabel.textColor = MacoColor;
+    self.yuELabel.textColor=self.wechatLabel.textColor = MacoTitleColor;
 
 }
 - (IBAction)sureBtn:(UIButton *)sender {

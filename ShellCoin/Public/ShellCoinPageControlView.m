@@ -49,7 +49,7 @@
     
     for (int i = 0; i < _numberPages; i ++) {
         if (i == _currentPage) {
-            ((UIImageView *)[view viewWithTag:i + 10]).image  = [UIImage imageNamed:@"pagecurrent"];
+            ((UIImageView *)[view viewWithTag:i + 10]).image  = [UIImage imageNamed:@"icon_indicate_sel"];
             if (i ==0) {
                 ((UIImageView *)[view viewWithTag:i+ 10]).frame = CGRectMake(0, (self.frame.size.height - ShellCoinPageControlView_BigHeight)/2., ShellCoinPageControlView_BigWidth, ShellCoinPageControlView_BigHeight);
             }else{
@@ -57,7 +57,7 @@
             }
             
         }else{
-            ((UIImageView *)[view viewWithTag:i + 10]).image  = [UIImage imageNamed:@"pagedefault"];
+            ((UIImageView *)[view viewWithTag:i + 10]).image  = [UIImage imageNamed:@"icon_indicate_nor"];
 
             if (i == 0) {
                 ((UIImageView *)[view viewWithTag:i + 10]).frame = CGRectMake(0, (self.frame.size.height - ShellCoinPageControlView_DefaultHeight)/2., ShellCoinPageControlView_DefaultWidth, ShellCoinPageControlView_DefaultHeight);
@@ -86,10 +86,10 @@
         [view addSubview:imageView];
         if (imageView.tag == 10) {
             imageView.frame = CGRectMake(0, (self.frame.size.height - ShellCoinPageControlView_BigHeight)/2., ShellCoinPageControlView_BigWidth, ShellCoinPageControlView_BigHeight);
-            imageView.image = [UIImage imageNamed:@"pagecurrent"];
+            imageView.image = [UIImage imageNamed:@"icon_indicate_sel"];
         }else{
             imageView.frame = CGRectMake(CGRectGetMaxX([view viewWithTag:10+i -1].frame) + ShellCoinPageControlView_DefaultMargin, (self.frame.size.height - ShellCoinPageControlView_DefaultHeight)/2., ShellCoinPageControlView_DefaultWidth, ShellCoinPageControlView_DefaultHeight);
-            imageView.image = [UIImage imageNamed:@"pagedefault"];
+            imageView.image = [UIImage imageNamed:@"icon_indicate_nor"];
         }
     }
 }

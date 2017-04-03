@@ -15,7 +15,9 @@
     // Initialization code
     self.markBtn.layer.cornerRadius = 11.;
     self.markBtn.layer.masksToBounds = YES;
-    self.contentView.backgroundColor = [UIColor orangeColor];
+    self.nameLabel.textColor = MacoTitleColor;
+    self.headerImageView.contentMode = UIViewContentModeScaleAspectFill;
+    self.headerImageView.layer.masksToBounds = YES;
 }
 
 @end

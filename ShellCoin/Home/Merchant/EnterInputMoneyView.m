@@ -26,6 +26,9 @@
         self.canelBtn.layer.cornerRadius = 25.;
         self.canelBtn.layer.masksToBounds = YES;
         self.sureView.layer.masksToBounds = YES;
+        self.alerLabel.textColor = MacoDetailColor;
+        self.alerLabel.adjustsFontSizeToFitWidth = YES;
+        self.moneyTF.textColor = MacoColor;
         self.sureView.layer.cornerRadius = 6;
         
         self.moneyTF.delegate = self;

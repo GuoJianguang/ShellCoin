@@ -41,7 +41,7 @@
 /**
  高德appstore的key
  */
-#define MAP_APPKEY_APPSTORE @"f0044bd0e21d341a9d8203cd79c94957"
+#define MAP_APPKEY_APPSTORE @"15e1e84be1440211759c5fb84fd70a59"
 /**
  高德企业版的key
  */

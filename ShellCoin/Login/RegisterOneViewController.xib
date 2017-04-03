@@ -38,11 +38,10 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P6I-cn-bXW">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="282"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_login" translatesAutoresizingMaskIntoConstraints="NO" id="R0V-9u-ImO">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pic4_login" translatesAutoresizingMaskIntoConstraints="NO" id="R0V-9u-ImO">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="282"/>
                         </imageView>
                     </subviews>
-                    <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="R0V-9u-ImO" firstAttribute="top" secondItem="P6I-cn-bXW" secondAttribute="top" id="4QS-BT-J2V"/>
                         <constraint firstAttribute="trailing" secondItem="R0V-9u-ImO" secondAttribute="trailing" id="ORH-hL-ssz"/>
@@ -54,7 +53,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Xl-v9-waM">
                     <rect key="frame" x="107" y="355.5" width="200" height="33.5"/>
                     <subviews>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="图验证码" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="3yj-0f-fBh">
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="图验证码" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="3yj-0f-fBh">
                             <rect key="frame" x="20" y="0.0" width="160" height="33.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
@@ -87,7 +86,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WHm-UK-IqQ">
                     <rect key="frame" x="107" y="409" width="200" height="33.5"/>
                     <subviews>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="验证码" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="U9u-Fu-raN">
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="验证码" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="U9u-Fu-raN">
                             <rect key="frame" x="20" y="0.0" width="165" height="33.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
@@ -104,7 +103,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8nn-Ww-ebH">
                     <rect key="frame" x="107" y="302" width="200" height="33.5"/>
                     <subviews>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入账号" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ciK-h9-KYB">
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入账号" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ciK-h9-KYB">
                             <rect key="frame" x="15" y="0.0" width="170" height="33.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
@@ -120,14 +119,13 @@
                         <constraint firstAttribute="width" constant="200" id="fhg-Ir-xD0"/>
                     </constraints>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ezX-dU-UKL">
-                    <rect key="frame" x="122" y="472.5" width="170" height="34"/>
-                    <color key="backgroundColor" red="0.8862745098" green="0.36470588240000001" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ezX-dU-UKL">
+                    <rect key="frame" x="122" y="480.5" width="170" height="50.5"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="170" id="nkf-eb-1oF"/>
-                        <constraint firstAttribute="width" secondItem="ezX-dU-UKL" secondAttribute="height" multiplier="5" id="rfE-iO-1x5"/>
+                        <constraint firstAttribute="width" secondItem="ezX-dU-UKL" secondAttribute="height" multiplier="594/177" id="rfE-iO-1x5"/>
                     </constraints>
-                    <state key="normal" title="下一步">
+                    <state key="normal" title="下一步" backgroundImage="btn_nor">
                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <connections>
@@ -135,8 +133,8 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gmw-Sy-VhB">
-                    <rect key="frame" x="245" y="442.5" width="62" height="27"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <rect key="frame" x="240" y="450.5" width="67" height="28"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <state key="normal" title="发送验证码">
                         <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
@@ -154,7 +152,7 @@
                 <constraint firstItem="8nn-Ww-ebH" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Bsg-i6-y7P"/>
                 <constraint firstItem="4Xl-v9-waM" firstAttribute="top" secondItem="8nn-Ww-ebH" secondAttribute="bottom" constant="20" id="DBx-bL-8zj"/>
                 <constraint firstItem="Gmw-Sy-VhB" firstAttribute="trailing" secondItem="WHm-UK-IqQ" secondAttribute="trailing" id="Dj2-g3-fKJ"/>
-                <constraint firstItem="Gmw-Sy-VhB" firstAttribute="top" secondItem="WHm-UK-IqQ" secondAttribute="bottom" id="Ftx-Pa-dgM"/>
+                <constraint firstItem="Gmw-Sy-VhB" firstAttribute="top" secondItem="WHm-UK-IqQ" secondAttribute="bottom" constant="8" id="Ftx-Pa-dgM"/>
                 <constraint firstItem="8nn-Ww-ebH" firstAttribute="top" secondItem="P6I-cn-bXW" secondAttribute="bottom" constant="20" id="Oeg-SG-CqZ"/>
                 <constraint firstItem="ezX-dU-UKL" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="SaJ-Sy-d1r"/>
                 <constraint firstItem="4Xl-v9-waM" firstAttribute="height" secondItem="8nn-Ww-ebH" secondAttribute="height" id="bae-gb-lKF"/>
@@ -163,13 +161,14 @@
                 <constraint firstItem="WHm-UK-IqQ" firstAttribute="height" secondItem="8nn-Ww-ebH" secondAttribute="height" id="kK3-Ob-Pvq"/>
                 <constraint firstAttribute="trailing" secondItem="P6I-cn-bXW" secondAttribute="trailing" id="l3a-du-KPb"/>
                 <constraint firstItem="WHm-UK-IqQ" firstAttribute="top" secondItem="4Xl-v9-waM" secondAttribute="bottom" constant="20" id="sHF-R9-cW4"/>
-                <constraint firstItem="ezX-dU-UKL" firstAttribute="top" secondItem="WHm-UK-IqQ" secondAttribute="bottom" constant="30" id="z9e-Gy-Xtg"/>
+                <constraint firstItem="ezX-dU-UKL" firstAttribute="top" secondItem="WHm-UK-IqQ" secondAttribute="bottom" constant="38" id="z9e-Gy-Xtg"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="127" y="-168"/>
+            <point key="canvasLocation" x="175" y="-157"/>
         </view>
     </objects>
     <resources>
-        <image name="bg_login" width="375" height="330"/>
+        <image name="btn_nor" width="198" height="59"/>
+        <image name="pic4_login" width="375" height="309"/>
     </resources>
 </document>

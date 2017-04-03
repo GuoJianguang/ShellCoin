@@ -13,5 +13,7 @@
 
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UIButton *locationBtn;
+- (IBAction)locationBtn:(UIButton *)sender;
 
 @end

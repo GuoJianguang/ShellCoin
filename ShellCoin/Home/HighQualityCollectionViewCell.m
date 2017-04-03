@@ -17,6 +17,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    self.name.textColor = MacoTitleColor;
 }
 
 - (void)setDataModel:(PopularMerModel *)dataModel

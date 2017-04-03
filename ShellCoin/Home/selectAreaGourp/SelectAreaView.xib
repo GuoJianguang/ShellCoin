@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SelectAreaView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Trh-BG-395">
+                    <rect key="frame" x="146" y="30" width="29" height="29"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="29" id="eVY-Me-ThI"/>
+                        <constraint firstAttribute="width" constant="29" id="oNd-Vm-Cb7"/>
+                    </constraints>
+                    <state key="normal" image="delet"/>
+                    <connections>
+                        <action selector="delet_btn:" destination="iN0-l3-epB" eventType="touchUpInside" id="FnE-md-3HA"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cxd-55-dJF">
+                    <rect key="frame" x="0.0" y="69" width="320" height="1"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="Idr-Jd-VaA"/>
+                    </constraints>
+                </view>
+                <view alpha="0.94999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YpL-Aw-iGV">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                    <color key="backgroundColor" red="0.8666666666666667" green="0.87450980392156863" blue="0.85490196078431369" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="cxd-55-dJF" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="9tr-fp-Qnk"/>
+                <constraint firstItem="YpL-Aw-iGV" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="CAC-EX-pIo"/>
+                <constraint firstItem="Trh-BG-395" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Ftv-ZD-EBY"/>
+                <constraint firstAttribute="trailing" secondItem="cxd-55-dJF" secondAttribute="trailing" id="GIO-fs-sv3"/>
+                <constraint firstAttribute="bottom" secondItem="YpL-Aw-iGV" secondAttribute="bottom" id="Kcc-Ji-iho"/>
+                <constraint firstItem="Trh-BG-395" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="30" id="Sbg-pj-gSQ"/>
+                <constraint firstItem="YpL-Aw-iGV" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="WZv-x2-3u1"/>
+                <constraint firstAttribute="trailing" secondItem="YpL-Aw-iGV" secondAttribute="trailing" id="o3b-Vo-Esd"/>
+                <constraint firstItem="cxd-55-dJF" firstAttribute="top" secondItem="Trh-BG-395" secondAttribute="bottom" constant="10" id="r0P-Pb-9uo"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="backView" destination="YpL-Aw-iGV" id="DSl-vr-DoE"/>
+            </connections>
+            <point key="canvasLocation" x="75" y="-129"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="delet" width="29" height="29"/>
+    </resources>
+</document>

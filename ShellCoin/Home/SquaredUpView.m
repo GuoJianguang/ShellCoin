@@ -76,7 +76,7 @@
     
     //pageControl
     self.squaredUpViewPageControl.numberPages = pages;
-    self.squaredUpViewPageControl.bounds = CGRectMake(0, 0, WIDTH, 10);
+    self.squaredUpViewPageControl.bounds = CGRectMake(0, 0, WIDTH, 13);
 //    self.squaredUpViewPageControl.center = CGPointMake(WIDTH/2.0, CGRectGetHeight(self.frame)-4);
 //    self.squaredUpViewPageControl.currentPageIndicatorTintColor = [UIColor greenColor];
 //    self.squaredUpViewPageControl.pageIndicatorTintColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1];
@@ -98,7 +98,7 @@
     if (!_squaredUpViewPageControl) {
         _squaredUpViewPageControl = [[ShellCoinPageControlView alloc]init];
 //        _squaredUpViewPageControl.hidesForSinglePage = YES;
-        _squaredUpViewPageControl.frame = CGRectMake(0, CGRectGetHeight(self.frame)-10, TWitdh, 10);
+        _squaredUpViewPageControl.frame = CGRectMake(0, CGRectGetHeight(self.frame)-13, TWitdh, 13);
 
         [self addSubview:_squaredUpViewPageControl];
     }

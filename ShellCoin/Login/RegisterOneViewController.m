@@ -24,17 +24,17 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     self.view.backgroundColor = [UIColor whiteColor];
     self.naviBar.backgroundColor = [UIColor clearColor];
     self.naviBar.title = @"注册";
+    self.naviBar.mineBgImageview.hidden = YES;
     self.naviBar.title_label.textColor = [UIColor whiteColor];
     self.naviBar.lineVIew.hidden = YES;
-    self.naviBar.backImage = [UIImage imageNamed:@"icon_back_white"];
+    [self.codeBtn setTitleColor:MacoColor forState:UIControlStateNormal];
+    [self.getGraphBtn setTitleColor:MacoColor forState:UIControlStateNormal];
     timeLefted = 60;
 
     self.imageHeight.constant = TWitdh*(66/75.);
-    self.bgimage.image = [UIImage imageNamed:@"bg_login.jpg"];
     
     self.loginWidth.constant = TWitdh*(526/750.);
     
@@ -59,23 +59,21 @@
     self.coedBtnHeight.constant = TWitdh*(60/750.);
     self.sureWidth.constant = TWitdh*(400/750.);
     CGFloat  sureBtnWidth = TWitdh*(400/750.);
-    self.nextBtn.bounds = CGRectMake(0, 0, sureBtnWidth, sureBtnWidth/5.);
-    self.nextBtn.layer.cornerRadius = self.nextBtn.bounds.size.height/2.;
+    self.nextBtn.bounds = CGRectMake(0, 0, sureBtnWidth, sureBtnWidth*(177/594.));
+//    self.nextBtn.layer.cornerRadius = self.nextBtn.bounds.size.height/2.;
     self.nextBtn.layer.masksToBounds = YES;
-    self.nextBtn.backgroundColor = MacoColor;
+//    self.nextBtn.backgroundColor = MacoColor;
     
     self.phone_num_tf.delegate = self;
     self.codeTF.delegate = self;
     self.grapTF.delegate = self;
-    
     if (THeight < 500) {
         //        self.userTop.constant = 0;
-        self.loginTop.constant = 20;
+        self.loginTop.constant = 35;
         self.imageHeight.constant = TWitdh*(50/75.);
         self.bgimage.contentMode = UIViewContentModeScaleAspectFill;
         self.bgimage.layer.masksToBounds = YES;
     }
-    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -167,6 +165,7 @@
     [self.timer invalidate];
     timeLefted = 60;
     self.codeBtn.layer.borderColor = MacoColor.CGColor;
+    [self.codeBtn setTitleColor:MacoColor forState:UIControlStateNormal];
     [self.codeBtn setTitle:@"重新获取" forState:UIControlStateNormal];
     self.codeBtn.enabled = YES;
 }

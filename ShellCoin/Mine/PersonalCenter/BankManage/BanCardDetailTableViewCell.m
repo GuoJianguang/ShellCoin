@@ -15,6 +15,8 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    self.alerLabel1.textColor =  self.alerLabel2.textColor =self.alerLabel2.textColor = self.alerLabel3.textColor =self.alerLabel4.textColor =self.alerLabel5.textColor =self.alerLabel6.textColor = MacoDetailColor;;
+    self.realNameLabel.textColor = self.cardNumLabel.textColor = self.addresslabel.textColor = self.bankLabel.textColor = self.wangdianLabel.textColor = self.kaihuhangLabel.textColor = self.hanghaoLabel.textColor = MacoTitleColor;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

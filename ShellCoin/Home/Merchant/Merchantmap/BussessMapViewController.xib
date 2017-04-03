@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BussessMapViewController">
+            <connections>
+                <outlet property="address_label" destination="LBd-mW-Cmu" id="1ot-2P-ger"/>
+                <outlet property="naviBtn" destination="kff-a9-lpe" id="RpH-zy-Ey9"/>
+                <outlet property="naviView" destination="tdg-0N-psp" id="QlQ-BM-Icb"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tdg-0N-psp">
+                    <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_location" translatesAutoresizingMaskIntoConstraints="NO" id="g2P-n3-bIy">
+                            <rect key="frame" x="8" y="10.5" width="30" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="g2P-n3-bIy" secondAttribute="height" multiplier="1:1" id="BEy-5g-peM"/>
+                            </constraints>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kff-a9-lpe">
+                            <rect key="frame" x="325" y="0.0" width="50" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="kff-a9-lpe" secondAttribute="height" id="fUx-se-Jp3"/>
+                            </constraints>
+                            <state key="normal" image="icon_navigation"/>
+                            <connections>
+                                <action selector="naviBtn:" destination="-1" eventType="touchUpInside" id="c4f-NN-MRC"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LBd-mW-Cmu">
+                            <rect key="frame" x="41" y="17" width="281" height="16"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="Orv-Kh-bzW"/>
+                        <constraint firstItem="g2P-n3-bIy" firstAttribute="centerY" secondItem="tdg-0N-psp" secondAttribute="centerY" id="Q5r-Bh-xFB"/>
+                        <constraint firstItem="LBd-mW-Cmu" firstAttribute="centerY" secondItem="tdg-0N-psp" secondAttribute="centerY" id="USz-AQ-sPv"/>
+                        <constraint firstItem="kff-a9-lpe" firstAttribute="leading" secondItem="LBd-mW-Cmu" secondAttribute="trailing" constant="3" id="aie-TW-tox"/>
+                        <constraint firstItem="g2P-n3-bIy" firstAttribute="leading" secondItem="tdg-0N-psp" secondAttribute="leading" constant="8" id="eV1-lu-Sdl"/>
+                        <constraint firstAttribute="trailing" secondItem="kff-a9-lpe" secondAttribute="trailing" id="edT-tz-ZLU"/>
+                        <constraint firstItem="LBd-mW-Cmu" firstAttribute="leading" secondItem="g2P-n3-bIy" secondAttribute="trailing" constant="3" id="rdJ-1Q-G8B"/>
+                        <constraint firstAttribute="bottom" secondItem="kff-a9-lpe" secondAttribute="bottom" id="rrj-09-nrs"/>
+                        <constraint firstItem="kff-a9-lpe" firstAttribute="top" secondItem="tdg-0N-psp" secondAttribute="top" id="sHW-pS-qoc"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="tdg-0N-psp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="0yB-bg-d1r"/>
+                <constraint firstAttribute="bottom" secondItem="tdg-0N-psp" secondAttribute="bottom" id="FcK-9T-8Lx"/>
+                <constraint firstAttribute="trailing" secondItem="tdg-0N-psp" secondAttribute="trailing" id="vhE-JF-KFN"/>
+            </constraints>
+            <point key="canvasLocation" x="-76" y="-359"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_location" width="30" height="30"/>
+        <image name="icon_navigation" width="44" height="44"/>
+    </resources>
+</document>

@@ -58,7 +58,7 @@
 
 
 - (void)setupUI {
-    self.pageFlowView.frame =  CGRectMake(0, 70, TWitdh, (TWitdh - 130) * 9 / 16 + 24);
+    self.pageFlowView.frame =  CGRectMake(0, 70, TWitdh, (TWitdh - 130) * 9 / 16 + 24 + 30);
     self.pageFlowView.delegate = self;
     self.pageFlowView.dataSource = self;
     self.pageFlowView.minimumPageAlpha = 0.1;
@@ -82,7 +82,7 @@
     
     [self.view addSubview:bottomScrollView];
     
-    self.manageView.frame = CGRectMake(0, (TWitdh - 130) * 9 / 16 + 24 + 64, TWitdh, 78);
+    self.manageView.frame = CGRectMake(0, (TWitdh - 130) * 9 / 16 + 24 + 64 + 30, TWitdh, 78);
     self.manageView.layer.masksToBounds = YES;
     [self.view addSubview:self.manageView];
     
@@ -95,7 +95,6 @@
 
     [self.view bringSubviewToFront:self.naviBar];
     [self getmyBankCardRequest];
-
 
 }
 
@@ -144,7 +143,7 @@
 
 #pragma mark NewPagedFlowView Delegate
 - (CGSize)sizeForPageInFlowView:(NewPagedFlowView *)flowView {
-    return CGSizeMake(TWitdh - 130, (TWitdh - 130) * 9 / 16);
+    return CGSizeMake(TWitdh - 90, (TWitdh - 90) * 314 / 576.);
 }
 
 - (void)didSelectCell:(UIView *)subView withSubViewIndex:(NSInteger)subIndex {
@@ -170,6 +169,7 @@
     }
     bannerView.frame = bannerView.mainImageView.frame;
     bannerView.banView.dataModel = self.dataSouceArray[index];
+    bannerView.banView.count = index;
     //在这里下载网络图片
     //  [bannerView.mainImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:hostUrlsImg,imageDict[@"img"]]] placeholderImage:[UIImage imageNamed:@""]];
     return bannerView;

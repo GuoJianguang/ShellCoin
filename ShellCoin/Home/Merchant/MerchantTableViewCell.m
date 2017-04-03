@@ -13,6 +13,10 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    self.name_label.textColor = MacoTitleColor;
+    self.detail_label.textColor = MacoDetailColor;
+    self.kimter_label.textColor = MacoDetailColor;
+    self.checkDetailLabe.textColor = MacoColor;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

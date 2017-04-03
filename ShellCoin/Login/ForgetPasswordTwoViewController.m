@@ -40,10 +40,10 @@
     
     self.sureWidth.constant = TWitdh*(400/750.);
     CGFloat  sureBtnWidth = TWitdh*(400/750.);
-    self.login_btn.bounds = CGRectMake(0, 0, sureBtnWidth, sureBtnWidth/5.);
+    self.login_btn.bounds = CGRectMake(0, 0, sureBtnWidth, sureBtnWidth*(177/594.));
     self.login_btn.layer.cornerRadius = self.login_btn.bounds.size.height/2.;
     self.login_btn.layer.masksToBounds = YES;
-    self.login_btn.backgroundColor = MacoColor;
+//    self.login_btn.backgroundColor = MacoColor;
     
     
     if (THeight < 500) {

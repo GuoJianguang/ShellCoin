@@ -61,7 +61,6 @@
     if (self.idcardTF.text.length == 18) {
         self.idcardTF.text = [self.idcardTF.text stringByReplacingCharactersInRange:NSMakeRange(1, 16) withString:@"****************"];
     }
-    
 }
 - (RealNameAutResultView *)resultView
 {

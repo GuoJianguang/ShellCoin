@@ -22,8 +22,7 @@
     self.naviBar.title = @"注册";
     self.naviBar.title_label.textColor = [UIColor whiteColor];
     self.naviBar.lineVIew.hidden = YES;
-    self.naviBar.backImage = [UIImage imageNamed:@"icon_back_white"];
-    self.bgimage.image = [UIImage imageNamed:@"bg_login.jpg"];
+    self.naviBar.mineBgImageview.hidden = YES;
     
     self.imageHeight.constant = TWitdh*(66/75.);
     self.loginWidth.constant = TWitdh*(526/750.);
@@ -41,10 +40,10 @@
     
     self.sureWidth.constant = TWitdh*(400/750.);
     CGFloat  sureBtnWidth = TWitdh*(400/750.);
-    self.login_btn.bounds = CGRectMake(0, 0, sureBtnWidth, sureBtnWidth/5.);
+    self.login_btn.bounds = CGRectMake(0, 0, sureBtnWidth, sureBtnWidth*(177/594.));
     self.login_btn.layer.cornerRadius = self.login_btn.bounds.size.height/2.;
     self.login_btn.layer.masksToBounds = YES;
-    self.login_btn.backgroundColor = MacoColor;
+//    self.login_btn.backgroundColor = MacoColor;
 
     self.password_tf.delegate = self;
     self.surePassword_tf.delegate = self;

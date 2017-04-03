@@ -69,7 +69,7 @@
             self.alerResultImageView.image = [UIImage imageNamed:@"pic5_personal"];
             [self.backBtn setBackgroundImage:[UIImage imageNamed:@"pic6_personal"] forState:UIControlStateNormal];
             [self.backBtn setTitle:@"手动认证" forState:UIControlStateNormal];
-            self.autResultLabel.text = @"填写身份证信息错误，请选择手动实名认证";
+            self.autResultLabel.text = @"填写身份证信息错误，请返回重新输入或者选择手动实名认证";
         }
             break;
         case Authentication_wait_audit:{

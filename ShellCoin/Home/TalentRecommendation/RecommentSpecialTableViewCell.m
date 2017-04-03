@@ -21,6 +21,8 @@
     // Initialization code
     self.detailCollectionView.delegate = self;
     self.detailCollectionView.dataSource = self;
+    self.title_label.textColor = MacoTitleColor;
+    self.detail_label.textColor = MacoDetailColor;
     
 }
 

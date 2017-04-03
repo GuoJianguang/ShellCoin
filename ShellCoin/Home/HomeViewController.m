@@ -12,11 +12,18 @@
 #import "HomeIndustryTableViewCell.h"
 #import "HomeRecommendedTableViewCell.h"
 #import "HomeMerchantTableViewCell.h"
+#import "CityListViewController.h"
+#import "LocationManager.h"
 
-
-@interface HomeViewController ()<UITabBarControllerDelegate,UITableViewDelegate,UITableViewDataSource>
+@interface HomeViewController ()<UITabBarControllerDelegate,UITableViewDelegate,UITableViewDataSource,CityListViewDelegate>
 @property (nonatomic, strong)NSMutableArray *privteDataSouceArray;
 @property (nonatomic, strong)NSMutableArray *popularDataSouceArray;
+//定位城市
+@property (nonatomic, strong)NSString *locationCity;
+@property (nonatomic, assign)BOOL isAlreadyRefrefsh;
+@property (nonatomic, assign)NSInteger page;
+
+
 @end
 
 @implementation HomeViewController
@@ -24,10 +31,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor colorWithRed:241/255. green:247/255. blue:247/255. alpha:1.];
+    self.view.backgroundColor = [UIColor colorFromHexString:@"#faf8f6"];
     self.tableView.backgroundColor = [UIColor clearColor];
     self.tabBarController.delegate = self;
-    
+    self.locationCity = @"成都";
+
     UIColor *itemSelectTintColor = [UIColor redColor];
 //    [[UITabBarItem appearance] setTitleTextAttributes:
 //     [NSDictionary dictionaryWithObjectsAndKeys:
@@ -41,7 +49,55 @@
     [[UITabBar appearance] setShadowImage:[UIImage imageWithColor:itemSelectTintColor frame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 44)]];
     [ShellCoinUserInfo shareUserInfos].locationCity = @"成都";
 
-    [self getPopularMRequest];
+    
+    __weak HomeViewController *weak_self = self;
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        weak_self.isAlreadyRefrefsh = YES;
+        //        [weak_self.tableView reloadData];
+        weak_self.page = 1;
+        [self getPopularMRequest];
+        //        [self getActicityRequest];
+    }];
+    self.tableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
+//        [self getPopularMRequest];
+    }];
+    //开启定位服务
+    [self loadDataUseLocation];
+}
+
+
+#pragma mark -使用当前位置加载数据
+- (BOOL)myContainsString:(NSString*)string and:(NSString *)otherString {
+    NSRange range = [string rangeOfString:otherString];
+    return range.length != 0;
+}
+
+-(void) loadDataUseLocation {
+    [ShellCoinUserInfo shareUserInfos].locationCity = @"成都";
+    NSString *currentCity = [LocationManager sharedLocationManager].currentCity;
+    __weak typeof(HomeViewController *) weak_self = self;
+    if (!currentCity) {
+        [[LocationManager sharedLocationManager] startLocationWithGDManager];
+        [LocationManager sharedLocationManager].finishLocation = ^(NSString *city,NSString *areaName,NSError *error ,BOOL success){
+            if (city) {
+                if ([self myContainsString:city and:@"市"]) {
+                    city =  [city stringByReplacingOccurrencesOfString:@"市" withString:@""];
+                }
+                [ShellCoinUserInfo shareUserInfos].locationCity = city;
+                [weak_self.locationBtn setTitle:city forState:UIControlStateNormal];
+                self.locationCity = city;
+                [self.tableView.mj_header beginRefreshing];
+            }else{
+                [ShellCoinUserInfo shareUserInfos].locationCity = @"成都";
+                [weak_self.locationBtn setTitle:@"成都" forState:UIControlStateNormal];
+                [self.tableView.mj_header beginRefreshing];
+            }
+        };
+    }else {
+        [ShellCoinUserInfo shareUserInfos].locationCity = @"成都";
+        [weak_self.locationBtn setTitle:@"成都" forState:UIControlStateNormal];
+        [self.tableView.mj_header beginRefreshing];
+    }
 }
 
 
@@ -103,7 +159,7 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.row == 0) {
-        return TWitdh*(140/320.);
+        return TWitdh*(30/75.);
 
     }else if(indexPath.row == 1){
         CGFloat intervalX = 50.0;/**<横向间隔*/
@@ -112,10 +168,10 @@
         CGFloat widthAndHeightRatio = 2.0/3.0;/**<宽高比*/
         CGFloat buttonWidth = (TWitdh - 40 - intervalX * (columnNum - 1))/(CGFloat)columnNum;/**<button的宽度*/
         CGFloat buttonHeight = buttonWidth/widthAndHeightRatio;/**<button的高度*/
-        return buttonHeight * 2 + intervalY*2 + 18;
+        return buttonHeight * 2 + intervalY*2 + 25;
 
     }else if(indexPath.row == 2){
-        return TWitdh*(70/64.) + TWitdh*(10/120.);
+        return TWitdh*(72/75.) + TWitdh*(86/750.);
 
     }else{
         return TWitdh*(95/320.);
@@ -167,6 +223,7 @@
 - (void)getPopularMRequest{
     NSDictionary *parms = @{@"city":[ShellCoinUserInfo shareUserInfos].locationCity};
     [HttpClient POST:@"mch/hotMchs" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
+        [self.tableView.mj_header endRefreshing];
         if (IsRequestTrue) {
             [self.popularDataSouceArray removeAllObjects];
             for (NSDictionary *dic in jsonObject[@"data"]) {
@@ -178,7 +235,7 @@
         }
         
     } failure:^(NSURLSessionDataTask *operation, NSError *error) {
-        
+        [self.tableView.mj_header endRefreshing];
     }];
     
 }
@@ -190,5 +247,43 @@
 }
 
 
+#pragma mark - 选择城市
+- (IBAction)locationBtn:(UIButton *)sender {
+    CityListViewController *cityListView = [[CityListViewController alloc]init];
+    cityListView.delegate = self;
+    //热门城市列表
+    cityListView.arrayHotCity = [NSMutableArray arrayWithObjects:@"成都",@"重庆",@"昆明",@"德阳",@"资阳", nil];
+    //历史选择城市列表
+    NSMutableArray *historicalCity = [[NSUserDefaults standardUserDefaults]objectForKey:CommonlyUsedCity];
+    cityListView.arrayHistoricalCity = historicalCity;
+    //定位城市列表
+    cityListView.arrayLocatingCity   = [NSMutableArray arrayWithObjects:self.locationCity, nil];
+    
+    [self presentViewController:cityListView animated:YES completion:nil];
+}
 
+- (void)didClickedWithCityName:(NSString*)cityName{
+    if ([[NSUserDefaults standardUserDefaults]objectForKey:CommonlyUsedCity]) {
+        NSArray *historicalCity = [[NSUserDefaults standardUserDefaults]objectForKey:CommonlyUsedCity];
+        NSMutableArray *array = [NSMutableArray arrayWithArray:historicalCity];
+        
+        if (![array containsObject:cityName]) {
+            [array insertObject:cityName atIndex:0];
+            if (array.count > 3) {
+                [array removeLastObject];
+            }
+        }else{
+            [array exchangeObjectAtIndex:[array indexOfObject:cityName] withObjectAtIndex:0];
+        }
+        [[NSUserDefaults standardUserDefaults]setObject:array forKey:CommonlyUsedCity];
+        [[NSUserDefaults standardUserDefaults]synchronize];
+    }else{
+        NSMutableArray *array = [NSMutableArray arrayWithArray:@[cityName]];
+        [[NSUserDefaults standardUserDefaults]setObject:array forKey:CommonlyUsedCity];
+        [[NSUserDefaults standardUserDefaults]synchronize];
+    }
+    [ShellCoinUserInfo shareUserInfos].locationCity = cityName;
+    [self.locationBtn setTitle:cityName forState:UIControlStateNormal];
+    [self.tableView.mj_header beginRefreshing];
+}
 @end
