@@ -8,6 +8,8 @@
 
 #import "BaseViewController.h"
 #import "BankCardInfoModel.h"
+#import "WithDrawalResultView.h"
+
 
 @interface WithdrawalViewController : BaseViewController
 
@@ -35,5 +37,11 @@
 
 
 @property (nonatomic, strong)BankCardInfoModel *bankModel;
+
+
+@property (nonatomic,strong)WithDrawalResultView *resultView;
+
+
+- (void)withDrawalSuccess;
 
 @end

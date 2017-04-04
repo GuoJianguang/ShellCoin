@@ -16,4 +16,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *locationBtn;
 - (IBAction)locationBtn:(UIButton *)sender;
 
+- (IBAction)searchBtn:(id)sender;
+
+
 @end

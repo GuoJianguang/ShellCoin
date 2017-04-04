@@ -26,8 +26,6 @@
     
     self.imageHeight.constant = TWitdh*(66/75.);
     self.loginWidth.constant = TWitdh*(526/750.);
-    
-    
     self.password_view.layer.cornerRadius = (self.loginWidth.constant*(88/526.))/2.;
     self.password_view.layer.masksToBounds = YES;
     self.password_view.layer.borderWidth = 1;
@@ -47,7 +45,6 @@
 
     self.password_tf.delegate = self;
     self.surePassword_tf.delegate = self;
-    
     if (THeight < 500) {
         //        self.userTop.constant = 0;
         self.loginTop.constant = 20;
@@ -55,7 +52,6 @@
         self.bgimage.contentMode = UIViewContentModeScaleAspectFill;
         self.bgimage.layer.masksToBounds = YES;
     }
-    
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(clickProLabel)];
     self.protocolLabel.userInteractionEnabled = YES;
     [self.protocolLabel addGestureRecognizer:tap];

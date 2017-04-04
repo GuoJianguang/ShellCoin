@@ -45,7 +45,7 @@
     self.backgroundColor = [UIColor clearColor];
     self.title_label.textColor = [UIColor whiteColor];
     self.back_title.textColor = [UIColor blackColor];
-    [self.detail_btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [self.detail_btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 }
 
 - (instancetype)initWithCoder:(NSCoder *)aDecoder

@@ -14,6 +14,8 @@
 #import "HomeMerchantTableViewCell.h"
 #import "CityListViewController.h"
 #import "LocationManager.h"
+#import "RecommentModel.h"
+#import "MerchantSearchViewController.h"
 
 @interface HomeViewController ()<UITabBarControllerDelegate,UITableViewDelegate,UITableViewDataSource,CityListViewDelegate>
 @property (nonatomic, strong)NSMutableArray *privteDataSouceArray;
@@ -35,7 +37,9 @@
     self.tableView.backgroundColor = [UIColor clearColor];
     self.tabBarController.delegate = self;
     self.locationCity = @"成都";
-
+    
+    
+    
     UIColor *itemSelectTintColor = [UIColor redColor];
 //    [[UITabBarItem appearance] setTitleTextAttributes:
 //     [NSDictionary dictionaryWithObjectsAndKeys:
@@ -50,6 +54,7 @@
     [ShellCoinUserInfo shareUserInfos].locationCity = @"成都";
 
     
+    
     __weak HomeViewController *weak_self = self;
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         weak_self.isAlreadyRefrefsh = YES;
@@ -59,6 +64,7 @@
         //        [self getActicityRequest];
     }];
     self.tableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
+        [self.tableView.mj_footer endRefreshing];
 //        [self getPopularMRequest];
     }];
     //开启定位服务
@@ -121,7 +127,7 @@
 #pragma mark - UITableView
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 20;
+    return self.privteDataSouceArray.count + 3;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -151,9 +157,9 @@
         if (!cell) {
             cell = [HomeMerchantTableViewCell newCell];
         }
+        cell.dataModel = self.privteDataSouceArray[indexPath.row - 3];
         return cell;
     }
-    
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -178,6 +184,26 @@
  
     }
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.row < 3) {
+        return;
+    }
+    RecommentModel *model = self.privteDataSouceArray[indexPath.row - 3];
+    BaseHtmlViewController *htmlVC = [[BaseHtmlViewController alloc]init];
+    htmlVC.htmlUrl = model.jumpValue;
+    if ([model.remark isEqualToString:@""] ) {
+        htmlVC.isAboutMerChant = NO;
+    }else{
+        htmlVC.isAboutMerChant = YES;
+        htmlVC.merchantCode = model.remark;
+    }
+    htmlVC.htmlTitle = model.name;
+    [self.navigationController pushViewController:htmlVC animated:YES];
+
+}
+
 #pragma mark - UITabBarDelegate
 
 - (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController
@@ -196,56 +222,48 @@
 
 
 
-#pragma mark - 数据请求
-#pragma mark - 请求人气商家，私人定制接口
-
-//- (void)getPersonalRequest{
-//    
-//    NSDictionary *parms = @{@"longitude":NullToNumber(@([ShellCoinUserInfo shareUserInfos].locationCoordinate.longitude)),
-//                            @"latitude":NullToNumber(@([ShellCoinUserInfo shareUserInfos].locationCoordinate.latitude))};
-//    [HttpClient POST:@"user/personal" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
-//        if (IsRequestTrue) {
-//            [self.privteDataSouceArray removeAllObjects];
-//            NSArray *array = jsonObject[@"data"];
-//            for (NSDictionary *dic in array) {
-//                [self.privteDataSouceArray addObject:[SecondACtivityModel modelWithDic:dic]];
-//            }
-//            [self.tableView reloadData];
-//        }
-//        
-//    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
-//        
-//    }];
-//}
-
-
-
+#pragma mark - 请求人气商家，达人推荐接口
 - (void)getPopularMRequest{
     NSDictionary *parms = @{@"city":[ShellCoinUserInfo shareUserInfos].locationCity};
     [HttpClient POST:@"mch/hotMchs" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
-        [self.tableView.mj_header endRefreshing];
         if (IsRequestTrue) {
             [self.popularDataSouceArray removeAllObjects];
             for (NSDictionary *dic in jsonObject[@"data"]) {
                 PopularMerModel *model = [PopularMerModel modelWithDic:dic];
                 [self.popularDataSouceArray addObject:model];
             }
-            [self.tableView reloadData];
-//            [self getPersonalRequest];
+            [self getPersonalRequest];
         }
         
     } failure:^(NSURLSessionDataTask *operation, NSError *error) {
         [self.tableView.mj_header endRefreshing];
     }];
-    
 }
 
+- (void)getPersonalRequest{
+    
+    NSDictionary *parms = @{@"longitude":NullToNumber(@([ShellCoinUserInfo shareUserInfos].locationCoordinate.longitude)),
+                            @"latitude":NullToNumber(@([ShellCoinUserInfo shareUserInfos].locationCoordinate.latitude))};
+    [HttpClient POST:@"user/personal" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
+        [self.tableView.mj_header endRefreshing];
+        if (IsRequestTrue) {
+            [self.privteDataSouceArray removeAllObjects];
+            NSArray *array = jsonObject[@"data"];
+            for (NSDictionary *dic in array) {
+                [self.privteDataSouceArray addObject:[RecommentModel modelWithDic:dic]];
+            }
+            [self.tableView reloadData];
+        }
+        
+    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
+        [self.tableView.mj_header endRefreshing];
+    }];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 
 #pragma mark - 选择城市
 - (IBAction)locationBtn:(UIButton *)sender {
@@ -262,11 +280,20 @@
     [self presentViewController:cityListView animated:YES completion:nil];
 }
 
+#pragma mark - 搜索点击事件
+
+- (IBAction)searchBtn:(id)sender {
+    MerchantSearchViewController *searchVC = [[MerchantSearchViewController alloc]init];
+    searchVC.cityName = [ShellCoinUserInfo shareUserInfos].locationCity;
+
+    [self.navigationController pushViewController:searchVC animated:YES];
+    
+}
+
 - (void)didClickedWithCityName:(NSString*)cityName{
     if ([[NSUserDefaults standardUserDefaults]objectForKey:CommonlyUsedCity]) {
         NSArray *historicalCity = [[NSUserDefaults standardUserDefaults]objectForKey:CommonlyUsedCity];
         NSMutableArray *array = [NSMutableArray arrayWithArray:historicalCity];
-        
         if (![array containsObject:cityName]) {
             [array insertObject:cityName atIndex:0];
             if (array.count > 3) {
@@ -283,6 +310,9 @@
         [[NSUserDefaults standardUserDefaults]synchronize];
     }
     [ShellCoinUserInfo shareUserInfos].locationCity = cityName;
+    if (cityName.length > 4) {
+        cityName = [cityName substringToIndex:4];
+    }
     [self.locationBtn setTitle:cityName forState:UIControlStateNormal];
     [self.tableView.mj_header beginRefreshing];
 }

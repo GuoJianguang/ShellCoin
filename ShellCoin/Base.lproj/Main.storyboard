@@ -86,7 +86,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pEO-l8-3a4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-511" y="-742"/>
+            <point key="canvasLocation" x="-665" y="-791"/>
         </scene>
         <!--商家-->
         <scene sceneID="ZDF-hZ-8z1">
@@ -131,6 +131,9 @@
                                                 <state key="normal" image="icon_search">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="searchBtn:" destination="PoU-1Z-qcq" eventType="touchUpInside" id="qmJ-aA-U1G"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="首页" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fD4-BV-J7J">
                                                 <rect key="frame" x="170" y="12" width="35" height="21"/>
@@ -196,7 +199,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N4I-6i-F7P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="127" y="-787"/>
+            <point key="canvasLocation" x="74" y="-804"/>
         </scene>
     </scenes>
     <resources>

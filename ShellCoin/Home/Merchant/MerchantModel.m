@@ -32,6 +32,7 @@
     model.trade = NullToSpace(dic[@"trade"]);
     model.keyword = NullToSpace(dic[@"keyword"]);
     model.distance = NullToSpace(dic[@"distance"]);
+    model.userCollectionFlag = NullToNumber(dic[@"userCollectionFlag"]);
     return model;
 }
 

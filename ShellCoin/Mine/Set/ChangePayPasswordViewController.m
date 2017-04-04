@@ -8,6 +8,7 @@
 
 #import "ChangePayPasswordViewController.h"
 
+
 @interface ChangePayPasswordViewController ()<BasenavigationDelegate>
 @property (nonatomic,strong) NSTimer *timer1;
 
@@ -163,6 +164,6 @@
     self.verCodeBtn.enabled = YES;
 }
 - (IBAction)finggerCodeSwitch:(UISwitch *)sender {
-    
+
 }
 @end

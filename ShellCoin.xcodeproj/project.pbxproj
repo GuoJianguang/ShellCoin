@@ -76,6 +76,12 @@
 		BC36CFE71E80C9AD00A51BF4 /* RecommentSpecilCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC36CFE51E80C9AD00A51BF4 /* RecommentSpecilCollectionViewCell.m */; };
 		BC36CFE81E80C9AD00A51BF4 /* RecommentSpecilCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC36CFE61E80C9AD00A51BF4 /* RecommentSpecilCollectionViewCell.xib */; };
 		BC36CFEB1E80CB4300A51BF4 /* RecommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BC36CFEA1E80CB4300A51BF4 /* RecommentModel.m */; };
+		BC36EA431E937E600097F2F2 /* MyCollectionListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC36EA411E937E600097F2F2 /* MyCollectionListViewController.m */; };
+		BC36EA441E937E600097F2F2 /* MyCollectionListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC36EA421E937E600097F2F2 /* MyCollectionListViewController.xib */; };
+		BC36EA471E93B8530097F2F2 /* WithDrawalResultView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC36EA461E93B8530097F2F2 /* WithDrawalResultView.m */; };
+		BC36EA491E93B8600097F2F2 /* WithDrawalResultView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC36EA481E93B8600097F2F2 /* WithDrawalResultView.xib */; };
+		BC36EA4C1E93BF0F0097F2F2 /* OnlinePayResultView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC36EA4B1E93BF0F0097F2F2 /* OnlinePayResultView.m */; };
+		BC36EA4E1E93BF1A0097F2F2 /* OnlinePayResultView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC36EA4D1E93BF1A0097F2F2 /* OnlinePayResultView.xib */; };
 		BC41DAE81E91E8D7008FC9DC /* Home.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC41DAE71E91E8D7008FC9DC /* Home.xcassets */; };
 		BC41DAEA1E91F781008FC9DC /* Login.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC41DAE91E91F781008FC9DC /* Login.xcassets */; };
 		BC41DAED1E91FD06008FC9DC /* RootLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC41DAEC1E91FD06008FC9DC /* RootLoginViewController.m */; };
@@ -213,6 +219,19 @@
 		BCC8E1A11E88FFB7004DBDA3 /* MerchantTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC8E19F1E88FFB7004DBDA3 /* MerchantTableViewCell.m */; };
 		BCC8E1A21E88FFB7004DBDA3 /* MerchantTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCC8E1A01E88FFB7004DBDA3 /* MerchantTableViewCell.xib */; };
 		BCC8E1A51E89027A004DBDA3 /* MerchantModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC8E1A41E89027A004DBDA3 /* MerchantModel.m */; };
+		BCD736F91E935017001F706C /* MessageListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD736F71E935017001F706C /* MessageListViewController.m */; };
+		BCD736FA1E935017001F706C /* MessageListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCD736F81E935017001F706C /* MessageListViewController.xib */; };
+		BCD736FE1E93502D001F706C /* MessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD736FC1E93502D001F706C /* MessageTableViewCell.m */; };
+		BCD736FF1E93502D001F706C /* MessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCD736FD1E93502D001F706C /* MessageTableViewCell.xib */; };
+		BCD737031E935438001F706C /* MessageDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD737011E935438001F706C /* MessageDetailViewController.m */; };
+		BCD737041E935438001F706C /* MessageDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCD737021E935438001F706C /* MessageDetailViewController.xib */; };
+		BCD737081E93544D001F706C /* MessageDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD737061E93544D001F706C /* MessageDetailTableViewCell.m */; };
+		BCD737091E93544D001F706C /* MessageDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCD737071E93544D001F706C /* MessageDetailTableViewCell.xib */; };
+		BCD7370C1E9354A0001F706C /* UILabel+StringFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD7370B1E9354A0001F706C /* UILabel+StringFrame.m */; };
+		BCD737151E936726001F706C /* MerchantSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD737131E936726001F706C /* MerchantSearchViewController.m */; };
+		BCD737161E936726001F706C /* MerchantSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCD737141E936726001F706C /* MerchantSearchViewController.xib */; };
+		BCD7371A1E936C92001F706C /* MerchantSearchRsultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD737181E936C92001F706C /* MerchantSearchRsultViewController.m */; };
+		BCD7371B1E936C92001F706C /* MerchantSearchRsultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCD737191E936C92001F706C /* MerchantSearchRsultViewController.xib */; };
 		BCE5EED71E5C41030055D828 /* Colours.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE5EED61E5C41030055D828 /* Colours.m */; };
 		BCE5EED91E5C41900055D828 /* Mine.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCE5EED81E5C41900055D828 /* Mine.xcassets */; };
 		BCEC06991E83B6FA0059C2C4 /* BillIntegaralModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEC06981E83B6FA0059C2C4 /* BillIntegaralModel.m */; };
@@ -384,6 +403,15 @@
 		BC36CFE61E80C9AD00A51BF4 /* RecommentSpecilCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecommentSpecilCollectionViewCell.xib; sourceTree = "<group>"; };
 		BC36CFE91E80CB4300A51BF4 /* RecommentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommentModel.h; sourceTree = "<group>"; };
 		BC36CFEA1E80CB4300A51BF4 /* RecommentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommentModel.m; sourceTree = "<group>"; };
+		BC36EA401E937E600097F2F2 /* MyCollectionListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCollectionListViewController.h; sourceTree = "<group>"; };
+		BC36EA411E937E600097F2F2 /* MyCollectionListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCollectionListViewController.m; sourceTree = "<group>"; };
+		BC36EA421E937E600097F2F2 /* MyCollectionListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyCollectionListViewController.xib; sourceTree = "<group>"; };
+		BC36EA451E93B8530097F2F2 /* WithDrawalResultView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WithDrawalResultView.h; sourceTree = "<group>"; };
+		BC36EA461E93B8530097F2F2 /* WithDrawalResultView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WithDrawalResultView.m; sourceTree = "<group>"; };
+		BC36EA481E93B8600097F2F2 /* WithDrawalResultView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WithDrawalResultView.xib; sourceTree = "<group>"; };
+		BC36EA4A1E93BF0F0097F2F2 /* OnlinePayResultView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnlinePayResultView.h; sourceTree = "<group>"; };
+		BC36EA4B1E93BF0F0097F2F2 /* OnlinePayResultView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnlinePayResultView.m; sourceTree = "<group>"; };
+		BC36EA4D1E93BF1A0097F2F2 /* OnlinePayResultView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OnlinePayResultView.xib; sourceTree = "<group>"; };
 		BC41DAE71E91E8D7008FC9DC /* Home.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Home.xcassets; sourceTree = "<group>"; };
 		BC41DAE91E91F781008FC9DC /* Login.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Login.xcassets; sourceTree = "<group>"; };
 		BC41DAEB1E91FD06008FC9DC /* RootLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootLoginViewController.h; sourceTree = "<group>"; };
@@ -601,6 +629,26 @@
 		BCC8E1A01E88FFB7004DBDA3 /* MerchantTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MerchantTableViewCell.xib; sourceTree = "<group>"; };
 		BCC8E1A31E89027A004DBDA3 /* MerchantModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MerchantModel.h; sourceTree = "<group>"; };
 		BCC8E1A41E89027A004DBDA3 /* MerchantModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MerchantModel.m; sourceTree = "<group>"; };
+		BCD736F61E935017001F706C /* MessageListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageListViewController.h; sourceTree = "<group>"; };
+		BCD736F71E935017001F706C /* MessageListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageListViewController.m; sourceTree = "<group>"; };
+		BCD736F81E935017001F706C /* MessageListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageListViewController.xib; sourceTree = "<group>"; };
+		BCD736FB1E93502D001F706C /* MessageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageTableViewCell.h; sourceTree = "<group>"; };
+		BCD736FC1E93502D001F706C /* MessageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageTableViewCell.m; sourceTree = "<group>"; };
+		BCD736FD1E93502D001F706C /* MessageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageTableViewCell.xib; sourceTree = "<group>"; };
+		BCD737001E935438001F706C /* MessageDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageDetailViewController.h; sourceTree = "<group>"; };
+		BCD737011E935438001F706C /* MessageDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageDetailViewController.m; sourceTree = "<group>"; };
+		BCD737021E935438001F706C /* MessageDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageDetailViewController.xib; sourceTree = "<group>"; };
+		BCD737051E93544D001F706C /* MessageDetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageDetailTableViewCell.h; sourceTree = "<group>"; };
+		BCD737061E93544D001F706C /* MessageDetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageDetailTableViewCell.m; sourceTree = "<group>"; };
+		BCD737071E93544D001F706C /* MessageDetailTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageDetailTableViewCell.xib; sourceTree = "<group>"; };
+		BCD7370A1E9354A0001F706C /* UILabel+StringFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+StringFrame.h"; sourceTree = "<group>"; };
+		BCD7370B1E9354A0001F706C /* UILabel+StringFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+StringFrame.m"; sourceTree = "<group>"; };
+		BCD737121E936726001F706C /* MerchantSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MerchantSearchViewController.h; sourceTree = "<group>"; };
+		BCD737131E936726001F706C /* MerchantSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MerchantSearchViewController.m; sourceTree = "<group>"; };
+		BCD737141E936726001F706C /* MerchantSearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MerchantSearchViewController.xib; sourceTree = "<group>"; };
+		BCD737171E936C92001F706C /* MerchantSearchRsultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MerchantSearchRsultViewController.h; sourceTree = "<group>"; };
+		BCD737181E936C92001F706C /* MerchantSearchRsultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MerchantSearchRsultViewController.m; sourceTree = "<group>"; };
+		BCD737191E936C92001F706C /* MerchantSearchRsultViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MerchantSearchRsultViewController.xib; sourceTree = "<group>"; };
 		BCE5EED51E5C41030055D828 /* Colours.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Colours.h; sourceTree = "<group>"; };
 		BCE5EED61E5C41030055D828 /* Colours.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Colours.m; sourceTree = "<group>"; };
 		BCE5EED81E5C41900055D828 /* Mine.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Mine.xcassets; sourceTree = "<group>"; };
@@ -1005,6 +1053,7 @@
 		BC4AAC171E4D6E31006568A6 /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				BCD736F51E935000001F706C /* Message */,
 				BCFE20611E7798C4002BC28C /* trade-in */,
 				BC9B3DE81E7690D5003DC241 /* RecommendEarnings */,
 				BC0A583A1E728D3E0077C8A9 /* Bill */,
@@ -1071,6 +1120,8 @@
 				BC57B6F91E7FA9DC006AF4D1 /* ShellCoinPageControlView.m */,
 				BCC8E1951E88F2A4004DBDA3 /* UIImage+ColorImage.h */,
 				BCC8E1961E88F2A4004DBDA3 /* UIImage+ColorImage.m */,
+				BCD7370A1E9354A0001F706C /* UILabel+StringFrame.h */,
+				BCD7370B1E9354A0001F706C /* UILabel+StringFrame.m */,
 				BCB9A7C41E89F4B600F3E966 /* Public.xcassets */,
 			);
 			path = Public;
@@ -1298,6 +1349,9 @@
 				BCFE209B1E77EF2A002BC28C /* WithdrawalViewController.h */,
 				BCFE209C1E77EF2A002BC28C /* WithdrawalViewController.m */,
 				BCFE209D1E77EF2A002BC28C /* WithdrawalViewController.xib */,
+				BC36EA451E93B8530097F2F2 /* WithDrawalResultView.h */,
+				BC36EA461E93B8530097F2F2 /* WithDrawalResultView.m */,
+				BC36EA481E93B8600097F2F2 /* WithDrawalResultView.xib */,
 			);
 			path = RecommendEarnings;
 			sourceTree = "<group>";
@@ -1311,6 +1365,9 @@
 				BC9B3DDB1E7688AD003DC241 /* PersonCenterViewController.h */,
 				BC9B3DDC1E7688AD003DC241 /* PersonCenterViewController.m */,
 				BC9B3DDD1E7688AD003DC241 /* PersonCenterViewController.xib */,
+				BC36EA401E937E600097F2F2 /* MyCollectionListViewController.h */,
+				BC36EA411E937E600097F2F2 /* MyCollectionListViewController.m */,
+				BC36EA421E937E600097F2F2 /* MyCollectionListViewController.xib */,
 				BC9B3DE21E768919003DC241 /* myQrCode */,
 				BC9B3DB71E76837B003DC241 /* BankManage */,
 				BC9B3DA71E763AC5003DC241 /* Realname authentication */,
@@ -1339,9 +1396,37 @@
 				BC054D451E8A095B00062AC5 /* OnlinePayViewController.h */,
 				BC054D461E8A095B00062AC5 /* OnlinePayViewController.m */,
 				BC054D471E8A095B00062AC5 /* OnlinePayViewController.xib */,
+				BCD737121E936726001F706C /* MerchantSearchViewController.h */,
+				BCD737131E936726001F706C /* MerchantSearchViewController.m */,
+				BCD737141E936726001F706C /* MerchantSearchViewController.xib */,
+				BCD737171E936C92001F706C /* MerchantSearchRsultViewController.h */,
+				BCD737181E936C92001F706C /* MerchantSearchRsultViewController.m */,
+				BCD737191E936C92001F706C /* MerchantSearchRsultViewController.xib */,
+				BC36EA4A1E93BF0F0097F2F2 /* OnlinePayResultView.h */,
+				BC36EA4B1E93BF0F0097F2F2 /* OnlinePayResultView.m */,
+				BC36EA4D1E93BF1A0097F2F2 /* OnlinePayResultView.xib */,
 				BC34A1D31E92646700C786C0 /* Merchantmap */,
 			);
 			path = Merchant;
+			sourceTree = "<group>";
+		};
+		BCD736F51E935000001F706C /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				BCD736F61E935017001F706C /* MessageListViewController.h */,
+				BCD736F71E935017001F706C /* MessageListViewController.m */,
+				BCD736F81E935017001F706C /* MessageListViewController.xib */,
+				BCD736FB1E93502D001F706C /* MessageTableViewCell.h */,
+				BCD736FC1E93502D001F706C /* MessageTableViewCell.m */,
+				BCD736FD1E93502D001F706C /* MessageTableViewCell.xib */,
+				BCD737001E935438001F706C /* MessageDetailViewController.h */,
+				BCD737011E935438001F706C /* MessageDetailViewController.m */,
+				BCD737021E935438001F706C /* MessageDetailViewController.xib */,
+				BCD737051E93544D001F706C /* MessageDetailTableViewCell.h */,
+				BCD737061E93544D001F706C /* MessageDetailTableViewCell.m */,
+				BCD737071E93544D001F706C /* MessageDetailTableViewCell.xib */,
+			);
+			path = Message;
 			sourceTree = "<group>";
 		};
 		BCE5EED41E5C41030055D828 /* Colours */ = {
@@ -1548,6 +1633,7 @@
 				BC5278FE1E8DF8BF004DD703 /* PersonalCenter.xcassets in Resources */,
 				BC9B3DB11E7648AF003DC241 /* RealNameAutResultView.xib in Resources */,
 				BCFE20701E77C7E6002BC28C /* SelectBanCardView.xib in Resources */,
+				BCD737041E935438001F706C /* MessageDetailViewController.xib in Resources */,
 				BC34A1CF1E9256CA00C786C0 /* SelectAreaView.xib in Resources */,
 				BC9B3DED1E7690F2003DC241 /* RecommentEarningsViewController.xib in Resources */,
 				BC9B3E061E7698CC003DC241 /* ManagerBankCardViewController.xib in Resources */,
@@ -1562,6 +1648,7 @@
 				BC9B3DCB1E76837B003DC241 /* EditbankInfoTableViewCell.xib in Resources */,
 				BC4AABF01E4D69E2006568A6 /* LaunchScreen.storyboard in Resources */,
 				BC9B3DCD1E76837B003DC241 /* EditBankInfoViewController.xib in Resources */,
+				BC36EA4E1E93BF1A0097F2F2 /* OnlinePayResultView.xib in Resources */,
 				BC9B3E021E7698CC003DC241 /* BanCardDetailTableViewCell.xib in Resources */,
 				BC4AABED1E4D69E2006568A6 /* Assets.xcassets in Resources */,
 				BC9B3DE71E76892C003DC241 /* MyQrCodeViewController.xib in Resources */,
@@ -1572,6 +1659,7 @@
 				BC054D551E8A402E00062AC5 /* Bill12View.xib in Resources */,
 				BC41DAE81E91E8D7008FC9DC /* Home.xcassets in Resources */,
 				BC054D491E8A095B00062AC5 /* OnlinePayViewController.xib in Resources */,
+				BCD737161E936726001F706C /* MerchantSearchViewController.xib in Resources */,
 				BC34A1BF1E9256CA00C786C0 /* AreaTableViewCell.xib in Resources */,
 				BC9B3DAC1E763AF4003DC241 /* RealnameViewController.xib in Resources */,
 				BC9B3DB61E767A9E003DC241 /* ManualCertificationViewController.xib in Resources */,
@@ -1594,14 +1682,19 @@
 				BC4AABE81E4D69E2006568A6 /* Main.storyboard in Resources */,
 				BCFE208E1E77E206002BC28C /* RegisterOneViewController.xib in Resources */,
 				BCFE209F1E77EF2A002BC28C /* WithdrawalViewController.xib in Resources */,
+				BCD7371B1E936C92001F706C /* MerchantSearchRsultViewController.xib in Resources */,
 				BC054D501E8A3D3600062AC5 /* Bill1View.xib in Resources */,
 				BC41DAEA1E91F781008FC9DC /* Login.xcassets in Resources */,
+				BC36EA441E937E600097F2F2 /* MyCollectionListViewController.xib in Resources */,
 				BCA17DDB1E8BB2AD00B4AFDA /* Bill.xcassets in Resources */,
 				BCFE20921E77E206002BC28C /* ForgetPasswordOneViewController.xib in Resources */,
 				BCFE205B1E778F45002BC28C /* ChangeLoginPasswordViewController.xib in Resources */,
 				BC9B3DF71E76982B003DC241 /* EditPhoneNumberViewController.xib in Resources */,
+				BCD737091E93544D001F706C /* MessageDetailTableViewCell.xib in Resources */,
+				BC36EA491E93B8600097F2F2 /* WithDrawalResultView.xib in Resources */,
 				BC9B3E0B1E769D44003DC241 /* SetPayPasswordViewController.xib in Resources */,
 				BCC8E1A21E88FFB7004DBDA3 /* MerchantTableViewCell.xib in Resources */,
+				BCD736FF1E93502D001F706C /* MessageTableViewCell.xib in Resources */,
 				BC57B7201E7FD62A006AF4D1 /* HomeMerchantTableViewCell.xib in Resources */,
 				BC0A58221E724ADA0077C8A9 /* 213955937960616.cer in Resources */,
 				BC57B7141E7FCC7E006AF4D1 /* HighQualityCollectionViewCell.xib in Resources */,
@@ -1612,6 +1705,7 @@
 				BC9B3DC91E76837B003DC241 /* city.plist in Resources */,
 				BC9B3DD71E7683B7003DC241 /* NoBankCardViewController.xib in Resources */,
 				BC23C9EE1E79396500E90B43 /* YesTodayEarningsAlerView.xib in Resources */,
+				BCD736FA1E935017001F706C /* MessageListViewController.xib in Resources */,
 				BCB9A7C51E89F4B600F3E966 /* Public.xcassets in Resources */,
 				BC9B3DDF1E7688AD003DC241 /* PersonCenterTableViewCell.xib in Resources */,
 				BCFE20941E77E206002BC28C /* ForgetPasswordTwoViewController.xib in Resources */,
@@ -1696,6 +1790,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC4AAC2E1E4D6E7D006568A6 /* BaseTableViewCell.m in Sources */,
+				BCD736F91E935017001F706C /* MessageListViewController.m in Sources */,
+				BCD737081E93544D001F706C /* MessageDetailTableViewCell.m in Sources */,
 				BC57B7071E7FC357006AF4D1 /* SquaredUpView.m in Sources */,
 				BC0A58301E7282250077C8A9 /* SetViewController.m in Sources */,
 				BC34A1EC1E92646700C786C0 /* MANaviRoute.m in Sources */,
@@ -1742,12 +1838,15 @@
 				BC9B3DCA1E76837B003DC241 /* EditbankInfoTableViewCell.m in Sources */,
 				BC57B6FA1E7FA9DC006AF4D1 /* ShellCoinPageControlView.m in Sources */,
 				BC9B3E0A1E769D44003DC241 /* SetPayPasswordViewController.m in Sources */,
+				BCD7371A1E936C92001F706C /* MerchantSearchRsultViewController.m in Sources */,
+				BCD737031E935438001F706C /* MessageDetailViewController.m in Sources */,
 				BC52794C1E8E7E4E004DD703 /* LBXScanWrapper.m in Sources */,
 				BC0A58261E724ADA0077C8A9 /* HttpClientAlertViewHelper.m in Sources */,
 				BCFE20911E77E206002BC28C /* ForgetPasswordOneViewController.m in Sources */,
 				BC57B71F1E7FD62A006AF4D1 /* HomeMerchantTableViewCell.m in Sources */,
 				BC0A583E1E728D520077C8A9 /* BillViewController.m in Sources */,
 				BC9B3DE01E7688AD003DC241 /* PersonCenterViewController.m in Sources */,
+				BCD7370C1E9354A0001F706C /* UILabel+StringFrame.m in Sources */,
 				BCFE205A1E778F45002BC28C /* ChangeLoginPasswordViewController.m in Sources */,
 				BC34A1BE1E9256CA00C786C0 /* AreaTableViewCell.m in Sources */,
 				BC9B3DE61E76892C003DC241 /* MyQrCodeViewController.m in Sources */,
@@ -1773,6 +1872,7 @@
 				BC5279421E8E7E4E004DD703 /* UIActionSheet+LBXAlertAction.m in Sources */,
 				BCC8E1A11E88FFB7004DBDA3 /* MerchantTableViewCell.m in Sources */,
 				BC34A1C11E9256CA00C786C0 /* CityButton.m in Sources */,
+				BCD737151E936726001F706C /* MerchantSearchViewController.m in Sources */,
 				BCFE206A1E77BC83002BC28C /* TradInTableViewCell.m in Sources */,
 				BC9B3E031E7698CC003DC241 /* ManageBankView.m in Sources */,
 				BC6EA5A11E8CFB170073027C /* BankCardInfoModel.m in Sources */,
@@ -1794,6 +1894,7 @@
 				BC5279481E8E7E4E004DD703 /* LBXScanResult.m in Sources */,
 				BCE5EED71E5C41030055D828 /* Colours.m in Sources */,
 				BCAC5D0E1E825DBB003CACF8 /* BillAmountDisciplineView.m in Sources */,
+				BC36EA4C1E93BF0F0097F2F2 /* OnlinePayResultView.m in Sources */,
 				BC6EA5961E8CF2200073027C /* BankCardDetailView.m in Sources */,
 				BC4AABDF1E4D69E2006568A6 /* main.m in Sources */,
 				BCFE20741E77C9F6002BC28C /* SecletBankCardTableViewCell.m in Sources */,
@@ -1801,6 +1902,7 @@
 				BC0A58391E728C510077C8A9 /* SortButtonSwitchView.m in Sources */,
 				BC5279451E8E7E4E004DD703 /* LBXScanLineAnimation.m in Sources */,
 				BC9B3E051E7698CC003DC241 /* ManagerBankCardViewController.m in Sources */,
+				BC36EA431E937E600097F2F2 /* MyCollectionListViewController.m in Sources */,
 				BC52794D1E8E7E4E004DD703 /* LBXZXCapture.m in Sources */,
 				BCFE20551E778CA9002BC28C /* SetPasswordViewController.m in Sources */,
 				BC57B6FE1E7FBFEA006AF4D1 /* HomeBannerTableViewCell.m in Sources */,
@@ -1810,6 +1912,7 @@
 				BC054D4E1E8A3D2600062AC5 /* Bill1View.m in Sources */,
 				BC23C9E91E7933B700E90B43 /* LSPaoMaView.m in Sources */,
 				BC4E252D1E80C41E005BE142 /* TalentRecommentViewController.m in Sources */,
+				BC36EA471E93B8530097F2F2 /* WithDrawalResultView.m in Sources */,
 				BC34A1E91E92646700C786C0 /* LineDashPolyline.m in Sources */,
 				BC054D421E8A039600062AC5 /* EnterInputMoneyView.m in Sources */,
 				BCFE205F1E779283002BC28C /* ChangePayPasswordViewController.m in Sources */,
@@ -1827,6 +1930,7 @@
 				BC34A1C91E9256CA00C786C0 /* PinyinFormatter.m in Sources */,
 				BC4AABEB1E4D69E2006568A6 /* ShellCoin.xcdatamodeld in Sources */,
 				BCEC06991E83B6FA0059C2C4 /* BillIntegaralModel.m in Sources */,
+				BCD736FE1E93502D001F706C /* MessageTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

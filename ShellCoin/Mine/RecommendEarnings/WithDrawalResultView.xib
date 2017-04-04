@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="92z-Rv-zZY" customClass="WithDrawalResultView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ENZ-IW-ZTw">
+                    <rect key="frame" x="50" y="153" width="275" height="281"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pic1_personal" translatesAutoresizingMaskIntoConstraints="NO" id="1Hf-ur-yWw">
+                            <rect key="frame" x="0.0" y="0.0" width="275" height="100"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="100" id="Wcb-nx-J93"/>
+                            </constraints>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pUC-dt-sGU">
+                            <rect key="frame" x="0.0" y="231" width="275" height="50"/>
+                            <state key="normal" title="返回个人首页" backgroundImage="pic3_personal">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="backBtn:" destination="92z-Rv-zZY" eventType="touchUpInside" id="Cme-Cx-4CP"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¥--" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tfc-3y-EHq">
+                            <rect key="frame" x="20" y="167" width="235" height="27.5"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="抵换结果" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EEG-3W-Mb3">
+                            <rect key="frame" x="96.5" y="28" width="82" height="24"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pic2_personal" translatesAutoresizingMaskIntoConstraints="NO" id="TZU-g7-KWH">
+                            <rect key="frame" x="101" y="63" width="74" height="74"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="TZU-g7-KWH" secondAttribute="height" id="aR7-U1-66g"/>
+                                <constraint firstAttribute="width" constant="74" id="eAh-2G-NUg"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="抵换成功" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kBy-hB-ths">
+                            <rect key="frame" x="110.5" y="143" width="53.5" height="16"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="EEG-3W-Mb3" firstAttribute="centerX" secondItem="ENZ-IW-ZTw" secondAttribute="centerX" id="2Pl-Ey-TgB"/>
+                        <constraint firstAttribute="trailing" secondItem="pUC-dt-sGU" secondAttribute="trailing" id="2bm-J0-8Xs"/>
+                        <constraint firstAttribute="bottom" secondItem="pUC-dt-sGU" secondAttribute="bottom" id="43B-M6-6QR"/>
+                        <constraint firstItem="1Hf-ur-yWw" firstAttribute="leading" secondItem="ENZ-IW-ZTw" secondAttribute="leading" id="C6R-Uj-bJe"/>
+                        <constraint firstItem="TZU-g7-KWH" firstAttribute="bottom" secondItem="1Hf-ur-yWw" secondAttribute="bottom" constant="37" id="CEy-fC-CWz"/>
+                        <constraint firstAttribute="trailing" secondItem="Tfc-3y-EHq" secondAttribute="trailing" constant="20" id="HRV-vx-FbC"/>
+                        <constraint firstItem="pUC-dt-sGU" firstAttribute="leading" secondItem="ENZ-IW-ZTw" secondAttribute="leading" id="L5d-MJ-DQO"/>
+                        <constraint firstItem="kBy-hB-ths" firstAttribute="centerX" secondItem="ENZ-IW-ZTw" secondAttribute="centerX" id="MoV-EK-F5r"/>
+                        <constraint firstItem="Tfc-3y-EHq" firstAttribute="top" secondItem="kBy-hB-ths" secondAttribute="bottom" constant="8" id="NvQ-AM-uU7"/>
+                        <constraint firstItem="Tfc-3y-EHq" firstAttribute="centerY" secondItem="ENZ-IW-ZTw" secondAttribute="centerY" constant="40" id="Yaw-mX-jQX"/>
+                        <constraint firstItem="Tfc-3y-EHq" firstAttribute="leading" secondItem="ENZ-IW-ZTw" secondAttribute="leading" constant="20" id="aJb-gN-85Y"/>
+                        <constraint firstAttribute="width" secondItem="ENZ-IW-ZTw" secondAttribute="height" multiplier="284:290" id="ivO-JS-akI"/>
+                        <constraint firstItem="1Hf-ur-yWw" firstAttribute="top" secondItem="ENZ-IW-ZTw" secondAttribute="top" id="jte-hj-CWQ"/>
+                        <constraint firstItem="TZU-g7-KWH" firstAttribute="centerX" secondItem="ENZ-IW-ZTw" secondAttribute="centerX" id="vZZ-5G-eqC"/>
+                        <constraint firstAttribute="trailing" secondItem="1Hf-ur-yWw" secondAttribute="trailing" id="vxv-SJ-htA"/>
+                        <constraint firstItem="EEG-3W-Mb3" firstAttribute="centerY" secondItem="1Hf-ur-yWw" secondAttribute="centerY" constant="-10" id="wgf-5q-Crj"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="ENZ-IW-ZTw" firstAttribute="leading" secondItem="92z-Rv-zZY" secondAttribute="leading" constant="50" id="1Mm-am-vKx"/>
+                <constraint firstAttribute="trailing" secondItem="ENZ-IW-ZTw" secondAttribute="trailing" constant="50" id="A4X-v1-Jmn"/>
+                <constraint firstItem="ENZ-IW-ZTw" firstAttribute="centerY" secondItem="92z-Rv-zZY" secondAttribute="centerY" constant="-40" id="zvs-pr-rvG"/>
+            </constraints>
+            <connections>
+                <outlet property="alerResultImageView" destination="TZU-g7-KWH" id="zez-3a-9B9"/>
+                <outlet property="autResultLabel" destination="Tfc-3y-EHq" id="rev-lo-R4l"/>
+                <outlet property="autResultTitleLabel" destination="EEG-3W-Mb3" id="jSp-xf-dwr"/>
+                <outlet property="backBtn" destination="pUC-dt-sGU" id="Dai-fl-dXD"/>
+                <outlet property="successLabel" destination="kBy-hB-ths" id="Wnl-9w-hdF"/>
+                <outlet property="titleimageView" destination="1Hf-ur-yWw" id="TrU-tQ-RMy"/>
+            </connections>
+            <point key="canvasLocation" x="-358" y="-1076"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="pic1_personal" width="260" height="105"/>
+        <image name="pic2_personal" width="74" height="74"/>
+        <image name="pic3_personal" width="260" height="50"/>
+    </resources>
+</document>

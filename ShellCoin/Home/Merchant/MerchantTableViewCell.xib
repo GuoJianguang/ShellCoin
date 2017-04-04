@@ -150,7 +150,7 @@
                 <outlet property="name_label" destination="Dtm-4d-gCq" id="uZo-6j-kFw"/>
                 <outlet property="recommendImage" destination="5ch-Xl-XqK" id="19d-vh-ofK"/>
             </connections>
-            <point key="canvasLocation" x="-518" y="114"/>
+            <point key="canvasLocation" x="-553" y="103"/>
         </tableViewCell>
     </objects>
     <resources>

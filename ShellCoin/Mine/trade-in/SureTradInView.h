@@ -12,6 +12,14 @@ typedef NS_ENUM(NSInteger,Password_type){
     Password_type_MerchantOnlinePay = 2,//商家支付
 };
 
+
+@protocol PayViewDelegate <NSObject>
+
+- (void)paysuccess:(NSString *)payWay;
+- (void)payfail;
+
+@end
+
 @interface SureTradInView : UIView
 
 @property (weak, nonatomic) IBOutlet UIView *blackBackgoundView;
@@ -35,6 +43,8 @@ typedef NS_ENUM(NSInteger,Password_type){
 @property (nonatomic,strong)NSMutableDictionary *mallOrderParms;
 
 @property (nonatomic, assign)Password_type inputType;
+
+@property (nonatomic, assign)id<PayViewDelegate> delegate;
 
 
 @end

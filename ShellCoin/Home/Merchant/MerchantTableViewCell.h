@@ -9,6 +9,16 @@
 #import <UIKit/UIKit.h>
 #import "MerchantModel.h"
 
+@interface CollectionMerchantModel : BaseModel
+@property (nonatomic, copy)NSString *desc;
+@property (nonatomic, copy)NSString *desctxt;
+@property (nonatomic, copy)NSString *collectoIid;
+@property (nonatomic, copy)NSString *mchCode;
+@property (nonatomic, copy)NSString *mchName;
+@property (nonatomic, copy)NSString *pic;
+
+@end
+
 @interface MerchantTableViewCell : BaseTableViewCell
 
 
@@ -30,5 +40,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *checkDetailLabe;
 
 @property (nonatomic, strong)MerchantModel *dataModel;
+
+
+@property (nonatomic,strong)CollectionMerchantModel *collectionModel;
 
 @end

@@ -30,6 +30,9 @@
 - (void)setDataModel:(RecommentModel *)dataModel
 {
     _dataModel = dataModel;
+    [self.headIamgeView sd_setImageWithURL:[NSURL URLWithString:_dataModel.coverImg] placeholderImage:LoadingErrorDefaultImageCircular];
+    self.title_label.text = _dataModel.name;
+    self.detail_label.text = _dataModel.name;
 }
 
 @end

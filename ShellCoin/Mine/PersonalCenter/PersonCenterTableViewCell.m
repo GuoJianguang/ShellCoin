@@ -14,6 +14,8 @@
 #import "LBXScanWrapper.h"
 #import "LBXAlertAction.h"
 #import <QiniuSDK.h>
+#import "MyCollectionListViewController.h"
+
 
 @interface PersonCenterTableViewCell()<UIActionSheetDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate>
 
@@ -147,7 +149,8 @@
 
 
 - (IBAction)mycollectionBtn:(id)sender {
-    
+    MyCollectionListViewController *myCollectionVC = [[MyCollectionListViewController alloc]init];
+    [self.viewController.navigationController pushViewController:myCollectionVC animated:YES];
 }
 
 

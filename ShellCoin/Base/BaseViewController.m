@@ -54,6 +54,7 @@
 
 - (void)viewWillDisappear:(BOOL)animated
 {
+    [SVProgressHUD dismiss];
     [super viewWillDisappear:animated];
 }
 

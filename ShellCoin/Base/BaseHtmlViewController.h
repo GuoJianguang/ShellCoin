@@ -17,4 +17,7 @@
 
 @property (nonatomic, strong)NSString *htmlTitle;
 
+@property (nonatomic, assign)BOOL  isAboutMerChant;
+@property (nonatomic, copy)NSString *merchantCode;
+
 @end

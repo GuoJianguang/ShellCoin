@@ -19,6 +19,7 @@
 #import "WithdrawalViewController.h"
 #import "RealnameViewController.h"
 #import "EditBankInfoViewController.h"
+#import "MessageListViewController.h"
 
 
 @interface MineTableViewCell()
@@ -32,10 +33,12 @@
     self.contentView.backgroundColor = [UIColor colorFromHexString:@"#faf8f6"];
     self.personCenterLabel.textColor = self.recommendLabel.textColor = self.billLabel.textColor = self.setLabel.textColor = self.integralLabel.textColor = self.proportionLabel.textColor= MacoTitleColor;
     self.showIntergralLabel.textColor = self.showProportionLabel.textColor = MacoColor;
-    self.totalMoneyLabel.text = [NSString stringWithFormat:@"总贝壳币：%ld",[[ShellCoinUserInfo shareUserInfos].totalRate integerValue]];
+    self.totalMoneyLabel.text = [NSString stringWithFormat:@"总贝壳币：%ld",[[ShellCoinUserInfo shareUserInfos].aviableBalance integerValue]];
+    self.totalBuyCardLabel.text = [NSString stringWithFormat:@"总购物券：%ld",[[ShellCoinUserInfo shareUserInfos].consumeBalance integerValue]];
+
     self.totalMoneyLabel.adjustsFontSizeToFitWidth = self.showIntergralLabel.adjustsFontSizeToFitWidth = YES;
-    self.showIntergralLabel.text = [ShellCoinUserInfo shareUserInfos].totalAccumulateAmount;
-    self.showProportionLabel.text = [NSString stringWithFormat:@"%@%@",[ShellCoinUserInfo shareUserInfos].totalRate,@"%"];
+    self.showIntergralLabel.text = [NSString stringWithFormat:@"%.2f",[[ShellCoinUserInfo shareUserInfos].totalExpectAmount doubleValue] + [[ShellCoinUserInfo shareUserInfos].wiatJoinAmunt doubleValue]];
+    self.showProportionLabel.text = [NSString stringWithFormat:@"%.2f",[[ShellCoinUserInfo shareUserInfos].totalConsumeAmount doubleValue]];
     
     if (TWitdh > 320) {
         self.viewHeight.constant = TWitdh*1.05;
@@ -77,8 +80,8 @@
 #pragma mark - 点击事件
 //消息按钮
 - (IBAction)messageBtn:(id)sender {
-    
-    
+    MessageListViewController *messageListVC = [[MessageListViewController alloc]init];
+    [self.viewController.navigationController pushViewController:messageListVC animated:YES];
 }
 //条形码按钮
 - (IBAction)barCodeBtn:(id)sender {

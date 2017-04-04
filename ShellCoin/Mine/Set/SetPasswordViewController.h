@@ -17,4 +17,8 @@
 - (IBAction)loginBtn:(id)sender;
 - (IBAction)paypasswordBtn:(id)sender;
 
+@property (weak, nonatomic) IBOutlet UISwitch *finggerCodeSwitch;
+- (IBAction)finggerCodeSwitch:(UISwitch *)sender;
+@property (weak, nonatomic) IBOutlet UILabel *fingerprintLabel;
+
 @end

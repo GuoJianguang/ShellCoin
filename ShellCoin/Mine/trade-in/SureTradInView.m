@@ -115,11 +115,13 @@
         [SVProgressHUD dismiss];
         sender.enabled = YES;
         if (IsRequestTrue) {
-//            NSDictionary *dic = @{@"money":self.editMoneyTF.text};
-//            self.successView.infoDic = dic;
-//            [self withDrawalSuccess];
+            if ([self.delegate respondsToSelector:@selector(paysuccess:)]) {
+                [self.delegate paysuccess:self.mallOrderParms[@"withdrawAmount"]];
+            }
+            [self removeFromSuperview];
         }
     } failure:^(NSURLSessionDataTask *operation, NSError *error) {
+        [[JAlertViewHelper shareAlterHelper]showTint:@"支付失败，请重试" duration:2.0];
         sender.enabled = YES;
         [SVProgressHUD dismiss];
     }];
@@ -138,12 +140,17 @@
     [HttpClient POST:@"pay/mch/balance" parameters:self.mallOrderParms success:^(NSURLSessionDataTask *operation, id jsonObject) {
         sender.enabled = YES;
         if (IsRequestTrue) {
+            if ([self.delegate respondsToSelector:@selector(paysuccess:)]) {
+                [self.delegate paysuccess:self.mallOrderParms[@"tranAmount"]];
+            }
+            [self removeFromSuperview];
             //            if ([self.delegate respondsToSelector:@selector(paysuccess:)]) {
             //                [TTXUserInfo shareUserInfos].consumeBalance = [NSString stringWithFormat:@"%.2f",self.xiaofeiJinMoney];
             //                [self.delegate paysuccess:@"余额支付"];
             //            }
         }
     } failure:^(NSURLSessionDataTask *operation, NSError *error) {
+        [[JAlertViewHelper shareAlterHelper]showTint:@"支付失败，请重试" duration:2.0];
         sender.enabled = YES;
         //        if ([self.delegate respondsToSelector:@selector(payfail)]) {
         //            [self.delegate payfail];

@@ -12,10 +12,11 @@
 #import "MerchantDetailViewController.h"
 
 
-@interface MerchantListViewController ()<UITableViewDataSource,UITableViewDelegate>
+@interface MerchantListViewController ()<UITableViewDataSource,UITableViewDelegate,SortButtonSwitchViewDelegate>
 @property (nonatomic, strong)NSMutableArray *dataSouceArray;
 @property (nonatomic, assign)NSInteger page;
 
+@property (nonatomic, assign)BOOL isDefultSort;
 @property (nonatomic, assign)BOOL isContinueRequest;
 @end
 
@@ -25,15 +26,17 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.sortView.titleArray = @[@"默认",@"距离从远到近"];
+    self.sortView.delegate = self;
     self.naviBar.hidden = YES;
     self.tableView.backgroundColor = [UIColor clearColor];
+    self.isDefultSort = YES;
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         self.page = 1;
         self.isContinueRequest = YES;
-        [self searchReqest:YES andCity:self.currentCity];
+        [self searchReqest:YES andCity:self.currentCity andSortType:self.isDefultSort];
     }];
     self.tableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
-        [self searchReqest:NO andCity:self.currentCity];
+        [self searchReqest:NO andCity:self.currentCity andSortType:self.isDefultSort];
     }];
 //    [self.tableView addNoDatasouceWithCallback:^{
 //        [self.tableView.mj_header beginRefreshing];
@@ -73,23 +76,26 @@
 }
 
 #pragma mark - 请求商家列表的网络请求
-- (void)searchReqest:(BOOL)isHeader andCity:(NSString *)city
+- (void)searchReqest:(BOOL)isHeader andCity:(NSString *)city andSortType:(BOOL)IsDefault
 {
     
     if (!isHeader && !self.isContinueRequest) {
         [self.tableView.mj_footer endRefreshing];
         return;
     }
-    
     NSString *searchcity = [self.currentCity substringToIndex:2];
-    NSDictionary *parms = @{@"pageNo":@(self.page),
+    NSMutableDictionary *parms = [NSMutableDictionary dictionaryWithDictionary:@{@"pageNo":@(self.page),
                             @"pageSize":MacoRequestPageCount,
                             @"trade":NullToSpace(self.currentIndustry),
                             @"mchCity":searchcity,
                             @"keyword":NullToSpace(self.keyWord),
                             @"longitude":@([ShellCoinUserInfo shareUserInfos].locationCoordinate.longitude),
                             @"latitude":@([ShellCoinUserInfo shareUserInfos].locationCoordinate.latitude),
-                            @"seqId":NullToSpace(self.seqId)};
+                            @"seqId":NullToSpace(self.seqId)}];
+    if (IsDefault) {
+        [parms setObject:@"1" forKey:@"recommend"];
+        [parms setObject:@"1" forKey:@"highQuality"];
+    }
     [HttpClient GET:@"mch/search" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
         if (IsRequestTrue) {
             if (self.page == [NullToNumber(jsonObject[@"data"][@"totalPage"]) integerValue]) {
@@ -150,5 +156,19 @@
     [self.navigationController pushViewController:merchantDetailVC animated:YES];
 }
 
+
+#pragma mark - SortButtonSwitchViewDelegate
+- (void)sortBtnDselect:(SortButtonSwitchView *)sortView withSortId:(NSString *)sortId
+{
+    
+    if ([sortId isEqualToString:@"1"]) {
+        self.isDefultSort = YES;
+    }else{
+        self.isDefultSort = NO;
+
+    }
+    [self.tableView.mj_header beginRefreshing];
+
+}
 
 @end

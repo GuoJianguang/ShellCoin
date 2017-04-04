@@ -28,6 +28,7 @@
 //判断是否是通过搜索出来的结果
 @property (nonatomic, assign)BOOL isSearchResult;
 
+@property (nonatomic, copy)NSString *userCollectionFlag;
 
 @property (nonatomic, copy)NSString *distance;
 @end

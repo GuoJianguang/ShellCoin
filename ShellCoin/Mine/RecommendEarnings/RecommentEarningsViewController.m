@@ -53,7 +53,7 @@
     NSDictionary *prams = @{@"pageNo":@(self.page),
                             @"pageSize":MacoRequestPageCount,
                             @"token":[ShellCoinUserInfo shareUserInfos].token};
-    [HttpClient POST:@"user/wallet/withdraw/get" parameters:prams success:^(NSURLSessionDataTask *operation, id jsonObject) {
+    [HttpClient POST:@"user/recommendProfit/get" parameters:prams success:^(NSURLSessionDataTask *operation, id jsonObject) {
         if (IsRequestTrue) {
             if (isHeader) {
                 [self.dataSouceArray removeAllObjects];

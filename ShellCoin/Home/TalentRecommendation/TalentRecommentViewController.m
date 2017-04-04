@@ -11,6 +11,7 @@
 #import "RecommentSpecialTableViewCell.h"
 #import "RecommentModel.h"
 
+
 @interface TalentRecommentViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong)NSMutableArray *datasouceArray;
@@ -27,23 +28,26 @@
     RecommentModel *model2 = [[RecommentModel alloc]init];
     model2.type = 2;
     
-    [self.datasouceArray addObject:model1];
-    [self.datasouceArray addObject:model1];
-    [self.datasouceArray addObject:model1];
-    [self.datasouceArray addObject:model1];
-    [self.datasouceArray addObject:model2];
-    [self.datasouceArray addObject:model1];
-    [self.datasouceArray addObject:model2];
-    [self.datasouceArray addObject:model1];
-    [self.datasouceArray addObject:model1];
-    [self.datasouceArray addObject:model2];
-    [self.datasouceArray addObject:model1];
-    [self.datasouceArray addObject:model1];
-    [self.datasouceArray addObject:model1];
-    [self.datasouceArray addObject:model1];
-    [self.tableView reloadData];
-
-    
+//    [self.datasouceArray addObject:model1];
+//    [self.datasouceArray addObject:model1];
+//    [self.datasouceArray addObject:model1];
+//    [self.datasouceArray addObject:model1];
+//    [self.datasouceArray addObject:model2];
+//    [self.datasouceArray addObject:model1];
+//    [self.datasouceArray addObject:model2];
+//    [self.datasouceArray addObject:model1];
+//    [self.datasouceArray addObject:model1];
+//    [self.datasouceArray addObject:model2];
+//    [self.datasouceArray addObject:model1];
+//    [self.datasouceArray addObject:model1];
+//    [self.datasouceArray addObject:model1];
+//    [self.datasouceArray addObject:model1];
+//    [self.tableView reloadData];
+    __weak TalentRecommentViewController *weak_self = self;
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        [weak_self getPersonalRequest];
+    }];
+    [self.tableView.mj_header beginRefreshing];
 }
 
 - (NSMutableArray *)datasouceArray
@@ -53,6 +57,30 @@
     }
     return _datasouceArray;
 }
+
+
+- (void)getPersonalRequest{
+    
+    NSDictionary *parms = @{@"longitude":NullToNumber(@([ShellCoinUserInfo shareUserInfos].locationCoordinate.longitude)),
+                            @"latitude":NullToNumber(@([ShellCoinUserInfo shareUserInfos].locationCoordinate.latitude))};
+    [HttpClient POST:@"user/personal" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
+        [self.tableView.mj_header endRefreshing];
+        if (IsRequestTrue) {
+            [self.datasouceArray removeAllObjects];
+            NSArray *array = jsonObject[@"data"];
+            for (NSDictionary *dic in array) {
+                RecommentModel *model = [RecommentModel modelWithDic:dic];
+                model.type = 1;
+                [self.datasouceArray addObject:model];
+            }
+            [self.tableView reloadData];
+        }
+        
+    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
+        [self.tableView.mj_header endRefreshing];
+    }];
+}
+
 
 #pragma mark - UITableView
 
@@ -73,6 +101,7 @@
             if (!cell) {
                 cell = [HomeMerchantTableViewCell newCell];
             }
+            cell.dataModel = self.datasouceArray[indexPath.row];
             return cell;
         }
             break;
@@ -115,6 +144,21 @@
     }
     return TWitdh*(95/320.);
 
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    RecommentModel *model = self.datasouceArray[indexPath.row];
+    BaseHtmlViewController *htmlVC = [[BaseHtmlViewController alloc]init];
+    htmlVC.htmlUrl = model.jumpValue;
+    if ([model.remark isEqualToString:@""] ) {
+        htmlVC.isAboutMerChant = NO;
+    }else{
+        htmlVC.isAboutMerChant = YES;
+        htmlVC.merchantCode = model.remark;
+    }
+    htmlVC.htmlTitle = model.name;
+    [self.navigationController pushViewController:htmlVC animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

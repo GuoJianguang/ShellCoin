@@ -10,8 +10,9 @@
 #import "SelectBanCardView.h"
 #import "SureTradInView.h"
 #import "SetPayPasswordViewController.h"
+#import <LocalAuthentication/LocalAuthentication.h>
 
-@interface WithdrawalViewController ()<UITextFieldDelegate>
+@interface WithdrawalViewController ()<UITextFieldDelegate,PayViewDelegate>
 @property (nonatomic, strong)SelectBanCardView *selectBancardView;
 @property (nonatomic, strong)SureTradInView *passwordView;
 
@@ -38,6 +39,7 @@
 {
     if (!_passwordView) {
         _passwordView = [[SureTradInView alloc]init];
+        _passwordView.delegate = self;
     }
     return _passwordView;
 }
@@ -53,6 +55,7 @@
 
 - (IBAction)sureBtn:(UIButton *)sender
 {
+    sender.enabled = NO;
     if ([[ShellCoinUserInfo shareUserInfos].payPassword isEqualToString:@""]) {
         UIAlertController *alertcontroller = [UIAlertController alertControllerWithTitle:@"重要提示" message:@"提现之前请先设置您的支付密码" preferredStyle:UIAlertControllerStyleAlert];
         UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
@@ -62,6 +65,7 @@
             [self.navigationController pushViewController:setPayPasswordVC animated:YES];
             
         }];
+        sender.enabled = YES;
         [alertcontroller addAction:cancelAction];
         [alertcontroller addAction:otherAction];
         [self presentViewController:alertcontroller animated:YES completion:NULL];
@@ -69,22 +73,76 @@
     }
     
     [self.inputAmountTF resignFirstResponder];
-    if ([self valueValidated]) {
-        NSDictionary *parms = @{@"token":[ShellCoinUserInfo shareUserInfos].token,
-                                       @"withdrawAmount":self.inputAmountTF.text,
-                                @"id":self.bankModel.bankinfoid};
-        [self.view addSubview:self.passwordView];
-        self.passwordView.mallOrderParms = [NSMutableDictionary dictionaryWithDictionary:parms];
-        self.passwordView.inputType = Password_type_withdraw;
-        UIEdgeInsets insets = UIEdgeInsetsMake(0, 0, 0, 0);
-        [self.passwordView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.edges.equalTo(self.view).insets(insets);
+    
+if ([self valueValidated]) {
+    if ([ShellCoinUserInfo shareUserInfos].payPwdFlag) {
+        LAContext * con = [[LAContext alloc]init];
+        NSError * error;
+        //判断是否支持密码验证
+        /**
+         *LAPolicyDeviceOwnerAuthentication 手机密码的验证方式
+         *LAPolicyDeviceOwnerAuthenticationWithBiometrics 指纹的验证方式
+         */
+        [con evaluatePolicy:LAPolicyDeviceOwnerAuthentication localizedReason:@"验证信息" reply:^(BOOL success, NSError * _Nullable error) {
+            if (success) {
+                NSDictionary *parms = @{@"token":[ShellCoinUserInfo shareUserInfos].token,
+                                        @"withdrawAmount":self.inputAmountTF.text,
+                                        @"id":self.bankModel.bankinfoid,
+                                        @"password":[ShellCoinUserInfo shareUserInfos].payPassword};
+                [SVProgressHUD showWithStatus:@"正在提交申请"];
+                [HttpClient POST:@"user/withdraw/add" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
+                    sender.enabled = YES;
+                    [SVProgressHUD dismiss];
+                    sender.enabled = YES;
+                    if (IsRequestTrue) {
+                        [self withDrawalSuccess];
+                        //            NSDictionary *dic = @{@"money":self.editMoneyTF.text};
+                        //            self.successView.infoDic = dic;
+                        //            [self withDrawalSuccess];
+                    }
+                } failure:^(NSURLSessionDataTask *operation, NSError *error) {
+                    sender.enabled = YES;
+                    [SVProgressHUD dismiss];
+                }];
+                return;
+            }
+            UIAlertController *alertcontroller = [UIAlertController alertControllerWithTitle:@"提示" message:@"取消指纹验证或者验证失败，请用使用支付密码发起提现请求" preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+            }];
+            UIAlertAction *otherAction = [UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+                [self goinputPassword];
+            }];
+            sender.enabled = YES;
+            [alertcontroller addAction:cancelAction];
+            [alertcontroller addAction:otherAction];
+            [self presentViewController:alertcontroller animated:YES completion:NULL];
         }];
-        self.passwordView.itemView.frame = CGRectMake(0, THeight , TWitdh, TWitdh*(260/375.));
-        [UIView animateWithDuration:0.5 animations:^{
-            self.passwordView.itemView.frame = CGRectMake(0, THeight - (TWitdh*(260/375.)), TWitdh, TWitdh*(260/375.));
-        }];
+        return;
     }
+    
+    [self goinputPassword];
+
+    }
+    sender.enabled = YES;
+}
+
+
+- (void)goinputPassword
+{
+    NSDictionary *parms = @{@"token":[ShellCoinUserInfo shareUserInfos].token,
+                            @"withdrawAmount":self.inputAmountTF.text,
+                            @"id":self.bankModel.bankinfoid};
+    [self.view addSubview:self.passwordView];
+    self.passwordView.mallOrderParms = [NSMutableDictionary dictionaryWithDictionary:parms];
+    self.passwordView.inputType = Password_type_withdraw;
+    UIEdgeInsets insets = UIEdgeInsetsMake(0, 0, 0, 0);
+    [self.passwordView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.view).insets(insets);
+    }];
+    self.passwordView.itemView.frame = CGRectMake(0, THeight , TWitdh, TWitdh*(260/375.));
+    [UIView animateWithDuration:0.5 animations:^{
+        self.passwordView.itemView.frame = CGRectMake(0, THeight - (TWitdh*(260/375.)), TWitdh, TWitdh*(260/375.));
+    }];
 }
 
 #pragma mark - 限制提现资格
@@ -228,5 +286,36 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+- (WithDrawalResultView *)resultView
+{
+    if (!_resultView) {
+        _resultView = [[WithDrawalResultView alloc]init];
+    }
+    return _resultView;
+}
+
+- (void)withDrawalSuccess
+{
+    self.naviBar.hiddenDetailBtn = YES;
+    [self.view addSubview:self.resultView];
+    self.resultView.autResultLabel.text =[NSString stringWithFormat:@"¥ %@",self.inputAmountTF.text];
+    UIEdgeInsets insets = UIEdgeInsetsMake(64, 0, 0, 0);
+    [self.resultView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.view).insets(insets);
+    }];
+}
+
+
+- (void)paysuccess:(NSString *)payWay
+{
+    self.naviBar.hiddenDetailBtn = YES;
+    [self.view addSubview:self.resultView];
+    self.resultView.autResultLabel.text =[NSString stringWithFormat:@"¥ %@",payWay];
+    UIEdgeInsets insets = UIEdgeInsetsMake(64, 0, 0, 0);
+    [self.resultView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.view).insets(insets);
+    }];
+}
 
 @end
