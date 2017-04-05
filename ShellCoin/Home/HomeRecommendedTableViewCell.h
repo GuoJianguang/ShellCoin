@@ -26,6 +26,8 @@
 
 @property (nonatomic, strong)NSMutableArray *jingpinArray;
 
+@property (nonatomic, strong)NSMutableArray *foryouArray;
+
 @property (weak, nonatomic) IBOutlet UICollectionView *highqualityCollectionVIew;
 
 @property (weak, nonatomic) IBOutlet UICollectionView *foryouCollectionView;

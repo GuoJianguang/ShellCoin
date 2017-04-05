@@ -39,14 +39,20 @@
         }
             break;
         case Authentication_wait_audit:{
-            [self.viewController.navigationController popToViewController:self.viewController.navigationController.viewControllers[1] animated:YES];
+            [self.viewController.navigationController popToRootViewControllerAnimated:YES];
         }
             
             break;
         case Authentication_type_success:
         {
-            [self.viewController.navigationController popViewControllerAnimated:YES];
+            [self.viewController.navigationController popToRootViewControllerAnimated:YES];
 
+        }
+            break;
+        case Authentication_wait_success:
+        {
+            [self.viewController.navigationController popToRootViewControllerAnimated:YES];
+            
         }
             break;
             
@@ -91,6 +97,17 @@
             [self.backBtn setBackgroundImage:[UIImage imageNamed:@"pic3_personal"] forState:UIControlStateNormal];
             [self.backBtn setTitle:@"返回首页" forState:UIControlStateNormal];
             self.autResultLabel.text = @"实名认证成功";
+        }
+            break;
+            
+        case Authentication_wait_success:
+        {
+            self.autResultTitleLabel.text = @"实名认证提交成功";
+            self.autResultLabel.text = @"实名提交认证成功\n我们将在2-3个工作日内确认";
+            self.titleimageView.image = [UIImage imageNamed:@"pic1_personal"];
+            self.alerResultImageView.image = [UIImage imageNamed:@"pic2_personal"];
+            [self.backBtn setBackgroundImage:[UIImage imageNamed:@"pic3_personal"] forState:UIControlStateNormal];
+            [self.backBtn setTitle:@"返回首页" forState:UIControlStateNormal];
         }
             break;
             

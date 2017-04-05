@@ -44,4 +44,7 @@
 
 @property (nonatomic,strong)CollectionMerchantModel *collectionModel;
 
+@property (weak, nonatomic) IBOutlet UIView *KimmlerView;
+
+
 @end

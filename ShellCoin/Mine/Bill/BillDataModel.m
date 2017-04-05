@@ -13,13 +13,20 @@
 + (id)modelWithDic:(NSDictionary *)dic
 {
     BillDataModel *model = [[BillDataModel alloc]init];
-    model.yuEId = NullToSpace(dic[@"id"]);
-    model.mchName = NullToNumber(dic[@"mchName"]);
     model.balanceAmount = NullToNumber(dic[@"balanceAmount"]);
+    model.cashAmount = NullToNumber(dic[@"cashAmount"]);
+    model.consumeAmount = NullToNumber(dic[@"consumeAmount"]);
+    
     model.tranTime = NullToSpace(dic[@"tranTime"]);
     model.channel = NullToNumber(dic[@"channel"]);
     model.goodsName = NullToSpace(dic[@"goodsName"]);
     model.spec = NullToSpace(dic[@"spec"]);
+    model.pic = NullToSpace(dic[@"pic"]);
+    model.mchCode = NullToSpace(dic[@"mchCode"]);
+    model.payType = NullToNumber(dic[@"payType"]);
+    model.state = NullToNumber(dic[@"state"]);
+    model.totalAmount = NullToNumber(dic[@"totalAmount"]);
+    model.mchName = NullToSpace(dic[@"mchName"]);
     return model;
 }
 

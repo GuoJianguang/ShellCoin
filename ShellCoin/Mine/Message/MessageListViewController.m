@@ -33,8 +33,9 @@
         [self alldetailReqest:NO];
     }];
 
-    
+    [self.tableView noDataSouce];
     [self.tableView.mj_header beginRefreshing];
+    
 }
 
 - (void)alldetailReqest:(BOOL)isHeader
@@ -58,6 +59,7 @@
             }
             //判断数据源有无数据
             [self.tableView reloadData];
+            [self.tableView judgeIsHaveDataSouce:self.datasouceArray];
             return ;
         }
         if (isHeader) {
@@ -68,7 +70,7 @@
     } failure:^(NSURLSessionDataTask *operation, NSError *error) {
         [self.tableView.mj_header endRefreshing];
         [self.tableView.mj_footer endRefreshing];
-//        [self.tableView showRereshBtnwithALerString:@"网络连接不好"];
+        [self.tableView showNoDataSouceNoNetworkConnection];
         
     }];
 }

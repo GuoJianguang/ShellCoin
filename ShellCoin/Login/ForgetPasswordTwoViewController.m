@@ -22,8 +22,7 @@
     self.naviBar.title = @"忘记密码";
     self.naviBar.title_label.textColor = [UIColor whiteColor];
     self.naviBar.lineVIew.hidden = YES;
-    self.naviBar.backImage = [UIImage imageNamed:@"icon_back_white"];
-    self.bgimage.image = [UIImage imageNamed:@"bg_login.jpg"];
+    self.naviBar.mineBgImageview.hidden = YES;
     self.imageHeight.constant = TWitdh*(66/75.);
     self.loginWidth.constant = TWitdh*(526/750.);
 

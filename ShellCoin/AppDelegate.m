@@ -15,7 +15,7 @@
 #import <AMapFoundationKit/AMapFoundationKit.h>
 
 #define UMSYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
-@interface AppDelegate ()
+@interface AppDelegate ()<UNUserNotificationCenterDelegate>
 
 @end
 
@@ -25,7 +25,15 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [self SetTheThirdParty:launchOptions];
-
+    [ShellCoinUserInfo shareUserInfos].token = @"";
+    if (launchOptions) {
+        NSDictionary *info = [launchOptions objectForKey:@"UIApplicationLaunchOptionsRemoteNotificationKey"];
+        if (info &&[info isKindOfClass:[NSDictionary class]]) {
+            [UMessage didReceiveRemoteNotification:info];
+            [ShellCoinUserInfo shareUserInfos].islaunchFormNotifi = YES;
+            [ShellCoinUserInfo shareUserInfos].notificationParms = info;
+        }
+    }
     return YES;
 }
 
@@ -41,10 +49,9 @@
     //友盟推送设置
     [UMessage startWithAppkey:YoumengKey launchOptions:launchOptions httpsenable:YES];
     //友盟统计设置
-//    UMConfigInstance.appKey = YoumengKey;
-//    UMConfigInstance.channelId = @"App Store";
-//    [MobClick startWithConfigure:UMConfigInstance];
-    //        [MobClick startWithAppkey:YoumengKey reportPolicy:BATCH   channelId:nil];
+    UMConfigInstance.appKey = YoumengKey;
+    UMConfigInstance.channelId = @"App Store";
+    [MobClick startWithConfigure:UMConfigInstance];
     
     //
     //    //微信支付

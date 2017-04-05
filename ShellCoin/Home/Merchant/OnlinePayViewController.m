@@ -196,7 +196,7 @@
                 }];
                 return;
             }
-            UIAlertController *alertcontroller = [UIAlertController alertControllerWithTitle:@"提示" message:@"取消指纹验证或者验证失败，请用使用支付密码发起提现请求" preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertController *alertcontroller = [UIAlertController alertControllerWithTitle:@"提示" message:@"取消指纹验证或者验证失败，请用使用支付密码发起抵换请求" preferredStyle:UIAlertControllerStyleAlert];
             UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
             }];
             UIAlertAction *otherAction = [UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
@@ -218,7 +218,7 @@
 {
     [self.view addSubview:self.inputPasswordView];
     NSString *totalMoney = [NSString stringWithFormat:@"%.2f",[self.money doubleValue]];
-    
+    self.inputPasswordView.passwordTF.text = @"";
     NSDictionary *prams = @{@"token":[ShellCoinUserInfo shareUserInfos].token,
                             @"mchCode":NullToSpace(self.dataModel.code),
                             @"tranAmount":totalMoney};

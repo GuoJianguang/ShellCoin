@@ -10,8 +10,8 @@
 #define ShellCoinPageControlView_DefaultWidth 6
 #define ShellCoinPageControlView_DefaultHeight ShellCoinPageControlView_DefaultWidth
 
-#define ShellCoinPageControlView_BigWidth 10
-#define ShellCoinPageControlView_BigHeight 4
+#define ShellCoinPageControlView_BigWidth 12
+#define ShellCoinPageControlView_BigHeight 5
 #define ShellCoinPageControlView_DefaultMargin 8
 
 #import "ShellCoinPageControlView.h"

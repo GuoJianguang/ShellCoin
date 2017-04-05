@@ -65,7 +65,12 @@
 }
 - (void)setDetail{
     self.merchantNameLabel.text = _dataModel.name;
-    [self.merchantImageView sd_setImageWithURL:[NSURL URLWithString:_dataModel.slidePic[0]] placeholderImage:LoadingErrorDefaultImageSquare];
+    if (_dataModel.slidePic.count > 0) {
+        [self.merchantImageView sd_setImageWithURL:[NSURL URLWithString:_dataModel.slidePic[0]] placeholderImage:[UIImage imageNamed:@"merchantHeader.jpg"]];
+    }else{
+        self.merchantImageView.image = [UIImage imageNamed:@"merchantHeader.jpg"];
+ 
+    }
     self.merchantImageView.layer.masksToBounds = YES;
     self.addressLabel.text = _dataModel.address;
     if ([_dataModel.desc isEqualToString:@""]) {

@@ -8,7 +8,7 @@
 
 #import "HomeBannerTableViewCell.h"
 
-
+#import "MerchantDetailViewController.h"
 
 
 
@@ -109,7 +109,7 @@
     }
     NewHomeModel *model = self.bannerArray[index];
     //    [imageView sd_setImageWithURL:[NSURL URLWithString:model.pic] placeholderImage:BannerLoadingErrorImage options:SDWebImageAllowInvalidSSLCertificates];
-    [imageView sd_setImageWithURL:[NSURL URLWithString:model.pic] placeholderImage:LoadingErrorDefaultImageSquare];
+    [imageView sd_setImageWithURL:[NSURL URLWithString:model.pic] placeholderImage:[UIImage imageNamed:@"HomebannerDefault.jpg"]];
         [imageView sd_setImageWithURL:[NSURL URLWithString:model.pic] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
     
         }];
@@ -123,6 +123,52 @@
 }
 
 
+- (void)swipeView:(SwipeView *)swipeView didSelectItemAtIndex:(NSInteger)index
+{
+    NewHomeModel *model = self.bannerArray[index];
+    if (!model.isJump) {
+        return;
+    }
+    switch ([model.jumpWay integerValue]) {
+        case 1://跳转app商户详情
+        {
+            MerchantDetailViewController *merchantDVC = [[MerchantDetailViewController alloc]init];
+            merchantDVC.mchCode = model.jumpValue;
+            [self.viewController.navigationController pushViewController:merchantDVC animated:YES];
+            
+        }
+            break;
+        case 2://跳转app产品详情
+        {
+//            GoodsDetailNewViewController *goodsDVC = [[GoodsDetailNewViewController alloc]init];
+//            goodsDVC.goodsID = model.jumpValue;
+//            [self.viewController.navigationController pushViewController:goodsDVC animated:YES];
+        }
+            break;
+        case 3://跳转网页
+        {
+            
+            BaseHtmlViewController *htmlVC = [[BaseHtmlViewController alloc]init];
+            htmlVC.htmlUrl = model.jumpValue;
+            if ([htmlVC.htmlUrl containsString:@"E50BA6517F660E7CA4A40EFD4508217E"]) {
+                if (![ShellCoinUserInfo shareUserInfos].currentLogined) {
+                    //判断是否先登录
+                    UINavigationController *navc = [LoginViewController controller];
+                    [self.viewController presentViewController:navc animated:YES completion:NULL];
+                    return;
+                }
+                htmlVC.htmlUrl = [NSString stringWithFormat:@"%@&token=%@",model.jumpValue,[ShellCoinUserInfo shareUserInfos].token];
+            }
+            htmlVC.htmlTitle = model.name;
+            [self.viewController.navigationController pushViewController:htmlVC animated:YES];
+            
+        }
+            break;
+        default:
+            break;
+    }
+
+}
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 

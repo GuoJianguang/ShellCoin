@@ -40,7 +40,7 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="抵换结果" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EEG-3W-Mb3">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="抵换成功" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EEG-3W-Mb3">
                             <rect key="frame" x="96.5" y="28" width="82" height="24"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -53,8 +53,8 @@
                                 <constraint firstAttribute="width" constant="74" id="eAh-2G-NUg"/>
                             </constraints>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="抵换成功" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kBy-hB-ths">
-                            <rect key="frame" x="110.5" y="143" width="53.5" height="16"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="抵换成功，我们将在2-3个工作日内为您处理" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kBy-hB-ths">
+                            <rect key="frame" x="6.5" y="143" width="261.5" height="16"/>
                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -66,6 +66,7 @@
                         <constraint firstAttribute="bottom" secondItem="pUC-dt-sGU" secondAttribute="bottom" id="43B-M6-6QR"/>
                         <constraint firstItem="1Hf-ur-yWw" firstAttribute="leading" secondItem="ENZ-IW-ZTw" secondAttribute="leading" id="C6R-Uj-bJe"/>
                         <constraint firstItem="TZU-g7-KWH" firstAttribute="bottom" secondItem="1Hf-ur-yWw" secondAttribute="bottom" constant="37" id="CEy-fC-CWz"/>
+                        <constraint firstItem="kBy-hB-ths" firstAttribute="leading" secondItem="ENZ-IW-ZTw" secondAttribute="leading" constant="7" id="GCC-ty-78O"/>
                         <constraint firstAttribute="trailing" secondItem="Tfc-3y-EHq" secondAttribute="trailing" constant="20" id="HRV-vx-FbC"/>
                         <constraint firstItem="pUC-dt-sGU" firstAttribute="leading" secondItem="ENZ-IW-ZTw" secondAttribute="leading" id="L5d-MJ-DQO"/>
                         <constraint firstItem="kBy-hB-ths" firstAttribute="centerX" secondItem="ENZ-IW-ZTw" secondAttribute="centerX" id="MoV-EK-F5r"/>
@@ -77,6 +78,7 @@
                         <constraint firstItem="TZU-g7-KWH" firstAttribute="centerX" secondItem="ENZ-IW-ZTw" secondAttribute="centerX" id="vZZ-5G-eqC"/>
                         <constraint firstAttribute="trailing" secondItem="1Hf-ur-yWw" secondAttribute="trailing" id="vxv-SJ-htA"/>
                         <constraint firstItem="EEG-3W-Mb3" firstAttribute="centerY" secondItem="1Hf-ur-yWw" secondAttribute="centerY" constant="-10" id="wgf-5q-Crj"/>
+                        <constraint firstAttribute="trailing" secondItem="kBy-hB-ths" secondAttribute="trailing" constant="7" id="yPJ-Li-drz"/>
                     </constraints>
                 </view>
             </subviews>

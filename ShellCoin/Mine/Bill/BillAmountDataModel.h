@@ -51,22 +51,22 @@
 
 @interface BillDihuanModel : BaseModel
 /**
- * 提现单号
+ * 抵换单号
  */
 
 @property (nonatomic, copy)NSString *orderId;
 /**
- * 提现金额
+ * 抵换金额
  */
 
 @property (nonatomic, copy)NSString *withdrawAmout;
 /**
- * 提现时间
+ * 抵换时间
  */
 
 @property (nonatomic, copy)NSString *successTime;
 /**
- * 提现状态 '订单状态（0待审核  1提现中   2提现成功  3提现失败 ）'
+ * 抵换状态 '订单状态（0待审核  1抵换中   2抵换成功  3抵换失败 ）'
  */
 
 @property (nonatomic, copy)NSString *state;

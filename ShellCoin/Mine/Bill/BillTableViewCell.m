@@ -28,16 +28,39 @@
     NSString *markStr = [NSString string];
     switch ([_tixianModel.state integerValue]) {
         case 0:
+        {
             markStr = @"待审核";
+            self.markImageView.image = [UIImage imageNamed:@"pic_state_blue"];
+            self.moneyLabel.textColor = self.markLabel.textColor = [UIColor colorFromHexString:@"#2586d5"];
+        }
             break;
         case 1:
-            markStr = @"提现中";
+        {
+            markStr = @"待审核";
+            self.markImageView.image = [UIImage imageNamed:@"pic_state_blue"];
+            self.moneyLabel.textColor = self.markLabel.textColor = [UIColor colorFromHexString:@"#2586d5"];
+        }
             break;
         case 2:
-            markStr = @"提现成功";
+        {
+            markStr = @"待审核";
+            self.markImageView.image = [UIImage imageNamed:@"pic_state_blue"];
+            self.moneyLabel.textColor = self.markLabel.textColor = [UIColor colorFromHexString:@"#2586d5"];
+        }
             break;
         case 3:
-            markStr = @"提现失败";
+        {
+            self.markImageView.image = [UIImage imageNamed:@"pic_state_green"];
+            self.moneyLabel.textColor = self.markLabel.textColor = MacoColor;
+            markStr = @"抵换成功";
+        }
+            break;
+        case 4:
+        {
+            self.markImageView.image = [UIImage imageNamed:@"pic_state_green"];
+            self.moneyLabel.textColor = self.markLabel.textColor =  [UIColor colorFromHexString:@"#45de8e"];
+            markStr = @"抵换失败";
+        }
             break;
         default:
             break;

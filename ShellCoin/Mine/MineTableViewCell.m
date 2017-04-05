@@ -33,12 +33,15 @@
     self.contentView.backgroundColor = [UIColor colorFromHexString:@"#faf8f6"];
     self.personCenterLabel.textColor = self.recommendLabel.textColor = self.billLabel.textColor = self.setLabel.textColor = self.integralLabel.textColor = self.proportionLabel.textColor= MacoTitleColor;
     self.showIntergralLabel.textColor = self.showProportionLabel.textColor = MacoColor;
-    self.totalMoneyLabel.text = [NSString stringWithFormat:@"总贝壳币：%ld",[[ShellCoinUserInfo shareUserInfos].aviableBalance integerValue]];
-    self.totalBuyCardLabel.text = [NSString stringWithFormat:@"总购物券：%ld",[[ShellCoinUserInfo shareUserInfos].consumeBalance integerValue]];
 
+    
     self.totalMoneyLabel.adjustsFontSizeToFitWidth = self.showIntergralLabel.adjustsFontSizeToFitWidth = YES;
     self.showIntergralLabel.text = [NSString stringWithFormat:@"%.2f",[[ShellCoinUserInfo shareUserInfos].totalExpectAmount doubleValue] + [[ShellCoinUserInfo shareUserInfos].wiatJoinAmunt doubleValue]];
     self.showProportionLabel.text = [NSString stringWithFormat:@"%.2f",[[ShellCoinUserInfo shareUserInfos].totalConsumeAmount doubleValue]];
+    self.totalMoneyLabel.text = [NSString stringWithFormat:@"总余额：%.2f",[[ShellCoinUserInfo shareUserInfos].aviableBalance doubleValue]];
+    self.totalBuyCardLabel.text = [NSString stringWithFormat:@"总购物券：%.2f",[[ShellCoinUserInfo shareUserInfos].consumeBalance doubleValue]];
+    self.yestodyEarningsMoneyLabel.text = [NSString stringWithFormat:@"+%@",[ShellCoinUserInfo shareUserInfos].lastRebateBalance];
+    self.yesTodayBuyCardLabel.text = [NSString stringWithFormat:@"+%@购物券",[ShellCoinUserInfo shareUserInfos].lastRebateConsumeBalance];
     
     if (TWitdh > 320) {
         self.viewHeight.constant = TWitdh*1.05;
@@ -60,10 +63,24 @@
     //获取用户最新消息
     [HttpClient POST:@"user/userBaseInfo/get" parameters:@{@"token":token} success:^(NSURLSessionDataTask *operation, id jsonObject) {
         if (IsRequestTrue) {
+            
             [[ShellCoinUserInfo shareUserInfos]setUserinfoWithdic:jsonObject[@"data"]];
+            
+            if ([[ShellCoinUserInfo shareUserInfos].messageCount isEqualToString:@"0"]) {
+                [self.messageBtn setImage:[UIImage imageNamed:@"icon_news"] forState:UIControlStateNormal];
+
+            }else{
+                [self.messageBtn setImage:[UIImage imageNamed:@"icon_haveNews"] forState:UIControlStateNormal];
+            };
+            
             self.showIntergralLabel.text = [NSString stringWithFormat:@"%.2f",[[ShellCoinUserInfo shareUserInfos].totalExpectAmount doubleValue] + [[ShellCoinUserInfo shareUserInfos].wiatJoinAmunt doubleValue]];
             self.showProportionLabel.text = [NSString stringWithFormat:@"%.2f",[[ShellCoinUserInfo shareUserInfos].totalConsumeAmount doubleValue]];
+            self.totalMoneyLabel.text = [NSString stringWithFormat:@"总余额：%.2f",[[ShellCoinUserInfo shareUserInfos].aviableBalance doubleValue]];
+            self.totalBuyCardLabel.text = [NSString stringWithFormat:@"总购物券：%.2f",[[ShellCoinUserInfo shareUserInfos].consumeBalance doubleValue]];
+            self.yestodyEarningsMoneyLabel.text = [NSString stringWithFormat:@"+%@",[ShellCoinUserInfo shareUserInfos].lastRebateBalance];
+            self.yesTodayBuyCardLabel.text = [NSString stringWithFormat:@"+%@购物券",[ShellCoinUserInfo shareUserInfos].lastRebateConsumeBalance];
             [ShellCoinUserInfo shareUserInfos].token = token;
+            
         }
     } failure:^(NSURLSessionDataTask *operation, NSError *error) {
     }];
@@ -133,7 +150,7 @@
 //    TradInViewController *tradInVC = [[TradInViewController alloc]init];
 //    [self.viewController.navigationController pushViewController:tradInVC animated:YES];
     //首先判断用户时候已经实名认证
-    if ([self gotRealNameRu:@"在您申请提现之前,请先进行实名认证"]){
+    if ([self gotRealNameRu:@"在您申请抵换之前,请先进行实名认证"]){
         return;
     }
     //再判断是否绑定银行卡

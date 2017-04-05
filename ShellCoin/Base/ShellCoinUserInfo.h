@@ -124,7 +124,7 @@
  */
 @property (nonatomic, copy)NSString *messageCount;
 /**
- * 我的提现
+ * 我的抵换
  */
 @property (nonatomic, copy)NSString *withdrawCount;
 /**
@@ -178,8 +178,6 @@
 /**
  * 实名认证申请标志(0无待审核请求   1有待审核请求  )
  */
-
-
 /*
  所绑定银行卡的银行名字
  */
@@ -191,5 +189,9 @@
 //是否免密
 @property (nonatomic, assign)BOOL payPwdFlag;
 
+//昨日收益余额
+@property (nonatomic,copy)NSString *lastRebateBalance;
+//昨日收益购物券
+@property (nonatomic,copy)NSString *lastRebateConsumeBalance;
 
 @end

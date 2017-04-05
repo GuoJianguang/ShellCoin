@@ -39,6 +39,15 @@
 		BC23C9E91E7933B700E90B43 /* LSPaoMaView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC23C9E81E7933B700E90B43 /* LSPaoMaView.m */; };
 		BC23C9EC1E79395A00E90B43 /* YesTodayEarningsAlerView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC23C9EB1E79395A00E90B43 /* YesTodayEarningsAlerView.m */; };
 		BC23C9EE1E79396500E90B43 /* YesTodayEarningsAlerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC23C9ED1E79396500E90B43 /* YesTodayEarningsAlerView.xib */; };
+		BC2E53101E94F1F600F7A99C /* merchantHeader.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC2E530F1E94F1F600F7A99C /* merchantHeader.jpg */; };
+		BC2E53121E94F36C00F7A99C /* HomebannerDefault.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC2E53111E94F36C00F7A99C /* HomebannerDefault.jpg */; };
+		BC2E53191E94FC2C00F7A99C /* SCAdCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = BC2E53151E94FC2C00F7A99C /* SCAdCollectionViewLayout.m */; };
+		BC2E531A1E94FC2C00F7A99C /* SCAdView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC2E53171E94FC2C00F7A99C /* SCAdView.m */; };
+		BC2E531E1E94FEB400F7A99C /* BankInfoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC2E531C1E94FEB400F7A99C /* BankInfoCollectionViewCell.m */; };
+		BC2E531F1E94FEB400F7A99C /* BankInfoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC2E531D1E94FEB400F7A99C /* BankInfoCollectionViewCell.xib */; };
+		BC2E53251E9524FB00F7A99C /* UIScrollView+NoDataSouce.m in Sources */ = {isa = PBXBuildFile; fileRef = BC2E53211E9524FB00F7A99C /* UIScrollView+NoDataSouce.m */; };
+		BC2E53261E9524FB00F7A99C /* NothingView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC2E53231E9524FB00F7A99C /* NothingView.m */; };
+		BC2E53271E9524FB00F7A99C /* NothingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC2E53241E9524FB00F7A99C /* NothingView.xib */; };
 		BC2F17751E839CF300657C51 /* BillAmountDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BC2F17741E839CF300657C51 /* BillAmountDataModel.m */; };
 		BC34A1BE1E9256CA00C786C0 /* AreaTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC34A19D1E9256CA00C786C0 /* AreaTableViewCell.m */; };
 		BC34A1BF1E9256CA00C786C0 /* AreaTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC34A19E1E9256CA00C786C0 /* AreaTableViewCell.xib */; };
@@ -140,10 +149,6 @@
 		BC57B71B1E7FCE34006AF4D1 /* ForyouCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC57B7191E7FCE34006AF4D1 /* ForyouCollectionViewCell.xib */; };
 		BC57B71F1E7FD62A006AF4D1 /* HomeMerchantTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC57B71D1E7FD62A006AF4D1 /* HomeMerchantTableViewCell.m */; };
 		BC57B7201E7FD62A006AF4D1 /* HomeMerchantTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC57B71E1E7FD62A006AF4D1 /* HomeMerchantTableViewCell.xib */; };
-		BC6EA5961E8CF2200073027C /* BankCardDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6EA5951E8CF2200073027C /* BankCardDetailView.m */; };
-		BC6EA5981E8CF2340073027C /* BankCardDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC6EA5971E8CF2340073027C /* BankCardDetailView.xib */; };
-		BC6EA59D1E8CFAE60073027C /* NewPagedFlowView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6EA59A1E8CFAE60073027C /* NewPagedFlowView.m */; };
-		BC6EA59E1E8CFAE60073027C /* PGIndexBannerSubiew.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6EA59C1E8CFAE60073027C /* PGIndexBannerSubiew.m */; };
 		BC6EA5A11E8CFB170073027C /* BankCardInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6EA5A01E8CFB170073027C /* BankCardInfoModel.m */; };
 		BC77C66A1E7A316400DC9EAC /* libUMessage_Sdk_1.4.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BC77C65B1E7A316400DC9EAC /* libUMessage_Sdk_1.4.0.a */; };
 		BC77C66B1E7A316400DC9EAC /* UMSocialCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC77C6601E7A316400DC9EAC /* UMSocialCore.framework */; };
@@ -340,6 +345,21 @@
 		BC23C9EA1E79395A00E90B43 /* YesTodayEarningsAlerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YesTodayEarningsAlerView.h; sourceTree = "<group>"; };
 		BC23C9EB1E79395A00E90B43 /* YesTodayEarningsAlerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YesTodayEarningsAlerView.m; sourceTree = "<group>"; };
 		BC23C9ED1E79396500E90B43 /* YesTodayEarningsAlerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YesTodayEarningsAlerView.xib; sourceTree = "<group>"; };
+		BC2E530F1E94F1F600F7A99C /* merchantHeader.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = merchantHeader.jpg; sourceTree = "<group>"; };
+		BC2E53111E94F36C00F7A99C /* HomebannerDefault.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = HomebannerDefault.jpg; sourceTree = "<group>"; };
+		BC2E53141E94FC2C00F7A99C /* SCAdCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCAdCollectionViewLayout.h; sourceTree = "<group>"; };
+		BC2E53151E94FC2C00F7A99C /* SCAdCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCAdCollectionViewLayout.m; sourceTree = "<group>"; };
+		BC2E53161E94FC2C00F7A99C /* SCAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCAdView.h; sourceTree = "<group>"; };
+		BC2E53171E94FC2C00F7A99C /* SCAdView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCAdView.m; sourceTree = "<group>"; };
+		BC2E53181E94FC2C00F7A99C /* SCAdViewRenderDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCAdViewRenderDelegate.h; sourceTree = "<group>"; };
+		BC2E531B1E94FEB400F7A99C /* BankInfoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankInfoCollectionViewCell.h; sourceTree = "<group>"; };
+		BC2E531C1E94FEB400F7A99C /* BankInfoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankInfoCollectionViewCell.m; sourceTree = "<group>"; };
+		BC2E531D1E94FEB400F7A99C /* BankInfoCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BankInfoCollectionViewCell.xib; sourceTree = "<group>"; };
+		BC2E53201E9524FB00F7A99C /* UIScrollView+NoDataSouce.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+NoDataSouce.h"; sourceTree = "<group>"; };
+		BC2E53211E9524FB00F7A99C /* UIScrollView+NoDataSouce.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+NoDataSouce.m"; sourceTree = "<group>"; };
+		BC2E53221E9524FB00F7A99C /* NothingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NothingView.h; sourceTree = "<group>"; };
+		BC2E53231E9524FB00F7A99C /* NothingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NothingView.m; sourceTree = "<group>"; };
+		BC2E53241E9524FB00F7A99C /* NothingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NothingView.xib; sourceTree = "<group>"; };
 		BC2F17731E839CF300657C51 /* BillAmountDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BillAmountDataModel.h; sourceTree = "<group>"; };
 		BC2F17741E839CF300657C51 /* BillAmountDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BillAmountDataModel.m; sourceTree = "<group>"; };
 		BC34A19C1E9256CA00C786C0 /* AreaTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AreaTableViewCell.h; sourceTree = "<group>"; };
@@ -516,13 +536,6 @@
 		BC57B71C1E7FD62A006AF4D1 /* HomeMerchantTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeMerchantTableViewCell.h; sourceTree = "<group>"; };
 		BC57B71D1E7FD62A006AF4D1 /* HomeMerchantTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeMerchantTableViewCell.m; sourceTree = "<group>"; };
 		BC57B71E1E7FD62A006AF4D1 /* HomeMerchantTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeMerchantTableViewCell.xib; sourceTree = "<group>"; };
-		BC6EA5941E8CF2200073027C /* BankCardDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankCardDetailView.h; sourceTree = "<group>"; };
-		BC6EA5951E8CF2200073027C /* BankCardDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankCardDetailView.m; sourceTree = "<group>"; };
-		BC6EA5971E8CF2340073027C /* BankCardDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BankCardDetailView.xib; sourceTree = "<group>"; };
-		BC6EA5991E8CFAE60073027C /* NewPagedFlowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewPagedFlowView.h; sourceTree = "<group>"; };
-		BC6EA59A1E8CFAE60073027C /* NewPagedFlowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewPagedFlowView.m; sourceTree = "<group>"; };
-		BC6EA59B1E8CFAE60073027C /* PGIndexBannerSubiew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGIndexBannerSubiew.h; sourceTree = "<group>"; };
-		BC6EA59C1E8CFAE60073027C /* PGIndexBannerSubiew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGIndexBannerSubiew.m; sourceTree = "<group>"; };
 		BC6EA59F1E8CFB170073027C /* BankCardInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankCardInfoModel.h; sourceTree = "<group>"; };
 		BC6EA5A01E8CFB170073027C /* BankCardInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankCardInfoModel.m; sourceTree = "<group>"; };
 		BC77C65B1E7A316400DC9EAC /* libUMessage_Sdk_1.4.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libUMessage_Sdk_1.4.0.a; sourceTree = "<group>"; };
@@ -856,6 +869,18 @@
 			path = Bill;
 			sourceTree = "<group>";
 		};
+		BC2E53131E94FC2C00F7A99C /* SCAdView */ = {
+			isa = PBXGroup;
+			children = (
+				BC2E53141E94FC2C00F7A99C /* SCAdCollectionViewLayout.h */,
+				BC2E53151E94FC2C00F7A99C /* SCAdCollectionViewLayout.m */,
+				BC2E53161E94FC2C00F7A99C /* SCAdView.h */,
+				BC2E53171E94FC2C00F7A99C /* SCAdView.m */,
+				BC2E53181E94FC2C00F7A99C /* SCAdViewRenderDelegate.h */,
+			);
+			path = SCAdView;
+			sourceTree = "<group>";
+		};
 		BC34A19B1E9256CA00C786C0 /* selectAreaGourp */ = {
 			isa = PBXGroup;
 			children = (
@@ -1101,6 +1126,8 @@
 		BC4AAC321E4D7556006568A6 /* Public */ = {
 			isa = PBXGroup;
 			children = (
+				BC2E53111E94F36C00F7A99C /* HomebannerDefault.jpg */,
+				BC2E530F1E94F1F600F7A99C /* merchantHeader.jpg */,
 				BC0A58171E724ADA0077C8A9 /* HttpClient */,
 				BC77C6981E7A6D8600DC9EAC /* WeXinPayObject.h */,
 				BC77C6991E7A6D8600DC9EAC /* WeXinPayObject.m */,
@@ -1122,6 +1149,11 @@
 				BCC8E1961E88F2A4004DBDA3 /* UIImage+ColorImage.m */,
 				BCD7370A1E9354A0001F706C /* UILabel+StringFrame.h */,
 				BCD7370B1E9354A0001F706C /* UILabel+StringFrame.m */,
+				BC2E53201E9524FB00F7A99C /* UIScrollView+NoDataSouce.h */,
+				BC2E53211E9524FB00F7A99C /* UIScrollView+NoDataSouce.m */,
+				BC2E53221E9524FB00F7A99C /* NothingView.h */,
+				BC2E53231E9524FB00F7A99C /* NothingView.m */,
+				BC2E53241E9524FB00F7A99C /* NothingView.xib */,
 				BCB9A7C41E89F4B600F3E966 /* Public.xcassets */,
 			);
 			path = Public;
@@ -1298,12 +1330,12 @@
 				BC9B3DF81E7698CC003DC241 /* BanCardDetailTableViewCell.h */,
 				BC9B3DF91E7698CC003DC241 /* BanCardDetailTableViewCell.m */,
 				BC9B3DFA1E7698CC003DC241 /* BanCardDetailTableViewCell.xib */,
+				BC2E531B1E94FEB400F7A99C /* BankInfoCollectionViewCell.h */,
+				BC2E531C1E94FEB400F7A99C /* BankInfoCollectionViewCell.m */,
+				BC2E531D1E94FEB400F7A99C /* BankInfoCollectionViewCell.xib */,
 				BC9B3DFB1E7698CC003DC241 /* ManageBankView.h */,
 				BC9B3DFC1E7698CC003DC241 /* ManageBankView.m */,
 				BC9B3DFD1E7698CC003DC241 /* ManageBankView.xib */,
-				BC6EA5941E8CF2200073027C /* BankCardDetailView.h */,
-				BC6EA5951E8CF2200073027C /* BankCardDetailView.m */,
-				BC6EA5971E8CF2340073027C /* BankCardDetailView.xib */,
 				BC9B3DB81E76837B003DC241 /* BankPickView.h */,
 				BC9B3DB91E76837B003DC241 /* BankPickView.m */,
 				BC9B3DBA1E76837B003DC241 /* city.plist */,
@@ -1317,12 +1349,9 @@
 				BC9B3DD31E7683B7003DC241 /* NoBankCardViewController.h */,
 				BC9B3DD41E7683B7003DC241 /* NoBankCardViewController.m */,
 				BC9B3DD51E7683B7003DC241 /* NoBankCardViewController.xib */,
-				BC6EA5991E8CFAE60073027C /* NewPagedFlowView.h */,
-				BC6EA59A1E8CFAE60073027C /* NewPagedFlowView.m */,
-				BC6EA59B1E8CFAE60073027C /* PGIndexBannerSubiew.h */,
-				BC6EA59C1E8CFAE60073027C /* PGIndexBannerSubiew.m */,
 				BC6EA59F1E8CFB170073027C /* BankCardInfoModel.h */,
 				BC6EA5A01E8CFB170073027C /* BankCardInfoModel.m */,
+				BC2E53131E94FC2C00F7A99C /* SCAdView */,
 			);
 			path = BankManage;
 			sourceTree = "<group>";
@@ -1626,6 +1655,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC2E53121E94F36C00F7A99C /* HomebannerDefault.jpg in Resources */,
 				BC9B3DCE1E76837B003DC241 /* header.jpg in Resources */,
 				BCB9A7CA1E89F77100F3E966 /* MerchantDetailViewController.xib in Resources */,
 				BC0A58361E72832E0077C8A9 /* SetTableViewCell.xib in Resources */,
@@ -1642,6 +1672,7 @@
 				BC0A584F1E72A0680077C8A9 /* BillConsumptionTableViewCell.xib in Resources */,
 				BCFE20751E77C9F6002BC28C /* SecletBankCardTableViewCell.xib in Resources */,
 				BCAC5D101E825DC5003CACF8 /* BillAmountDisciplineView.xib in Resources */,
+				BC2E53101E94F1F600F7A99C /* merchantHeader.jpg in Resources */,
 				BC36CFE81E80C9AD00A51BF4 /* RecommentSpecilCollectionViewCell.xib in Resources */,
 				BC4E25331E80C50D005BE142 /* RecommentSpecialTableViewCell.xib in Resources */,
 				BCFE208B1E77E206002BC28C /* Login.storyboard in Resources */,
@@ -1655,7 +1686,6 @@
 				BC34ECA71E8B88EC00613D35 /* AboutUSViewController.xib in Resources */,
 				BCFE20561E778CA9002BC28C /* SetPasswordViewController.xib in Resources */,
 				BC4AAC3D1E4D8F7B006568A6 /* MineTableViewCell.xib in Resources */,
-				BC6EA5981E8CF2340073027C /* BankCardDetailView.xib in Resources */,
 				BC054D551E8A402E00062AC5 /* Bill12View.xib in Resources */,
 				BC41DAE81E91E8D7008FC9DC /* Home.xcassets in Resources */,
 				BC054D491E8A095B00062AC5 /* OnlinePayViewController.xib in Resources */,
@@ -1688,8 +1718,10 @@
 				BC36EA441E937E600097F2F2 /* MyCollectionListViewController.xib in Resources */,
 				BCA17DDB1E8BB2AD00B4AFDA /* Bill.xcassets in Resources */,
 				BCFE20921E77E206002BC28C /* ForgetPasswordOneViewController.xib in Resources */,
+				BC2E531F1E94FEB400F7A99C /* BankInfoCollectionViewCell.xib in Resources */,
 				BCFE205B1E778F45002BC28C /* ChangeLoginPasswordViewController.xib in Resources */,
 				BC9B3DF71E76982B003DC241 /* EditPhoneNumberViewController.xib in Resources */,
+				BC2E53271E9524FB00F7A99C /* NothingView.xib in Resources */,
 				BCD737091E93544D001F706C /* MessageDetailTableViewCell.xib in Resources */,
 				BC36EA491E93B8600097F2F2 /* WithDrawalResultView.xib in Resources */,
 				BC9B3E0B1E769D44003DC241 /* SetPayPasswordViewController.xib in Resources */,
@@ -1809,6 +1841,7 @@
 				BC34A1C41E9256CA00C786C0 /* CityListViewController.m in Sources */,
 				BC34A1C31E9256CA00C786C0 /* CityItem.m in Sources */,
 				BC9B3DD61E7683B7003DC241 /* NoBankCardViewController.m in Sources */,
+				BC2E53251E9524FB00F7A99C /* UIScrollView+NoDataSouce.m in Sources */,
 				BC34A1C01E9256CA00C786C0 /* ButtonGroupView.m in Sources */,
 				BC9B3DDE1E7688AD003DC241 /* PersonCenterTableViewCell.m in Sources */,
 				BC4AAC381E4D8D51006568A6 /* MineViewController.m in Sources */,
@@ -1846,11 +1879,11 @@
 				BC57B71F1E7FD62A006AF4D1 /* HomeMerchantTableViewCell.m in Sources */,
 				BC0A583E1E728D520077C8A9 /* BillViewController.m in Sources */,
 				BC9B3DE01E7688AD003DC241 /* PersonCenterViewController.m in Sources */,
+				BC2E53261E9524FB00F7A99C /* NothingView.m in Sources */,
 				BCD7370C1E9354A0001F706C /* UILabel+StringFrame.m in Sources */,
 				BCFE205A1E778F45002BC28C /* ChangeLoginPasswordViewController.m in Sources */,
 				BC34A1BE1E9256CA00C786C0 /* AreaTableViewCell.m in Sources */,
 				BC9B3DE61E76892C003DC241 /* MyQrCodeViewController.m in Sources */,
-				BC6EA59D1E8CFAE60073027C /* NewPagedFlowView.m in Sources */,
 				BC4E25321E80C50D005BE142 /* RecommentSpecialTableViewCell.m in Sources */,
 				BC054D541E8A402E00062AC5 /* Bill12View.m in Sources */,
 				BC4AABE21E4D69E2006568A6 /* AppDelegate.m in Sources */,
@@ -1859,7 +1892,6 @@
 				BCFE209E1E77EF2A002BC28C /* WithdrawalViewController.m in Sources */,
 				BC9B3DF61E76982B003DC241 /* EditPhoneNumberViewController.m in Sources */,
 				BC0A58351E72832E0077C8A9 /* SetTableViewCell.m in Sources */,
-				BC6EA59E1E8CFAE60073027C /* PGIndexBannerSubiew.m in Sources */,
 				BCFE20651E7798D6002BC28C /* TradInViewController.m in Sources */,
 				BCC8E1A51E89027A004DBDA3 /* MerchantModel.m in Sources */,
 				BC0A58491E7299900077C8A9 /* BillTableViewCell.m in Sources */,
@@ -1880,6 +1912,7 @@
 				BC4AAC2B1E4D6E7D006568A6 /* BaseModel.m in Sources */,
 				BC2F17751E839CF300657C51 /* BillAmountDataModel.m in Sources */,
 				BC4AAC291E4D6E7D006568A6 /* BaseCollectionViewCell.m in Sources */,
+				BC2E531A1E94FC2C00F7A99C /* SCAdView.m in Sources */,
 				BCAC5D091E825870003CACF8 /* BillIntegralDisciplineView.m in Sources */,
 				BC52794B1E8E7E4E004DD703 /* LBXScanViewStyle.m in Sources */,
 				BC4AAC2C1E4D6E7D006568A6 /* BaseNavigationBar.m in Sources */,
@@ -1895,7 +1928,7 @@
 				BCE5EED71E5C41030055D828 /* Colours.m in Sources */,
 				BCAC5D0E1E825DBB003CACF8 /* BillAmountDisciplineView.m in Sources */,
 				BC36EA4C1E93BF0F0097F2F2 /* OnlinePayResultView.m in Sources */,
-				BC6EA5961E8CF2200073027C /* BankCardDetailView.m in Sources */,
+				BC2E531E1E94FEB400F7A99C /* BankInfoCollectionViewCell.m in Sources */,
 				BC4AABDF1E4D69E2006568A6 /* main.m in Sources */,
 				BCFE20741E77C9F6002BC28C /* SecletBankCardTableViewCell.m in Sources */,
 				BC34A1CA1E9256CA00C786C0 /* PinYinForObjc.m in Sources */,
@@ -1914,6 +1947,7 @@
 				BC4E252D1E80C41E005BE142 /* TalentRecommentViewController.m in Sources */,
 				BC36EA471E93B8530097F2F2 /* WithDrawalResultView.m in Sources */,
 				BC34A1E91E92646700C786C0 /* LineDashPolyline.m in Sources */,
+				BC2E53191E94FC2C00F7A99C /* SCAdCollectionViewLayout.m in Sources */,
 				BC054D421E8A039600062AC5 /* EnterInputMoneyView.m in Sources */,
 				BCFE205F1E779283002BC28C /* ChangePayPasswordViewController.m in Sources */,
 				BCC8E1971E88F2A4004DBDA3 /* UIImage+ColorImage.m in Sources */,

@@ -43,6 +43,7 @@
         self.tableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
             [weak_self getxiaofeijiluRequest:NO];
         }];
+        [self.tableView noDataSouce];
         [self.tableView.mj_header beginRefreshing];
         
            }
@@ -67,6 +68,7 @@
                 TixianModel *model = [TixianModel modelWithDic:dic];
                 [self.dataSouceArray addObject:model];
             }
+            [self.tableView judgeIsHaveDataSouce:self.dataSouceArray];
             [self.tableView reloadData];
         }
         if (isHeader) {
@@ -76,7 +78,7 @@
             
         }
     } failure:^(NSURLSessionDataTask *operation, NSError *error) {
-        
+        [self.tableView showNoDataSouceNoNetworkConnection];
         if (isHeader) {
             [self.tableView.mj_header endRefreshing];
         }else{

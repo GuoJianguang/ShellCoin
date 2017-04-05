@@ -33,6 +33,7 @@
     [self setLayerWithbor:self.view4];
     
     self.phoneTF.enabled = NO;
+    timeLefted1 = 60;
     self.phoneTF.text = [ShellCoinUserInfo shareUserInfos].phone;
 
     [self.verCodeBtn setTitleColor:MacoColor forState:UIControlStateNormal];
@@ -50,11 +51,11 @@
     if ([self valueValidated]) {
         NSString *newPassword = [[NSString stringWithFormat:@"%@%@",self.xinPayTF.text,PasswordKey]md5_32];
         [SVProgressHUD showWithStatus:@"正在提交请求..."];
-        NSDictionary *parms = @{@"payPassowrd":newPassword,
+        NSDictionary *parms = @{@"payPassword":newPassword,
                                 @"token":[ShellCoinUserInfo shareUserInfos].token,
                                 @"verifyCode":self.verCodeTF.text};
         
-        [HttpClient POST:@"user/payPassword/update" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
+        [HttpClient GET:@"user/payPassword/update" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
             [SVProgressHUD dismiss];
             if (IsRequestTrue) {
                 //设置用户信息
@@ -62,6 +63,8 @@
                 [self.navigationController popViewControllerAnimated:YES];
             }
         } failure:^(NSURLSessionDataTask *operation, NSError *error) {
+            [[JAlertViewHelper shareAlterHelper]showTint:@"修改失败，请稍后重试" duration:2];
+
             [SVProgressHUD dismiss];
         }];
     }

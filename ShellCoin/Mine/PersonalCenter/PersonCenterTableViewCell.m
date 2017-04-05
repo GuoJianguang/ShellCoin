@@ -30,17 +30,20 @@
     // Initialization code
     self.yetRMarkBtn.enabled = YES;
     self.headImageView.layer.masksToBounds = YES;
-    self.headImageView.layer.borderColor = [UIColor whiteColor].CGColor;
-    self.headImageView.layer.borderWidth = 5;
-    self.headImageView.layer.cornerRadius = TWitdh*(10/15.) * (6/10.) /2.;
+//    self.headImageView.layer.borderColor = [UIColor whiteColor].CGColor;
+//    self.headImageView.layer.borderWidth = 5;
+    self.headImageView.layer.cornerRadius = (TWitdh*(10/15.) * (6/10.)) *(238/324.) /2.;
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(changeHead)];
+    self.headImageView.userInteractionEnabled = YES;
     [self.headImageView addGestureRecognizer:tap];
     
-    [self.headImageView sd_setImageWithURL:[NSURL URLWithString:[ShellCoinUserInfo shareUserInfos].avatar] placeholderImage:[UIImage imageNamed:@"header.jpg"] completed:NULL];
+    [self.headImageView sd_setImageWithURL:[NSURL URLWithString:[ShellCoinUserInfo shareUserInfos].avatar] placeholderImage:LoadingErrorDefaultHearder completed:NULL];
 
     self.bankLabel.textColor = self.vipLabel.textColor = self.realNameLabel.textColor = self.qrCodeLabel.textColor = self.myCollectionlabel.textColor = MacoTitleColor;
     [self.realNameBtn setTitleColor:MacoColor forState:UIControlStateNormal];
     
+    self.bankRemarkImage.hidden = [ShellCoinUserInfo shareUserInfos].bindingFlag;
+    self.realNameRemarkImage.hidden = [ShellCoinUserInfo shareUserInfos].identityFlag;
     [self setRealNameInfo];
     
 }
@@ -62,12 +65,14 @@
         if (IsRequestTrue) {
         [[ShellCoinUserInfo shareUserInfos]setUserinfoWithdic:jsonObject[@"data"]];
         [ShellCoinUserInfo shareUserInfos].token = token;
+        self.bankRemarkImage.hidden = [ShellCoinUserInfo shareUserInfos].bindingFlag;
+        self.realNameRemarkImage.hidden = [ShellCoinUserInfo shareUserInfos].identityFlag;
         if ([ShellCoinUserInfo shareUserInfos].identityFlag) {
             self.nameLabel.hidden = NO;
             self.yetRMarkBtn.hidden = NO;
             self.nameLabel.text = [ShellCoinUserInfo shareUserInfos].idcardName;
             self.realNameBtn.hidden = YES;
-            }else{
+        }else{
                 self.nameLabel.hidden = YES;
                 self.yetRMarkBtn.hidden = YES;
                 self.realNameBtn.hidden = NO;
@@ -106,6 +111,9 @@
     [self.viewController.navigationController pushViewController:realnameVC animated:YES];
 }
 - (IBAction)bankBtn:(id)sender {
+    if ([self gotRealNameRu:@"在您申请抵换之前,请先进行实名认证"]){
+        return;
+    }
     
     if ([ShellCoinUserInfo shareUserInfos].bindingFlag) {
         ManagerBankCardViewController *manageVC = [[ManagerBankCardViewController alloc]init];
@@ -312,6 +320,36 @@
               } option:nil];
 }
 
+
+#pragma mark - 去进行实名认证
+- (BOOL)gotRealNameRu:(NSString *)alerTitle
+{
+    if (![ShellCoinUserInfo shareUserInfos].identityFlag) {
+        UIAlertController *alertcontroller = [UIAlertController alertControllerWithTitle:@"重要提示" message:alerTitle preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+        }];
+        UIAlertAction *otherAction = [UIAlertAction actionWithTitle:@"去认证" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+            //去进行实名认证
+            
+            if ([ShellCoinUserInfo shareUserInfos].idVerifyReqFlag) {
+                RealnameViewController *realnameVC = [[RealnameViewController alloc]init];
+                realnameVC.isWaitAut = YES;
+                [self.viewController.navigationController pushViewController:realnameVC animated:YES];
+                
+                return;
+            }
+            RealnameViewController *realnameVC = [[RealnameViewController alloc]init];
+            realnameVC.isYetAut = NO;
+            [self.viewController.navigationController pushViewController:realnameVC animated:YES];
+            
+        }];
+        [alertcontroller addAction:cancelAction];
+        [alertcontroller addAction:otherAction];
+        [self.viewController presentViewController:alertcontroller animated:YES completion:NULL];
+        return YES;
+    }
+    return NO;
+}
 
 
 @end

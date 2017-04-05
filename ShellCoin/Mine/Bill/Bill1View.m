@@ -37,9 +37,10 @@
         self.tableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
             [weak_self getxiaofeijiluRequest:NO];
         }];
+        [self.tableView noDataSouce];
         [self.tableView.mj_header beginRefreshing];
         
-           }
+        }
     return self;
 }
 
@@ -55,7 +56,7 @@
     NSDictionary *prams = @{@"pageNo":@(self.page),
                             @"pageSize":MacoRequestPageCount,
                             @"token":[ShellCoinUserInfo shareUserInfos].token};
-    [HttpClient POST:@"user/wallet/balancePay/get" parameters:prams success:^(NSURLSessionDataTask *operation, id jsonObject) {
+    [HttpClient POST:@"user/wallet/consumRecord/get" parameters:prams success:^(NSURLSessionDataTask *operation, id jsonObject) {
         if (IsRequestTrue) {
             if (isHeader) {
                 [self.dataSouceArray removeAllObjects];
@@ -68,6 +69,7 @@
                 BillDataModel *model = [BillDataModel modelWithDic:dic];
                 [self.dataSouceArray addObject:model];
             }
+            [self.tableView judgeIsHaveDataSouce:self.dataSouceArray];
             [self.tableView reloadData];
         }
         if (isHeader) {
@@ -77,7 +79,7 @@
             
         }
     } failure:^(NSURLSessionDataTask *operation, NSError *error) {
-        
+        [self.tableView showNoDataSouceNoNetworkConnection];
         if (isHeader) {
             [self.tableView.mj_header endRefreshing];
         }else{

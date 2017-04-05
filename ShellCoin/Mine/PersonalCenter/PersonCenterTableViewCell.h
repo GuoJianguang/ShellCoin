@@ -44,5 +44,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *myCollectionlabel;
 
 - (IBAction)mycollectionBtn:(id)sender;
+@property (weak, nonatomic) IBOutlet UIImageView *bankRemarkImage;
+@property (weak, nonatomic) IBOutlet UIImageView *realNameRemarkImage;
 
 @end

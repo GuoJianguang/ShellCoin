@@ -16,10 +16,13 @@
 #import "LocationManager.h"
 #import "RecommentModel.h"
 #import "MerchantSearchViewController.h"
+#import "ForyouCollectionViewCell.h"
 
 @interface HomeViewController ()<UITabBarControllerDelegate,UITableViewDelegate,UITableViewDataSource,CityListViewDelegate>
 @property (nonatomic, strong)NSMutableArray *privteDataSouceArray;
 @property (nonatomic, strong)NSMutableArray *popularDataSouceArray;
+
+@property (nonatomic, strong)NSMutableArray *foryouDataSouceArray;
 //定位城市
 @property (nonatomic, strong)NSString *locationCity;
 @property (nonatomic, assign)BOOL isAlreadyRefrefsh;
@@ -124,6 +127,14 @@
     return _popularDataSouceArray;
 }
 
+- (NSMutableArray *)foryouDataSouceArray
+{
+    if (!_foryouDataSouceArray) {
+        _foryouDataSouceArray = [NSMutableArray array];
+    }
+    return _foryouDataSouceArray;
+}
+
 #pragma mark - UITableView
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -150,6 +161,7 @@
             cell = [HomeRecommendedTableViewCell newCell];
         }
         cell.jingpinArray = self.popularDataSouceArray;
+        cell.foryouArray = self.foryouDataSouceArray;
         return cell;
         
     }else{
@@ -224,11 +236,16 @@
 
 #pragma mark - 请求人气商家，达人推荐接口
 - (void)getPopularMRequest{
-    NSDictionary *parms = @{@"city":[ShellCoinUserInfo shareUserInfos].locationCity};
-    [HttpClient POST:@"mch/hotMchs" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
+    [SVProgressHUD showWithStatus:@"正在加载"];
+    NSDictionary *parms = @{@"longitude":NullToNumber(@([ShellCoinUserInfo shareUserInfos].locationCoordinate.longitude)),
+                            @"latitude":NullToNumber(@([ShellCoinUserInfo shareUserInfos].locationCoordinate.latitude)),
+                            @"city":[ShellCoinUserInfo shareUserInfos].locationCity,
+                            @"pageNo":@"1",
+                            @"pageSize":@"3"};
+    [HttpClient GET:@"mch/highQuality" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
         if (IsRequestTrue) {
             [self.popularDataSouceArray removeAllObjects];
-            for (NSDictionary *dic in jsonObject[@"data"]) {
+            for (NSDictionary *dic in jsonObject[@"data"][@"data"]) {
                 PopularMerModel *model = [PopularMerModel modelWithDic:dic];
                 [self.popularDataSouceArray addObject:model];
             }
@@ -236,6 +253,7 @@
         }
         
     } failure:^(NSURLSessionDataTask *operation, NSError *error) {
+        [SVProgressHUD dismiss];
         [self.tableView.mj_header endRefreshing];
     }];
 }
@@ -243,22 +261,52 @@
 - (void)getPersonalRequest{
     
     NSDictionary *parms = @{@"longitude":NullToNumber(@([ShellCoinUserInfo shareUserInfos].locationCoordinate.longitude)),
-                            @"latitude":NullToNumber(@([ShellCoinUserInfo shareUserInfos].locationCoordinate.latitude))};
+                            @"latitude":NullToNumber(@([ShellCoinUserInfo shareUserInfos].locationCoordinate.latitude)),
+                            @"flag":@"0"};
     [HttpClient POST:@"user/personal" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
-        [self.tableView.mj_header endRefreshing];
         if (IsRequestTrue) {
             [self.privteDataSouceArray removeAllObjects];
             NSArray *array = jsonObject[@"data"];
             for (NSDictionary *dic in array) {
                 [self.privteDataSouceArray addObject:[RecommentModel modelWithDic:dic]];
             }
+            [self getReconnmendRequest];
+        }
+        
+    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
+        [self.tableView.mj_header endRefreshing];
+        [SVProgressHUD dismiss];
+    }];
+}
+
+#pragma mark - 推荐商户接口
+- (void)getReconnmendRequest
+{
+//    [ShellCoinUserInfo shareUserInfos].locationCity = @"成都";
+    NSDictionary *parms = @{@"longitude":NullToNumber(@([ShellCoinUserInfo shareUserInfos].locationCoordinate.longitude)),
+                            @"latitude":NullToNumber(@([ShellCoinUserInfo shareUserInfos].locationCoordinate.latitude)),
+                            @"city":[ShellCoinUserInfo shareUserInfos].locationCity,
+                            @"pageNO":@"1",
+                            @"pageSize":@"3"};
+    [HttpClient GET:@"mch/recommend" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
+        [SVProgressHUD dismiss];
+        [self.tableView.mj_header endRefreshing];
+        if (IsRequestTrue) {
+            [self.foryouDataSouceArray removeAllObjects];
+            NSArray *array = jsonObject[@"data"][@"data"];
+            for (NSDictionary *dic in array) {
+                [self.foryouDataSouceArray addObject:[ForYouModel modelWithDic:dic]];
+            }
             [self.tableView reloadData];
         }
         
     } failure:^(NSURLSessionDataTask *operation, NSError *error) {
         [self.tableView.mj_header endRefreshing];
+        [SVProgressHUD dismiss];
     }];
 }
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

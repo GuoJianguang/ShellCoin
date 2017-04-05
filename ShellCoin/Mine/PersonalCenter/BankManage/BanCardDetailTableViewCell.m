@@ -48,19 +48,29 @@
 
 #pragma mark - 删除该银行卡
 - (IBAction)deletBtn:(UIButton *)sender {
-    
-    NSDictionary *parms = @{@"id":self.dataModel.bankinfoid,
-                            @"token":[ShellCoinUserInfo shareUserInfos].token};
-    [HttpClient POST:@"user/withdraw/bindBankcard/delete" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
-        if (IsRequestTrue) {
-            [SVProgressHUD showSuccessWithStatus:@"删除成功"];
-//            ((ManagerBankCardViewController *)self.viewController).currentPage = 0;
-            [((ManagerBankCardViewController *)self.viewController) getmyBankCardRequest];
-        }
-    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
-        [[JAlertViewHelper shareAlterHelper]showTint:@"删除失败，请稍后重试！" duration:2.0];
+    UIAlertController *alertcontroller = [UIAlertController alertControllerWithTitle:@"提示" message:@"是否要删除该张银行卡" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
     }];
-}
+    UIAlertAction *otherAction = [UIAlertAction actionWithTitle:@"删除" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        NSDictionary *parms = @{@"id":self.dataModel.bankinfoid,
+                                @"token":[ShellCoinUserInfo shareUserInfos].token};
+        [HttpClient POST:@"user/withdraw/bindBankcard/delete" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
+            if (IsRequestTrue) {
+                [SVProgressHUD showSuccessWithStatus:@"删除成功"];
+                //            ((ManagerBankCardViewController *)self.viewController).currentPage = 0;
+                [((ManagerBankCardViewController *)self.viewController) getmyBankCardRequest];
+            }
+        } failure:^(NSURLSessionDataTask *operation, NSError *error) {
+            [[JAlertViewHelper shareAlterHelper]showTint:@"删除失败，请稍后重试！" duration:2.0];
+        }];
+
+        
+    }];
+    [alertcontroller addAction:cancelAction];
+    [alertcontroller addAction:otherAction];
+    [self.viewController presentViewController:alertcontroller animated:YES completion:NULL];
+    
+   }
 
 - (NSString *)normalNumToBankNum:(NSString *)num
 {

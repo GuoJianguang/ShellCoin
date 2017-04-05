@@ -11,7 +11,8 @@
 typedef NS_ENUM(NSInteger,Authentication_type){
     Authentication_type_success = 1,//成功
     Authentication_type_fail = 2,//失败
-    Authentication_wait_audit = 3//等待审核
+    Authentication_wait_audit = 3,//等待审核
+    Authentication_wait_success = 4//手动提交成功
 };
 
 @interface RealNameAutResultView : UIView

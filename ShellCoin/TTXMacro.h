@@ -51,7 +51,9 @@
 //加载失败的图片
 #define LoadingErrorDefaultImageCircular ([UIImage imageNamed:@"defaultImagecircular"])
 #define LoadingErrorDefaultImageSquare ([UIImage imageNamed:@"defaultImageSquare"])
-#define HeaderLoadingErrorImage ([UIImage imageNamed:@"user_defalut_icon"])
+#define LoadingErrorDefaultImageBanner ([UIImage imageNamed:@"defaultImageSquare"])
+#define LoadingErrorDefaultHearder ([UIImage imageNamed:@"pic_head_portrait"])
+
 #define AppIconImage ([UIImage imageNamed:@"AppIcon"])
 
 
@@ -74,7 +76,7 @@
 
 //接收让利回馈信息的推送
 #define Upush_Notifi @"Upush_Fanxian_Notifi"
-//账户提现信息推送
+//账户抵换信息推送
 #define Upush_tixian_Notifi @"Upush_tixian_Notifi"
 //待付款订单推送
 #define Upush_Order_Notifi @"Upush_Order_Notifi"

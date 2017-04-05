@@ -31,7 +31,17 @@
     [noticeView addSubview:paomav];
 //    [self.view addSubview:noticeView];
     
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(logout:) name:LogOutNSNotification object:nil];
+
+    
 }
+
+#pragma mark - 退出登录的操作
+- (void)logout:(NSNotification *)notification
+{
+    self.tabBarController.selectedIndex = 0;
+}
+
 
 #pragma mark - UITabelView
 

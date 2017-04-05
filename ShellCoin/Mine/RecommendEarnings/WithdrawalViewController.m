@@ -57,7 +57,7 @@
 {
     sender.enabled = NO;
     if ([[ShellCoinUserInfo shareUserInfos].payPassword isEqualToString:@""]) {
-        UIAlertController *alertcontroller = [UIAlertController alertControllerWithTitle:@"重要提示" message:@"提现之前请先设置您的支付密码" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertController *alertcontroller = [UIAlertController alertControllerWithTitle:@"重要提示" message:@"抵换之前请先设置您的支付密码" preferredStyle:UIAlertControllerStyleAlert];
         UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
         }];
         UIAlertAction *otherAction = [UIAlertAction actionWithTitle:@"去设置" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
@@ -106,7 +106,7 @@ if ([self valueValidated]) {
                 }];
                 return;
             }
-            UIAlertController *alertcontroller = [UIAlertController alertControllerWithTitle:@"提示" message:@"取消指纹验证或者验证失败，请用使用支付密码发起提现请求" preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertController *alertcontroller = [UIAlertController alertControllerWithTitle:@"提示" message:@"取消指纹验证或者验证失败，请用使用支付密码发起抵换请求" preferredStyle:UIAlertControllerStyleAlert];
             UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
             }];
             UIAlertAction *otherAction = [UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
@@ -133,6 +133,7 @@ if ([self valueValidated]) {
                             @"withdrawAmount":self.inputAmountTF.text,
                             @"id":self.bankModel.bankinfoid};
     [self.view addSubview:self.passwordView];
+    self.passwordView.passwordTF.text = @"";
     self.passwordView.mallOrderParms = [NSMutableDictionary dictionaryWithDictionary:parms];
     self.passwordView.inputType = Password_type_withdraw;
     UIEdgeInsets insets = UIEdgeInsetsMake(0, 0, 0, 0);
@@ -145,20 +146,20 @@ if ([self valueValidated]) {
     }];
 }
 
-#pragma mark - 限制提现资格
+#pragma mark - 限制抵换资格
 -(BOOL) valueValidated {
     // 判断电话号码是否合格
     if ([self emptyTextOfTextField:self.inputAmountTF]) {
-        [[JAlertViewHelper shareAlterHelper]showTint:@"请输入提现金额" duration:1.];
+        [[JAlertViewHelper shareAlterHelper]showTint:@"请输入抵换金额" duration:1.];
         return NO;
     }else if ([self.canWithDrawLabel.text doubleValue] < [self.inputAmountTF.text doubleValue]) {
-        [[JAlertViewHelper shareAlterHelper]showTint:@"您的可提现余额不足，请重新输入" duration:1.5];
+        [[JAlertViewHelper shareAlterHelper]showTint:@"您的可抵换余额不足，请重新输入" duration:1.5];
         return NO;
     }else if ([self.inputAmountTF.text integerValue]%10 !=0){
-        [[JAlertViewHelper shareAlterHelper]showTint:@"您的提现金额必须是10的整数倍" duration:1.5];
+        [[JAlertViewHelper shareAlterHelper]showTint:@"您的抵换金额必须是10的整数倍" duration:1.5];
         return NO;
     }else if (([self.inputAmountTF.text integerValue] <100 || [self.inputAmountTF.text integerValue] >1000) &&![[ShellCoinUserInfo shareUserInfos].grade isEqualToString:@"10"]){
-        [[JAlertViewHelper shareAlterHelper]showTint:@"您的提现金额不能小于100，并且不能超过1000" duration:1.5];
+        [[JAlertViewHelper shareAlterHelper]showTint:@"您的抵换金额不能小于100，并且不能超过1000" duration:1.5];
         return NO;
     }
     return YES;
@@ -180,6 +181,7 @@ if ([self valueValidated]) {
 - (IBAction)selcetBankCardBtn:(UIButton *)sender
 {
     [self.view addSubview:self.selectBancardView];
+    self.selectBancardView.bankInfModel = self.bankModel;
     UIEdgeInsets insets = UIEdgeInsetsMake(0, 0, 0, 0);
     [self.selectBancardView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view).insets(insets);
@@ -275,6 +277,10 @@ if ([self valueValidated]) {
                 }
                 [self.selectBancardView.dataSouceArray addObject:model];
             }
+            if (!self.bankModel) {
+                self.bankModel = self.selectBancardView.dataSouceArray[0];
+            }
+            
             [self.selectBancardView.tableView reloadData];
         }
     } failure:^(NSURLSessionDataTask *operation, NSError *error) {
@@ -299,6 +305,7 @@ if ([self valueValidated]) {
 {
     self.naviBar.hiddenDetailBtn = YES;
     [self.view addSubview:self.resultView];
+    self.naviBar.title = @"抵换成功";
     self.resultView.autResultLabel.text =[NSString stringWithFormat:@"¥ %@",self.inputAmountTF.text];
     UIEdgeInsets insets = UIEdgeInsetsMake(64, 0, 0, 0);
     [self.resultView mas_makeConstraints:^(MASConstraintMaker *make) {

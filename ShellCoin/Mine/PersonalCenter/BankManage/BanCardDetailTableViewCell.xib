@@ -16,7 +16,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="438"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="437.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="437"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eLl-TO-8Zs">
@@ -62,8 +62,8 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="沙河支行" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q96-NN-3VN">
-                        <rect key="frame" x="25" y="320.5" width="65.5" height="19.5"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="沙河支行" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q96-NN-3VN">
+                        <rect key="frame" x="25" y="320.5" width="270" height="19.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -127,6 +127,7 @@
                     <constraint firstItem="mXg-cd-eq5" firstAttribute="top" secondItem="swp-68-jCR" secondAttribute="bottom" constant="16" id="LyC-Fs-6Rg"/>
                     <constraint firstItem="eLl-TO-8Zs" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="T9k-G7-lVn"/>
                     <constraint firstItem="dZS-fh-b3n" firstAttribute="top" secondItem="nLn-9o-rXM" secondAttribute="bottom" constant="8" id="YcX-7h-fWN"/>
+                    <constraint firstAttribute="trailing" secondItem="Q96-NN-3VN" secondAttribute="trailing" constant="25" id="bkM-nx-8fG"/>
                     <constraint firstItem="Q96-NN-3VN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="25" id="cNE-vO-ucO"/>
                     <constraint firstItem="6NA-43-peS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="25" id="eS6-AQ-vd6"/>
                     <constraint firstItem="vBW-BC-2kI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="25" id="f8m-di-Y62"/>
@@ -161,7 +162,7 @@
                 <outlet property="realNameLabel" destination="swp-68-jCR" id="gdK-1Q-AON"/>
                 <outlet property="wangdianLabel" destination="MFX-WM-dbE" id="XYt-WX-223"/>
             </connections>
-            <point key="canvasLocation" x="-321" y="-158"/>
+            <point key="canvasLocation" x="-254" y="-157"/>
         </tableViewCell>
     </objects>
     <resources>

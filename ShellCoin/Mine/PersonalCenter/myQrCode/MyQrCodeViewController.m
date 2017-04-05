@@ -101,7 +101,7 @@
 {
     NSDictionary *parms = @{@"token":[ShellCoinUserInfo shareUserInfos].token};
     [HttpClient POST:@"user/recomendUser/get" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
-        [self.heardImageVIew sd_setImageWithURL:[NSURL URLWithString:NullToSpace(jsonObject[@"data"][@"avatar"])] placeholderImage:[UIImage imageNamed:@"header.jpg"]];
+        [self.heardImageVIew sd_setImageWithURL:[NSURL URLWithString:NullToSpace(jsonObject[@"data"][@"avatar"])] placeholderImage:LoadingErrorDefaultHearder];
         self.nameLabel.text = NullToSpace(jsonObject[@"data"][@"name"]);
         self.phoneLabel.text = NullToSpace(jsonObject[@"data"][@"phone"]);
         [self createQR:NullToSpace(jsonObject[@"data"][@"url"])];

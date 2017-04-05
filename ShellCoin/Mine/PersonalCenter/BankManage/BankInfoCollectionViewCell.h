@@ -1,14 +1,16 @@
 //
-//  BankCardDetailView.h
+//  BankInfoCollectionViewCell.h
 //  ShellCoin
 //
-//  Created by Guo on 2017/3/30.
+//  Created by Guo on 2017/4/5.
 //  Copyright © 2017年 Guo. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 @class BankCardInfoModel;
-@interface BankCardDetailView : UIView
+
+@interface BankInfoCollectionViewCell : UICollectionViewCell
+
 @property (weak, nonatomic) IBOutlet UILabel *cardNumLabel;
 
 @property (weak, nonatomic) IBOutlet UILabel *bankMarkLabel;
@@ -19,5 +21,4 @@
 @property (weak, nonatomic) IBOutlet UIImageView *backgoundImageView;
 
 @property (nonatomic, assign)NSInteger count;
-
 @end

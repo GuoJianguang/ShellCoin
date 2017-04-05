@@ -55,6 +55,9 @@
                             @"token":[ShellCoinUserInfo shareUserInfos].token};
     [HttpClient POST:@"user/recommendProfit/get" parameters:prams success:^(NSURLSessionDataTask *operation, id jsonObject) {
         if (IsRequestTrue) {
+            if (self.page == 1) {
+                self.totalMoneyLabel.text = [NSString stringWithFormat:@"¥ %@",NullToNumber(jsonObject[@"data"][@"totalqueryAmount"])];
+            }
             if (isHeader) {
                 [self.dataSouceArray removeAllObjects];
             }
@@ -126,7 +129,7 @@
     [self.navigationController pushViewController:myQrVC animated:YES];
 }
 
-#pragma mark - 提现
+#pragma mark - 抵换
 - (IBAction)withdrawalBtn:(UIButton *)sender {
     WithdrawalViewController *withDrawVC = [[WithdrawalViewController alloc]init];
     [self.navigationController pushViewController:withDrawVC animated:YES];

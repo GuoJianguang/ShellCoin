@@ -52,7 +52,7 @@
     if ([_dataModel.desc isEqualToString:@""]) {
         self.detail_label.text = @"暂无商家介绍";
     }
-    if ([_dataModel.recommend isEqualToString:@"1"]) {
+    if ([_dataModel.highQuality isEqualToString:@"1"]) {
         self.recommendImage.hidden = NO;
     }else{
         self.recommendImage.hidden = YES;
@@ -86,7 +86,7 @@
     self.detail_label.text = _collectionModel.desc;
     if ([_collectionModel.desc isEqualToString:@""]) {
         self.detail_label.text = @"暂无商家介绍";
-    }
+}
 //    if ([_collectionModel.recommend isEqualToString:@"1"]) {
 //        self.recommendImage.hidden = NO;
 //    }else{

@@ -113,13 +113,15 @@ static ShellCoinUserInfo *instance;
     }
     
     if ([NullToNumber(dic[@"payPwdFlag"]) isEqualToString:@"1"]) {
-        instance.payPwdFlag = YES;
-    }else{
         instance.payPwdFlag = NO;
+    }else if([NullToNumber(dic[@"payPwdFlag"]) isEqualToString:@"2"]){
+        instance.payPwdFlag = YES;
 
     }
     instance.wiatJoinAmunt = NullToNumber(dic[@"waitJoinAmount"]);
-    
+    instance.lastRebateBalance = NullToNumber(dic[@"lastRebateBalance"]);
+    instance.lastRebateConsumeBalance = NullToNumber(dic[@"lastRebateConsumeBalance"]);
+
     if ([dic[@"unreadMsgCountVo"] isKindOfClass:[NSDictionary class]]) {
         NSDictionary *unreadMsgCountVo = dic[@"unreadMsgCountVo"];
         instance.feedbackCount = NullToNumber(unreadMsgCountVo[@"feedbackCount"]);

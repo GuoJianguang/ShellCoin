@@ -141,6 +141,7 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="KimmlerView" destination="mHc-R6-0Tf" id="1ml-TR-9WO"/>
                 <outlet property="bussessImage" destination="Pee-ln-al4" id="UtA-1l-DYf"/>
                 <outlet property="checkDetailLabe" destination="67v-Qd-Lte" id="93d-hx-3rs"/>
                 <outlet property="detail_label" destination="pFh-pB-iDB" id="ffL-h8-0mw"/>
@@ -150,7 +151,7 @@
                 <outlet property="name_label" destination="Dtm-4d-gCq" id="uZo-6j-kFw"/>
                 <outlet property="recommendImage" destination="5ch-Xl-XqK" id="19d-vh-ofK"/>
             </connections>
-            <point key="canvasLocation" x="-553" y="103"/>
+            <point key="canvasLocation" x="-718" y="109"/>
         </tableViewCell>
     </objects>
     <resources>

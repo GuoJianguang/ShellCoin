@@ -17,9 +17,9 @@
 + (id)modelWithDic:(NSDictionary *)dic
 {
     PopularMerModel *model  = [[PopularMerModel alloc]init];
-    model.aviableBalance = NullToNumber(dic[@"aviableBalance"]);
-    model.mchCode = NullToSpace(dic[@"mchCode"]);
-    model.mchName = NullToSpace(dic[@"mchName"]);
+//    model.aviableBalance = NullToNumber(dic[@"aviableBalance"]);
+    model.mchCode = NullToSpace(dic[@"code"]);
+    model.mchName = NullToSpace(dic[@"name"]);
     model.pic = NullToSpace(dic[@"pic"]);
     return model;
 }
@@ -43,7 +43,10 @@
       self.titleLabel4.textColor = self.titleLabel5.textColor =self.titleLabel6.textColor = MacoDetailColor;
     [self.changeBtn setTitleColor:MacoColor forState:UIControlStateNormal];
     self.moreLabel.textColor = MacoColor;
-    [self getReconnmendRequest];
+    
+
+    
+
 }
 
 - (void)setJingpinArray:(NSMutableArray *)jingpinArray
@@ -51,21 +54,13 @@
     _jingpinArray = jingpinArray;
     [self.highqualityCollectionVIew reloadData];
 }
-#pragma mark - 推荐商户接口
-- (void)getReconnmendRequest
-{
-    [ShellCoinUserInfo shareUserInfos].locationCity = @"成都";
-    NSDictionary *parms = @{@"longitude":NullToNumber(@([ShellCoinUserInfo shareUserInfos].locationCoordinate.longitude)),
-                            @"latitude":NullToNumber(@([ShellCoinUserInfo shareUserInfos].locationCoordinate.latitude)),
-                            @"city":[ShellCoinUserInfo shareUserInfos].locationCity};
-    [HttpClient POST:@"mch/recommend" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
-        
-    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
-        
-    }];
-    
-}
 
+
+- (void)setForyouArray:(NSMutableArray *)foryouArray
+{
+    _foryouArray = foryouArray;
+    [self.foryouCollectionView reloadData];
+}
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
@@ -78,7 +73,7 @@
     if (collectionView == self.highqualityCollectionVIew) {
         return self.jingpinArray.count;
     }
-    return 3;
+    return self.foryouArray.count;
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
@@ -100,7 +95,7 @@
             nibri =YES;
         }
         ForyouCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
-        //    cell.dataModel = self.privteDataSouceArray[indexPath.item];
+            cell.dataModel = self.foryouArray[indexPath.item];
         nibri=NO;
         return cell;
     }
@@ -123,6 +118,10 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     if (collectionView == self.foryouCollectionView) {
+        
+        MerchantDetailViewController *merchantDetailVC = [[MerchantDetailViewController alloc]init];
+        merchantDetailVC.mchCode = ((ForYouModel *)self.foryouArray[indexPath.item]).code;
+        [self.viewController.navigationController pushViewController:merchantDetailVC animated:YES];
         return;
     }
     
@@ -170,5 +169,37 @@ minimumLineSpacingForSectionAtIndex:(NSInteger)section
     [self.viewController.navigationController pushViewController:talentVC animated:YES];
 }
 - (IBAction)changeBtn:(UIButton *)sender {
+    [self.changeBtn setTitle:@"  正在加载" forState:UIControlStateNormal];
+    [self getReconnmendRequest];
 }
+
+
+#pragma mark - 推荐商户接口
+- (void)getReconnmendRequest
+{
+    //    [ShellCoinUserInfo shareUserInfos].locationCity = @"成都";
+    NSDictionary *parms = @{@"longitude":NullToNumber(@([ShellCoinUserInfo shareUserInfos].locationCoordinate.longitude)),
+                            @"latitude":NullToNumber(@([ShellCoinUserInfo shareUserInfos].locationCoordinate.latitude)),
+                            @"city":[ShellCoinUserInfo shareUserInfos].locationCity,
+                            @"pageNO":@"1",
+                            @"pageSize":@"3"};
+    [HttpClient GET:@"mch/recommend" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
+        [self.changeBtn setTitle:@"  换一批" forState:UIControlStateNormal];
+        [SVProgressHUD dismiss];
+        if (IsRequestTrue) {
+            [self.foryouArray removeAllObjects];
+            NSArray *array = jsonObject[@"data"][@"data"];
+            for (NSDictionary *dic in array) {
+                [self.foryouArray addObject:[ForYouModel modelWithDic:dic]];
+            }
+            [self.foryouCollectionView reloadData];
+            
+        }
+        
+    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
+        [self.changeBtn setTitle:@"  换一批" forState:UIControlStateNormal];
+        [SVProgressHUD dismiss];
+    }];
+}
+
 @end

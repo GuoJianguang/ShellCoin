@@ -70,6 +70,17 @@
     return _resultView;
 }
 
+- (void)backBtnClick
+{
+    if (self.resultView.isSuccess == Authentication_type_fail) {
+        self.resultView.isSuccess = 1;
+        self.naviBar.hiddenDetailBtn = NO;
+        [self.resultView removeFromSuperview];
+    }else{
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+}
+
 #pragma mark - 实名认证提交
 - (void)detailBtnClick
 {
@@ -146,7 +157,7 @@
                     [self authenSuccess];
                     return;
                      //2047,"三次机会用完"
-                }else if ([NullToNumber(jsonObject[@"code"]) isEqualToString:@"2047"]){
+                }else if ([NullToNumber(jsonObject[@"code"]) isEqualToString:@"2049"]){
 //                    self.resultView.isSuccess = Authentication_type_fail;
 //                    [self authenSuccess];
                     [[JAlertViewHelper shareAlterHelper]showTint:jsonObject[@"message"] duration:1.5];
@@ -223,6 +234,9 @@
 #pragma makr - 认证成功
 - (void)authenSuccess
 {
+    if (self.resultView.isSuccess == Authentication_type_success) {
+        [[NSNotificationCenter defaultCenter]postNotificationName:@"realNameSuccess" object:nil];
+    }
     self.naviBar.hiddenDetailBtn = YES;
     [self.view addSubview:self.resultView];
     UIEdgeInsets insets = UIEdgeInsetsMake(64, 0, 0, 0);

@@ -9,7 +9,7 @@
 #import "PersonCenterViewController.h"
 #import "PersonCenterTableViewCell.h"
 
-@interface PersonCenterViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface PersonCenterViewController ()<UITableViewDelegate,UITableViewDataSource,BasenavigationDelegate>
 
 @end
 
@@ -18,8 +18,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.naviBar.hidden = YES;
+    self.naviBar.delegate = self;
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(realNameSuccess) name:@"realNameSuccess" object:nil];
+
 }
 
+
+- (void)backBtnClick
+{
+    [[NSNotificationCenter defaultCenter]removeObserver:self name:@"realNameSuccess" object:nil];
+    [self.navigationController popViewControllerAnimated:YES];
+}
+- (void)realNameSuccess
+{
+    [self.tableView reloadData];
+}
 
 #pragma mark - UITableView
 

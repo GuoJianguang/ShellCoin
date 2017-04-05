@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class BankCardInfoModel;
 
 @interface SelectBanCardView : UIView
 
@@ -27,6 +27,7 @@
 - (IBAction)sureBtn:(UIButton *)sender;
 
 
+@property (nonatomic, strong)BankCardInfoModel *bankInfModel;
 
 
 @end

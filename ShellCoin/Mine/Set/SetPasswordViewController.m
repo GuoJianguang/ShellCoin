@@ -27,17 +27,28 @@
     // Do any additional setup after loading the view from its nib.
     self.payPasswordLabel.textColor = self.payloginPasswordLabel.textColor = self.fingerprintLabel.textColor= MacoTitleColor;
     
+    
+}
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
     if ([[ShellCoinUserInfo shareUserInfos].payPassword isEqualToString:@""]) {
         self.payPasswordLabel.text = @"设置支付密码";
         self.finggerCodeSwitch.on = NO;
         self.isHavePayPassowrd = NO;
     }else{
         self.isHavePayPassowrd = YES;
-        self.payPasswordLabel.text = @"重制支付密码";
-
+        self.payPasswordLabel.text = @"重置支付密码";
+        
     }
-    self.finggerCodeSwitch.on = NO;
-  
+    if ([ShellCoinUserInfo shareUserInfos].payPwdFlag) {
+        self.finggerCodeSwitch.on = YES;
+        
+    }else{
+        self.finggerCodeSwitch.on = NO;
+        
+    }
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -103,6 +114,16 @@
             }];
             
         }
+    }else{
+        [HttpClient POST:@"user/payPassword/ignore/cancel" parameters:@{@"token":[ShellCoinUserInfo shareUserInfos].token} success:^(NSURLSessionDataTask *operation, id jsonObject) {
+            if (IsRequestTrue) {
+                [ShellCoinUserInfo shareUserInfos].payPwdFlag= NO;
+                sender.on = NO;
+            }
+        } failure:^(NSURLSessionDataTask *operation, NSError *error) {
+            [[JAlertViewHelper shareAlterHelper]showTint:@"数据获取失败，请重试" duration:2.0];
+            sender.on = YES;
+        }];
     }
 }
 @end

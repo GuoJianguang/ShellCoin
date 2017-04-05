@@ -12,7 +12,6 @@
 #import "BankCardInfoModel.h"
 
 @interface SelectBanCardView()<UITableViewDelegate,UITableViewDataSource>
-@property (nonatomic, strong)BankCardInfoModel *bankInfModel;
 @end
 
 @implementation SelectBanCardView
@@ -151,5 +150,7 @@
 - (void)setBankInfModel:(BankCardInfoModel *)bankInfModel
 {
     _bankInfModel = bankInfModel;
+    _bankInfModel.isSeclet = YES;
+    [self.tableView reloadData];
 }
 @end

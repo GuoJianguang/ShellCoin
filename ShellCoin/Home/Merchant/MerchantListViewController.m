@@ -25,7 +25,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.sortView.titleArray = @[@"默认",@"距离从远到近"];
+    self.sortView.titleArray = @[@"默认",@"距离从近到远"];
     self.sortView.delegate = self;
     self.naviBar.hidden = YES;
     self.tableView.backgroundColor = [UIColor clearColor];

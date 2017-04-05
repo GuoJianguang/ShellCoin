@@ -39,6 +39,15 @@
     view.layer.borderColor = [UIColor colorFromHexString:@"#e6e6e6"].CGColor;
 }
 
+
+- (void)backBtnClick
+{
+    if (self.resultView.isSuccess == Authentication_wait_success) {
+        [self.navigationController popToRootViewControllerAnimated:YES];
+    }else{
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+}
 #pragma mark - 提交
 - (void)detailBtnClick
 {
@@ -262,7 +271,7 @@
 {
     self.naviBar.hiddenDetailBtn = YES;
     [self.view addSubview:self.resultView];
-    self.resultView.isSuccess = Authentication_wait_audit;
+    self.resultView.isSuccess = Authentication_wait_success;
     UIEdgeInsets insets = UIEdgeInsetsMake(64, 0, 0, 0);
     [self.resultView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view).insets(insets);

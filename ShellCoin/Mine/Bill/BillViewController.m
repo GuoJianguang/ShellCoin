@@ -31,7 +31,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.naviBar.title = @"账单";
-    self.sortView.titleArray = @[@"金额记录",@"积分记录"];
+    self.sortView.titleArray = @[@"消费记录",@"抵换记录"];
     self.naviBar.lineVIew.hidden = YES;
     self.swipeView.dataSource = self;
     self.swipeView.delegate = self;

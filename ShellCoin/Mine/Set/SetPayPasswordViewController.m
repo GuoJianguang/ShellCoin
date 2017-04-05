@@ -49,6 +49,7 @@
         [HttpClient POST:@"user/payPassword/add" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
             [SVProgressHUD dismiss];
             if (IsRequestTrue) {
+                [ShellCoinUserInfo shareUserInfos].payPassword = self.surePasswordTF.text;
                 [[JAlertViewHelper shareAlterHelper]showTint:@"设置成功" duration:1.5];
                 [self.navigationController popViewControllerAnimated:YES];
             }

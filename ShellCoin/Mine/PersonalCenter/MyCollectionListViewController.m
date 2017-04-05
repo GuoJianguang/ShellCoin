@@ -92,6 +92,8 @@
     if (self.dataSouceArray.count > 0) {
         cell.collectionModel = self.dataSouceArray[indexPath.row];
     }
+    cell.recommendImage.hidden = YES;
+    cell.KimmlerView.hidden = YES;
     return cell;
 }
 
@@ -102,7 +104,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return TWitdh*(290/750.);
+    return (TWitdh-20)*(11/40.);
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
