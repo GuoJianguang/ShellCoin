@@ -7,6 +7,7 @@
 //
 
 #import "BaseViewController.h"
+#import "SortButtonSwitchView.h"
 
 @interface MerchantSearchRsultViewController : BaseViewController
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -20,5 +21,8 @@
 
 //首页活动id
 @property (nonatomic, strong)NSString *seqId;
+- (IBAction)backBtn:(id)sender;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet SortButtonSwitchView *sortView;
 
 @end

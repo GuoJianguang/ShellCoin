@@ -12,5 +12,6 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
+- (void)reload;
 
 @end

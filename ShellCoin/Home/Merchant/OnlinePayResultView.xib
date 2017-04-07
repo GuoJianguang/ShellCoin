@@ -27,12 +27,15 @@
                         </imageView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qlb-BZ-NYd">
                             <rect key="frame" x="0.0" y="231" width="275" height="50"/>
-                            <state key="normal" backgroundImage="pic3_personal">
+                            <state key="normal" title="返回商家" backgroundImage="pic3_personal">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
+                            <connections>
+                                <action selector="sureBtn:" destination="K1v-nI-eH5" eventType="touchUpInside" id="ejX-be-VdH"/>
+                            </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¥--" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xf2-19-w3r">
-                            <rect key="frame" x="20" y="167" width="235" height="28"/>
+                            <rect key="frame" x="20" y="166.5" width="235" height="28"/>
                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -50,8 +53,8 @@
                                 <constraint firstAttribute="width" constant="74" id="uKo-tw-YfA"/>
                             </constraints>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="抵换成功" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XgW-I0-xL0">
-                            <rect key="frame" x="110" y="143" width="54" height="16"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="抵换成功" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XgW-I0-xL0">
+                            <rect key="frame" x="110" y="142.5" width="54" height="16"/>
                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -104,10 +107,10 @@
                         <constraint firstAttribute="bottom" secondItem="UIo-hz-k2d" secondAttribute="bottom" id="XRe-Fv-k4q"/>
                         <constraint firstAttribute="bottom" secondItem="Grm-lg-PtD" secondAttribute="bottom" id="Xnc-VO-K8W"/>
                         <constraint firstItem="Grm-lg-PtD" firstAttribute="leading" secondItem="MFA-MG-mwo" secondAttribute="leading" id="ZO5-4s-tMO"/>
-                        <constraint firstAttribute="width" secondItem="MFA-MG-mwo" secondAttribute="height" multiplier="284:290" id="ZcF-y4-EGP"/>
                         <constraint firstItem="qlb-BZ-NYd" firstAttribute="leading" secondItem="MFA-MG-mwo" secondAttribute="leading" id="cfb-AM-5xY"/>
                         <constraint firstAttribute="trailing" secondItem="UIo-hz-k2d" secondAttribute="trailing" id="h4W-hz-viH"/>
                         <constraint firstItem="4zG-GE-ejf" firstAttribute="leading" secondItem="MFA-MG-mwo" secondAttribute="leading" id="kQg-ve-YTP"/>
+                        <constraint firstAttribute="height" constant="281" id="ltf-fZ-9de"/>
                         <constraint firstAttribute="trailing" secondItem="qlb-BZ-NYd" secondAttribute="trailing" id="nvy-49-RcX"/>
                         <constraint firstItem="4zG-GE-ejf" firstAttribute="top" secondItem="MFA-MG-mwo" secondAttribute="top" id="sh6-SS-bhy"/>
                         <constraint firstItem="Grm-lg-PtD" firstAttribute="height" secondItem="qlb-BZ-NYd" secondAttribute="height" id="ulC-H0-L4i"/>
@@ -122,15 +125,18 @@
                 <constraint firstItem="MFA-MG-mwo" firstAttribute="leading" secondItem="K1v-nI-eH5" secondAttribute="leading" constant="50" id="p24-zw-nlR"/>
             </constraints>
             <connections>
+                <outlet property="ViewHeight" destination="ltf-fZ-9de" id="zVe-3B-MZr"/>
                 <outlet property="alerResultImageView" destination="Pac-Gd-yc2" id="XtY-MB-lNw"/>
                 <outlet property="autResultLabel" destination="Xf2-19-w3r" id="v7c-rf-LiV"/>
                 <outlet property="autResultTitleLabel" destination="rgY-WC-Lh6" id="Esk-VW-FiY"/>
                 <outlet property="backBtn" destination="Grm-lg-PtD" id="11j-d8-qnu"/>
                 <outlet property="checkBill" destination="UIo-hz-k2d" id="cVy-jT-hEG"/>
+                <outlet property="lineView" destination="3cM-Nw-mY9" id="vlO-TH-RaS"/>
                 <outlet property="successLabel" destination="XgW-I0-xL0" id="hbW-dT-Tqn"/>
+                <outlet property="sureBtn" destination="qlb-BZ-NYd" id="8QM-k6-LLP"/>
                 <outlet property="titleimageView" destination="4zG-GE-ejf" id="RWK-o0-V5I"/>
             </connections>
-            <point key="canvasLocation" x="-504" y="-1285"/>
+            <point key="canvasLocation" x="-531" y="-1781"/>
         </view>
     </objects>
     <resources>

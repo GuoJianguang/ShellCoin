@@ -71,9 +71,9 @@
                         <constraint firstItem="pUC-dt-sGU" firstAttribute="leading" secondItem="ENZ-IW-ZTw" secondAttribute="leading" id="L5d-MJ-DQO"/>
                         <constraint firstItem="kBy-hB-ths" firstAttribute="centerX" secondItem="ENZ-IW-ZTw" secondAttribute="centerX" id="MoV-EK-F5r"/>
                         <constraint firstItem="Tfc-3y-EHq" firstAttribute="top" secondItem="kBy-hB-ths" secondAttribute="bottom" constant="8" id="NvQ-AM-uU7"/>
+                        <constraint firstAttribute="height" constant="281" id="RY9-8A-raq"/>
                         <constraint firstItem="Tfc-3y-EHq" firstAttribute="centerY" secondItem="ENZ-IW-ZTw" secondAttribute="centerY" constant="40" id="Yaw-mX-jQX"/>
                         <constraint firstItem="Tfc-3y-EHq" firstAttribute="leading" secondItem="ENZ-IW-ZTw" secondAttribute="leading" constant="20" id="aJb-gN-85Y"/>
-                        <constraint firstAttribute="width" secondItem="ENZ-IW-ZTw" secondAttribute="height" multiplier="284:290" id="ivO-JS-akI"/>
                         <constraint firstItem="1Hf-ur-yWw" firstAttribute="top" secondItem="ENZ-IW-ZTw" secondAttribute="top" id="jte-hj-CWQ"/>
                         <constraint firstItem="TZU-g7-KWH" firstAttribute="centerX" secondItem="ENZ-IW-ZTw" secondAttribute="centerX" id="vZZ-5G-eqC"/>
                         <constraint firstAttribute="trailing" secondItem="1Hf-ur-yWw" secondAttribute="trailing" id="vxv-SJ-htA"/>
@@ -89,6 +89,7 @@
                 <constraint firstItem="ENZ-IW-ZTw" firstAttribute="centerY" secondItem="92z-Rv-zZY" secondAttribute="centerY" constant="-40" id="zvs-pr-rvG"/>
             </constraints>
             <connections>
+                <outlet property="ViewHeight" destination="RY9-8A-raq" id="gKP-b2-XsF"/>
                 <outlet property="alerResultImageView" destination="TZU-g7-KWH" id="zez-3a-9B9"/>
                 <outlet property="autResultLabel" destination="Tfc-3y-EHq" id="rev-lo-R4l"/>
                 <outlet property="autResultTitleLabel" destination="EEG-3W-Mb3" id="jSp-xf-dwr"/>
@@ -96,7 +97,7 @@
                 <outlet property="successLabel" destination="kBy-hB-ths" id="Wnl-9w-hdF"/>
                 <outlet property="titleimageView" destination="1Hf-ur-yWw" id="TrU-tQ-RMy"/>
             </connections>
-            <point key="canvasLocation" x="-358" y="-1076"/>
+            <point key="canvasLocation" x="-315" y="-1370"/>
         </view>
     </objects>
     <resources>

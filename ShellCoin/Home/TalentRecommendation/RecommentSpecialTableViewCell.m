@@ -26,6 +26,14 @@
     
 }
 
+- (void)setDataModel:(RecommentModel *)dataModel
+{
+    _dataModel = dataModel;
+    self.title_label.text = _dataModel.name;
+    self.detail_label.text = _dataModel.name;
+    [self.detailCollectionView reloadData];
+}
+
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 
@@ -34,8 +42,7 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    
-    return 3;
+    return _dataModel.picArray.count;
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
@@ -56,7 +63,7 @@
         nibri =YES;
     }
     RecommentSpecilCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
-    //    cell.dataModel = self.privteDataSouceArray[indexPath.item];
+    cell.pic = self.dataModel.picArray[indexPath.item];
     nibri=NO;
     return cell;
 }

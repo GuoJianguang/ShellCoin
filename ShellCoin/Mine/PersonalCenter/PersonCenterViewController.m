@@ -24,6 +24,7 @@
 }
 
 
+
 - (void)backBtnClick
 {
     [[NSNotificationCenter defaultCenter]removeObserver:self name:@"realNameSuccess" object:nil];

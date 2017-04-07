@@ -80,7 +80,10 @@
             self.sendOldCodeBtn.enabled = NO;
             self.timer1 = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(oldTimeLeft:) userInfo:nil repeats:YES];
             [[NSRunLoop currentRunLoop]addTimer:self.timer1 forMode:NSRunLoopCommonModes];
+            return;
         }
+        self.sendOldCodeBtn.enabled = YES;
+
     } failure:^(NSURLSessionDataTask *operation, NSError *error) {
         sender.enabled = YES;
 
@@ -118,7 +121,7 @@
 -(void) oldverifyButtonNormal {
     [self.timer1 invalidate];
     timeLefted1 = 60;
-    self.sendOldCodeBtn.layer.borderColor = MacoColor.CGColor;
+    [self.sendOldCodeBtn setTitleColor:MacoColor forState:UIControlStateNormal];
     [self.sendOldCodeBtn setTitle:@"发送验证码" forState:UIControlStateNormal];
     self.sendOldCodeBtn.enabled = YES;
 }
@@ -126,7 +129,7 @@
 -(void) newverifyButtonNormal {
     [self.timer2 invalidate];
     timeLefted2 = 60;
-    self.sendNewCodeBtn.layer.borderColor = MacoColor.CGColor;
+    [self.sendNewCodeBtn setTitleColor:MacoColor forState:UIControlStateNormal];
     [self.sendNewCodeBtn setTitle:@"发送验证码" forState:UIControlStateNormal];
     self.sendNewCodeBtn.enabled = YES;
 }
@@ -146,7 +149,7 @@
     sender.enabled = NO;
     NSDictionary *parms = @{@"oldPhone":self.oldPhoneTF.text,
                             @"newPhone":self.freshPhoneTF.text,
-                            @"oldVerifyCode":self.freshCodeTF.text};
+                            @"oldVerifyCode":self.oldVerCodeTF.text};
     [HttpClient POST:@"sms/sendModifyPhoneCode/new" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
         if (IsRequestTrue) {
             [self.sendNewCodeBtn setTitle:@"重新获取(60)" forState:UIControlStateNormal];
@@ -154,7 +157,10 @@
             self.sendNewCodeBtn.enabled = NO;
             self.timer2 = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(newTimeLeft:) userInfo:nil repeats:YES];
             [[NSRunLoop currentRunLoop]addTimer:self.timer2 forMode:NSRunLoopCommonModes];
+            return;
         }
+        self.sendNewCodeBtn.enabled = YES;
+
     } failure:^(NSURLSessionDataTask *operation, NSError *error) {
         sender.enabled = YES;
         
@@ -164,7 +170,7 @@
 
 - (void)callCustomerService{
 
-    NSMutableString * str=[[NSMutableString alloc] initWithFormat:@"tel:%@",@"1008611"];
+    NSMutableString * str=[[NSMutableString alloc] initWithFormat:@"tel:%@",@"02865224503"];
     UIWebView * callWebview = [[UIWebView alloc] init];
     [callWebview loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:str]]];
     [self.view addSubview:callWebview];
@@ -203,6 +209,7 @@
         [SVProgressHUD dismiss];
         if (IsRequestTrue) {
             [[JAlertViewHelper shareAlterHelper]showTint:@"修改成功" duration:1.5];
+            [[NSUserDefaults standardUserDefaults]setObject:self.freshPhoneTF.text forKey:LoginUserName];
             [ShellCoinUserInfo shareUserInfos].phone = self.freshPhoneTF.text;
             [self.navigationController popViewControllerAnimated:YES];
         }

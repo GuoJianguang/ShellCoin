@@ -23,30 +23,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.naviBar.title = @"达人推荐";
-    RecommentModel *model1 = [[RecommentModel alloc]init];
-    model1.type = 1;
-    RecommentModel *model2 = [[RecommentModel alloc]init];
-    model2.type = 2;
-    
-//    [self.datasouceArray addObject:model1];
-//    [self.datasouceArray addObject:model1];
-//    [self.datasouceArray addObject:model1];
-//    [self.datasouceArray addObject:model1];
-//    [self.datasouceArray addObject:model2];
-//    [self.datasouceArray addObject:model1];
-//    [self.datasouceArray addObject:model2];
-//    [self.datasouceArray addObject:model1];
-//    [self.datasouceArray addObject:model1];
-//    [self.datasouceArray addObject:model2];
-//    [self.datasouceArray addObject:model1];
-//    [self.datasouceArray addObject:model1];
-//    [self.datasouceArray addObject:model1];
-//    [self.datasouceArray addObject:model1];
-//    [self.tableView reloadData];
     __weak TalentRecommentViewController *weak_self = self;
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         [weak_self getPersonalRequest];
     }];
+    [self.tableView noDataSouce];
     [self.tableView.mj_header beginRefreshing];
 }
 
@@ -69,15 +50,21 @@
         if (IsRequestTrue) {
             [self.datasouceArray removeAllObjects];
             NSArray *array = jsonObject[@"data"];
-            for (NSDictionary *dic in array) {
-                RecommentModel *model = [RecommentModel modelWithDic:dic];
-                model.type = 1;
+            for (int i = 0; i < array.count; i++) {
+                RecommentModel *model = [RecommentModel modelWithDic:array[i]];
+                if (i%3==0 && i!=0 &&model.picArray.count !=0) {
+                    model.type = 2;
+                }else{
+                    model.type = 1;
+                }
                 [self.datasouceArray addObject:model];
             }
+            [self.tableView judgeIsHaveDataSouce:self.datasouceArray];
             [self.tableView reloadData];
         }
         
     } failure:^(NSURLSessionDataTask *operation, NSError *error) {
+        [self.tableView showNoDataSouceNoNetworkConnection];
         [self.tableView.mj_header endRefreshing];
     }];
 }
@@ -112,6 +99,7 @@
             if (!cell) {
                 cell = [RecommentSpecialTableViewCell newCell];
             }
+            cell.dataModel = self.datasouceArray[indexPath.row];
             return cell;
         }
             break;

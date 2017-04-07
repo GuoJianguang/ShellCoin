@@ -41,6 +41,9 @@
 
 @property (nonatomic, copy)NSString *remark;
 
+
+@property (nonatomic, strong)NSArray *picArray;
+
 @property (nonatomic, assign) NSInteger  type;
 
 @end

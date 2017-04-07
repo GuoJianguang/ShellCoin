@@ -23,6 +23,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *successLabel;
 
 @property (weak, nonatomic) IBOutlet UIImageView *titleimageView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *ViewHeight;
 
 
 @end

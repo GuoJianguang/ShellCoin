@@ -59,16 +59,16 @@
     
     
     if (xiaofeiJin >= payMoney) {
-        self.yuELabel.text = [NSString stringWithFormat:@"余额支付(消费金%.2f元)",payMoney];
+        self.yuELabel.text = [NSString stringWithFormat:@"余额支付(购物券%.2f元)",payMoney];
         self.xiaofeiJinMoney = xiaofeiJin - payMoney;
     }else if (payMoney > xiaofeiJin && payMoney - xiaofeiJin < yuE && xiaofeiJin !=0){
-        self.yuELabel.text = [NSString stringWithFormat:@"余额支付(消费金%.2f元+余额%.2f元)",xiaofeiJin,(payMoney - xiaofeiJin)];
+        self.yuELabel.text = [NSString stringWithFormat:@"余额支付(购物券%.2f元+余额%.2f元)",xiaofeiJin,(payMoney - xiaofeiJin)];
         self.xiaofeiJinMoney = 0;
     }else if(xiaofeiJin==0 && payMoney < yuE){
         self.yuELabel.text = [NSString stringWithFormat:@"余额支付(余额%.2f元)",payMoney];
         self.xiaofeiJinMoney = 0;
     }else if(payMoney > yuE + xiaofeiJin){
-        self.yuELabel.text = [NSString stringWithFormat:@"余额和消费金额不足，请用微信或者现金支付"];
+        self.yuELabel.text = [NSString stringWithFormat:@"余额和购物券不足，请用微信或者现金支付"];
         
         self.payWay_type = Payway_type_wechat;
         self.yuEImage.image = [UIImage imageNamed:@"icon_balance_payment_nor"];
@@ -185,6 +185,7 @@
                     [SVProgressHUD dismiss];
                     if (IsRequestTrue) {
 //                        [[JAlertViewHelper shareAlterHelper]showTint:@"支付成功" duration:2.];
+                        self.resultView.payType = Merchant_PayTYpe_YuE;
                         [self withDrawalSuccess];
                     }
                 } failure:^(NSURLSessionDataTask *operation, NSError *error) {
@@ -237,19 +238,33 @@
 
 - (void)cashPay
 {
-    NSString *totalMoney = [NSString stringWithFormat:@"%.2f",[self.money doubleValue]];
-    NSDictionary *prams = @{@"token":[ShellCoinUserInfo shareUserInfos].token,
-                            @"mchCode":NullToSpace(self.dataModel.code),
-                            @"tranAmount":totalMoney};
-    [HttpClient POST:@"pay/mch/cash" parameters:prams success:^(NSURLSessionDataTask *operation, id jsonObject) {
-        if (IsRequestTrue) {
-//            [[JAlertViewHelper shareAlterHelper]showTint:@"支付成功" duration:2.];
-            [self withDrawalSuccess];
-        }
-    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
-        [[JAlertViewHelper shareAlterHelper]showTint:@"支付失败" duration:2.];
+    
+    UIAlertController *alertcontroller = [UIAlertController alertControllerWithTitle:@"提示" message:@"是否确认进行现金支付" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+    }];
+    UIAlertAction *otherAction = [UIAlertAction actionWithTitle:@"支付" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        NSString *totalMoney = [NSString stringWithFormat:@"%.2f",[self.money doubleValue]];
+        NSDictionary *prams = @{@"token":[ShellCoinUserInfo shareUserInfos].token,
+                                @"mchCode":NullToSpace(self.dataModel.code),
+                                @"tranAmount":totalMoney};
+        [SVProgressHUD showWithStatus:@"支付进行中..."];
+        [HttpClient POST:@"pay/mch/cash" parameters:prams success:^(NSURLSessionDataTask *operation, id jsonObject) {
+            [SVProgressHUD dismiss];
+            if (IsRequestTrue) {
+                //            [[JAlertViewHelper shareAlterHelper]showTint:@"支付成功" duration:2.];
+                self.resultView.payType = Merchant_PayTYpe_Cash;
+                [self withDrawalSuccess];
+            }
+        } failure:^(NSURLSessionDataTask *operation, NSError *error) {
+            [SVProgressHUD dismiss];
+            [[JAlertViewHelper shareAlterHelper]showTint:@"支付失败" duration:2.];
+            
+        }];
 
     }];
+    [alertcontroller addAction:cancelAction];
+    [alertcontroller addAction:otherAction];
+    [self presentViewController:alertcontroller animated:YES completion:NULL];
     
 }
 
@@ -279,6 +294,7 @@
 {
     self.naviBar.hiddenDetailBtn = YES;
     [self.view addSubview:self.resultView];
+    self.resultView.payType = Merchant_PayTYpe_YuE;
     self.resultView.successLabel.text = self.dataModel.name;
     self.resultView.autResultLabel.text =[NSString stringWithFormat:@"¥ %@",payWay];
     UIEdgeInsets insets = UIEdgeInsetsMake(64, 0, 0, 0);

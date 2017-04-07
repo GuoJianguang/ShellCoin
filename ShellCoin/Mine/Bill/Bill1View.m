@@ -20,6 +20,11 @@
 
 @implementation Bill1View
 
+
+- (void)reload
+{
+    [self.tableView.mj_header beginRefreshing];
+}
 - (instancetype)init
 {
     self = [super init];
@@ -38,8 +43,7 @@
             [weak_self getxiaofeijiluRequest:NO];
         }];
         [self.tableView noDataSouce];
-        [self.tableView.mj_header beginRefreshing];
-        
+        [self reload];
         }
     return self;
 }

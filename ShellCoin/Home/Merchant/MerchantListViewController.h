@@ -32,4 +32,6 @@
 @property (nonatomic, strong)NSString *seqId;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
+
+
 @end

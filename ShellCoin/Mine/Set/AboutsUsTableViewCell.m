@@ -16,6 +16,7 @@
     self.detail_Label.textColor = MacoTitleColor;
     self.companyLabel.textColor = MacoTitleColor;
     self.visionLabel.text = [NSString stringWithFormat:@"版本号 V%@",[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]];
+    self.companyLabel.text =@"成都领创有你科技有限公司\n蜀ICP备17008554号-1";
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

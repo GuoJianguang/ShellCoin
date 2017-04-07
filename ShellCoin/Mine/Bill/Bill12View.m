@@ -17,7 +17,16 @@
 
 @end
 
+
+
 @implementation Bill12View
+
+
+- (void)reload
+{
+    [self.tableView.mj_header beginRefreshing];
+}
+
 - (NSMutableArray *)dataSouceArray
 {
     if (!_dataSouceArray) {
@@ -44,9 +53,9 @@
             [weak_self getxiaofeijiluRequest:NO];
         }];
         [self.tableView noDataSouce];
-        [self.tableView.mj_header beginRefreshing];
+        [self reload];
         
-           }
+        }
     return self;
 }
 

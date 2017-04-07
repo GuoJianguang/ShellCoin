@@ -34,7 +34,6 @@
     [self getmyBankCardRequest];
 }
 
-
 - (SureTradInView *)passwordView
 {
     if (!_passwordView) {
@@ -158,10 +157,16 @@ if ([self valueValidated]) {
     }else if ([self.inputAmountTF.text integerValue]%10 !=0){
         [[JAlertViewHelper shareAlterHelper]showTint:@"您的抵换金额必须是10的整数倍" duration:1.5];
         return NO;
-    }else if (([self.inputAmountTF.text integerValue] <100 || [self.inputAmountTF.text integerValue] >1000) &&![[ShellCoinUserInfo shareUserInfos].grade isEqualToString:@"10"]){
-        [[JAlertViewHelper shareAlterHelper]showTint:@"您的抵换金额不能小于100，并且不能超过1000" duration:1.5];
-        return NO;
-    }
+    }else if ([self.inputAmountTF.text integerValue] <100){
+            [[JAlertViewHelper shareAlterHelper]showTint:@"您的抵换金额不能小于100" duration:1.5];
+            return NO;
+        }
+    
+    
+//    else if (([self.inputAmountTF.text integerValue] <100 || [self.inputAmountTF.text integerValue] >1000) &&![[ShellCoinUserInfo shareUserInfos].grade isEqualToString:@"10"]){
+//        [[JAlertViewHelper shareAlterHelper]showTint:@"您的抵换金额不能小于100，并且不能超过1000" duration:1.5];
+//        return NO;
+//    }
     return YES;
 }
 -(BOOL) emptyTextOfTextField:(UITextField*) textField {
@@ -256,6 +261,7 @@ if ([self valueValidated]) {
     self.bankLabel.text = _bankModel.bankName;
     NSString *count = [_bankModel.bankAccount substringFromIndex:_bankModel.bankAccount.length-4];
     self.bankCardNumLabel.text = [NSString stringWithFormat:@"(%@)",count];
+    self.poundageLabel.text = _bankModel.withdrawRateDesc;
 }
 
 

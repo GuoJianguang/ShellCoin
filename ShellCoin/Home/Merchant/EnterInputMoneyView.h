@@ -24,4 +24,7 @@
 @property (weak, nonatomic) IBOutlet UIView *sureView;
 
 @property (nonatomic, strong)MerchantModel *dataModel;
+
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *height;
+
 @end

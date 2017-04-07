@@ -37,6 +37,9 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    if (THeight < 500) {
+        return 560;
+    }
     return THeight;
 }
 

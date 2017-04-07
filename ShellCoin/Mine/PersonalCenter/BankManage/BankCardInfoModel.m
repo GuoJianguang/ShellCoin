@@ -27,6 +27,7 @@
     model.bankPointBranch = NullToSpace(dic[@"bankPointBranch"]);
     model.state = NullToNumber(dic[@"state"]);
     model.bankImg = NullToNumber(dic[@"bankImg"]);
+    model.withdrawRateDesc = NullToSpace(dic[@"withdrawRateDesc"]);
     return model;
 }
 

@@ -122,6 +122,7 @@
     [UMessage setLogEnabled:YES];
     
 }
+
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
 {
     //    NSLog(@"-------%@",userInfo);

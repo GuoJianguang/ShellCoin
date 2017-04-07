@@ -52,6 +52,13 @@
 - (void)setJingpinArray:(NSMutableArray *)jingpinArray
 {
     _jingpinArray = jingpinArray;
+    if (_jingpinArray.count == 0) {
+        self.jingpingView.hidden = YES;
+        self.jinpingHeight.constant = 0;
+        return;
+    }
+    self.jingpingView.hidden = NO;
+    self.jinpingHeight.constant = TWitdh *(36/75.);
     [self.highqualityCollectionVIew reloadData];
 }
 
@@ -59,7 +66,25 @@
 - (void)setForyouArray:(NSMutableArray *)foryouArray
 {
     _foryouArray = foryouArray;
+    if (_foryouArray.count == 0) {
+        self.foryouView.hidden = YES;
+        self.foryouHeight.constant = 0;
+        return;
+    }
+    self.foryouView.hidden = NO;
+    self.foryouHeight.constant =  TWitdh *(36/75.);
     [self.foryouCollectionView reloadData];
+}
+
+- (void)setRecommendArray:(NSMutableArray *)recommendArray
+{
+    _recommendArray = recommendArray;
+    if (_recommendArray.count == 0) {
+        self.recomendView.hidden = YES;
+    }else{
+        self.recomendView.hidden = NO;
+
+    }
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

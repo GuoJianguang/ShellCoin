@@ -37,7 +37,11 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return TWitdh * (1400/750.);
+//    return TWitdh * (1400/750.);
+    if (THeight < 500) {
+        return 575;
+    }
+    return THeight;
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

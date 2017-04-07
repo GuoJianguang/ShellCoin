@@ -19,6 +19,13 @@
 @property (weak, nonatomic) IBOutlet UIImageView *bankMarkImageView;
 @property (nonatomic, strong)BankCardInfoModel *dataModel;
 @property (weak, nonatomic) IBOutlet UIImageView *backgoundImageView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *rightWidth;
+
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *topHeight;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *leftWitdth1;
+
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *leftWitdth;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottmHeight;
 
 @property (nonatomic, assign)NSInteger count;
 @end

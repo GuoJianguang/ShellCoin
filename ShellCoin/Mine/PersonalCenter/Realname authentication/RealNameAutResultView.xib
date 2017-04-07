@@ -57,7 +57,7 @@
                     <constraints>
                         <constraint firstItem="v5R-UF-uQ0" firstAttribute="top" secondItem="FYP-X0-Jgx" secondAttribute="top" id="2ob-tt-zHD"/>
                         <constraint firstAttribute="trailing" secondItem="v5R-UF-uQ0" secondAttribute="trailing" id="3C4-Ev-GIc"/>
-                        <constraint firstAttribute="width" secondItem="FYP-X0-Jgx" secondAttribute="height" multiplier="284:255" id="6t8-7b-QJH"/>
+                        <constraint firstAttribute="height" constant="247" id="3OU-zk-EyG"/>
                         <constraint firstItem="4si-7e-GvE" firstAttribute="leading" secondItem="FYP-X0-Jgx" secondAttribute="leading" constant="20" id="7ok-Mk-1lF"/>
                         <constraint firstAttribute="trailing" secondItem="4si-7e-GvE" secondAttribute="trailing" constant="20" id="AAC-7Y-r7R"/>
                         <constraint firstItem="4si-7e-GvE" firstAttribute="centerY" secondItem="FYP-X0-Jgx" secondAttribute="centerY" constant="40" id="J9L-b5-pLe"/>
@@ -79,13 +79,14 @@
                 <constraint firstItem="FYP-X0-Jgx" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="50" id="qmx-Cr-y6R"/>
             </constraints>
             <connections>
+                <outlet property="ViewHeight" destination="3OU-zk-EyG" id="1cZ-aN-GqZ"/>
                 <outlet property="alerResultImageView" destination="iPg-lc-Fie" id="7F7-JZ-ffc"/>
                 <outlet property="autResultLabel" destination="4si-7e-GvE" id="K0p-Hm-gSJ"/>
                 <outlet property="autResultTitleLabel" destination="9te-98-OTD" id="iFV-12-10Z"/>
                 <outlet property="backBtn" destination="Snu-kk-UE4" id="AHH-oV-G5I"/>
                 <outlet property="titleimageView" destination="v5R-UF-uQ0" id="UDd-VR-jpW"/>
             </connections>
-            <point key="canvasLocation" x="-97" y="-813"/>
+            <point key="canvasLocation" x="-436" y="-988"/>
         </view>
     </objects>
     <resources>

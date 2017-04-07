@@ -127,7 +127,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3CN-O9-se9">
-                                <rect key="frame" x="87.5" y="483" width="200" height="59.5"/>
+                                <rect key="frame" x="87.5" y="465" width="200" height="59.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="3CN-O9-se9" secondAttribute="height" multiplier="594/177" id="ATu-qv-nA6"/>
                                     <constraint firstAttribute="width" constant="200" id="yDj-rK-PAp"/>
@@ -153,7 +153,7 @@
                             <constraint firstItem="AOV-Hc-nNt" firstAttribute="top" secondItem="eBm-ez-BRh" secondAttribute="top" id="Ptc-1c-FRF"/>
                             <constraint firstItem="4c8-lm-pOP" firstAttribute="top" secondItem="AOV-Hc-nNt" secondAttribute="bottom" constant="30" id="RBG-NF-WC2"/>
                             <constraint firstItem="aew-g5-2IH" firstAttribute="centerX" secondItem="eBm-ez-BRh" secondAttribute="centerX" id="Wbm-pl-Vmp"/>
-                            <constraint firstItem="3CN-O9-se9" firstAttribute="top" secondItem="Cus-NF-PPX" secondAttribute="bottom" constant="45" id="YB5-Ty-3c1"/>
+                            <constraint firstItem="3CN-O9-se9" firstAttribute="top" secondItem="Cus-NF-PPX" secondAttribute="bottom" constant="27" id="YB5-Ty-3c1"/>
                             <constraint firstItem="o2r-gp-e5j" firstAttribute="centerX" secondItem="eBm-ez-BRh" secondAttribute="centerX" id="bFn-vS-fJP"/>
                             <constraint firstItem="3CN-O9-se9" firstAttribute="centerX" secondItem="eBm-ez-BRh" secondAttribute="centerX" id="d5b-hj-Ku6"/>
                             <constraint firstAttribute="trailing" secondItem="AOV-Hc-nNt" secondAttribute="trailing" id="fN6-AV-9UL"/>

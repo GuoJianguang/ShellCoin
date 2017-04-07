@@ -63,9 +63,9 @@
                             <constraint firstItem="ju5-Ip-Nek" firstAttribute="top" secondItem="Zgx-i1-vxH" secondAttribute="top" id="3Hb-WJ-EXB"/>
                             <constraint firstAttribute="trailing" secondItem="ju5-Ip-Nek" secondAttribute="trailing" id="GMi-an-5ql"/>
                             <constraint firstItem="Ndu-yh-6Qy" firstAttribute="leading" secondItem="Zgx-i1-vxH" secondAttribute="leading" constant="12" id="OAo-wS-C9b"/>
+                            <constraint firstAttribute="height" constant="153.5" id="OPA-XN-Jsx"/>
                             <constraint firstAttribute="trailing" secondItem="Ndu-yh-6Qy" secondAttribute="trailing" constant="12" id="QAd-ta-9Ui"/>
                             <constraint firstItem="ju5-Ip-Nek" firstAttribute="leading" secondItem="Zgx-i1-vxH" secondAttribute="leading" id="YgK-9i-5eA"/>
-                            <constraint firstAttribute="width" secondItem="Zgx-i1-vxH" secondAttribute="height" multiplier="75:36" id="itj-fW-oi5"/>
                             <constraint firstAttribute="bottom" secondItem="Ndu-yh-6Qy" secondAttribute="bottom" id="plQ-Bi-3oy"/>
                             <constraint firstItem="Ndu-yh-6Qy" firstAttribute="top" secondItem="ju5-Ip-Nek" secondAttribute="bottom" id="vBi-Gp-fqu"/>
                         </constraints>
@@ -126,39 +126,39 @@
                             <constraint firstAttribute="bottom" secondItem="EXV-JR-BSj" secondAttribute="bottom" id="CP1-Sa-V8N"/>
                             <constraint firstItem="EXV-JR-BSj" firstAttribute="top" secondItem="1WP-Da-Kmh" secondAttribute="bottom" id="Efe-XW-k87"/>
                             <constraint firstItem="1WP-Da-Kmh" firstAttribute="top" secondItem="OTT-qW-SWv" secondAttribute="top" id="Pq1-Sv-XVY"/>
+                            <constraint firstAttribute="height" constant="153.5" id="UD6-xY-llx"/>
                             <constraint firstItem="EXV-JR-BSj" firstAttribute="leading" secondItem="OTT-qW-SWv" secondAttribute="leading" constant="12" id="mX8-8y-Wzb"/>
                             <constraint firstAttribute="trailing" secondItem="1WP-Da-Kmh" secondAttribute="trailing" id="oRb-xi-vuk"/>
                             <constraint firstAttribute="trailing" secondItem="EXV-JR-BSj" secondAttribute="trailing" constant="12" id="tac-Py-DIh"/>
-                            <constraint firstAttribute="width" secondItem="OTT-qW-SWv" secondAttribute="height" multiplier="75/36" id="ubv-wZ-cT6"/>
                             <constraint firstItem="1WP-Da-Kmh" firstAttribute="leading" secondItem="OTT-qW-SWv" secondAttribute="leading" id="yXR-bO-U9w"/>
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hJE-Vx-GSj">
-                        <rect key="frame" x="0.0" y="307" width="320" height="36.5"/>
+                        <rect key="frame" x="0.0" y="307" width="320" height="44"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="达人推荐" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TzC-z6-Qxp">
-                                <rect key="frame" x="12" y="10" width="58" height="17"/>
+                                <rect key="frame" x="12" y="14" width="58" height="17"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TALENTRECOMMEND" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iPu-ep-TNQ">
-                                <rect key="frame" x="85" y="11.5" width="116.5" height="13.5"/>
+                                <rect key="frame" x="85" y="15.5" width="116.5" height="13.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="11"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="更多" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f4t-77-OaM">
-                                <rect key="frame" x="253" y="10.5" width="29" height="17"/>
+                                <rect key="frame" x="253" y="13.5" width="29" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_enter2" translatesAutoresizingMaskIntoConstraints="NO" id="ecc-im-vqu">
-                                <rect key="frame" x="282" y="3.5" width="30" height="30"/>
+                                <rect key="frame" x="282" y="7.5" width="30" height="30"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Of8-00-vfM">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="36.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <connections>
                                     <action selector="talentReBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="T8n-Rr-spV"/>
                                 </connections>
@@ -177,7 +177,7 @@
                             <constraint firstItem="iPu-ep-TNQ" firstAttribute="centerY" secondItem="hJE-Vx-GSj" secondAttribute="centerY" id="IfC-1u-IBC"/>
                             <constraint firstAttribute="bottom" secondItem="Of8-00-vfM" secondAttribute="bottom" id="LSx-48-juw"/>
                             <constraint firstItem="ecc-im-vqu" firstAttribute="leading" secondItem="f4t-77-OaM" secondAttribute="trailing" id="W3c-eR-Lg6"/>
-                            <constraint firstAttribute="width" secondItem="hJE-Vx-GSj" secondAttribute="height" multiplier="750/86" id="bva-JA-gX5"/>
+                            <constraint firstAttribute="height" constant="44" id="srw-jP-8po"/>
                             <constraint firstItem="f4t-77-OaM" firstAttribute="centerY" secondItem="hJE-Vx-GSj" secondAttribute="centerY" id="vti-p8-6vW"/>
                         </constraints>
                     </view>
@@ -199,8 +199,14 @@
             <connections>
                 <outlet property="changeBtn" destination="sqp-ey-X9K" id="Z94-Oi-4O0"/>
                 <outlet property="foryouCollectionView" destination="EXV-JR-BSj" id="oAh-hQ-I6b"/>
+                <outlet property="foryouHeight" destination="UD6-xY-llx" id="3ye-NB-DdI"/>
+                <outlet property="foryouView" destination="OTT-qW-SWv" id="qru-UA-YrJ"/>
                 <outlet property="highqualityCollectionVIew" destination="Ndu-yh-6Qy" id="LeL-f5-yFO"/>
+                <outlet property="jingpingView" destination="Zgx-i1-vxH" id="ttm-o7-qyw"/>
+                <outlet property="jinpingHeight" destination="OPA-XN-Jsx" id="fdA-b9-Muj"/>
                 <outlet property="moreLabel" destination="f4t-77-OaM" id="tbe-d2-Okc"/>
+                <outlet property="recomendView" destination="hJE-Vx-GSj" id="JC4-1d-cHz"/>
+                <outlet property="recommendHeight" destination="srw-jP-8po" id="13L-Ni-RAD"/>
                 <outlet property="titleLabel1" destination="jdo-Vf-ldk" id="JUY-Aa-3bq"/>
                 <outlet property="titleLabel2" destination="FdZ-xr-gaS" id="td4-f2-zmG"/>
                 <outlet property="titleLabel3" destination="TzC-z6-Qxp" id="U5R-bC-DEg"/>
@@ -208,7 +214,7 @@
                 <outlet property="titleLabel5" destination="IVy-Kr-pPa" id="cxo-Tp-8Ij"/>
                 <outlet property="titleLabel6" destination="iPu-ep-TNQ" id="cPy-sP-jyu"/>
             </connections>
-            <point key="canvasLocation" x="-191" y="-672"/>
+            <point key="canvasLocation" x="-259" y="-675"/>
         </tableViewCell>
     </objects>
     <resources>

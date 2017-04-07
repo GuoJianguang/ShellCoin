@@ -26,22 +26,22 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2233 2332 3223 208" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kEa-mb-9NO">
-                                <rect key="frame" x="20" y="38" width="335" height="24"/>
+                                <rect key="frame" x="25" y="38" width="325" height="24"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="胡一刀" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xNp-Fk-oOF">
-                                <rect key="frame" x="38" y="135.5" width="34" height="13.5"/>
+                                <rect key="frame" x="25" y="135.5" width="34" height="13.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="11"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pic_bankcard_yinlian" translatesAutoresizingMaskIntoConstraints="NO" id="bsy-Vp-ELq">
-                                <rect key="frame" x="297" y="117" width="47" height="32"/>
+                                <rect key="frame" x="303" y="117" width="47" height="32"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="中国工商银行" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MV2-mb-COj">
-                                <rect key="frame" x="38" y="105.5" width="86" height="17"/>
+                                <rect key="frame" x="25" y="110.5" width="86" height="17"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -49,14 +49,14 @@
                         </subviews>
                         <constraints>
                             <constraint firstItem="kEa-mb-9NO" firstAttribute="top" secondItem="rwq-k7-s5z" secondAttribute="top" constant="38" id="3CA-iA-aMN"/>
-                            <constraint firstAttribute="trailing" secondItem="bsy-Vp-ELq" secondAttribute="trailing" constant="31" id="7IR-DV-vEm"/>
-                            <constraint firstItem="kEa-mb-9NO" firstAttribute="leading" secondItem="rwq-k7-s5z" secondAttribute="leading" constant="20" id="9M7-de-gmx"/>
+                            <constraint firstAttribute="trailing" secondItem="bsy-Vp-ELq" secondAttribute="trailing" constant="25" id="7IR-DV-vEm"/>
+                            <constraint firstItem="kEa-mb-9NO" firstAttribute="leading" secondItem="rwq-k7-s5z" secondAttribute="leading" constant="25" id="9M7-de-gmx"/>
                             <constraint firstAttribute="bottom" secondItem="xNp-Fk-oOF" secondAttribute="bottom" constant="25" id="MHL-pI-HaN"/>
-                            <constraint firstAttribute="trailing" secondItem="kEa-mb-9NO" secondAttribute="trailing" constant="20" id="OaY-d0-IZI"/>
+                            <constraint firstAttribute="trailing" secondItem="kEa-mb-9NO" secondAttribute="trailing" constant="25" id="OaY-d0-IZI"/>
                             <constraint firstItem="bsy-Vp-ELq" firstAttribute="bottom" secondItem="xNp-Fk-oOF" secondAttribute="bottom" id="ak5-v5-BLG"/>
-                            <constraint firstItem="xNp-Fk-oOF" firstAttribute="leading" secondItem="rwq-k7-s5z" secondAttribute="leading" constant="38" id="hPm-Mk-f98"/>
-                            <constraint firstItem="MV2-mb-COj" firstAttribute="leading" secondItem="rwq-k7-s5z" secondAttribute="leading" constant="38" id="ihU-wx-Xt5"/>
-                            <constraint firstItem="xNp-Fk-oOF" firstAttribute="top" secondItem="MV2-mb-COj" secondAttribute="bottom" constant="13" id="os1-53-v8J"/>
+                            <constraint firstItem="xNp-Fk-oOF" firstAttribute="leading" secondItem="rwq-k7-s5z" secondAttribute="leading" constant="25" id="hPm-Mk-f98"/>
+                            <constraint firstItem="MV2-mb-COj" firstAttribute="leading" secondItem="rwq-k7-s5z" secondAttribute="leading" constant="25" id="ihU-wx-Xt5"/>
+                            <constraint firstItem="xNp-Fk-oOF" firstAttribute="top" secondItem="MV2-mb-COj" secondAttribute="bottom" constant="8" id="os1-53-v8J"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -72,10 +72,15 @@
                 <outlet property="backgoundImageView" destination="XDy-XO-6Mz" id="KOq-0T-FA3"/>
                 <outlet property="bankMarkImageView" destination="bsy-Vp-ELq" id="pUg-N6-UJa"/>
                 <outlet property="bankNameLabel" destination="MV2-mb-COj" id="FxL-0X-wAQ"/>
+                <outlet property="bottmHeight" destination="MHL-pI-HaN" id="IbD-3I-Fn9"/>
                 <outlet property="cardNumLabel" destination="kEa-mb-9NO" id="DKs-EL-EkB"/>
+                <outlet property="leftWitdth" destination="ihU-wx-Xt5" id="meU-eE-ufH"/>
+                <outlet property="leftWitdth1" destination="hPm-Mk-f98" id="O2x-6a-AKg"/>
                 <outlet property="nameLabel" destination="xNp-Fk-oOF" id="w54-GB-5So"/>
+                <outlet property="rightWidth" destination="7IR-DV-vEm" id="s38-bD-TV2"/>
+                <outlet property="topHeight" destination="3CA-iA-aMN" id="bgM-6p-DeD"/>
             </connections>
-            <point key="canvasLocation" x="2" y="96"/>
+            <point key="canvasLocation" x="-391" y="5"/>
         </collectionViewCell>
     </objects>
     <resources>

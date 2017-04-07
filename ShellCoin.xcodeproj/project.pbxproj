@@ -91,6 +91,8 @@
 		BC36EA491E93B8600097F2F2 /* WithDrawalResultView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC36EA481E93B8600097F2F2 /* WithDrawalResultView.xib */; };
 		BC36EA4C1E93BF0F0097F2F2 /* OnlinePayResultView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC36EA4B1E93BF0F0097F2F2 /* OnlinePayResultView.m */; };
 		BC36EA4E1E93BF1A0097F2F2 /* OnlinePayResultView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC36EA4D1E93BF1A0097F2F2 /* OnlinePayResultView.xib */; };
+		BC3FB69A1E974BBD00C06A95 /* MyQrCodeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3FB6981E974BBD00C06A95 /* MyQrCodeTableViewCell.m */; };
+		BC3FB69B1E974BBD00C06A95 /* MyQrCodeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC3FB6991E974BBD00C06A95 /* MyQrCodeTableViewCell.xib */; };
 		BC41DAE81E91E8D7008FC9DC /* Home.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC41DAE71E91E8D7008FC9DC /* Home.xcassets */; };
 		BC41DAEA1E91F781008FC9DC /* Login.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC41DAE91E91F781008FC9DC /* Login.xcassets */; };
 		BC41DAED1E91FD06008FC9DC /* RootLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC41DAEC1E91FD06008FC9DC /* RootLoginViewController.m */; };
@@ -432,6 +434,9 @@
 		BC36EA4A1E93BF0F0097F2F2 /* OnlinePayResultView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnlinePayResultView.h; sourceTree = "<group>"; };
 		BC36EA4B1E93BF0F0097F2F2 /* OnlinePayResultView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnlinePayResultView.m; sourceTree = "<group>"; };
 		BC36EA4D1E93BF1A0097F2F2 /* OnlinePayResultView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OnlinePayResultView.xib; sourceTree = "<group>"; };
+		BC3FB6971E974BBD00C06A95 /* MyQrCodeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyQrCodeTableViewCell.h; sourceTree = "<group>"; };
+		BC3FB6981E974BBD00C06A95 /* MyQrCodeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyQrCodeTableViewCell.m; sourceTree = "<group>"; };
+		BC3FB6991E974BBD00C06A95 /* MyQrCodeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyQrCodeTableViewCell.xib; sourceTree = "<group>"; };
 		BC41DAE71E91E8D7008FC9DC /* Home.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Home.xcassets; sourceTree = "<group>"; };
 		BC41DAE91E91F781008FC9DC /* Login.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Login.xcassets; sourceTree = "<group>"; };
 		BC41DAEB1E91FD06008FC9DC /* RootLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootLoginViewController.h; sourceTree = "<group>"; };
@@ -1362,6 +1367,9 @@
 				BC9B3DE31E76892C003DC241 /* MyQrCodeViewController.h */,
 				BC9B3DE41E76892C003DC241 /* MyQrCodeViewController.m */,
 				BC9B3DE51E76892C003DC241 /* MyQrCodeViewController.xib */,
+				BC3FB6971E974BBD00C06A95 /* MyQrCodeTableViewCell.h */,
+				BC3FB6981E974BBD00C06A95 /* MyQrCodeTableViewCell.m */,
+				BC3FB6991E974BBD00C06A95 /* MyQrCodeTableViewCell.xib */,
 			);
 			path = myQrCode;
 			sourceTree = "<group>";
@@ -1715,6 +1723,7 @@
 				BCD7371B1E936C92001F706C /* MerchantSearchRsultViewController.xib in Resources */,
 				BC054D501E8A3D3600062AC5 /* Bill1View.xib in Resources */,
 				BC41DAEA1E91F781008FC9DC /* Login.xcassets in Resources */,
+				BC3FB69B1E974BBD00C06A95 /* MyQrCodeTableViewCell.xib in Resources */,
 				BC36EA441E937E600097F2F2 /* MyCollectionListViewController.xib in Resources */,
 				BCA17DDB1E8BB2AD00B4AFDA /* Bill.xcassets in Resources */,
 				BCFE20921E77E206002BC28C /* ForgetPasswordOneViewController.xib in Resources */,
@@ -1862,6 +1871,7 @@
 				BC0A58421E728F050077C8A9 /* SwipeView.m in Sources */,
 				BC52794A1E8E7E4E004DD703 /* LBXScanViewController.m in Sources */,
 				BCB9A7C91E89F77100F3E966 /* MerchantDetailViewController.m in Sources */,
+				BC3FB69A1E974BBD00C06A95 /* MyQrCodeTableViewCell.m in Sources */,
 				BCFE20971E77E329002BC28C /* ShellCoinUserInfo.m in Sources */,
 				BC9B3E011E7698CC003DC241 /* BanCardDetailTableViewCell.m in Sources */,
 				BC5279431E8E7E4E004DD703 /* UIAlertView+LBXAlertAction.m in Sources */,
@@ -2120,9 +2130,10 @@
 			baseConfigurationReference = C11C2EEE802957925FA5F0C7 /* Pods-ShellCoin.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = ShellCoin/ShellCoin.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development IOS Push Services: com.Letopop.ShellCoin";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: xu han (9L2S5LBXA3)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: xu han (9L2S5LBXA3)";
 				DEVELOPMENT_TEAM = 4KU9646Y2X;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -2142,7 +2153,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Letopop.ShellCoin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "f2f0f195-cc93-4026-a2f1-00507c052dbc";
+				PROVISIONING_PROFILE = "d72a822b-1d49-4539-b092-1009d359c3b2";
 				PROVISIONING_PROFILE_SPECIFIER = shellDevelop;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -2153,9 +2164,10 @@
 			baseConfigurationReference = 5674F83A9666780E4483DE0A /* Pods-ShellCoin.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = ShellCoin/ShellCoin.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development IOS Push Services: com.Letopop.ShellCoin";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: xu han (9L2S5LBXA3)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: xu han (9L2S5LBXA3)";
 				DEVELOPMENT_TEAM = 4KU9646Y2X;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -2175,7 +2187,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Letopop.ShellCoin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "f2f0f195-cc93-4026-a2f1-00507c052dbc";
+				PROVISIONING_PROFILE = "d72a822b-1d49-4539-b092-1009d359c3b2";
 				PROVISIONING_PROFILE_SPECIFIER = shellDevelop;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

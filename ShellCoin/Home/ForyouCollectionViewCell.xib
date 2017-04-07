@@ -19,7 +19,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="120" height="145"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="header.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="bCu-kE-hPu">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bCu-kE-hPu">
                         <rect key="frame" x="8" y="40.5" width="104" height="54"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="54" id="0yA-fu-DdD"/>
@@ -80,6 +80,5 @@
     </objects>
     <resources>
         <image name="bg1_seller" width="80" height="34"/>
-        <image name="header.jpg" width="200" height="200"/>
     </resources>
 </document>

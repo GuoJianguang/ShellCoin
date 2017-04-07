@@ -115,28 +115,13 @@
                     UIAlertView *aler = [[UIAlertView alloc]initWithTitle:@"提醒" message:@"您的登录信息已过期，请重新登录" delegate:[UIApplication sharedApplication].keyWindow.rootViewController cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
                     [aler show];
                     return;
-                }
-                if ([NullToNumber(jsonObject[@"code"]) isEqualToString:@"0"]) {
+                }if ([NullToNumber(jsonObject[@"code"]) isEqualToString:@"0"]) {
                     self.resultView.isSuccess = Authentication_type_success;
                     [ShellCoinUserInfo shareUserInfos].idcardName = self.nameTF.text;
                     [ShellCoinUserInfo shareUserInfos].idcard = self.idcardTF.text;
                     [ShellCoinUserInfo shareUserInfos].identityFlag = YES;
                     [self authenSuccess];
                     return;
-                }
-                //                    2035,"身份证实名认证失败"
-                else if ([NullToNumber(jsonObject[@"code"]) isEqualToString:@"2035"]) {
-                    self.resultView.isSuccess = Authentication_type_fail;
-                    [self authenSuccess];
-//                    [[JAlertViewHelper shareAlterHelper]showTint:jsonObject[@"message"] duration:1.5];
-                    return;
-                }
-                //                    2036,"实名认证失败,身份证与姓名不匹配"
-                else if ([NullToNumber(jsonObject[@"code"]) isEqualToString:@"2036"]) {
-                    self.resultView.isSuccess = Authentication_type_fail;
-                    [self authenSuccess];
-//                    [[JAlertViewHelper shareAlterHelper]showTint:jsonObject[@"message"] duration:1.5];
-//                    return;
                 }
                 //                    2037,"未绑卡，现在去绑定银行卡吗？"
                 else if ([NullToNumber(jsonObject[@"code"]) isEqualToString:@"2037"]) {
@@ -157,13 +142,9 @@
                     [self authenSuccess];
                     return;
                      //2047,"三次机会用完"
-                }else if ([NullToNumber(jsonObject[@"code"]) isEqualToString:@"2049"]){
-//                    self.resultView.isSuccess = Authentication_type_fail;
-//                    [self authenSuccess];
-                    [[JAlertViewHelper shareAlterHelper]showTint:jsonObject[@"message"] duration:1.5];
-                    return;
                 }else{
                     self.resultView.isSuccess = Authentication_type_fail;
+                    self.resultView.failAlerString = NullToSpace(jsonObject[@"message"]);
                     [self authenSuccess];
                     //                    [[JAlertViewHelper shareAlterHelper]showTint:jsonObject[@"message"] duration:1.5];
                     return;

@@ -10,7 +10,7 @@
 #import "MerchantTableViewCell.h"
 #import "MerchantDetailViewController.h"
 
-@interface MerchantSearchRsultViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface MerchantSearchRsultViewController ()<UITableViewDelegate,UITableViewDataSource,SortButtonSwitchViewDelegate>
 
 @property (nonatomic, strong)NSMutableArray *dataSouceArray;
 @property (nonatomic, assign)NSInteger page;
@@ -23,7 +23,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.naviBar.title = @"搜索结果";
+    self.naviBar.hidden = YES;
+    self.titleLabel.text = self.keyWord;
+    self.seqId = @"1";
+    self.sortView.titleArray = @[@"默认",@"距离从近到远"];
+    self.sortView.delegate = self;
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         self.page = 1;
         self.isContinueRequest = YES;
@@ -32,6 +36,7 @@
     self.tableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
         [self searchReqest:NO andCity:self.currentCity];
     }];
+    [self.tableView noDataSouce];
 //    [self.tableView addNoDatasouceWithCallback:^{
 //        [self.tableView.mj_header beginRefreshing];
 //    } andAlertSting:@"暂时没有数据" andErrorImage:@"pic_1" andRefreshBtnHiden:YES];
@@ -78,11 +83,12 @@
                 [self.dataSouceArray addObject:model];
             }
             //判断数据源有无数据
-//            [self.tableView judgeIsHaveDataSouce:self.dataSouceArray];
+            [self.tableView judgeIsHaveDataSouce:self.dataSouceArray];
             [self.tableView reloadData];
         }
     } failure:^(NSURLSessionDataTask *operation, NSError *error) {
         //        self.keyWord = @"";
+        [self.tableView showNoDataSouceNoNetworkConnection];
         [self.tableView.mj_header endRefreshing];
         [self.tableView.mj_footer endRefreshing];
 //        [self.tableView showRereshBtnwithALerString:@"网络连接不好"];
@@ -142,5 +148,20 @@
     // Pass the selected object to the new view controller.
 }
 */
-
+#pragma mark - SortButtonSwitchViewDelegate
+- (void)sortBtnDselect:(SortButtonSwitchView *)sortView withSortId:(NSString *)sortId
+{
+    
+    if ([sortId isEqualToString:@"1"]) {
+        self.seqId = @"1";
+    }else{
+        self.seqId = @"2";
+        
+    }
+    [self.tableView.mj_header beginRefreshing];
+    
+}
+- (IBAction)backBtn:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
 @end

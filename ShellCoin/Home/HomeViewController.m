@@ -162,6 +162,7 @@
         }
         cell.jingpinArray = self.popularDataSouceArray;
         cell.foryouArray = self.foryouDataSouceArray;
+        cell.recommendArray = self.privteDataSouceArray;
         return cell;
         
     }else{
@@ -189,6 +190,19 @@
         return buttonHeight * 2 + intervalY*2 + 25;
 
     }else if(indexPath.row == 2){
+        if (self.foryouDataSouceArray.count == 0&&self.popularDataSouceArray.count!=0&&self.privteDataSouceArray.count!=0) {
+            return TWitdh*(36/75.) + TWitdh*(86/750.);
+        }else if (self.foryouDataSouceArray.count != 0&&self.popularDataSouceArray.count==0&&self.privteDataSouceArray.count!=0){
+            return TWitdh*(36/75.) + TWitdh*(86/750.);
+
+        }else if (self.foryouDataSouceArray.count == 0&&self.popularDataSouceArray.count==0&&self.privteDataSouceArray.count!=0){
+            return  TWitdh*(86/750.);
+        }else if(self.foryouDataSouceArray.count == 0&&self.popularDataSouceArray.count==0&&self.privteDataSouceArray.count==0){
+            return 0;
+        }else if (self.foryouDataSouceArray.count != 0&&self.popularDataSouceArray.count!=0&&self.privteDataSouceArray.count==0){
+            return  TWitdh*(720/750.);
+
+        }
         return TWitdh*(72/75.) + TWitdh*(86/750.);
 
     }else{
@@ -282,7 +296,6 @@
 #pragma mark - 推荐商户接口
 - (void)getReconnmendRequest
 {
-//    [ShellCoinUserInfo shareUserInfos].locationCity = @"成都";
     NSDictionary *parms = @{@"longitude":NullToNumber(@([ShellCoinUserInfo shareUserInfos].locationCoordinate.longitude)),
                             @"latitude":NullToNumber(@([ShellCoinUserInfo shareUserInfos].locationCoordinate.latitude)),
                             @"city":[ShellCoinUserInfo shareUserInfos].locationCity,
@@ -357,10 +370,10 @@
         [[NSUserDefaults standardUserDefaults]setObject:array forKey:CommonlyUsedCity];
         [[NSUserDefaults standardUserDefaults]synchronize];
     }
-    [ShellCoinUserInfo shareUserInfos].locationCity = cityName;
     if (cityName.length > 4) {
         cityName = [cityName substringToIndex:4];
     }
+    [ShellCoinUserInfo shareUserInfos].locationCity = cityName;
     [self.locationBtn setTitle:cityName forState:UIControlStateNormal];
     [self.tableView.mj_header beginRefreshing];
 }

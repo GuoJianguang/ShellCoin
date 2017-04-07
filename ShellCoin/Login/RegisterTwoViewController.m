@@ -65,7 +65,7 @@
 {
     BaseHtmlViewController *htmlVC = [[BaseHtmlViewController alloc]init];
     htmlVC.htmlTitle = @"用户使用条款及服务协议";
-    htmlVC.htmlUrl = @"https://www.tiantianxcn.com/html5/forapp/xy_user.html";
+    htmlVC.htmlUrl = @"https://web.letopop.com/lyu-web/xieyi.html";
     [self.navigationController pushViewController:htmlVC animated:YES];
 }
 

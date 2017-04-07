@@ -79,5 +79,9 @@
 //@property (nonatomic, copy)NSString *bankAccount;
 @property (nonatomic, assign)BOOL isSeclet;
 
+@property (nonatomic,assign)NSInteger count;
+
+@property (nonatomic, copy)NSString *withdrawRateDesc;
+
 
 @end

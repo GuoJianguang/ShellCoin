@@ -32,6 +32,7 @@
     self.headImageView.layer.masksToBounds = YES;
 //    self.headImageView.layer.borderColor = [UIColor whiteColor].CGColor;
 //    self.headImageView.layer.borderWidth = 5;
+    self.nameLabel.adjustsFontSizeToFitWidth = YES;
     self.headImageView.layer.cornerRadius = (TWitdh*(10/15.) * (6/10.)) *(238/324.) /2.;
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(changeHead)];
     self.headImageView.userInteractionEnabled = YES;
@@ -306,7 +307,7 @@
                   [HttpClient POST:@"user/userInfo/update" parameters:prams success:^(NSURLSessionDataTask *operation, id jsonObject) {
                       if (IsRequestTrue) {
                           [ShellCoinUserInfo shareUserInfos].avatar = jsonObject[@"data"][@"avatar"];
-                          [self.headImageView sd_setImageWithURL:[NSURL URLWithString:[ShellCoinUserInfo shareUserInfos].avatar] placeholderImage:[UIImage imageNamed:@"header.jpg"] completed:NULL];
+                          [self.headImageView sd_setImageWithURL:[NSURL URLWithString:[ShellCoinUserInfo shareUserInfos].avatar] placeholderImage:LoadingErrorDefaultHearder completed:NULL];
 
                           [SVProgressHUD showSuccessWithStatus:@"头像修改成功"];
 

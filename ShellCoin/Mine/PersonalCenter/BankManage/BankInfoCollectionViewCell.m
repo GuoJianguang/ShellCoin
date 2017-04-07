@@ -16,6 +16,12 @@
     [super awakeFromNib];
     // Initialization code
     self.cardNumLabel.adjustsFontSizeToFitWidth =self.nameLabel.adjustsFontSizeToFitWidth= self.bankMarkLabel.adjustsFontSizeToFitWidth= self.bankNameLabel.adjustsFontSizeToFitWidth= YES;
+    if (TWitdh <330) {
+        self.topHeight.constant = 20;
+        self.bottmHeight.constant = 20;
+        self.leftWitdth.constant = self.leftWitdth1.constant  = 25;
+        self.rightWidth.constant = 25;
+    }
 }
 
 - (void)setDataModel:(BankCardInfoModel *)dataModel
@@ -23,19 +29,21 @@
     _dataModel = dataModel;
     self.nameLabel.text = _dataModel.realName;
     self.bankNameLabel.text  = _dataModel.bankName;
-    NSString *str = @"";
-    if (_dataModel.bankAccount.length > 7) {
-        for (int i =0; i < _dataModel.bankAccount.length; i ++) {
-            if (i>3&&i<_dataModel.bankAccount.length-3) {
-                str = [NSString stringWithFormat:@"%@%@",str,@"*"];
-            }else{
-                NSString *temp = [_dataModel.bankAccount substringWithRange:NSMakeRange(i, 1)];
-                str = [NSString stringWithFormat:@"%@%@",str,temp];
-                
-            }
-        }
-    }
-    self.cardNumLabel.text = [self normalNumToBankNum1:str];
+    self.cardNumLabel.text = _dataModel.bankAccount;
+    self.count = _dataModel.count;
+//    NSString *str = @"";
+//    if (_dataModel.bankAccount.length > 7) {
+//        for (int i =0; i < _dataModel.bankAccount.length; i ++) {
+//            if (i>3&&i<_dataModel.bankAccount.length-3) {
+//                str = [NSString stringWithFormat:@"%@%@",str,@"*"];
+//            }else{
+//                NSString *temp = [_dataModel.bankAccount substringWithRange:NSMakeRange(i, 1)];
+//                str = [NSString stringWithFormat:@"%@%@",str,temp];
+//                
+//            }
+//        }
+//    }
+//    self.cardNumLabel.text = [self normalNumToBankNum1:str];
 }
 
 
@@ -108,7 +116,8 @@
             }
         }
     }
-    self.cardNumLabel.text = [self normalNumToBankNum1:str];
+    self.cardNumLabel.text = [self normalNumToBankNum1:_dataModel.bankAccount];
+    self.count = _dataModel.count;
 }
 
 

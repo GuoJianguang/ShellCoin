@@ -32,6 +32,9 @@ typedef NS_ENUM(NSInteger,Authentication_type){
 
 @property (weak, nonatomic) IBOutlet UIImageView *titleimageView;
 
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *ViewHeight;
 
+
+@property (nonatomic, strong)NSString *failAlerString;
 
 @end

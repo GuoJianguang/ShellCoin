@@ -34,7 +34,7 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rDK-vg-rSu">
-                        <rect key="frame" x="29" y="11" width="14" height="18"/>
+                        <rect key="frame" x="29" y="11" width="253" height="18"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -63,6 +63,7 @@
                     <constraint firstAttribute="trailing" secondItem="Xu5-jl-v97" secondAttribute="trailing" id="Yh9-0I-r9w"/>
                     <constraint firstAttribute="trailing" secondItem="cdv-ge-V4M" secondAttribute="trailing" id="hXM-nO-sSC"/>
                     <constraint firstItem="cdv-ge-V4M" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="nqQ-aN-WKZ"/>
+                    <constraint firstItem="cdv-ge-V4M" firstAttribute="leading" secondItem="rDK-vg-rSu" secondAttribute="trailing" constant="8" id="pbp-25-i04"/>
                     <constraint firstItem="tJM-G3-QHj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="tc1-4V-718"/>
                     <constraint firstItem="rDK-vg-rSu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="vO3-3E-de8"/>
                 </constraints>
@@ -72,7 +73,7 @@
                 <outlet property="nameLabel" destination="rDK-vg-rSu" id="NPr-fa-TQz"/>
                 <outlet property="timeLabel" destination="U95-xr-iTU" id="Qnh-u6-mI4"/>
             </connections>
-            <point key="canvasLocation" x="-632" y="104"/>
+            <point key="canvasLocation" x="-697" y="106"/>
         </tableViewCell>
     </objects>
     <resources>

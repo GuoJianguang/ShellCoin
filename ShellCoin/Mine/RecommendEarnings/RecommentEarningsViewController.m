@@ -36,6 +36,7 @@
         [weak_self getRequest:NO];
 
     }];
+    [self.talbeView noDataSouce];
     [self.talbeView.mj_header beginRefreshing];
 }
 
@@ -69,6 +70,7 @@
                 RecommendModel *model = [RecommendModel modelWithDic:dic];
                 [self.dataSouceArray addObject:model];
             }
+            [self.talbeView judgeIsHaveDataSouce:self.dataSouceArray];
             [self.talbeView reloadData];
         }
         if (isHeader) {
@@ -78,7 +80,7 @@
             
         }
     } failure:^(NSURLSessionDataTask *operation, NSError *error) {
-        
+        [self.talbeView showNoDataSouceNoNetworkConnection];
         if (isHeader) {
             [self.talbeView.mj_header endRefreshing];
         }else{

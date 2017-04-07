@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RecommentModel.h"
 
 @interface RecommentSpecialTableViewCell : BaseTableViewCell
 
@@ -15,5 +16,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *detail_label;
 
 @property (weak, nonatomic) IBOutlet UICollectionView *detailCollectionView;
+
+@property (nonatomic, strong)RecommentModel *dataModel;
 
 @end

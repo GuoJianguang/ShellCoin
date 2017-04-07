@@ -20,5 +20,7 @@
 @property (weak, nonatomic) IBOutlet UISwitch *finggerCodeSwitch;
 - (IBAction)finggerCodeSwitch:(UISwitch *)sender;
 @property (weak, nonatomic) IBOutlet UILabel *fingerprintLabel;
+- (IBAction)switch:(id)sender;
+- (IBAction)changeSwitchOn:(UIButton *)sender;
 
 @end

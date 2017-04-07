@@ -64,12 +64,13 @@
     [squaredUpView.squaredUpViewCellArray enumerateObjectsUsingBlock:^(CustomButton *button, NSUInteger idx, BOOL * _Nonnull stop) {
         NewHomeActivityModel *model = datasouceArray[idx];
         [button setTitle:model.name forState:UIControlStateNormal];
-        [button sd_setImageWithURL:[NSURL URLWithString:model.icon] forState:UIControlStateNormal placeholderImage:[UIImage imageNamed:@"icon_list_default"]];
+        [button sd_setImageWithURL:[NSURL URLWithString:model.icon] forState:UIControlStateNormal placeholderImage:LoadingErrorDefaultImageCircular];
     }];
 }
 
 - (void)jSquaredUpViewCell:(CustomButton *)cell didSelectedAtIndex:(NSInteger)index
 {
+    NSLog(@"------------%@",[ShellCoinUserInfo shareUserInfos].locationCity);
     NewHomeActivityModel *model = self.sortDataSouceArray[cell.tag];
     MerchantListViewController *resultVC = [[MerchantListViewController alloc]init];
     resultVC.currentIndustry = model.name;

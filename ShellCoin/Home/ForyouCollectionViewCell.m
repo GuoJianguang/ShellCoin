@@ -42,7 +42,7 @@
 {
     _dataModel = dataModel;
     self.nameLabel.text = _dataModel.name;
-    [self.headerImageView sd_setImageWithURL:[NSURL URLWithString:_dataModel.pic] placeholderImage:LoadingErrorDefaultImageCircular];
+    [self.headerImageView sd_setImageWithURL:[NSURL URLWithString:_dataModel.pic] placeholderImage:LoadingErrorDefaultImageSquare];
     [self.markBtn setTitle:_dataModel.trade forState:UIControlStateNormal];
     
 }

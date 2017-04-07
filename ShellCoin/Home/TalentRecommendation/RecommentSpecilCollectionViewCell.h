@@ -7,11 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "RecommentModel.h"
 
 @interface RecommentSpecilCollectionViewCell : BaseCollectionViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *detailImageView;
-@property (nonatomic, strong)RecommentModel *dataModel;
+@property (nonatomic, strong)NSString *pic;
 
 
 @end

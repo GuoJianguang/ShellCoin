@@ -225,7 +225,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a22-hQ-ipF">
                         <rect key="frame" x="15" y="482" width="290" height="53.5"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="例如：春熙路支行" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2pP-oa-BRu">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="例如：中国农业银行重庆解放碑支行" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2pP-oa-BRu">
                                 <rect key="frame" x="12" y="0.0" width="266" height="53"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
@@ -290,6 +290,13 @@
                 <outlet property="inputKaihuhangTF" destination="2pP-oa-BRu" id="BVZ-KT-pTh"/>
                 <outlet property="kaihuhangNumdTF" destination="Rk4-td-2FM" id="FJK-v0-dCi"/>
                 <outlet property="kaihuhangTF" destination="yo0-7b-9HE" id="9ox-sH-059"/>
+                <outlet property="label1" destination="o70-qf-e6f" id="eJa-Az-EkJ"/>
+                <outlet property="label2" destination="cgq-YI-6Ht" id="oOg-ng-bzw"/>
+                <outlet property="label3" destination="Xm9-jp-1ew" id="MQf-Rh-dHp"/>
+                <outlet property="label4" destination="Z8B-IL-faw" id="hKb-2l-iPo"/>
+                <outlet property="label5" destination="N5d-2U-Uvi" id="c15-lk-iFz"/>
+                <outlet property="label6" destination="oC5-Ck-mi3" id="mZO-9x-brF"/>
+                <outlet property="label7" destination="iUc-5P-BxB" id="yyc-qJ-9LV"/>
                 <outlet property="nameTF" destination="MvD-6X-Fug" id="QKN-HZ-NaH"/>
                 <outlet property="provincesTF" destination="98f-RI-nOn" id="Zst-2T-fBI"/>
                 <outlet property="selcetZHNumBtn" destination="gYQ-Nw-Cek" id="v0d-dI-se0"/>
@@ -306,7 +313,7 @@
                 <outlet property="view8" destination="VaB-zS-ary" id="imm-xy-bHx"/>
                 <outlet property="wangdianTF" destination="qGg-Og-bmY" id="zD7-rQ-ehe"/>
             </connections>
-            <point key="canvasLocation" x="-102" y="-328"/>
+            <point key="canvasLocation" x="-185" y="-354"/>
         </tableViewCell>
     </objects>
     <resources>

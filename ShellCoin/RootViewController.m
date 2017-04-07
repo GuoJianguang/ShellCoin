@@ -37,7 +37,7 @@ static NSString *waitReceive = @"waitReceive";//待收货
     if ([ShellCoinUserInfo shareUserInfos].currentLogined) {
         self.turnType = NullToSpace(notifiInfo[@"page"]);
         NSString *alerInfo = NullToSpace(notifiInfo[@"aps"][@"alert"]);
-        if (![self.turnType isEqualToString:infomation] &&![self.turnType isEqualToString:feedback]&&![self.turnType isEqualToString:withdraw]&&![self.turnType isEqualToString:waitPay]&&![self.turnType isEqualToString:waitReceive]) {
+        if (![self.turnType isEqualToString:infomation] &&![self.turnType isEqualToString:withdraw]) {
             UIAlertView *showView = [[UIAlertView alloc]initWithTitle:@"提醒" message:alerInfo delegate:self cancelButtonTitle:@"知道了" otherButtonTitles: nil];
             [showView show];
             showView.tag = 20;
@@ -55,7 +55,7 @@ static NSString *waitReceive = @"waitReceive";//待收货
     if ([ShellCoinUserInfo shareUserInfos].currentLogined) {
         self.turnType = NullToSpace(faication.userInfo[@"page"]);
         NSString *alerInfo = NullToSpace(faication.userInfo[@"aps"][@"alert"]);
-        if (![self.turnType isEqualToString:infomation] &&![self.turnType isEqualToString:feedback]&&![self.turnType isEqualToString:withdraw]&&![self.turnType isEqualToString:waitPay]&&![self.turnType isEqualToString:waitReceive]) {
+        if (![self.turnType isEqualToString:infomation] &&![self.turnType isEqualToString:withdraw]) {
             UIAlertView *showView = [[UIAlertView alloc]initWithTitle:@"提醒" message:alerInfo delegate:self cancelButtonTitle:@"知道了" otherButtonTitles: nil];
             [showView show];
             showView.tag = 20;
@@ -80,16 +80,16 @@ static NSString *waitReceive = @"waitReceive";//待收货
 //            detailVC.walletType = WalletDymic_type_fanXian;
 //            [self pushViewController:detailVC animated:YES];
         }else if([self.turnType isEqualToString:withdraw]){
-//            WalletDymicViewController *detailVC = [[WalletDymicViewController alloc]init];
-//            detailVC.walletType = WalletDymic_type_Tixian;
-//            [self pushViewController:detailVC animated:YES];
+            BillViewController *orderListVC = [[BillViewController alloc]init];
+            orderListVC.isCheckWithDrawal = YES;
+            [self pushViewController:orderListVC animated:YES];
         }else if([self.turnType isEqualToString:waitPay]){
             //            WaitPayViewController *waitPayVC = [[WaitPayViewController alloc]init];
             //            [self pushViewController:waitPayVC animated:YES];
         }else if([self.turnType isEqualToString:waitReceive]){
-            BillViewController *orderListVC = [[BillViewController alloc]init];
+//            BillViewController *orderListVC = [[BillViewController alloc]init];
 //            orderListVC.orderType = Order_type_waitShipp;
-            [self pushViewController:orderListVC animated:YES];
+//            [self pushViewController:orderListVC animated:YES];
         }
         return;
     }else if(alertView.tag == 20){

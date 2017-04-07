@@ -10,7 +10,7 @@
 #import "MerchantModel.h"
 #import "MerchantTableViewCell.h"
 #import "MerchantDetailViewController.h"
-
+#import "MerchantSearchViewController.h"
 
 @interface MerchantListViewController ()<UITableViewDataSource,UITableViewDelegate,SortButtonSwitchViewDelegate>
 @property (nonatomic, strong)NSMutableArray *dataSouceArray;
@@ -30,6 +30,7 @@
     self.naviBar.hidden = YES;
     self.tableView.backgroundColor = [UIColor clearColor];
     self.isDefultSort = YES;
+    self.seqId = @"1";
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         self.page = 1;
         self.isContinueRequest = YES;
@@ -38,10 +39,12 @@
     self.tableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
         [self searchReqest:NO andCity:self.currentCity andSortType:self.isDefultSort];
     }];
+    [self.tableView noDataSouce];
 //    [self.tableView addNoDatasouceWithCallback:^{
 //        [self.tableView.mj_header beginRefreshing];
 //    } andAlertSting:@"暂时没有数据" andErrorImage:@"pic_1" andRefreshBtnHiden:YES];
     
+    self.titleLabel.text = self.currentIndustry;
     [self.tableView.mj_header beginRefreshing];
 }
 
@@ -73,6 +76,10 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 - (IBAction)searchBtn:(id)sender {
+    MerchantSearchViewController *searchVC = [[MerchantSearchViewController alloc]init];
+    searchVC.cityName = [ShellCoinUserInfo shareUserInfos].locationCity;
+    
+    [self.navigationController pushViewController:searchVC animated:YES];
 }
 
 #pragma mark - 请求商家列表的网络请求
@@ -92,10 +99,6 @@
                             @"longitude":@([ShellCoinUserInfo shareUserInfos].locationCoordinate.longitude),
                             @"latitude":@([ShellCoinUserInfo shareUserInfos].locationCoordinate.latitude),
                             @"seqId":NullToSpace(self.seqId)}];
-    if (IsDefault) {
-        [parms setObject:@"1" forKey:@"recommend"];
-        [parms setObject:@"1" forKey:@"highQuality"];
-    }
     [HttpClient GET:@"mch/search" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
         if (IsRequestTrue) {
             if (self.page == [NullToNumber(jsonObject[@"data"][@"totalPage"]) integerValue]) {
@@ -116,13 +119,14 @@
                 [self.dataSouceArray addObject:model];
             }
             //判断数据源有无数据
-//            [self.tableView judgeIsHaveDataSouce:self.dataSouceArray];
+            [self.tableView judgeIsHaveDataSouce:self.dataSouceArray];
             [self.tableView reloadData];
         }
     } failure:^(NSURLSessionDataTask *operation, NSError *error) {
         //        self.keyWord = @"";
         [self.tableView.mj_header endRefreshing];
         [self.tableView.mj_footer endRefreshing];
+        [self.tableView showNoDataSouceNoNetworkConnection];
 //        [self.tableView showRereshBtnwithALerString:@"网络连接不好"];
     }];
 }
@@ -162,9 +166,9 @@
 {
     
     if ([sortId isEqualToString:@"1"]) {
-        self.isDefultSort = YES;
+        self.seqId = @"1";
     }else{
-        self.isDefultSort = NO;
+        self.seqId = @"2";
 
     }
     [self.tableView.mj_header beginRefreshing];

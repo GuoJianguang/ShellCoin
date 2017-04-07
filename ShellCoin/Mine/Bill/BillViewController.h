@@ -14,5 +14,6 @@
 
 @property (weak, nonatomic) IBOutlet SwipeView *swipeView;
 
+@property (nonatomic, assign)BOOL isCheckWithDrawal;
 
 @end

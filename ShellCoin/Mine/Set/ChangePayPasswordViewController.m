@@ -59,6 +59,7 @@
             [SVProgressHUD dismiss];
             if (IsRequestTrue) {
                 //设置用户信息
+                [ShellCoinUserInfo shareUserInfos].payPassword = newPassword;
                 [[JAlertViewHelper shareAlterHelper]showTint:@"修改成功" duration:1.5];
                 [self.navigationController popViewControllerAnimated:YES];
             }
@@ -132,7 +133,9 @@
             self.verCodeBtn.enabled = NO;
             self.timer1 = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(oldTimeLeft:) userInfo:nil repeats:YES];
             [[NSRunLoop currentRunLoop]addTimer:self.timer1 forMode:NSRunLoopCommonModes];
+            return;
         }
+        self.verCodeBtn.enabled = YES;
     } failure:^(NSURLSessionDataTask *operation, NSError *error) {
         sender.enabled = YES;
         

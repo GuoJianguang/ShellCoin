@@ -19,7 +19,21 @@
     model.jumpWay = NullToSpace(dic[@"jumpWay"]);
     model.jumpValue = NullToSpace(dic[@"jumpValue"]);
     model.remark = NullToSpace(dic[@"remark"]);
+    if ([dic[@"picArray"] isKindOfClass:[NSArray class]]) {
+        model.picArray = dic[@"picArray"];
+
+    }else{
+        model.picArray = [NSArray array];
+    }
     return model;
+}
+
+- (NSArray *)picArray
+{
+    if (!_picArray) {
+        _picArray = [NSArray array];
+    }
+    return _picArray;
 }
 
 @end

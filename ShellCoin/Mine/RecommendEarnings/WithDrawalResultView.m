@@ -25,6 +25,12 @@
     self.autResultLabel.textColor = self.successLabel.textColor = MacoTitleColor;
     self.autResultLabel.adjustsFontSizeToFitWidth = YES;
     self.autResultLabel.numberOfLines = 2;
+    if (TWitdh > 320) {
+        self.ViewHeight.constant = (TWitdh-100)*(550/520.);
+    }else{
+        self.ViewHeight.constant = (TWitdh-100)*(650/520.);
+        
+    }
 }
 
 

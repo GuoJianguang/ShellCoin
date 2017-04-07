@@ -43,6 +43,8 @@
     [self setLayerWithbor:self.view6];
     [self setLayerWithbor:self.view7];
     [self setLayerWithbor:self.view8];
+    self.label1.textColor = self.label2.textColor = self.label3.textColor = self.label4.textColor = self.label5.textColor = self.label6.textColor = self.label7.textColor = MacoDetailColor;
+    self.provincesTF.textColor = self.nameTF.textColor = self.wangdianTF.textColor = self.kaihuhangTF.textColor = self.kaihuhangNumdTF.textColor  =self.inputKaihuhangTF.textColor = self.bankLabel.textColor = self.bankCardNu.textColor = MacoTitleColor;
     
     self.provincesTF.delegate = self;
     self.bankLabel.delegate = self;
@@ -566,7 +568,8 @@
                 [ShellCoinUserInfo shareUserInfos].bindingFlag = YES;
                 [ShellCoinUserInfo shareUserInfos].bankAccount = bankNum;
                 [ShellCoinUserInfo shareUserInfos].bankAccountRealName = self.nameTF.text;
-                [ShellCoinUserInfo shareUserInfos].bindingFlag = @"1";
+                [ShellCoinUserInfo shareUserInfos].bindingFlag = YES;
+                [[NSNotificationCenter defaultCenter]postNotificationName:@"realNameSuccess" object:nil];
                 if (self.isFromRoomPage) {
                     [self.viewController.navigationController popToRootViewControllerAnimated:YES];
                     return ;

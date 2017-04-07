@@ -69,13 +69,19 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PpS-Hp-xsQ">
                     <rect key="frame" x="0.0" y="0.0" width="521" height="328.5"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0LF-bz-giV">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="merchantHeaderImageView.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="0LF-bz-giV">
                             <rect key="frame" x="0.0" y="0.0" width="521" height="306.5"/>
                         </imageView>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pic_white_shade" translatesAutoresizingMaskIntoConstraints="NO" id="Sjk-W9-WgR">
                             <rect key="frame" x="0.0" y="269" width="521" height="37.5"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="Sjk-W9-WgR" secondAttribute="height" multiplier="750/54" id="1MF-uf-KYG"/>
+                            </constraints>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pic_translucent_mask" translatesAutoresizingMaskIntoConstraints="NO" id="TQb-ry-cwF">
+                            <rect key="frame" x="0.0" y="0.0" width="521" height="64"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="64" id="LaP-Y3-c7r"/>
                             </constraints>
                         </imageView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LP8-HK-lVS">
@@ -99,17 +105,20 @@
                         <constraint firstAttribute="trailing" secondItem="0LF-bz-giV" secondAttribute="trailing" id="7qq-kn-Nng"/>
                         <constraint firstAttribute="bottom" secondItem="Sjk-W9-WgR" secondAttribute="bottom" constant="22" id="Bwb-Ag-boE"/>
                         <constraint firstAttribute="width" secondItem="PpS-Hp-xsQ" secondAttribute="height" multiplier="375:236" id="CP6-am-CH4"/>
+                        <constraint firstAttribute="trailing" secondItem="TQb-ry-cwF" secondAttribute="trailing" id="IMB-nm-iFC"/>
+                        <constraint firstItem="TQb-ry-cwF" firstAttribute="top" secondItem="PpS-Hp-xsQ" secondAttribute="top" id="KGa-Kv-ZHf"/>
                         <constraint firstAttribute="bottom" secondItem="frK-ja-vrQ" secondAttribute="bottom" id="Q2v-7I-7Ig"/>
                         <constraint firstItem="LP8-HK-lVS" firstAttribute="leading" secondItem="PpS-Hp-xsQ" secondAttribute="leading" id="VOj-zw-IhX"/>
                         <constraint firstItem="Sjk-W9-WgR" firstAttribute="leading" secondItem="PpS-Hp-xsQ" secondAttribute="leading" id="XgD-jL-DZg"/>
                         <constraint firstItem="0LF-bz-giV" firstAttribute="top" secondItem="PpS-Hp-xsQ" secondAttribute="top" id="Ydm-pN-GZO"/>
+                        <constraint firstItem="TQb-ry-cwF" firstAttribute="leading" secondItem="PpS-Hp-xsQ" secondAttribute="leading" id="cM2-qL-MeO"/>
                         <constraint firstAttribute="trailing" secondItem="Sjk-W9-WgR" secondAttribute="trailing" id="cfS-EJ-5VE"/>
                         <constraint firstAttribute="trailing" secondItem="frK-ja-vrQ" secondAttribute="trailing" constant="25" id="mCO-pY-HOk"/>
                         <constraint firstAttribute="bottom" secondItem="0LF-bz-giV" secondAttribute="bottom" constant="22" id="oYt-eS-Qhw"/>
                         <constraint firstItem="LP8-HK-lVS" firstAttribute="top" secondItem="PpS-Hp-xsQ" secondAttribute="top" constant="20" id="wtg-va-a1n"/>
                     </constraints>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="雨花西餐厅" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bGB-UH-1Zg">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bGB-UH-1Zg">
                     <rect key="frame" x="25" y="332.5" width="471" height="21"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                     <nil key="textColor"/>
@@ -197,6 +206,8 @@
         <image name="icon_enter2" width="30" height="30"/>
         <image name="icon_location" width="30" height="30"/>
         <image name="icon_notcollection" width="18" height="18"/>
+        <image name="merchantHeaderImageView.jpg" width="1125" height="870"/>
+        <image name="pic_translucent_mask" width="375" height="68"/>
         <image name="pic_white_shade" width="375" height="27"/>
     </resources>
 </document>

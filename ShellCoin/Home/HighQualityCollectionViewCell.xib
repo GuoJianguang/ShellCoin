@@ -19,7 +19,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="159" height="162"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="header.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="dmd-WD-K92">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dmd-WD-K92">
                         <rect key="frame" x="5" y="5" width="149" height="100.5"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="dmd-WD-K92" secondAttribute="height" multiplier="204:138" id="r4X-7G-O3u"/>
@@ -62,7 +62,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="header.jpg" width="200" height="200"/>
         <image name="pic_hot" width="25" height="25"/>
     </resources>
 </document>

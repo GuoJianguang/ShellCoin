@@ -28,6 +28,8 @@
 
 @property (nonatomic, strong)NSMutableArray *foryouArray;
 
+@property (nonatomic, strong)NSMutableArray *recommendArray;
+
 @property (weak, nonatomic) IBOutlet UICollectionView *highqualityCollectionVIew;
 
 @property (weak, nonatomic) IBOutlet UICollectionView *foryouCollectionView;
@@ -48,6 +50,13 @@
 @property (weak, nonatomic) IBOutlet UILabel *moreLabel;
 
 
+@property (weak, nonatomic) IBOutlet UIView *jingpingView;
 
+
+@property (weak, nonatomic) IBOutlet UIView *foryouView;
+@property (weak, nonatomic) IBOutlet UIView *recomendView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *jinpingHeight;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *foryouHeight;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *recommendHeight;
 
 @end

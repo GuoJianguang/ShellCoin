@@ -27,6 +27,7 @@
     self.tableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
         [self getMyCollectionListRequest:NO];
     }];
+    [self.tableView noDataSouce];
     //    [self.tableView addNoDatasouceWithCallback:^{
     //        [self.tableView.mj_header beginRefreshing];
     //    } andAlertSting:@"暂时没有数据" andErrorImage:@"pic_1" andRefreshBtnHiden:YES];
@@ -70,14 +71,14 @@
                 [self.dataSouceArray addObject:model];
             }
             //判断数据源有无数据
-            //            [self.tableView judgeIsHaveDataSouce:self.dataSouceArray];
+            [self.tableView judgeIsHaveDataSouce:self.dataSouceArray];
             [self.tableView reloadData];
         }
     } failure:^(NSURLSessionDataTask *operation, NSError *error) {
         //        self.keyWord = @"";
+        [self.tableView showNoDataSouceNoNetworkConnection];
         [self.tableView.mj_header endRefreshing];
         [self.tableView.mj_footer endRefreshing];
-        //        [self.tableView showRereshBtnwithALerString:@"网络连接不好"];
     }];
 }
 

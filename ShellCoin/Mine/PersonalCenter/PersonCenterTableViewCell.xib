@@ -96,8 +96,8 @@
                                     <action selector="realNameBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="zzs-4q-GdE"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eCl-Db-lDj">
-                                <rect key="frame" x="67" y="183.5" width="15" height="19.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eCl-Db-lDj">
+                                <rect key="frame" x="8" y="183.5" width="74" height="19.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -128,6 +128,7 @@
                             <constraint firstAttribute="width" secondItem="es1-fi-1Tn" secondAttribute="height" multiplier="15:10" id="BNO-PY-bLP"/>
                             <constraint firstAttribute="bottom" secondItem="9wI-H9-EAH" secondAttribute="bottom" id="EV3-Ox-gaV"/>
                             <constraint firstAttribute="bottom" secondItem="eCl-Db-lDj" secondAttribute="bottom" constant="10" id="Lyu-3M-Xfp"/>
+                            <constraint firstItem="eCl-Db-lDj" firstAttribute="leading" secondItem="es1-fi-1Tn" secondAttribute="leading" constant="8" id="Pth-II-Ips"/>
                             <constraint firstItem="9wI-H9-EAH" firstAttribute="leading" secondItem="VMH-3T-g8d" secondAttribute="trailing" constant="2" id="RQD-ge-RXr"/>
                             <constraint firstAttribute="trailing" secondItem="9wI-H9-EAH" secondAttribute="trailing" constant="20" id="WWT-N3-sWh"/>
                             <constraint firstItem="LSd-rv-JwB" firstAttribute="top" secondItem="es1-fi-1Tn" secondAttribute="top" id="aLR-ES-rg3"/>

@@ -26,6 +26,13 @@
     [super awakeFromNib];
     self.autResultLabel.adjustsFontSizeToFitWidth = YES;
     self.autResultLabel.numberOfLines = 2;
+    self.autResultLabel.textColor = MacoTitleColor;
+    if (TWitdh > 320) {
+        self.ViewHeight.constant = (TWitdh-100)*(530/520.);
+    }else{
+        self.ViewHeight.constant = (TWitdh-100)*(630/520.);
+
+    }
     
 }
 
@@ -63,6 +70,11 @@
 
 }
 
+- (void)setFailAlerString:(NSString *)failAlerString
+{
+    _failAlerString = failAlerString;
+    self.autResultLabel.text = _failAlerString;
+}
 
 - (void)setIsSuccess:(Authentication_type)isSuccess
 {
@@ -75,7 +87,7 @@
             self.alerResultImageView.image = [UIImage imageNamed:@"pic5_personal"];
             [self.backBtn setBackgroundImage:[UIImage imageNamed:@"pic6_personal"] forState:UIControlStateNormal];
             [self.backBtn setTitle:@"手动认证" forState:UIControlStateNormal];
-            self.autResultLabel.text = @"填写身份证信息错误，请返回重新输入或者选择手动实名认证";
+            self.autResultLabel.text = self.failAlerString;
         }
             break;
         case Authentication_wait_audit:{

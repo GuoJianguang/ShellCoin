@@ -18,12 +18,13 @@
     [super awakeFromNib];
     // Initialization code
     self.name.textColor = MacoTitleColor;
+    self.merchantImageView.layer.masksToBounds = YES;
 }
 
 - (void)setDataModel:(PopularMerModel *)dataModel
 {
     _dataModel = dataModel;
-    [self.merchantImageView sd_setImageWithURL:[NSURL URLWithString:_dataModel.pic] placeholderImage:LoadingErrorDefaultImageCircular];
+    [self.merchantImageView sd_setImageWithURL:[NSURL URLWithString:_dataModel.pic] placeholderImage:LoadingErrorDefaultImageSquare];
     self.name.text = _dataModel.mchName;
 }
 

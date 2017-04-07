@@ -44,7 +44,6 @@
 #pragma mark - banner数据请求
 - (void)getBannerRequest
 {
-    [ShellCoinUserInfo shareUserInfos].locationCity = @"成都市";
     NSString *searchCity = [[ShellCoinUserInfo shareUserInfos].locationCity substringToIndex:2];
     NSDictionary *parms = @{@"city":searchCity};
     [HttpClient GET:@"advert/index/list" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {

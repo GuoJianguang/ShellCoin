@@ -52,7 +52,7 @@
 #pragma  mark - 添加银行卡
 - (void)detailBtnClick
 {
-    if (self.dataSouceArray.count > 5  ) {
+    if (self.dataSouceArray.count > 4 ) {
         [[JAlertViewHelper shareAlterHelper]showTint:@"您最多只能添加5张银行卡" duration:2.];
         return;
     }
@@ -174,13 +174,19 @@
             NSArray *array = jsonObject[@"data"];
             if (array.count == 0) {
                 [ShellCoinUserInfo shareUserInfos].bindingFlag = NO;
+                [[NSNotificationCenter defaultCenter]postNotificationName:@"realNameSuccess" object:nil];
                 NoBankCardViewController *noBancardVC = [[NoBankCardViewController alloc]init];
                 [self.navigationController pushViewController:noBancardVC animated:YES];
                 return;
             }
-            for (NSDictionary *dic in array) {
-                [self.dataSouceArray addObject:[BankCardInfoModel modelWithDic:dic]];
+            for (int i = 0; i < array.count; i ++) {
+                BankCardInfoModel *model = [BankCardInfoModel modelWithDic:array[i]];
+                model.count = i;
+                [self.dataSouceArray addObject:model];
             }
+//            for (NSDictionary *dic in array) {
+//                [self.dataSouceArray addObject:[BankCardInfoModel modelWithDic:dic]];
+//            }
             self.manageView.pageContrlVIew.numberPages = self.dataSouceArray.count;
             self.manageView.bankModel = self.dataSouceArray[self.currentPage];
             [self setupUI:self.dataSouceArray];

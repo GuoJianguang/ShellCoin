@@ -37,6 +37,10 @@
     self.swipeView.delegate = self;
     self.talbeView1.backgroundColor = self.talbeView2.backgroundColor = self.talbeView3.backgroundColor = [UIColor clearColor];
     // Do any additional setup after loading the view from its nib.
+    if (self.isCheckWithDrawal) {
+//        [self.sortView selectItem:1];
+        [self.swipeView scrollToPage:1 duration:0];
+    }
 }
 
 
@@ -137,6 +141,17 @@
 }
 - (void)swipeViewCurrentItemIndexDidChange:(SwipeView *)swipeView
 {
+    switch (swipeView.currentPage) {
+        case 0:
+            [self.amountDisciplineView reload];
+            break;
+        case 1:
+            [self.intergralView reload];
+            break;
+            
+        default:
+            break;
+    }
     [self.sortView selectItem:swipeView.currentItemIndex ];
 }
 

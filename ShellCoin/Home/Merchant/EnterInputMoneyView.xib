@@ -94,9 +94,9 @@
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
+                        <constraint firstAttribute="height" constant="233" id="Nau-ly-bnB"/>
                         <constraint firstItem="AnM-MY-iiu" firstAttribute="top" secondItem="yh9-KI-zNb" secondAttribute="top" constant="10" id="Xk6-7z-4ma"/>
                         <constraint firstAttribute="bottom" secondItem="5cr-iv-JIa" secondAttribute="bottom" id="aAt-6I-rdE"/>
-                        <constraint firstAttribute="width" secondItem="yh9-KI-zNb" secondAttribute="height" multiplier="65/55" id="c07-Wi-PHG"/>
                         <constraint firstItem="5cr-iv-JIa" firstAttribute="leading" secondItem="yh9-KI-zNb" secondAttribute="leading" id="nDL-Gl-bcK"/>
                         <constraint firstItem="AnM-MY-iiu" firstAttribute="centerX" secondItem="yh9-KI-zNb" secondAttribute="centerX" id="r0X-ru-gbA"/>
                         <constraint firstAttribute="trailing" secondItem="5cr-iv-JIa" secondAttribute="trailing" id="ygZ-2x-Fx9"/>
@@ -118,12 +118,13 @@
                 <outlet property="alerLabel" destination="BKZ-mf-kFE" id="DGJ-gV-rtj"/>
                 <outlet property="backView" destination="oJP-AM-WnT" id="0wm-tP-3az"/>
                 <outlet property="canelBtn" destination="AnM-MY-iiu" id="1pb-wr-xYz"/>
+                <outlet property="height" destination="Nau-ly-bnB" id="M86-zW-pFd"/>
                 <outlet property="itemView" destination="yh9-KI-zNb" id="h9W-XI-wZ9"/>
                 <outlet property="moneyTF" destination="nGF-TO-GeN" id="dPU-xF-7S4"/>
                 <outlet property="sureBtn" destination="qZa-J1-Mt7" id="b2p-7M-84m"/>
                 <outlet property="sureView" destination="5cr-iv-JIa" id="oYe-gN-A4M"/>
             </connections>
-            <point key="canvasLocation" x="-26" y="-434"/>
+            <point key="canvasLocation" x="-194" y="-768"/>
         </view>
     </objects>
     <resources>

@@ -31,6 +31,13 @@
         self.moneyTF.textColor = MacoColor;
         self.sureView.layer.cornerRadius = 6;
         
+        
+        if (TWitdh > 320) {
+            self.height.constant = (TWitdh - 100)*(57/65.);
+        }else{
+            self.height.constant = (TWitdh - 100)*(65/65.);
+        }
+        
         self.moneyTF.delegate = self;
     }
     return self;
@@ -106,15 +113,14 @@
     if ([self.moneyTF.text isEqualToString:@""] ||[self.moneyTF.text doubleValue] ==0) {
         [[JAlertViewHelper shareAlterHelper]showTint:@"请输入正确的金额" duration:2.];
         return;
-    }else if ([self.moneyTF.text doubleValue] < 20.){
-        [[JAlertViewHelper shareAlterHelper]showTint:@"您消费的金额不能少于20元" duration:2.];
-        return;
     }
     if ([self valueValidated]) {
         OnlinePayViewController *payVC = [[OnlinePayViewController alloc]init];
         payVC.money = self.moneyTF.text;
         payVC.dataModel = self.dataModel;
+        self.moneyTF.text = @"";
         [self.viewController.navigationController pushViewController:payVC animated:YES];
+        [self removeFromSuperview];
     }
 }
 

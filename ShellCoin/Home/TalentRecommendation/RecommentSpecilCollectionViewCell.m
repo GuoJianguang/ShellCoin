@@ -15,10 +15,10 @@
     // Initialization code
 }
 
-
-- (void)setDataModel:(RecommentModel *)dataModel
+- (void)setPic:(NSString *)pic
 {
-    _dataModel = dataModel;
+    _pic = pic;
+    [self.detailImageView sd_setImageWithURL:[NSURL URLWithString:_pic] placeholderImage:LoadingErrorDefaultImageCircular];
 }
 
 

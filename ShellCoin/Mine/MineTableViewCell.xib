@@ -36,7 +36,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q3N-gS-VIV">
-                                        <rect key="frame" x="0.0" y="20" width="44" height="44"/>
+                                        <rect key="frame" x="10" y="20" width="44" height="44"/>
                                         <state key="normal" image="icon_news">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -44,7 +44,7 @@
                                             <action selector="messageBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="9qy-D1-UwB"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qbr-8f-yJK">
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qbr-8f-yJK">
                                         <rect key="frame" x="276" y="20" width="44" height="44"/>
                                         <state key="normal" image="icon_scan">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -57,7 +57,7 @@
                                 <constraints>
                                     <constraint firstItem="B1C-Mz-F1f" firstAttribute="centerX" secondItem="lv2-ba-sJh" secondAttribute="centerX" id="Aof-BB-KDE"/>
                                     <constraint firstItem="q3N-gS-VIV" firstAttribute="centerY" secondItem="lv2-ba-sJh" secondAttribute="centerY" constant="10" id="E2l-qw-vjm"/>
-                                    <constraint firstItem="q3N-gS-VIV" firstAttribute="leading" secondItem="lv2-ba-sJh" secondAttribute="leading" id="JPq-GE-dVZ"/>
+                                    <constraint firstItem="q3N-gS-VIV" firstAttribute="leading" secondItem="lv2-ba-sJh" secondAttribute="leading" constant="10" id="JPq-GE-dVZ"/>
                                     <constraint firstAttribute="height" constant="64" id="Jd9-93-MfY"/>
                                     <constraint firstAttribute="trailing" secondItem="Qbr-8f-yJK" secondAttribute="trailing" id="b4T-il-AZc"/>
                                     <constraint firstItem="Qbr-8f-yJK" firstAttribute="centerY" secondItem="lv2-ba-sJh" secondAttribute="centerY" constant="10" id="tNX-NG-CD2"/>
@@ -95,7 +95,7 @@
                                             <action selector="tradeInBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Mqv-0T-Cmc"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eYB-5i-9ur">
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eYB-5i-9ur">
                                         <rect key="frame" x="275.5" y="0.0" width="44" height="44"/>
                                         <state key="normal" image="icon_explain">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -145,7 +145,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SSr-Nc-Md1">
                                 <rect key="frame" x="0.0" y="260" width="159.5" height="60"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="待回馈金额（贝壳币）" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TSg-Gj-tm8">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="待分红金额（贝壳币）" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TSg-Gj-tm8">
                                         <rect key="frame" x="19" y="5" width="123" height="14.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <nil key="textColor"/>

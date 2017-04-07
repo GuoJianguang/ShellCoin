@@ -137,8 +137,10 @@
     NSString *password = [[NSString stringWithFormat:@"%@%@",self.passwordTF.text,PasswordKey]md5_32];
     
     [self.mallOrderParms setObject:password forKey:@"password"];
+    [SVProgressHUD showWithStatus:@"正在支付"];
     [HttpClient POST:@"pay/mch/balance" parameters:self.mallOrderParms success:^(NSURLSessionDataTask *operation, id jsonObject) {
         sender.enabled = YES;
+        [SVProgressHUD dismiss];
         if (IsRequestTrue) {
             if ([self.delegate respondsToSelector:@selector(paysuccess:)]) {
                 [self.delegate paysuccess:self.mallOrderParms[@"tranAmount"]];
@@ -150,6 +152,7 @@
             //            }
         }
     } failure:^(NSURLSessionDataTask *operation, NSError *error) {
+        [SVProgressHUD dismiss];
         [[JAlertViewHelper shareAlterHelper]showTint:@"支付失败，请重试" duration:2.0];
         sender.enabled = YES;
         //        if ([self.delegate respondsToSelector:@selector(payfail)]) {
