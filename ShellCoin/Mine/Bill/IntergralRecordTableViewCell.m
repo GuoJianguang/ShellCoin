@@ -8,11 +8,30 @@
 
 #import "IntergralRecordTableViewCell.h"
 
+@implementation FanxianModel
+
++ (id)modelWithDic:(NSDictionary *)dic
+{
+    FanxianModel *model = [[FanxianModel alloc]init];
+    model.fanxianId = NullToSpace(dic[@"id"]);
+    model.tranTime = NullToSpace(dic[@"tranTime"]);
+    model.amount = NullToNumber(dic[@"amount"]);
+    model.descript = NullToSpace(dic[@"description"]);
+    model.consumeBalance = NullToNumber(dic[@"consumeBalance"]);
+    return model;
+}
+
+@end
 @implementation IntergralRecordTableViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    self.timeLabel.textColor = MacoDetailColor;
+    self.moneyLabel.textColor = MacoColor;
+    self.statusLabel.textColor = MacoColor;
+    
+    self.timeLabel.adjustsFontSizeToFitWidth = self.statusLabel.adjustsFontSizeToFitWidth = self.moneyLabel.adjustsFontSizeToFitWidth = YES;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -85,4 +104,14 @@
     }
 
 }
+
+- (void)setDataModel:(FanxianModel *)dataModel
+{
+    _dataModel = dataModel;
+    self.timeLabel.text =_dataModel.tranTime;
+    self.statusLabel.text = [NSString stringWithFormat:@"+¥%.2f",[_dataModel.amount doubleValue]];
+    self.moneyLabel.text = [NSString stringWithFormat:@"+购物券%.2f",[_dataModel.consumeBalance doubleValue]];
+}
+
+
 @end

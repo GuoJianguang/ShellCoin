@@ -84,12 +84,12 @@
                   moduleName = "ShellCoin"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/guo/Desktop/ShellCoin/ShellCoin/Mine/trade-in/TradInViewController.m"
-                  timestampString = "513232347.377642"
+                  timestampString = "513484678.235895"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "107"
                   endingLineNumber = "107"
-                  offsetFromSymbolStart = "92">
+                  offsetFromSymbolStart = "81">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -99,12 +99,12 @@
                   moduleName = "ShellCoin"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/guo/Desktop/ShellCoin/ShellCoin/Mine/trade-in/TradInViewController.m"
-                  timestampString = "513232347.379659"
+                  timestampString = "513484678.237904"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "108"
                   endingLineNumber = "108"
-                  offsetFromSymbolStart = "118">
+                  offsetFromSymbolStart = "116">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -212,12 +212,12 @@
                   moduleName = "ShellCoin"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/guo/Desktop/ShellCoin/ShellCoin/Mine/Set/EditPhoneNumberViewController.m"
-                  timestampString = "513232347.399537"
+                  timestampString = "513484678.258743"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "153"
                   endingLineNumber = "153"
-                  offsetFromSymbolStart = "1254">
+                  offsetFromSymbolStart = "1281">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -227,12 +227,12 @@
                   moduleName = "ShellCoin"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/guo/Desktop/ShellCoin/ShellCoin/Mine/Set/EditPhoneNumberViewController.m"
-                  timestampString = "513232347.402167"
+                  timestampString = "513484678.26083"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "154"
                   endingLineNumber = "154"
-                  offsetFromSymbolStart = "101">
+                  offsetFromSymbolStart = "79">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -372,12 +372,12 @@
                   moduleName = "ShellCoin"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/guo/Desktop/ShellCoin/ShellCoin/Mine/Set/ChangePayPasswordViewController.m"
-                  timestampString = "513232347.434747"
+                  timestampString = "513484678.297104"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "58"
                   endingLineNumber = "58"
-                  offsetFromSymbolStart = "993">
+                  offsetFromSymbolStart = "1024">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -387,14 +387,158 @@
                   moduleName = "ShellCoin"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/guo/Desktop/ShellCoin/ShellCoin/Mine/Set/ChangePayPasswordViewController.m"
-                  timestampString = "513232347.436819"
+                  timestampString = "513484678.299429"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "59"
                   endingLineNumber = "59"
-                  offsetFromSymbolStart = "89">
+                  offsetFromSymbolStart = "72">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ShellCoin/Mine/Bill/Bill3View.m"
+            timestampString = "513484612.669779"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "-getshouyijilujiluRequest:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[Bill3View getshouyijilujiluRequest:]"
+                  moduleName = "ShellCoin"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/guo/Desktop/ShellCoin/ShellCoin/Mine/Bill/Bill3View.m"
+                  timestampString = "513484678.304165"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "63"
+                  endingLineNumber = "63"
+                  offsetFromSymbolStart = "401">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__38-[Bill3View getshouyijilujiluRequest:]_block_invoke"
+                  moduleName = "ShellCoin"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/guo/Desktop/ShellCoin/ShellCoin/Mine/Bill/Bill3View.m"
+                  timestampString = "513484678.306847"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "64"
+                  endingLineNumber = "64"
+                  offsetFromSymbolStart = "123">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ShellCoin/Mine/Bill/Bill3View.m"
+            timestampString = "513484612.669779"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "-getshouyijilujiluRequest:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ShellCoin/Mine/Bill/Bill3View.m"
+            timestampString = "513484612.669779"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "-getshouyijilujiluRequest:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ShellCoin/Mine/Bill/Bill3View.m"
+            timestampString = "513484612.669779"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "-init"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ShellCoin/Mine/Bill/Bill3View.m"
+            timestampString = "513484612.669779"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
+            landmarkName = "-tableView:numberOfRowsInSection:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ShellCoin/Mine/Bill/Bill3View.m"
+            timestampString = "513484612.669779"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
+            landmarkName = "-tableView:heightForRowAtIndexPath:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ShellCoin/Mine/Bill/Bill3View.m"
+            timestampString = "513484612.669779"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
+            landmarkName = "-tableView:cellForRowAtIndexPath:"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

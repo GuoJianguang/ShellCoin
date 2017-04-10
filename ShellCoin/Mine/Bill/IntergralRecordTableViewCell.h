@@ -9,6 +9,30 @@
 #import <UIKit/UIKit.h>
 #import "BillIntegaralModel.h"
 
+@interface FanxianModel : BaseModel
+
+/**
+ * 让利回馈记录单号
+ */
+@property (nonatomic,copy)NSString *fanxianId;
+/**
+ * 让利回馈时间
+ */
+@property (nonatomic,copy)NSString *tranTime;
+/**
+ * 让利回馈金额
+ */
+@property (nonatomic,copy)NSString *amount;
+
+/*
+购物券金额
+ */
+@property (nonatomic,copy)NSString *consumeBalance;
+
+@property (nonatomic, copy)NSString *descript;
+
+@end
+
 @interface IntergralRecordTableViewCell : BaseTableViewCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *markImageView;
@@ -23,4 +47,6 @@
 
 @property (nonatomic, strong)IntegralShellCoinModel *shellCoinModel;
 
+
+@property (nonatomic, strong)FanxianModel *dataModel;
 @end

@@ -39,6 +39,8 @@
 		BC23C9E91E7933B700E90B43 /* LSPaoMaView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC23C9E81E7933B700E90B43 /* LSPaoMaView.m */; };
 		BC23C9EC1E79395A00E90B43 /* YesTodayEarningsAlerView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC23C9EB1E79395A00E90B43 /* YesTodayEarningsAlerView.m */; };
 		BC23C9EE1E79396500E90B43 /* YesTodayEarningsAlerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC23C9ED1E79396500E90B43 /* YesTodayEarningsAlerView.xib */; };
+		BC2537E81E9B2146007232B3 /* Bill3View.m in Sources */ = {isa = PBXBuildFile; fileRef = BC2537E71E9B2146007232B3 /* Bill3View.m */; };
+		BC2537EA1E9B2151007232B3 /* Bill3View.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC2537E91E9B2151007232B3 /* Bill3View.xib */; };
 		BC2E53101E94F1F600F7A99C /* merchantHeader.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC2E530F1E94F1F600F7A99C /* merchantHeader.jpg */; };
 		BC2E53121E94F36C00F7A99C /* HomebannerDefault.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC2E53111E94F36C00F7A99C /* HomebannerDefault.jpg */; };
 		BC2E53191E94FC2C00F7A99C /* SCAdCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = BC2E53151E94FC2C00F7A99C /* SCAdCollectionViewLayout.m */; };
@@ -347,6 +349,9 @@
 		BC23C9EA1E79395A00E90B43 /* YesTodayEarningsAlerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YesTodayEarningsAlerView.h; sourceTree = "<group>"; };
 		BC23C9EB1E79395A00E90B43 /* YesTodayEarningsAlerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YesTodayEarningsAlerView.m; sourceTree = "<group>"; };
 		BC23C9ED1E79396500E90B43 /* YesTodayEarningsAlerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YesTodayEarningsAlerView.xib; sourceTree = "<group>"; };
+		BC2537E61E9B2146007232B3 /* Bill3View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bill3View.h; sourceTree = "<group>"; };
+		BC2537E71E9B2146007232B3 /* Bill3View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bill3View.m; sourceTree = "<group>"; };
+		BC2537E91E9B2151007232B3 /* Bill3View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Bill3View.xib; sourceTree = "<group>"; };
 		BC2E530F1E94F1F600F7A99C /* merchantHeader.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = merchantHeader.jpg; sourceTree = "<group>"; };
 		BC2E53111E94F36C00F7A99C /* HomebannerDefault.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = HomebannerDefault.jpg; sourceTree = "<group>"; };
 		BC2E53141E94FC2C00F7A99C /* SCAdCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCAdCollectionViewLayout.h; sourceTree = "<group>"; };
@@ -867,6 +872,9 @@
 				BC054D521E8A402E00062AC5 /* Bill12View.h */,
 				BC054D511E8A402E00062AC5 /* Bill12View.m */,
 				BC054D531E8A402E00062AC5 /* Bill12View.xib */,
+				BC2537E61E9B2146007232B3 /* Bill3View.h */,
+				BC2537E71E9B2146007232B3 /* Bill3View.m */,
+				BC2537E91E9B2151007232B3 /* Bill3View.xib */,
 				BC054D561E8A418F00062AC5 /* BillDataModel.h */,
 				BC054D571E8A418F00062AC5 /* BillDataModel.m */,
 				BCA17DDA1E8BB2AD00B4AFDA /* Bill.xcassets */,
@@ -1710,6 +1718,7 @@
 				BCEC069E1E83BFF20059C2C4 /* IntergralRecordTableViewCell.xib in Resources */,
 				BCE5EED91E5C41900055D828 /* Mine.xcassets in Resources */,
 				BC9B3DE11E7688AD003DC241 /* PersonCenterViewController.xib in Resources */,
+				BC2537EA1E9B2151007232B3 /* Bill3View.xib in Resources */,
 				BCFE206B1E77BC83002BC28C /* TradInTableViewCell.xib in Resources */,
 				BC9B3E041E7698CC003DC241 /* ManageBankView.xib in Resources */,
 				BC57B6FF1E7FBFEA006AF4D1 /* HomeBannerTableViewCell.xib in Resources */,
@@ -1859,6 +1868,7 @@
 				BC23C9E61E792BD700E90B43 /* SubLBXScanViewController.m in Sources */,
 				BC4AAC3C1E4D8F7B006568A6 /* MineTableViewCell.m in Sources */,
 				BC34A1C81E9256CA00C786C0 /* NSString+PinYin4Cocoa.m in Sources */,
+				BC2537E81E9B2146007232B3 /* Bill3View.m in Sources */,
 				BC9B3DEC1E7690F2003DC241 /* RecommentEarningsViewController.m in Sources */,
 				BCFE209A1E77E4A6002BC28C /* Verify.m in Sources */,
 				BC34A1CB1E9256CA00C786C0 /* PinyinHelper.m in Sources */,

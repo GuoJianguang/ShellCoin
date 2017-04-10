@@ -21,34 +21,36 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cc3-W4-4ec">
                         <rect key="frame" x="12" y="10" width="296" height="67"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Dc3-hm-03V">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pic_state_red" translatesAutoresizingMaskIntoConstraints="NO" id="Dc3-hm-03V">
                                 <rect key="frame" x="0.0" y="10" width="6" height="47"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="6" id="47k-AK-5SG"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="抵换成功" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="th1-Pe-XyM">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="抵换成功" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="th1-Pe-XyM">
                                 <rect key="frame" x="18" y="10" width="58" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¥50.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5fZ-cv-ZAt">
-                                <rect key="frame" x="219" y="39" width="57" height="20"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¥--" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5fZ-cv-ZAt">
+                                <rect key="frame" x="143" y="39" width="133" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2017.01.02" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QbM-SW-gmu">
-                                <rect key="frame" x="18" y="40" width="69" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2017.04.06 24:43" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QbM-SW-gmu">
+                                <rect key="frame" x="18" y="25.5" width="120" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="f2L-2T-idS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="支付成功" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C3w-ow-x4R">
-                                <rect key="frame" x="222" y="10" width="54" height="16"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C3w-ow-x4R">
+                                <rect key="frame" x="143" y="8" width="133" height="20.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -58,14 +60,16 @@
                             <constraint firstItem="th1-Pe-XyM" firstAttribute="leading" secondItem="Dc3-hm-03V" secondAttribute="trailing" constant="12" id="2dR-HT-cZj"/>
                             <constraint firstAttribute="trailing" secondItem="C3w-ow-x4R" secondAttribute="trailing" constant="20" id="7jN-q2-I5H"/>
                             <constraint firstItem="QbM-SW-gmu" firstAttribute="leading" secondItem="Dc3-hm-03V" secondAttribute="trailing" constant="12" id="IcH-iO-2TB"/>
-                            <constraint firstItem="C3w-ow-x4R" firstAttribute="top" secondItem="Cc3-W4-4ec" secondAttribute="top" constant="10" id="KuR-Hv-6X4"/>
+                            <constraint firstItem="C3w-ow-x4R" firstAttribute="top" secondItem="Cc3-W4-4ec" secondAttribute="top" constant="8" id="KuR-Hv-6X4"/>
                             <constraint firstItem="th1-Pe-XyM" firstAttribute="top" secondItem="Cc3-W4-4ec" secondAttribute="top" constant="10" id="M54-uZ-KOj"/>
                             <constraint firstItem="Dc3-hm-03V" firstAttribute="leading" secondItem="Cc3-W4-4ec" secondAttribute="leading" id="RwK-Wj-ddF"/>
                             <constraint firstAttribute="bottom" secondItem="Dc3-hm-03V" secondAttribute="bottom" constant="10" id="SHh-gl-O27"/>
                             <constraint firstItem="Dc3-hm-03V" firstAttribute="top" secondItem="Cc3-W4-4ec" secondAttribute="top" constant="10" id="WKA-xa-oZx"/>
+                            <constraint firstItem="5fZ-cv-ZAt" firstAttribute="leading" secondItem="QbM-SW-gmu" secondAttribute="trailing" constant="5" id="Wrm-IQ-Cgm"/>
                             <constraint firstAttribute="trailing" secondItem="5fZ-cv-ZAt" secondAttribute="trailing" constant="20" id="Xzi-fI-aau"/>
+                            <constraint firstItem="C3w-ow-x4R" firstAttribute="leading" secondItem="QbM-SW-gmu" secondAttribute="trailing" constant="5" id="ZSN-ux-Fuu"/>
                             <constraint firstAttribute="bottom" secondItem="5fZ-cv-ZAt" secondAttribute="bottom" constant="8" id="dxu-cH-nVY"/>
-                            <constraint firstAttribute="bottom" secondItem="QbM-SW-gmu" secondAttribute="bottom" constant="10" id="wt1-R2-5v0"/>
+                            <constraint firstItem="QbM-SW-gmu" firstAttribute="centerY" secondItem="Cc3-W4-4ec" secondAttribute="centerY" id="hJy-69-FWL"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -87,4 +91,7 @@
             <point key="canvasLocation" x="-126" y="-162"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="pic_state_red" width="6" height="70"/>
+    </resources>
 </document>

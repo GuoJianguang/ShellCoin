@@ -13,6 +13,7 @@
 #import "BillAmountDisciplineView.h"
 #import "Bill1View.h"
 #import "Bill12View.h"
+#import "Bill3View.h"
 
 
 @interface BillViewController ()<SwipeViewDelegate,SwipeViewDataSource,UITableViewDataSource,UITableViewDelegate,SortButtonSwitchViewDelegate>
@@ -24,6 +25,9 @@
 
 @property (nonatomic, strong)Bill12View *intergralView;
 @property (nonatomic, strong)Bill1View *amountDisciplineView;
+
+@property (nonatomic, strong)Bill3View *earningsView;
+
 @end
 
 @implementation BillViewController
@@ -31,7 +35,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.naviBar.title = @"账单";
-    self.sortView.titleArray = @[@"消费记录",@"抵换记录"];
+    self.sortView.titleArray = @[@"消费记录",@"抵换记录",@"收益记录"];
     self.naviBar.lineVIew.hidden = YES;
     self.swipeView.dataSource = self;
     self.swipeView.delegate = self;
@@ -85,6 +89,13 @@
     return _intergralView;
 }
 
+- (Bill3View *)earningsView
+{
+    if (!_earningsView) {
+        _earningsView = [[Bill3View alloc]init];
+    }
+    return _earningsView;
+}
 
 - (Bill1View *)amountDisciplineView{
     if (!_amountDisciplineView) {
@@ -127,6 +138,14 @@
 
         }
             break;
+        case 2:{
+            [view addSubview:self.earningsView];
+            [self.earningsView mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.edges.equalTo(view).insets(insets);
+            }];
+            
+        }
+            break;
        
         default:
             break;
@@ -137,7 +156,7 @@
 
 - (NSInteger)numberOfItemsInSwipeView:(SwipeView *)swipeView
 {
-    return 2;
+    return 3;
 }
 - (void)swipeViewCurrentItemIndexDidChange:(SwipeView *)swipeView
 {
@@ -148,7 +167,9 @@
         case 1:
             [self.intergralView reload];
             break;
-            
+        case 2:
+            [self.earningsView reload];
+            break;
         default:
             break;
     }
