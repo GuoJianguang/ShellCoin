@@ -10,6 +10,8 @@
 #import "LBXScanResult.h"
 #import "LBXScanWrapper.h"
 //#import "ScanPayViewController.h"
+#import "OnlinePayViewController.h"
+#import "MerchantModel.h"
 
 
 @interface SubLBXScanViewController ()
@@ -183,10 +185,12 @@
     NSData *data = [strResult.strScanned dataUsingEncoding:NSUTF8StringEncoding];
     NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
     if ([NullToNumber(dic[@"qrCodeType"]) isEqualToString:@"1001"]) {
-//        ScanPayViewController *scanVC = [[ScanPayViewController alloc]init];
-//        scanVC.mchCode = NullToNumber(dic[@"mchCode"]);
-//        scanVC.money = NullToNumber(dic[@"tranAmount"]);
-//        [self.navigationController pushViewController:scanVC animated:YES];
+        OnlinePayViewController *payVC = [[OnlinePayViewController alloc]init];
+        MerchantModel *model = [[MerchantModel alloc]init];
+        model.name = NullToSpace(dic[@"mchName"]);
+        model.code = NullToSpace(dic[@"mchCode"]);
+        payVC.dataModel = model;
+        [self.navigationController pushViewController:payVC animated:YES];
     }else{
         [LBXAlertAction showAlertWithTitle:@"提醒" msg:@"暂时无法识别此二维码" chooseBlock:^(NSInteger buttonIdx) {
             

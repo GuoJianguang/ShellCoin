@@ -31,6 +31,7 @@
     self.canWithDrawLabel.adjustsFontSizeToFitWidth = YES;
     self.canWithDrawLabel.text = [NSString stringWithFormat:@"%.2f",[[ShellCoinUserInfo shareUserInfos].aviableBalance doubleValue]];
     self.view.backgroundColor = [UIColor whiteColor];
+    [self.inputAmountTF becomeFirstResponder];
     [self getmyBankCardRequest];
 }
 

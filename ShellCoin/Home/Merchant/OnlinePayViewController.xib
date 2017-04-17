@@ -18,6 +18,7 @@
                 <outlet property="cashMarkBtn" destination="hs7-0T-cTG" id="3Cv-oq-KDD"/>
                 <outlet property="merchantName" destination="GSd-v9-KZK" id="1Sb-PV-Eco"/>
                 <outlet property="moneyLabel" destination="D1Q-vw-W6V" id="oDs-sg-CWm"/>
+                <outlet property="moneyTF" destination="YEV-jV-T0R" id="qdw-hx-3F6"/>
                 <outlet property="sureBtn" destination="KWO-DM-bng" id="YRv-IE-tmP"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="wechatBtn" destination="Rxv-C3-Lqh" id="gWp-TP-fQQ"/>
@@ -44,20 +45,29 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D1Q-vw-W6V">
+                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D1Q-vw-W6V">
                             <rect key="frame" x="167" y="34.5" width="42" height="56.5"/>
                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="47"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YEV-jV-T0R">
+                            <rect key="frame" x="8" y="33" width="359" height="57"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="47"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstItem="D1Q-vw-W6V" firstAttribute="centerX" secondItem="SAQ-t2-dvu" secondAttribute="centerX" id="2ra-gS-V7a"/>
                         <constraint firstItem="GSd-v9-KZK" firstAttribute="top" secondItem="SAQ-t2-dvu" secondAttribute="top" constant="5" id="9Nv-tl-ozi"/>
+                        <constraint firstAttribute="trailing" secondItem="YEV-jV-T0R" secondAttribute="trailing" constant="8" id="LTP-ys-3oY"/>
                         <constraint firstAttribute="bottom" secondItem="D1Q-vw-W6V" secondAttribute="bottom" constant="14" id="NAF-kL-CF6"/>
                         <constraint firstAttribute="width" secondItem="SAQ-t2-dvu" secondAttribute="height" multiplier="75/21" id="RCE-lm-Res"/>
                         <constraint firstItem="GSd-v9-KZK" firstAttribute="centerX" secondItem="SAQ-t2-dvu" secondAttribute="centerX" id="jQ8-Q1-c3b"/>
+                        <constraint firstItem="YEV-jV-T0R" firstAttribute="leading" secondItem="SAQ-t2-dvu" secondAttribute="leading" constant="8" id="or7-b2-V3Z"/>
+                        <constraint firstAttribute="bottom" secondItem="YEV-jV-T0R" secondAttribute="bottom" constant="15" id="rcY-RW-iMg"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4WO-0x-qJX">
@@ -253,7 +263,7 @@
                 <constraint firstAttribute="trailing" secondItem="RIV-iJ-t8X" secondAttribute="trailing" id="sfi-7k-vbl"/>
                 <constraint firstAttribute="trailing" secondItem="4WO-0x-qJX" secondAttribute="trailing" id="tXU-2c-XGN"/>
             </constraints>
-            <point key="canvasLocation" x="13" y="-250"/>
+            <point key="canvasLocation" x="-100" y="-247"/>
         </view>
     </objects>
     <resources>

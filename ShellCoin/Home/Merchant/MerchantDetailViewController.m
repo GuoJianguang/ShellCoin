@@ -9,6 +9,7 @@
 #import "MerchantDetailViewController.h"
 #import "EnterInputMoneyView.h"
 #import "BussessMapViewController.h"
+#import "OnlinePayViewController.h"
 
 @interface MerchantDetailViewController ()<UIActionSheetDelegate>
 
@@ -175,12 +176,22 @@
 
 - (IBAction)payBtn:(UIButton *)sender {
     
-    [self.view addSubview:self.payView];
-    self.payView.dataModel = self.dataModel;
-    UIEdgeInsets insets = UIEdgeInsetsMake(0, 0, 0, 0);
-    [self.payView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self.view).insets(insets);
-    }];
+    if (![ShellCoinUserInfo shareUserInfos].currentLogined) {
+        //判断是否先登录
+        UINavigationController *navc = [LoginViewController controller];
+        [self presentViewController:navc animated:YES completion:NULL];
+        return;
+    }
+
+    OnlinePayViewController *payVC = [[OnlinePayViewController alloc]init];
+    payVC.dataModel = self.dataModel;
+    [self.navigationController pushViewController:payVC animated:YES];
+//    [self.view addSubview:self.payView];
+//    self.payView.dataModel = self.dataModel;
+//    UIEdgeInsets insets = UIEdgeInsetsMake(0, 0, 0, 0);
+//    [self.payView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.edges.equalTo(self.view).insets(insets);
+//    }];
 }
 
 - (IBAction)addressBtn:(id)sender {

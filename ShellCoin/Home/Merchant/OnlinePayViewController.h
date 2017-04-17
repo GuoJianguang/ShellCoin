@@ -52,5 +52,8 @@ typedef NS_ENUM(NSInteger,Payway_type){
 
 - (IBAction)sureBtn:(UIButton *)sender;
 
+@property (weak, nonatomic) IBOutlet UITextField *moneyTF;
+
+
 
 @end
