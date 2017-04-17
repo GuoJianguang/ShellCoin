@@ -27,6 +27,7 @@
     self.merchantName.text = self.dataModel.name;
     self.merchantName.textColor = self.moneyLabel.textColor = MacoTitleColor;
     self.moneyLabel.text = [NSString stringWithFormat:@"¥%@",self.money];
+    self.moneyTF.adjustsFontSizeToFitWidth = YES;
     [self setPayWay];
     self.yuELabel.adjustsFontSizeToFitWidth = YES;
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(weixinPayResult:) name:WeixinPayResult object:nil];
@@ -137,7 +138,7 @@
 - (IBAction)sureBtn:(UIButton *)sender {
     
     if ([self juadeMoney]) {
-        [[JAlertViewHelper shareAlterHelper]showTint:@"请输入支付金额" duration:2.5];
+        [[JAlertViewHelper shareAlterHelper]showTint:@"请输入正确的支付金额" duration:2.5];
         [self.moneyTF becomeFirstResponder];
         return;
     }
@@ -145,7 +146,7 @@
     switch (self.payWay_type) {
         case Payway_type_wechat:
         {
-            NSString *totalMoney = NullToNumber(self.money);
+            NSString *totalMoney = [NSString stringWithFormat:@"%.2f",[NullToNumber(self.money) doubleValue]];
             NSString *md5Str = [NSString stringWithFormat:@"%@%@",[[NSUserDefaults standardUserDefaults]objectForKey:LoginUserPassword],PasswordKey];
             NSString *sign = [md5Str md5_32];
             
@@ -363,7 +364,6 @@
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
-    if (textField == self.moneyTF) {
         NSScanner      *scanner    = [NSScanner scannerWithString:string];
         NSCharacterSet *numbers;
         NSRange         pointRange = [textField.text rangeOfString:@"."];
@@ -374,7 +374,7 @@
         }
         else
         {
-            numbers = [NSCharacterSet characterSetWithCharactersInString:@"0123456789"];
+            numbers = [NSCharacterSet characterSetWithCharactersInString:@"0123456789."];
         }
         
         if ( [textField.text isEqualToString:@""] && [string isEqualToString:@"."] )
@@ -413,8 +413,12 @@
         {
             return NO;
         }
-    }
-    return YES;
+    
+        if (textField.text.length > 14 && ![string isEqualToString:@""]&& ![string isEqualToString:@" "]) {
+            return NO;
+        }
+        return YES;
+
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
@@ -433,7 +437,7 @@
 
 - (BOOL)juadeMoney
 {
-    if ([self.moneyTF.text isEqualToString:@""] || !self.moneyTF.text) {
+    if ([self.moneyTF.text isEqualToString:@""] || !self.moneyTF.text || [self.moneyTF.text integerValue] == 0) {
         return YES;
     }
     return NO;

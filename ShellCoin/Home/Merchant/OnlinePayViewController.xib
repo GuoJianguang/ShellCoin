@@ -52,9 +52,9 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YEV-jV-T0R">
-                            <rect key="frame" x="8" y="33" width="359" height="57"/>
+                            <rect key="frame" x="8" y="36" width="359" height="54"/>
                             <nil key="textColor"/>
-                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="47"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="45"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                     </subviews>
@@ -62,6 +62,7 @@
                     <constraints>
                         <constraint firstItem="D1Q-vw-W6V" firstAttribute="centerX" secondItem="SAQ-t2-dvu" secondAttribute="centerX" id="2ra-gS-V7a"/>
                         <constraint firstItem="GSd-v9-KZK" firstAttribute="top" secondItem="SAQ-t2-dvu" secondAttribute="top" constant="5" id="9Nv-tl-ozi"/>
+                        <constraint firstItem="YEV-jV-T0R" firstAttribute="top" secondItem="GSd-v9-KZK" secondAttribute="bottom" constant="14" id="Gan-Vr-upE"/>
                         <constraint firstAttribute="trailing" secondItem="YEV-jV-T0R" secondAttribute="trailing" constant="8" id="LTP-ys-3oY"/>
                         <constraint firstAttribute="bottom" secondItem="D1Q-vw-W6V" secondAttribute="bottom" constant="14" id="NAF-kL-CF6"/>
                         <constraint firstAttribute="width" secondItem="SAQ-t2-dvu" secondAttribute="height" multiplier="75/21" id="RCE-lm-Res"/>

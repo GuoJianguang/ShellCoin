@@ -64,7 +64,7 @@
             [self.sureBtn setTitle:@"" forState:UIControlStateNormal];
             break;
         case Merchant_PayTYpe_Cash:
-            [self.sureBtn setTitle:@"返回商家" forState:UIControlStateNormal];
+            [self.sureBtn setTitle:@"返回" forState:UIControlStateNormal];
             self.lineView.hidden=self.backBtn.hidden = self.checkBill.hidden = YES;
             self.sureBtn.hidden = NO;
             break;

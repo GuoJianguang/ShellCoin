@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -29,25 +30,31 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="抵换成功" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NLI-rP-XDG">
-                                <rect key="frame" x="51" y="10" width="166.5" height="17"/>
+                                <rect key="frame" x="56.5" y="10" width="161" height="17"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(含购物券--)" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bmo-a2-cfm">
                                 <rect key="frame" x="201.5" y="62.5" width="74.5" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="74.5" id="CQk-B6-sPq"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2017.01.02" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="71e-hg-zpL">
-                                <rect key="frame" x="51" y="65" width="57.5" height="13.5"/>
+                                <rect key="frame" x="56.5" y="65" width="60" height="13.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="cxv-xM-oOg"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="11"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_balance_payment_nor" translatesAutoresizingMaskIntoConstraints="NO" id="MkH-JJ-o7b">
-                                <rect key="frame" x="21" y="35.5" width="22" height="18"/>
+                                <rect key="frame" x="21" y="33.5" width="27.5" height="22.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="MkH-JJ-o7b" secondAttribute="height" multiplier="44/36" id="51o-Oo-bmu"/>
                                 </constraints>
@@ -62,7 +69,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¥--" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FQe-1v-hfS">
-                                <rect key="frame" x="174" y="59" width="27.5" height="20.5"/>
+                                <rect key="frame" x="121.5" y="59" width="80" height="20.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -79,8 +86,10 @@
                             <constraint firstItem="MkH-JJ-o7b" firstAttribute="leading" secondItem="yMR-zw-yEM" secondAttribute="trailing" constant="15" id="Sdh-x3-QaR"/>
                             <constraint firstItem="yMR-zw-yEM" firstAttribute="leading" secondItem="hlm-lF-CZ7" secondAttribute="leading" id="WFZ-rZ-QhH"/>
                             <constraint firstItem="MkH-JJ-o7b" firstAttribute="centerY" secondItem="hlm-lF-CZ7" secondAttribute="centerY" id="YX8-IC-bPf"/>
+                            <constraint firstItem="MkH-JJ-o7b" firstAttribute="height" secondItem="hlm-lF-CZ7" secondAttribute="height" multiplier="1/4" id="bqN-lC-kXE"/>
                             <constraint firstItem="71e-hg-zpL" firstAttribute="leading" secondItem="MkH-JJ-o7b" secondAttribute="trailing" constant="8" id="dfR-8f-6qC"/>
                             <constraint firstItem="bmo-a2-cfm" firstAttribute="leading" secondItem="FQe-1v-hfS" secondAttribute="trailing" id="g9v-H2-6kt"/>
+                            <constraint firstItem="FQe-1v-hfS" firstAttribute="leading" secondItem="71e-hg-zpL" secondAttribute="trailing" constant="5" id="h5N-sf-Kaj"/>
                             <constraint firstItem="NLI-rP-XDG" firstAttribute="top" secondItem="hlm-lF-CZ7" secondAttribute="top" constant="10" id="no4-1f-LDT"/>
                             <constraint firstItem="yMR-zw-yEM" firstAttribute="top" secondItem="hlm-lF-CZ7" secondAttribute="top" constant="10" id="qh0-Pw-uWS"/>
                             <constraint firstItem="bmo-a2-cfm" firstAttribute="baseline" secondItem="FQe-1v-hfS" secondAttribute="baseline" id="tg3-MI-jed"/>

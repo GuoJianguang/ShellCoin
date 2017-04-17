@@ -17,6 +17,8 @@
     self.timeLabel.textColor = MacoDetailColor;
     self.moneyLabel.textColor = MacoColor;
     self.markLabel.textColor = MacoTitleColor;
+    self.buyCardLabel.adjustsFontSizeToFitWidth = YES;
+    self.moneyLabel.adjustsFontSizeToFitWidth = YES;
     
 }
 
@@ -68,6 +70,7 @@
             
             if ([_xiaofeijiluModel.payType isEqualToString:@"0"]) {
                 self.buyCardLabel.text = [NSString stringWithFormat:@"(含购物券%@)",_xiaofeijiluModel.consumeAmount];
+
                 self.sortImageview.image = [UIImage imageNamed:@"icon_balance_payment_nor"];
             }else{
                 self.sortImageview.image = [UIImage imageNamed:@"icon_wechat_payment_nor"];
