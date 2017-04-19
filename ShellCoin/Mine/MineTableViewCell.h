@@ -52,6 +52,8 @@
 - (IBAction)setAction:(id)sender;
 @property (weak, nonatomic) IBOutlet UILabel *setLabel;
 
+- (IBAction)theLoanBtn:(UIButton *)sender;
+@property (weak, nonatomic) IBOutlet UILabel *loanLabel;
 
 - (IBAction)showYestodayEBtn:(id)sender;
 

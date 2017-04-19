@@ -20,6 +20,7 @@
 #import "RealnameViewController.h"
 #import "EditBankInfoViewController.h"
 #import "MessageListViewController.h"
+#import "LoanListViewController.h"
 
 
 @interface MineTableViewCell()
@@ -31,10 +32,9 @@
     [super awakeFromNib];
     // Initialization code
     self.contentView.backgroundColor = [UIColor colorFromHexString:@"#faf8f6"];
-    self.personCenterLabel.textColor = self.recommendLabel.textColor = self.billLabel.textColor = self.setLabel.textColor = self.integralLabel.textColor = self.proportionLabel.textColor= MacoTitleColor;
+    self.personCenterLabel.textColor = self.recommendLabel.textColor = self.billLabel.textColor = self.setLabel.textColor = self.integralLabel.textColor = self.proportionLabel.textColor= self.loanLabel.textColor = MacoTitleColor;
     self.showIntergralLabel.textColor = self.showProportionLabel.textColor = MacoColor;
 
-    
     self.totalMoneyLabel.adjustsFontSizeToFitWidth = self.showIntergralLabel.adjustsFontSizeToFitWidth = YES;
     self.showIntergralLabel.text = [NSString stringWithFormat:@"%.2f",[[ShellCoinUserInfo shareUserInfos].totalExpectAmount doubleValue] + [[ShellCoinUserInfo shareUserInfos].wiatJoinAmunt doubleValue]];
     self.showProportionLabel.text = [NSString stringWithFormat:@"%.2f",[[ShellCoinUserInfo shareUserInfos].totalConsumeAmount doubleValue]];
@@ -190,6 +190,12 @@
         _showYestodayView = [[YesTodayEarningsAlerView alloc]init];
     }
     return _showYestodayView;
+}
+
+#pragma mark - 贷款
+- (IBAction)theLoanBtn:(UIButton *)sender {
+    LoanListViewController *loanListVC = [[LoanListViewController alloc]init];
+    [self.viewController.navigationController pushViewController:loanListVC animated:YES];
 }
 
 - (IBAction)showYestodayEBtn:(id)sender {

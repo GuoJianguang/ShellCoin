@@ -119,6 +119,15 @@
 		BC4AAC381E4D8D51006568A6 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC4AAC371E4D8D51006568A6 /* MineViewController.m */; };
 		BC4AAC3C1E4D8F7B006568A6 /* MineTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC4AAC3A1E4D8F7B006568A6 /* MineTableViewCell.m */; };
 		BC4AAC3D1E4D8F7B006568A6 /* MineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC4AAC3B1E4D8F7B006568A6 /* MineTableViewCell.xib */; };
+		BC4C72E01EA7344B0048464A /* LoanListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC4C72DE1EA7344B0048464A /* LoanListViewController.m */; };
+		BC4C72E11EA7344B0048464A /* LoanListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC4C72DF1EA7344B0048464A /* LoanListViewController.xib */; };
+		BC4C72E51EA7377E0048464A /* AddLoanTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC4C72E31EA7377E0048464A /* AddLoanTableViewCell.m */; };
+		BC4C72E61EA7377E0048464A /* AddLoanTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC4C72E41EA7377E0048464A /* AddLoanTableViewCell.xib */; };
+		BC4C72E81EA737CF0048464A /* Loan.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC4C72E71EA737CF0048464A /* Loan.xcassets */; };
+		BC4C72EC1EA73B720048464A /* AddLoanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC4C72EA1EA73B720048464A /* AddLoanViewController.m */; };
+		BC4C72ED1EA73B720048464A /* AddLoanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC4C72EB1EA73B720048464A /* AddLoanViewController.xib */; };
+		BC4C72F11EA7407D0048464A /* LoanTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC4C72EF1EA7407D0048464A /* LoanTableViewCell.m */; };
+		BC4C72F21EA7407D0048464A /* LoanTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC4C72F01EA7407D0048464A /* LoanTableViewCell.xib */; };
 		BC4E252D1E80C41E005BE142 /* TalentRecommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC4E252B1E80C41E005BE142 /* TalentRecommentViewController.m */; };
 		BC4E252E1E80C41E005BE142 /* TalentRecommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC4E252C1E80C41E005BE142 /* TalentRecommentViewController.xib */; };
 		BC4E25321E80C50D005BE142 /* RecommentSpecialTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC4E25301E80C50D005BE142 /* RecommentSpecialTableViewCell.m */; };
@@ -487,6 +496,19 @@
 		BC4AAC391E4D8F7B006568A6 /* MineTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineTableViewCell.h; sourceTree = "<group>"; };
 		BC4AAC3A1E4D8F7B006568A6 /* MineTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineTableViewCell.m; sourceTree = "<group>"; };
 		BC4AAC3B1E4D8F7B006568A6 /* MineTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MineTableViewCell.xib; sourceTree = "<group>"; };
+		BC4C72DD1EA7344B0048464A /* LoanListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoanListViewController.h; sourceTree = "<group>"; };
+		BC4C72DE1EA7344B0048464A /* LoanListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoanListViewController.m; sourceTree = "<group>"; };
+		BC4C72DF1EA7344B0048464A /* LoanListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoanListViewController.xib; sourceTree = "<group>"; };
+		BC4C72E21EA7377E0048464A /* AddLoanTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddLoanTableViewCell.h; sourceTree = "<group>"; };
+		BC4C72E31EA7377E0048464A /* AddLoanTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddLoanTableViewCell.m; sourceTree = "<group>"; };
+		BC4C72E41EA7377E0048464A /* AddLoanTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddLoanTableViewCell.xib; sourceTree = "<group>"; };
+		BC4C72E71EA737CF0048464A /* Loan.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Loan.xcassets; sourceTree = "<group>"; };
+		BC4C72E91EA73B720048464A /* AddLoanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddLoanViewController.h; sourceTree = "<group>"; };
+		BC4C72EA1EA73B720048464A /* AddLoanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddLoanViewController.m; sourceTree = "<group>"; };
+		BC4C72EB1EA73B720048464A /* AddLoanViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddLoanViewController.xib; sourceTree = "<group>"; };
+		BC4C72EE1EA7407D0048464A /* LoanTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoanTableViewCell.h; sourceTree = "<group>"; };
+		BC4C72EF1EA7407D0048464A /* LoanTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoanTableViewCell.m; sourceTree = "<group>"; };
+		BC4C72F01EA7407D0048464A /* LoanTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoanTableViewCell.xib; sourceTree = "<group>"; };
 		BC4E252A1E80C41E005BE142 /* TalentRecommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TalentRecommentViewController.h; sourceTree = "<group>"; };
 		BC4E252B1E80C41E005BE142 /* TalentRecommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TalentRecommentViewController.m; sourceTree = "<group>"; };
 		BC4E252C1E80C41E005BE142 /* TalentRecommentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TalentRecommentViewController.xib; sourceTree = "<group>"; };
@@ -1091,6 +1113,7 @@
 		BC4AAC171E4D6E31006568A6 /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				BC4C72DC1EA733E40048464A /* TheLoan */,
 				BCD736F51E935000001F706C /* Message */,
 				BCFE20611E7798C4002BC28C /* trade-in */,
 				BC9B3DE81E7690D5003DC241 /* RecommendEarnings */,
@@ -1170,6 +1193,26 @@
 				BCB9A7C41E89F4B600F3E966 /* Public.xcassets */,
 			);
 			path = Public;
+			sourceTree = "<group>";
+		};
+		BC4C72DC1EA733E40048464A /* TheLoan */ = {
+			isa = PBXGroup;
+			children = (
+				BC4C72DD1EA7344B0048464A /* LoanListViewController.h */,
+				BC4C72DE1EA7344B0048464A /* LoanListViewController.m */,
+				BC4C72DF1EA7344B0048464A /* LoanListViewController.xib */,
+				BC4C72E21EA7377E0048464A /* AddLoanTableViewCell.h */,
+				BC4C72E31EA7377E0048464A /* AddLoanTableViewCell.m */,
+				BC4C72E41EA7377E0048464A /* AddLoanTableViewCell.xib */,
+				BC4C72E91EA73B720048464A /* AddLoanViewController.h */,
+				BC4C72EA1EA73B720048464A /* AddLoanViewController.m */,
+				BC4C72EB1EA73B720048464A /* AddLoanViewController.xib */,
+				BC4C72EE1EA7407D0048464A /* LoanTableViewCell.h */,
+				BC4C72EF1EA7407D0048464A /* LoanTableViewCell.m */,
+				BC4C72F01EA7407D0048464A /* LoanTableViewCell.xib */,
+				BC4C72E71EA737CF0048464A /* Loan.xcassets */,
+			);
+			path = TheLoan;
 			sourceTree = "<group>";
 		};
 		BC4E25291E80C3F8005BE142 /* TalentRecommendation */ = {
@@ -1701,6 +1744,7 @@
 				BC9B3DE71E76892C003DC241 /* MyQrCodeViewController.xib in Resources */,
 				BC34ECA71E8B88EC00613D35 /* AboutUSViewController.xib in Resources */,
 				BCFE20561E778CA9002BC28C /* SetPasswordViewController.xib in Resources */,
+				BC4C72E81EA737CF0048464A /* Loan.xcassets in Resources */,
 				BC4AAC3D1E4D8F7B006568A6 /* MineTableViewCell.xib in Resources */,
 				BC054D551E8A402E00062AC5 /* Bill12View.xib in Resources */,
 				BC41DAE81E91E8D7008FC9DC /* Home.xcassets in Resources */,
@@ -1724,7 +1768,9 @@
 				BC57B6FF1E7FBFEA006AF4D1 /* HomeBannerTableViewCell.xib in Resources */,
 				BC0A584A1E7299900077C8A9 /* BillTableViewCell.xib in Resources */,
 				BC5279411E8E7E4E004DD703 /* CodeScan.bundle in Resources */,
+				BC4C72E11EA7344B0048464A /* LoanListViewController.xib in Resources */,
 				BC77C66D1E7A316400DC9EAC /* UMSocialSDKResources.bundle in Resources */,
+				BC4C72ED1EA73B720048464A /* AddLoanViewController.xib in Resources */,
 				BCAC5D0B1E82587F003CACF8 /* BillIntegralDisciplineView.xib in Resources */,
 				BC4AABE81E4D69E2006568A6 /* Main.storyboard in Resources */,
 				BCFE208E1E77E206002BC28C /* RegisterOneViewController.xib in Resources */,
@@ -1743,6 +1789,7 @@
 				BCD737091E93544D001F706C /* MessageDetailTableViewCell.xib in Resources */,
 				BC36EA491E93B8600097F2F2 /* WithDrawalResultView.xib in Resources */,
 				BC9B3E0B1E769D44003DC241 /* SetPayPasswordViewController.xib in Resources */,
+				BC4C72E61EA7377E0048464A /* AddLoanTableViewCell.xib in Resources */,
 				BCC8E1A21E88FFB7004DBDA3 /* MerchantTableViewCell.xib in Resources */,
 				BCD736FF1E93502D001F706C /* MessageTableViewCell.xib in Resources */,
 				BC57B7201E7FD62A006AF4D1 /* HomeMerchantTableViewCell.xib in Resources */,
@@ -1750,6 +1797,7 @@
 				BC57B7141E7FCC7E006AF4D1 /* HighQualityCollectionViewCell.xib in Resources */,
 				BC34A1CC1E9256CA00C786C0 /* unicode_to_hanyu_pinyin.txt in Resources */,
 				BCFE20661E7798D6002BC28C /* TradInViewController.xib in Resources */,
+				BC4C72F21EA7407D0048464A /* LoanTableViewCell.xib in Resources */,
 				BC34ECAC1E8B891E00613D35 /* AboutsUsTableViewCell.xib in Resources */,
 				BC57B7041E7FC348006AF4D1 /* HomeIndustryTableViewCell.xib in Resources */,
 				BC9B3DC91E76837B003DC241 /* city.plist in Resources */,
@@ -1857,6 +1905,7 @@
 				BC57B70E1E7FC937006AF4D1 /* HomeRecommendedTableViewCell.m in Sources */,
 				BC34A1CE1E9256CA00C786C0 /* SelectAreaView.m in Sources */,
 				BC34A1C41E9256CA00C786C0 /* CityListViewController.m in Sources */,
+				BC4C72E01EA7344B0048464A /* LoanListViewController.m in Sources */,
 				BC34A1C31E9256CA00C786C0 /* CityItem.m in Sources */,
 				BC9B3DD61E7683B7003DC241 /* NoBankCardViewController.m in Sources */,
 				BC2E53251E9524FB00F7A99C /* UIScrollView+NoDataSouce.m in Sources */,
@@ -1885,6 +1934,7 @@
 				BCFE20971E77E329002BC28C /* ShellCoinUserInfo.m in Sources */,
 				BC9B3E011E7698CC003DC241 /* BanCardDetailTableViewCell.m in Sources */,
 				BC5279431E8E7E4E004DD703 /* UIAlertView+LBXAlertAction.m in Sources */,
+				BC4C72E51EA7377E0048464A /* AddLoanTableViewCell.m in Sources */,
 				BC4AAC2F1E4D6E7D006568A6 /* BaseViewController.m in Sources */,
 				BCC8E19C1E88FDCF004DBDA3 /* MerchantListViewController.m in Sources */,
 				BC9B3DCC1E76837B003DC241 /* EditBankInfoViewController.m in Sources */,
@@ -1905,6 +1955,7 @@
 				BC34A1BE1E9256CA00C786C0 /* AreaTableViewCell.m in Sources */,
 				BC9B3DE61E76892C003DC241 /* MyQrCodeViewController.m in Sources */,
 				BC4E25321E80C50D005BE142 /* RecommentSpecialTableViewCell.m in Sources */,
+				BC4C72EC1EA73B720048464A /* AddLoanViewController.m in Sources */,
 				BC054D541E8A402E00062AC5 /* Bill12View.m in Sources */,
 				BC4AABE21E4D69E2006568A6 /* AppDelegate.m in Sources */,
 				BC34ECA61E8B88EC00613D35 /* AboutUSViewController.m in Sources */,
@@ -1965,6 +2016,7 @@
 				BC054D4E1E8A3D2600062AC5 /* Bill1View.m in Sources */,
 				BC23C9E91E7933B700E90B43 /* LSPaoMaView.m in Sources */,
 				BC4E252D1E80C41E005BE142 /* TalentRecommentViewController.m in Sources */,
+				BC4C72F11EA7407D0048464A /* LoanTableViewCell.m in Sources */,
 				BC36EA471E93B8530097F2F2 /* WithDrawalResultView.m in Sources */,
 				BC34A1E91E92646700C786C0 /* LineDashPolyline.m in Sources */,
 				BC2E53191E94FC2C00F7A99C /* SCAdCollectionViewLayout.m in Sources */,

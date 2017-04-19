@@ -112,7 +112,7 @@
     [self.viewController.navigationController pushViewController:realnameVC animated:YES];
 }
 - (IBAction)bankBtn:(id)sender {
-    if ([self gotRealNameRu:@"在您申请抵换之前,请先进行实名认证"]){
+    if ([self gotRealNameRu:@"在您申请之前,请先进行实名认证"]){
         return;
     }
     

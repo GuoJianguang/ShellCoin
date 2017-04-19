@@ -19,7 +19,6 @@
     self.markLabel.textColor = MacoTitleColor;
     self.buyCardLabel.adjustsFontSizeToFitWidth = YES;
     self.moneyLabel.adjustsFontSizeToFitWidth = YES;
-    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -33,6 +32,7 @@
     self.markLabel.text = _xiaofeijiluModel.mchName;
     self.timeLabel.text = _xiaofeijiluModel.tranTime;
     self.buyCardLabel.text = @"";
+    self.buyCardWidth.constant = 0;
     NSString *statusStr = [NSString string];
     
     switch ([_xiaofeijiluModel.state integerValue]) {
@@ -67,7 +67,7 @@
             break;
         case 3://`pay_type`     '0余额支付 1微信支付
         {
-            
+            self.buyCardWidth.constant = 75;
             if ([_xiaofeijiluModel.payType isEqualToString:@"0"]) {
                 self.buyCardLabel.text = [NSString stringWithFormat:@"(含购物券%@)",_xiaofeijiluModel.consumeAmount];
 
@@ -80,7 +80,7 @@
         default:
             break;
     }
-    self.moneyLabel.text = [NSString stringWithFormat:@"¥%@",_xiaofeijiluModel.totalAmount];
+    self.moneyLabel.text = [NSString stringWithFormat:@"¥%.2f",[_xiaofeijiluModel.totalAmount doubleValue]];
     self.statusLabel.text = statusStr;
 }
 

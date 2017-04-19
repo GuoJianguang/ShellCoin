@@ -23,6 +23,7 @@
 @property (nonatomic, strong)BillDataModel *xiaofeijiluModel;
 
 @property (weak, nonatomic) IBOutlet UILabel *buyCardLabel;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *buyCardWidth;
 
 
 @end

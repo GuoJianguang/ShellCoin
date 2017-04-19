@@ -17,7 +17,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="712"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="711"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="711.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IsX-g9-WVR">
@@ -406,14 +406,14 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u4G-UX-TLe">
                         <rect key="frame" x="0.0" y="493.5" width="320" height="51"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_setting" translatesAutoresizingMaskIntoConstraints="NO" id="ekv-cQ-D66">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_loan" translatesAutoresizingMaskIntoConstraints="NO" id="ekv-cQ-D66">
                                 <rect key="frame" x="20" y="17" width="18" height="18"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_enter" translatesAutoresizingMaskIntoConstraints="NO" id="7F7-Eu-Os3">
                                 <rect key="frame" x="260" y="0.0" width="60" height="51"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="设置" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dNq-So-tZL">
-                                <rect key="frame" x="51" y="17" width="29" height="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="懒鱼贷款" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dNq-So-tZL">
+                                <rect key="frame" x="51" y="17" width="57.5" height="17"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -421,7 +421,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AcK-ai-NEc">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="50.5"/>
                                 <connections>
-                                    <action selector="setAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="CTO-Rf-T1R"/>
+                                    <action selector="theLoanBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="yai-xy-yHR"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -441,18 +441,59 @@
                             <constraint firstAttribute="width" secondItem="u4G-UX-TLe" secondAttribute="height" multiplier="750/120" id="koT-bY-q8P"/>
                         </constraints>
                     </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OaQ-Pd-bq3">
+                        <rect key="frame" x="0.0" y="554.5" width="320" height="51.5"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_setting" translatesAutoresizingMaskIntoConstraints="NO" id="dGd-kO-evp">
+                                <rect key="frame" x="20" y="17.5" width="18" height="18"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_enter" translatesAutoresizingMaskIntoConstraints="NO" id="Zau-jq-rJv">
+                                <rect key="frame" x="260" y="0.0" width="60" height="51.5"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="设置" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yG2-71-dmT">
+                                <rect key="frame" x="51" y="17.5" width="29" height="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aBD-AA-h8p">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="51"/>
+                                <connections>
+                                    <action selector="setAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="q14-n1-gj9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aBD-AA-h8p" firstAttribute="top" secondItem="OaQ-Pd-bq3" secondAttribute="top" id="2Xf-tU-PQY"/>
+                            <constraint firstAttribute="trailing" secondItem="Zau-jq-rJv" secondAttribute="trailing" id="36X-Dl-3Zf"/>
+                            <constraint firstAttribute="width" secondItem="OaQ-Pd-bq3" secondAttribute="height" multiplier="750/120" id="5ad-KW-WAo"/>
+                            <constraint firstItem="yG2-71-dmT" firstAttribute="centerY" secondItem="OaQ-Pd-bq3" secondAttribute="centerY" id="Ekf-aY-TpA"/>
+                            <constraint firstAttribute="bottom" secondItem="Zau-jq-rJv" secondAttribute="bottom" id="JoH-9S-D95"/>
+                            <constraint firstItem="Zau-jq-rJv" firstAttribute="top" secondItem="OaQ-Pd-bq3" secondAttribute="top" id="TBi-XU-TYC"/>
+                            <constraint firstAttribute="trailing" secondItem="aBD-AA-h8p" secondAttribute="trailing" id="VpW-Tb-Zfi"/>
+                            <constraint firstItem="dGd-kO-evp" firstAttribute="leading" secondItem="OaQ-Pd-bq3" secondAttribute="leading" constant="20" id="WBl-2y-7Uz"/>
+                            <constraint firstItem="yG2-71-dmT" firstAttribute="leading" secondItem="dGd-kO-evp" secondAttribute="trailing" constant="13" id="cFm-Ul-C0Q"/>
+                            <constraint firstItem="dGd-kO-evp" firstAttribute="centerY" secondItem="OaQ-Pd-bq3" secondAttribute="centerY" id="swz-06-y5A"/>
+                            <constraint firstItem="aBD-AA-h8p" firstAttribute="leading" secondItem="OaQ-Pd-bq3" secondAttribute="leading" id="tyZ-X4-Bvl"/>
+                            <constraint firstAttribute="bottom" secondItem="aBD-AA-h8p" secondAttribute="bottom" id="vko-Kk-ucs"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
+                    <constraint firstItem="OaQ-Pd-bq3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="3L0-va-LaH"/>
                     <constraint firstItem="u4G-UX-TLe" firstAttribute="top" secondItem="RKF-Fd-rH5" secondAttribute="bottom" constant="10" id="4lc-aF-8DH"/>
                     <constraint firstAttribute="trailing" secondItem="RKF-Fd-rH5" secondAttribute="trailing" id="5UU-V8-BQa"/>
                     <constraint firstItem="RKF-Fd-rH5" firstAttribute="top" secondItem="IsX-g9-WVR" secondAttribute="bottom" constant="10" id="62j-N1-Opx"/>
                     <constraint firstItem="IsX-g9-WVR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="8uX-ev-JpL"/>
+                    <constraint firstItem="OaQ-Pd-bq3" firstAttribute="top" secondItem="u4G-UX-TLe" secondAttribute="bottom" constant="10" id="TXN-iQ-Scq"/>
                     <constraint firstItem="IsX-g9-WVR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="XY4-wx-oIh"/>
                     <constraint firstItem="u4G-UX-TLe" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="XoC-6O-fyn"/>
                     <constraint firstAttribute="trailing" secondItem="u4G-UX-TLe" secondAttribute="trailing" id="bNa-zt-z8A"/>
                     <constraint firstAttribute="trailing" secondItem="IsX-g9-WVR" secondAttribute="trailing" id="cKp-Oi-1X3"/>
                     <constraint firstItem="RKF-Fd-rH5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="pnC-j4-e8y"/>
+                    <constraint firstAttribute="trailing" secondItem="OaQ-Pd-bq3" secondAttribute="trailing" id="zE4-u0-u04"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
@@ -460,13 +501,14 @@
                 <outlet property="helpBtn" destination="eYB-5i-9ur" id="WFS-XM-cgW"/>
                 <outlet property="imageViewHeight" destination="6Nq-5G-0J0" id="Gib-4d-VGx"/>
                 <outlet property="integralLabel" destination="TSg-Gj-tm8" id="gVh-eC-9Tg"/>
+                <outlet property="loanLabel" destination="dNq-So-tZL" id="Pmm-wp-g8R"/>
                 <outlet property="messageBtn" destination="q3N-gS-VIV" id="jRF-2C-jaw"/>
                 <outlet property="personCenterLabel" destination="mF0-8c-miv" id="eVg-92-gLu"/>
                 <outlet property="proportionLabel" destination="1r5-me-zOb" id="WnC-xl-TvA"/>
                 <outlet property="qrCodeBtn" destination="Qbr-8f-yJK" id="isc-bB-bgD"/>
                 <outlet property="recomendMark" destination="NQk-BJ-JYb" id="Ni7-aV-kfy"/>
                 <outlet property="recommendLabel" destination="9XH-Tc-Gvd" id="Ut3-cm-uKR"/>
-                <outlet property="setLabel" destination="dNq-So-tZL" id="jLC-RS-kmw"/>
+                <outlet property="setLabel" destination="yG2-71-dmT" id="im4-sd-gCa"/>
                 <outlet property="showIntergralLabel" destination="Wnk-P8-arX" id="vRl-i0-bbv"/>
                 <outlet property="showProPortionImageView" destination="Yjy-jJ-el1" id="Pfy-1d-fMS"/>
                 <outlet property="showProportionLabel" destination="F8L-Ma-lNH" id="JSA-Ro-GiE"/>
@@ -479,13 +521,14 @@
                 <outlet property="yestodayEarningsLabel" destination="3R2-hj-qC0" id="tYt-P9-Vds"/>
                 <outlet property="yestodyEarningsMoneyLabel" destination="FlV-8v-zOC" id="Ddh-Bo-vI9"/>
             </connections>
-            <point key="canvasLocation" x="-1019" y="-1051"/>
+            <point key="canvasLocation" x="-1113" y="-1111"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="icon_bill" width="18" height="18"/>
         <image name="icon_enter" width="60" height="60"/>
         <image name="icon_explain" width="44" height="44"/>
+        <image name="icon_loan" width="18" height="18"/>
         <image name="icon_new_remind" width="58" height="34"/>
         <image name="icon_news" width="44" height="44"/>
         <image name="icon_personal" width="18" height="18"/>
