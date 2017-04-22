@@ -31,6 +31,8 @@
     self.detailTextView.textColor = MacoTitleColor;
     [self.collectionBtn setTitleColor:MacoColor forState:UIControlStateNormal];
     [self detailRequest:self.mchCode];
+    
+    self.payBtn.hidden = ![ShellCoinUserInfo shareUserInfos].isShowPay;
 }
 
 - (EnterInputMoneyView *)payView

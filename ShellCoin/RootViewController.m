@@ -28,9 +28,26 @@ static NSString *waitReceive = @"waitReceive";//待收货
     // Do any additional setup after loading the view.
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(autoLogin) name:AutoLoginAfterGetDeviceToken object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(fanxian:) name:Upush_Notifi object:nil];
-
-
+    [self getPersonalRequest];
 }
+
+
+- (void)getPersonalRequest{
+    
+    [HttpClient POST:@"appVersion/hidden/get" parameters:nil success:^(NSURLSessionDataTask *operation, id jsonObject) {
+        if (IsRequestTrue) {
+            if ([NullToNumber(jsonObject[@"data"]) isEqualToString:@"0"]) {
+                [ShellCoinUserInfo shareUserInfos].isShowPay = YES;
+            }else{
+                [ShellCoinUserInfo shareUserInfos].isShowPay = NO;
+            }
+        }
+        
+    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
+        [ShellCoinUserInfo shareUserInfos].isShowPay = NO;
+    }];
+}
+
 
 - (void)notifica:(NSDictionary *)notifiInfo
 {

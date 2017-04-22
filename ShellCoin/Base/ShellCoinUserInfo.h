@@ -194,4 +194,8 @@
 //昨日收益购物券
 @property (nonatomic,copy)NSString *lastRebateConsumeBalance;
 
+
+
+@property (nonatomic, assign)BOOL isShowPay;
+
 @end

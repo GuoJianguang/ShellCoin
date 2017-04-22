@@ -33,7 +33,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C9f-4P-AWc">
                     <rect key="frame" x="0.0" y="800" width="521" height="114"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qra-Hy-OQg">
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qra-Hy-OQg">
                             <rect key="frame" x="189" y="12" width="307" height="90"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="Qra-Hy-OQg" secondAttribute="height" multiplier="99:29" id="MOj-E9-N1A"/>
@@ -67,13 +67,13 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PpS-Hp-xsQ">
-                    <rect key="frame" x="0.0" y="0.0" width="521" height="328.5"/>
+                    <rect key="frame" x="0.0" y="0.0" width="521" height="403"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="merchantHeaderImageView.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="0LF-bz-giV">
-                            <rect key="frame" x="0.0" y="0.0" width="521" height="306.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="521" height="381"/>
                         </imageView>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pic_white_shade" translatesAutoresizingMaskIntoConstraints="NO" id="Sjk-W9-WgR">
-                            <rect key="frame" x="0.0" y="269" width="521" height="37.5"/>
+                            <rect key="frame" x="0.0" y="343.5" width="521" height="37.5"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="Sjk-W9-WgR" secondAttribute="height" multiplier="750/54" id="1MF-uf-KYG"/>
                             </constraints>
@@ -92,7 +92,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="frK-ja-vrQ">
-                            <rect key="frame" x="418" y="250.5" width="78" height="78"/>
+                            <rect key="frame" x="418" y="325" width="78" height="78"/>
                             <state key="normal" image="btn_phone"/>
                             <connections>
                                 <action selector="phoneBtn:" destination="-1" eventType="touchUpInside" id="6jN-w9-9RZ"/>
@@ -104,7 +104,7 @@
                         <constraint firstItem="0LF-bz-giV" firstAttribute="leading" secondItem="PpS-Hp-xsQ" secondAttribute="leading" id="3Fk-gV-gD7"/>
                         <constraint firstAttribute="trailing" secondItem="0LF-bz-giV" secondAttribute="trailing" id="7qq-kn-Nng"/>
                         <constraint firstAttribute="bottom" secondItem="Sjk-W9-WgR" secondAttribute="bottom" constant="22" id="Bwb-Ag-boE"/>
-                        <constraint firstAttribute="width" secondItem="PpS-Hp-xsQ" secondAttribute="height" multiplier="375:236" id="CP6-am-CH4"/>
+                        <constraint firstAttribute="width" secondItem="PpS-Hp-xsQ" secondAttribute="height" multiplier="375:290" id="CP6-am-CH4"/>
                         <constraint firstAttribute="trailing" secondItem="TQb-ry-cwF" secondAttribute="trailing" id="IMB-nm-iFC"/>
                         <constraint firstItem="TQb-ry-cwF" firstAttribute="top" secondItem="PpS-Hp-xsQ" secondAttribute="top" id="KGa-Kv-ZHf"/>
                         <constraint firstAttribute="bottom" secondItem="frK-ja-vrQ" secondAttribute="bottom" id="Q2v-7I-7Ig"/>
@@ -119,13 +119,13 @@
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bGB-UH-1Zg">
-                    <rect key="frame" x="25" y="332.5" width="471" height="21"/>
+                    <rect key="frame" x="25" y="407" width="471" height="21"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ncK-12-DLC">
-                    <rect key="frame" x="0.0" y="353.5" width="521" height="83.5"/>
+                    <rect key="frame" x="0.0" y="428" width="521" height="83.5"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_location" translatesAutoresizingMaskIntoConstraints="NO" id="IxZ-Hy-Jgc">
                             <rect key="frame" x="16" y="26.5" width="30" height="30"/>
@@ -169,7 +169,7 @@
                     </constraints>
                 </view>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="--" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="DsV-EY-FPz">
-                    <rect key="frame" x="22" y="439" width="477" height="361"/>
+                    <rect key="frame" x="22" y="513.5" width="477" height="286.5"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
