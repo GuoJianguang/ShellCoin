@@ -161,7 +161,7 @@ if ([self valueValidated]) {
     }else if ([self.inputAmountTF.text integerValue] <100){
             [[JAlertViewHelper shareAlterHelper]showTint:@"您的抵换金额不能小于100" duration:1.5];
             return NO;
-        }
+    }
     
     
 //    else if (([self.inputAmountTF.text integerValue] <100 || [self.inputAmountTF.text integerValue] >1000) &&![[ShellCoinUserInfo shareUserInfos].grade isEqualToString:@"10"]){

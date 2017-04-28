@@ -43,7 +43,7 @@
     
     
     
-    UIColor *itemSelectTintColor = [UIColor redColor];
+    UIColor *itemSelectTintColor = MacoColor;
 //    [[UITabBarItem appearance] setTitleTextAttributes:
 //     [NSDictionary dictionaryWithObjectsAndKeys:
 //      itemSelectTintColor,
