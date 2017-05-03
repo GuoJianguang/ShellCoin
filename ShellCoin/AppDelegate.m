@@ -23,7 +23,6 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    NSLog(@"try");
     // Override point for customization after application launch.
     [self SetTheThirdParty:launchOptions];
     [ShellCoinUserInfo shareUserInfos].token = @"";
