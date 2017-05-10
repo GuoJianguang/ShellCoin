@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -66,14 +66,19 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pic_closed_account_blue" translatesAutoresizingMaskIntoConstraints="NO" id="N20-v7-MtG">
+                                <rect key="frame" x="308" y="0.0" width="79" height="75"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="YtC-bI-dJM" firstAttribute="top" secondItem="6QQ-Jo-g0W" secondAttribute="top" constant="30" id="0Iq-nj-J6b"/>
+                            <constraint firstAttribute="trailing" secondItem="N20-v7-MtG" secondAttribute="trailing" id="3ey-Wf-wAD"/>
                             <constraint firstAttribute="trailing" secondItem="24a-jk-6PB" secondAttribute="trailing" constant="25" id="74v-dV-Apl"/>
                             <constraint firstAttribute="trailing" secondItem="Nor-Zo-FxK" secondAttribute="trailing" id="9ie-gy-Dqd"/>
                             <constraint firstAttribute="bottom" secondItem="2vc-xw-OmO" secondAttribute="bottom" constant="35" id="Cb4-Io-qgR"/>
                             <constraint firstItem="YtC-bI-dJM" firstAttribute="leading" secondItem="6QQ-Jo-g0W" secondAttribute="leading" constant="25" id="D1v-rG-jcZ"/>
+                            <constraint firstItem="N20-v7-MtG" firstAttribute="top" secondItem="6QQ-Jo-g0W" secondAttribute="top" id="GV6-O9-PWl"/>
                             <constraint firstAttribute="trailing" secondItem="oqW-6o-j90" secondAttribute="trailing" constant="25" id="Jiv-pp-Q87"/>
                             <constraint firstItem="b8t-ZZ-PlL" firstAttribute="top" secondItem="6QQ-Jo-g0W" secondAttribute="top" constant="30" id="VJF-of-kwo"/>
                             <constraint firstItem="hN6-ss-7Kh" firstAttribute="leading" secondItem="6QQ-Jo-g0W" secondAttribute="leading" constant="25" id="Xb1-Q5-Pe0"/>
@@ -101,6 +106,7 @@
             <connections>
                 <outlet property="alerTimeLabel" destination="2vc-xw-OmO" id="9cK-Kr-hTd"/>
                 <outlet property="bgImageView" destination="Nor-Zo-FxK" id="bu1-d9-6ga"/>
+                <outlet property="isCompletImageView" destination="N20-v7-MtG" id="xOr-S1-3oC"/>
                 <outlet property="loanSortlabel" destination="YtC-bI-dJM" id="1u8-kp-TpC"/>
                 <outlet property="moneLabel" destination="b8t-ZZ-PlL" id="4kC-Mh-eKJ"/>
                 <outlet property="progerssView" destination="24a-jk-6PB" id="1Pn-sT-d7N"/>
@@ -108,10 +114,11 @@
                 <outlet property="symbollabel" destination="ydD-WA-41N" id="d7W-AX-zpc"/>
                 <outlet property="timeLabel" destination="hN6-ss-7Kh" id="4iL-oj-CQC"/>
             </connections>
-            <point key="canvasLocation" x="-122" y="139"/>
+            <point key="canvasLocation" x="-192" y="5"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="bg_loan_blue" width="375" height="153"/>
+        <image name="pic_closed_account_blue" width="79" height="75"/>
     </resources>
 </document>

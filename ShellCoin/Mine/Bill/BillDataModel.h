@@ -79,6 +79,7 @@
 
 #pragma mark - 抵换记录的model
 @interface TixianModel : BaseModel
+
 /**
  * 抵换单号
  */
