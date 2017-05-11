@@ -83,6 +83,8 @@
         [HttpClient POST:@"user/userLoan/add" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
             if (IsRequestTrue) {
                 [[JAlertViewHelper shareAlterHelper]showTint:@"提交申请成功" duration:2.];
+                
+                [self.navigationController popViewControllerAnimated:YES];
             }
             
         } failure:^(NSURLSessionDataTask *operation, NSError *error) {

@@ -65,4 +65,7 @@
 
 @property (nonatomic,strong)LoanModel *dataModel;
 
+
+
+
 @end

@@ -20,7 +20,7 @@
 #import "RealnameViewController.h"
 #import "EditBankInfoViewController.h"
 #import "MessageListViewController.h"
-#import "LoanListViewController.h"
+#import "LoanHomeViewController.h"
 
 
 @interface MineTableViewCell()
@@ -194,7 +194,7 @@
 
 #pragma mark - 贷款
 - (IBAction)theLoanBtn:(UIButton *)sender {
-    LoanListViewController *loanListVC = [[LoanListViewController alloc]init];
+    LoanHomeViewController *loanListVC = [[LoanHomeViewController alloc]init];
     [self.viewController.navigationController pushViewController:loanListVC animated:YES];
 }
 

@@ -70,7 +70,7 @@
                                 <rect key="frame" x="308" y="0.0" width="79" height="75"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="YtC-bI-dJM" firstAttribute="top" secondItem="6QQ-Jo-g0W" secondAttribute="top" constant="30" id="0Iq-nj-J6b"/>
                             <constraint firstAttribute="trailing" secondItem="N20-v7-MtG" secondAttribute="trailing" id="3ey-Wf-wAD"/>

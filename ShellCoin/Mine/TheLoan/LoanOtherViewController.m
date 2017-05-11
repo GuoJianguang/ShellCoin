@@ -1,59 +1,55 @@
 //
-//  LoanListViewController.m
+//  LoanOtherViewController.m
 //  ShellCoin
 //
-//  Created by Guo on 2017/4/19.
+//  Created by mac on 2017/5/11.
 //  Copyright © 2017年 Guo. All rights reserved.
 //
 
-#import "LoanListViewController.h"
-#import "AddLoanTableViewCell.h"
-#import "AddLoanViewController.h"
-#import "RealnameViewController.h"
+#import "LoanOtherViewController.h"
+#import "LoanOtherTableViewCell.h"
 #import "LoanTableViewCell.h"
 
-@interface LoanListViewController ()<BasenavigationDelegate,UITableViewDelegate,UITableViewDataSource>
+@interface LoanOtherViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, assign)NSInteger page;
 @property (nonatomic, strong)NSMutableArray *dataSouceArray;
-
-
 @end
 
-@implementation LoanListViewController
+@implementation LoanOtherViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.naviBar.title = @"懒鱼贷款";
-    self.naviBar.hiddenDetailBtn = NO;
-    self.naviBar.detailImage = [UIImage imageNamed:@"icon_explain"];
-    self.naviBar.delegate = self;
-    __weak LoanListViewController *weak_self = self;
+    __weak LoanOtherViewController *weak_self = self;
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         weak_self.page = 1;
-        [weak_self getRequest:YES];
+        [weak_self getRequest:YES withType:self.loanType];
     }];
     self.tableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
-        [weak_self getRequest:NO];
+        [weak_self getRequest:NO withType:self.loanType];
     }];
     [self.tableView noDataSouce];
     
     [self.tableView.mj_header beginRefreshing];
+
 }
 
-#pragma mark - 帮助
-- (void)detailBtnClick
+
+
+- (void)getRequest:(BOOL)isHeader withType:(Loan_type)type
 {
     
-}
-
-
-- (void)getRequest:(BOOL)isHeader
-{
+    NSString *urlStr = [NSString string];
+    if (type == Loan_type_audit) {
+        urlStr = @"user/userLoan/authing/get";
+    }else{
+       urlStr =@"user/userLoan/fail/get";
+    }
     NSDictionary *prams = @{@"pageNo":@(self.page),
                             @"pageSize":MacoRequestPageCount,
                             @"token":[ShellCoinUserInfo shareUserInfos].token};
-    [HttpClient POST:@"user/userLoan/get" parameters:prams success:^(NSURLSessionDataTask *operation, id jsonObject) {
+    [HttpClient POST:urlStr parameters:prams success:^(NSURLSessionDataTask *operation, id jsonObject) {
         if (IsRequestTrue) {
             if (isHeader) {
                 [self.dataSouceArray removeAllObjects];
@@ -63,7 +59,7 @@
                 self.page ++;
             }
             for (NSDictionary *dic in array) {
-                LoanModel *model = [LoanModel modelWithDic:dic];
+                LoanAuditOrFailModel *model = [LoanAuditOrFailModel modelWithDic:dic];
                 [self.dataSouceArray addObject:model];
             }
             [self.tableView judgeIsHaveDataSouce:self.dataSouceArray];
@@ -84,61 +80,67 @@
             
         }
     }];
-
+    
 }
 
+- (NSMutableArray *)dataSouceArray
+{
+    if (!_dataSouceArray) {
+        _dataSouceArray = [NSMutableArray array];
+    }
+    return _dataSouceArray;
+}
 #pragma mark - UITableView
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-        LoanTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[LoanTableViewCell indentify]];
-        if (!cell) {
-            cell = [LoanTableViewCell newCell];
-        }
+    LoanOtherTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[LoanOtherTableViewCell indentify]];
+    if (!cell) {
+        cell = [LoanOtherTableViewCell newCell];
+    }
+    if (self.loanType == Loan_type_audit) {
         if (indexPath.row%5 == 0) {
             cell.bgImageView.image = [UIImage imageNamed:@"bg_loan_orange"];
-            cell.isCompletImageView.image = [UIImage imageNamed:@"pic_closed_account_orange"];
         }
         if (indexPath.row%5 == 1) {
             cell.bgImageView.image = [UIImage imageNamed:@"bg_loan_purple"];
-            cell.isCompletImageView.image = [UIImage imageNamed:@"pic_closed_account_purple"];
-
+            
         }
         if (indexPath.row%5 == 2) {
             cell.bgImageView.image = [UIImage imageNamed:@"bg_loan_red"];
-            cell.isCompletImageView.image = [UIImage imageNamed:@"pic_closed_account_red"];
-
+            
         }
         if (indexPath.row%5 == 3) {
             cell.bgImageView.image = [UIImage imageNamed:@"bg_loan_blue"];
-            cell.isCompletImageView.image = [UIImage imageNamed:@"pic_closed_account_blue"];
-
+            
         }
         if (indexPath.row%5 == 4) {
             cell.bgImageView.image = [UIImage imageNamed:@"bg_loan_green"];
-            cell.isCompletImageView.image = [UIImage imageNamed:@"pic_closed_account_green"];
         }
-        return cell;
+        cell.statusLabel.text = @"申请中";
+        
+    }else{
+        cell.bgImageView.image = [UIImage imageNamed:@"bg_application_failed_list"];
+        cell.statusLabel.text = @"申请失败";
+
+
+    }
+    cell.backgroundColor = [UIColor clearColor];
+    cell.contentView.backgroundColor = [UIColor clearColor];
+    cell.dataModel = self.dataSouceArray[indexPath.row];
+    return cell;
 }
 
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-
-    return TWitdh*(330/750.);
+    
+    return TWitdh*(300/750.);
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return self.dataSouceArray.count ;
-}
-
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-
-
-
 }
 
 
