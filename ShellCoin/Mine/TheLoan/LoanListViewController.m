@@ -24,10 +24,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.naviBar.title = @"懒鱼贷款";
-    self.naviBar.hiddenDetailBtn = NO;
-    self.naviBar.detailImage = [UIImage imageNamed:@"icon_explain"];
-    self.naviBar.delegate = self;
+    self.naviBar.title = @"车房易购";
+
     __weak LoanListViewController *weak_self = self;
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         weak_self.page = 1;
@@ -47,6 +45,13 @@
     
 }
 
+- (NSMutableArray *)dataSouceArray
+{
+    if (!_dataSouceArray) {
+        _dataSouceArray = [NSMutableArray array];
+    }
+    return _dataSouceArray;
+}
 
 - (void)getRequest:(BOOL)isHeader
 {
@@ -95,28 +100,33 @@
         if (!cell) {
             cell = [LoanTableViewCell newCell];
         }
+        cell.dataModel = self.dataSouceArray[indexPath.row];
         if (indexPath.row%5 == 0) {
             cell.bgImageView.image = [UIImage imageNamed:@"bg_loan_orange"];
             cell.isCompletImageView.image = [UIImage imageNamed:@"pic_closed_account_orange"];
+            cell.proessColor = [UIColor colorFromHexString:@"#ffdcb6"];
         }
         if (indexPath.row%5 == 1) {
             cell.bgImageView.image = [UIImage imageNamed:@"bg_loan_purple"];
             cell.isCompletImageView.image = [UIImage imageNamed:@"pic_closed_account_purple"];
+            cell.proessColor = [UIColor colorFromHexString:@"#d1bdf2"];
 
         }
         if (indexPath.row%5 == 2) {
             cell.bgImageView.image = [UIImage imageNamed:@"bg_loan_red"];
             cell.isCompletImageView.image = [UIImage imageNamed:@"pic_closed_account_red"];
+            cell.proessColor = [UIColor colorFromHexString:@"#f5b8b8"];
 
         }
         if (indexPath.row%5 == 3) {
             cell.bgImageView.image = [UIImage imageNamed:@"bg_loan_blue"];
             cell.isCompletImageView.image = [UIImage imageNamed:@"pic_closed_account_blue"];
-
+            cell.proessColor = [UIColor colorFromHexString:@"#d7b5f3"];
         }
         if (indexPath.row%5 == 4) {
             cell.bgImageView.image = [UIImage imageNamed:@"bg_loan_green"];
             cell.isCompletImageView.image = [UIImage imageNamed:@"pic_closed_account_green"];
+            cell.proessColor = [UIColor colorFromHexString:@"#caf8e2"];
         }
         return cell;
 }

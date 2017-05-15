@@ -35,7 +35,7 @@
  * 已经消费的金额
  */
 
-@property (nonatomic,copy)NSString *consumeAmunt;
+@property (nonatomic,copy)NSString *consumeAmount;
 /**
  * 0没达到月供金额 1已经达到月供金额
  */
@@ -66,6 +66,7 @@
 @property (nonatomic,strong)LoanModel *dataModel;
 
 
+@property (nonatomic, strong)UIColor *proessColor;
 
 
 @end

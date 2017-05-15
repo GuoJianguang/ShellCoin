@@ -11,8 +11,9 @@
 #import "LoanListViewController.h"
 #import "RealnameViewController.h"
 #import "LoanOtherViewController.h"
+#import "LoanHelpViewController.h"
 
-@interface LoanHomeViewController ()
+@interface LoanHomeViewController ()<BasenavigationDelegate>
 
 @end
 
@@ -21,7 +22,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.naviBar.title = @"懒鱼贷款";
+    self.naviBar.title = @"车房易购";
+    
+    self.naviBar.hiddenDetailBtn = NO;
+    self.naviBar.detailImage = [UIImage imageNamed:@"icon_explain"];
+    self.naviBar.delegate = self;
+}
+
+#pragma mark - 解释
+- (void)detailBtnClick
+{
+    LoanHelpViewController *helpVC = [[LoanHelpViewController alloc]init];
+    [self.navigationController pushViewController:helpVC animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -13,6 +13,8 @@
 		042C704B1EC464550035A912 /* LoanOtherTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042C70491EC464550035A912 /* LoanOtherTableViewCell.xib */; };
 		042C704F1EC465C60035A912 /* LoanOtherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042C704D1EC465C60035A912 /* LoanOtherViewController.m */; };
 		042C70501EC465C60035A912 /* LoanOtherViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042C704E1EC465C60035A912 /* LoanOtherViewController.xib */; };
+		047ABABC1EC9825B00A5DDB1 /* LoanHelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 047ABABA1EC9825B00A5DDB1 /* LoanHelpViewController.m */; };
+		047ABABD1EC9825B00A5DDB1 /* LoanHelpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 047ABABB1EC9825B00A5DDB1 /* LoanHelpViewController.xib */; };
 		2FF6447AE4B485C166C57676 /* libPods-ShellCoin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BEFB67E1918B5BA80284D66F /* libPods-ShellCoin.a */; };
 		BC054D421E8A039600062AC5 /* EnterInputMoneyView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC054D411E8A039600062AC5 /* EnterInputMoneyView.m */; };
 		BC054D441E8A03A200062AC5 /* EnterInputMoneyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC054D431E8A03A200062AC5 /* EnterInputMoneyView.xib */; };
@@ -320,6 +322,9 @@
 		042C704C1EC465C60035A912 /* LoanOtherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoanOtherViewController.h; sourceTree = "<group>"; };
 		042C704D1EC465C60035A912 /* LoanOtherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoanOtherViewController.m; sourceTree = "<group>"; };
 		042C704E1EC465C60035A912 /* LoanOtherViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoanOtherViewController.xib; sourceTree = "<group>"; };
+		047ABAB91EC9825A00A5DDB1 /* LoanHelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoanHelpViewController.h; sourceTree = "<group>"; };
+		047ABABA1EC9825B00A5DDB1 /* LoanHelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoanHelpViewController.m; sourceTree = "<group>"; };
+		047ABABB1EC9825B00A5DDB1 /* LoanHelpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoanHelpViewController.xib; sourceTree = "<group>"; };
 		5674F83A9666780E4483DE0A /* Pods-ShellCoin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShellCoin.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShellCoin/Pods-ShellCoin.release.xcconfig"; sourceTree = "<group>"; };
 		BC054D401E8A039600062AC5 /* EnterInputMoneyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnterInputMoneyView.h; sourceTree = "<group>"; };
 		BC054D411E8A039600062AC5 /* EnterInputMoneyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnterInputMoneyView.m; sourceTree = "<group>"; };
@@ -1234,6 +1239,9 @@
 				042C70471EC464550035A912 /* LoanOtherTableViewCell.h */,
 				042C70481EC464550035A912 /* LoanOtherTableViewCell.m */,
 				042C70491EC464550035A912 /* LoanOtherTableViewCell.xib */,
+				047ABAB91EC9825A00A5DDB1 /* LoanHelpViewController.h */,
+				047ABABA1EC9825B00A5DDB1 /* LoanHelpViewController.m */,
+				047ABABB1EC9825B00A5DDB1 /* LoanHelpViewController.xib */,
 				BC4C72E71EA737CF0048464A /* Loan.xcassets */,
 			);
 			path = TheLoan;
@@ -1764,6 +1772,7 @@
 				BC4AABF01E4D69E2006568A6 /* LaunchScreen.storyboard in Resources */,
 				BC9B3DCD1E76837B003DC241 /* EditBankInfoViewController.xib in Resources */,
 				BC36EA4E1E93BF1A0097F2F2 /* OnlinePayResultView.xib in Resources */,
+				047ABABD1EC9825B00A5DDB1 /* LoanHelpViewController.xib in Resources */,
 				BC9B3E021E7698CC003DC241 /* BanCardDetailTableViewCell.xib in Resources */,
 				BC4AABED1E4D69E2006568A6 /* Assets.xcassets in Resources */,
 				BC9B3DE71E76892C003DC241 /* MyQrCodeViewController.xib in Resources */,
@@ -1981,6 +1990,7 @@
 				BC2E53261E9524FB00F7A99C /* NothingView.m in Sources */,
 				BCD7370C1E9354A0001F706C /* UILabel+StringFrame.m in Sources */,
 				BCFE205A1E778F45002BC28C /* ChangeLoginPasswordViewController.m in Sources */,
+				047ABABC1EC9825B00A5DDB1 /* LoanHelpViewController.m in Sources */,
 				BC34A1BE1E9256CA00C786C0 /* AreaTableViewCell.m in Sources */,
 				BC9B3DE61E76892C003DC241 /* MyQrCodeViewController.m in Sources */,
 				BC4E25321E80C50D005BE142 /* RecommentSpecialTableViewCell.m in Sources */,

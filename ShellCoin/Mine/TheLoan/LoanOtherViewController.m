@@ -20,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.naviBar.title = @"懒鱼贷款";
+    self.naviBar.title = @"车房易购";
     __weak LoanOtherViewController *weak_self = self;
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         weak_self.page = 1;
@@ -117,7 +117,7 @@
         if (indexPath.row%5 == 4) {
             cell.bgImageView.image = [UIImage imageNamed:@"bg_loan_green"];
         }
-        cell.statusLabel.text = @"申请中";
+        cell.statusLabel.text = @"审核中";
         
     }else{
         cell.bgImageView.image = [UIImage imageNamed:@"bg_application_failed_list"];

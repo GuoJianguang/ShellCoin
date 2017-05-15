@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -89,28 +89,33 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L07-R9-uxK">
                     <rect key="frame" x="12" y="243" width="351" height="69.5"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="意向贷款类别" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfv-eQ-gCy">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="意向购买类别" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfv-eQ-gCy">
                             <rect key="frame" x="8" y="8" width="74" height="15"/>
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请选择您的意向贷款类别" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4cw-Ue-BAj">
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请选择您的意向购买类别" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4cw-Ue-BAj">
                             <rect key="frame" x="8" y="23" width="335" height="46.5"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_pull_down" translatesAutoresizingMaskIntoConstraints="NO" id="Whe-bM-mD5">
+                            <rect key="frame" x="316" y="29" width="35" height="35"/>
+                        </imageView>
                     </subviews>
                     <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstItem="gfv-eQ-gCy" firstAttribute="leading" secondItem="L07-R9-uxK" secondAttribute="leading" constant="8" id="0Sj-yv-8Xk"/>
+                        <constraint firstAttribute="trailing" secondItem="Whe-bM-mD5" secondAttribute="trailing" id="EFL-cc-NkT"/>
                         <constraint firstAttribute="trailing" secondItem="4cw-Ue-BAj" secondAttribute="trailing" constant="8" id="LJ6-sO-OFI"/>
                         <constraint firstItem="gfv-eQ-gCy" firstAttribute="top" secondItem="L07-R9-uxK" secondAttribute="top" constant="8" id="Oag-Ai-Dwa"/>
                         <constraint firstItem="4cw-Ue-BAj" firstAttribute="top" secondItem="gfv-eQ-gCy" secondAttribute="bottom" id="SrD-TC-aBU"/>
                         <constraint firstAttribute="bottom" secondItem="4cw-Ue-BAj" secondAttribute="bottom" id="ez8-CG-p8H"/>
                         <constraint firstItem="4cw-Ue-BAj" firstAttribute="leading" secondItem="L07-R9-uxK" secondAttribute="leading" constant="8" id="gVm-c8-RNF"/>
                         <constraint firstAttribute="width" secondItem="L07-R9-uxK" secondAttribute="height" multiplier="278/55" id="hlk-Jg-Yzw"/>
+                        <constraint firstItem="Whe-bM-mD5" firstAttribute="centerY" secondItem="4cw-Ue-BAj" secondAttribute="centerY" id="twE-hV-OKW"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jhj-cc-sOw">
@@ -168,10 +173,11 @@
                 <constraint firstItem="GWx-Cr-VVU" firstAttribute="top" secondItem="gaO-zK-h63" secondAttribute="bottom" constant="10" id="ygD-Jq-Zkf"/>
                 <constraint firstItem="L07-R9-uxK" firstAttribute="top" secondItem="GWx-Cr-VVU" secondAttribute="bottom" constant="10" id="zh6-Sz-1ga"/>
             </constraints>
-            <point key="canvasLocation" x="316" y="-41"/>
+            <point key="canvasLocation" x="315.5" y="-41.5"/>
         </view>
     </objects>
     <resources>
         <image name="btn_nor" width="198" height="59"/>
+        <image name="icon_pull_down" width="35" height="35"/>
     </resources>
 </document>

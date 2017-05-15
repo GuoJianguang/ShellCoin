@@ -15,7 +15,7 @@
     LoanAuditOrFailModel *model = [[LoanAuditOrFailModel alloc]init];
     model.loanId = NullToSpace(dic[@"id"]);
     model.createTime = NullToSpace(dic[@"createTime"]);
-    model.type = NullToNumber(dic[@"createTime"]);
+    model.type = NullToNumber(dic[@"type"]);
 
     return model;
 }
@@ -41,19 +41,19 @@
     _dataModel = dataModel;
     switch ([_dataModel.type integerValue]) {
         case 1:
-            self.sortLabel.text = @"购房贷款";
+            self.sortLabel.text = @"购房";
             break;
         case 2:
-            self.sortLabel.text = @"购车贷款";
+            self.sortLabel.text = @"购车";
             break;
         case 3:
-            self.sortLabel.text = @"其他贷款";
+            self.sortLabel.text = @"其他";
             break;
             
         default:
             break;
     }
-    
+
     self.timeLabel.text = [NSString stringWithFormat:@"申请时间：%@",_dataModel.createTime];
 }
 
