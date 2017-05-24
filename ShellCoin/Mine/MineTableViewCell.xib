@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -181,8 +181,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NeO-4w-0SL">
                                 <rect key="frame" x="160.5" y="260" width="159.5" height="60.5"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_right" translatesAutoresizingMaskIntoConstraints="NO" id="Yjy-jJ-el1">
-                                        <rect key="frame" x="129.5" y="22" width="10" height="18"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_enter" translatesAutoresizingMaskIntoConstraints="NO" id="Yjy-jJ-el1">
+                                        <rect key="frame" x="79.5" y="1" width="60" height="60"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="总消费金额" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1r5-me-zOb">
                                         <rect key="frame" x="49.5" y="6" width="61.5" height="14.5"/>
@@ -404,22 +404,22 @@
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OaQ-Pd-bq3">
-                        <rect key="frame" x="0.0" y="493.5" width="320" height="51"/>
+                        <rect key="frame" x="0.0" y="554.5" width="320" height="51.5"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_setting" translatesAutoresizingMaskIntoConstraints="NO" id="dGd-kO-evp">
-                                <rect key="frame" x="20" y="16.5" width="18" height="18"/>
+                                <rect key="frame" x="20" y="17" width="18" height="18"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_enter" translatesAutoresizingMaskIntoConstraints="NO" id="Zau-jq-rJv">
-                                <rect key="frame" x="260" y="0.0" width="60" height="51"/>
+                                <rect key="frame" x="260" y="0.0" width="60" height="51.5"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="设置" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yG2-71-dmT">
-                                <rect key="frame" x="51" y="17.5" width="29" height="17"/>
+                                <rect key="frame" x="51" y="18" width="29" height="17"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aBD-AA-h8p">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="50.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="51"/>
                                 <connections>
                                     <action selector="setAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="q14-n1-gj9"/>
                                 </connections>
@@ -442,13 +442,13 @@
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u4G-UX-TLe">
-                        <rect key="frame" x="0.0" y="554.5" width="320" height="51.5"/>
+                        <rect key="frame" x="0.0" y="493.5" width="320" height="51"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_loan" translatesAutoresizingMaskIntoConstraints="NO" id="ekv-cQ-D66">
-                                <rect key="frame" x="20" y="17.5" width="18" height="18"/>
+                                <rect key="frame" x="20" y="16.5" width="18" height="18"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_enter" translatesAutoresizingMaskIntoConstraints="NO" id="7F7-Eu-Os3">
-                                <rect key="frame" x="260" y="0.0" width="60" height="51.5"/>
+                                <rect key="frame" x="260" y="0.0" width="60" height="51"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="车房易购" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dNq-So-tZL">
                                 <rect key="frame" x="51" y="17.5" width="57.5" height="17"/>
@@ -457,7 +457,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AcK-ai-NEc">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="51"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="50.5"/>
                                 <connections>
                                     <action selector="theLoanBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="yai-xy-yHR"/>
                                 </connections>
@@ -486,13 +486,13 @@
                     <constraint firstAttribute="trailing" secondItem="RKF-Fd-rH5" secondAttribute="trailing" id="5UU-V8-BQa"/>
                     <constraint firstItem="RKF-Fd-rH5" firstAttribute="top" secondItem="IsX-g9-WVR" secondAttribute="bottom" constant="10" id="62j-N1-Opx"/>
                     <constraint firstItem="IsX-g9-WVR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="8uX-ev-JpL"/>
-                    <constraint firstItem="u4G-UX-TLe" firstAttribute="top" secondItem="OaQ-Pd-bq3" secondAttribute="bottom" constant="10" id="Jez-2H-gYI"/>
+                    <constraint firstItem="u4G-UX-TLe" firstAttribute="top" secondItem="RKF-Fd-rH5" secondAttribute="bottom" constant="10" id="OKK-iJ-fOT"/>
                     <constraint firstItem="IsX-g9-WVR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="XY4-wx-oIh"/>
                     <constraint firstItem="u4G-UX-TLe" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="XoC-6O-fyn"/>
+                    <constraint firstItem="OaQ-Pd-bq3" firstAttribute="top" secondItem="u4G-UX-TLe" secondAttribute="bottom" constant="10" id="YQG-XP-Vvq"/>
                     <constraint firstAttribute="trailing" secondItem="u4G-UX-TLe" secondAttribute="trailing" id="bNa-zt-z8A"/>
                     <constraint firstAttribute="trailing" secondItem="IsX-g9-WVR" secondAttribute="trailing" id="cKp-Oi-1X3"/>
                     <constraint firstItem="RKF-Fd-rH5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="pnC-j4-e8y"/>
-                    <constraint firstItem="OaQ-Pd-bq3" firstAttribute="top" secondItem="RKF-Fd-rH5" secondAttribute="bottom" constant="10" id="xuE-sJ-Ubc"/>
                     <constraint firstAttribute="trailing" secondItem="OaQ-Pd-bq3" secondAttribute="trailing" id="zE4-u0-u04"/>
                 </constraints>
             </tableViewCellContentView>
@@ -533,7 +533,6 @@
         <image name="icon_news" width="44" height="44"/>
         <image name="icon_personal" width="18" height="18"/>
         <image name="icon_recommended_earnings" width="18" height="18"/>
-        <image name="icon_right" width="10" height="18"/>
         <image name="icon_scan" width="44" height="44"/>
         <image name="icon_setting" width="18" height="18"/>
         <image name="icon_withdraw2" width="78" height="78"/>

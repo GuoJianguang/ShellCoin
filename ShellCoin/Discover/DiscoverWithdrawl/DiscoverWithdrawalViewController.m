@@ -6,19 +6,20 @@
 //  Copyright © 2017年 Guo. All rights reserved.
 //
 
-#import "WithdrawalViewController.h"
+#import "DiscoverWithdrawalViewController.h"
 #import "SelectBanCardView.h"
 #import "SureTradInView.h"
 #import "SetPayPasswordViewController.h"
+#import "WithDrawalRecodViewController.h"
 #import <LocalAuthentication/LocalAuthentication.h>
 
-@interface WithdrawalViewController ()<UITextFieldDelegate,PayViewDelegate>
+@interface DiscoverWithdrawalViewController ()<UITextFieldDelegate,PayViewDelegate>
 @property (nonatomic, strong)SelectBanCardView *selectBancardView;
 @property (nonatomic, strong)SureTradInView *passwordView;
 
 @end
 
-@implementation WithdrawalViewController
+@implementation DiscoverWithdrawalViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -334,4 +335,9 @@ if ([self valueValidated]) {
     }];
 }
 
+#pragma mark - 体现记录
+- (IBAction)withdrawalRecodBtn:(UIButton *)sender {
+    WithDrawalRecodViewController *withDrawalVC = [[WithDrawalRecodViewController alloc]init];
+    [self.navigationController pushViewController:withDrawalVC animated:YES];
+}
 @end

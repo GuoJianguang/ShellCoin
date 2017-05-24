@@ -17,6 +17,7 @@
 #import "RecommentModel.h"
 #import "MerchantSearchViewController.h"
 #import "ForyouCollectionViewCell.h"
+#import "DiscoverRootViewController.h"
 
 @interface HomeViewController ()<UITabBarControllerDelegate,UITableViewDelegate,UITableViewDataSource,CityListViewDelegate>
 @property (nonatomic, strong)NSMutableArray *privteDataSouceArray;
@@ -235,6 +236,13 @@
 - (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController
 {
     if([viewController isMemberOfClass:[MineViewController class]]){
+        if (![ShellCoinUserInfo shareUserInfos].currentLogined) {
+            //判断是否先登录
+            UINavigationController *navc = [LoginViewController controller];
+            [self presentViewController:navc animated:YES completion:NULL];
+            return NO;
+        }
+    }else if ([viewController isMemberOfClass:[DiscoverRootViewController class]]){
         if (![ShellCoinUserInfo shareUserInfos].currentLogined) {
             //判断是否先登录
             UINavigationController *navc = [LoginViewController controller];

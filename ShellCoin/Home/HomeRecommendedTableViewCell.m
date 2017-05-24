@@ -23,6 +23,8 @@
     model.pic = NullToSpace(dic[@"pic"]);
     return model;
 }
+
+
 @end
 
 

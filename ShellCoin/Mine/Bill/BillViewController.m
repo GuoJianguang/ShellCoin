@@ -107,7 +107,7 @@
 #pragma mark - SortViewDelegate
 - (void)sortBtnDselect:(SortButtonSwitchView *)sortView withSortId:(NSString *)sortId
 {
-    [self.swipeView scrollToPage:[sortId integerValue] -1 duration:0.5];
+    [self.swipeView scrollToPage:[sortId integerValue] -1 duration:0];
 
 }
 

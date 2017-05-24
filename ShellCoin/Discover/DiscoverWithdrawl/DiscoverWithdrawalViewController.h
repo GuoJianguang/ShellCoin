@@ -11,7 +11,7 @@
 #import "WithDrawalResultView.h"
 
 
-@interface WithdrawalViewController : BaseViewController
+@interface DiscoverWithdrawalViewController : BaseViewController
 
 @property (weak, nonatomic) IBOutlet UIButton *backBtn;
 
@@ -44,5 +44,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *bankCardIcon;
 
 - (void)withDrawalSuccess;
+@property (weak, nonatomic) IBOutlet UIButton *withdrawalRecodBtn;
+- (IBAction)withdrawalRecodBtn:(UIButton *)sender;
 
 @end

@@ -13,8 +13,32 @@
 		042C704B1EC464550035A912 /* LoanOtherTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042C70491EC464550035A912 /* LoanOtherTableViewCell.xib */; };
 		042C704F1EC465C60035A912 /* LoanOtherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042C704D1EC465C60035A912 /* LoanOtherViewController.m */; };
 		042C70501EC465C60035A912 /* LoanOtherViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042C704E1EC465C60035A912 /* LoanOtherViewController.xib */; };
+		0445BAB71ED52198009226BD /* discover.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0445BAB61ED52198009226BD /* discover.xcassets */; };
+		0445BABA1ED522AE009226BD /* DiscoverRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0445BAB91ED522AE009226BD /* DiscoverRootViewController.m */; };
+		0445BABE1ED52C08009226BD /* DiscoverRootTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0445BABC1ED52C08009226BD /* DiscoverRootTableViewCell.m */; };
+		0445BABF1ED52C08009226BD /* DiscoverRootTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0445BABD1ED52C08009226BD /* DiscoverRootTableViewCell.xib */; };
+		0445BAC31ED55A85009226BD /* DiscoverCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0445BAC11ED55A85009226BD /* DiscoverCollectionViewCell.m */; };
+		0445BAC41ED55A85009226BD /* DiscoverCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0445BAC21ED55A85009226BD /* DiscoverCollectionViewCell.xib */; };
+		0445BAC91ED56151009226BD /* DiscoverWithdrawalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0445BAC71ED56151009226BD /* DiscoverWithdrawalViewController.m */; };
+		0445BACA1ED56151009226BD /* DiscoverWithdrawalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0445BAC81ED56151009226BD /* DiscoverWithdrawalViewController.xib */; };
+		0445BACE1ED56462009226BD /* WithDrawalRecodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0445BACC1ED56462009226BD /* WithDrawalRecodViewController.m */; };
+		0445BACF1ED56462009226BD /* WithDrawalRecodViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0445BACD1ED56462009226BD /* WithDrawalRecodViewController.xib */; };
+		0445BAD31ED565D6009226BD /* WithDrawalRecodTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0445BAD11ED565D6009226BD /* WithDrawalRecodTableViewCell.m */; };
+		0445BAD41ED565D6009226BD /* WithDrawalRecodTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0445BAD21ED565D6009226BD /* WithDrawalRecodTableViewCell.xib */; };
+		0445BAD91ED56A62009226BD /* BuyRecodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0445BAD71ED56A62009226BD /* BuyRecodViewController.m */; };
+		0445BADA1ED56A62009226BD /* BuyRecodViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0445BAD81ED56A62009226BD /* BuyRecodViewController.xib */; };
+		0445BADE1ED56AAE009226BD /* BuyRecodTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0445BADC1ED56AAE009226BD /* BuyRecodTableViewCell.m */; };
+		0445BADF1ED56AAE009226BD /* BuyRecodTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0445BADD1ED56AAE009226BD /* BuyRecodTableViewCell.xib */; };
+		046DAF9F1ED57B0100E26C2C /* MyRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 046DAF9D1ED57B0100E26C2C /* MyRecommendViewController.m */; };
+		046DAFA01ED57B0100E26C2C /* MyRecommendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 046DAF9E1ED57B0100E26C2C /* MyRecommendViewController.xib */; };
+		046DAFA41ED57E0700E26C2C /* DiscoverRecommendTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 046DAFA21ED57E0700E26C2C /* DiscoverRecommendTableViewCell.m */; };
+		046DAFA51ED57E0700E26C2C /* DiscoverRecommendTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 046DAFA31ED57E0700E26C2C /* DiscoverRecommendTableViewCell.xib */; };
 		047ABABC1EC9825B00A5DDB1 /* LoanHelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 047ABABA1EC9825B00A5DDB1 /* LoanHelpViewController.m */; };
 		047ABABD1EC9825B00A5DDB1 /* LoanHelpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 047ABABB1EC9825B00A5DDB1 /* LoanHelpViewController.xib */; };
+		04D981B61ED56F34005A617A /* DiscovergoodsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D981B41ED56F34005A617A /* DiscovergoodsDetailViewController.m */; };
+		04D981B71ED56F34005A617A /* DiscovergoodsDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04D981B51ED56F34005A617A /* DiscovergoodsDetailViewController.xib */; };
+		04D981BB1ED574CB005A617A /* SelectGoodsNumberView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D981B91ED574CB005A617A /* SelectGoodsNumberView.m */; };
+		04D981BC1ED574CB005A617A /* SelectGoodsNumberView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04D981BA1ED574CB005A617A /* SelectGoodsNumberView.xib */; };
 		2FF6447AE4B485C166C57676 /* libPods-ShellCoin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BEFB67E1918B5BA80284D66F /* libPods-ShellCoin.a */; };
 		BC054D421E8A039600062AC5 /* EnterInputMoneyView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC054D411E8A039600062AC5 /* EnterInputMoneyView.m */; };
 		BC054D441E8A03A200062AC5 /* EnterInputMoneyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC054D431E8A03A200062AC5 /* EnterInputMoneyView.xib */; };
@@ -322,9 +346,45 @@
 		042C704C1EC465C60035A912 /* LoanOtherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoanOtherViewController.h; sourceTree = "<group>"; };
 		042C704D1EC465C60035A912 /* LoanOtherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoanOtherViewController.m; sourceTree = "<group>"; };
 		042C704E1EC465C60035A912 /* LoanOtherViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoanOtherViewController.xib; sourceTree = "<group>"; };
+		0445BAB61ED52198009226BD /* discover.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = discover.xcassets; sourceTree = "<group>"; };
+		0445BAB81ED522AE009226BD /* DiscoverRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverRootViewController.h; sourceTree = "<group>"; };
+		0445BAB91ED522AE009226BD /* DiscoverRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverRootViewController.m; sourceTree = "<group>"; };
+		0445BABB1ED52C08009226BD /* DiscoverRootTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverRootTableViewCell.h; sourceTree = "<group>"; };
+		0445BABC1ED52C08009226BD /* DiscoverRootTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverRootTableViewCell.m; sourceTree = "<group>"; };
+		0445BABD1ED52C08009226BD /* DiscoverRootTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiscoverRootTableViewCell.xib; sourceTree = "<group>"; };
+		0445BAC01ED55A85009226BD /* DiscoverCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverCollectionViewCell.h; sourceTree = "<group>"; };
+		0445BAC11ED55A85009226BD /* DiscoverCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverCollectionViewCell.m; sourceTree = "<group>"; };
+		0445BAC21ED55A85009226BD /* DiscoverCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiscoverCollectionViewCell.xib; sourceTree = "<group>"; };
+		0445BAC61ED56151009226BD /* DiscoverWithdrawalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverWithdrawalViewController.h; sourceTree = "<group>"; };
+		0445BAC71ED56151009226BD /* DiscoverWithdrawalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverWithdrawalViewController.m; sourceTree = "<group>"; };
+		0445BAC81ED56151009226BD /* DiscoverWithdrawalViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiscoverWithdrawalViewController.xib; sourceTree = "<group>"; };
+		0445BACB1ED56462009226BD /* WithDrawalRecodViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WithDrawalRecodViewController.h; sourceTree = "<group>"; };
+		0445BACC1ED56462009226BD /* WithDrawalRecodViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WithDrawalRecodViewController.m; sourceTree = "<group>"; };
+		0445BACD1ED56462009226BD /* WithDrawalRecodViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WithDrawalRecodViewController.xib; sourceTree = "<group>"; };
+		0445BAD01ED565D6009226BD /* WithDrawalRecodTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WithDrawalRecodTableViewCell.h; sourceTree = "<group>"; };
+		0445BAD11ED565D6009226BD /* WithDrawalRecodTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WithDrawalRecodTableViewCell.m; sourceTree = "<group>"; };
+		0445BAD21ED565D6009226BD /* WithDrawalRecodTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WithDrawalRecodTableViewCell.xib; sourceTree = "<group>"; };
+		0445BAD61ED56A62009226BD /* BuyRecodViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuyRecodViewController.h; sourceTree = "<group>"; };
+		0445BAD71ED56A62009226BD /* BuyRecodViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuyRecodViewController.m; sourceTree = "<group>"; };
+		0445BAD81ED56A62009226BD /* BuyRecodViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BuyRecodViewController.xib; sourceTree = "<group>"; };
+		0445BADB1ED56AAE009226BD /* BuyRecodTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuyRecodTableViewCell.h; sourceTree = "<group>"; };
+		0445BADC1ED56AAE009226BD /* BuyRecodTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuyRecodTableViewCell.m; sourceTree = "<group>"; };
+		0445BADD1ED56AAE009226BD /* BuyRecodTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BuyRecodTableViewCell.xib; sourceTree = "<group>"; };
+		046DAF9C1ED57B0100E26C2C /* MyRecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyRecommendViewController.h; sourceTree = "<group>"; };
+		046DAF9D1ED57B0100E26C2C /* MyRecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyRecommendViewController.m; sourceTree = "<group>"; };
+		046DAF9E1ED57B0100E26C2C /* MyRecommendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyRecommendViewController.xib; sourceTree = "<group>"; };
+		046DAFA11ED57E0700E26C2C /* DiscoverRecommendTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverRecommendTableViewCell.h; sourceTree = "<group>"; };
+		046DAFA21ED57E0700E26C2C /* DiscoverRecommendTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverRecommendTableViewCell.m; sourceTree = "<group>"; };
+		046DAFA31ED57E0700E26C2C /* DiscoverRecommendTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiscoverRecommendTableViewCell.xib; sourceTree = "<group>"; };
 		047ABAB91EC9825A00A5DDB1 /* LoanHelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoanHelpViewController.h; sourceTree = "<group>"; };
 		047ABABA1EC9825B00A5DDB1 /* LoanHelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoanHelpViewController.m; sourceTree = "<group>"; };
 		047ABABB1EC9825B00A5DDB1 /* LoanHelpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoanHelpViewController.xib; sourceTree = "<group>"; };
+		04D981B31ED56F34005A617A /* DiscovergoodsDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscovergoodsDetailViewController.h; sourceTree = "<group>"; };
+		04D981B41ED56F34005A617A /* DiscovergoodsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscovergoodsDetailViewController.m; sourceTree = "<group>"; };
+		04D981B51ED56F34005A617A /* DiscovergoodsDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiscovergoodsDetailViewController.xib; sourceTree = "<group>"; };
+		04D981B81ED574CB005A617A /* SelectGoodsNumberView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectGoodsNumberView.h; sourceTree = "<group>"; };
+		04D981B91ED574CB005A617A /* SelectGoodsNumberView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectGoodsNumberView.m; sourceTree = "<group>"; };
+		04D981BA1ED574CB005A617A /* SelectGoodsNumberView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectGoodsNumberView.xib; sourceTree = "<group>"; };
 		5674F83A9666780E4483DE0A /* Pods-ShellCoin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShellCoin.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShellCoin/Pods-ShellCoin.release.xcconfig"; sourceTree = "<group>"; };
 		BC054D401E8A039600062AC5 /* EnterInputMoneyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnterInputMoneyView.h; sourceTree = "<group>"; };
 		BC054D411E8A039600062AC5 /* EnterInputMoneyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnterInputMoneyView.m; sourceTree = "<group>"; };
@@ -822,6 +882,81 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0445BAB51ED52181009226BD /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				0445BAB81ED522AE009226BD /* DiscoverRootViewController.h */,
+				0445BAB91ED522AE009226BD /* DiscoverRootViewController.m */,
+				0445BABB1ED52C08009226BD /* DiscoverRootTableViewCell.h */,
+				0445BABC1ED52C08009226BD /* DiscoverRootTableViewCell.m */,
+				0445BABD1ED52C08009226BD /* DiscoverRootTableViewCell.xib */,
+				0445BAC01ED55A85009226BD /* DiscoverCollectionViewCell.h */,
+				0445BAC11ED55A85009226BD /* DiscoverCollectionViewCell.m */,
+				0445BAC21ED55A85009226BD /* DiscoverCollectionViewCell.xib */,
+				046DAF9B1ED57AF100E26C2C /* MyCommend */,
+				04D981B21ED56F16005A617A /* DisCoverDetail */,
+				0445BAD51ED56A08009226BD /* BuyRecod */,
+				0445BAC51ED5606B009226BD /* DiscoverWithdrawl */,
+				0445BAB61ED52198009226BD /* discover.xcassets */,
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
+		0445BAC51ED5606B009226BD /* DiscoverWithdrawl */ = {
+			isa = PBXGroup;
+			children = (
+				0445BAC61ED56151009226BD /* DiscoverWithdrawalViewController.h */,
+				0445BAC71ED56151009226BD /* DiscoverWithdrawalViewController.m */,
+				0445BAC81ED56151009226BD /* DiscoverWithdrawalViewController.xib */,
+				0445BACB1ED56462009226BD /* WithDrawalRecodViewController.h */,
+				0445BACC1ED56462009226BD /* WithDrawalRecodViewController.m */,
+				0445BACD1ED56462009226BD /* WithDrawalRecodViewController.xib */,
+				0445BAD01ED565D6009226BD /* WithDrawalRecodTableViewCell.h */,
+				0445BAD11ED565D6009226BD /* WithDrawalRecodTableViewCell.m */,
+				0445BAD21ED565D6009226BD /* WithDrawalRecodTableViewCell.xib */,
+			);
+			path = DiscoverWithdrawl;
+			sourceTree = "<group>";
+		};
+		0445BAD51ED56A08009226BD /* BuyRecod */ = {
+			isa = PBXGroup;
+			children = (
+				0445BAD61ED56A62009226BD /* BuyRecodViewController.h */,
+				0445BAD71ED56A62009226BD /* BuyRecodViewController.m */,
+				0445BAD81ED56A62009226BD /* BuyRecodViewController.xib */,
+				0445BADB1ED56AAE009226BD /* BuyRecodTableViewCell.h */,
+				0445BADC1ED56AAE009226BD /* BuyRecodTableViewCell.m */,
+				0445BADD1ED56AAE009226BD /* BuyRecodTableViewCell.xib */,
+			);
+			path = BuyRecod;
+			sourceTree = "<group>";
+		};
+		046DAF9B1ED57AF100E26C2C /* MyCommend */ = {
+			isa = PBXGroup;
+			children = (
+				046DAF9C1ED57B0100E26C2C /* MyRecommendViewController.h */,
+				046DAF9D1ED57B0100E26C2C /* MyRecommendViewController.m */,
+				046DAF9E1ED57B0100E26C2C /* MyRecommendViewController.xib */,
+				046DAFA11ED57E0700E26C2C /* DiscoverRecommendTableViewCell.h */,
+				046DAFA21ED57E0700E26C2C /* DiscoverRecommendTableViewCell.m */,
+				046DAFA31ED57E0700E26C2C /* DiscoverRecommendTableViewCell.xib */,
+			);
+			path = MyCommend;
+			sourceTree = "<group>";
+		};
+		04D981B21ED56F16005A617A /* DisCoverDetail */ = {
+			isa = PBXGroup;
+			children = (
+				04D981B31ED56F34005A617A /* DiscovergoodsDetailViewController.h */,
+				04D981B41ED56F34005A617A /* DiscovergoodsDetailViewController.m */,
+				04D981B51ED56F34005A617A /* DiscovergoodsDetailViewController.xib */,
+				04D981B81ED574CB005A617A /* SelectGoodsNumberView.h */,
+				04D981B91ED574CB005A617A /* SelectGoodsNumberView.m */,
+				04D981BA1ED574CB005A617A /* SelectGoodsNumberView.xib */,
+			);
+			path = DisCoverDetail;
+			sourceTree = "<group>";
+		};
 		8E874A13AFBED68568C7A647 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1055,9 +1190,10 @@
 				BC4AABEC1E4D69E2006568A6 /* Assets.xcassets */,
 				BC4AABEE1E4D69E2006568A6 /* LaunchScreen.storyboard */,
 				BC4AABF11E4D69E2006568A6 /* Info.plist */,
+				BC4AAC311E4D74FD006568A6 /* TTXMacro.h */,
 				BC4AABE91E4D69E2006568A6 /* ShellCoin.xcdatamodeld */,
 				BC4AAC301E4D7006006568A6 /* PrefixHeader.pch */,
-				BC4AAC311E4D74FD006568A6 /* TTXMacro.h */,
+				0445BAB51ED52181009226BD /* Discover */,
 				BCFE207B1E77DE53002BC28C /* Login */,
 				BC4AAC161E4D6E31006568A6 /* Home */,
 				BC4AAC171E4D6E31006568A6 /* Mine */,
@@ -1753,11 +1889,13 @@
 				BC57B70F1E7FC937006AF4D1 /* HomeRecommendedTableViewCell.xib in Resources */,
 				BC5278FE1E8DF8BF004DD703 /* PersonalCenter.xcassets in Resources */,
 				BC9B3DB11E7648AF003DC241 /* RealNameAutResultView.xib in Resources */,
+				0445BADA1ED56A62009226BD /* BuyRecodViewController.xib in Resources */,
 				042C70501EC465C60035A912 /* LoanOtherViewController.xib in Resources */,
 				BCFE20701E77C7E6002BC28C /* SelectBanCardView.xib in Resources */,
 				BCD737041E935438001F706C /* MessageDetailViewController.xib in Resources */,
 				BC34A1CF1E9256CA00C786C0 /* SelectAreaView.xib in Resources */,
 				BC9B3DED1E7690F2003DC241 /* RecommentEarningsViewController.xib in Resources */,
+				046DAFA01ED57B0100E26C2C /* MyRecommendViewController.xib in Resources */,
 				BC9B3E061E7698CC003DC241 /* ManagerBankCardViewController.xib in Resources */,
 				BC34A1E71E92646700C786C0 /* Map.xcassets in Resources */,
 				BC57B71B1E7FCE34006AF4D1 /* ForyouCollectionViewCell.xib in Resources */,
@@ -1770,12 +1908,15 @@
 				BCFE208B1E77E206002BC28C /* Login.storyboard in Resources */,
 				BC9B3DCB1E76837B003DC241 /* EditbankInfoTableViewCell.xib in Resources */,
 				BC4AABF01E4D69E2006568A6 /* LaunchScreen.storyboard in Resources */,
+				0445BAB71ED52198009226BD /* discover.xcassets in Resources */,
 				BC9B3DCD1E76837B003DC241 /* EditBankInfoViewController.xib in Resources */,
 				BC36EA4E1E93BF1A0097F2F2 /* OnlinePayResultView.xib in Resources */,
+				0445BACF1ED56462009226BD /* WithDrawalRecodViewController.xib in Resources */,
 				047ABABD1EC9825B00A5DDB1 /* LoanHelpViewController.xib in Resources */,
 				BC9B3E021E7698CC003DC241 /* BanCardDetailTableViewCell.xib in Resources */,
 				BC4AABED1E4D69E2006568A6 /* Assets.xcassets in Resources */,
 				BC9B3DE71E76892C003DC241 /* MyQrCodeViewController.xib in Resources */,
+				04D981B71ED56F34005A617A /* DiscovergoodsDetailViewController.xib in Resources */,
 				BC34ECA71E8B88EC00613D35 /* AboutUSViewController.xib in Resources */,
 				BCFE20561E778CA9002BC28C /* SetPasswordViewController.xib in Resources */,
 				BC4C72E81EA737CF0048464A /* Loan.xcassets in Resources */,
@@ -1799,6 +1940,7 @@
 				BC2537EA1E9B2151007232B3 /* Bill3View.xib in Resources */,
 				BCFE206B1E77BC83002BC28C /* TradInTableViewCell.xib in Resources */,
 				BC9B3E041E7698CC003DC241 /* ManageBankView.xib in Resources */,
+				0445BAD41ED565D6009226BD /* WithDrawalRecodTableViewCell.xib in Resources */,
 				BC57B6FF1E7FBFEA006AF4D1 /* HomeBannerTableViewCell.xib in Resources */,
 				BC0A584A1E7299900077C8A9 /* BillTableViewCell.xib in Resources */,
 				BC5279411E8E7E4E004DD703 /* CodeScan.bundle in Resources */,
@@ -1818,6 +1960,7 @@
 				BCA17DDB1E8BB2AD00B4AFDA /* Bill.xcassets in Resources */,
 				BCFE20921E77E206002BC28C /* ForgetPasswordOneViewController.xib in Resources */,
 				BC2E531F1E94FEB400F7A99C /* BankInfoCollectionViewCell.xib in Resources */,
+				0445BABF1ED52C08009226BD /* DiscoverRootTableViewCell.xib in Resources */,
 				BCFE205B1E778F45002BC28C /* ChangeLoginPasswordViewController.xib in Resources */,
 				BC9B3DF71E76982B003DC241 /* EditPhoneNumberViewController.xib in Resources */,
 				BC2E53271E9524FB00F7A99C /* NothingView.xib in Resources */,
@@ -1829,6 +1972,7 @@
 				BCC8E1A21E88FFB7004DBDA3 /* MerchantTableViewCell.xib in Resources */,
 				BCD736FF1E93502D001F706C /* MessageTableViewCell.xib in Resources */,
 				BC57B7201E7FD62A006AF4D1 /* HomeMerchantTableViewCell.xib in Resources */,
+				04D981BC1ED574CB005A617A /* SelectGoodsNumberView.xib in Resources */,
 				BC0A58221E724ADA0077C8A9 /* 213955937960616.cer in Resources */,
 				BC57B7141E7FCC7E006AF4D1 /* HighQualityCollectionViewCell.xib in Resources */,
 				BC34A1CC1E9256CA00C786C0 /* unicode_to_hanyu_pinyin.txt in Resources */,
@@ -1837,14 +1981,18 @@
 				BC34ECAC1E8B891E00613D35 /* AboutsUsTableViewCell.xib in Resources */,
 				BC57B7041E7FC348006AF4D1 /* HomeIndustryTableViewCell.xib in Resources */,
 				BC9B3DC91E76837B003DC241 /* city.plist in Resources */,
+				0445BACA1ED56151009226BD /* DiscoverWithdrawalViewController.xib in Resources */,
 				BC9B3DD71E7683B7003DC241 /* NoBankCardViewController.xib in Resources */,
+				0445BADF1ED56AAE009226BD /* BuyRecodTableViewCell.xib in Resources */,
 				BC23C9EE1E79396500E90B43 /* YesTodayEarningsAlerView.xib in Resources */,
 				BCD736FA1E935017001F706C /* MessageListViewController.xib in Resources */,
 				BCB9A7C51E89F4B600F3E966 /* Public.xcassets in Resources */,
+				0445BAC41ED55A85009226BD /* DiscoverCollectionViewCell.xib in Resources */,
 				BC9B3DDF1E7688AD003DC241 /* PersonCenterTableViewCell.xib in Resources */,
 				BCFE20941E77E206002BC28C /* ForgetPasswordTwoViewController.xib in Resources */,
 				BC34A1E51E92646700C786C0 /* BussessMapViewController.xib in Resources */,
 				BCFE20901E77E206002BC28C /* RegisterTwoViewController.xib in Resources */,
+				046DAFA51ED57E0700E26C2C /* DiscoverRecommendTableViewCell.xib in Resources */,
 				BC9B3DF21E7693E0003DC241 /* RecommendTableViewCell.xib in Resources */,
 				BC34A1C21E9256CA00C786C0 /* citydict.plist in Resources */,
 				BC34ECAE1E8BA17B00613D35 /* Set.xcassets in Resources */,
@@ -1923,6 +2071,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0445BAD31ED565D6009226BD /* WithDrawalRecodTableViewCell.m in Sources */,
 				BC4AAC2E1E4D6E7D006568A6 /* BaseTableViewCell.m in Sources */,
 				BCD736F91E935017001F706C /* MessageListViewController.m in Sources */,
 				BCD737081E93544D001F706C /* MessageDetailTableViewCell.m in Sources */,
@@ -1931,6 +2080,7 @@
 				BC34A1EC1E92646700C786C0 /* MANaviRoute.m in Sources */,
 				BC34A1CD1E9256CA00C786C0 /* ZYPinYinSearch.m in Sources */,
 				BCFE20931E77E206002BC28C /* ForgetPasswordTwoViewController.m in Sources */,
+				0445BABE1ED52C08009226BD /* DiscoverRootTableViewCell.m in Sources */,
 				BC0A58231E724ADA0077C8A9 /* BaseHttpClient.m in Sources */,
 				BCFE208F1E77E206002BC28C /* RegisterTwoViewController.m in Sources */,
 				BC34A1E81E92646700C786C0 /* CommonUtility.m in Sources */,
@@ -1938,6 +2088,7 @@
 				BC9B3DC81E76837B003DC241 /* BankPickView.m in Sources */,
 				BC4AAC2A1E4D6E7D006568A6 /* BaseHtmlViewController.m in Sources */,
 				BC0A584E1E72A0680077C8A9 /* BillConsumptionTableViewCell.m in Sources */,
+				04D981B61ED56F34005A617A /* DiscovergoodsDetailViewController.m in Sources */,
 				BC57B70E1E7FC937006AF4D1 /* HomeRecommendedTableViewCell.m in Sources */,
 				BC34A1CE1E9256CA00C786C0 /* SelectAreaView.m in Sources */,
 				BC34A1C41E9256CA00C786C0 /* CityListViewController.m in Sources */,
@@ -1975,6 +2126,7 @@
 				BC4C72E51EA7377E0048464A /* AddLoanTableViewCell.m in Sources */,
 				BC4AAC2F1E4D6E7D006568A6 /* BaseViewController.m in Sources */,
 				BCC8E19C1E88FDCF004DBDA3 /* MerchantListViewController.m in Sources */,
+				0445BABA1ED522AE009226BD /* DiscoverRootViewController.m in Sources */,
 				BC9B3DCC1E76837B003DC241 /* EditBankInfoViewController.m in Sources */,
 				BC9B3DCA1E76837B003DC241 /* EditbankInfoTableViewCell.m in Sources */,
 				BC57B6FA1E7FA9DC006AF4D1 /* ShellCoinPageControlView.m in Sources */,
@@ -1990,6 +2142,7 @@
 				BC2E53261E9524FB00F7A99C /* NothingView.m in Sources */,
 				BCD7370C1E9354A0001F706C /* UILabel+StringFrame.m in Sources */,
 				BCFE205A1E778F45002BC28C /* ChangeLoginPasswordViewController.m in Sources */,
+				0445BACE1ED56462009226BD /* WithDrawalRecodViewController.m in Sources */,
 				047ABABC1EC9825B00A5DDB1 /* LoanHelpViewController.m in Sources */,
 				BC34A1BE1E9256CA00C786C0 /* AreaTableViewCell.m in Sources */,
 				BC9B3DE61E76892C003DC241 /* MyQrCodeViewController.m in Sources */,
@@ -1999,6 +2152,7 @@
 				BC4AABE21E4D69E2006568A6 /* AppDelegate.m in Sources */,
 				BC34ECA61E8B88EC00613D35 /* AboutUSViewController.m in Sources */,
 				BC5279491E8E7E4E004DD703 /* LBXScanView.m in Sources */,
+				0445BADE1ED56AAE009226BD /* BuyRecodTableViewCell.m in Sources */,
 				BCFE209E1E77EF2A002BC28C /* WithdrawalViewController.m in Sources */,
 				BC9B3DF61E76982B003DC241 /* EditPhoneNumberViewController.m in Sources */,
 				BC0A58351E72832E0077C8A9 /* SetTableViewCell.m in Sources */,
@@ -2013,6 +2167,7 @@
 				BC9B3DAB1E763AF4003DC241 /* RealnameViewController.m in Sources */,
 				BC5279421E8E7E4E004DD703 /* UIActionSheet+LBXAlertAction.m in Sources */,
 				BCC8E1A11E88FFB7004DBDA3 /* MerchantTableViewCell.m in Sources */,
+				04D981BB1ED574CB005A617A /* SelectGoodsNumberView.m in Sources */,
 				BC34A1C11E9256CA00C786C0 /* CityButton.m in Sources */,
 				BCD737151E936726001F706C /* MerchantSearchViewController.m in Sources */,
 				BCFE206A1E77BC83002BC28C /* TradInTableViewCell.m in Sources */,
@@ -2034,8 +2189,10 @@
 				BC34A1E41E92646700C786C0 /* BussessMapViewController.m in Sources */,
 				BC36CFE71E80C9AD00A51BF4 /* RecommentSpecilCollectionViewCell.m in Sources */,
 				BC0A58451E728F2C0077C8A9 /* AutoScroller.m in Sources */,
+				0445BAC31ED55A85009226BD /* DiscoverCollectionViewCell.m in Sources */,
 				BC5279481E8E7E4E004DD703 /* LBXScanResult.m in Sources */,
 				BCE5EED71E5C41030055D828 /* Colours.m in Sources */,
+				0445BAD91ED56A62009226BD /* BuyRecodViewController.m in Sources */,
 				BCAC5D0E1E825DBB003CACF8 /* BillAmountDisciplineView.m in Sources */,
 				BC36EA4C1E93BF0F0097F2F2 /* OnlinePayResultView.m in Sources */,
 				BC2E531E1E94FEB400F7A99C /* BankInfoCollectionViewCell.m in Sources */,
@@ -2059,18 +2216,21 @@
 				BC4C72F11EA7407D0048464A /* LoanTableViewCell.m in Sources */,
 				BC36EA471E93B8530097F2F2 /* WithDrawalResultView.m in Sources */,
 				BC34A1E91E92646700C786C0 /* LineDashPolyline.m in Sources */,
+				046DAFA41ED57E0700E26C2C /* DiscoverRecommendTableViewCell.m in Sources */,
 				BC2E53191E94FC2C00F7A99C /* SCAdCollectionViewLayout.m in Sources */,
 				BC054D421E8A039600062AC5 /* EnterInputMoneyView.m in Sources */,
 				BCFE205F1E779283002BC28C /* ChangePayPasswordViewController.m in Sources */,
 				BCC8E1971E88F2A4004DBDA3 /* UIImage+ColorImage.m in Sources */,
 				BC4AAC151E4D6DBB006568A6 /* RootViewController.m in Sources */,
 				BCFE206E1E77C7D6002BC28C /* SelectBanCardView.m in Sources */,
+				046DAF9F1ED57B0100E26C2C /* MyRecommendViewController.m in Sources */,
 				BC4AAC1A1E4D6E5B006568A6 /* HomeViewController.m in Sources */,
 				BC34ECAB1E8B891E00613D35 /* AboutsUsTableViewCell.m in Sources */,
 				BC34A1C61E9256CA00C786C0 /* ChineseToPinyinResource.m in Sources */,
 				BC9B3DF11E7693E0003DC241 /* RecommendTableViewCell.m in Sources */,
 				BC0A58241E724ADA0077C8A9 /* HttpClient.m in Sources */,
 				BC34A1D21E9263F800C786C0 /* LocationManager.m in Sources */,
+				0445BAC91ED56151009226BD /* DiscoverWithdrawalViewController.m in Sources */,
 				BC57B7031E7FC348006AF4D1 /* HomeIndustryTableViewCell.m in Sources */,
 				BC57B71A1E7FCE34006AF4D1 /* ForyouCollectionViewCell.m in Sources */,
 				BC34A1C91E9256CA00C786C0 /* PinyinFormatter.m in Sources */,
