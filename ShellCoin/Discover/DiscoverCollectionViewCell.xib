@@ -21,7 +21,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1ed-Ng-ldU">
                         <rect key="frame" x="60" y="30" width="255" height="299"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yrM-zf-Z0O">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="discover_bg2" translatesAutoresizingMaskIntoConstraints="NO" id="yrM-zf-Z0O">
                                 <rect key="frame" x="0.0" y="0.0" width="255" height="299"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="merchantHeader.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="XSh-BQ-aJ8">
@@ -76,6 +76,7 @@
         </collectionViewCell>
     </objects>
     <resources>
+        <image name="discover_bg2" width="243" height="352"/>
         <image name="merchantHeader.jpg" width="1125" height="870"/>
     </resources>
 </document>

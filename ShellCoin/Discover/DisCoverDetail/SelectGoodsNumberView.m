@@ -7,6 +7,7 @@
 //
 
 #import "SelectGoodsNumberView.h"
+#import "SureDiscoverOrderViewController.h"
 
 
 @interface SelectGoodsNumberView()
@@ -75,6 +76,8 @@
         self.itemView.frame = CGRectMake(0, THeight, TWitdh, TWitdh*(260/375.));
     } completion:^(BOOL finished) {
         if (finished) {
+            SureDiscoverOrderViewController *sureVC = [[SureDiscoverOrderViewController alloc]init];
+            [self.viewController.navigationController pushViewController:sureVC animated:YES];
             [self removeFromSuperview];
         }
     }];

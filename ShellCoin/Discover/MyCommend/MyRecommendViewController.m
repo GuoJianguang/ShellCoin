@@ -8,6 +8,7 @@
 
 #import "MyRecommendViewController.h"
 #import "DiscoverRecommendTableViewCell.h"
+#import "DiscoverQrCodeViewController.h"
 
 @interface MyRecommendViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, assign)NSInteger page;
@@ -120,5 +121,7 @@
 }
 
 - (IBAction)addBtn:(UIButton *)sender {
+    DiscoverQrCodeViewController *qrVC = [[DiscoverQrCodeViewController alloc]init];
+    [self.navigationController pushViewController:qrVC animated:YES];
 }
 @end

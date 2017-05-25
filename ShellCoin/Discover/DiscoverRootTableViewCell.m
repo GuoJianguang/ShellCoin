@@ -12,9 +12,13 @@
 #import "BuyRecodViewController.h"
 #import "DiscovergoodsDetailViewController.h"
 #import "MyRecommendViewController.h"
+#import "CountDown.h"
 
 @interface DiscoverRootTableViewCell()<UICollectionViewDelegate,UICollectionViewDataSource>
+@property (strong, nonatomic)  CountDown *countDown;
 
+
+@property (nonatomic, assign)NSTimeInterval tempTime;
 @end
 @implementation DiscoverRootTableViewCell
 
@@ -29,8 +33,69 @@
     self.collectionView.dataSource = self;
     self.collectionView.bounces = YES;
     
+    self.alerView.layer.cornerRadius = 19;
+    self.alerView.layer.masksToBounds = YES;
+    self.alerLabel.adjustsFontSizeToFitWidth = YES;
+    self.alerLabel.textColor =MacoTitleColor;
+    self.alerLabel.text  =@"99元购物金   28天10小时13分29秒到账";
+    self.tempTime = 0;
+//    NSTimeInterval interval=[_dataModel.endTime longLongValue] / 1000.0;
+    NSTimeInterval interval = 1498629853;
+    NSDate *date = [NSDate dateWithTimeIntervalSince1970:interval];
+    NSDateFormatter *objDateformat = [[NSDateFormatter alloc] init];
+    [objDateformat setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    __weak DiscoverRootTableViewCell *weak_self = self;
+//    NSTimeInterval nowInterval= _dataModel.systmTime/1000;
+    NSTimeInterval nowInterval= 1495692253;
+    NSDate *nowDate = [NSDate dateWithTimeIntervalSince1970:nowInterval];
+    self.tempTime =[date timeIntervalSinceDate:nowDate];
+    [self.countDown countDownWithPER_SECBlock:^{
+        [weak_self getNowTimeWithStringEndTime];
+        weak_self.tempTime --;
+    }];
+    
+}
+- (CountDown *)countDown
+{
+    if (!_countDown) {
+        _countDown = [[CountDown alloc]init];
+    }
+    return _countDown;
 }
 
+-( void)getNowTimeWithStringEndTime{
+    int days = (int)(self.tempTime/(3600*24));
+    int hours = (int)((self.tempTime-days*24*3600)/3600);
+    int minutes = (int)(self.tempTime-days*24*3600-hours*3600)/60;
+    int seconds = self.tempTime-days*24*3600-hours*3600-minutes*60;
+    
+    NSString *dayStr;NSString *hoursStr;NSString *minutesStr;NSString *secondsStr;
+    //天
+    dayStr = [NSString stringWithFormat:@"%d",days];
+    //小时
+    hoursStr = [NSString stringWithFormat:@"%d",hours];
+    //分钟
+    if(minutes<10)
+        minutesStr = [NSString stringWithFormat:@"0%d",minutes];
+    else
+        minutesStr = [NSString stringWithFormat:@"%d",minutes];
+    //秒
+    if(seconds < 10)
+        secondsStr = [NSString stringWithFormat:@"0%d", seconds];
+    else
+        secondsStr = [NSString stringWithFormat:@"%d",seconds];
+    if (hours<=0&&minutes<=0&&seconds<=0&&days<=0) {
+        [self.countDown destoryTimer];
+        self.alerLabel.text = @"活动已结束";
+        [self.countDown destoryTimer];
+        return;
+    }
+    if (days) {
+        self.alerLabel.text = [NSString stringWithFormat:@"%@天%@小时%@分%@秒", dayStr,hoursStr, minutesStr,secondsStr];
+        return;
+    }
+    self.alerLabel.text = [NSString stringWithFormat:@"%@小时%@分%@秒",hoursStr , minutesStr,secondsStr];
+}
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 

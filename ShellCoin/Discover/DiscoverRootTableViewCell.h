@@ -23,6 +23,8 @@
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
+@property (weak, nonatomic) IBOutlet UIView *alerView;
+@property (weak, nonatomic) IBOutlet UILabel *alerLabel;
 
 
 @end
