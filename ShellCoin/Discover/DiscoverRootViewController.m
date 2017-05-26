@@ -54,8 +54,13 @@
     return THeight - 49;
 }
 
-
-
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+//    DiscoverRootTableViewCell *cell = self.tableView.visibleCells[0];
+//    [cell reload];
+    [self.tableView reloadData];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

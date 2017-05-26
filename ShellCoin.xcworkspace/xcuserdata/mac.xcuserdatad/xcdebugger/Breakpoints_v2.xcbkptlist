@@ -52,11 +52,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ShellCoin/Discover/DiscoverRootTableViewCell.m"
-            timestampString = "517500323.719752"
+            timestampString = "517503611.754573"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "428"
-            endingLineNumber = "428"
+            startingLineNumber = "441"
+            endingLineNumber = "441"
             landmarkName = "-gotRealNameRu:"
             landmarkType = "7">
          </BreakpointContent>
@@ -68,11 +68,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ShellCoin/Discover/DiscoverRootTableViewCell.m"
-            timestampString = "517500323.719752"
+            timestampString = "517503611.754573"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "429"
-            endingLineNumber = "429"
+            startingLineNumber = "442"
+            endingLineNumber = "442"
             landmarkName = "-gotRealNameRu:"
             landmarkType = "7">
          </BreakpointContent>

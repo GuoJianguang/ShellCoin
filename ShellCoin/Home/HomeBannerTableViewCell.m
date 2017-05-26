@@ -56,7 +56,7 @@
                 [self.bannerArray addObject:model];
             }
             [self.swipeView reloadData];
-//            [[AutoScroller shareAutoScroller]autoSwipeView:self.swipeView WithPageView:self.pageView WithDataSouceArray:self.bannerArray];
+            [[AutoScroller shareAutoScroller]autoSwipeView:self.swipeView WithPageView:self.pageView WithDataSouceArray:self.bannerArray];
         }
         self.pageView.hidden = NO;
         self.pageView.numberPages = self.bannerArray.count;

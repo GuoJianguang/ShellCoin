@@ -52,5 +52,7 @@
 
 @property (nonatomic, strong)DiscoverConsumersModel *dataModel;
 
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *viewHeight;
 
+- (void)reload;
 @end

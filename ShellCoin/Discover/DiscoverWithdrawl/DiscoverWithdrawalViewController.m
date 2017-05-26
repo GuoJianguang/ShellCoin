@@ -27,6 +27,7 @@
     // Do any additional setup after loading the view from its nib.
     self.naviBar.hidden = YES;
     self.alerputInLabel.textColor = self.poundageLabel.textColor = MacoColor;
+    self.poundageLabel.adjustsFontSizeToFitWidth = YES;
     self.bankLabel.textColor = MacoTitleColor;
     self.bankCardNumLabel.textColor = [UIColor colorFromHexString:@"#969696"];
     self.inputAmountTF.delegate = self;
@@ -46,7 +47,7 @@
 {
     [HttpClient POST:@"find/withdrawFee/get" parameters:@{@"token":[ShellCoinUserInfo shareUserInfos].token} success:^(NSURLSessionDataTask *operation, id jsonObject) {
         self.rate = [NullToNumber(jsonObject[@"data"]) doubleValue];
-        self.poundageLabel.text = [NSString stringWithFormat:@"提现手续费费率%.2f",self.rate];
+        self.poundageLabel.text = [NSString stringWithFormat:@"个人所得税(%.f%@)",self.rate*100,@"%"];
     } failure:^(NSURLSessionDataTask *operation, NSError *error) {
         
     }];
@@ -226,7 +227,7 @@ if ([self valueValidated]) {
         double withRate = 1 -  self.rate;
         double money = [textField.text doubleValue];
         double actualMoney = money*withRate;
-        self.poundageLabel.text = [NSString stringWithFormat:@"提现手续费费率%.2f,实际到账金额%.2f元",self.rate,actualMoney];
+        self.poundageLabel.text = [NSString stringWithFormat:@"个人所得税(%.f%@),实际到账金额%.2f元",self.rate*100,@"%",actualMoney];
 
     }
 }
@@ -234,7 +235,7 @@ if ([self valueValidated]) {
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
     if (textField == self.inputAmountTF) {
-    self.poundageLabel.text = [NSString stringWithFormat:@"提现手续费费率%.2f,实际到账金额--元",self.rate];
+    self.poundageLabel.text = [NSString stringWithFormat:@"个人所得税(%.f%@),实际到账金额--元",self.rate*100,@"%"];
 
         NSScanner      *scanner    = [NSScanner scannerWithString:string];
         NSCharacterSet *numbers;

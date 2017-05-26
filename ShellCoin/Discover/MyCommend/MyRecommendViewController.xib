@@ -77,14 +77,14 @@
                             <rect key="frame" x="0.0" y="64" width="375" height="86"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¥ --" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PTm-k4-H2V">
-                                    <rect key="frame" x="177.5" y="49.5" width="187.5" height="26.5"/>
-                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
+                                    <rect key="frame" x="177.5" y="47" width="187.5" height="29"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¥ --" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m7c-7m-OyL">
-                                    <rect key="frame" x="10" y="49" width="162.5" height="26.5"/>
-                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
+                                    <rect key="frame" x="10" y="46.5" width="162.5" height="29"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>

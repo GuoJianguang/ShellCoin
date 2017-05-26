@@ -93,7 +93,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return TWitdh*(190/750.);
+    return TWitdh*(150/750.);
 }
 
 

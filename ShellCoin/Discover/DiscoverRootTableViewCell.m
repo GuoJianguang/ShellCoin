@@ -41,7 +41,7 @@
     self.collectionView.dataSource = self;
     self.collectionView.bounces = YES;
     
-    self.alerView.layer.cornerRadius = 19;
+    self.alerView.layer.cornerRadius = 12;
     self.alerView.layer.masksToBounds = YES;
     self.alerLabel.adjustsFontSizeToFitWidth = YES;
     self.alerLabel.textColor =MacoTitleColor;
@@ -53,6 +53,19 @@
     [self getRequestisHeader:YES];
     self.temp = 0;
     
+    if (TWitdh > 320) {
+        self.viewHeight.constant = TWitdh*(470/750.);
+    }else{
+        self.viewHeight.constant = TWitdh*(520/750.);
+
+    }
+    
+}
+
+- (void)reload
+{
+    [[AutoScroller shareAutoScroller]autoSwipeView:self.horizontalMarquee WithPageView:[[UIPageControl alloc]init] WithDataSouceArray:self.dataModel.costRebateList];
+
 }
 - (NSMutableArray *)dataSouceArray
 {
@@ -65,7 +78,7 @@
 - (SwipeView *)horizontalMarquee
 {
     if (!_horizontalMarquee) {
-        _horizontalMarquee = [[SwipeView alloc]initWithFrame:CGRectMake(38, 0, TWitdh-80, 38)];
+        _horizontalMarquee = [[SwipeView alloc]initWithFrame:CGRectMake(30, 0, TWitdh-70, 24)];
         _horizontalMarquee.delegate = self;
         _horizontalMarquee.dataSource = self;
         _horizontalMarquee.vertical = YES;

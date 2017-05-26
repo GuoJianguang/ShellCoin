@@ -98,13 +98,16 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I34-AE-5Q1">
-                    <rect key="frame" x="47" y="471" width="12.5" height="16"/>
+                    <rect key="frame" x="47" y="471" width="303" height="16"/>
                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
                     <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_asterisk" translatesAutoresizingMaskIntoConstraints="NO" id="8Vw-YG-d4Q">
                     <rect key="frame" x="25" y="474" width="10" height="10"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="8Vw-YG-d4Q" secondAttribute="height" multiplier="1:1" id="DWk-9q-ybB"/>
+                    </constraints>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="98i-Zz-LHC">
                     <rect key="frame" x="22" y="235" width="331" height="232"/>
@@ -231,6 +234,7 @@
                 <constraint firstItem="8Vw-YG-d4Q" firstAttribute="centerY" secondItem="I34-AE-5Q1" secondAttribute="centerY" id="jyh-7Y-MRs"/>
                 <constraint firstAttribute="bottom" secondItem="fEu-4R-kmG" secondAttribute="bottom" constant="35" id="lEN-L9-oir"/>
                 <constraint firstItem="8Vw-YG-d4Q" firstAttribute="leading" secondItem="CxP-td-KBI" secondAttribute="leading" constant="25" id="u3E-jJ-sax"/>
+                <constraint firstAttribute="trailing" secondItem="I34-AE-5Q1" secondAttribute="trailing" constant="25" id="wiX-QQ-8fN"/>
                 <constraint firstItem="98i-Zz-LHC" firstAttribute="leading" secondItem="CxP-td-KBI" secondAttribute="leading" constant="22" id="zOd-aa-X6m"/>
             </constraints>
             <point key="canvasLocation" x="755" y="-905"/>
