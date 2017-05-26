@@ -26,4 +26,6 @@
 
 + (void)loveAcountWexinPay:(NSDictionary *)parms;
 
++ (void)startDiscoverGoodsPay:(NSDictionary *)parms;
+
 @end

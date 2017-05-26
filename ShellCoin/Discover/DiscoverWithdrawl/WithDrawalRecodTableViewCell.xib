@@ -28,7 +28,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQe-Pq-L5s">
-                                <rect key="frame" x="14" y="31" width="11" height="13.5"/>
+                                <rect key="frame" x="14" y="52" width="11" height="13.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -39,13 +39,21 @@
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PTb-Rt-tCf">
+                                <rect key="frame" x="14" y="10" width="11" height="13.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ECW-pd-VZW" firstAttribute="centerY" secondItem="IkP-u9-CHk" secondAttribute="centerY" id="4H1-Gm-l8q"/>
                             <constraint firstItem="jwg-9I-yRs" firstAttribute="leading" secondItem="IkP-u9-CHk" secondAttribute="leading" id="4Lg-Mp-xss"/>
+                            <constraint firstItem="PTb-Rt-tCf" firstAttribute="top" secondItem="IkP-u9-CHk" secondAttribute="top" constant="10" id="8xz-aQ-iOT"/>
                             <constraint firstAttribute="bottom" secondItem="jwg-9I-yRs" secondAttribute="bottom" id="AuE-IF-3X6"/>
-                            <constraint firstItem="dQe-Pq-L5s" firstAttribute="centerY" secondItem="IkP-u9-CHk" secondAttribute="centerY" id="FqZ-TP-Ldk"/>
+                            <constraint firstAttribute="bottom" secondItem="dQe-Pq-L5s" secondAttribute="bottom" constant="10" id="BeZ-yD-b2B"/>
+                            <constraint firstItem="PTb-Rt-tCf" firstAttribute="leading" secondItem="jwg-9I-yRs" secondAttribute="trailing" constant="8" id="IIU-u9-pbe"/>
                             <constraint firstAttribute="trailing" secondItem="ECW-pd-VZW" secondAttribute="trailing" constant="20" id="YyD-ni-7pf"/>
                             <constraint firstItem="jwg-9I-yRs" firstAttribute="top" secondItem="IkP-u9-CHk" secondAttribute="top" id="eGN-jY-qon"/>
                             <constraint firstItem="dQe-Pq-L5s" firstAttribute="leading" secondItem="jwg-9I-yRs" secondAttribute="trailing" constant="8" id="pLK-df-uL9"/>
@@ -63,9 +71,10 @@
             <connections>
                 <outlet property="markImageView" destination="jwg-9I-yRs" id="8I1-DC-xOG"/>
                 <outlet property="moneyLabel" destination="ECW-pd-VZW" id="tnc-OD-VUJ"/>
+                <outlet property="statusLabel" destination="PTb-Rt-tCf" id="iD0-S1-NAM"/>
                 <outlet property="timeLabel" destination="dQe-Pq-L5s" id="QMk-Ra-Ksd"/>
             </connections>
-            <point key="canvasLocation" x="271" y="-66.5"/>
+            <point key="canvasLocation" x="-1" y="-119"/>
         </tableViewCell>
     </objects>
     <resources>

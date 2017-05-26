@@ -26,6 +26,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.naviBar.title = @"编辑收获地址";
+    self.naviBar.detailImage = [UIImage imageNamed:@"icon_delete_white"];
+    self.naviBar.hiddenDetailBtn = NO;
+    self.naviBar.delegate = self;
     self.label1.textColor = self.label2.textColor =  self.label3.textColor=self.label4.textColor=self.label5.textColor=MacoTitleColor;
     [self setLayerWithbor:self.view1];
     [self setLayerWithbor:self.view2];

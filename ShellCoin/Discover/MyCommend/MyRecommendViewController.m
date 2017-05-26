@@ -46,17 +46,24 @@
     NSDictionary *prams = @{@"pageNo":@(self.page),
                             @"pageSize":MacoRequestPageCount,
                             @"token":[ShellCoinUserInfo shareUserInfos].token};
-    [HttpClient POST:@"user/wallet/consumRecord/get" parameters:prams success:^(NSURLSessionDataTask *operation, id jsonObject) {
+    [HttpClient POST:@"find/recommend/profit/get" parameters:prams success:^(NSURLSessionDataTask *operation, id jsonObject) {
         if (IsRequestTrue) {
             if (isHeader) {
                 [self.dataSouceArray removeAllObjects];
             }
-            NSArray *array =jsonObject[@"data"][@"data"];
+            if (self.page == 1) {
+                
+                self.activatedAmount.text = [NSString stringWithFormat:@"¥%.2f",[NullToNumber(jsonObject[@"data"][@"totalCostRebateAmount"]) doubleValue]];
+                self.totalAmount.text = [NSString stringWithFormat:@"¥%.2f",[NullToNumber(jsonObject[@"data"][@"totalRecommendRebateAmount"]) doubleValue]];
+
+            }
+            NSArray *array =jsonObject[@"data"][@"list"][@"data"];
             if (array.count > 0) {
                 self.page ++;
             }
             for (NSDictionary *dic in array) {
                 DiscoverRecommendModel *model = [DiscoverRecommendModel modelWithDic:dic];
+                model.sysTime = NullToNumber(jsonObject[@"data"][@"sysTime"]);
                 [self.dataSouceArray addObject:model];
             }
             [self.tableView judgeIsHaveDataSouce:self.dataSouceArray];
@@ -86,7 +93,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return TWitdh*(175/750.);
+    return TWitdh*(190/750.);
 }
 
 
@@ -122,6 +129,7 @@
 
 - (IBAction)addBtn:(UIButton *)sender {
     DiscoverQrCodeViewController *qrVC = [[DiscoverQrCodeViewController alloc]init];
+    qrVC.goodsId = self.goodsId;
     [self.navigationController pushViewController:qrVC animated:YES];
 }
 @end

@@ -19,8 +19,16 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.naviBar.hidden = YES;
+    
+    
+    
 }
 
+#pragma mark - 获取消费商信息
+- (void)getRequest
+{
+    
+}
 
 #pragma mark - UITabelView
 

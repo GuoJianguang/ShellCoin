@@ -106,6 +106,30 @@ static WeXinPayObject *instance;
 }
 
 
++ (void)startDiscoverGoodsPay:(NSDictionary *)parms
+{
+    [SVProgressHUD showWithStatus:@"正在发送支付请求" maskType:SVProgressHUDMaskTypeBlack];
+    [HttpClient POST:@"pay/find/wxpay" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
+        [SVProgressHUD dismiss];
+        if (IsRequestTrue) {
+            NSDictionary *dict = jsonObject[@"data"];
+            //调起微信支付
+            PayReq* req             = [[PayReq alloc] init];
+            req.partnerId           = [dict objectForKey:@"partnerid"];
+            req.prepayId            = [dict objectForKey:@"prepayid"];
+            req.nonceStr            = [dict objectForKey:@"noncestr"];
+            req.timeStamp           = [[dict objectForKey:@"timestamp"] intValue];
+            req.package             = [dict objectForKey:@"package"];
+            req.sign                = [dict objectForKey:@"sign"];
+            [WXApi sendReq:req] ;
+        }
+    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
+        [SVProgressHUD dismiss];
+        [[JAlertViewHelper shareAlterHelper]showTint:@"订单生成失败,请稍后重试" duration:1.];
+    }];
+
+}
+
 
 - (void)onResp:(BaseResp*)resp{
     if ([resp isKindOfClass:[PayResp class]]){

@@ -25,5 +25,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *titleimageView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *ViewHeight;
 
+@property (nonatomic,assign)BOOL isDicover;
+
 
 @end

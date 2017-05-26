@@ -28,4 +28,6 @@
 
 @property (weak, nonatomic) IBOutlet UIView *itemVIew;
 
+@property (nonatomic, copy)NSString *goodsId;
+
 @end

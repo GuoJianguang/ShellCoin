@@ -17,6 +17,11 @@
 		04196B121ED6B3A2005F64C2 /* DIiscoverQrCodeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04196B0D1ED6B3A2005F64C2 /* DIiscoverQrCodeTableViewCell.xib */; };
 		04196B131ED6B3A2005F64C2 /* DiscoverQrCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04196B0F1ED6B3A2005F64C2 /* DiscoverQrCodeViewController.m */; };
 		04196B141ED6B3A2005F64C2 /* DiscoverQrCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04196B101ED6B3A2005F64C2 /* DiscoverQrCodeViewController.xib */; };
+		041ABCD21ED823A800C181CB /* AlipaySDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 041ABCD01ED823A800C181CB /* AlipaySDK.bundle */; };
+		041ABCD31ED823A800C181CB /* AlipaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 041ABCD11ED823A800C181CB /* AlipaySDK.framework */; };
+		041ABCD61ED823D400C181CB /* AliPayObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 041ABCD51ED823D400C181CB /* AliPayObject.m */; };
+		041ABCDA1ED833D300C181CB /* DiscoverOnlinePayResultView.m in Sources */ = {isa = PBXBuildFile; fileRef = 041ABCD81ED833D300C181CB /* DiscoverOnlinePayResultView.m */; };
+		041ABCDB1ED833D300C181CB /* DiscoverOnlinePayResultView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 041ABCD91ED833D300C181CB /* DiscoverOnlinePayResultView.xib */; };
 		042C70451EC45B8D0035A912 /* LoanHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042C70431EC45B8D0035A912 /* LoanHomeViewController.m */; };
 		042C70461EC45B8D0035A912 /* LoanHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042C70441EC45B8D0035A912 /* LoanHomeViewController.xib */; };
 		042C704A1EC464550035A912 /* LoanOtherTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 042C70481EC464550035A912 /* LoanOtherTableViewCell.m */; };
@@ -369,6 +374,13 @@
 		04196B0E1ED6B3A2005F64C2 /* DiscoverQrCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverQrCodeViewController.h; sourceTree = "<group>"; };
 		04196B0F1ED6B3A2005F64C2 /* DiscoverQrCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverQrCodeViewController.m; sourceTree = "<group>"; };
 		04196B101ED6B3A2005F64C2 /* DiscoverQrCodeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiscoverQrCodeViewController.xib; sourceTree = "<group>"; };
+		041ABCD01ED823A800C181CB /* AlipaySDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AlipaySDK.bundle; sourceTree = "<group>"; };
+		041ABCD11ED823A800C181CB /* AlipaySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlipaySDK.framework; sourceTree = "<group>"; };
+		041ABCD41ED823D400C181CB /* AliPayObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AliPayObject.h; sourceTree = "<group>"; };
+		041ABCD51ED823D400C181CB /* AliPayObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AliPayObject.m; sourceTree = "<group>"; };
+		041ABCD71ED833D300C181CB /* DiscoverOnlinePayResultView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverOnlinePayResultView.h; sourceTree = "<group>"; };
+		041ABCD81ED833D300C181CB /* DiscoverOnlinePayResultView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverOnlinePayResultView.m; sourceTree = "<group>"; };
+		041ABCD91ED833D300C181CB /* DiscoverOnlinePayResultView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiscoverOnlinePayResultView.xib; sourceTree = "<group>"; };
 		042C70421EC45B8D0035A912 /* LoanHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoanHomeViewController.h; sourceTree = "<group>"; };
 		042C70431EC45B8D0035A912 /* LoanHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoanHomeViewController.m; sourceTree = "<group>"; };
 		042C70441EC45B8D0035A912 /* LoanHomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoanHomeViewController.xib; sourceTree = "<group>"; };
@@ -886,6 +898,7 @@
 				BC77C6781E7A31A900DC9EAC /* CoreTelephony.framework in Frameworks */,
 				BC77C67A1E7A31B000DC9EAC /* MessageUI.framework in Frameworks */,
 				BC77C67C1E7A31BD00DC9EAC /* CoreMotion.framework in Frameworks */,
+				041ABCD31ED823A800C181CB /* AlipaySDK.framework in Frameworks */,
 				BC77C6881E7A322100DC9EAC /* StoreKit.framework in Frameworks */,
 				BC77C67E1E7A31C600DC9EAC /* AdSupport.framework in Frameworks */,
 				BC77C6741E7A319000DC9EAC /* libsqlite3.tbd in Frameworks */,
@@ -923,6 +936,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		041ABCCF1ED823A800C181CB /* AlipaySDK */ = {
+			isa = PBXGroup;
+			children = (
+				041ABCD01ED823A800C181CB /* AlipaySDK.bundle */,
+				041ABCD11ED823A800C181CB /* AlipaySDK.framework */,
+			);
+			path = AlipaySDK;
+			sourceTree = "<group>";
+		};
 		043C63DA1ED680B800A6ED33 /* Address */ = {
 			isa = PBXGroup;
 			children = (
@@ -1027,6 +1049,9 @@
 				043C63D51ED674FB00A6ED33 /* SureDiscoverOrderTableViewCell.h */,
 				043C63D61ED674FB00A6ED33 /* SureDiscoverOrderTableViewCell.m */,
 				043C63D71ED674FB00A6ED33 /* SureDiscoverOrderTableViewCell.xib */,
+				041ABCD71ED833D300C181CB /* DiscoverOnlinePayResultView.h */,
+				041ABCD81ED833D300C181CB /* DiscoverOnlinePayResultView.m */,
+				041ABCD91ED833D300C181CB /* DiscoverOnlinePayResultView.xib */,
 			);
 			path = DisCoverDetail;
 			sourceTree = "<group>";
@@ -1420,6 +1445,8 @@
 				BC2E53221E9524FB00F7A99C /* NothingView.h */,
 				BC2E53231E9524FB00F7A99C /* NothingView.m */,
 				BC2E53241E9524FB00F7A99C /* NothingView.xib */,
+				041ABCD41ED823D400C181CB /* AliPayObject.h */,
+				041ABCD51ED823D400C181CB /* AliPayObject.m */,
 				BCB9A7C41E89F4B600F3E966 /* Public.xcassets */,
 			);
 			path = Public;
@@ -1529,6 +1556,7 @@
 		BC54EEBF1E5C40A200407AC5 /* ThirdAPI */ = {
 			isa = PBXGroup;
 			children = (
+				041ABCCF1ED823A800C181CB /* AlipaySDK */,
 				BC5279221E8E7E4E004DD703 /* LBXScan */,
 				BC77C68F1E7A33E700DC9EAC /* UMStatistics_4.1.4 */,
 				BC77C6581E7A316400DC9EAC /* share */,
@@ -2027,6 +2055,7 @@
 				BC77C66D1E7A316400DC9EAC /* UMSocialSDKResources.bundle in Resources */,
 				BC4C72ED1EA73B720048464A /* AddLoanViewController.xib in Resources */,
 				BCAC5D0B1E82587F003CACF8 /* BillIntegralDisciplineView.xib in Resources */,
+				041ABCDB1ED833D300C181CB /* DiscoverOnlinePayResultView.xib in Resources */,
 				BC4AABE81E4D69E2006568A6 /* Main.storyboard in Resources */,
 				042C704B1EC464550035A912 /* LoanOtherTableViewCell.xib in Resources */,
 				BCFE208E1E77E206002BC28C /* RegisterOneViewController.xib in Resources */,
@@ -2036,6 +2065,7 @@
 				BC41DAEA1E91F781008FC9DC /* Login.xcassets in Resources */,
 				BC3FB69B1E974BBD00C06A95 /* MyQrCodeTableViewCell.xib in Resources */,
 				BC36EA441E937E600097F2F2 /* MyCollectionListViewController.xib in Resources */,
+				041ABCD21ED823A800C181CB /* AlipaySDK.bundle in Resources */,
 				BCA17DDB1E8BB2AD00B4AFDA /* Bill.xcassets in Resources */,
 				04196AFF1ED68261005F64C2 /* AddressTableViewCell.xib in Resources */,
 				BCFE20921E77E206002BC28C /* ForgetPasswordOneViewController.xib in Resources */,
@@ -2179,6 +2209,7 @@
 				04196B031ED686DA005F64C2 /* EditAddressViewController.m in Sources */,
 				042C704F1EC465C60035A912 /* LoanOtherViewController.m in Sources */,
 				BC9B3DD61E7683B7003DC241 /* NoBankCardViewController.m in Sources */,
+				041ABCDA1ED833D300C181CB /* DiscoverOnlinePayResultView.m in Sources */,
 				BC2E53251E9524FB00F7A99C /* UIScrollView+NoDataSouce.m in Sources */,
 				BC34A1C01E9256CA00C786C0 /* ButtonGroupView.m in Sources */,
 				BC9B3DDE1E7688AD003DC241 /* PersonCenterTableViewCell.m in Sources */,
@@ -2312,6 +2343,7 @@
 				BC4AAC151E4D6DBB006568A6 /* RootViewController.m in Sources */,
 				BCFE206E1E77C7D6002BC28C /* SelectBanCardView.m in Sources */,
 				046DAF9F1ED57B0100E26C2C /* MyRecommendViewController.m in Sources */,
+				041ABCD61ED823D400C181CB /* AliPayObject.m in Sources */,
 				BC4AAC1A1E4D6E5B006568A6 /* HomeViewController.m in Sources */,
 				BC34ECAB1E8B891E00613D35 /* AboutsUsTableViewCell.m in Sources */,
 				BC34A1C61E9256CA00C786C0 /* ChineseToPinyinResource.m in Sources */,
@@ -2493,6 +2525,7 @@
 					"$(PROJECT_DIR)/ShellCoin/ThirdAPI/share/UMSocial_Sdk_4.4",
 					"$(PROJECT_DIR)/ShellCoin/ThirdAPI/UMStatistics_4.1.4",
 					"$(PROJECT_DIR)/ShellCoin/Home/Merchant/Merchantmap",
+					"$(PROJECT_DIR)/ShellCoin/ThirdAPI/AlipaySDK",
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/ShellCoin/PrefixHeader.pch";
 				INFOPLIST_FILE = ShellCoin/Info.plist;
@@ -2502,6 +2535,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/ShellCoin/ThirdAPI/share/UMessage_Sdk_1.2.3",
 					"$(PROJECT_DIR)/ShellCoin/ThirdAPI/share/Wechat",
+					"$(PROJECT_DIR)/ShellCoin/Discover/JhtMarqueeSDK",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Letopop.ShellCoin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2527,6 +2561,7 @@
 					"$(PROJECT_DIR)/ShellCoin/ThirdAPI/share/UMSocial_Sdk_4.4",
 					"$(PROJECT_DIR)/ShellCoin/ThirdAPI/UMStatistics_4.1.4",
 					"$(PROJECT_DIR)/ShellCoin/Home/Merchant/Merchantmap",
+					"$(PROJECT_DIR)/ShellCoin/ThirdAPI/AlipaySDK",
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/ShellCoin/PrefixHeader.pch";
 				INFOPLIST_FILE = ShellCoin/Info.plist;
@@ -2536,6 +2571,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/ShellCoin/ThirdAPI/share/UMessage_Sdk_1.2.3",
 					"$(PROJECT_DIR)/ShellCoin/ThirdAPI/share/Wechat",
+					"$(PROJECT_DIR)/ShellCoin/Discover/JhtMarqueeSDK",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Letopop.ShellCoin;
 				PRODUCT_NAME = "$(TARGET_NAME)";

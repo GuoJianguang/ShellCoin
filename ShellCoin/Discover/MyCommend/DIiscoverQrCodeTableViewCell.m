@@ -23,7 +23,6 @@
     self.heardImageVIew.layer.cornerRadius = (TWitdh-50)*(18/70.)*(122/180.)/2.;
     self.itemVIew.layer.cornerRadius = 10;
     self.itemVIew.layer.masksToBounds = YES;
-    [self getShareRequest];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -47,14 +46,16 @@
                                                @(UMSocialPlatformType_WechatTimeLine),
                                                ]];
     [SVProgressHUD showWithStatus:@"正在加载..."];
-    [HttpClient POST:@"user/recomendUser/get" parameters:@{@"token":[ShellCoinUserInfo shareUserInfos].token} success:^(NSURLSessionDataTask *operation, id jsonObject) {
+    NSDictionary *parms = @{@"token":[ShellCoinUserInfo shareUserInfos].token,@"goodsId":NullToNumber(self.goodsId)};
+
+    [HttpClient POST:@"find/recommendURL/get" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
         [SVProgressHUD dismiss];
         if (IsRequestTrue) {
             [UMSocialUIManager removeAllCustomPlatformWithoutFilted];
             [UMSocialShareUIConfig shareInstance].sharePageGroupViewConfig.sharePageGroupViewPostionType = UMSocialSharePageGroupViewPositionType_Bottom;
             [UMSocialShareUIConfig shareInstance].sharePageScrollViewConfig.shareScrollViewPageItemStyleType = UMSocialPlatformItemViewBackgroudType_IconAndBGRadius;
             [UMSocialUIManager showShareMenuViewInWindowWithPlatformSelectionBlock:^(UMSocialPlatformType platformType, NSDictionary *userInfo) {
-                [self runShareWithType:platformType withTitle:@"和我一起加入懒鱼大家庭吧" withUrl:NullToSpace(jsonObject[@"data"][@"url"])];
+                [self runShareWithType:platformType withTitle:@"快分享给朋友，体验消费商带来的乐趣和收益吧。" withUrl:NullToSpace(jsonObject[@"data"])];
             }];
         }
     } failure:^(NSURLSessionDataTask *operation, NSError *error) {
@@ -67,7 +68,7 @@
     UMSocialMessageObject *messageObject = [UMSocialMessageObject messageObject];
     
     //创建网页内容对象
-    UMShareWebpageObject *shareObject = [UMShareWebpageObject shareObjectWithTitle:title descr:@"欢迎关注" thumImage:AppIconImage];
+    UMShareWebpageObject *shareObject = [UMShareWebpageObject shareObjectWithTitle:title descr:@"推荐商品" thumImage:AppIconImage];
     //设置网页地址
     shareObject.webpageUrl = url;
     //分享消息对象设置分享内容对象
@@ -93,14 +94,20 @@
     }];
 }
 
+- (void)setGoodsId:(NSString *)goodsId
+{
+    _goodsId = goodsId;
+    [self getShareRequest];
+}
+
 - (void)getShareRequest
 {
-    NSDictionary *parms = @{@"token":[ShellCoinUserInfo shareUserInfos].token};
-    [HttpClient POST:@"user/recomendUser/get" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
-        [self.heardImageVIew sd_setImageWithURL:[NSURL URLWithString:NullToSpace(jsonObject[@"data"][@"avatar"])] placeholderImage:LoadingErrorDefaultHearder];
-        self.nameLabel.text = NullToSpace(jsonObject[@"data"][@"name"]);
-        self.phoneLabel.text = NullToSpace(jsonObject[@"data"][@"phone"]);
-        [self createQR:NullToSpace(jsonObject[@"data"][@"url"])];
+    NSDictionary *parms = @{@"token":[ShellCoinUserInfo shareUserInfos].token,@"goodsId":NullToNumber(self.goodsId)};
+    [HttpClient POST:@"find/recommendURL/get" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
+        [self.heardImageVIew sd_setImageWithURL:[NSURL URLWithString:[ShellCoinUserInfo shareUserInfos].avatar] placeholderImage:LoadingErrorDefaultHearder];
+        self.nameLabel.text = [ShellCoinUserInfo shareUserInfos].idcardName;
+        self.phoneLabel.text = [ShellCoinUserInfo shareUserInfos].phone;
+        [self createQR:NullToSpace(jsonObject[@"data"])];
         
     } failure:^(NSURLSessionDataTask *operation, NSError *error) {
         

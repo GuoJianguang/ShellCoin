@@ -20,7 +20,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.naviBar.hidden = YES;
-    self.htmlUrl = @"https://www.baidu.com";
     NSURL  *url = [NSURL URLWithString:self.htmlUrl];
     NSURLRequest *request = [[NSURLRequest alloc]initWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:15.];
     self.webView.delegate = self;
@@ -59,6 +58,7 @@
 
 - (IBAction)buyBtn:(UIButton *)sender {
     [self.view addSubview:self.selectNumberView];
+    self.selectNumberView.goodsId = self.goodsid;
     UIEdgeInsets insets = UIEdgeInsetsMake(0, 0, 0, 0);
     [self.selectNumberView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view).insets(insets);

@@ -33,7 +33,15 @@
     }
 }
 
+- (void)setIsDicover:(BOOL)isDicover
+{
+    _isDicover = isDicover;
+    if (_isDicover) {
+        self.autResultTitleLabel.text = @"提现成功";
+        self.successLabel.text = @"提现成功，我们将在2-3个工作日内为您处理";
+    }
 
+}
 - (IBAction)backBtn:(id)sender{
     [self.viewController.navigationController popViewControllerAnimated:YES];
 }

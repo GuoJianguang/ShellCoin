@@ -46,6 +46,7 @@
     if (!cell) {
         cell = [DIiscoverQrCodeTableViewCell newCell];
     }
+    cell.goodsId = self.goodsId;
     return cell;
 }
 

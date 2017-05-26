@@ -7,6 +7,30 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AddressTableViewCell.h"
+
+typedef NS_ENUM(NSInteger,DiscoverPayway_type){
+    DiscoverPayway_type_wechat = 1,//微信支付
+    DiscoverPayway_type_alipay = 2//支付宝支付
+};
+
+@interface DiscoverGoodsDetailModel : BaseModel
+
+@property (nonatomic,copy)NSString *name;
+@property (nonatomic,copy)NSString *slideImages;
+@property (nonatomic,copy)NSString *picDescs;
+@property (nonatomic,copy)NSString *txtDesc;
+@property (nonatomic,copy)NSString *cashAmount;
+@property (nonatomic,copy)NSString *expectAmount;
+@property (nonatomic,copy)NSString *consumeAmount;
+@property (nonatomic,copy)NSString *freeFeight;
+@property (nonatomic,copy)NSString *hasInventory;
+
+@property (nonatomic, copy)NSString *coverImage;
+
+@property (nonatomic, copy)NSString *freight;
+@end
+
 
 @interface SureDiscoverOrderTableViewCell : BaseTableViewCell
 
@@ -16,6 +40,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *name;
 @property (weak, nonatomic) IBOutlet UILabel *phone;
 @property (weak, nonatomic) IBOutlet UILabel *address;
+@property (weak, nonatomic) IBOutlet UIButton *addAddressBtn;
+- (IBAction)addAddressBtn:(UIButton *)sender;
 
 @property (weak, nonatomic) IBOutlet UILabel *addressLabel;
 @property (weak, nonatomic) IBOutlet UIButton *editAddressBtn;
@@ -46,4 +72,13 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *paywayLabel;
 
+@property (nonatomic,copy)NSString *goodsid;
+
+@property (nonatomic,strong)DiscoverGoodsDetailModel *dataModel;
+
+@property (nonatomic, assign)NSInteger number;
+
+@property (nonatomic, assign)DiscoverPayway_type pay_type;
+
+@property (nonatomic, strong)ShippingAddressModel *addressModel;
 @end

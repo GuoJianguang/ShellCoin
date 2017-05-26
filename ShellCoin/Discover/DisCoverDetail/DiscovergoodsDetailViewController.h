@@ -19,4 +19,6 @@
 
 @property (nonatomic,copy)NSString *htmlUrl;
 
+@property (nonatomic, copy)NSString *goodsid;
+
 @end

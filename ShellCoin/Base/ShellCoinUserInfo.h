@@ -195,6 +195,9 @@
 @property (nonatomic,copy)NSString *lastRebateConsumeBalance;
 
 
+//发现模块里面可用余额
+@property (nonatomic, assign)double discoverAvilableBalance;
+
 
 @property (nonatomic, assign)BOOL isShowPay;
 

@@ -17,4 +17,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *totalAmount;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
+
+@property (nonatomic, copy)NSString *goodsId;
 @end

@@ -11,6 +11,11 @@
 @interface DiscoverRecommendModel : BaseModel
 
 /**
+ * 到账时间戳
+ */
+
+@property (nonatomic,copy)NSString *accountTimeTamp;
+/**
  *时间
  */
 @property (nonatomic,copy)NSString *tranTime;
@@ -29,11 +34,19 @@
 @property (nonatomic,copy)NSString *number;
 
 /**
- * state
+ * 0未到账  1已到账
  */
+
 @property (nonatomic,copy)NSString *state;
+/**
+ *   1返本收益  2推荐收益
+ */
+
+@property (nonatomic,copy)NSString *type;
 
 @property (nonatomic, copy)NSString *descript;
+
+@property (nonatomic, copy)NSString *sysTime;
 
 @end
 

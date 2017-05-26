@@ -50,7 +50,7 @@
             break;
         case 3:
         {
-            self.markImageView.image = [UIImage imageNamed:@"pic_state_green"];
+            self.markImageView.image = [UIImage imageNamed:@"pic_state_red"];
             self.moneyLabel.textColor = self.markLabel.textColor = MacoColor;
             markStr = @"抵换成功";
         }

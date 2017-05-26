@@ -35,4 +35,5 @@
 @property (weak, nonatomic) IBOutlet UIButton *minusBtn;
 
 
+@property (nonatomic, copy)NSString *goodsId;
 @end

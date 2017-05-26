@@ -15,13 +15,14 @@
 + (id)modelWithDic:(NSDictionary *)dic
 {
     DiscoverRecommendModel *model = [[DiscoverRecommendModel alloc]init];
-    model.tranTime  = NullToSpace(dic[@"tranTime"]);
+    model.tranTime  = NullToSpace(dic[@"accountTime"]);
     model.amount = NullToNumber(dic[@"amount"]);
     model.phone = NullToSpace(dic[@"phone"]);
-    model.number = NullToNumber(dic[@"number"]);
+    model.number = NullToNumber(dic[@"buyNum"]);
     model.state = NullToNumber(dic[@"state"]);
     model.descript = NullToSpace(dic[@"descript"]);
-
+    model.type = NullToNumber(dic[@"type"]);
+    model.accountTimeTamp = NullToNumber(dic[@"accountTimeTamp"]);
     return model;
 }
 
@@ -45,6 +46,8 @@
     self.tempTime = 0;
 
     self.timeLabel.adjustsFontSizeToFitWidth = self.statusLabel.adjustsFontSizeToFitWidth = self.moneyLabel.adjustsFontSizeToFitWidth = YES;
+    
+
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -57,44 +60,68 @@
 {
     _dataModel = dataModel;
     self.markLabel.text = [NSString stringWithFormat:@"%@*%@",_dataModel.phone,_dataModel.number];
-//        self.timeLabel.text = _dataModel.tranTime;
-//        switch ([_dataModel.state integerValue]) {
-//            case 1:
-//            {
-//                self.statusLabel.text = [NSString stringWithFormat:@"消费¥%@",_shellCoinModel.tranAmount];
-//                self.moneyLabel.text = [NSString stringWithFormat:@"+%@积分",_shellCoinModel.shellsAmount];
-//            }
-//                break;
-//            case 2:
-//            {
-//                self.statusLabel.text = [NSString stringWithFormat:@"抵换¥%@",_shellCoinModel.tranAmount];
-//                self.moneyLabel.text = [NSString stringWithFormat:@"-%@积分",_shellCoinModel.shellsAmount];
-//    
-//            }
-//                break;
-//            case 3:
-//            {
-//                self.statusLabel.text = [NSString stringWithFormat:@"积分支付¥%@",_shellCoinModel.tranAmount];
-//                self.moneyLabel.text = [NSString stringWithFormat:@"-%@积分",_shellCoinModel.shellsAmount];
-//            }
-//                break;
-//            default:
-//                break;
-//        }
-//    NSTimeInterval interval=[_dataModel.endTime longLongValue] / 1000.0;
-//    NSTimeInterval interval = 1498629853;
-//    NSDate *date = [NSDate dateWithTimeIntervalSince1970:interval];
-//    NSDateFormatter *objDateformat = [[NSDateFormatter alloc] init];
-//    [objDateformat setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
-//    __weak DiscoverRecommendTableViewCell *weak_self = self;
-////    NSTimeInterval nowInterval= _dataModel.systmTime/1000;
-//    NSTimeInterval nowInterval= 1495692253;
-//    NSDate *nowDate = [NSDate dateWithTimeIntervalSince1970:nowInterval];
-//    self.tempTime =[date timeIntervalSinceDate:nowDate];
-//    [self.countDown countDownWithPER_SECBlock:^{
-//        [weak_self getNowTimeWithStringEndTime];
-//        weak_self.tempTime --;
-//    }];
+    self.moneyLabel.text =[NSString stringWithFormat:@"¥%.2f",[_dataModel.amount doubleValue]];
+    switch ([_dataModel.type integerValue]) {
+        case 1://返本收益
+        {
+            switch ([_dataModel.state integerValue]) {
+                case 0://未到账
+                {
+                    self.statusLabel.text = @"激活返本";
+                    self.statusLabel.textColor = self.moneyLabel.textColor = [UIColor colorFromHexString:@"#2586d5"];
+                    self.markImageView.image = [UIImage imageNamed:@"pic_state_blue"];
+                    NSTimeInterval interval=[_dataModel.accountTimeTamp longLongValue] / 1000.0;
+                    NSDate *date = [NSDate dateWithTimeIntervalSince1970:interval];
+                    NSDateFormatter *objDateformat = [[NSDateFormatter alloc] init];
+                    [objDateformat setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+                    __weak DiscoverRecommendTableViewCell *weak_self = self;
+                    NSTimeInterval nowInterval= [_dataModel.sysTime longLongValue]/1000;
+                    NSDate *nowDate = [NSDate dateWithTimeIntervalSince1970:nowInterval];
+                    self.tempTime =[date timeIntervalSinceDate:nowDate];
+                    [self.countDown countDownWithPER_SECBlock:^{
+                        [weak_self getNowTimeWithStringEndTime];
+                        
+                        NSArray *number = @[@"0",@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9"];
+                        NSMutableAttributedString *attributeString  = [[NSMutableAttributedString alloc]initWithString:self.timeLabel.text];
+                        for (int i = 0; i < self.timeLabel.text.length; i ++) {
+                            //这里的小技巧，每次只截取一个字符的范围
+                            NSString *a = [self.timeLabel.text substringWithRange:NSMakeRange(i, 1)];
+                            //判断装有0-9的字符串的数字数组是否包含截取字符串出来的单个字符，从而筛选出符合要求的数字字符的范围NSMakeRange
+                            if ([number containsObject:a]) {
+                                [attributeString setAttributes:@{NSForegroundColorAttributeName:MacoColor,NSFontAttributeName:[UIFont systemFontOfSize:13]} range:NSMakeRange(i, 1)];
+                            }
+                        }
+                        self.timeLabel.attributedText = attributeString;
+                        weak_self.tempTime --;
+                    }];
+                    
+
+
+                    
+            }
+                    break;
+                case 1://已到账
+                    self.statusLabel.text = @"激活返本";
+                    
+                    self.markImageView.image = [UIImage imageNamed:@"pic_state_yellow"];
+                    self.statusLabel.textColor = self.moneyLabel.textColor = [UIColor colorFromHexString:@"#ff8335"];
+                    break;
+                default:
+                    break;
+            }
+        }
+            break;
+        case 2://推荐收益
+            self.statusLabel.text = @"推荐收益";
+            self.statusLabel.textColor = self.moneyLabel.textColor = MacoColor;
+            self.markImageView.image = [UIImage imageNamed:@"pic_state_red"];
+            break;
+            
+        default:
+            break;
+    }
+
+
 
 }
 
@@ -132,14 +159,14 @@
         secondsStr = [NSString stringWithFormat:@"%d",seconds];
     if (hours<=0&&minutes<=0&&seconds<=0&&days<=0) {
         [self.countDown destoryTimer];
-        self.timeLabel.text = @"活动已结束";
+        self.timeLabel.text = @"已到账";
         [self.countDown destoryTimer];
         return;
     }
     if (days) {
-        self.timeLabel.text = [NSString stringWithFormat:@"%@天%@小时%@分%@秒", dayStr,hoursStr, minutesStr,secondsStr];
+        self.timeLabel.text = [NSString stringWithFormat:@"%@天%@小时%@分%@秒后到账", dayStr,hoursStr, minutesStr,secondsStr];
         return;
     }
-    self.timeLabel.text = [NSString stringWithFormat:@"%@小时%@分%@秒",hoursStr , minutesStr,secondsStr];
+    self.timeLabel.text = [NSString stringWithFormat:@"%@小时%@分%@秒后到账",hoursStr , minutesStr,secondsStr];
 }
 @end

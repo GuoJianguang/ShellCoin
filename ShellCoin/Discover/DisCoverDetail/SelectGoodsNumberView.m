@@ -77,6 +77,8 @@
     } completion:^(BOOL finished) {
         if (finished) {
             SureDiscoverOrderViewController *sureVC = [[SureDiscoverOrderViewController alloc]init];
+            sureVC.goodsId = self.goodsId;
+            sureVC.number = [self.numberTF.text integerValue];
             [self.viewController.navigationController pushViewController:sureVC animated:YES];
             [self removeFromSuperview];
         }

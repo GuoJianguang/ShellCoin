@@ -10,6 +10,7 @@
 typedef NS_ENUM(NSInteger,Password_type){
     Password_type_withdraw = 1,//抵换
     Password_type_MerchantOnlinePay = 2,//商家支付
+    Password_type_discoverWithdrwal = 3,//商家支付
 };
 
 

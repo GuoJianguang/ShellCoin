@@ -59,6 +59,7 @@ static NSTimeInterval _time = 3;
     self.swipeView.wrapEnabled = NO;
     if (dataSouceArray.count > 1) {
         self.timer = [NSTimer scheduledTimerWithTimeInterval:_time target:self selector:@selector(autoScroll) userInfo:nil repeats:YES];
+        
     }
 }
 

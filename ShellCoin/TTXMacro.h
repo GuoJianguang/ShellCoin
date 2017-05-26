@@ -83,7 +83,8 @@
 //商家未结算推送
 #define Upush_NotJiesuan_Notifi @"Upush_NotJiesuan_Notifi"
 
-
+//支付宝支付结果回掉
+#define AliPayResult @"AliPayResult"
 #define AutoLoginAfterGetDeviceToken @"AutoLoginAfterGetDeviceToken"
 
 #define IsRequestTrue ([NullToNumber(jsonObject[@"code"]) isEqualToString:@"0"])

@@ -17,6 +17,7 @@
 @property (nonatomic, strong)SelectBanCardView *selectBancardView;
 @property (nonatomic, strong)SureTradInView *passwordView;
 
+@property (nonatomic, assign)double rate;
 @end
 
 @implementation DiscoverWithdrawalViewController
@@ -30,10 +31,25 @@
     self.bankCardNumLabel.textColor = [UIColor colorFromHexString:@"#969696"];
     self.inputAmountTF.delegate = self;
     self.canWithDrawLabel.adjustsFontSizeToFitWidth = YES;
-    self.canWithDrawLabel.text = [NSString stringWithFormat:@"%.2f",[[ShellCoinUserInfo shareUserInfos].aviableBalance doubleValue]];
+    self.canWithDrawLabel.text = [NSString stringWithFormat:@"%.2f",[ShellCoinUserInfo shareUserInfos].discoverAvilableBalance] ;
     self.view.backgroundColor = [UIColor whiteColor];
     [self.inputAmountTF becomeFirstResponder];
     [self getmyBankCardRequest];
+    
+    [self getfindwithdrawFeeget];
+    
+    self.rate = 0;
+}
+
+
+- (void)getfindwithdrawFeeget
+{
+    [HttpClient POST:@"find/withdrawFee/get" parameters:@{@"token":[ShellCoinUserInfo shareUserInfos].token} success:^(NSURLSessionDataTask *operation, id jsonObject) {
+        self.rate = [NullToNumber(jsonObject[@"data"]) doubleValue];
+        self.poundageLabel.text = [NSString stringWithFormat:@"提现手续费费率%.2f",self.rate];
+    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
+        
+    }];
 }
 
 - (SureTradInView *)passwordView
@@ -132,11 +148,11 @@ if ([self valueValidated]) {
 {
     NSDictionary *parms = @{@"token":[ShellCoinUserInfo shareUserInfos].token,
                             @"withdrawAmount":self.inputAmountTF.text,
-                            @"id":self.bankModel.bankinfoid};
+                            @"bankcardId":self.bankModel.bankinfoid};
     [self.view addSubview:self.passwordView];
     self.passwordView.passwordTF.text = @"";
     self.passwordView.mallOrderParms = [NSMutableDictionary dictionaryWithDictionary:parms];
-    self.passwordView.inputType = Password_type_withdraw;
+    self.passwordView.inputType = Password_type_discoverWithdrwal;
     UIEdgeInsets insets = UIEdgeInsetsMake(0, 0, 0, 0);
     [self.passwordView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view).insets(insets);
@@ -151,16 +167,16 @@ if ([self valueValidated]) {
 -(BOOL) valueValidated {
     // 判断电话号码是否合格
     if ([self emptyTextOfTextField:self.inputAmountTF]) {
-        [[JAlertViewHelper shareAlterHelper]showTint:@"请输入抵换金额" duration:1.];
+        [[JAlertViewHelper shareAlterHelper]showTint:@"请输入提现金额" duration:1.];
         return NO;
     }else if ([self.canWithDrawLabel.text doubleValue] < [self.inputAmountTF.text doubleValue]) {
-        [[JAlertViewHelper shareAlterHelper]showTint:@"您的可抵换余额不足，请重新输入" duration:1.5];
+        [[JAlertViewHelper shareAlterHelper]showTint:@"您的可提现余额不足，请重新输入" duration:1.5];
         return NO;
     }else if ([self.inputAmountTF.text integerValue]%10 !=0){
-        [[JAlertViewHelper shareAlterHelper]showTint:@"您的抵换金额必须是10的整数倍" duration:1.5];
+        [[JAlertViewHelper shareAlterHelper]showTint:@"您的提现金额必须是10的整数倍" duration:1.5];
         return NO;
-    }else if ([self.inputAmountTF.text integerValue] <100){
-            [[JAlertViewHelper shareAlterHelper]showTint:@"您的抵换金额不能小于100" duration:1.5];
+    }else if ([self.inputAmountTF.text integerValue] <40){
+            [[JAlertViewHelper shareAlterHelper]showTint:@"您的抵换金额不能小于40" duration:1.5];
             return NO;
     }
     
@@ -200,9 +216,26 @@ if ([self valueValidated]) {
 }
 
 
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    if (self.inputAmountTF == textField) {
+        
+        if ([textField.text  isEqualToString: @""] || !textField.text) {
+            return;
+        }
+        double withRate = 1 -  self.rate;
+        double money = [textField.text doubleValue];
+        double actualMoney = money*withRate;
+        self.poundageLabel.text = [NSString stringWithFormat:@"提现手续费费率%.2f,实际到账金额%.2f元",self.rate,actualMoney];
+
+    }
+}
+
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
     if (textField == self.inputAmountTF) {
+    self.poundageLabel.text = [NSString stringWithFormat:@"提现手续费费率%.2f,实际到账金额--元",self.rate];
+
         NSScanner      *scanner    = [NSScanner scannerWithString:string];
         NSCharacterSet *numbers;
         NSRange         pointRange = [textField.text rangeOfString:@"."];
@@ -263,7 +296,7 @@ if ([self valueValidated]) {
     self.bankLabel.text = _bankModel.bankName;
     NSString *count = [_bankModel.bankAccount substringFromIndex:_bankModel.bankAccount.length-4];
     self.bankCardNumLabel.text = [NSString stringWithFormat:@"(%@)",count];
-    self.poundageLabel.text = _bankModel.withdrawRateDesc;
+//    self.poundageLabel.text = _bankModel.withdrawRateDesc;
     [self.bankCardIcon sd_setImageWithURL:[NSURL URLWithString:_bankModel.bankImg] placeholderImage:[UIImage imageNamed:@"icon_yinlian"]];
 
 }
@@ -313,11 +346,11 @@ if ([self valueValidated]) {
 
 - (void)withDrawalSuccess
 {
-    self.naviBar.hiddenDetailBtn = YES;
     [self.view addSubview:self.resultView];
-    self.naviBar.title = @"抵换成功";
+    self.naviBar.title = @"提现成功";
     self.resultView.autResultLabel.text =[NSString stringWithFormat:@"¥ %@",self.inputAmountTF.text];
     UIEdgeInsets insets = UIEdgeInsetsMake(64, 0, 0, 0);
+    self.resultView.isDicover = YES;
     [self.resultView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view).insets(insets);
     }];
@@ -326,9 +359,9 @@ if ([self valueValidated]) {
 
 - (void)paysuccess:(NSString *)payWay
 {
-    self.naviBar.hiddenDetailBtn = YES;
     [self.view addSubview:self.resultView];
     self.resultView.autResultLabel.text =[NSString stringWithFormat:@"¥ %@",payWay];
+    self.resultView.isDicover = YES;
     UIEdgeInsets insets = UIEdgeInsetsMake(64, 0, 0, 0);
     [self.resultView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view).insets(insets);
@@ -339,5 +372,11 @@ if ([self valueValidated]) {
 - (IBAction)withdrawalRecodBtn:(UIButton *)sender {
     WithDrawalRecodViewController *withDrawalVC = [[WithDrawalRecodViewController alloc]init];
     [self.navigationController pushViewController:withDrawalVC animated:YES];
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    [super touchesBegan:touches withEvent:event];
+    [self.view endEditing:YES];
 }
 @end

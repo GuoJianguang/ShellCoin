@@ -14,6 +14,8 @@
 @property (nonatomic,copy)NSString *time;
 @property (nonatomic,copy)NSString *amount;
 @property (nonatomic,copy)NSString *count;
+@property (nonatomic,copy)NSString *buyId;
+
 @end
 
 @interface BuyRecodTableViewCell : BaseTableViewCell

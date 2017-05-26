@@ -13,10 +13,11 @@
 + (id)modelWithDic:(NSDictionary *)dic
 {
     BuyRecodeModel *model = [[BuyRecodeModel alloc]init];
-    model.time  = NullToSpace(dic[@"tranTime"]);
-    model.amount = NullToNumber(dic[@"balanceAmount"]);
-    model.count = NullToNumber(dic[@"count"]);
+    model.time  = NullToSpace(dic[@"time"]);
+    model.amount = NullToNumber(dic[@"tranAmount"]);
+    model.count = NullToNumber(dic[@"buyNum"]);
     model.goodsName = NullToNumber(dic[@"goodsName"]);
+    model.buyId = NullToNumber(dic[@"id"]);
     return model;
 }
 
@@ -40,7 +41,7 @@
 - (void)setDataModel:(BuyRecodeModel *)dataModel
 {
     _dataModel = dataModel;
-    self.moneyLabel.text = [NSString stringWithFormat:@"+¥%.2f",[_dataModel.amount doubleValue]];
+    self.moneyLabel.text = [NSString stringWithFormat:@"¥%.2f",[_dataModel.amount doubleValue]];
     self.timeLabel.text = _dataModel.time;
     self.markLabel.text = [NSString stringWithFormat:@"%@*%@",_dataModel.goodsName,_dataModel.count];
     

@@ -56,6 +56,7 @@
         self.bgimage.contentMode = UIViewContentModeScaleAspectFill;
         self.bgimage.layer.masksToBounds = YES;
     }
+    self.password_tf.text = @"123456";
 }
 
 - (IBAction)login_btn:(UIButton *)sender

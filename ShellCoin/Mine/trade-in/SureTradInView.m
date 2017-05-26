@@ -90,7 +90,11 @@
             [self gotMerchantOnlinePay:sender];
         }
             break;
-            
+        case Password_type_discoverWithdrwal:
+        {
+            [self getDiscoverWithdrawlRequest:sender];
+        }
+            break;
         default:
             break;
     }
@@ -121,10 +125,33 @@
             [self removeFromSuperview];
         }
     } failure:^(NSURLSessionDataTask *operation, NSError *error) {
-        [[JAlertViewHelper shareAlterHelper]showTint:@"支付失败，请重试" duration:2.0];
+        [[JAlertViewHelper shareAlterHelper]showTint:@"抵换失败，请重试" duration:2.0];
         sender.enabled = YES;
         [SVProgressHUD dismiss];
     }];
+}
+
+#pragma mark - 发现提现接口请求
+- (void)getDiscoverWithdrawlRequest:(UIButton *)sender
+{
+    NSString *password = [[NSString stringWithFormat:@"%@%@",self.passwordTF.text,PasswordKey]md5_32];
+    [self.mallOrderParms setObject:password forKey:@"password"];
+    [SVProgressHUD showWithStatus:@"正在提交申请"];
+    [HttpClient POST:@"find/withdraw/add" parameters:self.mallOrderParms success:^(NSURLSessionDataTask *operation, id jsonObject) {
+        [SVProgressHUD dismiss];
+        sender.enabled = YES;
+        if (IsRequestTrue) {
+            if ([self.delegate respondsToSelector:@selector(paysuccess:)]) {
+                [self.delegate paysuccess:self.mallOrderParms[@"withdrawAmount"]];
+            }
+            [self removeFromSuperview];
+        }
+    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
+        [[JAlertViewHelper shareAlterHelper]showTint:@"提现失败，请重试" duration:2.0];
+        sender.enabled = YES;
+        [SVProgressHUD dismiss];
+    }];
+
 }
 
 #pragma mark - 商城在线支付

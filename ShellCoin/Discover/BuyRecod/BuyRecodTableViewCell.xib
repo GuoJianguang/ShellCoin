@@ -21,7 +21,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IkP-u9-CHk">
                         <rect key="frame" x="12" y="7" width="296" height="109.5"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pic_state_blue" translatesAutoresizingMaskIntoConstraints="NO" id="jwg-9I-yRs">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pic_state_red" translatesAutoresizingMaskIntoConstraints="NO" id="jwg-9I-yRs">
                                 <rect key="frame" x="0.0" y="0.0" width="6" height="109.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="6" id="UOE-yr-g9D"/>
@@ -82,6 +82,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="pic_state_blue" width="6" height="70"/>
+        <image name="pic_state_red" width="6" height="70"/>
     </resources>
 </document>
