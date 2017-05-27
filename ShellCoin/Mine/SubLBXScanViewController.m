@@ -184,6 +184,28 @@
     __weak __typeof(self) weakSelf = self;
     NSData *data = [strResult.strScanned dataUsingEncoding:NSUTF8StringEncoding];
     NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+    
+    if (strResult.strScanned && !dic ) {
+        UIAlertController *alertcontroller = [UIAlertController alertControllerWithTitle:@"提示" message:@"是否有浏览器打开该连接" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+            [weakSelf reStartDevice];
+        }];
+        UIAlertAction *otherAction = [UIAlertAction actionWithTitle:@"打开" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+
+            if (![[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:strResult.strScanned]]) {
+                [[JAlertViewHelper shareAlterHelper]showTint:@"暂时不能浏览官网" duration:1.5];
+                [weakSelf reStartDevice];
+                return;
+            }
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:strResult.strScanned]];
+            [weakSelf reStartDevice];
+
+        }];
+        [alertcontroller addAction:cancelAction];
+        [alertcontroller addAction:otherAction];
+        [self presentViewController:alertcontroller animated:YES completion:NULL];
+        return;
+    }
     if ([NullToNumber(dic[@"qrCodeType"]) isEqualToString:@"1001"]) {
         OnlinePayViewController *payVC = [[OnlinePayViewController alloc]init];
         MerchantModel *model = [[MerchantModel alloc]init];

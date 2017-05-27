@@ -63,8 +63,8 @@
                                     <constraint firstAttribute="height" constant="44" id="rGb-vC-934"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="分享此页面给朋友，推荐您身边的朋友一起加入我们，您会永久享受他们消费为您带来的收益哦。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mtC-11-ePU">
-                                <rect key="frame" x="25" y="112" width="205" height="67"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="快分享给朋友，体验消费商带来的乐趣和收益吧。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mtC-11-ePU">
+                                <rect key="frame" x="25" y="112" width="205" height="33.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -76,7 +76,7 @@
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="znQ-tZ-XDO">
-                                <rect key="frame" x="25" y="214" width="270" height="324"/>
+                                <rect key="frame" x="25" y="180.5" width="270" height="324"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7EJ-sG-6L6">
                                         <rect key="frame" x="23" y="26" width="47" height="47"/>

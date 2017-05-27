@@ -110,7 +110,10 @@
             break;
         case 2://是消费商有推荐别的用户
         {
-            self.earnings.hidden = self.earningsLabel.hidden = self.withDrawlBtn.hidden = self.checkRecommendView.hidden = self.alerView.hidden = NO;
+            self.earnings.hidden = self.earningsLabel.hidden = self.withDrawlBtn.hidden = self.checkRecommendView.hidden = self.alerView.hidden =  NO;
+            if (_dataModel.costRebateList.count == 0) {
+                self.alerView.hidden = YES;
+            }
             self.notConsumersView.hidden = YES;
             self.earnings.text = [NSString stringWithFormat:@"¥%.2f",self.dataModel.avilableBalance];
             self.checkRecommendLabel.text = @"我的推荐";
@@ -162,7 +165,7 @@
 
 - (void)getCoumerRequest:(NSString *)goodsId
 {
-    [SVProgressHUD showWithStatus:@"正在加载..." maskType:SVProgressHUDMaskTypeBlack];
+//    [SVProgressHUD showWithStatus:@"正在加载..." maskType:SVProgressHUDMaskTypeBlack];
     NSDictionary *parms = @{@"token":[ShellCoinUserInfo shareUserInfos].token,
                             @"goodsId":goodsId};
     [HttpClient POST:@"find/commissionUser/get" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
@@ -170,11 +173,11 @@
             [ShellCoinUserInfo shareUserInfos].discoverAvilableBalance = [NullToNumber(jsonObject[@"data"][@"avilableBalance"]) doubleValue];
             self.dataModel = [DiscoverConsumersModel modelWithDic:jsonObject[@"data"]];
         }
-        [SVProgressHUD dismiss];
+//        [SVProgressHUD dismiss];
         
     } failure:^(NSURLSessionDataTask *operation, NSError *error) {
         [[JAlertViewHelper shareAlterHelper]showTint:@"消费商信息获取失败，请稍后重试" duration:2.];
-        [SVProgressHUD dismiss];
+//        [SVProgressHUD dismiss];
     }];
 }
 
@@ -246,10 +249,9 @@
 
 - (IBAction)checkRecommendBtn:(UIButton *)sender {
     if ([self.dataModel.userState isEqualToString:@"1"]) {
-        DiscovergoodsDetailViewController *detailVC = [[DiscovergoodsDetailViewController alloc]init];
-        detailVC.goodsid = self.goodsModel.goodsId;
-        detailVC.htmlUrl = self.goodsModel.htmlUrl;
-        [self.viewController.navigationController pushViewController:detailVC animated:YES];
+        DiscoverQrCodeViewController *qrvc = [[DiscoverQrCodeViewController alloc]init];
+        qrvc.goodsId = self.goodsModel.goodsId;
+        [self.viewController.navigationController pushViewController:qrvc animated:YES];
         return;
     }
     

@@ -101,6 +101,7 @@
 -(void)sc_scrollToIndex:(NSInteger)index{
     self.manageView.pageContrlVIew.currentPage = index;
     self.currentPage = index;
+    self.manageView.bankModel = self.dataSouceArray[self.currentPage];
     [self.talbeView reloadData];
     NSLog(@"sc_scrollToIndex-->%ld",index);
 }

@@ -64,6 +64,12 @@
 
 - (void)changeShippingAddress:(NSNotification *)notification
 {
+    if (!notification.userInfo) {
+        SureDiscoverOrderTableViewCell *cell = self.tableView.visibleCells[0];
+        self.addressmodel.addressId = nil;
+        cell.addressModel = self.addressmodel;
+        return;
+    }
     self.addressmodel = notification.userInfo[@"model"];
     SureDiscoverOrderTableViewCell *cell = self.tableView.visibleCells[0];
     cell.addressModel = self.addressmodel;
@@ -118,7 +124,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return (TWitdh-24)*(950/730) + 60;
+    return (TWitdh-24)*(950/730.) + 60;
 }
 
 

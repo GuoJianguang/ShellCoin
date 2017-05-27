@@ -329,9 +329,8 @@
         NSAssert(error==nil, err_string);
         if ([jsonObject isKindOfClass:[NSDictionary class]]) {
             if([NullToNumber(jsonObject[@"code"]) isEqualToString:@"-300"]) {
-//                [TTXUserInfo shareUserInfos].currentLogined = NO;
-//                [[NSUserDefaults standardUserDefaults]removeObjectForKey:IsFirstLaunch];
-//                [[NSUserDefaults standardUserDefaults]synchronize];
+                [ShellCoinUserInfo shareUserInfos].currentLogined = NO;
+                [[NSUserDefaults standardUserDefaults]synchronize];
                 UIAlertView *aler = [[UIAlertView alloc]initWithTitle:@"提醒" message:@"账号登录已过期或已在其他设备上登录,请重新登录" delegate:[UIApplication sharedApplication].keyWindow.rootViewController cancelButtonTitle:@"取消" otherButtonTitles:@"确认",nil];
                 [aler show];
                 success(operation,jsonObject);

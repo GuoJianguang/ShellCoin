@@ -30,6 +30,7 @@
     // Initialization code
     self.timeLabel.textColor = MacoDetailColor;
     self.moneyLabel.adjustsFontSizeToFitWidth = YES;
+    self.markLabel.textColor = MacoTitleColor;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

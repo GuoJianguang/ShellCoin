@@ -44,7 +44,7 @@
     self.moneyLabel.textColor = MacoColor;
     self.statusLabel.textColor = MacoColor;
     self.tempTime = 0;
-
+    self.markLabel.textColor = MacoTitleColor;
     self.timeLabel.adjustsFontSizeToFitWidth = self.statusLabel.adjustsFontSizeToFitWidth = self.moneyLabel.adjustsFontSizeToFitWidth = YES;
     
 
@@ -101,7 +101,7 @@
             }
                     break;
                 case 1://已到账
-                    self.statusLabel.text = @"激活返本";
+                    self.statusLabel.text = @"返本到账";
                     
                     self.markImageView.image = [UIImage imageNamed:@"pic_state_yellow"];
                     self.statusLabel.textColor = self.moneyLabel.textColor = [UIColor colorFromHexString:@"#ff8335"];

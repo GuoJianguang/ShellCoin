@@ -36,14 +36,13 @@
     [super awakeFromNib];
     // Initialization code
     self.wechatImage.image = [UIImage imageNamed:@"icon_wechat_payment_sel"];
-    self.wechatBtn.selected = YES;
     self.wechatLabel.textColor = MacoColor;
     self.wechatMarkBtn.hidden = NO;
+    
     
     self.aliPayMarkBtn.hidden = YES;
     self.aliPayLabel.textColor  =  MacoTitleColor;
     self.aliPayMarkBtn.hidden  = YES;
-    self.aliPaytBtn.selected = NO;
     self.aliPayImage.image = [UIImage imageNamed:@"icon_zhifubao_nor"];
     
     self.name.textColor = self.phone.textColor = self.addressLabel.textColor = self.goodsName.textColor = self.goodsInfoLabel.textColor = self.paywayLabel.textColor = self.goodsNumber.textColor=MacoTitleColor;
@@ -103,13 +102,11 @@
 {
     self.pay_type = DiscoverPayway_type_wechat;
     self.wechatImage.image = [UIImage imageNamed:@"icon_wechat_payment_sel"];
-    self.wechatBtn.selected = YES;
     self.wechatLabel.textColor = MacoColor;
     self.wechatMarkBtn.hidden = NO;
     
     self.aliPayLabel.textColor  = MacoTitleColor;
     self.aliPayMarkBtn.hidden  = YES;
-    self.aliPaytBtn.selected = NO;
     self.aliPayImage.image = [UIImage imageNamed:@"icon_zhifubao_nor"];
 }
 
@@ -117,14 +114,12 @@
 {
     self.pay_type = DiscoverPayway_type_alipay;
     self.aliPayImage.image = [UIImage imageNamed:@"icon_zhifubao_sel"];
-    self.aliPaytBtn.selected = YES;
     self.aliPayLabel.textColor = MacoColor;
     self.aliPayMarkBtn.hidden = NO;
     
     
     self.wechatLabel.textColor  = MacoTitleColor;
     self.wechatMarkBtn.hidden  = YES;
-    self.wechatBtn.selected = NO;
     self.wechatImage.image = [UIImage imageNamed:@"icon_wechat_payment_nor"];
 }
 

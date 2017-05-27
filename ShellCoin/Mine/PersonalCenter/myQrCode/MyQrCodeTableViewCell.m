@@ -67,7 +67,8 @@
     UMSocialMessageObject *messageObject = [UMSocialMessageObject messageObject];
     
     //创建网页内容对象
-    UMShareWebpageObject *shareObject = [UMShareWebpageObject shareObjectWithTitle:title descr:@"欢迎关注" thumImage:AppIconImage];
+    
+    UMShareWebpageObject *shareObject = [UMShareWebpageObject shareObjectWithTitle:title descr:@"欢迎关注" thumImage:[UIImage imageNamed:@"shareicon"]];
     //设置网页地址
     shareObject.webpageUrl = url;
     //分享消息对象设置分享内容对象

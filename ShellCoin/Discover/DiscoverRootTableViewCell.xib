@@ -125,7 +125,7 @@
                                             <constraint firstAttribute="trailing" secondItem="wr6-qs-T46" secondAttribute="trailing" id="xsO-yC-F7N"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iHS-2p-Na5">
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iHS-2p-Na5">
                                         <rect key="frame" x="10" y="0.0" width="299.5" height="24"/>
                                         <subviews>
                                             <view alpha="0.65000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7eF-to-vOg">
