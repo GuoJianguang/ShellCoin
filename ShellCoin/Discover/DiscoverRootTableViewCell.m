@@ -36,7 +36,8 @@
     self.earnings.adjustsFontSizeToFitWidth = YES;
     self.alerView.hidden = YES;
     self.checkRecommendView.hidden = self.withDrawlBtn.hidden = self.earnings.hidden = self.earningsLabel.hidden = !self.notConsumersView.hidden;
-    
+    self.earnings.hidden = self.earningsLabel.hidden = self.withDrawlBtn.hidden = self.checkRecommendView.hidden = self.alerView.hidden = YES;
+    self.notConsumersView.hidden = YES;
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
     self.collectionView.bounces = YES;
@@ -135,8 +136,10 @@
     NSDictionary *parms = @{@"token":[ShellCoinUserInfo shareUserInfos].token,
                             @"pageNo":@(self.page),
                             @"pageSize":@"100"};
+    self.checkReconmmendBtn.enabled = NO;
     [HttpClient POST:@"find/goods/get" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
         if (IsRequestTrue) {
+            self.checkReconmmendBtn.enabled = YES;
             if (isHeader) {
                 [self.dataSouceArray removeAllObjects];
             }
@@ -153,10 +156,13 @@
             self.goodsModel = self.dataSouceArray[0];
             [self.collectionView judgeIsHaveDataSouce:self.dataSouceArray];
             [self.collectionView reloadData];
+            return;
         }
+        self.checkReconmmendBtn.enabled = NO;
 
     } failure:^(NSURLSessionDataTask *operation, NSError *error) {
         [self.collectionView showNoDataSouceNoNetworkConnection];
+        self.checkReconmmendBtn.enabled = NO;
 
     }];
 }
@@ -166,9 +172,11 @@
 - (void)getCoumerRequest:(NSString *)goodsId
 {
 //    [SVProgressHUD showWithStatus:@"正在加载..." maskType:SVProgressHUDMaskTypeBlack];
+    self.checkReconmmendBtn.enabled = NO;
     NSDictionary *parms = @{@"token":[ShellCoinUserInfo shareUserInfos].token,
                             @"goodsId":goodsId};
     [HttpClient POST:@"find/commissionUser/get" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
+        self.checkReconmmendBtn.enabled = YES;
         if (IsRequestTrue) {
             [ShellCoinUserInfo shareUserInfos].discoverAvilableBalance = [NullToNumber(jsonObject[@"data"][@"avilableBalance"]) doubleValue];
             self.dataModel = [DiscoverConsumersModel modelWithDic:jsonObject[@"data"]];
@@ -176,6 +184,7 @@
 //        [SVProgressHUD dismiss];
         
     } failure:^(NSURLSessionDataTask *operation, NSError *error) {
+        self.checkReconmmendBtn.enabled = YES;
         [[JAlertViewHelper shareAlterHelper]showTint:@"消费商信息获取失败，请稍后重试" duration:2.];
 //        [SVProgressHUD dismiss];
     }];
@@ -236,6 +245,11 @@
 }
 #pragma mark - 帮助
 - (IBAction)helpBtn:(UIButton *)sender {
+    BaseHtmlViewController *htmlVC = [[BaseHtmlViewController alloc]init];
+    htmlVC.htmlTitle = @"发现活动说明";
+    htmlVC.htmlUrl = @"https://mp.weixin.qq.com/s/GJFsbLGA2l5WX3SaWcPQuQ";
+    [self.viewController.navigationController pushViewController:htmlVC animated:YES];
+    
     
 }
 #pragma mark - 没有消费商的时候

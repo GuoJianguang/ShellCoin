@@ -105,6 +105,7 @@
                     
                     self.markImageView.image = [UIImage imageNamed:@"pic_state_yellow"];
                     self.statusLabel.textColor = self.moneyLabel.textColor = [UIColor colorFromHexString:@"#ff8335"];
+                    self.timeLabel.text = _dataModel.tranTime;
                     break;
                 default:
                     break;
@@ -115,6 +116,7 @@
             self.statusLabel.text = @"推荐收益";
             self.statusLabel.textColor = self.moneyLabel.textColor = MacoColor;
             self.markImageView.image = [UIImage imageNamed:@"pic_state_red"];
+            self.timeLabel.text = _dataModel.tranTime;
             break;
             
         default:

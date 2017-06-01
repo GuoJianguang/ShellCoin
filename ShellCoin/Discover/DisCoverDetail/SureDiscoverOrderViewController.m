@@ -133,9 +133,9 @@
         [[JAlertViewHelper shareAlterHelper]showTint:@"请选择或者填写收货地址" duration:2.];
         return;
     }
-    if ([self gotRealNameRu:@"在您付款之前,请先进行实名认证"]){
-        return;
-    }
+//    if ([self gotRealNameRu:@"在您付款之前,请先进行实名认证"]){
+//        return;
+//    }
     SureDiscoverOrderTableViewCell *cell = self.tableView.visibleCells[0];
     NSString *amount = [NSString stringWithFormat:@"%.2f",[NullToNumber(self.dataModel.cashAmount) doubleValue] + [NullToNumber(self.dataModel.expectAmount) doubleValue]];
     NSString *tranAmount = [NSString stringWithFormat:@"%.2f",([NullToNumber(self.dataModel.cashAmount) doubleValue] + [NullToNumber(self.dataModel.expectAmount) doubleValue])*self.number + [self.dataModel.freight doubleValue]];

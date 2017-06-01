@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -29,8 +29,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="brf-yZ-dxt">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我的" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zTA-U1-lXI">
-                                        <rect key="frame" x="141.5" y="31.5" width="37" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="发现" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zTA-U1-lXI">
+                                        <rect key="frame" x="142" y="31" width="37" height="22"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -45,7 +45,7 @@
                                             <action selector="buyRecodeBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="2Yu-88-K3g"/>
                                         </connections>
                                     </button>
-                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x7t-cJ-uhi">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x7t-cJ-uhi">
                                         <rect key="frame" x="276" y="20" width="44" height="44"/>
                                         <state key="normal" image="icon_explain">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -66,22 +66,22 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J6W-4d-AtG">
-                                <rect key="frame" x="0.0" y="64" width="319.5" height="196"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="196"/>
                                 <subviews>
                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="消费商收益" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FFR-cC-pN2">
-                                        <rect key="frame" x="25" y="10" width="71.5" height="17"/>
+                                        <rect key="frame" x="25" y="10" width="72" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¥--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HeR-UQ-lBH">
-                                        <rect key="frame" x="12" y="31" width="295.5" height="41"/>
+                                        <rect key="frame" x="12" y="31" width="296" height="41"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="34"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uss-Oc-Vhj">
-                                        <rect key="frame" x="222.5" y="118" width="78" height="78"/>
+                                        <rect key="frame" x="223" y="118" width="78" height="78"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Uss-Oc-Vhj" secondAttribute="height" multiplier="1:1" id="oNm-rs-IQ9"/>
                                         </constraints>
@@ -94,16 +94,16 @@
                                         </connections>
                                     </button>
                                     <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mb9-xz-liU">
-                                        <rect key="frame" x="25" y="118.5" width="193" height="39"/>
+                                        <rect key="frame" x="25" y="118" width="193" height="39"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="推荐消费者返还购物金" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ump-AL-c6a">
-                                                <rect key="frame" x="0.0" y="9" width="173.5" height="21"/>
+                                                <rect key="frame" x="0.0" y="9" width="174" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_enter2_white" translatesAutoresizingMaskIntoConstraints="NO" id="AKB-WF-Xmh">
-                                                <rect key="frame" x="173.5" y="4" width="30" height="30"/>
+                                                <rect key="frame" x="174" y="4" width="30" height="30"/>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wr6-qs-T46">
                                                 <rect key="frame" x="0.0" y="0.0" width="193" height="39"/>
@@ -126,10 +126,10 @@
                                         </constraints>
                                     </view>
                                     <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iHS-2p-Na5">
-                                        <rect key="frame" x="10" y="0.0" width="299.5" height="24"/>
+                                        <rect key="frame" x="10" y="0.0" width="300" height="24"/>
                                         <subviews>
                                             <view alpha="0.65000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7eF-to-vOg">
-                                                <rect key="frame" x="0.0" y="0.0" width="299.5" height="24"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="24"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_announcement" translatesAutoresizingMaskIntoConstraints="NO" id="Je9-En-KdZ">
@@ -151,7 +151,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3ya-nd-mEM">
-                                        <rect key="frame" x="0.0" y="0.0" width="319.5" height="176"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="176"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="abY-nu-qvR">
                                                 <rect key="frame" x="46" y="73" width="188" height="30"/>
@@ -216,7 +216,7 @@
                         </constraints>
                     </view>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="7HY-Ko-Y2Y">
-                        <rect key="frame" x="0.0" y="260" width="320" height="229.5"/>
+                        <rect key="frame" x="0.0" y="260" width="320" height="229"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="66P-6G-UkO">
                             <size key="itemSize" width="0.0" height="0.0"/>
@@ -240,6 +240,7 @@
                 <outlet property="alerView" destination="iHS-2p-Na5" id="UPa-Yj-aZv"/>
                 <outlet property="checkRecommendLabel" destination="Ump-AL-c6a" id="Tnp-KZ-neB"/>
                 <outlet property="checkRecommendView" destination="Mb9-xz-liU" id="mg6-Sn-wyu"/>
+                <outlet property="checkReconmmendBtn" destination="wr6-qs-T46" id="Iyj-L2-16e"/>
                 <outlet property="collectionView" destination="7HY-Ko-Y2Y" id="FH5-Vh-AMy"/>
                 <outlet property="earnings" destination="HeR-UQ-lBH" id="cqT-PY-geV"/>
                 <outlet property="earningsLabel" destination="FFR-cC-pN2" id="2Yo-sB-hmN"/>
@@ -247,7 +248,7 @@
                 <outlet property="viewHeight" destination="UeH-st-WFg" id="qs7-tm-ic2"/>
                 <outlet property="withDrawlBtn" destination="Uss-Oc-Vhj" id="G6l-Y6-8X8"/>
             </connections>
-            <point key="canvasLocation" x="-355" y="40"/>
+            <point key="canvasLocation" x="-655" y="-17"/>
         </tableViewCell>
     </objects>
     <resources>

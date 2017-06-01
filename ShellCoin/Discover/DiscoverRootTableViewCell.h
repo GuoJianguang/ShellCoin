@@ -42,6 +42,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *withDrawlBtn;
 - (IBAction)withDrawlBtn:(UIButton *)sender;
 
+@property (weak, nonatomic) IBOutlet UIButton *checkReconmmendBtn;
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 

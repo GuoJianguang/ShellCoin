@@ -192,8 +192,8 @@ minimumLineSpacingForSectionAtIndex:(NSInteger)section
 
 
 - (IBAction)talentReBtn:(id)sender {
-    TalentRecommentViewController *talentVC = [[TalentRecommentViewController alloc]init];
-    [self.viewController.navigationController pushViewController:talentVC animated:YES];
+//    TalentRecommentViewController *talentVC = [[TalentRecommentViewController alloc]init];
+//    [self.viewController.navigationController pushViewController:talentVC animated:YES];
 }
 - (IBAction)changeBtn:(UIButton *)sender {
     [self.changeBtn setTitle:@"  正在加载" forState:UIControlStateNormal];

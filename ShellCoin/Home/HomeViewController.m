@@ -18,6 +18,9 @@
 #import "MerchantSearchViewController.h"
 #import "ForyouCollectionViewCell.h"
 #import "DiscoverRootViewController.h"
+#import "MerchantModel.h"
+#import "MerchantTableViewCell.h"
+#import "MerchantDetailViewController.h"
 
 @interface HomeViewController ()<UITabBarControllerDelegate,UITableViewDelegate,UITableViewDataSource,CityListViewDelegate>
 @property (nonatomic, strong)NSMutableArray *privteDataSouceArray;
@@ -29,6 +32,7 @@
 @property (nonatomic, assign)BOOL isAlreadyRefrefsh;
 @property (nonatomic, assign)NSInteger page;
 
+@property (nonatomic, assign)BOOL isContinueRequest;
 
 @end
 
@@ -64,12 +68,13 @@
         weak_self.isAlreadyRefrefsh = YES;
         //        [weak_self.tableView reloadData];
         weak_self.page = 1;
+        weak_self.isContinueRequest = YES;
         [self getPopularMRequest];
         //        [self getActicityRequest];
     }];
     self.tableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
-        [self.tableView.mj_footer endRefreshing];
-//        [self getPopularMRequest];
+        [weak_self searchReqest:NO andCity:[ShellCoinUserInfo shareUserInfos].locationCity];
+
     }];
     //开启定位服务
     [self loadDataUseLocation];
@@ -167,11 +172,19 @@
         return cell;
         
     }else{
-        HomeMerchantTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[HomeMerchantTableViewCell indentify]];
+//        HomeMerchantTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[HomeMerchantTableViewCell indentify]];
+//        if (!cell) {
+//            cell = [HomeMerchantTableViewCell newCell];
+//        }
+//        cell.dataModel = self.privteDataSouceArray[indexPath.row - 3];
+//        return cell;
+        MerchantTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[MerchantTableViewCell indentify]];
         if (!cell) {
-            cell = [HomeMerchantTableViewCell newCell];
+            cell = [MerchantTableViewCell newCell];
         }
-        cell.dataModel = self.privteDataSouceArray[indexPath.row - 3];
+        if (self.privteDataSouceArray.count > 0) {
+            cell.dataModel = self.privteDataSouceArray[indexPath.row -3];
+        }
         return cell;
     }
 }
@@ -207,7 +220,8 @@
         return TWitdh*(72/75.) + TWitdh*(86/750.);
 
     }else{
-        return TWitdh*(95/320.);
+        return TWitdh*(290/750.);
+//        return TWitdh*(95/320.);
  
     }
 }
@@ -217,17 +231,21 @@
     if (indexPath.row < 3) {
         return;
     }
-    RecommentModel *model = self.privteDataSouceArray[indexPath.row - 3];
-    BaseHtmlViewController *htmlVC = [[BaseHtmlViewController alloc]init];
-    htmlVC.htmlUrl = model.jumpValue;
-    if ([model.remark isEqualToString:@""] ) {
-        htmlVC.isAboutMerChant = NO;
-    }else{
-        htmlVC.isAboutMerChant = YES;
-        htmlVC.merchantCode = model.remark;
-    }
-    htmlVC.htmlTitle = model.name;
-    [self.navigationController pushViewController:htmlVC animated:YES];
+//    RecommentModel *model = self.privteDataSouceArray[indexPath.row - 3];
+//    BaseHtmlViewController *htmlVC = [[BaseHtmlViewController alloc]init];
+//    htmlVC.htmlUrl = model.jumpValue;
+//    if ([model.remark isEqualToString:@""] ) {
+//        htmlVC.isAboutMerChant = NO;
+//    }else{
+//        htmlVC.isAboutMerChant = YES;
+//        htmlVC.merchantCode = model.remark;
+//    }
+//    htmlVC.htmlTitle = model.name;
+//    [self.navigationController pushViewController:htmlVC animated:YES];
+    
+    MerchantDetailViewController *merchantDetailVC = [[MerchantDetailViewController alloc]init];
+    merchantDetailVC.mchCode = ((MerchantModel *)self.privteDataSouceArray[indexPath.row -3 ]).code;
+    [self.navigationController pushViewController:merchantDetailVC animated:YES];
 
 }
 
@@ -271,7 +289,7 @@
                 PopularMerModel *model = [PopularMerModel modelWithDic:dic];
                 [self.popularDataSouceArray addObject:model];
             }
-            [self getPersonalRequest];
+            [self getReconnmendRequest];
         }
         
     } failure:^(NSURLSessionDataTask *operation, NSError *error) {
@@ -280,26 +298,7 @@
     }];
 }
 
-- (void)getPersonalRequest{
-    
-    NSDictionary *parms = @{@"longitude":NullToNumber(@([ShellCoinUserInfo shareUserInfos].locationCoordinate.longitude)),
-                            @"latitude":NullToNumber(@([ShellCoinUserInfo shareUserInfos].locationCoordinate.latitude)),
-                            @"flag":@"0"};
-    [HttpClient POST:@"user/personal" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
-        if (IsRequestTrue) {
-            [self.privteDataSouceArray removeAllObjects];
-            NSArray *array = jsonObject[@"data"];
-            for (NSDictionary *dic in array) {
-                [self.privteDataSouceArray addObject:[RecommentModel modelWithDic:dic]];
-            }
-            [self getReconnmendRequest];
-        }
-        
-    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
-        [self.tableView.mj_header endRefreshing];
-        [SVProgressHUD dismiss];
-    }];
-}
+
 
 #pragma mark - 推荐商户接口
 - (void)getReconnmendRequest
@@ -310,7 +309,6 @@
                             @"pageNO":@"1",
                             @"pageSize":@"3"};
     [HttpClient GET:@"mch/recommend" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
-        [SVProgressHUD dismiss];
         [self.tableView.mj_header endRefreshing];
         if (IsRequestTrue) {
             [self.foryouDataSouceArray removeAllObjects];
@@ -318,7 +316,7 @@
             for (NSDictionary *dic in array) {
                 [self.foryouDataSouceArray addObject:[ForYouModel modelWithDic:dic]];
             }
-            [self.tableView reloadData];
+            [self searchReqest:YES andCity:[ShellCoinUserInfo shareUserInfos].locationCity];
         }
         
     } failure:^(NSURLSessionDataTask *operation, NSError *error) {
@@ -326,6 +324,76 @@
         [SVProgressHUD dismiss];
     }];
 }
+
+
+- (void)searchReqest:(BOOL)isHeader andCity:(NSString *)city
+{
+    
+    if (!isHeader && !self.isContinueRequest) {
+        [self.tableView.mj_footer endRefreshing];
+        return;
+    }
+    
+    NSString *searchcity = [city substringToIndex:2];
+    NSDictionary *parms = @{@"pageNo":@(self.page),
+                            @"pageSize":MacoRequestPageCount,
+                            @"trade":@"",
+                            @"mchCity":searchcity,
+                            @"keyword":@"",
+                            @"longitude":@([ShellCoinUserInfo shareUserInfos].locationCoordinate.longitude),
+                            @"latitude":@([ShellCoinUserInfo shareUserInfos].locationCoordinate.latitude),
+                            @"seqId":@"2"};
+    [HttpClient GET:@"mch/search" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
+        if (IsRequestTrue) {
+            [SVProgressHUD dismiss];
+            if (self.page == [NullToNumber(jsonObject[@"data"][@"totalPage"]) integerValue]) {
+                self.isContinueRequest= NO;
+            }
+            if (isHeader) {
+                [self.privteDataSouceArray removeAllObjects];
+                [self.tableView.mj_header endRefreshing];
+            }
+            [self.tableView.mj_footer endRefreshing];
+            NSArray *array = jsonObject[@"data"][@"data"];
+            if (array.count > 0) {
+                self.page ++;
+            }
+            for (NSDictionary *dic in array) {
+                MerchantModel *model = [MerchantModel modelWithDic:dic];
+                model.isSearchResult = YES;
+                [self.privteDataSouceArray addObject:model];
+            }
+            //判断数据源有无数据
+            [self.tableView reloadData];
+        }
+    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
+        [SVProgressHUD dismiss];
+        [self.tableView.mj_header endRefreshing];
+        [self.tableView.mj_footer endRefreshing];
+    }];
+}
+
+//- (void)getPersonalRequest{
+//    
+//    NSDictionary *parms = @{@"longitude":NullToNumber(@([ShellCoinUserInfo shareUserInfos].locationCoordinate.longitude)),
+//                            @"latitude":NullToNumber(@([ShellCoinUserInfo shareUserInfos].locationCoordinate.latitude)),
+//                            @"flag":@"0"};
+//    [HttpClient POST:@"user/personal" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
+//        [SVProgressHUD dismiss];
+//        if (IsRequestTrue) {
+//            [self.privteDataSouceArray removeAllObjects];
+//            NSArray *array = jsonObject[@"data"];
+//            for (NSDictionary *dic in array) {
+//                [self.privteDataSouceArray addObject:[RecommentModel modelWithDic:dic]];
+//            }
+//            [self.tableView reloadData];
+//        }
+//        
+//    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
+//        [self.tableView.mj_header endRefreshing];
+//        [SVProgressHUD dismiss];
+//    }];
+//}
 
 
 - (void)viewDidAppear:(BOOL)animated

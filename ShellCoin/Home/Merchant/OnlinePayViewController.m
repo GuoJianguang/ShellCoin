@@ -10,6 +10,7 @@
 #import "SureTradInView.h"
 #import <LocalAuthentication/LocalAuthentication.h>
 #import "OnlinePayResultView.h"
+#import "AliPayObject.h"
 
 @interface OnlinePayViewController ()<BasenavigationDelegate,PayViewDelegate,UITextFieldDelegate>
 
@@ -31,6 +32,8 @@
     [self setPayWay];
     self.yuELabel.adjustsFontSizeToFitWidth = YES;
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(weixinPayResult:) name:WeixinPayResult object:nil];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(aliPayResult:) name:AliPayResult object:nil];
+
     self.moneyTF.delegate = self;
     
     [self.moneyTF becomeFirstResponder];
@@ -51,10 +54,12 @@
     self.yuEImage.image = [UIImage imageNamed:@"icon_balance_payment_sel"];
     self.wechatImage.image = [UIImage imageNamed:@"icon_wechat_payment_nor"];
     self.cashImage.image = [UIImage imageNamed:@"icon_cash_payment_nor"];
+    self.aliPayImage.image = [UIImage imageNamed:@"icon_zhifubao_nor"];
+
     self.yuEMarkBtn.hidden = NO;
     self.yuELabel.textColor = MacoColor;
-    self.wechatLabel.textColor = self.cashLabel.textColor = MacoTitleColor;
-    self.wechatMarkBtn.hidden = self.cashMarkBtn.hidden = YES;
+    self.wechatLabel.textColor = self.cashLabel.textColor = self.aliPayLabel.textColor=MacoTitleColor;
+    self.wechatMarkBtn.hidden = self.cashMarkBtn.hidden = self.aliPayMarkBtn.hidden=YES;
     //默认余额支付
     self.payWay_type = Payway_type_banlance;
     double xiaofeiJin = [[ShellCoinUserInfo shareUserInfos].consumeBalance doubleValue];
@@ -101,14 +106,15 @@
 
 - (IBAction)yuEBtn:(UIButton *)sender {
     self.payWay_type = Payway_type_banlance;
-    self.wechatBtn.selected = NO;
     self.yuEImage.image = [UIImage imageNamed:@"icon_balance_payment_sel"];
     self.wechatImage.image = [UIImage imageNamed:@"icon_wechat_payment_nor"];
     self.cashImage.image = [UIImage imageNamed:@"icon_cash_payment_nor"];
+    self.aliPayImage.image = [UIImage imageNamed:@"icon_zhifubao_nor"];
+
     self.yuEMarkBtn.hidden = NO;
     self.yuELabel.textColor = MacoColor;
-    self.wechatLabel.textColor = self.cashLabel.textColor = MacoTitleColor;
-    self.wechatMarkBtn.hidden = self.cashMarkBtn.hidden = YES;
+    self.wechatLabel.textColor = self.cashLabel.textColor=self.aliPayLabel.textColor = MacoTitleColor;
+    self.wechatMarkBtn.hidden = self.cashMarkBtn.hidden=self.aliPayMarkBtn.hidden = YES;
 }
 - (IBAction)wechatBtn:(UIButton *)sender {
     
@@ -116,10 +122,12 @@
     self.yuEImage.image = [UIImage imageNamed:@"icon_balance_payment_nor"];
     self.wechatImage.image = [UIImage imageNamed:@"icon_wechat_payment_sel"];
     self.cashImage.image = [UIImage imageNamed:@"icon_cash_payment_nor"];
-    self.yuEMarkBtn.hidden = self.cashMarkBtn.hidden= YES;
-    self.wechatBtn.selected = YES;
+    self.aliPayImage.image = [UIImage imageNamed:@"icon_zhifubao_nor"];
+
+    
+    self.yuEMarkBtn.hidden = self.cashMarkBtn.hidden=self.aliPayMarkBtn.hidden= YES;
     self.wechatLabel.textColor = MacoColor;
-    self.yuELabel.textColor = self.cashLabel.textColor=MacoTitleColor;
+    self.yuELabel.textColor = self.cashLabel.textColor=self.aliPayLabel.textColor=MacoTitleColor;
     self.wechatMarkBtn.hidden = NO;
 }
 
@@ -128,13 +136,34 @@
     self.yuEImage.image = [UIImage imageNamed:@"icon_balance_payment_nor"];
     self.wechatImage.image = [UIImage imageNamed:@"icon_wechat_payment_nor"];
     self.cashImage.image = [UIImage imageNamed:@"icon_cash_payment_sel"];
-    self.yuEMarkBtn.hidden = self.wechatMarkBtn.hidden = YES;
+    self.aliPayImage.image = [UIImage imageNamed:@"icon_zhifubao_nor"];
+
+    
+    self.yuEMarkBtn.hidden = self.wechatMarkBtn.hidden=self.aliPayMarkBtn.hidden = YES;
     self.cashMarkBtn.hidden = NO;
-    self.wechatBtn.selected = YES;
     self.cashLabel.textColor = MacoColor;
-    self.yuELabel.textColor=self.wechatLabel.textColor = MacoTitleColor;
+    self.yuELabel.textColor=self.wechatLabel.textColor = self.aliPayLabel.textColor=MacoTitleColor;
 
 }
+
+- (IBAction)aliPay:(UIButton *)sender
+{
+    self.payWay_type = Payway_type_alipay;
+    
+    
+    self.yuEImage.image = [UIImage imageNamed:@"icon_balance_payment_nor"];
+    self.wechatImage.image = [UIImage imageNamed:@"icon_wechat_payment_nor"];
+    self.cashImage.image = [UIImage imageNamed:@"icon_cash_payment_nor"];
+    self.aliPayImage.image = [UIImage imageNamed:@"icon_zhifubao_sel"];
+
+    
+    self.yuEMarkBtn.hidden = self.wechatMarkBtn.hidden = self.cashMarkBtn.hidden=YES;
+    self.aliPayLabel.textColor = MacoColor;
+    self.aliPayMarkBtn.hidden = NO;
+    self.yuELabel.textColor=self.wechatLabel.textColor =self.cashLabel.textColor= MacoTitleColor;
+    
+}
+
 - (IBAction)sureBtn:(UIButton *)sender {
     
     if ([self juadeMoney]) {
@@ -165,6 +194,15 @@
         case Payway_type_banlance:
         {
             [self surePay];
+        }
+            break;
+        case Payway_type_alipay:
+        {
+            NSString *totalMoney = [NSString stringWithFormat:@"%.2f",[NullToNumber(self.money) doubleValue]];
+            NSDictionary *prams = @{@"token":[ShellCoinUserInfo shareUserInfos].token,
+                                    @"mchCode":NullToNumber(self.dataModel.code),
+                                    @"tranAmount":totalMoney};
+            [AliPayObject startAliPayMerchantOnlinePay:prams];
         }
             break;
             
@@ -352,12 +390,52 @@
             break;
     }
 }
+#pragma mark - 支付宝结算结果
+- (void)aliPayResult:(NSNotification *)notification{
+    
+    switch ([notification.userInfo[@"resultStatus"] integerValue]) {
+        case 9000:
+        {
+            [self paysuccess:self.money];
+        }
+            break;
+        case 8000:
+            [[JAlertViewHelper shareAlterHelper]showTint:@"正在处理中，支付结果未知（有可能已经支付成功），请查询商户订单列表中订单的支付状态" duration:2.];
+            
+            break;
+        case 4000:
+            [[JAlertViewHelper shareAlterHelper]showTint:@"订单支付失败" duration:2.];
+            
+            break;
+        case 5000:
+            [[JAlertViewHelper shareAlterHelper]showTint:@"重复请求" duration:2.];
+            
+            break;
+        case 6001:
+            [[JAlertViewHelper shareAlterHelper]showTint:@"用户中途取消" duration:2.];
+            
+            break;
+        case 6002:
+            [[JAlertViewHelper shareAlterHelper]showTint:@"网络连接出错" duration:2.];
+            
+            break;
+        case 6004:
+            [[JAlertViewHelper shareAlterHelper]showTint:@"支付结果未知（有可能已经支付成功），请查询商户订单列表中订单的支付状态" duration:2.];
+            
+            break;
+            
+        default:
+            break;
+    }
+    
+}
 
 #pragma mark -  退出支付
 
 - (void)backBtnClick
 {
     [[NSNotificationCenter defaultCenter]removeObserver:self name:WeixinPayResult object:nil];
+    [[NSNotificationCenter defaultCenter]removeObserver:self name:AliPayResult object:nil];
     [self.navigationController popViewControllerAnimated:YES];
 }
 

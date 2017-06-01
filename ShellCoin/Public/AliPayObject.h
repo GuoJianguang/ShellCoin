@@ -12,4 +12,7 @@
 + (AliPayObject *)shareAliPayObject;
 //发现调起支付宝
 + (void)startAliPayDiscoverPay:(NSDictionary *)parms;
+//商家在线支付
++ (void)startAliPayMerchantOnlinePay:(NSDictionary *)parms;
+
 @end

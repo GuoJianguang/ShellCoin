@@ -63,7 +63,7 @@
             return ;
         }
     } failure:^(NSURLSessionDataTask *operation, NSError *error) {
-
+        [[JAlertViewHelper shareAlterHelper]showTint:@"商家详情获取失败，请稍后重试" duration:2.];
     }];
 }
 - (void)setDetail{

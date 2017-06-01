@@ -14,6 +14,7 @@ typedef NS_ENUM(NSInteger,Payway_type){
     Payway_type_banlance = 1,//余额支付
     Payway_type_wechat = 2,//微信支付
     Payway_type_cash = 3,//现金支付
+    Payway_type_alipay = 4,//支付宝支付
 };
 
 
@@ -39,6 +40,13 @@ typedef NS_ENUM(NSInteger,Payway_type){
 - (IBAction)wechatBtn:(UIButton *)sender;
 @property (weak, nonatomic) IBOutlet UIButton *cashBtn;
 - (IBAction)cashBtn:(UIButton *)sender;
+
+
+@property (weak, nonatomic) IBOutlet UIImageView *aliPayImage;
+@property (weak, nonatomic) IBOutlet UILabel *aliPayLabel;
+@property (weak, nonatomic) IBOutlet UIButton *aliPayMarkBtn;
+@property (weak, nonatomic) IBOutlet UIButton *aliPaytBtn;
+- (IBAction)aliPay:(UIButton *)sender;
 
 @property (nonatomic, strong)MerchantModel *dataModel;
 
