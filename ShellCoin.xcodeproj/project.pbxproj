@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		041272321EE4FAF3008D2B94 /* VIP.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 041272311EE4FAF3008D2B94 /* VIP.xcassets */; };
+		041272371EE4FF0C008D2B94 /* VipDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 041272351EE4FF0C008D2B94 /* VipDetailViewController.m */; };
+		041272381EE4FF0C008D2B94 /* VipDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 041272361EE4FF0C008D2B94 /* VipDetailViewController.xib */; };
 		04196AFE1ED68261005F64C2 /* AddressTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04196AFC1ED68261005F64C2 /* AddressTableViewCell.m */; };
 		04196AFF1ED68261005F64C2 /* AddressTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04196AFD1ED68261005F64C2 /* AddressTableViewCell.xib */; };
 		04196B031ED686DA005F64C2 /* EditAddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04196B011ED686DA005F64C2 /* EditAddressViewController.m */; };
@@ -358,6 +361,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		041272311EE4FAF3008D2B94 /* VIP.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = VIP.xcassets; sourceTree = "<group>"; };
+		041272341EE4FF0C008D2B94 /* VipDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VipDetailViewController.h; sourceTree = "<group>"; };
+		041272351EE4FF0C008D2B94 /* VipDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VipDetailViewController.m; sourceTree = "<group>"; };
+		041272361EE4FF0C008D2B94 /* VipDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VipDetailViewController.xib; sourceTree = "<group>"; };
 		04196AFB1ED68261005F64C2 /* AddressTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressTableViewCell.h; sourceTree = "<group>"; };
 		04196AFC1ED68261005F64C2 /* AddressTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressTableViewCell.m; sourceTree = "<group>"; };
 		04196AFD1ED68261005F64C2 /* AddressTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddressTableViewCell.xib; sourceTree = "<group>"; };
@@ -936,6 +943,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		041272331EE4FEF5008D2B94 /* VIP */ = {
+			isa = PBXGroup;
+			children = (
+				041272341EE4FF0C008D2B94 /* VipDetailViewController.h */,
+				041272351EE4FF0C008D2B94 /* VipDetailViewController.m */,
+				041272361EE4FF0C008D2B94 /* VipDetailViewController.xib */,
+			);
+			path = VIP;
+			sourceTree = "<group>";
+		};
 		041ABCCF1ED823A800C181CB /* AlipaySDK */ = {
 			isa = PBXGroup;
 			children = (
@@ -1375,6 +1392,7 @@
 				BC0A583A1E728D3E0077C8A9 /* Bill */,
 				BC0A582C1E7282180077C8A9 /* Set */,
 				BCBFF3CF1E5C244D00AFFE36 /* PersonalCenter */,
+				041272331EE4FEF5008D2B94 /* VIP */,
 				BC4AAC361E4D8D51006568A6 /* MineViewController.h */,
 				BC4AAC371E4D8D51006568A6 /* MineViewController.m */,
 				BC4AAC391E4D8F7B006568A6 /* MineTableViewCell.h */,
@@ -1386,6 +1404,7 @@
 				BC23C9EB1E79395A00E90B43 /* YesTodayEarningsAlerView.m */,
 				BC23C9ED1E79396500E90B43 /* YesTodayEarningsAlerView.xib */,
 				BCE5EED81E5C41900055D828 /* Mine.xcassets */,
+				041272311EE4FAF3008D2B94 /* VIP.xcassets */,
 			);
 			path = Mine;
 			sourceTree = "<group>";
@@ -2030,6 +2049,7 @@
 				BC054D551E8A402E00062AC5 /* Bill12View.xib in Resources */,
 				BC41DAE81E91E8D7008FC9DC /* Home.xcassets in Resources */,
 				BC054D491E8A095B00062AC5 /* OnlinePayViewController.xib in Resources */,
+				041272321EE4FAF3008D2B94 /* VIP.xcassets in Resources */,
 				BCD737161E936726001F706C /* MerchantSearchViewController.xib in Resources */,
 				BC34A1BF1E9256CA00C786C0 /* AreaTableViewCell.xib in Resources */,
 				BC9B3DAC1E763AF4003DC241 /* RealnameViewController.xib in Resources */,
@@ -2060,6 +2080,7 @@
 				042C704B1EC464550035A912 /* LoanOtherTableViewCell.xib in Resources */,
 				BCFE208E1E77E206002BC28C /* RegisterOneViewController.xib in Resources */,
 				BCFE209F1E77EF2A002BC28C /* WithdrawalViewController.xib in Resources */,
+				041272381EE4FF0C008D2B94 /* VipDetailViewController.xib in Resources */,
 				BCD7371B1E936C92001F706C /* MerchantSearchRsultViewController.xib in Resources */,
 				BC054D501E8A3D3600062AC5 /* Bill1View.xib in Resources */,
 				BC41DAEA1E91F781008FC9DC /* Login.xcassets in Resources */,
@@ -2269,6 +2290,7 @@
 				BC5279491E8E7E4E004DD703 /* LBXScanView.m in Sources */,
 				0445BADE1ED56AAE009226BD /* BuyRecodTableViewCell.m in Sources */,
 				BCFE209E1E77EF2A002BC28C /* WithdrawalViewController.m in Sources */,
+				041272371EE4FF0C008D2B94 /* VipDetailViewController.m in Sources */,
 				BC9B3DF61E76982B003DC241 /* EditPhoneNumberViewController.m in Sources */,
 				BC0A58351E72832E0077C8A9 /* SetTableViewCell.m in Sources */,
 				BCFE20651E7798D6002BC28C /* TradInViewController.m in Sources */,

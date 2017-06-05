@@ -68,6 +68,7 @@
         [ShellCoinUserInfo shareUserInfos].token = token;
         self.bankRemarkImage.hidden = [ShellCoinUserInfo shareUserInfos].bindingFlag;
         self.realNameRemarkImage.hidden = [ShellCoinUserInfo shareUserInfos].identityFlag;
+        [self SetVipImage];
         if ([ShellCoinUserInfo shareUserInfos].identityFlag) {
             self.nameLabel.hidden = NO;
             self.yetRMarkBtn.hidden = NO;
@@ -82,6 +83,65 @@
     } failure:^(NSURLSessionDataTask *operation, NSError *error) {
     }];
 
+}
+
+- (void)SetVipImage
+{
+    switch ([[ShellCoinUserInfo shareUserInfos].vipLevel integerValue]) {
+        case 1:
+            self.vipImage.image = [UIImage imageNamed:@"icon_vip1"];
+            break;
+        case 2:
+            self.vipImage.image = [UIImage imageNamed:@"icon_vip2"];
+            
+            break;
+        case 3:
+            self.vipImage.image = [UIImage imageNamed:@"icon_vip3"];
+            
+            break;
+        case 4:
+            self.vipImage.image = [UIImage imageNamed:@"icon_vip4"];
+            
+            break;
+        case 5:
+            self.vipImage.image = [UIImage imageNamed:@"icon_vip5"];
+            
+            break;
+        case 6:
+            self.vipImage.image = [UIImage imageNamed:@"icon_vip6"];
+            
+            break;
+        case 7:
+            self.vipImage.image = [UIImage imageNamed:@"icon_vip7"];
+            
+            break;
+        case 8:
+            self.vipImage.image = [UIImage imageNamed:@"icon_vip8"];
+            
+            break;
+        case 9:
+            self.vipImage.image = [UIImage imageNamed:@"icon_vip9"];
+            
+            break;
+        case 10:
+            self.vipImage.image = [UIImage imageNamed:@"icon_vip10"];
+            
+            break;
+        case 11:
+            self.vipImage.image = [UIImage imageNamed:@"icon_silver_drill_member"];
+            
+            break;
+        case 12:
+            self.vipImage.image = [UIImage imageNamed:@"icon_gold_drill_member"];
+            
+            break;
+        case 13:
+            self.vipImage.image = [UIImage imageNamed:@"icon_crown_member"];
+            break;
+        default:
+            break;
+    }
+    
 }
 
 #pragma mark - 改变头像

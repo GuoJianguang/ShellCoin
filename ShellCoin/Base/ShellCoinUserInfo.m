@@ -63,6 +63,10 @@ static ShellCoinUserInfo *instance;
     
 #pragma mark - 老数据
     instance.avatar = NullToSpace(dic[@"avatar"]);
+    instance.vipLevel = NullToNumber(dic[@"vipLevel"]);
+    instance.vipRate = NullToSpace(dic[@"vipRate"]);
+    instance.currentTotalAmount = [NullToNumber(dic[@"currentTotalAmount"]) integerValue];
+    instance.nextLevelAmount = [NullToNumber(dic[@"nextLevelAmount"]) integerValue];
     instance.aviableBalance = NullToNumber(dic[@"aviableBalance"]);
     instance.city = NullToSpace(dic[@"city"]);
     instance.userid = NullToSpace(dic[@"id"]);

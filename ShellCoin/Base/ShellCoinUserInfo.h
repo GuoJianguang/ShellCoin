@@ -38,6 +38,22 @@
  */
 @property (nonatomic, copy)NSString *vipLevel;
 /**
+ * 等级增益 如20%
+ */
+
+@property (nonatomic, copy)NSString *vipRate;
+
+/**
+ * 当前积分
+ */
+
+@property (nonatomic, assign)NSUInteger currentTotalAmount;
+/**
+ * 下个等级门槛
+ */
+@property (nonatomic, assign)NSUInteger nextLevelAmount;
+
+/**
  * 登录密码
  */
 

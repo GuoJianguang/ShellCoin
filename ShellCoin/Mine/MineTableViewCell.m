@@ -21,6 +21,7 @@
 #import "EditBankInfoViewController.h"
 #import "MessageListViewController.h"
 #import "LoanHomeViewController.h"
+#import "VipDetailViewController.h"
 
 
 @interface MineTableViewCell()
@@ -35,19 +36,20 @@
     self.personCenterLabel.textColor = self.recommendLabel.textColor = self.billLabel.textColor = self.setLabel.textColor = self.integralLabel.textColor = self.proportionLabel.textColor= self.loanLabel.textColor = MacoTitleColor;
     self.showIntergralLabel.textColor = self.showProportionLabel.textColor = MacoColor;
 
-    self.totalMoneyLabel.adjustsFontSizeToFitWidth = self.showIntergralLabel.adjustsFontSizeToFitWidth = YES;
+    self.totalMoneyLabel.adjustsFontSizeToFitWidth = self.showIntergralLabel.adjustsFontSizeToFitWidth=self.yesTodayBuyCardLabel.adjustsFontSizeToFitWidth=self.yestodyEarningsMoneyLabel.adjustsFontSizeToFitWidth = YES;
     self.showIntergralLabel.text = [NSString stringWithFormat:@"%.2f",[[ShellCoinUserInfo shareUserInfos].totalExpectAmount doubleValue] + [[ShellCoinUserInfo shareUserInfos].wiatJoinAmunt doubleValue]];
     self.showProportionLabel.text = [NSString stringWithFormat:@"%.2f",[[ShellCoinUserInfo shareUserInfos].totalConsumeAmount doubleValue]];
     self.totalMoneyLabel.text = [NSString stringWithFormat:@"总余额：%.2f",[[ShellCoinUserInfo shareUserInfos].aviableBalance doubleValue]];
     self.totalBuyCardLabel.text = [NSString stringWithFormat:@"总购物券：%.2f",[[ShellCoinUserInfo shareUserInfos].consumeBalance doubleValue]];
     self.yestodyEarningsMoneyLabel.text = [NSString stringWithFormat:@"+%@",[ShellCoinUserInfo shareUserInfos].lastRebateBalance];
     self.yesTodayBuyCardLabel.text = [NSString stringWithFormat:@"+%@购物券",[ShellCoinUserInfo shareUserInfos].lastRebateConsumeBalance];
-    
+    self.vipAddLabel.adjustsFontSizeToFitWidth = YES;
+    self.showVip.titleLabel.adjustsFontSizeToFitWidth = YES;
     if (TWitdh > 320) {
-        self.viewHeight.constant = TWitdh*1.05;
+        self.viewHeight.constant = TWitdh*1.1;
         self.imageViewHeight.constant = TWitdh*(446/750.);
     }else{
-        self.viewHeight.constant = TWitdh*1.15;
+        self.viewHeight.constant = TWitdh*1.2;
         self.imageViewHeight.constant = TWitdh*(480/750.);
     }
 
@@ -72,7 +74,24 @@
             }else{
                 [self.messageBtn setImage:[UIImage imageNamed:@"icon_haveNews"] forState:UIControlStateNormal];
             };
-            
+            self.vipAddLabel.text = [NSString stringWithFormat:@"+%@",[ShellCoinUserInfo shareUserInfos].vipRate];
+            [self.showVip setTitle:[NSString stringWithFormat:@"VIP%@",[ShellCoinUserInfo shareUserInfos].vipLevel ] forState:UIControlStateNormal];
+            switch ([[ShellCoinUserInfo shareUserInfos].vipLevel integerValue]) {
+                case 11:
+                    [self.showVip setTitle:@"银钻" forState:UIControlStateNormal];
+
+                    break;
+                case 12:
+                    [self.showVip setTitle:@"金钻" forState:UIControlStateNormal];
+                    
+                    break;
+                case 13:
+                    [self.showVip setTitle:@"皇冠" forState:UIControlStateNormal];
+                    
+                    break;
+                default:
+                    break;
+            }
             self.showIntergralLabel.text = [NSString stringWithFormat:@"%.2f",[[ShellCoinUserInfo shareUserInfos].totalExpectAmount doubleValue] + [[ShellCoinUserInfo shareUserInfos].wiatJoinAmunt doubleValue]];
             self.showProportionLabel.text = [NSString stringWithFormat:@"%.2f",[[ShellCoinUserInfo shareUserInfos].totalConsumeAmount doubleValue]];
             self.totalMoneyLabel.text = [NSString stringWithFormat:@"总余额：%.2f",[[ShellCoinUserInfo shareUserInfos].aviableBalance doubleValue]];
@@ -251,4 +270,8 @@
     [self.viewController presentViewController:alertcontroller animated:YES completion:NULL];
 }
 
+- (IBAction)vipDetailBtn:(UIButton *)sender {
+    VipDetailViewController *vipVC = [[VipDetailViewController alloc]init];
+    [self.viewController.navigationController pushViewController:vipVC animated:YES];
+}
 @end

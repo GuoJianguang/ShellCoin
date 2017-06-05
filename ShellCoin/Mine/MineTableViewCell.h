@@ -64,4 +64,14 @@
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *imageViewHeight;
 
+
+#pragma mark - Vip
+
+@property (weak, nonatomic) IBOutlet UIView *vipView;
+@property (weak, nonatomic) IBOutlet UILabel *vipAddLabel;
+
+- (IBAction)vipDetailBtn:(UIButton *)sender;
+@property (weak, nonatomic) IBOutlet UIButton *vipDetailBtn;
+@property (weak, nonatomic) IBOutlet UIButton *showVip;
+
 @end
