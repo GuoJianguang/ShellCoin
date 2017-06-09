@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040DCA981EEA7B0600E78125 /* LogisticsCompanyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 040DCA901EEA7B0600E78125 /* LogisticsCompanyTableViewCell.m */; };
+		040DCA991EEA7B0600E78125 /* LogisticsCompanyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 040DCA911EEA7B0600E78125 /* LogisticsCompanyTableViewCell.xib */; };
+		040DCA9A1EEA7B0600E78125 /* LogisticsDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 040DCA931EEA7B0600E78125 /* LogisticsDetailTableViewCell.m */; };
+		040DCA9B1EEA7B0600E78125 /* LogisticsDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 040DCA941EEA7B0600E78125 /* LogisticsDetailTableViewCell.xib */; };
+		040DCA9C1EEA7B0600E78125 /* LogisticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040DCA961EEA7B0600E78125 /* LogisticsViewController.m */; };
+		040DCA9D1EEA7B0600E78125 /* LogisticsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 040DCA971EEA7B0600E78125 /* LogisticsViewController.xib */; };
+		040DCA9F1EEA7BAA00E78125 /* LogisticS.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 040DCA9E1EEA7BAA00E78125 /* LogisticS.xcassets */; };
+		040DCAAC1EEA91BF00E78125 /* MyRecommendDetailListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040DCAA11EEA91BF00E78125 /* MyRecommendDetailListViewController.m */; };
+		040DCAAD1EEA91BF00E78125 /* MyRecommendDetailListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 040DCAA21EEA91BF00E78125 /* MyRecommendDetailListViewController.xib */; };
+		040DCAAE1EEA91BF00E78125 /* RecommendConsumersView.m in Sources */ = {isa = PBXBuildFile; fileRef = 040DCAA41EEA91BF00E78125 /* RecommendConsumersView.m */; };
+		040DCAAF1EEA91BF00E78125 /* RecommendConsumersView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 040DCAA51EEA91BF00E78125 /* RecommendConsumersView.xib */; };
+		040DCAB01EEA91BF00E78125 /* RecommendMerchantView.m in Sources */ = {isa = PBXBuildFile; fileRef = 040DCAA71EEA91BF00E78125 /* RecommendMerchantView.m */; };
+		040DCAB11EEA91BF00E78125 /* RecommendMerchantView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 040DCAA81EEA91BF00E78125 /* RecommendMerchantView.xib */; };
+		040DCAB21EEA91BF00E78125 /* RecommendDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 040DCAAA1EEA91BF00E78125 /* RecommendDetailTableViewCell.m */; };
+		040DCAB31EEA91BF00E78125 /* RecommendDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 040DCAAB1EEA91BF00E78125 /* RecommendDetailTableViewCell.xib */; };
 		041272321EE4FAF3008D2B94 /* VIP.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 041272311EE4FAF3008D2B94 /* VIP.xcassets */; };
 		041272371EE4FF0C008D2B94 /* VipDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 041272351EE4FF0C008D2B94 /* VipDetailViewController.m */; };
 		041272381EE4FF0C008D2B94 /* VipDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 041272361EE4FF0C008D2B94 /* VipDetailViewController.xib */; };
@@ -361,6 +376,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		040DCA8F1EEA7B0600E78125 /* LogisticsCompanyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogisticsCompanyTableViewCell.h; sourceTree = "<group>"; };
+		040DCA901EEA7B0600E78125 /* LogisticsCompanyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogisticsCompanyTableViewCell.m; sourceTree = "<group>"; };
+		040DCA911EEA7B0600E78125 /* LogisticsCompanyTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LogisticsCompanyTableViewCell.xib; sourceTree = "<group>"; };
+		040DCA921EEA7B0600E78125 /* LogisticsDetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogisticsDetailTableViewCell.h; sourceTree = "<group>"; };
+		040DCA931EEA7B0600E78125 /* LogisticsDetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogisticsDetailTableViewCell.m; sourceTree = "<group>"; };
+		040DCA941EEA7B0600E78125 /* LogisticsDetailTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LogisticsDetailTableViewCell.xib; sourceTree = "<group>"; };
+		040DCA951EEA7B0600E78125 /* LogisticsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogisticsViewController.h; sourceTree = "<group>"; };
+		040DCA961EEA7B0600E78125 /* LogisticsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogisticsViewController.m; sourceTree = "<group>"; };
+		040DCA971EEA7B0600E78125 /* LogisticsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LogisticsViewController.xib; sourceTree = "<group>"; };
+		040DCA9E1EEA7BAA00E78125 /* LogisticS.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = LogisticS.xcassets; sourceTree = "<group>"; };
+		040DCAA01EEA91BF00E78125 /* MyRecommendDetailListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyRecommendDetailListViewController.h; sourceTree = "<group>"; };
+		040DCAA11EEA91BF00E78125 /* MyRecommendDetailListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyRecommendDetailListViewController.m; sourceTree = "<group>"; };
+		040DCAA21EEA91BF00E78125 /* MyRecommendDetailListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyRecommendDetailListViewController.xib; sourceTree = "<group>"; };
+		040DCAA31EEA91BF00E78125 /* RecommendConsumersView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendConsumersView.h; sourceTree = "<group>"; };
+		040DCAA41EEA91BF00E78125 /* RecommendConsumersView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendConsumersView.m; sourceTree = "<group>"; };
+		040DCAA51EEA91BF00E78125 /* RecommendConsumersView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecommendConsumersView.xib; sourceTree = "<group>"; };
+		040DCAA61EEA91BF00E78125 /* RecommendMerchantView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendMerchantView.h; sourceTree = "<group>"; };
+		040DCAA71EEA91BF00E78125 /* RecommendMerchantView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendMerchantView.m; sourceTree = "<group>"; };
+		040DCAA81EEA91BF00E78125 /* RecommendMerchantView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecommendMerchantView.xib; sourceTree = "<group>"; };
+		040DCAA91EEA91BF00E78125 /* RecommendDetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendDetailTableViewCell.h; sourceTree = "<group>"; };
+		040DCAAA1EEA91BF00E78125 /* RecommendDetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendDetailTableViewCell.m; sourceTree = "<group>"; };
+		040DCAAB1EEA91BF00E78125 /* RecommendDetailTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecommendDetailTableViewCell.xib; sourceTree = "<group>"; };
 		041272311EE4FAF3008D2B94 /* VIP.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = VIP.xcassets; sourceTree = "<group>"; };
 		041272341EE4FF0C008D2B94 /* VipDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VipDetailViewController.h; sourceTree = "<group>"; };
 		041272351EE4FF0C008D2B94 /* VipDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VipDetailViewController.m; sourceTree = "<group>"; };
@@ -943,6 +980,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		040DCA8E1EEA7B0600E78125 /* LogisticS */ = {
+			isa = PBXGroup;
+			children = (
+				040DCA8F1EEA7B0600E78125 /* LogisticsCompanyTableViewCell.h */,
+				040DCA901EEA7B0600E78125 /* LogisticsCompanyTableViewCell.m */,
+				040DCA911EEA7B0600E78125 /* LogisticsCompanyTableViewCell.xib */,
+				040DCA921EEA7B0600E78125 /* LogisticsDetailTableViewCell.h */,
+				040DCA931EEA7B0600E78125 /* LogisticsDetailTableViewCell.m */,
+				040DCA941EEA7B0600E78125 /* LogisticsDetailTableViewCell.xib */,
+				040DCA951EEA7B0600E78125 /* LogisticsViewController.h */,
+				040DCA961EEA7B0600E78125 /* LogisticsViewController.m */,
+				040DCA971EEA7B0600E78125 /* LogisticsViewController.xib */,
+				040DCA9E1EEA7BAA00E78125 /* LogisticS.xcassets */,
+			);
+			path = LogisticS;
+			sourceTree = "<group>";
+		};
 		041272331EE4FEF5008D2B94 /* VIP */ = {
 			isa = PBXGroup;
 			children = (
@@ -1385,6 +1439,7 @@
 		BC4AAC171E4D6E31006568A6 /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				040DCA8E1EEA7B0600E78125 /* LogisticS */,
 				BC4C72DC1EA733E40048464A /* TheLoan */,
 				BCD736F51E935000001F706C /* Message */,
 				BCFE20611E7798C4002BC28C /* trade-in */,
@@ -1729,6 +1784,18 @@
 				BC36EA451E93B8530097F2F2 /* WithDrawalResultView.h */,
 				BC36EA461E93B8530097F2F2 /* WithDrawalResultView.m */,
 				BC36EA481E93B8600097F2F2 /* WithDrawalResultView.xib */,
+				040DCAA01EEA91BF00E78125 /* MyRecommendDetailListViewController.h */,
+				040DCAA11EEA91BF00E78125 /* MyRecommendDetailListViewController.m */,
+				040DCAA21EEA91BF00E78125 /* MyRecommendDetailListViewController.xib */,
+				040DCAA31EEA91BF00E78125 /* RecommendConsumersView.h */,
+				040DCAA41EEA91BF00E78125 /* RecommendConsumersView.m */,
+				040DCAA51EEA91BF00E78125 /* RecommendConsumersView.xib */,
+				040DCAA61EEA91BF00E78125 /* RecommendMerchantView.h */,
+				040DCAA71EEA91BF00E78125 /* RecommendMerchantView.m */,
+				040DCAA81EEA91BF00E78125 /* RecommendMerchantView.xib */,
+				040DCAA91EEA91BF00E78125 /* RecommendDetailTableViewCell.h */,
+				040DCAAA1EEA91BF00E78125 /* RecommendDetailTableViewCell.m */,
+				040DCAAB1EEA91BF00E78125 /* RecommendDetailTableViewCell.xib */,
 			);
 			path = RecommendEarnings;
 			sourceTree = "<group>";
@@ -2006,6 +2073,7 @@
 				BC2E53121E94F36C00F7A99C /* HomebannerDefault.jpg in Resources */,
 				BC9B3DCE1E76837B003DC241 /* header.jpg in Resources */,
 				BCB9A7CA1E89F77100F3E966 /* MerchantDetailViewController.xib in Resources */,
+				040DCA9F1EEA7BAA00E78125 /* LogisticS.xcassets in Resources */,
 				BC0A58361E72832E0077C8A9 /* SetTableViewCell.xib in Resources */,
 				BC57B70F1E7FC937006AF4D1 /* HomeRecommendedTableViewCell.xib in Resources */,
 				BC5278FE1E8DF8BF004DD703 /* PersonalCenter.xcassets in Resources */,
@@ -2020,12 +2088,15 @@
 				046DAFA01ED57B0100E26C2C /* MyRecommendViewController.xib in Resources */,
 				BC9B3E061E7698CC003DC241 /* ManagerBankCardViewController.xib in Resources */,
 				BC34A1E71E92646700C786C0 /* Map.xcassets in Resources */,
+				040DCA991EEA7B0600E78125 /* LogisticsCompanyTableViewCell.xib in Resources */,
+				040DCA9D1EEA7B0600E78125 /* LogisticsViewController.xib in Resources */,
 				BC57B71B1E7FCE34006AF4D1 /* ForyouCollectionViewCell.xib in Resources */,
 				BC0A584F1E72A0680077C8A9 /* BillConsumptionTableViewCell.xib in Resources */,
 				BCFE20751E77C9F6002BC28C /* SecletBankCardTableViewCell.xib in Resources */,
 				BCAC5D101E825DC5003CACF8 /* BillAmountDisciplineView.xib in Resources */,
 				BC2E53101E94F1F600F7A99C /* merchantHeader.jpg in Resources */,
 				BC36CFE81E80C9AD00A51BF4 /* RecommentSpecilCollectionViewCell.xib in Resources */,
+				040DCAB31EEA91BF00E78125 /* RecommendDetailTableViewCell.xib in Resources */,
 				BC4E25331E80C50D005BE142 /* RecommentSpecialTableViewCell.xib in Resources */,
 				BCFE208B1E77E206002BC28C /* Login.storyboard in Resources */,
 				BC9B3DCB1E76837B003DC241 /* EditbankInfoTableViewCell.xib in Resources */,
@@ -2035,6 +2106,7 @@
 				BC36EA4E1E93BF1A0097F2F2 /* OnlinePayResultView.xib in Resources */,
 				0445BACF1ED56462009226BD /* WithDrawalRecodViewController.xib in Resources */,
 				047ABABD1EC9825B00A5DDB1 /* LoanHelpViewController.xib in Resources */,
+				040DCAAF1EEA91BF00E78125 /* RecommendConsumersView.xib in Resources */,
 				043C63D41ED6745800A6ED33 /* SureDiscoverOrderViewController.xib in Resources */,
 				BC9B3E021E7698CC003DC241 /* BanCardDetailTableViewCell.xib in Resources */,
 				BC4AABED1E4D69E2006568A6 /* Assets.xcassets in Resources */,
@@ -2046,6 +2118,7 @@
 				BC4AAC3D1E4D8F7B006568A6 /* MineTableViewCell.xib in Resources */,
 				04196B121ED6B3A2005F64C2 /* DIiscoverQrCodeTableViewCell.xib in Resources */,
 				043C63D91ED674FB00A6ED33 /* SureDiscoverOrderTableViewCell.xib in Resources */,
+				040DCA9B1EEA7B0600E78125 /* LogisticsDetailTableViewCell.xib in Resources */,
 				BC054D551E8A402E00062AC5 /* Bill12View.xib in Resources */,
 				BC41DAE81E91E8D7008FC9DC /* Home.xcassets in Resources */,
 				BC054D491E8A095B00062AC5 /* OnlinePayViewController.xib in Resources */,
@@ -2101,6 +2174,7 @@
 				BC9B3E0B1E769D44003DC241 /* SetPayPasswordViewController.xib in Resources */,
 				BC4C72E61EA7377E0048464A /* AddLoanTableViewCell.xib in Resources */,
 				BCC8E1A21E88FFB7004DBDA3 /* MerchantTableViewCell.xib in Resources */,
+				040DCAAD1EEA91BF00E78125 /* MyRecommendDetailListViewController.xib in Resources */,
 				BCD736FF1E93502D001F706C /* MessageTableViewCell.xib in Resources */,
 				BC57B7201E7FD62A006AF4D1 /* HomeMerchantTableViewCell.xib in Resources */,
 				04D981BC1ED574CB005A617A /* SelectGoodsNumberView.xib in Resources */,
@@ -2119,6 +2193,7 @@
 				BCD736FA1E935017001F706C /* MessageListViewController.xib in Resources */,
 				BCB9A7C51E89F4B600F3E966 /* Public.xcassets in Resources */,
 				0445BAC41ED55A85009226BD /* DiscoverCollectionViewCell.xib in Resources */,
+				040DCAB11EEA91BF00E78125 /* RecommendMerchantView.xib in Resources */,
 				BC9B3DDF1E7688AD003DC241 /* PersonCenterTableViewCell.xib in Resources */,
 				BCFE20941E77E206002BC28C /* ForgetPasswordTwoViewController.xib in Resources */,
 				BC34A1E51E92646700C786C0 /* BussessMapViewController.xib in Resources */,
@@ -2163,7 +2238,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		B85B21780A2C01C4D3CD5E74 /* [CP] Copy Pods Resources */ = {
@@ -2204,6 +2279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0445BAD31ED565D6009226BD /* WithDrawalRecodTableViewCell.m in Sources */,
+				040DCAB01EEA91BF00E78125 /* RecommendMerchantView.m in Sources */,
 				BC4AAC2E1E4D6E7D006568A6 /* BaseTableViewCell.m in Sources */,
 				BCD736F91E935017001F706C /* MessageListViewController.m in Sources */,
 				BCD737081E93544D001F706C /* MessageDetailTableViewCell.m in Sources */,
@@ -2235,6 +2311,7 @@
 				BC34A1C01E9256CA00C786C0 /* ButtonGroupView.m in Sources */,
 				BC9B3DDE1E7688AD003DC241 /* PersonCenterTableViewCell.m in Sources */,
 				BC4AAC381E4D8D51006568A6 /* MineViewController.m in Sources */,
+				040DCA9C1EEA7B0600E78125 /* LogisticsViewController.m in Sources */,
 				BC23C9EC1E79395A00E90B43 /* YesTodayEarningsAlerView.m in Sources */,
 				BC4AAC351E4D7562006568A6 /* JAlertViewHelper.m in Sources */,
 				BC23C9E61E792BD700E90B43 /* SubLBXScanViewController.m in Sources */,
@@ -2307,6 +2384,7 @@
 				04D981BB1ED574CB005A617A /* SelectGoodsNumberView.m in Sources */,
 				04196B111ED6B3A2005F64C2 /* DIiscoverQrCodeTableViewCell.m in Sources */,
 				BC34A1C11E9256CA00C786C0 /* CityButton.m in Sources */,
+				040DCAB21EEA91BF00E78125 /* RecommendDetailTableViewCell.m in Sources */,
 				BCD737151E936726001F706C /* MerchantSearchViewController.m in Sources */,
 				BCFE206A1E77BC83002BC28C /* TradInTableViewCell.m in Sources */,
 				BC9B3E031E7698CC003DC241 /* ManageBankView.m in Sources */,
@@ -2328,6 +2406,7 @@
 				BC36CFE71E80C9AD00A51BF4 /* RecommentSpecilCollectionViewCell.m in Sources */,
 				BC0A58451E728F2C0077C8A9 /* AutoScroller.m in Sources */,
 				0445BAC31ED55A85009226BD /* DiscoverCollectionViewCell.m in Sources */,
+				040DCAAC1EEA91BF00E78125 /* MyRecommendDetailListViewController.m in Sources */,
 				BC5279481E8E7E4E004DD703 /* LBXScanResult.m in Sources */,
 				043C63D81ED674FB00A6ED33 /* SureDiscoverOrderTableViewCell.m in Sources */,
 				BCE5EED71E5C41030055D828 /* Colours.m in Sources */,
@@ -2338,8 +2417,10 @@
 				BC4AABDF1E4D69E2006568A6 /* main.m in Sources */,
 				BCFE20741E77C9F6002BC28C /* SecletBankCardTableViewCell.m in Sources */,
 				BC34A1CA1E9256CA00C786C0 /* PinYinForObjc.m in Sources */,
+				040DCA981EEA7B0600E78125 /* LogisticsCompanyTableViewCell.m in Sources */,
 				BC0A58391E728C510077C8A9 /* SortButtonSwitchView.m in Sources */,
 				BC5279451E8E7E4E004DD703 /* LBXScanLineAnimation.m in Sources */,
+				040DCAAE1EEA91BF00E78125 /* RecommendConsumersView.m in Sources */,
 				BC9B3E051E7698CC003DC241 /* ManagerBankCardViewController.m in Sources */,
 				BC36EA431E937E600097F2F2 /* MyCollectionListViewController.m in Sources */,
 				BC52794D1E8E7E4E004DD703 /* LBXZXCapture.m in Sources */,
@@ -2378,6 +2459,7 @@
 				BC57B71A1E7FCE34006AF4D1 /* ForyouCollectionViewCell.m in Sources */,
 				043C63D31ED6745800A6ED33 /* SureDiscoverOrderViewController.m in Sources */,
 				BC34A1C91E9256CA00C786C0 /* PinyinFormatter.m in Sources */,
+				040DCA9A1EEA7B0600E78125 /* LogisticsDetailTableViewCell.m in Sources */,
 				BC4AABEB1E4D69E2006568A6 /* ShellCoin.xcdatamodeld in Sources */,
 				BCEC06991E83B6FA0059C2C4 /* BillIntegaralModel.m in Sources */,
 				BCD736FE1E93502D001F706C /* MessageTableViewCell.m in Sources */,

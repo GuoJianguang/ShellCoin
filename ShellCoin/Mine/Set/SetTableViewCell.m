@@ -10,6 +10,7 @@
 #import "EditPhoneNumberViewController.h"
 #import "SetPasswordViewController.h"
 #import "AboutUSViewController.h"
+#import "SelectShippingAddressViewController.h"
 
 
 @implementation SetTableViewCell
@@ -22,7 +23,7 @@
     self.exitBtn.layer.borderWidth = 1;
     self.exitBtn.layer.borderColor= MacoColor.CGColor;
     [self.exitBtn setTitleColor:MacoColor forState:UIControlStateNormal];
-    self.aboutUsLabel.textColor  = self.cleanLabel.textColor = self.phoneLabel.textColor = self.passwordLabel.textColor = MacoTitleColor;
+    self.aboutUsLabel.textColor  = self.cleanLabel.textColor = self.phoneLabel.textColor = self.passwordLabel.textColor =self.myAddressLabel.textColor= MacoTitleColor;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -90,6 +91,13 @@
     AboutUSViewController *aboutsVC = [[AboutUSViewController alloc]init];
     [self.viewController.navigationController pushViewController:aboutsVC animated:YES];
     
+}
+
+- (IBAction)myaddressBtn:(UIButton *)sender {
+    SelectShippingAddressViewController *addressVC = [[SelectShippingAddressViewController alloc]init];
+    addressVC.isCheckAddressList = YES;
+    [self.viewController.navigationController pushViewController:addressVC animated:YES];
+
 }
 
 

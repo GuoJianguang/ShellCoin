@@ -10,6 +10,7 @@
 #import "RecommendTableViewCell.h"
 #import "MyQrCodeViewController.h"
 #import "WithdrawalViewController.h"
+#import "MyRecommendDetailListViewController.h"
 
 
 @interface RecommentEarningsViewController ()<UITableViewDelegate,UITableViewDataSource>
@@ -135,5 +136,10 @@
 - (IBAction)withdrawalBtn:(UIButton *)sender {
     WithdrawalViewController *withDrawVC = [[WithdrawalViewController alloc]init];
     [self.navigationController pushViewController:withDrawVC animated:YES];
+}
+
+- (IBAction)checkRecommend:(id)sender {
+    MyRecommendDetailListViewController *detailVC = [[MyRecommendDetailListViewController alloc]init];
+    [self.navigationController pushViewController:detailVC animated:YES];
 }
 @end

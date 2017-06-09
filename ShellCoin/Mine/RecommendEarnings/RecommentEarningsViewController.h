@@ -23,5 +23,6 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *withdrawalBtn;
 - (IBAction)withdrawalBtn:(UIButton *)sender;
+- (IBAction)checkRecommend:(id)sender;
 
 @end

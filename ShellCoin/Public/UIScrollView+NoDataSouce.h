@@ -19,7 +19,7 @@
 
 - (void)judgeIsHaveDataSouce:(NSMutableArray *)dataSouceArray;
 - (void)judgeIsHaveDataSouce:(NSMutableArray *)dataSouceArray andBannerArray:(NSMutableArray *)bannerArray;
-
+- (void)judgeLogisticsIsHaveDataSouce:(NSMutableArray *)dataSouceArray;
 
 - (void)addNoDatasouceWithCallback:(void (^)())callback andAlertSting:(NSString *)alerString andErrorImage:(NSString *)imageName andRefreshBtnHiden:(BOOL)isHidden;
 

@@ -149,6 +149,40 @@
 
 }
 
+- (void)judgeLogisticsIsHaveDataSouce:(NSMutableArray *)dataSouceArray
+{
+    if (dataSouceArray.count == 0 ){
+        [[self viewWithTag:100] removeFromSuperview];
+        UIView *view  = [[UIView alloc]init];
+        view.tag = 100;
+        view.backgroundColor = [UIColor clearColor];
+        [self addSubview:view];
+        view.frame = CGRectMake(0, TWitdh *(90/750.), TWitdh,THeight - 64 -TWitdh *(90/750.));
+        UIImageView *imageView = [[UIImageView alloc]init];
+        imageView.image = [UIImage imageNamed:@"pic_anonymous"];
+        [view addSubview:imageView];
+        if (THeight == 480) {
+            imageView.bounds = CGRectMake(0, 0, TWitdh/5, TWitdh/5*(216/312.));
+            
+        }else{
+            imageView.bounds = CGRectMake(0, 0, TWitdh/3, TWitdh/3*(216/312.));
+        }
+        imageView.center = CGPointMake(view.bounds.size.width/2, view.bounds.size.height/2 - 10);
+        
+        UILabel *label = [[UILabel alloc]init];
+        label.text = @"抱歉，暂时没有查找到物流信息";
+        [view addSubview:label];
+        label.font = [UIFont systemFontOfSize:15];
+        label.frame = CGRectMake(20, imageView.frame.origin.y + imageView.bounds.size.height, TWitdh - 40, 28);
+        label.textAlignment = NSTextAlignmentCenter;
+        label.adjustsFontSizeToFitWidth = YES;
+        label.textColor = [UIColor grayColor];
+    }else{
+        [self hiddenNoDataSouce];
+        
+    }
+    
+}
 
 
 - (void)showNoDataSouce

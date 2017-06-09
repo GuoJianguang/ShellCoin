@@ -25,7 +25,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.naviBar.title = @"编辑收获地址";
+    self.naviBar.title = @"编辑收货地址";
     self.naviBar.detailImage = [UIImage imageNamed:@"icon_delete_white"];
     self.naviBar.hiddenDetailBtn = NO;
     self.naviBar.delegate = self;

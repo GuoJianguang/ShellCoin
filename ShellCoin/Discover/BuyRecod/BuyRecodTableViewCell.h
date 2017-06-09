@@ -15,6 +15,26 @@
 @property (nonatomic,copy)NSString *amount;
 @property (nonatomic,copy)NSString *count;
 @property (nonatomic,copy)NSString *buyId;
+/**
+ * 0未发货  1已发货
+ */
+
+@property (nonatomic,copy)NSString *deliverFlag;
+/**
+ * 快递公司
+ */
+
+@property (nonatomic,copy)NSString *logisticsCompany;
+/**
+ * 快递单号
+ */
+
+@property (nonatomic,copy)NSString *logisticsNumber;
+/**
+ * 快递公司编号
+ */
+
+@property (nonatomic,copy)NSString *logisticsCompanyCode;
 
 @end
 
@@ -27,7 +47,11 @@
 @property (weak, nonatomic) IBOutlet UILabel *moneyLabel;
 
 
+@property (weak, nonatomic) IBOutlet UIButton *checkLogisticBtn;
+- (IBAction)checkLogisticBtn:(UIButton *)sender;
 
 @property (nonatomic, strong)BuyRecodeModel *dataModel;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *enterWidth;
+@property (weak, nonatomic) IBOutlet UIImageView *iconEnter;
 
 @end

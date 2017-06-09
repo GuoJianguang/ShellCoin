@@ -22,6 +22,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *aboutUsLabel;
 
 @property (weak, nonatomic) IBOutlet UIButton *exitBtn;
+@property (weak, nonatomic) IBOutlet UILabel *myAddressLabel;
 
 - (IBAction)exitBtn:(UIButton *)sender;
 
@@ -32,5 +33,6 @@
 
 - (IBAction)cleanBtn:(id)sender;
 - (IBAction)aboutUsBtn:(id)sender;
+- (IBAction)myaddressBtn:(UIButton *)sender;
 
 @end

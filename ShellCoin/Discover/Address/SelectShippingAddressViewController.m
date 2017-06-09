@@ -116,7 +116,14 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.row == self.dataSouceArray.count) {
+    if (self.isCheckAddressList) {
+        EditAddressViewController *editVC = [[EditAddressViewController alloc]init];
+        editVC.isAddAddress = NO;
+        editVC.addressModel = self.dataSouceArray[indexPath.row];
+        [self.navigationController pushViewController:editVC animated:YES];
+        return;
+    }
+    if (indexPath.row == self.dataSouceArray.count || self.isCheckAddressList) {
         return;
     }
     ShippingAddressModel *model = self.dataSouceArray[indexPath.row];

@@ -38,9 +38,9 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (THeight < 500) {
-        return 560;
+        return 560 + 60;
     }
-    return THeight;
+    return THeight + 60;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
