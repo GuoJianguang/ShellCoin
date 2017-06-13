@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyorderViewController">
+            <connections>
+                <outlet property="sortView" destination="igT-4U-WLo" id="ZuF-Kp-V80"/>
+                <outlet property="swipeView" destination="BFI-LT-9p9" id="QLc-FG-o0r"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="igT-4U-WLo" customClass="SortButtonSwitchView">
+                    <rect key="frame" x="0.0" y="64" width="375" height="70"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mine_bg2" translatesAutoresizingMaskIntoConstraints="NO" id="Vce-DP-76C">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="Vce-DP-76C" firstAttribute="top" secondItem="igT-4U-WLo" secondAttribute="top" id="S58-U6-XjP"/>
+                        <constraint firstAttribute="trailing" secondItem="Vce-DP-76C" secondAttribute="trailing" id="Sqc-sd-agR"/>
+                        <constraint firstAttribute="bottom" secondItem="Vce-DP-76C" secondAttribute="bottom" constant="6" id="Yyb-pl-MhF"/>
+                        <constraint firstItem="Vce-DP-76C" firstAttribute="leading" secondItem="igT-4U-WLo" secondAttribute="leading" id="kf2-KX-0xy"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BFI-LT-9p9" customClass="SwipeView">
+                    <rect key="frame" x="0.0" y="134" width="375" height="533"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="igT-4U-WLo" secondAttribute="trailing" id="0Mr-GS-8f4"/>
+                <constraint firstItem="BFI-LT-9p9" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="4Cr-oy-Zpu"/>
+                <constraint firstItem="igT-4U-WLo" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="EJ0-Dx-6tX"/>
+                <constraint firstAttribute="trailing" secondItem="BFI-LT-9p9" secondAttribute="trailing" id="Ies-vZ-Wzw"/>
+                <constraint firstItem="BFI-LT-9p9" firstAttribute="top" secondItem="igT-4U-WLo" secondAttribute="bottom" id="Rvw-KR-kJb"/>
+                <constraint firstAttribute="bottom" secondItem="BFI-LT-9p9" secondAttribute="bottom" id="aJY-my-6Fd"/>
+                <constraint firstItem="igT-4U-WLo" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="dRC-6U-16y"/>
+            </constraints>
+            <point key="canvasLocation" x="-130" y="-62"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="mine_bg2" width="375" height="64"/>
+    </resources>
+</document>

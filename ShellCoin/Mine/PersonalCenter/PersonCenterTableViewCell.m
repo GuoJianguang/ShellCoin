@@ -15,6 +15,7 @@
 #import "LBXAlertAction.h"
 #import <QiniuSDK.h>
 #import "MyCollectionListViewController.h"
+#import "MyorderViewController.h"
 
 
 @interface PersonCenterTableViewCell()<UIActionSheetDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate>
@@ -40,7 +41,7 @@
     
     [self.headImageView sd_setImageWithURL:[NSURL URLWithString:[ShellCoinUserInfo shareUserInfos].avatar] placeholderImage:LoadingErrorDefaultHearder completed:NULL];
 
-    self.bankLabel.textColor = self.vipLabel.textColor = self.realNameLabel.textColor = self.qrCodeLabel.textColor = self.myCollectionlabel.textColor = MacoTitleColor;
+    self.bankLabel.textColor = self.vipLabel.textColor = self.realNameLabel.textColor = self.qrCodeLabel.textColor = self.myCollectionlabel.textColor=self.myorderLabel.textColor = MacoTitleColor;
     [self.realNameBtn setTitleColor:MacoColor forState:UIControlStateNormal];
     
     self.bankRemarkImage.hidden = [ShellCoinUserInfo shareUserInfos].bindingFlag;
@@ -222,7 +223,12 @@
     [self.viewController.navigationController pushViewController:myCollectionVC animated:YES];
 }
 
-
+//我的收藏
+- (IBAction)myorderBtn:(UIButton *)sender {
+    MyorderViewController *orderVC =[[MyorderViewController alloc]init];
+    [self.viewController.navigationController pushViewController:orderVC animated:YES];
+    
+}
 #pragma mark - 上传头像
 
 
@@ -411,6 +417,7 @@
     }
     return NO;
 }
+
 
 
 @end

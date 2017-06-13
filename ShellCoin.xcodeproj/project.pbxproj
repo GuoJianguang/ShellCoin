@@ -40,6 +40,13 @@
 		041ABCD61ED823D400C181CB /* AliPayObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 041ABCD51ED823D400C181CB /* AliPayObject.m */; };
 		041ABCDA1ED833D300C181CB /* DiscoverOnlinePayResultView.m in Sources */ = {isa = PBXBuildFile; fileRef = 041ABCD81ED833D300C181CB /* DiscoverOnlinePayResultView.m */; };
 		041ABCDB1ED833D300C181CB /* DiscoverOnlinePayResultView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 041ABCD91ED833D300C181CB /* DiscoverOnlinePayResultView.xib */; };
+		0420419A1EEFB92B00F309C3 /* MyorderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042041981EEFB92B00F309C3 /* MyorderViewController.m */; };
+		0420419B1EEFB92B00F309C3 /* MyorderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042041991EEFB92B00F309C3 /* MyorderViewController.xib */; };
+		042041A41EEFD55100F309C3 /* OrderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 042041A21EEFD55100F309C3 /* OrderTableViewCell.m */; };
+		042041A51EEFD55100F309C3 /* OrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042041A31EEFD55100F309C3 /* OrderTableViewCell.xib */; };
+		042041A81EEFDC2400F309C3 /* MyorderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 042041A71EEFDC2400F309C3 /* MyorderView.m */; };
+		042041AA1EEFDC3800F309C3 /* MyorderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042041A91EEFDC3800F309C3 /* MyorderView.xib */; };
+		042041AD1EEFDD7300F309C3 /* OrderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 042041AC1EEFDD7300F309C3 /* OrderModel.m */; };
 		042C70451EC45B8D0035A912 /* LoanHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042C70431EC45B8D0035A912 /* LoanHomeViewController.m */; };
 		042C70461EC45B8D0035A912 /* LoanHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042C70441EC45B8D0035A912 /* LoanHomeViewController.xib */; };
 		042C704A1EC464550035A912 /* LoanOtherTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 042C70481EC464550035A912 /* LoanOtherTableViewCell.m */; };
@@ -425,6 +432,17 @@
 		041ABCD71ED833D300C181CB /* DiscoverOnlinePayResultView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverOnlinePayResultView.h; sourceTree = "<group>"; };
 		041ABCD81ED833D300C181CB /* DiscoverOnlinePayResultView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverOnlinePayResultView.m; sourceTree = "<group>"; };
 		041ABCD91ED833D300C181CB /* DiscoverOnlinePayResultView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiscoverOnlinePayResultView.xib; sourceTree = "<group>"; };
+		042041971EEFB92B00F309C3 /* MyorderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyorderViewController.h; sourceTree = "<group>"; };
+		042041981EEFB92B00F309C3 /* MyorderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyorderViewController.m; sourceTree = "<group>"; };
+		042041991EEFB92B00F309C3 /* MyorderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyorderViewController.xib; sourceTree = "<group>"; };
+		042041A11EEFD55100F309C3 /* OrderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderTableViewCell.h; sourceTree = "<group>"; };
+		042041A21EEFD55100F309C3 /* OrderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderTableViewCell.m; sourceTree = "<group>"; };
+		042041A31EEFD55100F309C3 /* OrderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderTableViewCell.xib; sourceTree = "<group>"; };
+		042041A61EEFDC2400F309C3 /* MyorderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyorderView.h; sourceTree = "<group>"; };
+		042041A71EEFDC2400F309C3 /* MyorderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyorderView.m; sourceTree = "<group>"; };
+		042041A91EEFDC3800F309C3 /* MyorderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyorderView.xib; sourceTree = "<group>"; };
+		042041AB1EEFDD7300F309C3 /* OrderModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderModel.h; sourceTree = "<group>"; };
+		042041AC1EEFDD7300F309C3 /* OrderModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderModel.m; sourceTree = "<group>"; };
 		042C70421EC45B8D0035A912 /* LoanHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoanHomeViewController.h; sourceTree = "<group>"; };
 		042C70431EC45B8D0035A912 /* LoanHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoanHomeViewController.m; sourceTree = "<group>"; };
 		042C70441EC45B8D0035A912 /* LoanHomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoanHomeViewController.xib; sourceTree = "<group>"; };
@@ -1014,6 +1032,24 @@
 				041ABCD11ED823A800C181CB /* AlipaySDK.framework */,
 			);
 			path = AlipaySDK;
+			sourceTree = "<group>";
+		};
+		042041961EEFB91500F309C3 /* Myorder */ = {
+			isa = PBXGroup;
+			children = (
+				042041971EEFB92B00F309C3 /* MyorderViewController.h */,
+				042041981EEFB92B00F309C3 /* MyorderViewController.m */,
+				042041991EEFB92B00F309C3 /* MyorderViewController.xib */,
+				042041A11EEFD55100F309C3 /* OrderTableViewCell.h */,
+				042041A21EEFD55100F309C3 /* OrderTableViewCell.m */,
+				042041A31EEFD55100F309C3 /* OrderTableViewCell.xib */,
+				042041A61EEFDC2400F309C3 /* MyorderView.h */,
+				042041A71EEFDC2400F309C3 /* MyorderView.m */,
+				042041A91EEFDC3800F309C3 /* MyorderView.xib */,
+				042041AB1EEFDD7300F309C3 /* OrderModel.h */,
+				042041AC1EEFDD7300F309C3 /* OrderModel.m */,
+			);
+			path = Myorder;
 			sourceTree = "<group>";
 		};
 		043C63DA1ED680B800A6ED33 /* Address */ = {
@@ -1812,6 +1848,7 @@
 				BC36EA401E937E600097F2F2 /* MyCollectionListViewController.h */,
 				BC36EA411E937E600097F2F2 /* MyCollectionListViewController.m */,
 				BC36EA421E937E600097F2F2 /* MyCollectionListViewController.xib */,
+				042041961EEFB91500F309C3 /* Myorder */,
 				BC9B3DE21E768919003DC241 /* myQrCode */,
 				BC9B3DB71E76837B003DC241 /* BankManage */,
 				BC9B3DA71E763AC5003DC241 /* Realname authentication */,
@@ -2073,6 +2110,7 @@
 				BC2E53121E94F36C00F7A99C /* HomebannerDefault.jpg in Resources */,
 				BC9B3DCE1E76837B003DC241 /* header.jpg in Resources */,
 				BCB9A7CA1E89F77100F3E966 /* MerchantDetailViewController.xib in Resources */,
+				042041AA1EEFDC3800F309C3 /* MyorderView.xib in Resources */,
 				040DCA9F1EEA7BAA00E78125 /* LogisticS.xcassets in Resources */,
 				BC0A58361E72832E0077C8A9 /* SetTableViewCell.xib in Resources */,
 				BC57B70F1E7FC937006AF4D1 /* HomeRecommendedTableViewCell.xib in Resources */,
@@ -2094,6 +2132,7 @@
 				BC0A584F1E72A0680077C8A9 /* BillConsumptionTableViewCell.xib in Resources */,
 				BCFE20751E77C9F6002BC28C /* SecletBankCardTableViewCell.xib in Resources */,
 				BCAC5D101E825DC5003CACF8 /* BillAmountDisciplineView.xib in Resources */,
+				042041A51EEFD55100F309C3 /* OrderTableViewCell.xib in Resources */,
 				BC2E53101E94F1F600F7A99C /* merchantHeader.jpg in Resources */,
 				BC36CFE81E80C9AD00A51BF4 /* RecommentSpecilCollectionViewCell.xib in Resources */,
 				040DCAB31EEA91BF00E78125 /* RecommendDetailTableViewCell.xib in Resources */,
@@ -2117,6 +2156,7 @@
 				BC4C72E81EA737CF0048464A /* Loan.xcassets in Resources */,
 				BC4AAC3D1E4D8F7B006568A6 /* MineTableViewCell.xib in Resources */,
 				04196B121ED6B3A2005F64C2 /* DIiscoverQrCodeTableViewCell.xib in Resources */,
+				0420419B1EEFB92B00F309C3 /* MyorderViewController.xib in Resources */,
 				043C63D91ED674FB00A6ED33 /* SureDiscoverOrderTableViewCell.xib in Resources */,
 				040DCA9B1EEA7B0600E78125 /* LogisticsDetailTableViewCell.xib in Resources */,
 				BC054D551E8A402E00062AC5 /* Bill12View.xib in Resources */,
@@ -2279,6 +2319,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0445BAD31ED565D6009226BD /* WithDrawalRecodTableViewCell.m in Sources */,
+				0420419A1EEFB92B00F309C3 /* MyorderViewController.m in Sources */,
 				040DCAB01EEA91BF00E78125 /* RecommendMerchantView.m in Sources */,
 				BC4AAC2E1E4D6E7D006568A6 /* BaseTableViewCell.m in Sources */,
 				BCD736F91E935017001F706C /* MessageListViewController.m in Sources */,
@@ -2291,6 +2332,7 @@
 				0445BABE1ED52C08009226BD /* DiscoverRootTableViewCell.m in Sources */,
 				BC0A58231E724ADA0077C8A9 /* BaseHttpClient.m in Sources */,
 				BCFE208F1E77E206002BC28C /* RegisterTwoViewController.m in Sources */,
+				042041A41EEFD55100F309C3 /* OrderTableViewCell.m in Sources */,
 				BC34A1E81E92646700C786C0 /* CommonUtility.m in Sources */,
 				BC77C69A1E7A6D8600DC9EAC /* WeXinPayObject.m in Sources */,
 				BC9B3DC81E76837B003DC241 /* BankPickView.m in Sources */,
@@ -2335,6 +2377,7 @@
 				BC3FB69A1E974BBD00C06A95 /* MyQrCodeTableViewCell.m in Sources */,
 				BCFE20971E77E329002BC28C /* ShellCoinUserInfo.m in Sources */,
 				BC9B3E011E7698CC003DC241 /* BanCardDetailTableViewCell.m in Sources */,
+				042041AD1EEFDD7300F309C3 /* OrderModel.m in Sources */,
 				BC5279431E8E7E4E004DD703 /* UIAlertView+LBXAlertAction.m in Sources */,
 				BC4C72E51EA7377E0048464A /* AddLoanTableViewCell.m in Sources */,
 				BC4AAC2F1E4D6E7D006568A6 /* BaseViewController.m in Sources */,
@@ -2433,6 +2476,7 @@
 				BC5279471E8E7E4E004DD703 /* LBXScanNetAnimation.m in Sources */,
 				BC054D4E1E8A3D2600062AC5 /* Bill1View.m in Sources */,
 				BC23C9E91E7933B700E90B43 /* LSPaoMaView.m in Sources */,
+				042041A81EEFDC2400F309C3 /* MyorderView.m in Sources */,
 				BC4E252D1E80C41E005BE142 /* TalentRecommentViewController.m in Sources */,
 				BC4C72F11EA7407D0048464A /* LoanTableViewCell.m in Sources */,
 				04196B0A1ED6AA4A005F64C2 /* CountDown.m in Sources */,

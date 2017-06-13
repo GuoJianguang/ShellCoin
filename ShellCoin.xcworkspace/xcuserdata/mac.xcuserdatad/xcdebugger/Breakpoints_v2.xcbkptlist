@@ -84,12 +84,12 @@
                   moduleName = "ShellCoin"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/mac/Desktop/ShellCoin/ShellCoin/Mine/SubLBXScanViewController.m"
-                  timestampString = "518694302.842928"
+                  timestampString = "519038766.365103"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "216"
                   endingLineNumber = "216"
-                  offsetFromSymbolStart = "2544">
+                  offsetFromSymbolStart = "3172">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -99,12 +99,12 @@
                   moduleName = "ShellCoin"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/mac/Desktop/ShellCoin/ShellCoin/Mine/SubLBXScanViewController.m"
-                  timestampString = "518694302.84576"
+                  timestampString = "519038766.367142"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "216"
                   endingLineNumber = "216"
-                  offsetFromSymbolStart = "2584">
+                  offsetFromSymbolStart = "3199">
                </Location>
             </Locations>
          </BreakpointContent>
