@@ -9,6 +9,7 @@
 #import "MyorderView.h"
 #import "OrderTableViewCell.h"
 #import "OrderModel.h"
+#import "OrderDetailViewController.h"
 
 @interface MyorderView()<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic, assign)NSInteger page;
@@ -123,5 +124,11 @@
     return cell;
 }
 
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    OrderDetailViewController *orderDetailVC = [[OrderDetailViewController alloc]init];
+    [self.viewController.navigationController pushViewController:orderDetailVC animated:YES];
+}
 
 @end

@@ -7,6 +7,8 @@
 //
 
 #import "OrderTableViewCell.h"
+#import "LogisticsViewController.h"
+#import "BuyRecodTableViewCell.h"
 
 @implementation OrderTableViewCell
 
@@ -27,9 +29,46 @@
     // Configure the view for the selected state
 }
 
+#pragma mark - 取消订单／查看物流
 - (IBAction)statusBtn:(UIButton *)sender {
+    switch (self.orderType) {
+        case Myorder_type_waitPay:
+        {
+            UIAlertController *alertcontroller = [UIAlertController alertControllerWithTitle:@"重要提示" message:@"您是否确认要取消该订单" preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"点错了" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+            }];
+            UIAlertAction *otherAction = [UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+                //取消订单
+                
+            }];
+            [alertcontroller addAction:cancelAction];
+            [alertcontroller addAction:otherAction];
+            [self.viewController presentViewController:alertcontroller animated:YES completion:NULL];
+ 
+        }
+            break;
+            case Myorder_type_waitReceiveGoods://查看物流
+        {
+            LogisticsViewController *logisticsVC = [[LogisticsViewController alloc]init];
+            BuyRecodeModel *model = [[BuyRecodeModel alloc]init];
+            model.buyId = @"2017053114392602100001";
+            model.logisticsCompany = @"顺丰快递";
+            model.logisticsNumber = @"602714487633";
+            model.logisticsCompanyCode = @"SF";
+            model.deliverFlag = @"1";
+            logisticsVC.dataModel = model;
+            [self.viewController.navigationController pushViewController:logisticsVC animated:YES];
+        }
+            break;
+        default:
+            break;
+    }
+
     
 }
+
+#pragma mark - 去支付／提醒发货／确认收货／查看详情
+
 - (IBAction)acitonBtn:(UIButton *)sender {
     
 }
