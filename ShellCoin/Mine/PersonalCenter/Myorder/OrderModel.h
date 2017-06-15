@@ -13,5 +13,7 @@
 
 @interface OrderModel : BaseModel
 
+@property (nonatomic,copy)NSString *orderId;
+
 
 @end

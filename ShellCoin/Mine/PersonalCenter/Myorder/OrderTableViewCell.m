@@ -9,6 +9,7 @@
 #import "OrderTableViewCell.h"
 #import "LogisticsViewController.h"
 #import "BuyRecodTableViewCell.h"
+#import "OrderModel.h"
 
 @implementation OrderTableViewCell
 
@@ -70,6 +71,36 @@
 #pragma mark - 去支付／提醒发货／确认收货／查看详情
 
 - (IBAction)acitonBtn:(UIButton *)sender {
+    
+    switch (self.orderType) {
+        case Myorder_type_waitPay:
+        {
+
+        }
+            break;
+        case Myorder_type_waitSendGoods:
+        {
+ 
+            
+        }
+            break;
+        case Myorder_type_waitReceiveGoods:
+        {
+            [[NSNotificationCenter defaultCenter]postNotificationName:@"sureReceiving" object:@{@"orderId":self.dataModel.orderId}];
+            
+        }
+            break;
+        case Myorder_type_compelte:
+        {
+
+            
+        }
+            break;
+        default:
+            break;
+    }
+
+    
     
 }
 

@@ -7,6 +7,11 @@
 //
 
 #import "OrderDetailTableViewCell.h"
+#import "ApplyForAfterSalesViewController.h"
+#import "LogisticsViewController.h"
+#import "BuyRecodTableViewCell.h"
+#import "WaitAfterForSalesViewController.h"
+
 
 @implementation OrderDetailTableViewCell
 
@@ -39,11 +44,62 @@
 }
 
 - (IBAction)checkStore:(UIButton *)sender {
+    
 }
 - (IBAction)sureShippBtn:(UIButton *)sender {
+    [[NSNotificationCenter defaultCenter]postNotificationName:@"orderDetailsureReceiving" object:nil];
 }
 - (IBAction)checkLogBtn:(UIButton *)sender {
+    LogisticsViewController *logisticsVC = [[LogisticsViewController alloc]init];
+    BuyRecodeModel *model = [[BuyRecodeModel alloc]init];
+    model.buyId = @"2017053114392602100001";
+    model.logisticsCompany = @"顺丰快递";
+    model.logisticsNumber = @"602714487633";
+    model.logisticsCompanyCode = @"SF";
+    model.deliverFlag = @"1";
+    logisticsVC.dataModel = model;
+    [self.viewController.navigationController pushViewController:logisticsVC animated:YES];
 }
 - (IBAction)applyAfterSalesBtn:(UIButton *)sender {
+    
+    
+    WaitAfterForSalesViewController *waitVC = [[WaitAfterForSalesViewController alloc]init];
+    [self.viewController.navigationController pushViewController:waitVC animated:YES];
+    return;
+    ApplyForAfterSalesViewController *applyVC = [[ApplyForAfterSalesViewController alloc]init];
+    [self.viewController.navigationController pushViewController:applyVC animated:YES];
 }
+
+
+
+- (void)setOrderType:(Myorder_type)orderType
+{
+    switch (orderType) {
+        case Myorder_type_waitSendGoods:
+        {
+            self.checkLogBtnWidth.constant = 0;
+            self.checkLogBtn.hidden = YES;
+            self.sureShippBthWidth.constant = 0;
+            self.sureShippBtn.hidden = YES;
+        }
+            break;
+        case Myorder_type_waitReceiveGoods:
+        {
+            
+        }
+            break;
+        case Myorder_type_compelte:
+        {
+            self.sureShippBthWidth.constant = 0;
+            self.sureShippBtn.hidden = YES;
+            self.checkLogBtnWidth.constant = 0;
+            self.checkLogBtn.hidden = YES;
+        }
+            break;
+        default:
+            break;
+    }
+}
+
+
 @end

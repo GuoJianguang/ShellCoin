@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "MyorderViewController.h"
 @interface OrderDetailTableViewCell : BaseTableViewCell
 
 #pragma mark - 收货信息
@@ -32,6 +32,9 @@
 - (IBAction)checkLogBtn:(UIButton *)sender;
 @property (weak, nonatomic) IBOutlet UIButton *applyAfterSalesBtn;
 - (IBAction)applyAfterSalesBtn:(UIButton *)sender;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *sureShippBthWidth;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *checkLogBtnWidth;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *applyAferSalesBtnWidth;
 
 #pragma mark - 费用信息
 
@@ -45,5 +48,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *actualMoney;
 @property (weak, nonatomic) IBOutlet UILabel *totalMoneyLabel;
 @property (weak, nonatomic) IBOutlet UILabel *totalMoney;
+
+
+
+@property (nonatomic, assign)Myorder_type  orderType;
 
 @end

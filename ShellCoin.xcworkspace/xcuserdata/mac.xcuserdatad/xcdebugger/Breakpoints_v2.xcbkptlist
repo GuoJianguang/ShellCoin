@@ -16,22 +16,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ShellCoin/Mine/trade-in/SureTradInView.m"
-            timestampString = "517474008.699739"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "160"
-            endingLineNumber = "160"
-            landmarkName = "-gotMerchantOnlinePay:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -84,7 +68,7 @@
                   moduleName = "ShellCoin"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/mac/Desktop/ShellCoin/ShellCoin/Mine/SubLBXScanViewController.m"
-                  timestampString = "519122244.920786"
+                  timestampString = "519210438.773545"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "216"
@@ -99,7 +83,7 @@
                   moduleName = "ShellCoin"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/mac/Desktop/ShellCoin/ShellCoin/Mine/SubLBXScanViewController.m"
-                  timestampString = "519122244.922753"
+                  timestampString = "519210438.776535"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "216"

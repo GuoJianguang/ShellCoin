@@ -10,6 +10,7 @@
 #import "OrderTableViewCell.h"
 #import "OrderModel.h"
 #import "OrderDetailViewController.h"
+#import "AfterSalesDetailViewController.h"
 
 @interface MyorderView()<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic, assign)NSInteger page;
@@ -127,7 +128,23 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
+    switch (self.orderType) {
+        case Myorder_type_compelte:
+        {
+            AfterSalesDetailViewController *afterDetailVC =[[AfterSalesDetailViewController alloc]init];
+            [self.viewController.navigationController pushViewController:afterDetailVC animated:YES];
+            return;
+
+        }
+            break;
+            
+        default:
+            break;
+    }
+    
     OrderDetailViewController *orderDetailVC = [[OrderDetailViewController alloc]init];
+    orderDetailVC.orderType = self.orderType;
     [self.viewController.navigationController pushViewController:orderDetailVC animated:YES];
 }
 

@@ -10,4 +10,11 @@
 
 @implementation OrderModel
 
++ (id)modelWithDic:(NSDictionary *)dic
+{
+    OrderModel *model = [[OrderModel alloc]init];
+    model.orderId = NullToSpace(dic[@"id"]);
+    return model;
+}
+
 @end

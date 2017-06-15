@@ -7,15 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-
-typedef NS_ENUM(NSInteger,Myorder_type){
-    Myorder_type_waitPay = 1,//待付款
-    Myorder_type_waitSendGoods = 2,//待发货
-    Myorder_type_waitReceiveGoods = 3,//待收货
-    Myorder_type_compelte= 4,//已完成
-};
-
+#import "MyorderViewController.h"
 
 
 @interface MyorderView : UIView

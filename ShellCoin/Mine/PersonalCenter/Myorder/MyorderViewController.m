@@ -8,13 +8,15 @@
 
 #import "MyorderViewController.h"
 #import "MyorderView.h"
+#import "SureReceivingView.h"
 
-@interface MyorderViewController ()<SwipeViewDelegate,SwipeViewDataSource,SortButtonSwitchViewDelegate>
+@interface MyorderViewController ()<SwipeViewDelegate,SwipeViewDataSource,SortButtonSwitchViewDelegate,SureReceivingDelegate,BasenavigationDelegate>
 
 @property (nonatomic, strong)MyorderView *waitPayView;
 @property (nonatomic, strong)MyorderView *waitSendGoodsView;
 @property (nonatomic, strong)MyorderView *waitReceiveGoodsView;
 @property (nonatomic, strong)MyorderView *compelteView;
+@property (nonatomic, strong)SureReceivingView *passwordView;
 
 
 @end
@@ -26,10 +28,15 @@
     // Do any additional setup after loading the view from its nib.
     self.naviBar.title = @"我的订单";
     self.naviBar.lineVIew.hidden = YES;
+    self.naviBar.delegate = self;
     self.sortView.titleArray = @[@"待付款",@"待发货",@"待收货",@"已完成"];
     self.sortView.delegate = self;
     self.swipeView.delegate = self;
     self.swipeView.dataSource = self;
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(goinputPassword:) name:@"sureReceiving" object:nil];
+
+    
 }
 
 #pragma mark - 各个分类view的懒加载
@@ -71,6 +78,16 @@
     }
     return _compelteView;
 }
+
+- (SureReceivingView *)passwordView
+{
+    if (!_passwordView) {
+        _passwordView = [[SureReceivingView alloc]init];
+        _passwordView.delegate = self;
+    }
+    return _passwordView;
+}
+
 
 
 #pragma mark - SwipeView
@@ -152,6 +169,44 @@
     [self.swipeView scrollToPage:[sortId integerValue] -1 duration:0];
     
 }
+
+
+#pragma mark - 确认收货输入支付密码
+- (void)goinputPassword:(NSNotification *)notfication
+{
+    NSDictionary *parms = @{@"token":[ShellCoinUserInfo shareUserInfos].token,
+                            @"id":NullToSpace(notfication.userInfo[@"orderId"])};
+    [self.view addSubview:self.passwordView];
+    self.passwordView.passwordTF.text = @"";
+    self.passwordView.mallOrderParms = [NSMutableDictionary dictionaryWithDictionary:parms];
+    UIEdgeInsets insets = UIEdgeInsetsMake(0, 0, 0, 0);
+    [self.passwordView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.view).insets(insets);
+    }];
+    self.passwordView.itemView.frame = CGRectMake(0, THeight , TWitdh, TWitdh*(260/375.));
+    [UIView animateWithDuration:0.5 animations:^{
+        self.passwordView.itemView.frame = CGRectMake(0, THeight - (TWitdh*(260/375.)), TWitdh, TWitdh*(260/375.));
+    }];
+}
+
+
+
+#pragma mark - 返回按钮
+
+- (void)backBtnClick
+{
+    [[NSNotificationCenter defaultCenter]removeObserver:self name:@"sureReceiving" object:nil];
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+
+#pragma mark - 确认收货成功
+- (void)sureReceivingsuccess:(NSString *)payWay
+{
+    [self.waitReceiveGoodsView reload];
+    
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
