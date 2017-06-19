@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="MallRootBannerCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="410" height="225"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="410" height="225"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wlb-Hp-6St">
+                        <rect key="frame" x="0.0" y="186.5" width="410" height="38.5"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MZM-fc-98U">
+                                <rect key="frame" x="165.5" y="11" width="79" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="  新品推荐" image="pic_xinpintuijian">
+                                    <color key="titleColor" red="0.64711296559999998" green="0.64709866049999998" blue="0.64710146189999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cul-ys-UQq">
+                                <rect key="frame" x="10" y="19" width="125.5" height="1"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="okC-kx-Vxf"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BY7-dM-3aU">
+                                <rect key="frame" x="274.5" y="19" width="125.5" height="1"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="hcf-Bj-jpA"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.91374570129999999" green="0.91372597219999996" blue="0.91372990610000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Cul-ys-UQq" firstAttribute="centerY" secondItem="wlb-Hp-6St" secondAttribute="centerY" id="4pX-rP-F5I"/>
+                            <constraint firstItem="BY7-dM-3aU" firstAttribute="centerY" secondItem="wlb-Hp-6St" secondAttribute="centerY" id="Edh-tq-ZAe"/>
+                            <constraint firstItem="MZM-fc-98U" firstAttribute="centerY" secondItem="wlb-Hp-6St" secondAttribute="centerY" id="I12-My-6VO"/>
+                            <constraint firstItem="MZM-fc-98U" firstAttribute="centerX" secondItem="wlb-Hp-6St" secondAttribute="centerX" id="ULl-ln-cDC"/>
+                            <constraint firstItem="BY7-dM-3aU" firstAttribute="leading" secondItem="MZM-fc-98U" secondAttribute="trailing" constant="30" id="nKH-6m-5IV"/>
+                            <constraint firstAttribute="trailing" secondItem="BY7-dM-3aU" secondAttribute="trailing" constant="10" id="rxO-eR-nBw"/>
+                            <constraint firstAttribute="width" secondItem="wlb-Hp-6St" secondAttribute="height" multiplier="75/7" id="stn-fW-lwe"/>
+                            <constraint firstItem="MZM-fc-98U" firstAttribute="leading" secondItem="Cul-ys-UQq" secondAttribute="trailing" constant="30" id="wZB-P1-4XN"/>
+                            <constraint firstItem="Cul-ys-UQq" firstAttribute="leading" secondItem="wlb-Hp-6St" secondAttribute="leading" constant="10" id="xOv-Hu-oAw"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dNY-yh-htP">
+                        <rect key="frame" x="0.0" y="0.0" width="410" height="186.5"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="dNY-yh-htP" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="6Tz-dR-Iua"/>
+                <constraint firstAttribute="trailing" secondItem="dNY-yh-htP" secondAttribute="trailing" id="8sw-4D-gYq"/>
+                <constraint firstItem="wlb-Hp-6St" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="EDO-0P-3PT"/>
+                <constraint firstAttribute="trailing" secondItem="wlb-Hp-6St" secondAttribute="trailing" id="R9Y-jI-8Zw"/>
+                <constraint firstAttribute="bottom" secondItem="wlb-Hp-6St" secondAttribute="bottom" id="ggC-Gx-7eZ"/>
+                <constraint firstItem="dNY-yh-htP" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="noH-0a-Awt"/>
+                <constraint firstItem="wlb-Hp-6St" firstAttribute="top" secondItem="dNY-yh-htP" secondAttribute="bottom" id="ty9-Lz-ZAA"/>
+            </constraints>
+            <size key="customSize" width="410" height="225"/>
+            <connections>
+                <outlet property="insturdyView" destination="dNY-yh-htP" id="1WA-ui-vsQ"/>
+                <outlet property="recommBtn" destination="MZM-fc-98U" id="Mu6-2a-0h4"/>
+                <outlet property="recommendView" destination="wlb-Hp-6St" id="fW6-yG-FbP"/>
+            </connections>
+            <point key="canvasLocation" x="-286" y="342"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="pic_xinpintuijian" width="14" height="15"/>
+    </resources>
+</document>

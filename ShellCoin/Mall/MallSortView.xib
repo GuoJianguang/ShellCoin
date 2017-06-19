@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MallSortView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2CN-pF-4Ox">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="RF7-UT-iJ4">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="3YT-gy-yF8">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="RF7-UT-iJ4" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="0Ac-ff-SWi"/>
+                <constraint firstAttribute="bottom" secondItem="2CN-pF-4Ox" secondAttribute="bottom" id="LOm-0z-ft7"/>
+                <constraint firstAttribute="trailing" secondItem="2CN-pF-4Ox" secondAttribute="trailing" id="OHY-Ib-vVi"/>
+                <constraint firstItem="RF7-UT-iJ4" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="R0K-Sm-aPJ"/>
+                <constraint firstItem="2CN-pF-4Ox" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="fY4-DI-lN9"/>
+                <constraint firstAttribute="bottom" secondItem="RF7-UT-iJ4" secondAttribute="bottom" id="gDv-Ww-cyR"/>
+                <constraint firstItem="2CN-pF-4Ox" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="jXT-NK-2Xo"/>
+                <constraint firstAttribute="trailing" secondItem="RF7-UT-iJ4" secondAttribute="trailing" id="lfZ-Nw-o6e"/>
+            </constraints>
+            <connections>
+                <outlet property="backView" destination="2CN-pF-4Ox" id="bJJ-Jp-IzG"/>
+                <outlet property="collectionView" destination="RF7-UT-iJ4" id="ndi-Sh-8xh"/>
+            </connections>
+            <point key="canvasLocation" x="-180" y="23"/>
+        </view>
+    </objects>
+</document>

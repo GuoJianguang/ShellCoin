@@ -97,6 +97,24 @@
 		04D981B71ED56F34005A617A /* DiscovergoodsDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04D981B51ED56F34005A617A /* DiscovergoodsDetailViewController.xib */; };
 		04D981BB1ED574CB005A617A /* SelectGoodsNumberView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D981B91ED574CB005A617A /* SelectGoodsNumberView.m */; };
 		04D981BC1ED574CB005A617A /* SelectGoodsNumberView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04D981BA1ED574CB005A617A /* SelectGoodsNumberView.xib */; };
+		04FE72DF1EF3809300DB838E /* MallRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FE72DE1EF3809300DB838E /* MallRootViewController.m */; };
+		04FE72E11EF3812E00DB838E /* Mall.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04FE72E01EF3812E00DB838E /* Mall.xcassets */; };
+		04FE72E51EF385D200DB838E /* MallRootBannerCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FE72E31EF385D200DB838E /* MallRootBannerCollectionViewCell.m */; };
+		04FE72E61EF385D200DB838E /* MallRootBannerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04FE72E41EF385D200DB838E /* MallRootBannerCollectionViewCell.xib */; };
+		04FE72EA1EF3A8E200DB838E /* MallGoodsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FE72E81EF3A8E200DB838E /* MallGoodsCollectionViewCell.m */; };
+		04FE72EB1EF3A8E200DB838E /* MallGoodsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04FE72E91EF3A8E200DB838E /* MallGoodsCollectionViewCell.xib */; };
+		04FFB5061EF76380000AC558 /* MallGoodsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FFB5041EF76380000AC558 /* MallGoodsListViewController.m */; };
+		04FFB5071EF76380000AC558 /* MallGoodsListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04FFB5051EF76380000AC558 /* MallGoodsListViewController.xib */; };
+		04FFB50A1EF7773A000AC558 /* MallSortView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FFB5091EF7773A000AC558 /* MallSortView.m */; };
+		04FFB50C1EF77746000AC558 /* MallSortView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04FFB50B1EF77746000AC558 /* MallSortView.xib */; };
+		04FFB5101EF77878000AC558 /* MallSortCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FFB50E1EF77878000AC558 /* MallSortCollectionViewCell.m */; };
+		04FFB5111EF77878000AC558 /* MallSortCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04FFB50F1EF77878000AC558 /* MallSortCollectionViewCell.xib */; };
+		04FFB5141EF7793E000AC558 /* MallSortModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FFB5131EF7793E000AC558 /* MallSortModel.m */; };
+		04FFB5191EF7AB6F000AC558 /* ShoppingCarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FFB5171EF7AB6F000AC558 /* ShoppingCarViewController.m */; };
+		04FFB51A1EF7AB6F000AC558 /* ShoppingCarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04FFB5181EF7AB6F000AC558 /* ShoppingCarViewController.xib */; };
+		04FFB51E1EF7AC37000AC558 /* ShoppingCarTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FFB51C1EF7AC37000AC558 /* ShoppingCarTableViewCell.m */; };
+		04FFB51F1EF7AC37000AC558 /* ShoppingCarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04FFB51D1EF7AC37000AC558 /* ShoppingCarTableViewCell.xib */; };
+		04FFB5221EF7C41B000AC558 /* ShoppingCarModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FFB5211EF7C41A000AC558 /* ShoppingCarModel.m */; };
 		2FF6447AE4B485C166C57676 /* libPods-ShellCoin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BEFB67E1918B5BA80284D66F /* libPods-ShellCoin.a */; };
 		BC054D421E8A039600062AC5 /* EnterInputMoneyView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC054D411E8A039600062AC5 /* EnterInputMoneyView.m */; };
 		BC054D441E8A03A200062AC5 /* EnterInputMoneyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC054D431E8A03A200062AC5 /* EnterInputMoneyView.xib */; };
@@ -530,6 +548,34 @@
 		04D981B81ED574CB005A617A /* SelectGoodsNumberView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectGoodsNumberView.h; sourceTree = "<group>"; };
 		04D981B91ED574CB005A617A /* SelectGoodsNumberView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectGoodsNumberView.m; sourceTree = "<group>"; };
 		04D981BA1ED574CB005A617A /* SelectGoodsNumberView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectGoodsNumberView.xib; sourceTree = "<group>"; };
+		04FE72DD1EF3809300DB838E /* MallRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MallRootViewController.h; sourceTree = "<group>"; };
+		04FE72DE1EF3809300DB838E /* MallRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MallRootViewController.m; sourceTree = "<group>"; };
+		04FE72E01EF3812E00DB838E /* Mall.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Mall.xcassets; sourceTree = "<group>"; };
+		04FE72E21EF385D200DB838E /* MallRootBannerCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MallRootBannerCollectionViewCell.h; sourceTree = "<group>"; };
+		04FE72E31EF385D200DB838E /* MallRootBannerCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MallRootBannerCollectionViewCell.m; sourceTree = "<group>"; };
+		04FE72E41EF385D200DB838E /* MallRootBannerCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MallRootBannerCollectionViewCell.xib; sourceTree = "<group>"; };
+		04FE72E71EF3A8E200DB838E /* MallGoodsCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MallGoodsCollectionViewCell.h; sourceTree = "<group>"; };
+		04FE72E81EF3A8E200DB838E /* MallGoodsCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MallGoodsCollectionViewCell.m; sourceTree = "<group>"; };
+		04FE72E91EF3A8E200DB838E /* MallGoodsCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MallGoodsCollectionViewCell.xib; sourceTree = "<group>"; };
+		04FFB5031EF76380000AC558 /* MallGoodsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MallGoodsListViewController.h; sourceTree = "<group>"; };
+		04FFB5041EF76380000AC558 /* MallGoodsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MallGoodsListViewController.m; sourceTree = "<group>"; };
+		04FFB5051EF76380000AC558 /* MallGoodsListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MallGoodsListViewController.xib; sourceTree = "<group>"; };
+		04FFB5081EF7773A000AC558 /* MallSortView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MallSortView.h; sourceTree = "<group>"; };
+		04FFB5091EF7773A000AC558 /* MallSortView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MallSortView.m; sourceTree = "<group>"; };
+		04FFB50B1EF77746000AC558 /* MallSortView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MallSortView.xib; sourceTree = "<group>"; };
+		04FFB50D1EF77878000AC558 /* MallSortCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MallSortCollectionViewCell.h; sourceTree = "<group>"; };
+		04FFB50E1EF77878000AC558 /* MallSortCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MallSortCollectionViewCell.m; sourceTree = "<group>"; };
+		04FFB50F1EF77878000AC558 /* MallSortCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MallSortCollectionViewCell.xib; sourceTree = "<group>"; };
+		04FFB5121EF7793E000AC558 /* MallSortModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MallSortModel.h; sourceTree = "<group>"; };
+		04FFB5131EF7793E000AC558 /* MallSortModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MallSortModel.m; sourceTree = "<group>"; };
+		04FFB5161EF7AB6F000AC558 /* ShoppingCarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingCarViewController.h; sourceTree = "<group>"; };
+		04FFB5171EF7AB6F000AC558 /* ShoppingCarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingCarViewController.m; sourceTree = "<group>"; };
+		04FFB5181EF7AB6F000AC558 /* ShoppingCarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShoppingCarViewController.xib; sourceTree = "<group>"; };
+		04FFB51B1EF7AC37000AC558 /* ShoppingCarTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingCarTableViewCell.h; sourceTree = "<group>"; };
+		04FFB51C1EF7AC37000AC558 /* ShoppingCarTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingCarTableViewCell.m; sourceTree = "<group>"; };
+		04FFB51D1EF7AC37000AC558 /* ShoppingCarTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShoppingCarTableViewCell.xib; sourceTree = "<group>"; };
+		04FFB5201EF7C41A000AC558 /* ShoppingCarModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingCarModel.h; sourceTree = "<group>"; };
+		04FFB5211EF7C41A000AC558 /* ShoppingCarModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingCarModel.m; sourceTree = "<group>"; };
 		5674F83A9666780E4483DE0A /* Pods-ShellCoin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShellCoin.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShellCoin/Pods-ShellCoin.release.xcconfig"; sourceTree = "<group>"; };
 		BC054D401E8A039600062AC5 /* EnterInputMoneyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnterInputMoneyView.h; sourceTree = "<group>"; };
 		BC054D411E8A039600062AC5 /* EnterInputMoneyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnterInputMoneyView.m; sourceTree = "<group>"; };
@@ -1211,6 +1257,49 @@
 			path = DisCoverDetail;
 			sourceTree = "<group>";
 		};
+		04FE72DC1EF37D2B00DB838E /* Mall */ = {
+			isa = PBXGroup;
+			children = (
+				04FE72DD1EF3809300DB838E /* MallRootViewController.h */,
+				04FE72DE1EF3809300DB838E /* MallRootViewController.m */,
+				04FE72E21EF385D200DB838E /* MallRootBannerCollectionViewCell.h */,
+				04FE72E31EF385D200DB838E /* MallRootBannerCollectionViewCell.m */,
+				04FE72E41EF385D200DB838E /* MallRootBannerCollectionViewCell.xib */,
+				04FE72E71EF3A8E200DB838E /* MallGoodsCollectionViewCell.h */,
+				04FE72E81EF3A8E200DB838E /* MallGoodsCollectionViewCell.m */,
+				04FE72E91EF3A8E200DB838E /* MallGoodsCollectionViewCell.xib */,
+				04FFB5031EF76380000AC558 /* MallGoodsListViewController.h */,
+				04FFB5041EF76380000AC558 /* MallGoodsListViewController.m */,
+				04FFB5051EF76380000AC558 /* MallGoodsListViewController.xib */,
+				04FFB5081EF7773A000AC558 /* MallSortView.h */,
+				04FFB5091EF7773A000AC558 /* MallSortView.m */,
+				04FFB50B1EF77746000AC558 /* MallSortView.xib */,
+				04FFB50D1EF77878000AC558 /* MallSortCollectionViewCell.h */,
+				04FFB50E1EF77878000AC558 /* MallSortCollectionViewCell.m */,
+				04FFB50F1EF77878000AC558 /* MallSortCollectionViewCell.xib */,
+				04FFB5121EF7793E000AC558 /* MallSortModel.h */,
+				04FFB5131EF7793E000AC558 /* MallSortModel.m */,
+				04FFB5151EF7AB29000AC558 /* ShoppingCart */,
+				04FE72E01EF3812E00DB838E /* Mall.xcassets */,
+			);
+			path = Mall;
+			sourceTree = "<group>";
+		};
+		04FFB5151EF7AB29000AC558 /* ShoppingCart */ = {
+			isa = PBXGroup;
+			children = (
+				04FFB5161EF7AB6F000AC558 /* ShoppingCarViewController.h */,
+				04FFB5171EF7AB6F000AC558 /* ShoppingCarViewController.m */,
+				04FFB5181EF7AB6F000AC558 /* ShoppingCarViewController.xib */,
+				04FFB51B1EF7AC37000AC558 /* ShoppingCarTableViewCell.h */,
+				04FFB51C1EF7AC37000AC558 /* ShoppingCarTableViewCell.m */,
+				04FFB51D1EF7AC37000AC558 /* ShoppingCarTableViewCell.xib */,
+				04FFB5201EF7C41A000AC558 /* ShoppingCarModel.h */,
+				04FFB5211EF7C41A000AC558 /* ShoppingCarModel.m */,
+			);
+			path = ShoppingCart;
+			sourceTree = "<group>";
+		};
 		8E874A13AFBED68568C7A647 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1447,9 +1536,10 @@
 				BC4AAC311E4D74FD006568A6 /* TTXMacro.h */,
 				BC4AABE91E4D69E2006568A6 /* ShellCoin.xcdatamodeld */,
 				BC4AAC301E4D7006006568A6 /* PrefixHeader.pch */,
-				0445BAB51ED52181009226BD /* Discover */,
 				BCFE207B1E77DE53002BC28C /* Login */,
 				BC4AAC161E4D6E31006568A6 /* Home */,
+				04FE72DC1EF37D2B00DB838E /* Mall */,
+				0445BAB51ED52181009226BD /* Discover */,
 				BC4AAC171E4D6E31006568A6 /* Mine */,
 				BC4AAC1B1E4D6E7D006568A6 /* Base */,
 				BC4AAC321E4D7556006568A6 /* Public */,
@@ -2165,6 +2255,7 @@
 				BC5278FE1E8DF8BF004DD703 /* PersonalCenter.xcassets in Resources */,
 				BC9B3DB11E7648AF003DC241 /* RealNameAutResultView.xib in Resources */,
 				0445BADA1ED56A62009226BD /* BuyRecodViewController.xib in Resources */,
+				04FFB50C1EF77746000AC558 /* MallSortView.xib in Resources */,
 				04610D291EF27982007D8EF5 /* WaitAfterForSalesViewController.xib in Resources */,
 				042C70501EC465C60035A912 /* LoanOtherViewController.xib in Resources */,
 				043C63DF1ED6814800A6ED33 /* SelectShippingAddressViewController.xib in Resources */,
@@ -2252,6 +2343,7 @@
 				BC36EA441E937E600097F2F2 /* MyCollectionListViewController.xib in Resources */,
 				0459843D1EF1207B00B26437 /* OrderDetailTableViewCell.xib in Resources */,
 				041ABCD21ED823A800C181CB /* AlipaySDK.bundle in Resources */,
+				04FE72E11EF3812E00DB838E /* Mall.xcassets in Resources */,
 				BCA17DDB1E8BB2AD00B4AFDA /* Bill.xcassets in Resources */,
 				04196AFF1ED68261005F64C2 /* AddressTableViewCell.xib in Resources */,
 				BCFE20921E77E206002BC28C /* ForgetPasswordOneViewController.xib in Resources */,
@@ -2268,8 +2360,11 @@
 				BCC8E1A21E88FFB7004DBDA3 /* MerchantTableViewCell.xib in Resources */,
 				040DCAAD1EEA91BF00E78125 /* MyRecommendDetailListViewController.xib in Resources */,
 				BCD736FF1E93502D001F706C /* MessageTableViewCell.xib in Resources */,
+				04FFB51A1EF7AB6F000AC558 /* ShoppingCarViewController.xib in Resources */,
 				BC57B7201E7FD62A006AF4D1 /* HomeMerchantTableViewCell.xib in Resources */,
 				04D981BC1ED574CB005A617A /* SelectGoodsNumberView.xib in Resources */,
+				04FFB5071EF76380000AC558 /* MallGoodsListViewController.xib in Resources */,
+				04FFB5111EF77878000AC558 /* MallSortCollectionViewCell.xib in Resources */,
 				BC0A58221E724ADA0077C8A9 /* 213955937960616.cer in Resources */,
 				BC57B7141E7FCC7E006AF4D1 /* HighQualityCollectionViewCell.xib in Resources */,
 				BC34A1CC1E9256CA00C786C0 /* unicode_to_hanyu_pinyin.txt in Resources */,
@@ -2283,6 +2378,7 @@
 				BC9B3DD71E7683B7003DC241 /* NoBankCardViewController.xib in Resources */,
 				0445BADF1ED56AAE009226BD /* BuyRecodTableViewCell.xib in Resources */,
 				BC23C9EE1E79396500E90B43 /* YesTodayEarningsAlerView.xib in Resources */,
+				04FE72E61EF385D200DB838E /* MallRootBannerCollectionViewCell.xib in Resources */,
 				BCD736FA1E935017001F706C /* MessageListViewController.xib in Resources */,
 				04610D1F1EF264DD007D8EF5 /* SureReceivingView.xib in Resources */,
 				BCB9A7C51E89F4B600F3E966 /* Public.xcassets in Resources */,
@@ -2295,9 +2391,11 @@
 				046DAFA51ED57E0700E26C2C /* DiscoverRecommendTableViewCell.xib in Resources */,
 				BC9B3DF21E7693E0003DC241 /* RecommendTableViewCell.xib in Resources */,
 				BC34A1C21E9256CA00C786C0 /* citydict.plist in Resources */,
+				04FFB51F1EF7AC37000AC558 /* ShoppingCarTableViewCell.xib in Resources */,
 				04196B041ED686DA005F64C2 /* EditAddressViewController.xib in Resources */,
 				BC34ECAE1E8BA17B00613D35 /* Set.xcassets in Resources */,
 				BC4E252E1E80C41E005BE142 /* TalentRecommentViewController.xib in Resources */,
+				04FE72EB1EF3A8E200DB838E /* MallGoodsCollectionViewCell.xib in Resources */,
 				BC0A58251E724ADA0077C8A9 /* HttpClient_Readme.txt in Resources */,
 				BC0A58311E7282250077C8A9 /* SetViewController.xib in Resources */,
 			);
@@ -2382,12 +2480,14 @@
 				BCD737081E93544D001F706C /* MessageDetailTableViewCell.m in Sources */,
 				BC57B7071E7FC357006AF4D1 /* SquaredUpView.m in Sources */,
 				BC0A58301E7282250077C8A9 /* SetViewController.m in Sources */,
+				04FFB50A1EF7773A000AC558 /* MallSortView.m in Sources */,
 				BC34A1EC1E92646700C786C0 /* MANaviRoute.m in Sources */,
 				BC34A1CD1E9256CA00C786C0 /* ZYPinYinSearch.m in Sources */,
 				BCFE20931E77E206002BC28C /* ForgetPasswordTwoViewController.m in Sources */,
 				0445BABE1ED52C08009226BD /* DiscoverRootTableViewCell.m in Sources */,
 				BC0A58231E724ADA0077C8A9 /* BaseHttpClient.m in Sources */,
 				BCFE208F1E77E206002BC28C /* RegisterTwoViewController.m in Sources */,
+				04FE72DF1EF3809300DB838E /* MallRootViewController.m in Sources */,
 				042041A41EEFD55100F309C3 /* OrderTableViewCell.m in Sources */,
 				BC34A1E81E92646700C786C0 /* CommonUtility.m in Sources */,
 				BC77C69A1E7A6D8600DC9EAC /* WeXinPayObject.m in Sources */,
@@ -2411,6 +2511,7 @@
 				BC9B3DDE1E7688AD003DC241 /* PersonCenterTableViewCell.m in Sources */,
 				BC4AAC381E4D8D51006568A6 /* MineViewController.m in Sources */,
 				04610D281EF27982007D8EF5 /* WaitAfterForSalesViewController.m in Sources */,
+				04FFB5141EF7793E000AC558 /* MallSortModel.m in Sources */,
 				040DCA9C1EEA7B0600E78125 /* LogisticsViewController.m in Sources */,
 				BC23C9EC1E79395A00E90B43 /* YesTodayEarningsAlerView.m in Sources */,
 				BC4AAC351E4D7562006568A6 /* JAlertViewHelper.m in Sources */,
@@ -2491,9 +2592,11 @@
 				BCFE206A1E77BC83002BC28C /* TradInTableViewCell.m in Sources */,
 				BC9B3E031E7698CC003DC241 /* ManageBankView.m in Sources */,
 				BC6EA5A11E8CFB170073027C /* BankCardInfoModel.m in Sources */,
+				04FFB51E1EF7AC37000AC558 /* ShoppingCarTableViewCell.m in Sources */,
 				BC5279441E8E7E4E004DD703 /* LBXAlertAction.m in Sources */,
 				BC4AAC2B1E4D6E7D006568A6 /* BaseModel.m in Sources */,
 				BC2F17751E839CF300657C51 /* BillAmountDataModel.m in Sources */,
+				04FFB5221EF7C41B000AC558 /* ShoppingCarModel.m in Sources */,
 				BC4AAC291E4D6E7D006568A6 /* BaseCollectionViewCell.m in Sources */,
 				BC2E531A1E94FC2C00F7A99C /* SCAdView.m in Sources */,
 				BCAC5D091E825870003CACF8 /* BillIntegralDisciplineView.m in Sources */,
@@ -2506,6 +2609,7 @@
 				BC054D581E8A418F00062AC5 /* BillDataModel.m in Sources */,
 				BC34A1E41E92646700C786C0 /* BussessMapViewController.m in Sources */,
 				BC36CFE71E80C9AD00A51BF4 /* RecommentSpecilCollectionViewCell.m in Sources */,
+				04FE72E51EF385D200DB838E /* MallRootBannerCollectionViewCell.m in Sources */,
 				BC0A58451E728F2C0077C8A9 /* AutoScroller.m in Sources */,
 				0445BAC31ED55A85009226BD /* DiscoverCollectionViewCell.m in Sources */,
 				040DCAAC1EEA91BF00E78125 /* MyRecommendDetailListViewController.m in Sources */,
@@ -2516,6 +2620,7 @@
 				045984371EF11E9300B26437 /* OrderDetailViewController.m in Sources */,
 				BCAC5D0E1E825DBB003CACF8 /* BillAmountDisciplineView.m in Sources */,
 				BC36EA4C1E93BF0F0097F2F2 /* OnlinePayResultView.m in Sources */,
+				04FFB5101EF77878000AC558 /* MallSortCollectionViewCell.m in Sources */,
 				BC2E531E1E94FEB400F7A99C /* BankInfoCollectionViewCell.m in Sources */,
 				BC4AABDF1E4D69E2006568A6 /* main.m in Sources */,
 				BCFE20741E77C9F6002BC28C /* SecletBankCardTableViewCell.m in Sources */,
@@ -2543,6 +2648,7 @@
 				BC36EA471E93B8530097F2F2 /* WithDrawalResultView.m in Sources */,
 				BC34A1E91E92646700C786C0 /* LineDashPolyline.m in Sources */,
 				046DAFA41ED57E0700E26C2C /* DiscoverRecommendTableViewCell.m in Sources */,
+				04FE72EA1EF3A8E200DB838E /* MallGoodsCollectionViewCell.m in Sources */,
 				BC2E53191E94FC2C00F7A99C /* SCAdCollectionViewLayout.m in Sources */,
 				BC054D421E8A039600062AC5 /* EnterInputMoneyView.m in Sources */,
 				BCFE205F1E779283002BC28C /* ChangePayPasswordViewController.m in Sources */,
@@ -2553,10 +2659,12 @@
 				041ABCD61ED823D400C181CB /* AliPayObject.m in Sources */,
 				BC4AAC1A1E4D6E5B006568A6 /* HomeViewController.m in Sources */,
 				BC34ECAB1E8B891E00613D35 /* AboutsUsTableViewCell.m in Sources */,
+				04FFB5191EF7AB6F000AC558 /* ShoppingCarViewController.m in Sources */,
 				BC34A1C61E9256CA00C786C0 /* ChineseToPinyinResource.m in Sources */,
 				BC9B3DF11E7693E0003DC241 /* RecommendTableViewCell.m in Sources */,
 				BC0A58241E724ADA0077C8A9 /* HttpClient.m in Sources */,
 				04196B071ED6A325005F64C2 /* PSCityPickerView.m in Sources */,
+				04FFB5061EF76380000AC558 /* MallGoodsListViewController.m in Sources */,
 				BC34A1D21E9263F800C786C0 /* LocationManager.m in Sources */,
 				0445BAC91ED56151009226BD /* DiscoverWithdrawalViewController.m in Sources */,
 				BC57B7031E7FC348006AF4D1 /* HomeIndustryTableViewCell.m in Sources */,
