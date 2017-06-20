@@ -17,12 +17,9 @@
     model.sortId = NullToSpace(dic[@"id"]);
     model.name = NullToSpace(dic[@"name"]);
     model.icon = NullToSpace(dic[@"icon"]);
-    
     model.icon = [model.icon stringByReplacingOccurrencesOfString:@"," withString:@" "];
     /*处理空格*/
-    
     NSCharacterSet *characterSet2 = [NSCharacterSet whitespaceCharacterSet];
-    
     // 将string1按characterSet1中的元素分割成数组
     NSArray *array2 = [model.icon componentsSeparatedByCharactersInSet:characterSet2];
     

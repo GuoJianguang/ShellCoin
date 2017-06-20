@@ -9,9 +9,12 @@
 #import "MallGoodsListViewController.h"
 #import "MallGoodsCollectionViewCell.h"
 #import "MallSortView.h"
+#import "GoodsDetailViewController.h"
+#import "MallSearchViewController.h"
 
-@interface MallGoodsListViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
+@interface MallGoodsListViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,BasenavigationDelegate>
 @property (nonatomic, strong)NSMutableArray *dataSouceArray;
+@property (nonatomic, strong)MallSearchViewController *searchVC;
 
 @property (nonatomic,strong)MallSortView *sortView;
 @end
@@ -20,15 +23,35 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.naviBar.title = @"商品列表";
+    self.naviBar.delegate = self;
+    self.naviBar.hiddenDetailBtn = NO;
+    self.naviBar.detailImage = [UIImage imageNamed:@"icon_search"];
+    self.sortView.hidden = YES;
 
 }
+#pragma mark -  搜索按钮
+- (void)detailBtnClick
+{
+    //    [self.navigationController pushViewController:self.searchVC animated:YES];
+    [self.navigationController.view addSubview:self.searchVC.view];
+}
+
 - (NSMutableArray *)dataSouceArray
 {
     if (!_dataSouceArray) {
         _dataSouceArray = [NSMutableArray array];
     }
     return _dataSouceArray;
+}
+
+- (MallSearchViewController *)searchVC
+{
+    if (!_searchVC) {
+        _searchVC = [[MallSearchViewController alloc]init];
+        _searchVC.view.frame = CGRectMake(0, 0, TWitdh, THeight);
+    }
+    return _searchVC;
 }
 
 - (MallSortView *)sortView
@@ -79,7 +102,7 @@
 }
 - (IBAction)moreSortBtn:(UIButton *)sender {
     [self.view addSubview:self.sortView];
-    
+    self.sortView.hidden = !self.sortView.hidden;
 }
 
 
@@ -114,7 +137,8 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    GoodsDetailViewController *goodsDetailVC = [[GoodsDetailViewController alloc]init];
+    [self.navigationController pushViewController:goodsDetailVC animated:YES];
 }
 
 

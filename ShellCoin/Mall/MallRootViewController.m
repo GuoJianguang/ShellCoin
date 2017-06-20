@@ -10,10 +10,13 @@
 #import "MallRootBannerCollectionViewCell.h"
 #import "MallGoodsCollectionViewCell.h"
 #import "ShoppingCarViewController.h"
+#import "GoodsDetailViewController.h"
 
 @interface MallRootViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
 
 @property (nonatomic, strong)NSMutableArray *dataSouceArray;
+
+
 
 @end
 
@@ -49,6 +52,8 @@
 
 #pragma mark - 搜索
 - (IBAction)searchBtn:(UIButton *)sender {
+    
+    
 }
 
 #pragma mark - 购物车
@@ -104,6 +109,8 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    GoodsDetailViewController *goodsDetailVC = [[GoodsDetailViewController alloc]init];
+    [self.navigationController pushViewController:goodsDetailVC animated:YES];
 }
 
 
