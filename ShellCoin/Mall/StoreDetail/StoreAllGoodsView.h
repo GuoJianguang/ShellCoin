@@ -1,14 +1,16 @@
 //
-//  MallGoodsListViewController.h
+//  StoreAllGoodsView.h
 //  ShellCoin
 //
-//  Created by mac on 2017/6/19.
+//  Created by mac on 2017/6/21.
 //  Copyright © 2017年 Guo. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import <UIKit/UIKit.h>
 
-@interface MallGoodsListViewController : BaseViewController
+@interface StoreAllGoodsView : UIView
+
+
 @property (weak, nonatomic) IBOutlet UIButton *priceBtn;
 
 - (IBAction)priceBtn:(UIButton *)sender;
@@ -21,15 +23,9 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *timeImage;
 
-@property (weak, nonatomic) IBOutlet UIButton *sort1Btn;
 
-- (IBAction)sort1Btn:(UIButton *)sender;
-@property (weak, nonatomic) IBOutlet UIButton *sort2Btn;
-- (IBAction)sort2Btn:(UIButton *)sender;
-- (IBAction)sort3Btn:(UIButton *)sender;
-@property (weak, nonatomic) IBOutlet UIButton *sort3Btn;
-@property (weak, nonatomic) IBOutlet UIButton *moreSortBtn;
-- (IBAction)moreSortBtn:(UIButton *)sender;
+
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+
 
 @end

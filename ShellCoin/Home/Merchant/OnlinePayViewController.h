@@ -23,21 +23,23 @@ typedef NS_ENUM(NSInteger,Payway_type){
 @property (weak, nonatomic) IBOutlet UILabel *merchantName;
 
 @property (weak, nonatomic) IBOutlet UILabel *moneyLabel;
-@property (weak, nonatomic) IBOutlet UIButton *yuEMarkBtn;
 
+
+@property (weak, nonatomic) IBOutlet UIButton *yuEMarkBtn;
 - (IBAction)yuEBtn:(UIButton *)sender;
 @property (weak, nonatomic) IBOutlet UIButton *yuEbtn;
 @property (weak, nonatomic) IBOutlet UIImageView *yuEImage;
 @property (weak, nonatomic) IBOutlet UILabel *yuELabel;
+
 @property (weak, nonatomic) IBOutlet UIImageView *wechatImage;
 @property (weak, nonatomic) IBOutlet UILabel *wechatLabel;
 @property (weak, nonatomic) IBOutlet UIButton *wechatMarkBtn;
+- (IBAction)wechatBtn:(UIButton *)sender;
+
 @property (weak, nonatomic) IBOutlet UILabel *cashLabel;
 @property (weak, nonatomic) IBOutlet UIButton *cashMarkBtn;
 @property (weak, nonatomic) IBOutlet UIImageView *cashImage;
-
 @property (weak, nonatomic) IBOutlet UIButton *wechatBtn;
-- (IBAction)wechatBtn:(UIButton *)sender;
 @property (weak, nonatomic) IBOutlet UIButton *cashBtn;
 - (IBAction)cashBtn:(UIButton *)sender;
 

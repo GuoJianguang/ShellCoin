@@ -8,6 +8,7 @@
 
 #import "ChooseGoodsTypeView.h"
 #import "TypeView.h"
+#import "MallSureOrderViewController.h"
 
 @interface ChooseGoodsTypeView()<TypeSeleteDelegete>
 
@@ -35,7 +36,15 @@
 
 #pragma mark - 确定按钮
 - (IBAction)sureBtn:(UIButton *)sender {
+    if (![ShellCoinUserInfo shareUserInfos].currentLogined) {
+        //判断是否先登录
+        UINavigationController *navc = [LoginViewController controller];
+        [self.viewController presentViewController:navc animated:YES completion:NULL];
+        return;
+    }
     
+    MallSureOrderViewController *sureVC = [[MallSureOrderViewController alloc]init];
+    [self.viewController.navigationController pushViewController:sureVC animated:YES];
     
 }
 

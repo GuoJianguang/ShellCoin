@@ -9,6 +9,7 @@
 #import "GoodsDetailViewController.h"
 #import "ShoppingCarViewController.h"
 #import "ChooseGoodsTypeView.h"
+#import "StoreDetailViewController.h"
 
 @interface GoodsDetailViewController ()<UIWebViewDelegate>
 
@@ -78,6 +79,8 @@
 }
 //查看店铺
 - (IBAction)checkStoreBtn:(UIButton *)sender {
+    StoreDetailViewController *storeDetailVC = [[StoreDetailViewController alloc]init];
+    [self.navigationController pushViewController:storeDetailVC animated:YES];
     
 }
 //加入购物车
