@@ -29,7 +29,7 @@
         float upX = 20;
         float upY = 40;
         for (int i = 0; i<arr.count; i++) {
-            NSString *str = [arr objectAtIndex:i] ;
+            NSString *str = [arr objectAtIndex:i][@"specVal"] ;
             
             NSDictionary *dic = [NSDictionary dictionaryWithObject:[UIFont boldSystemFontOfSize:13] forKey:NSFontAttributeName];
             CGSize size = [str sizeWithAttributes:dic];
@@ -50,7 +50,7 @@
             [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateSelected];
             btn.titleLabel.font = [UIFont systemFontOfSize:13];
             btn.titleLabel.adjustsFontSizeToFitWidth = YES;
-            [btn setTitle:[arr objectAtIndex:i] forState:0];
+            [btn setTitle:[arr objectAtIndex:i][@"specVal"] forState:0];
             btn.layer.cornerRadius = 5;
             btn.layer.borderColor = MacoDetailColor.CGColor;
             btn.layer.borderWidth = 1;

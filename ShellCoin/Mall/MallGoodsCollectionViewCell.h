@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MallGoodsModel.h"
 
 @interface MallGoodsCollectionViewCell : BaseCollectionViewCell
 
@@ -17,5 +18,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *goodsSales;
 @property (weak, nonatomic) IBOutlet UIImageView *commendIamge;
+
+@property (nonatomic, strong)MallGoodsModel *dataModel;
 
 @end

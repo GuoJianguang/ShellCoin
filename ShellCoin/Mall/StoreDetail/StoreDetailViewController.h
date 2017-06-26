@@ -26,4 +26,7 @@
 @property (weak, nonatomic) IBOutlet UIView *itmeView;
 @property (weak, nonatomic) IBOutlet UIView *line;
 
+#pragma mark - 商户号
+@property (nonatomic, copy)NSString *mchCode;
+
 @end

@@ -30,5 +30,9 @@
 
 @property (nonatomic,copy)NSString *htmlUrl;
 
+@property (nonatomic, copy)NSString *goodsId;
+
+@property (nonatomic, assign)BOOL isFormStore;
+
 
 @end

@@ -106,6 +106,7 @@
 		04D981B71ED56F34005A617A /* DiscovergoodsDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04D981B51ED56F34005A617A /* DiscovergoodsDetailViewController.xib */; };
 		04D981BB1ED574CB005A617A /* SelectGoodsNumberView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D981B91ED574CB005A617A /* SelectGoodsNumberView.m */; };
 		04D981BC1ED574CB005A617A /* SelectGoodsNumberView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04D981BA1ED574CB005A617A /* SelectGoodsNumberView.xib */; };
+		04F90ABF1F009BD30078E1B5 /* MallGoodsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F90ABE1F009BD30078E1B5 /* MallGoodsModel.m */; };
 		04FC4D461EFA05CC0023C053 /* StoreDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FC4D441EFA05CC0023C053 /* StoreDetailViewController.m */; };
 		04FC4D471EFA05CC0023C053 /* StoreDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04FC4D451EFA05CC0023C053 /* StoreDetailViewController.xib */; };
 		04FC4D4A1EFA0CDE0023C053 /* StoreRootDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FC4D491EFA0CDE0023C053 /* StoreRootDetailView.m */; };
@@ -126,7 +127,6 @@
 		04FFB50C1EF77746000AC558 /* MallSortView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04FFB50B1EF77746000AC558 /* MallSortView.xib */; };
 		04FFB5101EF77878000AC558 /* MallSortCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FFB50E1EF77878000AC558 /* MallSortCollectionViewCell.m */; };
 		04FFB5111EF77878000AC558 /* MallSortCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04FFB50F1EF77878000AC558 /* MallSortCollectionViewCell.xib */; };
-		04FFB5141EF7793E000AC558 /* MallSortModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FFB5131EF7793E000AC558 /* MallSortModel.m */; };
 		04FFB5191EF7AB6F000AC558 /* ShoppingCarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FFB5171EF7AB6F000AC558 /* ShoppingCarViewController.m */; };
 		04FFB51A1EF7AB6F000AC558 /* ShoppingCarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04FFB5181EF7AB6F000AC558 /* ShoppingCarViewController.xib */; };
 		04FFB51E1EF7AC37000AC558 /* ShoppingCarTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FFB51C1EF7AC37000AC558 /* ShoppingCarTableViewCell.m */; };
@@ -579,6 +579,8 @@
 		04D981B81ED574CB005A617A /* SelectGoodsNumberView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectGoodsNumberView.h; sourceTree = "<group>"; };
 		04D981B91ED574CB005A617A /* SelectGoodsNumberView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectGoodsNumberView.m; sourceTree = "<group>"; };
 		04D981BA1ED574CB005A617A /* SelectGoodsNumberView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectGoodsNumberView.xib; sourceTree = "<group>"; };
+		04F90ABD1F009BD30078E1B5 /* MallGoodsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MallGoodsModel.h; sourceTree = "<group>"; };
+		04F90ABE1F009BD30078E1B5 /* MallGoodsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MallGoodsModel.m; sourceTree = "<group>"; };
 		04FC4D431EFA05CC0023C053 /* StoreDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreDetailViewController.h; sourceTree = "<group>"; };
 		04FC4D441EFA05CC0023C053 /* StoreDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreDetailViewController.m; sourceTree = "<group>"; };
 		04FC4D451EFA05CC0023C053 /* StoreDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StoreDetailViewController.xib; sourceTree = "<group>"; };
@@ -609,8 +611,6 @@
 		04FFB50D1EF77878000AC558 /* MallSortCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MallSortCollectionViewCell.h; sourceTree = "<group>"; };
 		04FFB50E1EF77878000AC558 /* MallSortCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MallSortCollectionViewCell.m; sourceTree = "<group>"; };
 		04FFB50F1EF77878000AC558 /* MallSortCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MallSortCollectionViewCell.xib; sourceTree = "<group>"; };
-		04FFB5121EF7793E000AC558 /* MallSortModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MallSortModel.h; sourceTree = "<group>"; };
-		04FFB5131EF7793E000AC558 /* MallSortModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MallSortModel.m; sourceTree = "<group>"; };
 		04FFB5161EF7AB6F000AC558 /* ShoppingCarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingCarViewController.h; sourceTree = "<group>"; };
 		04FFB5171EF7AB6F000AC558 /* ShoppingCarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingCarViewController.m; sourceTree = "<group>"; };
 		04FFB5181EF7AB6F000AC558 /* ShoppingCarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShoppingCarViewController.xib; sourceTree = "<group>"; };
@@ -1367,8 +1367,8 @@
 				04FFB50D1EF77878000AC558 /* MallSortCollectionViewCell.h */,
 				04FFB50E1EF77878000AC558 /* MallSortCollectionViewCell.m */,
 				04FFB50F1EF77878000AC558 /* MallSortCollectionViewCell.xib */,
-				04FFB5121EF7793E000AC558 /* MallSortModel.h */,
-				04FFB5131EF7793E000AC558 /* MallSortModel.m */,
+				04F90ABD1F009BD30078E1B5 /* MallGoodsModel.h */,
+				04F90ABE1F009BD30078E1B5 /* MallGoodsModel.m */,
 				04FC4D421EFA05590023C053 /* StoreDetail */,
 				0404D66F1EF903D900073150 /* MallSearch */,
 				0404D65F1EF8BB7900073150 /* GoodsDetail */,
@@ -2616,10 +2616,10 @@
 				BC4AAC381E4D8D51006568A6 /* MineViewController.m in Sources */,
 				04610D281EF27982007D8EF5 /* WaitAfterForSalesViewController.m in Sources */,
 				04FC4D551EFA18FF0023C053 /* MallSureOrderViewController.m in Sources */,
-				04FFB5141EF7793E000AC558 /* MallSortModel.m in Sources */,
 				04FC4D461EFA05CC0023C053 /* StoreDetailViewController.m in Sources */,
 				040DCA9C1EEA7B0600E78125 /* LogisticsViewController.m in Sources */,
 				BC23C9EC1E79395A00E90B43 /* YesTodayEarningsAlerView.m in Sources */,
+				04F90ABF1F009BD30078E1B5 /* MallGoodsModel.m in Sources */,
 				BC4AAC351E4D7562006568A6 /* JAlertViewHelper.m in Sources */,
 				BC23C9E61E792BD700E90B43 /* SubLBXScanViewController.m in Sources */,
 				BC4AAC3C1E4D8F7B006568A6 /* MineTableViewCell.m in Sources */,

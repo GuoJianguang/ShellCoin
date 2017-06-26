@@ -20,4 +20,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *deleBtn;
 - (IBAction)deleBtn:(UIButton *)sender;
 
+- (void)addTypeView;
+
 @end

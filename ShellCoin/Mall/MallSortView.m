@@ -8,10 +8,10 @@
 
 #import "MallSortView.h"
 #import "MallSortCollectionViewCell.h"
+#import "HomeIndustryTableViewCell.h"
 
 @interface MallSortView()<UICollectionViewDataSource,UICollectionViewDelegate>
 
-@property (nonatomic, strong)NSMutableArray *dataSouceArray;
 
 @end
 
@@ -30,38 +30,60 @@
         self.backgroundColor = [UIColor clearColor];
         self.collectionView.backgroundColor = [UIColor clearColor];
         
-        [self getRequest];
+//        [self getRequest];
         
     }
     return self;
 }
 
 
-- (NSMutableArray *)dataSouceArray
+//- (NSMutableArray *)dataSouceArray
+//{
+//    if (!_dataSouceArray) {
+//        _dataSouceArray = [NSMutableArray array];
+//    }
+//    return _dataSouceArray;
+//}
+//- (void)getRequest
+//{
+//    [HttpClient GET:@"mch/trades" parameters:nil success:^(NSURLSessionDataTask *operation, id jsonObject) {
+//        if (IsRequestTrue) {
+//            [self.dataSouceArray removeAllObjects];
+//            NSArray *array = jsonObject[@"data"];
+//            for (NSDictionary *dic in array) {
+//                MallSortModel *model = [MallSortModel modelWithDic:dic];
+//                [self.dataSouceArray addObject:model];
+//            }
+//            [self.collectionView reloadData];
+//        }
+//    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
+//        
+//    }];
+//
+//}
+
+
+- (void)setDataSouceArray:(NSMutableArray *)dataSouceArray
 {
     if (!_dataSouceArray) {
-        _dataSouceArray = [NSMutableArray array];
+        _dataSouceArray = [NSMutableArray arrayWithArray:dataSouceArray];
     }
-    return _dataSouceArray;
-}
-- (void)getRequest
-{
-    [HttpClient GET:@"mch/trades" parameters:nil success:^(NSURLSessionDataTask *operation, id jsonObject) {
-        if (IsRequestTrue) {
-            [self.dataSouceArray removeAllObjects];
-            NSArray *array = jsonObject[@"data"];
-            for (NSDictionary *dic in array) {
-                MallSortModel *model = [MallSortModel modelWithDic:dic];
-                [self.dataSouceArray addObject:model];
-            }
-            [self.collectionView reloadData];
+
+    
+    for (NewHomeActivityModel *model in _dataSouceArray) {
+        model.isSelect = NO;
+        if ([model.sortId isEqualToString:self.yetSeletId]) {
+            model.isSelect = YES;
         }
-    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
-        
-    }];
-
+    }
+    [self.collectionView reloadData];
 }
 
+- (void)setYetSeletId:(NSString *)yetSeletId
+{
+    _yetSeletId = yetSeletId;
+    [self.collectionView reloadData];
+}
 
 #pragma mark - UICollectionView
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
@@ -94,11 +116,16 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    for (MallSortModel *model in self.dataSouceArray) {
+    for (NewHomeActivityModel *model in self.dataSouceArray) {
         model.isSelect  = NO;
     }
-    ((MallSortModel *)self.dataSouceArray[indexPath.item]).isSelect  = YES;
+    ((NewHomeActivityModel *)self.dataSouceArray[indexPath.item]).isSelect  = YES;
     [collectionView reloadData];
+    if ([self.delegate respondsToSelector:@selector(selectSort:withName:)]) {
+        [self.delegate selectSort:((NewHomeActivityModel *)self.dataSouceArray[indexPath.item]).sortId withName:((NewHomeActivityModel *)self.dataSouceArray[indexPath.item]).name] ;
+    }
+    
+    
     
 }
 

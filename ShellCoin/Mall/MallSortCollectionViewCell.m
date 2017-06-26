@@ -19,7 +19,7 @@
 }
 
 
-- (void)setDataModel:(MallSortModel *)dataModel
+- (void)setDataModel:(NewHomeActivityModel *)dataModel
 {
     _dataModel = dataModel;
     [self.itemBtn setTitle:_dataModel.name forState:UIControlStateNormal];

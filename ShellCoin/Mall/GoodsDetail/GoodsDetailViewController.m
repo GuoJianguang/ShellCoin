@@ -15,6 +15,8 @@
 
 @property (nonatomic, strong)ChooseGoodsTypeView *chooseTypeView;
 
+@property (nonatomic, copy)NSString *mchCode;
+
 @end
 
 @implementation GoodsDetailViewController
@@ -23,11 +25,19 @@
     [super viewDidLoad];
     self.naviBar.hidden = YES;
     self.webView.delegate = self;
-    self.htmlUrl = @"https://www.baidu.com";
     NSURL  *url = [NSURL URLWithString:self.htmlUrl];
     NSURLRequest *request = [[NSURLRequest alloc]initWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:15.];
     self.webView.delegate = self;
     [self.webView loadRequest:request];
+    self.mchCode = [NSString string];
+    if (self.isFormStore) {
+        [self.checkStoreBtn setTitle:@" 返回店铺" forState:UIControlStateNormal];
+    }else{
+        [self.checkStoreBtn setTitle:@" 进入店铺" forState:UIControlStateNormal];
+
+    }
+    
+    [self getGoodsDetail];
 }
 
 - (ChooseGoodsTypeView *)chooseTypeView
@@ -37,6 +47,18 @@
         _chooseTypeView.frame = CGRectMake(0, 0, TWitdh, THeight);
     }
     return _chooseTypeView;
+}
+
+#pragma mark - 获取商品详情
+- (void)getGoodsDetail{
+    NSDictionary *prams = @{@"id":NullToSpace(self.goodsId)};
+    [HttpClient POST:@"shop/goods/detail/get" parameters:prams success:^(NSURLSessionDataTask *operation, id jsonObject) {
+        if (IsRequestTrue) {
+            self.mchCode = NullToSpace(jsonObject[@"data"][@"mchCode"]);
+        }
+    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
+        
+    }];
 }
 
 #pragma mark - webview
@@ -79,8 +101,15 @@
 }
 //查看店铺
 - (IBAction)checkStoreBtn:(UIButton *)sender {
-    StoreDetailViewController *storeDetailVC = [[StoreDetailViewController alloc]init];
-    [self.navigationController pushViewController:storeDetailVC animated:YES];
+    if (self.isFormStore) {
+        [self.navigationController popViewControllerAnimated:YES];
+    }else{
+        StoreDetailViewController *storeDetailVC = [[StoreDetailViewController alloc]init];
+        storeDetailVC.mchCode = self.mchCode;
+        [self.navigationController pushViewController:storeDetailVC animated:YES];
+    }
+    
+
     
 }
 //加入购物车
@@ -89,6 +118,7 @@
 }
 //立即购买
 - (IBAction)buyBtn:(UIButton *)sender {
+    self.chooseTypeView.goodsId = NullToSpace(self.goodsId);
     [self.view addSubview:self.chooseTypeView];
     
 }

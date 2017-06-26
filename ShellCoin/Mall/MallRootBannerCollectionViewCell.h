@@ -15,7 +15,7 @@
 @property (weak, nonatomic) IBOutlet ShellCoinPageControlView *pageView;
 @property (weak, nonatomic) IBOutlet UIView *insturdyView;
 
-@property (nonatomic, strong)NSMutableArray *bannerArray;
+@property (nonatomic, strong)NSMutableArray *sortDataSouceArray;
 @property (weak, nonatomic) IBOutlet UIButton *recommBtn;
 
 @property (weak, nonatomic) IBOutlet UIView *recommendView;

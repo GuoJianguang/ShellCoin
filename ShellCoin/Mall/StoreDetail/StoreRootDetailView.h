@@ -17,4 +17,6 @@
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 - (IBAction)phoneBtn:(UIButton *)sender;
 
+@property (nonatomic, copy)NSString *mchCode;
+
 @end

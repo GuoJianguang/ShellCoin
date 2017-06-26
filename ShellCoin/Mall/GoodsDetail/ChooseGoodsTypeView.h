@@ -30,4 +30,7 @@
 - (IBAction)subBtn:(UIButton *)sender;
 @property (weak, nonatomic) IBOutlet UIButton *addBtn;
 - (IBAction)addBtn:(UIButton *)sender;
+
+
+@property (nonatomic, copy)NSString *goodsId;
 @end

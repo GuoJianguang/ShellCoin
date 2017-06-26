@@ -28,4 +28,6 @@
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
 
+@property (nonatomic, copy)NSString *mchCode;
+
 @end

@@ -30,13 +30,32 @@
     self.allGoodsLine.backgroundColor = [UIColor colorFromHexString:@"#eaeaea"];
     self.line.backgroundColor = [UIColor colorFromHexString:@"#eaeaea"];
     
-    
-    
     [self.allGoodsView removeFromSuperview];
     [self.itmeView addSubview:self.storeRootView];
     UIEdgeInsets insets = UIEdgeInsetsMake(0, 0, 0, 0);
     [self.storeRootView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.itmeView).insets(insets);
+    }];
+    
+    [self getSoteDetail];
+}
+
+
+#pragma mark - 获取店铺信息
+
+- (void)getSoteDetail
+{
+    NSDictionary *parms = @{@"mchCode":NullToSpace(self.mchCode),
+                            @"pageNo":@"1",
+                            @"pageSize":@"20"};
+    [HttpClient POST:@"shop/merchantShop" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
+        if (IsRequestTrue) {
+            self.storeName.text = NullToSpace(jsonObject[@"data"][@"mchName"]);
+            self.goodsNum.text = NullToNumber(jsonObject[@"data"][@"goodsCount"]);
+            [self.storeImage sd_setImageWithURL:[NSURL URLWithString:NullToSpace(jsonObject[@"data"][@"converImage"])] placeholderImage:LoadingErrorDefaultHearder];
+        }
+    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
+        
     }];
 }
 
@@ -50,6 +69,7 @@
     if (!_storeRootView) {
         _storeRootView = [[StoreRootDetailView alloc]init];
     }
+    _storeRootView.mchCode = self.mchCode;
     return _storeRootView;
 }
 
@@ -58,6 +78,7 @@
     if(!_allGoodsView ){
         _allGoodsView = [[StoreAllGoodsView alloc]init];
     }
+    _allGoodsView.mchCode = self.mchCode;
     return _allGoodsView;
 }
 

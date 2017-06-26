@@ -13,6 +13,7 @@
 @property (nonatomic,copy)NSString *sortId;
 @property (nonatomic,copy)NSString *name;
 @property (nonatomic,copy)NSString *icon;
+@property (nonatomic,assign)BOOL isSelect;
 
 @end
 

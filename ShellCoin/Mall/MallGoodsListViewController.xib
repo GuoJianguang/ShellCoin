@@ -36,7 +36,7 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gWy-yA-1gi">
                             <rect key="frame" x="0.0" y="0.0" width="125" height="51"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="buG-rB-OwG">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="buG-rB-OwG">
                                     <rect key="frame" x="35.5" y="11.5" width="54" height="28"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="54" id="czR-g0-Hh4"/>
@@ -65,7 +65,7 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s3W-z1-Va8">
                             <rect key="frame" x="125" y="0.0" width="125" height="51"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5MJ-92-SQk">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5MJ-92-SQk">
                                     <rect key="frame" x="35.5" y="11.5" width="54" height="28"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="54" id="EWh-gJ-DRw"/>
@@ -89,7 +89,7 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Wg-X8-lfr">
                             <rect key="frame" x="250" y="0.0" width="125" height="51"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Mp-NN-BHZ">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Mp-NN-BHZ">
                                     <rect key="frame" x="35.5" y="11.5" width="54" height="28"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="54" id="ccf-6k-gqo"/>
@@ -138,7 +138,7 @@
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pc5-1J-H0r">
                             <rect key="frame" x="0.0" y="0.0" width="94" height="41"/>
                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                            <state key="normal" title="食品">
+                            <state key="normal" title="--">
                                 <color key="titleColor" red="0.64711296559999998" green="0.64709866049999998" blue="0.64710146189999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </state>
                             <connections>
@@ -148,7 +148,7 @@
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N9z-VL-la2">
                             <rect key="frame" x="94" y="0.0" width="93.5" height="41"/>
                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                            <state key="normal" title="时尚服饰">
+                            <state key="normal" title="--">
                                 <color key="titleColor" red="0.64711296559999998" green="0.64709866049999998" blue="0.64710146189999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </state>
                             <connections>
@@ -158,7 +158,7 @@
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1QH-zL-iYm">
                             <rect key="frame" x="187.5" y="0.0" width="94" height="41"/>
                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                            <state key="normal" title="居家百货">
+                            <state key="normal" title="--">
                                 <color key="titleColor" red="0.64711296559999998" green="0.64709866049999998" blue="0.64710146189999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </state>
                             <connections>
@@ -199,7 +199,7 @@
                 </view>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="bQU-WB-2OQ">
                     <rect key="frame" x="0.0" y="156.5" width="375" height="510.5"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="TBB-3k-MZS">
                         <size key="itemSize" width="50" height="50"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>

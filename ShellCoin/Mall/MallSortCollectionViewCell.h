@@ -7,14 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MallSortModel.h"
-
+#import "HomeIndustryTableViewCell.h"
 
 
 @interface MallSortCollectionViewCell : BaseCollectionViewCell
 
 @property (weak, nonatomic) IBOutlet UIButton *itemBtn;
 
-@property (nonatomic,strong)MallSortModel *dataModel;
+@property (nonatomic,strong)NewHomeActivityModel *dataModel;
 
 @end

@@ -19,5 +19,6 @@
 - (IBAction)searchBtn:(UIButton *)sender;
 @property (weak, nonatomic) IBOutlet UIButton *buyCarBtn;
 - (IBAction)buyCarBtn:(UIButton *)sender;
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
 @end

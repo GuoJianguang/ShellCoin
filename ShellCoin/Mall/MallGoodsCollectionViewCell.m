@@ -20,4 +20,19 @@
 
 }
 
+- (void)setDataModel:(MallGoodsModel *)dataModel
+{
+    _dataModel = dataModel;
+    [self.goodsImage sd_setImageWithURL:[NSURL URLWithString:_dataModel.coverImage] placeholderImage:LoadingErrorDefaultImageSquare];
+    self.goodsName.text = _dataModel.name;
+    self.goodsPrice.text = [NSString stringWithFormat:@"¥%@",_dataModel.price];
+    self.goodsSales.text = [NSString stringWithFormat:@"销量:%@件",_dataModel.saleCount];
+    if ([_dataModel.recommend isEqualToString:@"1"]) {
+        self.commendIamge.hidden = NO;
+    }else{
+        self.commendIamge.hidden = YES;
+
+    }
+}
+
 @end

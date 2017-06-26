@@ -16,6 +16,8 @@
 
 @property (nonatomic, assign)NSInteger page;
 
+@property (nonatomic, copy)NSString *phone;
+
 @end
 
 @implementation StoreRootDetailView
@@ -49,16 +51,69 @@
     [self.collectionView reloadData];
 }
 
+- (void)setMchCode:(NSString *)mchCode
+{
+    _mchCode = mchCode;
+    [self.collectionView.mj_header beginRefreshing];
+}
+
+- (NSMutableArray *)dataSouceArray
+{
+    if (!_dataSouceArray) {
+        _dataSouceArray = [NSMutableArray array];
+    }
+    return _dataSouceArray;
+}
+
 #pragma mark - 数据请求
 - (void)getRequest:(BOOL )isHeader
 {
+    NSDictionary *parms = @{@"pageNo":@(self.page),
+                            @"pageSize":MacoRequestPageCount,
+                            @"mchCode":NullToSpace(self.mchCode)};
+    [SVProgressHUD showWithStatus:@"正在加载..." maskType:SVProgressHUDMaskTypeBlack];
+    [HttpClient POST:@"shop/merchantShop" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
+        [SVProgressHUD dismiss];
+        if (IsRequestTrue) {
+            if (isHeader) {
+                [self.dataSouceArray removeAllObjects];
+                
+                self.phoneLabel.text = [NSString stringWithFormat:@"服务电话:%@",NullToSpace(jsonObject[@"data"][@"contactPhone"])];
+                self.timeLabel.text = [NSString stringWithFormat:@"开店时间:%@",NullToSpace(jsonObject[@"data"][@"openTime"])];
+                self.phone =NullToSpace(jsonObject[@"data"][@"contactPhone"]);
+                [self.collectionView.mj_header endRefreshing];
+            }else{
+                [self.collectionView.mj_footer endRefreshing];
+            }
+            NSArray *array = jsonObject[@"data"][@"goodsList"][@"data"];
+            if (array.count > 0) {
+                self.page ++;
+            }
+            for (NSDictionary *dic in array) {
+                MallGoodsModel *model = [MallGoodsModel modelWithDic:dic];
+                [self.dataSouceArray addObject:model];
+            }
+            [self.collectionView reloadData];
+            [self.collectionView judgeIsHaveDataSouce:self.dataSouceArray];
+            
+        }
+    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
+        [SVProgressHUD dismiss];
+        [self.collectionView showNoDataSouceNoNetworkConnection];
+        if (isHeader) {
+            [self.collectionView.mj_header endRefreshing];
+        }else{
+            [self.collectionView.mj_footer endRefreshing];
+        }
+        
+    }];
+
     
 }
 
 #pragma mark - UICollectionView
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 20;
     return self.dataSouceArray.count;
 }
 
@@ -80,7 +135,7 @@
         nibri =YES;
     }
     MallGoodsCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
-    
+    cell.dataModel = self.dataSouceArray[indexPath.item];
     nibri=NO;
     return cell;
 }
@@ -88,6 +143,9 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     GoodsDetailViewController *goodsDetailVC = [[GoodsDetailViewController alloc]init];
+    goodsDetailVC.htmlUrl = ((MallGoodsModel *)self.dataSouceArray[indexPath.item]).detailUrl;
+    goodsDetailVC.goodsId = ((MallGoodsModel *)self.dataSouceArray[indexPath.item]).goodsId;
+    goodsDetailVC.isFormStore = YES;
     [self.viewController.navigationController pushViewController:goodsDetailVC animated:YES];
 }
 
@@ -125,7 +183,7 @@ minimumLineSpacingForSectionAtIndex:(NSInteger)section
 
 #pragma mark - 打电话
 - (IBAction)phoneBtn:(UIButton *)sender {
-    NSMutableString * str=[[NSMutableString alloc] initWithFormat:@"tel:%@",@"1008611"];
+    NSMutableString * str=[[NSMutableString alloc] initWithFormat:@"tel:%@",NullToSpace(self.phone)];
     UIWebView * callWebview = [[UIWebView alloc] init];
     [callWebview loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:str]]];
     [self.viewController.view addSubview:callWebview];

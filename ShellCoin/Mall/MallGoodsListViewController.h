@@ -32,4 +32,14 @@
 - (IBAction)moreSortBtn:(UIButton *)sender;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
+//类别id
+@property (nonatomic, copy)NSString *typeId;
+@property (nonatomic, copy)NSString *typeName;
+
+@property (nonatomic, strong)NSMutableArray *typeArray;
+//搜索关键字
+@property (nonatomic, copy)NSString *keyWords;
+
+@property (nonatomic, assign)BOOL isSearch;
+
 @end

@@ -26,12 +26,35 @@
         [self sendSubviewToBack:self.backView];
         self.backgroundColor = [UIColor clearColor];
         self.scrollView.bounces = YES;
-        self.scrollView.pagingEnabled = YES;
-        [self addTypeView];
+        self.scrollView.pagingEnabled = NO;
     }
     return self;
 }
 
+- (void)setGoodsId:(NSString *)goodsId
+{
+    _goodsId = goodsId;
+    
+    [self getSqec:_goodsId];
+}
+
+#pragma mark - 获取商品规格
+
+- (void)getSqec:(NSString *)goodsId
+{
+    NSDictionary *prams = @{@"id":NullToSpace(goodsId)};
+    [HttpClient POST:@"shop/goodsSpec/get" parameters:prams success:^(NSURLSessionDataTask *operation, id jsonObject) {
+        if (IsRequestTrue) {
+            NSArray *array = [NSArray array];
+            if ([jsonObject[@"data"] isKindOfClass:[NSArray class]]) {
+                array = jsonObject[@"data"];
+                [self addTypeView:array];
+            }
+        }
+    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
+        
+    }];
+}
 
 
 #pragma mark - 确定按钮
@@ -48,31 +71,30 @@
     
 }
 
-- (void)addTypeView
+- (void)addTypeView:(NSArray *)guigeArray
 {
-    
-    NSArray *guigeArray = @[@{@"specList":@[@"黑色／珊瑚红／白",@"黑色／珊瑚红／白",@"黑色／珊瑚红／白"],@"specAttr":@"颜色分类"},
-                            @{@"specList":@[@"黑色／珊瑚红／白",@"006纯白色／黑／柿子红",@"我的空间啊空间打开进风口看见可大可久饭卡肌肤抵抗"],@"specAttr":@"商品分类"},
-                            @{@"specList":@[@"22",@"23",@"24",@"25",@"26",@"27"],@"specAttr":@"尺码分类"}];
-    CGFloat numbertop = 0;
-    for (int i = 0; i < guigeArray.count; i ++) {
-        TypeView *view = [[TypeView alloc]initWithFrame:CGRectMake(0, 40, TWitdh, 50) andDatasource:guigeArray[i][@"specList"] :guigeArray[i][@"specAttr"]];
-        view.tag = i + 10;
-        view.delegate = self;
-        [self.scrollContentView addSubview:view];
-        if (i>0) {
-            CGFloat viewY = CGRectGetMaxY([self.scrollContentView viewWithTag:view.tag-1].frame);
-            view.frame = CGRectMake(0, viewY, TWitdh, view.height);
+    if (guigeArray.count >0) {
+
+        CGFloat numbertop = 0;
+        for (int i = 0; i < guigeArray.count; i ++) {
+            TypeView *view = [[TypeView alloc]initWithFrame:CGRectMake(0, 40, TWitdh, 50) andDatasource:guigeArray[i][@"typeValue"] :guigeArray[i][@"typeName"]];
+            view.tag = i + 10;
+            view.delegate = self;
+            [self.scrollContentView addSubview:view];
+            if (i>0) {
+                CGFloat viewY = CGRectGetMaxY([self.scrollContentView viewWithTag:view.tag-1].frame);
+                view.frame = CGRectMake(0, viewY, TWitdh, view.height);
+            }
+            view.bounds = CGRectMake(0, 0, TWitdh, view.height);
+            numbertop += view.height;
         }
-        view.bounds = CGRectMake(0, 0, TWitdh, view.height);
-        numbertop += view.height;
+        if (numbertop == 0) {
+            return;
+        }
+        self.numberViewTop.constant = numbertop + 15;
+        self.scrollviewContentHeight.constant = numbertop + TWitdh*(20/75.) + 50;
+//        self.scrollView.contentSize = CGSizeMake(TWitdh, numbertop + TWitdh*(10/75.) + 50);
     }
-    if (numbertop == 0) {
-        return;
-    }
-    self.numberViewTop.constant = numbertop + 25;
-    self.scrollviewContentHeight.constant = numbertop + TWitdh*(10/75.) + 25;
-    self.scrollView.contentSize = CGSizeMake(TWitdh, numbertop + TWitdh*(10/75.) + 25);
 }
 
 - (void)btn:(UIButton *)button withIndex:(int)tag

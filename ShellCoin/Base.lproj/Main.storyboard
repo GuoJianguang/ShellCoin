@@ -240,6 +240,7 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="buyCarBtn" destination="WPb-7b-NZ2" id="MzN-vX-rLv"/>
+                        <outlet property="collectionView" destination="lBB-ax-uCR" id="tSU-Rt-sBt"/>
                         <outlet property="searchBtn" destination="BTi-9i-RmJ" id="nbV-m9-1tr"/>
                         <outlet property="searchTF" destination="De4-OP-xm4" id="Nx4-6Z-ef3"/>
                         <outlet property="searchView" destination="OqL-20-byC" id="Y6X-9o-RwK"/>
@@ -247,7 +248,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DYW-UU-Gt0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="734" y="54"/>
+            <point key="canvasLocation" x="814" y="54"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="UON-dz-g0B">
