@@ -30,11 +30,11 @@ static WeXinPayObject *instance;
 
 
 
-+ (void)startWexinPay:(NSDictionary *)parms
++ (void)startMallWexinPay:(NSDictionary *)parms;
 {
 
     [SVProgressHUD showWithStatus:@"正在发送支付请求" maskType:SVProgressHUDMaskTypeBlack];
-    [HttpClient POST:@"pay/wxpay" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
+    [HttpClient POST:@"pay/shop/wx" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
         [SVProgressHUD dismiss];
         if (IsRequestTrue) {
             NSDictionary *dict = jsonObject[@"data"];

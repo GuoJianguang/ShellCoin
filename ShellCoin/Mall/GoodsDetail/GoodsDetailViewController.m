@@ -17,6 +17,8 @@
 
 @property (nonatomic, copy)NSString *mchCode;
 
+@property (nonatomic, copy)NSString *goodsFrieght;
+
 @end
 
 @implementation GoodsDetailViewController
@@ -30,6 +32,8 @@
     self.webView.delegate = self;
     [self.webView loadRequest:request];
     self.mchCode = [NSString string];
+    self.goodsFrieght = [NSString string];
+
     if (self.isFormStore) {
         [self.checkStoreBtn setTitle:@" 返回店铺" forState:UIControlStateNormal];
     }else{
@@ -55,6 +59,8 @@
     [HttpClient POST:@"shop/goods/detail/get" parameters:prams success:^(NSURLSessionDataTask *operation, id jsonObject) {
         if (IsRequestTrue) {
             self.mchCode = NullToSpace(jsonObject[@"data"][@"mchCode"]);
+            self.goodsFrieght = NullToSpace(jsonObject[@"data"][@"freight"]);
+            self.goodsModel = [MallGoodsModel modelWithDic:jsonObject[@"data"]];
         }
     } failure:^(NSURLSessionDataTask *operation, NSError *error) {
         
@@ -114,11 +120,19 @@
 }
 //加入购物车
 - (IBAction)addShoppCarBtn:(UIButton *)sender {
+    self.chooseTypeView.goodsId = NullToNumber(self.goodsId);
+    self.chooseTypeView.goodsFreight = NullToNumber(self.goodsFrieght);
+    self.chooseTypeView.chooseType = ChoosType_car;
+    self.chooseTypeView.goodsModel = self.goodsModel;
+    [self.view addSubview:self.chooseTypeView];
     
 }
 //立即购买
 - (IBAction)buyBtn:(UIButton *)sender {
-    self.chooseTypeView.goodsId = NullToSpace(self.goodsId);
+    self.chooseTypeView.goodsId = NullToNumber(self.goodsId);
+    self.chooseTypeView.goodsFreight = NullToNumber(self.goodsFrieght);
+    self.chooseTypeView.chooseType = ChoosType_buy;
+    self.chooseTypeView.goodsModel = self.goodsModel;
     [self.view addSubview:self.chooseTypeView];
     
 }

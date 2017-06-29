@@ -44,6 +44,7 @@
                             <state key="normal" title="  全选" image="btn_quanxuan">
                                 <color key="titleColor" red="0.64711296559999998" green="0.64709866049999998" blue="0.64710146189999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </state>
+                            <state key="selected" title="  全选" image="btn_quanxuanzhong"/>
                             <connections>
                                 <action selector="selectBtn:" destination="-1" eventType="touchUpInside" id="6FV-dW-ZjP"/>
                             </connections>
@@ -98,5 +99,6 @@
     </objects>
     <resources>
         <image name="btn_quanxuan" width="19" height="19"/>
+        <image name="btn_quanxuanzhong" width="19" height="19"/>
     </resources>
 </document>

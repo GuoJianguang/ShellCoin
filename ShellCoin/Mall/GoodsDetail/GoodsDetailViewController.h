@@ -7,6 +7,7 @@
 //
 
 #import "BaseViewController.h"
+#import "MallGoodsModel.h"
 
 @interface GoodsDetailViewController : BaseViewController
 
@@ -34,5 +35,6 @@
 
 @property (nonatomic, assign)BOOL isFormStore;
 
+@property (nonatomic, strong)MallGoodsModel *goodsModel;
 
 @end

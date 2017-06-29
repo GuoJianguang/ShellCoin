@@ -22,4 +22,7 @@
 @property (nonatomic, strong)NSMutableArray *dataSouceArray;
 
 
+- (void)calculateTheTotalAmount;
+
+
 @end

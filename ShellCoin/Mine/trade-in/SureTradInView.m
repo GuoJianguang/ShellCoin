@@ -95,6 +95,12 @@
             [self getDiscoverWithdrawlRequest:sender];
         }
             break;
+            
+        case Password_type_MallBalancePay:
+        {
+            [self mallBalancePay:sender];
+        }
+            break;
         default:
             break;
     }
@@ -211,6 +217,33 @@
 }
 
 
+#pragma mark - 商城余额支付的接口
+- (void)mallBalancePay:(UIButton *)sender
+{
+    sender.enabled = NO;
+    NSString *password = [[NSString stringWithFormat:@"%@%@",self.passwordTF.text,PasswordKey]md5_32];
+    
+    [self.mallOrderParms setObject:password forKey:@"payPassword"];
+    [SVProgressHUD showWithStatus:@"正在支付"];
+    [HttpClient POST:@"pay/shop/balancePay" parameters:self.mallOrderParms success:^(NSURLSessionDataTask *operation, id jsonObject) {
+        sender.enabled = YES;
+        [SVProgressHUD dismiss];
+        if (IsRequestTrue) {
+            if ([self.delegate respondsToSelector:@selector(paysuccess:)]) {
+                [self.delegate paysuccess:NullToNumber(jsonObject[@"data"])];
+            }
+            [self removeFromSuperview];
+
+        }
+    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
+        [SVProgressHUD dismiss];
+        [[JAlertViewHelper shareAlterHelper]showTint:@"支付失败，请重试" duration:2.0];
+        sender.enabled = YES;
+
+    }];
+
+    
+}
 
 
 @end

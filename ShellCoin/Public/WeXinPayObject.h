@@ -15,13 +15,13 @@
 + (WeXinPayObject *)shareWexinPayObject;
 
 //商城购买商品的时候发起的支付请求
-+ (void)startWexinPay:(NSDictionary *)parms;
++ (void)startMallWexinPay:(NSDictionary *)parms;
 
 //商家在线支付的时候发起的支付请求
 
 + (void)srarMachantWexinPay:(NSDictionary *)parms;
 
-
+//商城支付
 //爱心账户充值
 
 + (void)loveAcountWexinPay:(NSDictionary *)parms;

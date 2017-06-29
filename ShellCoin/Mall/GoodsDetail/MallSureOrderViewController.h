@@ -9,6 +9,12 @@
 #import "BaseViewController.h"
 #import "AddressTableViewCell.h"
 
+typedef enum : NSUInteger {
+    MallPay_blance,
+    MallPay_alipay,
+    MallPay_wechatpay,
+} MallPayType;
+
 @interface MallSureOrderViewController : BaseViewController
 @property (weak, nonatomic) IBOutlet UILabel *name;
 @property (weak, nonatomic) IBOutlet UILabel *phone;
@@ -25,10 +31,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *card;
 
 
-
 #pragma mark - 选择支付方式
-
-
 @property (weak, nonatomic) IBOutlet UIImageView *yuEMark;
 - (IBAction)yuEBtn:(UIButton *)sender;
 @property (weak, nonatomic) IBOutlet UIButton *yuEbtn;
@@ -58,5 +61,11 @@
 @property (weak, nonatomic) IBOutlet UILabel *totalMoneyLabel;
 
 @property (nonatomic, strong)ShippingAddressModel *addressmodel;
+
+
+@property (nonatomic, copy)NSMutableArray *orderArry;
+
+
+@property (nonatomic, assign)MallPayType payType;
 
 @end

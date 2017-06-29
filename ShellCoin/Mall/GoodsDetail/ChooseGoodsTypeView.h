@@ -7,6 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MallGoodsModel.h"
+
+typedef enum : NSUInteger {
+    ChoosType_car,
+    ChoosType_buy,
+} ChoosType;
 
 @interface ChooseGoodsTypeView : UIView
 
@@ -33,4 +39,17 @@
 
 
 @property (nonatomic, copy)NSString *goodsId;
+
+@property (nonatomic, copy)NSString *goodsFreight;
+
+@property (weak, nonatomic) IBOutlet UILabel *goodsPrice;
+
+@property (weak, nonatomic) IBOutlet UILabel *freight;
+
+
+@property (nonatomic, assign)ChoosType chooseType;
+
+@property (nonatomic, strong)MallGoodsModel *goodsModel;
+
+
 @end

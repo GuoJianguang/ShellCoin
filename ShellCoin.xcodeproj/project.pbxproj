@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040066D81F0246F600936E85 /* MallPayResultView.m in Sources */ = {isa = PBXBuildFile; fileRef = 040066D61F0246F600936E85 /* MallPayResultView.m */; };
+		040066D91F0246F600936E85 /* MallPayResultView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 040066D71F0246F600936E85 /* MallPayResultView.xib */; };
 		0404D6631EF8BBEA00073150 /* GoodsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0404D6611EF8BBEA00073150 /* GoodsDetailViewController.m */; };
 		0404D6641EF8BBEA00073150 /* GoodsDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0404D6621EF8BBEA00073150 /* GoodsDetailViewController.xib */; };
 		0404D6661EF8C09300073150 /* GoodsDetail.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0404D6651EF8C09300073150 /* GoodsDetail.xcassets */; };
@@ -121,6 +123,10 @@
 		04FE72E61EF385D200DB838E /* MallRootBannerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04FE72E41EF385D200DB838E /* MallRootBannerCollectionViewCell.xib */; };
 		04FE72EA1EF3A8E200DB838E /* MallGoodsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FE72E81EF3A8E200DB838E /* MallGoodsCollectionViewCell.m */; };
 		04FE72EB1EF3A8E200DB838E /* MallGoodsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04FE72E91EF3A8E200DB838E /* MallGoodsCollectionViewCell.xib */; };
+		04FEE9871F035078000C347C /* ShoppingCar.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 04FEE9851F035078000C347C /* ShoppingCar.xcdatamodeld */; };
+		04FEE98A1F0350CA000C347C /* CoreDataShoopingCarManagement.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FEE9891F0350CA000C347C /* CoreDataShoopingCarManagement.m */; };
+		04FEE9AC1F038E15000C347C /* ShoopingCart+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FEE9A91F038E15000C347C /* ShoopingCart+CoreDataClass.m */; };
+		04FEE9AD1F038E15000C347C /* ShoopingCart+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FEE9AB1F038E15000C347C /* ShoopingCart+CoreDataProperties.m */; };
 		04FFB5061EF76380000AC558 /* MallGoodsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FFB5041EF76380000AC558 /* MallGoodsListViewController.m */; };
 		04FFB5071EF76380000AC558 /* MallGoodsListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04FFB5051EF76380000AC558 /* MallGoodsListViewController.xib */; };
 		04FFB50A1EF7773A000AC558 /* MallSortView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FFB5091EF7773A000AC558 /* MallSortView.m */; };
@@ -430,6 +436,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		040066D51F0246F600936E85 /* MallPayResultView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MallPayResultView.h; sourceTree = "<group>"; };
+		040066D61F0246F600936E85 /* MallPayResultView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MallPayResultView.m; sourceTree = "<group>"; };
+		040066D71F0246F600936E85 /* MallPayResultView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MallPayResultView.xib; sourceTree = "<group>"; };
 		0404D6601EF8BBEA00073150 /* GoodsDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsDetailViewController.h; sourceTree = "<group>"; };
 		0404D6611EF8BBEA00073150 /* GoodsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsDetailViewController.m; sourceTree = "<group>"; };
 		0404D6621EF8BBEA00073150 /* GoodsDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GoodsDetailViewController.xib; sourceTree = "<group>"; };
@@ -602,6 +611,13 @@
 		04FE72E71EF3A8E200DB838E /* MallGoodsCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MallGoodsCollectionViewCell.h; sourceTree = "<group>"; };
 		04FE72E81EF3A8E200DB838E /* MallGoodsCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MallGoodsCollectionViewCell.m; sourceTree = "<group>"; };
 		04FE72E91EF3A8E200DB838E /* MallGoodsCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MallGoodsCollectionViewCell.xib; sourceTree = "<group>"; };
+		04FEE9861F035078000C347C /* ShoppingCar.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ShoppingCar.xcdatamodel; sourceTree = "<group>"; };
+		04FEE9881F0350CA000C347C /* CoreDataShoopingCarManagement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataShoopingCarManagement.h; sourceTree = "<group>"; };
+		04FEE9891F0350CA000C347C /* CoreDataShoopingCarManagement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataShoopingCarManagement.m; sourceTree = "<group>"; };
+		04FEE9A81F038E15000C347C /* ShoopingCart+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ShoopingCart+CoreDataClass.h"; sourceTree = "<group>"; };
+		04FEE9A91F038E15000C347C /* ShoopingCart+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ShoopingCart+CoreDataClass.m"; sourceTree = "<group>"; };
+		04FEE9AA1F038E15000C347C /* ShoopingCart+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ShoopingCart+CoreDataProperties.h"; sourceTree = "<group>"; };
+		04FEE9AB1F038E15000C347C /* ShoopingCart+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ShoopingCart+CoreDataProperties.m"; sourceTree = "<group>"; };
 		04FFB5031EF76380000AC558 /* MallGoodsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MallGoodsListViewController.h; sourceTree = "<group>"; };
 		04FFB5041EF76380000AC558 /* MallGoodsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MallGoodsListViewController.m; sourceTree = "<group>"; };
 		04FFB5051EF76380000AC558 /* MallGoodsListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MallGoodsListViewController.xib; sourceTree = "<group>"; };
@@ -1131,6 +1147,9 @@
 				04FC4D521EFA18FF0023C053 /* MallSureOrderViewController.h */,
 				04FC4D531EFA18FF0023C053 /* MallSureOrderViewController.m */,
 				04FC4D541EFA18FF0023C053 /* MallSureOrderViewController.xib */,
+				040066D51F0246F600936E85 /* MallPayResultView.h */,
+				040066D61F0246F600936E85 /* MallPayResultView.m */,
+				040066D71F0246F600936E85 /* MallPayResultView.xib */,
 				0404D6651EF8C09300073150 /* GoodsDetail.xcassets */,
 			);
 			path = GoodsDetail;
@@ -1389,6 +1408,13 @@
 				04FFB51D1EF7AC37000AC558 /* ShoppingCarTableViewCell.xib */,
 				04FFB5201EF7C41A000AC558 /* ShoppingCarModel.h */,
 				04FFB5211EF7C41A000AC558 /* ShoppingCarModel.m */,
+				04FEE9851F035078000C347C /* ShoppingCar.xcdatamodeld */,
+				04FEE9881F0350CA000C347C /* CoreDataShoopingCarManagement.h */,
+				04FEE9891F0350CA000C347C /* CoreDataShoopingCarManagement.m */,
+				04FEE9A81F038E15000C347C /* ShoopingCart+CoreDataClass.h */,
+				04FEE9A91F038E15000C347C /* ShoopingCart+CoreDataClass.m */,
+				04FEE9AA1F038E15000C347C /* ShoopingCart+CoreDataProperties.h */,
+				04FEE9AB1F038E15000C347C /* ShoopingCart+CoreDataProperties.m */,
 			);
 			path = ShoppingCart;
 			sourceTree = "<group>";
@@ -1763,6 +1789,8 @@
 				BC0A58171E724ADA0077C8A9 /* HttpClient */,
 				BC77C6981E7A6D8600DC9EAC /* WeXinPayObject.h */,
 				BC77C6991E7A6D8600DC9EAC /* WeXinPayObject.m */,
+				041ABCD41ED823D400C181CB /* AliPayObject.h */,
+				041ABCD51ED823D400C181CB /* AliPayObject.m */,
 				BC4AAC331E4D7562006568A6 /* JAlertViewHelper.h */,
 				BC4AAC341E4D7562006568A6 /* JAlertViewHelper.m */,
 				BC0A58371E728C510077C8A9 /* SortButtonSwitchView.h */,
@@ -1786,8 +1814,6 @@
 				BC2E53221E9524FB00F7A99C /* NothingView.h */,
 				BC2E53231E9524FB00F7A99C /* NothingView.m */,
 				BC2E53241E9524FB00F7A99C /* NothingView.xib */,
-				041ABCD41ED823D400C181CB /* AliPayObject.h */,
-				041ABCD51ED823D400C181CB /* AliPayObject.m */,
 				BCB9A7C41E89F4B600F3E966 /* Public.xcassets */,
 			);
 			path = Public;
@@ -2292,6 +2318,7 @@
 					BC4AABD91E4D69E1006568A6 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 4KU9646Y2X;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.Push = {
@@ -2484,6 +2511,7 @@
 				04610D1F1EF264DD007D8EF5 /* SureReceivingView.xib in Resources */,
 				BCB9A7C51E89F4B600F3E966 /* Public.xcassets in Resources */,
 				0445BAC41ED55A85009226BD /* DiscoverCollectionViewCell.xib in Resources */,
+				040066D91F0246F600936E85 /* MallPayResultView.xib in Resources */,
 				040DCAB11EEA91BF00E78125 /* RecommendMerchantView.xib in Resources */,
 				BC9B3DDF1E7688AD003DC241 /* PersonCenterTableViewCell.xib in Resources */,
 				BCFE20941E77E206002BC28C /* ForgetPasswordTwoViewController.xib in Resources */,
@@ -2577,6 +2605,7 @@
 				040DCAB01EEA91BF00E78125 /* RecommendMerchantView.m in Sources */,
 				BC4AAC2E1E4D6E7D006568A6 /* BaseTableViewCell.m in Sources */,
 				0459843C1EF1207B00B26437 /* OrderDetailTableViewCell.m in Sources */,
+				04FEE9871F035078000C347C /* ShoppingCar.xcdatamodeld in Sources */,
 				BCD736F91E935017001F706C /* MessageListViewController.m in Sources */,
 				BCD737081E93544D001F706C /* MessageDetailTableViewCell.m in Sources */,
 				BC57B7071E7FC357006AF4D1 /* SquaredUpView.m in Sources */,
@@ -2654,6 +2683,7 @@
 				BC57B6FA1E7FA9DC006AF4D1 /* ShellCoinPageControlView.m in Sources */,
 				BC9B3E0A1E769D44003DC241 /* SetPayPasswordViewController.m in Sources */,
 				BCD7371A1E936C92001F706C /* MerchantSearchRsultViewController.m in Sources */,
+				04FEE9AD1F038E15000C347C /* ShoopingCart+CoreDataProperties.m in Sources */,
 				BCD737031E935438001F706C /* MessageDetailViewController.m in Sources */,
 				BC52794C1E8E7E4E004DD703 /* LBXScanWrapper.m in Sources */,
 				BC0A58261E724ADA0077C8A9 /* HttpClientAlertViewHelper.m in Sources */,
@@ -2694,6 +2724,7 @@
 				BC5279421E8E7E4E004DD703 /* UIActionSheet+LBXAlertAction.m in Sources */,
 				BCC8E1A11E88FFB7004DBDA3 /* MerchantTableViewCell.m in Sources */,
 				04D981BB1ED574CB005A617A /* SelectGoodsNumberView.m in Sources */,
+				04FEE98A1F0350CA000C347C /* CoreDataShoopingCarManagement.m in Sources */,
 				04196B111ED6B3A2005F64C2 /* DIiscoverQrCodeTableViewCell.m in Sources */,
 				BC34A1C11E9256CA00C786C0 /* CityButton.m in Sources */,
 				040DCAB21EEA91BF00E78125 /* RecommendDetailTableViewCell.m in Sources */,
@@ -2716,6 +2747,7 @@
 				BC34A1EA1E92646700C786C0 /* MANaviAnnotation.m in Sources */,
 				BCEC069D1E83BFF20059C2C4 /* IntergralRecordTableViewCell.m in Sources */,
 				BC054D581E8A418F00062AC5 /* BillDataModel.m in Sources */,
+				040066D81F0246F600936E85 /* MallPayResultView.m in Sources */,
 				BC34A1E41E92646700C786C0 /* BussessMapViewController.m in Sources */,
 				BC36CFE71E80C9AD00A51BF4 /* RecommentSpecilCollectionViewCell.m in Sources */,
 				04FE72E51EF385D200DB838E /* MallRootBannerCollectionViewCell.m in Sources */,
@@ -2778,6 +2810,7 @@
 				BC34A1D21E9263F800C786C0 /* LocationManager.m in Sources */,
 				0445BAC91ED56151009226BD /* DiscoverWithdrawalViewController.m in Sources */,
 				BC57B7031E7FC348006AF4D1 /* HomeIndustryTableViewCell.m in Sources */,
+				04FEE9AC1F038E15000C347C /* ShoopingCart+CoreDataClass.m in Sources */,
 				BC57B71A1E7FCE34006AF4D1 /* ForyouCollectionViewCell.m in Sources */,
 				043C63D31ED6745800A6ED33 /* SureDiscoverOrderViewController.m in Sources */,
 				BC34A1C91E9256CA00C786C0 /* PinyinFormatter.m in Sources */,
@@ -2941,6 +2974,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = ShellCoin/ShellCoin.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer: xu han (9L2S5LBXA3)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: xu han (9L2S5LBXA3)";
@@ -2967,6 +3001,9 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "056d407e-1240-4224-8f7f-2b33395bfedc";
 				PROVISIONING_PROFILE_SPECIFIER = lanyuDelop;
+				SWIFT_OBJC_BRIDGING_HEADER = "ShellCoin/Mall/ShoppingCart/ShellCoin-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -2977,6 +3014,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = ShellCoin/ShellCoin.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer: xu han (9L2S5LBXA3)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: xu han (9L2S5LBXA3)";
@@ -3003,6 +3041,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "056d407e-1240-4224-8f7f-2b33395bfedc";
 				PROVISIONING_PROFILE_SPECIFIER = lanyuDelop;
+				SWIFT_OBJC_BRIDGING_HEADER = "ShellCoin/Mall/ShoppingCart/ShellCoin-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -3095,6 +3135,16 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
+		04FEE9851F035078000C347C /* ShoppingCar.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				04FEE9861F035078000C347C /* ShoppingCar.xcdatamodel */,
+			);
+			currentVersion = 04FEE9861F035078000C347C /* ShoppingCar.xcdatamodel */;
+			path = ShoppingCar.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
 		BC4AABE91E4D69E2006568A6 /* ShellCoin.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (

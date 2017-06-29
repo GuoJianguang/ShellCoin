@@ -14,12 +14,8 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        UIImageView *starImage = [[UIImageView alloc]initWithFrame:CGRectMake(17, 17, 9, 9)];
-        starImage.image = [UIImage imageNamed:@"icon_mall_asterisk"];
-        [self addSubview:starImage];
-        
+
         UILabel *lab = [[UILabel alloc] initWithFrame:CGRectMake(20, 10, 200, 20)];
-//        lab.center = CGPointMake(lab.center.x, starImage.center.y);
         lab.text = typename;
         lab.textColor = MacoDetailColor;
         lab.font = [UIFont systemFontOfSize:14];
@@ -68,11 +64,10 @@
         
         upY +=30;
         UILabel *line = [[UILabel alloc] initWithFrame:CGRectMake(20, upY+10, self.frame.size.width - 40, 0.5)];
-        line.backgroundColor = MacoIntrodouceColor;
+        line.backgroundColor = MacoDetailColor;
+        line.alpha = 0.4;
         [self addSubview:line];
-        
         self.height = upY+11;
-        
         self.seletIndex = -1;
     }
     return self;
@@ -84,8 +79,8 @@
     }
     btn.selected = YES;
     btn.backgroundColor = MacoColor;
-    if ([self.delegate respondsToSelector:@selector(btn:withIndex:)]) {
-        [self.delegate btn:btn withIndex:(int)btn.tag-100];
+    if ([self.delegate respondsToSelector:@selector(btn:withIndex:withSelf:)]) {
+        [self.delegate btn:btn withIndex:(int)btn.tag-100 withSelf:self];
     }
     
 //    if (btn.selected == NO) {

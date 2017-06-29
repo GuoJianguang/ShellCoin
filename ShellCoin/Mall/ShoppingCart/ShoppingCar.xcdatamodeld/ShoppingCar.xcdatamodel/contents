@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16F73" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+    <entity name="ShoopingCart" representedClassName="ShoopingCart" syncable="YES">
+        <attribute name="cash" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="coupons" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="goodsFreight" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="goodsId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="goodsImage" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="goodsName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="goodsNum" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="goodsPrice" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="goodsSpec" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="priceId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="shellCoin" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="ShoopingCart" positionX="-45" positionY="0" width="128" height="210"/>
+    </elements>
+</model>

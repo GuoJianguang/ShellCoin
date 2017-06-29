@@ -120,7 +120,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jVl-1U-qTX">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jVl-1U-qTX">
                                                 <rect key="frame" x="124.5" y="67" width="314.5" height="16"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <nil key="textColor"/>
@@ -198,9 +198,10 @@
                 <outlet property="goodsNum" destination="AiS-nw-VSc" id="dfw-Zu-RQ8"/>
                 <outlet property="goodsSpec" destination="jVl-1U-qTX" id="q0a-ue-fO9"/>
                 <outlet property="price" destination="auh-Xy-1DN" id="sUP-uJ-GcJ"/>
+                <outlet property="selcetBtn" destination="b3a-NY-qHt" id="aSF-HN-Alf"/>
                 <outlet property="subBtn" destination="7g3-Xm-uuu" id="hNc-tW-JjK"/>
             </connections>
-            <point key="canvasLocation" x="-396" y="54"/>
+            <point key="canvasLocation" x="-762" y="82"/>
         </tableViewCell>
     </objects>
     <resources>

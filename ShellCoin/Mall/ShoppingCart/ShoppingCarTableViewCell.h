@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "ShoppingCarModel.h"
 
-
 @interface ShoppingCarTableViewCell : BaseTableViewCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *backImageView;
@@ -29,7 +28,9 @@
 - (IBAction)deletBtn:(UIButton *)sender;
 - (IBAction)selectBtn:(UIButton *)sender;
 
+@property (weak, nonatomic) IBOutlet UIButton *selcetBtn;
 
 @property (nonatomic, strong)ShoppingCarModel *dataModel;
+
 
 @end

@@ -14,5 +14,7 @@
 + (void)startAliPayDiscoverPay:(NSDictionary *)parms;
 //商家在线支付
 + (void)startAliPayMerchantOnlinePay:(NSDictionary *)parms;
+//商城在线支付
++ (void)startAliPayMallPay:(NSDictionary *)parms;
 
 @end
