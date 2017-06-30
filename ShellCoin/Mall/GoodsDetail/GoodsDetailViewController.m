@@ -98,6 +98,12 @@
 
 //查看购物车
 - (IBAction)shoppcarBtn:(UIButton *)sender {
+    if (![ShellCoinUserInfo shareUserInfos].currentLogined) {
+        //判断是否先登录
+        UINavigationController *navc = [LoginViewController controller];
+        [self presentViewController:navc animated:YES completion:NULL];
+        return;
+    }
     ShoppingCarViewController *shoppCarVC = [[ShoppingCarViewController alloc]init];
     [self.navigationController pushViewController:shoppCarVC animated:YES];
 }
@@ -120,12 +126,18 @@
 }
 //加入购物车
 - (IBAction)addShoppCarBtn:(UIButton *)sender {
+    if (![ShellCoinUserInfo shareUserInfos].currentLogined) {
+        //判断是否先登录
+        UINavigationController *navc = [LoginViewController controller];
+        [self presentViewController:navc animated:YES completion:NULL];
+        return;
+    }
     self.chooseTypeView.goodsId = NullToNumber(self.goodsId);
     self.chooseTypeView.goodsFreight = NullToNumber(self.goodsFrieght);
     self.chooseTypeView.chooseType = ChoosType_car;
     self.chooseTypeView.goodsModel = self.goodsModel;
     [self.view addSubview:self.chooseTypeView];
-    
+
 }
 //立即购买
 - (IBAction)buyBtn:(UIButton *)sender {
@@ -134,6 +146,6 @@
     self.chooseTypeView.chooseType = ChoosType_buy;
     self.chooseTypeView.goodsModel = self.goodsModel;
     [self.view addSubview:self.chooseTypeView];
-    
+
 }
 @end

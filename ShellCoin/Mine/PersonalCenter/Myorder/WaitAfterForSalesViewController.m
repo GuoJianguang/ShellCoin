@@ -7,6 +7,7 @@
 //
 
 #import "WaitAfterForSalesViewController.h"
+#import "OrderModel.h"
 
 @interface WaitAfterForSalesViewController ()<BasenavigationDelegate>
 
@@ -33,8 +34,6 @@
         self.ViewHeight.constant = (TWitdh-100)*(650/520.);
         
     }
-    
-    
     self.autResultTitleLabel.text = self.autResultTitleLabel.text = @"申请处理中";
     self.titleimageView.image = [UIImage imageNamed:@"pic7_personal"];
     self.alerResultImageView.image = [UIImage imageNamed:@"pic8_personal"];
@@ -47,13 +46,26 @@
 #pragma mark - 我要投诉
 - (void)detailBtnClick
 {
-    
+    NSMutableString * str=[[NSMutableString alloc] initWithFormat:@"tel:%@",@"02865224503"];
+    UIWebView * callWebview = [[UIWebView alloc] init];
+    [callWebview loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:str]]];
+    [self.view addSubview:callWebview];
 }
 
 #pragma mark - 取消申请
 - (IBAction)backBtn:(id)sender
 {
-
+    NSDictionary *parms = @{@"token":[ShellCoinUserInfo shareUserInfos].token,
+                            @"orderId":self.dataModel.orderId};
+    [HttpClient POST:@"shop/refund/cancel" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
+        if (IsRequestTrue) {
+            [[JAlertViewHelper shareAlterHelper]showTint:@"取消申请成功" duration:2.];
+            [[NSNotificationCenter defaultCenter]postNotificationName:@"cancelapplySueecss" object:nil];
+            [self.navigationController popViewControllerAnimated:YES];
+        }
+    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
+        [[JAlertViewHelper shareAlterHelper]showTint:@"取消失败，请重试" duration:2.];
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -61,14 +73,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

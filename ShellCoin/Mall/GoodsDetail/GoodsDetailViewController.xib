@@ -56,10 +56,10 @@
                     <rect key="frame" x="0.0" y="617" width="375" height="50"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ywm-Qq-WU2">
-                            <rect key="frame" x="261" y="0.0" width="114" height="50"/>
+                            <rect key="frame" x="282" y="0.0" width="93" height="50"/>
                             <color key="backgroundColor" red="0.92218697071075439" green="0.34337565302848816" blue="0.16079281270503998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <constraints>
-                                <constraint firstAttribute="width" secondItem="Ywm-Qq-WU2" secondAttribute="height" multiplier="205:90" id="pXu-Yx-9vd"/>
+                                <constraint firstAttribute="width" secondItem="Ywm-Qq-WU2" secondAttribute="height" multiplier="205:110" id="pXu-Yx-9vd"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <state key="normal" title="立即购买">
@@ -70,10 +70,10 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="01P-C2-usA">
-                            <rect key="frame" x="147" y="0.0" width="114" height="50"/>
+                            <rect key="frame" x="189" y="0.0" width="93" height="50"/>
                             <color key="backgroundColor" red="0.95354926586151123" green="0.70538020133972168" blue="0.2430538684129715" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <constraints>
-                                <constraint firstAttribute="width" secondItem="01P-C2-usA" secondAttribute="height" multiplier="205:90" id="ox3-qQ-g3A"/>
+                                <constraint firstAttribute="width" secondItem="01P-C2-usA" secondAttribute="height" multiplier="205:110" id="ox3-qQ-g3A"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <state key="normal" title="加入购物车">
@@ -84,7 +84,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NGF-kc-FNm">
-                            <rect key="frame" x="0.0" y="0.0" width="147" height="50"/>
+                            <rect key="frame" x="0.0" y="0.0" width="189" height="50"/>
                             <color key="backgroundColor" red="0.27069073915481567" green="0.27068409323692322" blue="0.27068537473678589" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <state key="normal" title="  进入店铺" image="icon_dianpu"/>

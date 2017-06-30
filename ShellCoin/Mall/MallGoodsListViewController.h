@@ -31,6 +31,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *moreSortBtn;
 - (IBAction)moreSortBtn:(UIButton *)sender;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+- (IBAction)buyCarBtn:(UIButton *)sender;
 
 //类别id
 @property (nonatomic, copy)NSString *typeId;

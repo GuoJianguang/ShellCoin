@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "MyorderViewController.h"
+@class OrderModel;
 @interface OrderDetailTableViewCell : BaseTableViewCell
 
 #pragma mark - 收货信息
@@ -49,8 +50,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *totalMoneyLabel;
 @property (weak, nonatomic) IBOutlet UILabel *totalMoney;
 
-
-
 @property (nonatomic, assign)Myorder_type  orderType;
+
+@property (nonatomic, strong)OrderModel *dataModel;
 
 @end

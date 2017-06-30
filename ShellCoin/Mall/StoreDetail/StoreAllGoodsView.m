@@ -47,9 +47,10 @@
 - (void)reload
 {
     [self.collectionView.mj_header beginRefreshing];
-    self.flag = 1;
-    self.priceImage.image = [UIImage imageNamed:@"btn_xiaxuanzhong"];
-    [self.priceBtn setTitleColor:MacoColor forState:UIControlStateNormal];
+    self.flag = 0;
+    self.priceBtn.selected = YES;
+    self.priceImage.image = [UIImage imageNamed:@"btn_paixu"];
+    [self.priceBtn setTitleColor:MacoTitleColor forState:UIControlStateNormal];
     self.timeImage.image = [UIImage imageNamed:@"btn_paixu"];
     [self.salesBtn setTitleColor:MacoTitleColor forState:UIControlStateNormal];
     [self.timeBtn setTitleColor:MacoTitleColor forState:UIControlStateNormal];

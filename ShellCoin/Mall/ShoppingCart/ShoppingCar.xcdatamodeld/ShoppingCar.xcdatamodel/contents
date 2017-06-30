@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16F73" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
     <entity name="ShoopingCart" representedClassName="ShoopingCart" syncable="YES">
+        <attribute name="account" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="cash" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="coupons" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="goodsFreight" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
@@ -14,6 +15,6 @@
         <attribute name="shellCoin" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
     </entity>
     <elements>
-        <element name="ShoopingCart" positionX="-45" positionY="0" width="128" height="210"/>
+        <element name="ShoopingCart" positionX="-45" positionY="0" width="128" height="225"/>
     </elements>
 </model>

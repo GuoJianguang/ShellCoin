@@ -110,7 +110,6 @@
 //该方法返回值决定该控件指定列包含多少个列表项
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
 {
-    NSLog(@"-----%d",self.isAddressPicker);
     return self.dataSouceArray.count;
 }
 

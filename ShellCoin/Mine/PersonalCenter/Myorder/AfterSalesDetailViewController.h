@@ -8,6 +8,8 @@
 
 #import "BaseViewController.h"
 
+@class OrderModel;
+
 @interface AfterSalesDetailViewController : BaseViewController
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
@@ -38,5 +40,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *backWayTF;
 @property (weak, nonatomic) IBOutlet UITextField *resonTF;
 @property (weak, nonatomic) IBOutlet UITextField *expainTF;
+
+
+@property (nonatomic, strong)OrderModel *dataModel;
 
 @end

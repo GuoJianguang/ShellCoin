@@ -13,11 +13,12 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
-    
+    self.goodsImage.layer.masksToBounds = YES;
     self.goodsName.textColor = [UIColor colorFromHexString:@"#282828"];
     self.goodsPrice.textColor = MacoColor;
     self.goodsSales.textColor = [UIColor colorFromHexString:@"#817f7f"];
-
+    self.goodsPrice.adjustsFontSizeToFitWidth = self.goodsSales.adjustsFontSizeToFitWidth = YES;
+    [self.contentView bringSubviewToFront:self.commendIamge];
 }
 
 - (void)setDataModel:(MallGoodsModel *)dataModel

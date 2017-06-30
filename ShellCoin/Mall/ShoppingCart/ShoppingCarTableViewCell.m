@@ -52,7 +52,7 @@
     // Specify criteria for filtering which objects to fetch
     //谓词搜索
     
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"goodsId=%@&&goodsSpec=%@",_dataModel.goodsId,_dataModel.goodsSpec];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"goodsId=%@&&goodsSpec=%@&&account=%@",_dataModel.goodsId,_dataModel.goodsSpec,[ShellCoinUserInfo shareUserInfos].userid];
     [fetchRequest setPredicate:predicate];
     
     NSError *error = nil;
@@ -87,7 +87,7 @@
     // Specify criteria for filtering which objects to fetch
     //谓词搜索
     
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"goodsId=%@&&goodsSpec=%@",_dataModel.goodsId,_dataModel.goodsSpec];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"goodsId=%@&&goodsSpec=%@&&account=%@",_dataModel.goodsId,_dataModel.goodsSpec,[ShellCoinUserInfo shareUserInfos].userid];
     [fetchRequest setPredicate:predicate];
     
     NSError *error = nil;
@@ -112,8 +112,7 @@
         [fetchRequest setEntity:entity];
         // Specify criteria for filtering which objects to fetch
         //谓词搜索
-        
-        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"goodsId=%@&&goodsSpec=%@",_dataModel.goodsId,_dataModel.goodsSpec];
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"goodsId=%@&&goodsSpec=%@&&account=%@",_dataModel.goodsId,_dataModel.goodsSpec,[ShellCoinUserInfo shareUserInfos].userid];
         [fetchRequest setPredicate:predicate];
         
         NSError *error = nil;

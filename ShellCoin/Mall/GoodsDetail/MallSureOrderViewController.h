@@ -68,4 +68,13 @@ typedef enum : NSUInteger {
 
 @property (nonatomic, assign)MallPayType payType;
 
+#pragma mark - 支付已经生成的未支付订单
+@property (nonatomic, assign)BOOL isFormWaitPayOrder;
+@property (nonatomic, strong)NSDictionary *waiPayOrderDic;
+
+#pragma mark - 判断是否是从购物车进来的
+@property (nonatomic, assign)BOOL isFormShoppingCart;
+
+@property (nonatomic, strong)NSMutableArray *yetSelectarray;
+
 @end

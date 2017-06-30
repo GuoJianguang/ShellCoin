@@ -8,11 +8,14 @@
 
 #import "BaseViewController.h"
 #import "MyorderViewController.h"
+@class OrderModel;
 
 @interface OrderDetailViewController : BaseViewController
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property (nonatomic, assign)Myorder_type orderType;
+
+@property (nonatomic, strong)OrderModel *orderModel;
 
 @end

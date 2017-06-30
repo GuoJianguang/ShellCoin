@@ -7,7 +7,7 @@
 //
 
 #import "BaseViewController.h"
-
+@class OrderModel;
 @interface WaitAfterForSalesViewController : BaseViewController
 
 @property (weak, nonatomic) IBOutlet UIButton *backBtn;
@@ -26,5 +26,6 @@
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *ViewHeight;
 
+@property (nonatomic, strong)OrderModel *dataModel;
 
 @end

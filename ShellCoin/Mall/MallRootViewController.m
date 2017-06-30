@@ -100,12 +100,19 @@
         listVC.keyWords = self.searchTF.text;
         listVC.isSearch = YES;
         listVC.typeArray = self.sortDataArray;
+        self.searchTF.text = @"";
         [self.navigationController  pushViewController:listVC animated:YES];
     }
 }
 
 #pragma mark - 购物车
 - (IBAction)buyCarBtn:(UIButton *)sender {
+    if (![ShellCoinUserInfo shareUserInfos].currentLogined) {
+        //判断是否先登录
+        UINavigationController *navc = [LoginViewController controller];
+        [self presentViewController:navc animated:YES completion:NULL];
+        return;
+    }
     ShoppingCarViewController *shoppCarVC = [[ShoppingCarViewController alloc]init];
     [self.navigationController pushViewController:shoppCarVC animated:YES];
 }
@@ -216,9 +223,20 @@
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.item == 0) {
-        return CGSizeMake(TWitdh, TWitdh*(473/750.));
+//        return CGSizeMake(TWitdh, TWitdh*(473/750.));
+        CGFloat intervalX = 50.0;/**<横向间隔*/
+        CGFloat intervalY = 15.0;/**<纵向间隔*/
+        NSInteger columnNum = 4;/**<九宫格列数*/
+        CGFloat widthAndHeightRatio = 2.0/3.0;/**<宽高比*/
+        CGFloat buttonWidth = (TWitdh - 40 - intervalX * (columnNum - 1))/(CGFloat)columnNum;/**<button的宽度*/
+        CGFloat buttonHeight = buttonWidth/widthAndHeightRatio;/**<button的高度*/
+        return CGSizeMake(TWitdh, buttonHeight * 2 + intervalY*2 + 25 + TWitdh*(7/75.));
+//        return CGSizeMake(TWitdh, TWitdh*(473/750.));
+
     }
-    return CGSizeMake((TWitdh- 18)/2., (TWitdh- 18)/2. +  (TWitdh- 18)/2. * (130/355.));
+//    return CGSizeMake((TWitdh- 18)/2., (TWitdh- 18)/2. +  (TWitdh- 18)/2. * (130/355.));
+    return CGSizeMake((TWitdh-6)/2., (TWitdh-6)/2. +  (TWitdh-6)/2. * (130/355.));
+
 }
 
 
@@ -227,14 +245,15 @@
         insetForSectionAtIndex:(NSInteger)section
 {
 
-    return UIEdgeInsetsMake(6, 6, 6, 6);
+//    return UIEdgeInsetsMake(6, 6, 6, 6);
+    return UIEdgeInsetsMake(0, 0, 0, 0);
 }
 
 - (CGFloat)collectionView:(UICollectionView *)collectionView
                    layout:(UICollectionViewLayout *)collectionViewLayout
 minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
 {
-    return 3;
+    return 0;
 }
 
 - (CGFloat)collectionView:(UICollectionView *)collectionView
@@ -268,6 +287,7 @@ minimumLineSpacingForSectionAtIndex:(NSInteger)section
         listVC.keyWords = self.searchTF.text;
         listVC.typeArray = self.sortDataArray;
         listVC.isSearch = YES;
+        self.searchTF.text =@"";
         [self.navigationController  pushViewController:listVC animated:YES];
     }
     return YES;

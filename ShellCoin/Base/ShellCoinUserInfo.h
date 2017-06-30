@@ -24,7 +24,7 @@
 /**
  * 用户id
  */
-@property (nonatomic, copy)NSString *userId;
+//@property (nonatomic, copy)NSString *userId;
 /**
  * 贝壳币
  */

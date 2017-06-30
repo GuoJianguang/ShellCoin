@@ -9,7 +9,7 @@
 #import "OrderDetailViewController.h"
 #import "OrderDetailTableViewCell.h"
 #import "SureReceivingView.h"
-
+#import "OrderModel.h"
 @interface OrderDetailViewController ()<BasenavigationDelegate,UITableViewDelegate,UITableViewDataSource,SureReceivingDelegate>
 @property (nonatomic, strong)SureReceivingView *passwordView;
 
@@ -26,7 +26,15 @@
     self.naviBar.delegate = self;
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(goinputPassword:) name:@"orderDetailsureReceiving" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applySueecss:) name:@"applySueecss" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(cacelapplySueecss:) name:@"cancelapplySueecss" object:nil];
 
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [self.tableView reloadData];
 }
 - (SureReceivingView *)passwordView
 {
@@ -37,16 +45,28 @@
     return _passwordView;
 }
 
+
+- (void)setOrderModel:(OrderModel *)orderModel
+{
+    _orderModel = orderModel;
+    [self.tableView reloadData];
+}
 #pragma mark - 联系客服
 - (void)detailBtnClick
 {
-    
+    NSMutableString * str=[[NSMutableString alloc] initWithFormat:@"tel:%@",@"02865224503"];
+    UIWebView * callWebview = [[UIWebView alloc] init];
+    [callWebview loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:str]]];
+    [self.view addSubview:callWebview];
 }
 #pragma mark - 返回
 
 - (void)backBtnClick
 {
     [[NSNotificationCenter defaultCenter]removeObserver:self name:@"orderDetailsureReceiving" object:nil];
+    [[NSNotificationCenter defaultCenter]removeObserver:self name:@"applySueecss" object:nil];
+    [[NSNotificationCenter defaultCenter]removeObserver:self name:@"cancelapplySueecss" object:nil];
+
     [self.navigationController popViewControllerAnimated:YES];
 }
 
@@ -66,12 +86,12 @@
     if (!cell) {
         cell = [OrderDetailTableViewCell newCell];
     }
+    cell.dataModel = self.orderModel;
     cell.orderType = self.orderType;
     return cell;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-
     return TWitdh * (600/320.);
 }
 
@@ -79,10 +99,9 @@
 #pragma mark - 确认收货输入支付密码
 - (void)goinputPassword:(NSNotification *)notfication
 {
-    NSDictionary *parms = @{@"token":[ShellCoinUserInfo shareUserInfos].token};
     [self.view addSubview:self.passwordView];
     self.passwordView.passwordTF.text = @"";
-    self.passwordView.mallOrderParms = [NSMutableDictionary dictionaryWithDictionary:parms];
+    self.passwordView.orderId = self.orderModel.orderId;
     UIEdgeInsets insets = UIEdgeInsetsMake(0, 0, 0, 0);
     [self.passwordView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view).insets(insets);
@@ -96,11 +115,29 @@
 #pragma mark - 确认收货成功
 - (void)sureReceivingsuccess:(NSString *)payWay
 {
-    [self.tableView reloadData];
-    
+    [[NSNotificationCenter defaultCenter]postNotificationName:@"yetsureReceiving" object:nil];
+    [self.navigationController popViewControllerAnimated:YES];
 }
-
-
+#pragma mark - 申请售后成功
+- (void)applySueecss:(NSNotification *)ficatioon
+{
+   self.orderModel.state = @"4";
+    [self.tableView reloadData];
+}
+- (void)cacelapplySueecss:(NSNotification *)ficatioon
+{
+    switch (self.orderType) {
+        case Myorder_type_waitSendGoods:
+            self.orderModel.state = @"1";
+            break;
+        case Myorder_type_waitReceiveGoods:
+            self.orderModel.state = @"2";
+            break;
+        default:
+            break;
+    }
+    [self.tableView reloadData];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

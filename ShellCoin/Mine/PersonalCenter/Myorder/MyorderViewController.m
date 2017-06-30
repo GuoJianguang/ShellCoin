@@ -35,6 +35,10 @@
     self.swipeView.dataSource = self;
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(goinputPassword:) name:@"sureReceiving" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(orderPayComplete:) name:@"orderPayComplete" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(yetsureReceiving:) name:@"yetsureReceiving" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applySueecss:) name:@"applySueecss" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(cancelOrder) name:@"cancelOrder" object:nil];
 
     
 }
@@ -174,11 +178,10 @@
 #pragma mark - 确认收货输入支付密码
 - (void)goinputPassword:(NSNotification *)notfication
 {
-    NSDictionary *parms = @{@"token":[ShellCoinUserInfo shareUserInfos].token,
-                            @"id":NullToSpace(notfication.userInfo[@"orderId"])};
+
     [self.view addSubview:self.passwordView];
     self.passwordView.passwordTF.text = @"";
-    self.passwordView.mallOrderParms = [NSMutableDictionary dictionaryWithDictionary:parms];
+    self.passwordView.orderId = NullToSpace(notfication.object[@"orderId"]);
     UIEdgeInsets insets = UIEdgeInsetsMake(0, 0, 0, 0);
     [self.passwordView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view).insets(insets);
@@ -196,9 +199,20 @@
 - (void)backBtnClick
 {
     [[NSNotificationCenter defaultCenter]removeObserver:self name:@"sureReceiving" object:nil];
+     [[NSNotificationCenter defaultCenter]removeObserver:self name:@"orderPayComplete" object:nil];
+    [[NSNotificationCenter defaultCenter]removeObserver:self name:@"yetsureReceiving" object:nil];
+    [[NSNotificationCenter defaultCenter]removeObserver:self name:@"applySueecss" object:nil];
+    [[NSNotificationCenter defaultCenter]removeObserver:self name:@"cancelOrder" object:nil];
+
+
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+#pragma mark - 订单支付完成
+- (void)orderPayComplete:(NSNotification *)ficatioon
+{
+    [self.waitPayView reload];
+}
 
 #pragma mark - 确认收货成功
 - (void)sureReceivingsuccess:(NSString *)payWay
@@ -206,7 +220,27 @@
     [self.waitReceiveGoodsView reload];
     
 }
+- (void)yetsureReceiving:(NSNotification *)ficatioon
+{
+    [self.waitReceiveGoodsView reload];
 
+}
+
+
+#pragma mark - 申请售后成功
+- (void)applySueecss:(NSNotification *)ficatioon
+{
+    [self.waitReceiveGoodsView reload];
+    [self.waitSendGoodsView reload];
+}
+
+
+#pragma mark - 取消订单成功
+- (void)cancelOrder
+{
+    [self.waitPayView reload];
+    [self.compelteView reload];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -218,16 +218,25 @@
                         <constraint firstAttribute="height" constant="1" id="AoS-0g-9XY"/>
                     </constraints>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gqj-H3-Ust">
+                    <rect key="frame" x="8" y="593" width="34" height="34"/>
+                    <state key="normal" image="btn_gouwuche"/>
+                    <connections>
+                        <action selector="buyCarBtn:" destination="-1" eventType="touchUpInside" id="au1-sL-rpQ"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="Sss-v6-TOa" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="05L-CX-ngS"/>
                 <constraint firstItem="z5Z-i0-68O" firstAttribute="top" secondItem="Sss-v6-TOa" secondAttribute="bottom" id="3Tn-Iw-Z3V"/>
                 <constraint firstItem="bQU-WB-2OQ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="51C-pT-qeT"/>
+                <constraint firstAttribute="bottom" secondItem="gqj-H3-Ust" secondAttribute="bottom" constant="40" id="Hxj-fV-wYf"/>
                 <constraint firstAttribute="trailing" secondItem="COn-cB-Veo" secondAttribute="trailing" id="Ifg-6Z-8LM"/>
                 <constraint firstItem="COn-cB-Veo" firstAttribute="top" secondItem="Sss-v6-TOa" secondAttribute="bottom" id="JVn-iH-Yqp"/>
                 <constraint firstAttribute="trailing" secondItem="Sss-v6-TOa" secondAttribute="trailing" id="LHX-6R-Znn"/>
                 <constraint firstAttribute="bottom" secondItem="bQU-WB-2OQ" secondAttribute="bottom" id="XvG-Kk-0ta"/>
+                <constraint firstItem="gqj-H3-Ust" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="c4p-oJ-sGL"/>
                 <constraint firstItem="bQU-WB-2OQ" firstAttribute="top" secondItem="COn-cB-Veo" secondAttribute="bottom" id="j5d-o2-Tjz"/>
                 <constraint firstAttribute="trailing" secondItem="z5Z-i0-68O" secondAttribute="trailing" id="jgr-8G-ZIZ"/>
                 <constraint firstItem="z5Z-i0-68O" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="l0O-UC-P71"/>
@@ -235,10 +244,11 @@
                 <constraint firstItem="Sss-v6-TOa" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="t5A-bh-zbo"/>
                 <constraint firstAttribute="trailing" secondItem="bQU-WB-2OQ" secondAttribute="trailing" id="zAS-w5-XBs"/>
             </constraints>
-            <point key="canvasLocation" x="-235" y="-177"/>
+            <point key="canvasLocation" x="-401" y="-326"/>
         </view>
     </objects>
     <resources>
+        <image name="btn_gouwuche" width="34" height="34"/>
         <image name="btn_paixu" width="7" height="10"/>
     </resources>
 </document>

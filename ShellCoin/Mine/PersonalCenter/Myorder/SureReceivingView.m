@@ -65,9 +65,9 @@
     }];
 }
 
-- (void)setMallOrderParms:(NSMutableDictionary *)mallOrderParms
+- (void)setOrderId:(NSString *)orderId
 {
-    _mallOrderParms = mallOrderParms;
+    _orderId = orderId;
 }
 
 - (IBAction)sureBtn:(UIButton *)sender {
@@ -91,33 +91,28 @@
 #pragma mark - 确认收货的接口
 - (void)sureReceiving:(UIButton *)sender
 {
-    if ([self.delegate respondsToSelector:@selector(sureReceivingsuccess:)]) {
-        [self.delegate sureReceivingsuccess:@"收货成功"];
-    }
-    [self removeFromSuperview];
-
     
-//    if ([self gotRealNameRu:@"在您用余额支付之前，请先进行实名认证"]) {
-//        return;
-//    }
-//    sender.enabled = NO;
-//    NSString *password = [[NSString stringWithFormat:@"%@%@",self.passwordTF.text,PasswordKey]md5_32];
-//    
-//    [self.mallOrderParms setObject:password forKey:@"password"];
-//    [SVProgressHUD showWithStatus:@"正在发送请求"];
-//    [HttpClient POST:@"pay/mch/balance" parameters:self.mallOrderParms success:^(NSURLSessionDataTask *operation, id jsonObject) {
-//        sender.enabled = YES;
-//        [SVProgressHUD dismiss];
-//        if (IsRequestTrue) {
-//            if ([self.delegate respondsToSelector:@selector(paysuccess:)]) {
-//                [self.delegate SureReceivingsuccess:self.mallOrderParms[@"tranAmount"]];
-//            }
-//            [self removeFromSuperview];
-//        }
-//    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
-//        [SVProgressHUD dismiss];
-//        [[JAlertViewHelper shareAlterHelper]showTint:@"支付失败，请重试" duration:2.0];
-//    }];
+    sender.enabled = NO;
+    NSString *password = [[NSString stringWithFormat:@"%@%@",self.passwordTF.text,PasswordKey]md5_32];
+    NSDictionary *prams = @{@"orderId":NullToSpace(self.orderId),
+                            @"token":[ShellCoinUserInfo shareUserInfos].token,
+                            @"payPassword":password};
+    [SVProgressHUD showWithStatus:@"正在发送请求"];
+    [HttpClient POST:@"shop/order/confirm" parameters:prams success:^(NSURLSessionDataTask *operation, id jsonObject) {
+        sender.enabled = YES;
+        [SVProgressHUD dismiss];
+        if (IsRequestTrue) {
+            if ([self.delegate respondsToSelector:@selector(sureReceivingsuccess:)]) {
+                [self.delegate sureReceivingsuccess:@"确认收货成功"];
+            }
+            [self removeFromSuperview];
+        }
+    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
+        [SVProgressHUD dismiss];
+        sender.enabled = YES;
+        [[JAlertViewHelper shareAlterHelper]showTint:@"确认收货失败，请重试" duration:2.0];
+    }];
+
 }
 #pragma mark - 判断是否实名认证
 - (BOOL)gotRealNameRu:(NSString *)alerTitle

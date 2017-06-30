@@ -7,7 +7,7 @@
 //
 
 #import "AfterSalesDetailViewController.h"
-
+#import "OrderModel.h"
 @interface AfterSalesDetailViewController ()
 
 @end
@@ -17,6 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    self.naviBar.title = @"售后记录";
     
     [self setLayerWithbor:self.view1];
     [self setLayerWithbor:self.view2];
@@ -26,10 +27,53 @@
     self.label1.textColor = self.label2.textColor = self.label3.textColor = self.label4.textColor = MacoDetailColor;
     
     self.scrollView.bounces = YES;
-    self.scrollView.pagingEnabled = YES;
+    
+    [self getOrderDetailRequest];
 
 }
 
+
+- (void)getOrderDetailRequest
+{
+    NSDictionary *parms = @{@"orderId":self.dataModel.orderId,
+                            @"token":[ShellCoinUserInfo shareUserInfos].token};
+    [SVProgressHUD showWithStatus:@"数据获取中..."];
+    [HttpClient POST:@"shop/refund/get" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
+        [SVProgressHUD dismiss];
+        if (IsRequestTrue) {
+            self.storeNameTF.text = NullToSpace(jsonObject[@"data"][@"mchName"]);
+            if ([NullToNumber(jsonObject[@"data"][@"type"]) isEqualToString:@"2"]) {
+                self.backWayTF.text = @"退款";
+            }else if ([NullToNumber(jsonObject[@"data"][@"type"]) isEqualToString:@"1"]){
+                self.backWayTF.text = @"退款并退货";
+            }
+            if ([NullToNumber(jsonObject[@"data"][@"amountType"]) isEqualToString:@"0"]) {
+                self.payWayLabel.text = @"余额";
+            }else if([NullToNumber(jsonObject[@"data"][@"amountType"]) isEqualToString:@"1"]){
+                self.payWayLabel.text = @"微信";
+
+            }else if([NullToNumber(jsonObject[@"data"][@"amountType"]) isEqualToString:@"3"]){
+                self.payWayLabel.text = @"支付宝";
+                
+            }
+            self.resonTF.text = NullToSpace(jsonObject[@"data"][@"reason"]);
+            self.expainTF.text = NullToSpace(jsonObject[@"data"][@"remark"]);
+            self.payWay.text = [NSString stringWithFormat:@"¥%.2f",            [NullToSpace(jsonObject[@"data"][@"amount"]) doubleValue]];
+            
+            if ([self.expainTF.text isEqualToString:@""]) {
+                self.expainTF.text = @"暂无说明";
+            }
+            self.shellCoin.text = [NSString stringWithFormat:@"%.2f个",            [NullToSpace(jsonObject[@"data"][@"expectAmount"]) doubleValue]];
+            self.buyCard.text = [NSString stringWithFormat:@"¥%.2f",            [NullToSpace(jsonObject[@"data"][@"consumeAmount"]) doubleValue]];
+            self.backTotal.text = [NSString stringWithFormat:@"¥%.2f",            [NullToSpace(jsonObject[@"data"][@"amount"]) doubleValue] +[NullToSpace(jsonObject[@"data"][@"consumeAmount"]) doubleValue] +[NullToSpace(jsonObject[@"data"][@"expectAmount"]) doubleValue] ];
+            
+        }
+        
+    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
+        [SVProgressHUD dismiss];
+    }];
+    
+}
 
 
 - (void)setLayerWithbor:(UIView*)view

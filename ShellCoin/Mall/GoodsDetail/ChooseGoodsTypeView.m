@@ -293,7 +293,7 @@
             [fetchRequest setEntity:entity];
             // Specify criteria for filtering which objects to fetch
             //谓词搜索
-            NSPredicate *predicate = [NSPredicate predicateWithFormat:@"goodsId=%@&&goodsSpec=%@",self.goodsModel.goodsId,self.specDetail];
+            NSPredicate *predicate = [NSPredicate predicateWithFormat:@"goodsId=%@&&goodsSpec=%@&&account=%@",self.goodsModel.goodsId,self.specDetail,[ShellCoinUserInfo shareUserInfos].userid];
             [fetchRequest setPredicate:predicate];
             
             NSError *error = nil;
@@ -308,6 +308,7 @@
             NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"ShoopingCart" inManagedObjectContext:[CoreDataShoopingCarManagement shareManageMent].persistentContainer.viewContext];
             //通过描述文件创建一个实体
             ShoopingCart * goods = [[ShoopingCart alloc]initWithEntity: entityDescription insertIntoManagedObjectContext:[CoreDataShoopingCarManagement shareManageMent].persistentContainer.viewContext];
+            goods.account = [ShellCoinUserInfo shareUserInfos].userid;
             goods.goodsId = self.goodsModel.goodsId;
             goods.goodsName = self.goodsModel.name;
             goods.goodsNum = (int)[self.goodsNum.text integerValue];

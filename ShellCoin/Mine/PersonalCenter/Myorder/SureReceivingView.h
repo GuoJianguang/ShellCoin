@@ -35,7 +35,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *forgetBtn;
 - (IBAction)forgetBtn:(UIButton *)sender;
 
-@property (nonatomic,strong)NSMutableDictionary *mallOrderParms;
+@property (nonatomic,strong)NSString *orderId;
 
 
 @property (nonatomic, assign)id<SureReceivingDelegate> delegate;

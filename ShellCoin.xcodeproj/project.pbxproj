@@ -33,6 +33,8 @@
 		040DCAB11EEA91BF00E78125 /* RecommendMerchantView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 040DCAA81EEA91BF00E78125 /* RecommendMerchantView.xib */; };
 		040DCAB21EEA91BF00E78125 /* RecommendDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 040DCAAA1EEA91BF00E78125 /* RecommendDetailTableViewCell.m */; };
 		040DCAB31EEA91BF00E78125 /* RecommendDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 040DCAAB1EEA91BF00E78125 /* RecommendDetailTableViewCell.xib */; };
+		040E953A1F04E593009C5348 /* WaitApplyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 040E95391F04E593009C5348 /* WaitApplyView.m */; };
+		040E953C1F04E59F009C5348 /* WaitApplyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 040E953B1F04E59F009C5348 /* WaitApplyView.xib */; };
 		041272321EE4FAF3008D2B94 /* VIP.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 041272311EE4FAF3008D2B94 /* VIP.xcassets */; };
 		041272371EE4FF0C008D2B94 /* VipDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 041272351EE4FF0C008D2B94 /* VipDetailViewController.m */; };
 		041272381EE4FF0C008D2B94 /* VipDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 041272361EE4FF0C008D2B94 /* VipDetailViewController.xib */; };
@@ -475,6 +477,9 @@
 		040DCAA91EEA91BF00E78125 /* RecommendDetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendDetailTableViewCell.h; sourceTree = "<group>"; };
 		040DCAAA1EEA91BF00E78125 /* RecommendDetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendDetailTableViewCell.m; sourceTree = "<group>"; };
 		040DCAAB1EEA91BF00E78125 /* RecommendDetailTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecommendDetailTableViewCell.xib; sourceTree = "<group>"; };
+		040E95381F04E593009C5348 /* WaitApplyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaitApplyView.h; sourceTree = "<group>"; };
+		040E95391F04E593009C5348 /* WaitApplyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaitApplyView.m; sourceTree = "<group>"; };
+		040E953B1F04E59F009C5348 /* WaitApplyView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WaitApplyView.xib; sourceTree = "<group>"; };
 		041272311EE4FAF3008D2B94 /* VIP.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = VIP.xcassets; sourceTree = "<group>"; };
 		041272341EE4FF0C008D2B94 /* VipDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VipDetailViewController.h; sourceTree = "<group>"; };
 		041272351EE4FF0C008D2B94 /* VipDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VipDetailViewController.m; sourceTree = "<group>"; };
@@ -1226,6 +1231,9 @@
 				04610D161EF22B39007D8EF5 /* ApplyForAfterSalesViewController.h */,
 				04610D171EF22B39007D8EF5 /* ApplyForAfterSalesViewController.m */,
 				04610D181EF22B39007D8EF5 /* ApplyForAfterSalesViewController.xib */,
+				040E95381F04E593009C5348 /* WaitApplyView.h */,
+				040E95391F04E593009C5348 /* WaitApplyView.m */,
+				040E953B1F04E59F009C5348 /* WaitApplyView.xib */,
 				04610D1B1EF264DD007D8EF5 /* SureReceivingView.h */,
 				04610D1C1EF264DD007D8EF5 /* SureReceivingView.m */,
 				04610D1D1EF264DD007D8EF5 /* SureReceivingView.xib */,
@@ -2378,6 +2386,7 @@
 				04FFB50C1EF77746000AC558 /* MallSortView.xib in Resources */,
 				04610D291EF27982007D8EF5 /* WaitAfterForSalesViewController.xib in Resources */,
 				042C70501EC465C60035A912 /* LoanOtherViewController.xib in Resources */,
+				040E953C1F04E59F009C5348 /* WaitApplyView.xib in Resources */,
 				043C63DF1ED6814800A6ED33 /* SelectShippingAddressViewController.xib in Resources */,
 				BCFE20701E77C7E6002BC28C /* SelectBanCardView.xib in Resources */,
 				BCD737041E935438001F706C /* MessageDetailViewController.xib in Resources */,
@@ -2707,6 +2716,7 @@
 				BC34ECA61E8B88EC00613D35 /* AboutUSViewController.m in Sources */,
 				BC5279491E8E7E4E004DD703 /* LBXScanView.m in Sources */,
 				0445BADE1ED56AAE009226BD /* BuyRecodTableViewCell.m in Sources */,
+				040E953A1F04E593009C5348 /* WaitApplyView.m in Sources */,
 				BCFE209E1E77EF2A002BC28C /* WithdrawalViewController.m in Sources */,
 				041272371EE4FF0C008D2B94 /* VipDetailViewController.m in Sources */,
 				04FC4D4F1EFA12040023C053 /* StoreAllGoodsView.m in Sources */,

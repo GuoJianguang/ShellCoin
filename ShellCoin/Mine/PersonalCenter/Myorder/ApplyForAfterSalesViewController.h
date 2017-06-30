@@ -7,6 +7,8 @@
 //
 
 #import "BaseViewController.h"
+#import "MyorderViewController.h"
+@class OrderModel;
 
 @interface ApplyForAfterSalesViewController : BaseViewController
 
@@ -20,10 +22,15 @@
 @property (weak, nonatomic) IBOutlet UILabel *label3;
 @property (weak, nonatomic) IBOutlet UILabel *label4;
 
-@property (weak, nonatomic) IBOutlet UITextField *refundSortTF;
+@property (weak, nonatomic) IBOutlet UITextField *logCommpanuyTF;
 
 @property (weak, nonatomic) IBOutlet UITextField *refundResonTF;
-@property (weak, nonatomic) IBOutlet UITextField *refoundMoneyTF;
+@property (weak, nonatomic) IBOutlet UITextField *logNumberTF;
 @property (weak, nonatomic) IBOutlet UITextField *refundExpainTF;
+
+@property (nonatomic, strong)OrderModel *dataModel;
+- (IBAction)selcetCommpayBtn:(UIButton *)sender;
+
+@property (nonatomic, assign)Myorder_type  orderType;
 
 @end

@@ -87,8 +87,10 @@
             self.shellCoin.text = [NSString stringWithFormat:@"%.2f个",[NullToNumber(jsonObject[@"data"][@"totalExpectAmount"]) doubleValue]];
             
             self.totalMoneyLabel.text = [NSString stringWithFormat:@"合计: ¥%.2f",[NullToNumber(jsonObject[@"data"][@"totalCashAmount"]) doubleValue]+[NullToNumber(jsonObject[@"data"][@"totalConsumeAmount"]) doubleValue]+[NullToNumber(jsonObject[@"data"][@"totalExpectAmount"]) doubleValue]];
+            return ;
 
         }
+        [self.navigationController popViewControllerAnimated:YES];
     } failure:^(NSURLSessionDataTask *operation, NSError *error) {
         [SVProgressHUD dismiss];
         [[JAlertViewHelper shareAlterHelper]showTint:@"获取商品信息失败，请返回重试" duration:2.];
@@ -234,6 +236,44 @@
 - (IBAction)sureBtn:(UIButton *)sender {
     
     
+    if (self.isFormWaitPayOrder) {
+        if (!self.addressmodel.addressId) {
+            [[JAlertViewHelper shareAlterHelper]showTint:@"请选择或者填写收货地址" duration:2.];
+            return;
+        }
+        switch (self.payType) {
+            case MallPay_blance:
+            {
+                [self getBalancePayInfomation:self.waiPayOrderDic];
+                self.resultView.payType = Mall_PayTYpe_blance;
+            }
+                break;
+            case MallPay_wechatpay:
+            {
+                NSDictionary *prams = @{@"token":[ShellCoinUserInfo shareUserInfos].token,
+                                        @"orderId":NullToSpace(self.waiPayOrderDic[@"data"][@"orderId"]),
+                                        @"type":NullToSpace(self.waiPayOrderDic[@"data"][@"type"])};
+                self.resultView.payType = Mall_PayTYpe_wechat;
+                [WeXinPayObject startMallWexinPay:prams];
+            }
+                break;
+            case MallPay_alipay:
+            {
+                self.resultView.payType = Mall_PayTYpe_alipay;
+                NSDictionary *prams = @{@"token":[ShellCoinUserInfo shareUserInfos].token,
+                                        @"orderId":NullToSpace(self.waiPayOrderDic[@"data"][@"orderId"]),
+                                        @"type":NullToSpace(self.waiPayOrderDic[@"data"][@"type"])};
+                [AliPayObject startAliPayMallPay:prams];
+            }
+        
+                break;
+            default:
+                break;
+        }
+
+        
+        return;
+    }
     
     NSData *data = [NSJSONSerialization dataWithJSONObject:self.orderArry options:NSJSONWritingPrettyPrinted error:nil];
     NSString *json = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
@@ -326,7 +366,7 @@
 {
     [ShellCoinUserInfo shareUserInfos].aviableBalance = payWay;
     self.balanceLabel.text = [NSString stringWithFormat:@"可用金额%.2f元",[[ShellCoinUserInfo shareUserInfos].aviableBalance doubleValue]];
-
+    [[NSNotificationCenter defaultCenter]postNotificationName:@"orderPayComplete" object:nil];
     [self paySuccess];
     
 }
@@ -347,6 +387,7 @@
     switch ([notification.userInfo[@"resultStatus"] integerValue]) {
         case 9000:
         {
+            [[NSNotificationCenter defaultCenter]postNotificationName:@"orderPayComplete" object:nil];
             self.resultView.payType = Mall_PayTYpe_alipay;
             [self paySuccess];
         }
@@ -395,6 +436,7 @@
         case WXSuccess:
         {
             self.resultView.payType = MallPay_wechatpay;
+            [[NSNotificationCenter defaultCenter]postNotificationName:@"orderPayComplete" object:nil];
             [self paySuccess];
         }
             
@@ -424,6 +466,7 @@
 
 - (void)paySuccess
 {
+
     self.naviBar.hiddenDetailBtn = YES;
     [self.view addSubview:self.resultView];
     self.resultView.successLabel.hidden = YES;
@@ -432,5 +475,9 @@
     [self.resultView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view).insets(insets);
     }];
+    if (self.isFormShoppingCart) {
+        [[NSNotificationCenter defaultCenter]postNotificationName:@"afterPayDeletOrder" object:self.yetSelectarray];
+        
+    }
 }
 @end

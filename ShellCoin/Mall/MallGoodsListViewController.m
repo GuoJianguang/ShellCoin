@@ -12,6 +12,7 @@
 #import "GoodsDetailViewController.h"
 #import "MallSearchViewController.h"
 #import "HomeIndustryTableViewCell.h"
+#import "ShoppingCarViewController.h"
 
 @interface MallGoodsListViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,BasenavigationDelegate,MallSortViewdelegate>
 @property (nonatomic, strong)NSMutableArray *dataSouceArray;
@@ -32,9 +33,10 @@
     self.naviBar.hiddenDetailBtn = NO;
     self.naviBar.detailImage = [UIImage imageNamed:@"icon_search"];
     self.sortView.hidden = YES;
-    self.flag = 1;
-    self.priceImage.image = [UIImage imageNamed:@"btn_xiaxuanzhong"];
-    [self.priceBtn setTitleColor:MacoColor forState:UIControlStateNormal];
+    self.flag = 0;
+    self.priceImage.image = [UIImage imageNamed:@"btn_paixu"];
+    self.priceBtn.selected = YES;
+    [self.priceBtn setTitleColor:MacoTitleColor forState:UIControlStateNormal];
     self.timeImage.image = [UIImage imageNamed:@"btn_paixu"];
     [self.salesBtn setTitleColor:MacoTitleColor forState:UIControlStateNormal];
     [self.timeBtn setTitleColor:MacoTitleColor forState:UIControlStateNormal];
@@ -140,6 +142,8 @@
 {
     _typeId = typeId;
     _sortView.yetSeletId = _typeId;
+    _sortView.dataSouceArray = self.typeArray;
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -211,7 +215,6 @@
 
 
 - (IBAction)sort1Btn:(UIButton *)sender {
-    self.keyWords = @"";
     self.typeId = ((NewHomeActivityModel *)self.typeArray[0]).sortId;
     self.naviBar.title = ((NewHomeActivityModel *)self.typeArray[0]).name;
     [self.sort1Btn setTitleColor:MacoColor forState:UIControlStateNormal];
@@ -221,7 +224,6 @@
 
 }
 - (IBAction)sort2Btn:(UIButton *)sender {
-    self.keyWords = @"";
     self.typeId = ((NewHomeActivityModel *)self.typeArray[1]).sortId;
     self.naviBar.title = ((NewHomeActivityModel *)self.typeArray[1]).name;
     [self.sort2Btn setTitleColor:MacoColor forState:UIControlStateNormal];
@@ -231,7 +233,6 @@
 }
 
 - (IBAction)sort3Btn:(UIButton *)sender {
-    self.keyWords = @"";
     self.typeId = ((NewHomeActivityModel *)self.typeArray[2]).sortId;
     self.naviBar.title = ((NewHomeActivityModel *)self.typeArray[2]).name;
     [self.sort3Btn setTitleColor:MacoColor forState:UIControlStateNormal];
@@ -247,9 +248,9 @@
 #pragma mark - 点击选择分类
 - (void)selectSort:(NSString *)sortId withName:(NSString *)sortName
 {
-    self.keyWords = @"";
     self.typeId = sortId;
     self.naviBar.title = sortName;
+    self.sortView.hidden = YES;
     [self setSortUI];
     [self.collectionView.mj_header beginRefreshing];
 
@@ -370,9 +371,20 @@ minimumLineSpacingForSectionAtIndex:(NSInteger)section
     self.keyWords = NullToSpace(faication.object[@"keyWords"]);
     self.isSearch = YES;
     self.typeId = @"";
-    self.flag = 1;
+    self.flag = 0;
     [self setSortUI];
     [self.collectionView.mj_header beginRefreshing];
+}
+#pragma mark - 购物车
+- (IBAction)buyCarBtn:(UIButton *)sender {
+    if (![ShellCoinUserInfo shareUserInfos].currentLogined) {
+        //判断是否先登录
+        UINavigationController *navc = [LoginViewController controller];
+        [self presentViewController:navc animated:YES completion:NULL];
+        return;
+    }
+    ShoppingCarViewController *shoppCarVC = [[ShoppingCarViewController alloc]init];
+    [self.navigationController pushViewController:shoppCarVC animated:YES];
 }
 
 @end
