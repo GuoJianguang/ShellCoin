@@ -25,17 +25,9 @@ typedef NS_ENUM(NSInteger,Mall_PayTYpe){
 @property (weak, nonatomic) IBOutlet UILabel *autResultLabel;
 @property (weak, nonatomic) IBOutlet UILabel *autResultTitleLabel;
 
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *ViewHeight;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *trailing;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *leading;
 
-@property (weak, nonatomic) IBOutlet UIImageView *alerResultImageView;
-
-@property (weak, nonatomic) IBOutlet UILabel *successLabel;
-
-@property (weak, nonatomic) IBOutlet UIImageView *titleimageView;
-
-@property (weak, nonatomic) IBOutlet UIButton *sureBtn;
-- (IBAction)sureBtn:(UIButton *)sender;
-@property (weak, nonatomic) IBOutlet UIView *lineView;
 
 @property (nonatomic,assign)Mall_PayTYpe payType;
 

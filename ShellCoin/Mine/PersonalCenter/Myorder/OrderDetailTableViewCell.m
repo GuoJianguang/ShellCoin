@@ -31,7 +31,7 @@
     self.checkLogBtn.layer.masksToBounds = YES;
     self.checkLogBtn.layer.cornerRadius = 86/2.6/2.;
     
-    
+    self.goodsDetail.textColor = MacoDetailColor;
     self.applyAfterSalesBtn.layer.borderWidth = 1;
     self.applyAfterSalesBtn.layer.borderColor =MacoTitleColor.CGColor;
     [self.applyAfterSalesBtn setTitleColor:MacoTitleColor forState:UIControlStateNormal];
@@ -157,12 +157,11 @@
     self.freight.text = [NSString stringWithFormat:@"¥%.2f",[_dataModel.freight doubleValue]];
     self.shellCoin.text = [NSString stringWithFormat:@"%.2f",[_dataModel.expectAmount doubleValue]];
     self.buyCard.text = [NSString stringWithFormat:@"¥%.2f",[_dataModel.consumeAmount doubleValue]];
-    self.actualMoney.text =[NSString stringWithFormat:@"¥%.2f", [_dataModel.expectAmount doubleValue] +[_dataModel.tranAmount doubleValue] + [_dataModel.freight doubleValue]];;
+    self.actualMoney.text =[NSString stringWithFormat:@"¥%.2f", [_dataModel.tranAmount doubleValue] ];;
     self.totalMoney.text = [NSString stringWithFormat:@"¥%.2f", [_dataModel.expectAmount doubleValue] +[_dataModel.tranAmount doubleValue] + [_dataModel.freight doubleValue] + [_dataModel.consumeAmount doubleValue]];
     if ([self.dataModel.state isEqualToString:@"4"]) {
         [self.applyAfterSalesBtn setTitle:@"售后中" forState:UIControlStateNormal];
     }
-    
     if ([self.dataModel.state isEqualToString:@"3"]) {
         [self.applyAfterSalesBtn setTitle:@"删除订单" forState:UIControlStateNormal];
     }

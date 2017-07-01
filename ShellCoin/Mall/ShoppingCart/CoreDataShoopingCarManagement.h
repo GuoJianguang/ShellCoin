@@ -16,6 +16,7 @@
 
 + (CoreDataShoopingCarManagement *)shareManageMent;
 
+@property (nonatomic, assign)BOOL isAddShopCart;
 
 - (void)saveContext;
 

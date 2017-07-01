@@ -126,12 +126,12 @@
 }
 //加入购物车
 - (IBAction)addShoppCarBtn:(UIButton *)sender {
-    if (![ShellCoinUserInfo shareUserInfos].currentLogined) {
-        //判断是否先登录
-        UINavigationController *navc = [LoginViewController controller];
-        [self presentViewController:navc animated:YES completion:NULL];
-        return;
-    }
+//    if (![ShellCoinUserInfo shareUserInfos].currentLogined) {
+//        //判断是否先登录
+//        UINavigationController *navc = [LoginViewController controller];
+//        [self presentViewController:navc animated:YES completion:NULL];
+//        return;
+//    }
     self.chooseTypeView.goodsId = NullToNumber(self.goodsId);
     self.chooseTypeView.goodsFreight = NullToNumber(self.goodsFrieght);
     self.chooseTypeView.chooseType = ChoosType_car;

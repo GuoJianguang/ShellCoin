@@ -24,5 +24,8 @@ typedef NS_ENUM(NSInteger,Myorder_type){
 
 @property (weak, nonatomic) IBOutlet SwipeView *swipeView;
 
+@property (nonatomic,assign)Myorder_type orderType;
+
+@property (nonatomic, assign)BOOL isFormMall;
 
 @end

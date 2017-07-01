@@ -11,6 +11,7 @@
 #import "SureTradInView.h"
 #import "MallPayResultView.h"
 #import "AliPayObject.h"
+#import "SetPayPasswordViewController.h"
 
 @interface MallSureOrderViewController ()<BasenavigationDelegate,PayViewDelegate>
 
@@ -36,20 +37,20 @@
     self.addAddressBtn.titleLabel.adjustsFontSizeToFitWidth=self.name.adjustsFontSizeToFitWidth = self.phone.adjustsFontSizeToFitWidth = self.address.adjustsFontSizeToFitWidth = YES;
     [self.addAddressBtn setTitleColor:MacoTitleColor forState:UIControlStateNormal];
     self.cashLabel.textColor = self.shellCoinLabel.textColor = self.cardLabel.textColor = self.cash.textColor = self.shellCoin.textColor = self.card.textColor = MacoTitleColor;
+    self.totalMoneyLabel.adjustsFontSizeToFitWidth = YES;
+    self.yuEImage.image = [UIImage imageNamed:@"icon_mallyue_sel"];
+    self.yuELabel.textColor = MacoColor;
+    self.yuEMark.image = [UIImage imageNamed:@"btn_quanxuanzhong"];
     
-    self.yuEImage.image = [UIImage imageNamed:@"icon_mallyue_nor"];
-    self.yuELabel.textColor = MacoDetailColor;
-    self.yuEMark.image = [UIImage imageNamed:@"btn_quanxuan"];
-    
-    self.wechatImage.image = [UIImage imageNamed:@"icon_mallwechat_payment_sel"];
-    self.wechatLabel.textColor = MacoColor;
-    self.wechatMark.image = [UIImage imageNamed:@"btn_quanxuanzhong"];
+    self.wechatImage.image = [UIImage imageNamed:@"icon_mallwechat_payment_nor"];
+    self.wechatLabel.textColor = MacoDetailColor;
+    self.wechatMark.image = [UIImage imageNamed:@"btn_quanxuan"];
     
     
     self.aliPayImage.image = [UIImage imageNamed:@"icon_mallzhifubao_nor"];
     self.aliPayLabel.textColor = MacoDetailColor;
     self.aliPayMark.image = [UIImage imageNamed:@"btn_quanxuan"];
-    self.payType  = MallPay_wechatpay;
+    self.payType  = MallPay_blance;
     
     [self addressRequest];
     
@@ -86,7 +87,7 @@
             self.card.text = [NSString stringWithFormat:@"%.2f元",[NullToNumber(jsonObject[@"data"][@"totalConsumeAmount"]) doubleValue]];
             self.shellCoin.text = [NSString stringWithFormat:@"%.2f个",[NullToNumber(jsonObject[@"data"][@"totalExpectAmount"]) doubleValue]];
             
-            self.totalMoneyLabel.text = [NSString stringWithFormat:@"合计: ¥%.2f",[NullToNumber(jsonObject[@"data"][@"totalCashAmount"]) doubleValue]+[NullToNumber(jsonObject[@"data"][@"totalConsumeAmount"]) doubleValue]+[NullToNumber(jsonObject[@"data"][@"totalExpectAmount"]) doubleValue]];
+            self.totalMoneyLabel.text = [NSString stringWithFormat:@"合计:¥%.2f(含运费)",[NullToNumber(jsonObject[@"data"][@"totalCashAmount"]) doubleValue]+[NullToNumber(jsonObject[@"data"][@"totalExpectAmount"]) doubleValue]];
             return ;
 
         }
@@ -234,13 +235,12 @@
 */
 
 - (IBAction)sureBtn:(UIButton *)sender {
-    
+    if (!self.addressmodel.addressId || !self.addressmodel) {
+        [[JAlertViewHelper shareAlterHelper]showTint:@"请选择或者填写收货地址" duration:2.];
+        return;
+    }
     
     if (self.isFormWaitPayOrder) {
-        if (!self.addressmodel.addressId) {
-            [[JAlertViewHelper shareAlterHelper]showTint:@"请选择或者填写收货地址" duration:2.];
-            return;
-        }
         switch (self.payType) {
             case MallPay_blance:
             {
@@ -284,11 +284,6 @@
     [HttpClient POST:@"shop/order/add" parameters:prams success:^(NSURLSessionDataTask *operation, id jsonObject) {
         [SVProgressHUD dismiss];
         if (IsRequestTrue) {
-            
-            if (!self.addressmodel.addressId) {
-                [[JAlertViewHelper shareAlterHelper]showTint:@"请选择或者填写收货地址" duration:2.];
-                return;
-            }
             switch (self.payType) {
                 case MallPay_blance:
                 {
@@ -334,6 +329,21 @@
 
 - (void)getBalancePayInfomation:(NSDictionary *)jsonObject
 {
+    if ([[ShellCoinUserInfo shareUserInfos].payPassword isEqualToString:@""]) {
+        UIAlertController *alertcontroller = [UIAlertController alertControllerWithTitle:@"重要提示" message:@"抵换之前请先设置您的支付密码" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+        }];
+        UIAlertAction *otherAction = [UIAlertAction actionWithTitle:@"去设置" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+            SetPayPasswordViewController *setPayPasswordVC = [[SetPayPasswordViewController alloc]init];
+            [self.navigationController pushViewController:setPayPasswordVC animated:YES];
+            
+        }];
+        [alertcontroller addAction:cancelAction];
+        [alertcontroller addAction:otherAction];
+        [self presentViewController:alertcontroller animated:YES completion:NULL];
+        return;
+    }
+    
     [self.view addSubview:self.inputPasswordView];
     //            NSString *totalMoney = [NSString stringWithFormat:@"%.2f",[self.money doubleValue]];
     self.inputPasswordView.passwordTF.text = @"";
@@ -468,9 +478,8 @@
 {
 
     self.naviBar.hiddenDetailBtn = YES;
+    self.naviBar.title = @"交易详情";
     [self.view addSubview:self.resultView];
-    self.resultView.successLabel.hidden = YES;
-    self.resultView.autResultLabel.text =[NSString stringWithFormat:@"购买成功"];
     UIEdgeInsets insets = UIEdgeInsetsMake(64, 0, 0, 0);
     [self.resultView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view).insets(insets);

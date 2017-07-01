@@ -19,4 +19,13 @@
 
 @property (nonatomic, copy)NSString *recommend;
 
+
+@property (nonatomic, copy)NSString *cashAmount;
+@property (nonatomic, copy)NSString *commentCount;
+@property (nonatomic, copy)NSString *expectAmount;
+@property (nonatomic, copy)NSString *consumeAmount;
+@property (nonatomic, copy)NSString *mchCode;
+@property (nonatomic, copy)NSString *freight;
+
+
 @end

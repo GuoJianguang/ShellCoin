@@ -40,7 +40,14 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applySueecss:) name:@"applySueecss" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(cancelOrder) name:@"cancelOrder" object:nil];
 
-    
+    switch (self.orderType) {
+        case Myorder_type_waitSendGoods:
+            [self.swipeView scrollToPage:1 duration:0.2];
+            break;
+            
+        default:
+            break;
+    }
 }
 
 #pragma mark - 各个分类view的懒加载
@@ -204,6 +211,11 @@
     [[NSNotificationCenter defaultCenter]removeObserver:self name:@"applySueecss" object:nil];
     [[NSNotificationCenter defaultCenter]removeObserver:self name:@"cancelOrder" object:nil];
 
+    if (self.isFormMall) {
+        NSUInteger index=[[self.navigationController viewControllers]indexOfObject:self];
+        [self.navigationController popToViewController:[self.navigationController.viewControllers objectAtIndex:index-2]animated:YES];
+        return;
+    }
 
     [self.navigationController popViewControllerAnimated:YES];
 }

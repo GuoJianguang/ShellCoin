@@ -68,12 +68,12 @@
                   moduleName = "ShellCoin"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/mac/Desktop/ShellCoin/ShellCoin/Mine/SubLBXScanViewController.m"
-                  timestampString = "520507578.558472"
+                  timestampString = "520594379.26119"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "216"
                   endingLineNumber = "216"
-                  offsetFromSymbolStart = "3172">
+                  offsetFromSymbolStart = "2544">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -83,12 +83,12 @@
                   moduleName = "ShellCoin"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/mac/Desktop/ShellCoin/ShellCoin/Mine/SubLBXScanViewController.m"
-                  timestampString = "520507578.561532"
+                  timestampString = "520594379.264102"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "216"
                   endingLineNumber = "216"
-                  offsetFromSymbolStart = "3199">
+                  offsetFromSymbolStart = "2584">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -116,44 +116,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ShellCoin/Public/AliPayObject.m"
-            timestampString = "520244575.774468"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
-            landmarkName = "+startAliPayMallPay:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ShellCoin/Public/AliPayObject.m"
             timestampString = "520244600.310734"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "113"
             endingLineNumber = "113"
             landmarkName = "+startAliPayMallPay:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ShellCoin/Public/WeXinPayObject.m"
-            timestampString = "520244633.486557"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
-            landmarkName = "+startMallWexinPay:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -179,29 +147,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ShellCoin/Public/WeXinPayObject.m"
-            timestampString = "520244643.974786"
+            filePath = "ShellCoin/Mine/trade-in/TradInViewController.m"
+            timestampString = "520586331.669169"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "+startMallWexinPay:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ShellCoin/Mall/ShoppingCart/CoreDataShoopingCarManagement.m"
-            timestampString = "520332973.26239"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
-            landmarkName = "-iscanModifythedata:withSpec:withNumber:"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "-sureTardIn"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

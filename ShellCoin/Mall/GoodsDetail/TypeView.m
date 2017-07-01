@@ -30,7 +30,7 @@
             NSDictionary *dic = [NSDictionary dictionaryWithObject:[UIFont boldSystemFontOfSize:13] forKey:NSFontAttributeName];
             CGSize size = [str sizeWithAttributes:dic];
             //NSLog(@"%f",size.height);
-            if ( upX > (self.frame.size.width-40 - size.width-35)) {
+            if ( upX > (TWitdh - 20 - size.width) && i!=0) {
                 isLineReturn = YES;
                 upX = 20;
                 upY += 30;

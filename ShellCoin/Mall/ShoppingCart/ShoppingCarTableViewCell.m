@@ -39,7 +39,7 @@
     
     
     for (ShoppingCarModel *model in ((ShoppingCarViewController *)self.viewController).dataSouceArray) {
-        if ([model.goodsId isEqualToString:self.dataModel.goodsId] && [model.goodsSpec isEqualToString:self.dataModel.goodsSpec] && self.dataModel.isSelect) {
+        if ([model.goodsId isEqualToString:self.dataModel.goodsId] && [model.goodsSpec isEqualToString:self.dataModel.goodsSpec]) {
             model.goodsNum = count;
             [(ShoppingCarViewController *)self.viewController calculateTheTotalAmount];
         }
@@ -59,6 +59,7 @@
     NSArray *fetchedObjects = [[CoreDataShoopingCarManagement shareManageMent].persistentContainer.viewContext executeFetchRequest:fetchRequest error:&error];
     if (fetchedObjects &&fetchedObjects.count > 0) {
         ((ShoopingCart *)fetchedObjects[0]).goodsNum = count;
+        [CoreDataShoopingCarManagement shareManageMent].isAddShopCart = NO;
         [[CoreDataShoopingCarManagement shareManageMent] saveContext];
         return ;
     }
@@ -73,7 +74,7 @@
     self.price.text = [NSString stringWithFormat:@"¥%.2f",(_dataModel.goodsPrice *count) + _dataModel.goodsFreight];
     
     for (ShoppingCarModel *model in ((ShoppingCarViewController *)self.viewController).dataSouceArray) {
-        if ([model.goodsId isEqualToString:self.dataModel.goodsId] && [model.goodsSpec isEqualToString:self.dataModel.goodsSpec] && self.dataModel.isSelect) {
+        if ([model.goodsId isEqualToString:self.dataModel.goodsId] && [model.goodsSpec isEqualToString:self.dataModel.goodsSpec]) {
             model.goodsNum = count;
             [(ShoppingCarViewController *)self.viewController calculateTheTotalAmount];
         }
@@ -94,6 +95,7 @@
     NSArray *fetchedObjects = [[CoreDataShoopingCarManagement shareManageMent].persistentContainer.viewContext executeFetchRequest:fetchRequest error:&error];
     if (fetchedObjects &&fetchedObjects.count > 0) {
         ((ShoopingCart *)fetchedObjects[0]).goodsNum = count;
+        [CoreDataShoopingCarManagement shareManageMent].isAddShopCart = NO;
         [[CoreDataShoopingCarManagement shareManageMent] saveContext];
         return ;
     }
@@ -102,7 +104,7 @@
 
 }
 - (IBAction)deletBtn:(UIButton *)sender {
-    UIAlertController *alertcontroller = [UIAlertController alertControllerWithTitle:@"提示" message:@"是否确定删除此商品" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController *alertcontroller = [UIAlertController alertControllerWithTitle:@"提示" message:@"是否确定删除此商品,删除后无法恢复" preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"点错了" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
     }];
     UIAlertAction *otherAction = [UIAlertAction actionWithTitle:@"删除" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
@@ -120,10 +122,13 @@
         for (ShoopingCart *cart in fetchedObjects) {
             [[CoreDataShoopingCarManagement shareManageMent].persistentContainer.viewContext deleteObject:cart];
         }
+        [CoreDataShoopingCarManagement shareManageMent].isAddShopCart = NO;
         [[CoreDataShoopingCarManagement shareManageMent] saveContext];
 
         [((ShoppingCarViewController *)self.viewController).dataSouceArray removeObjectAtIndex:self.dataModel.index];
         [(ShoppingCarViewController *)self.viewController calculateTheTotalAmount];
+        [((ShoppingCarViewController *)self.viewController).tableView judgeIsHaveDataSouce:((ShoppingCarViewController *)self.viewController).dataSouceArray];
+
         [((ShoppingCarViewController *)self.viewController).tableView reloadData];
 
     }];

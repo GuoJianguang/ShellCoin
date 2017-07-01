@@ -11,6 +11,7 @@
 #import <LocalAuthentication/LocalAuthentication.h>
 #import "OnlinePayResultView.h"
 #import "AliPayObject.h"
+#import "SetPayPasswordViewController.h"
 
 @interface OnlinePayViewController ()<BasenavigationDelegate,PayViewDelegate,UITextFieldDelegate>
 
@@ -213,6 +214,9 @@
 
 - (void)surePay
 {
+    
+    
+    
     if ([ShellCoinUserInfo shareUserInfos].payPwdFlag) {
         LAContext * con = [[LAContext alloc]init];
         NSError * error;
@@ -265,6 +269,22 @@
 
 - (void)goinputPassword
 {
+    if ([[ShellCoinUserInfo shareUserInfos].payPassword isEqualToString:@""]) {
+        UIAlertController *alertcontroller = [UIAlertController alertControllerWithTitle:@"重要提示" message:@"抵换之前请先设置您的支付密码" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+        }];
+        UIAlertAction *otherAction = [UIAlertAction actionWithTitle:@"去设置" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+            SetPayPasswordViewController *setPayPasswordVC = [[SetPayPasswordViewController alloc]init];
+            [self.navigationController pushViewController:setPayPasswordVC animated:YES];
+            
+        }];
+        [alertcontroller addAction:cancelAction];
+        [alertcontroller addAction:otherAction];
+        [self presentViewController:alertcontroller animated:YES completion:NULL];
+        return;
+    }
+
+    
     [self.view addSubview:self.inputPasswordView];
     NSString *totalMoney = [NSString stringWithFormat:@"%.2f",[self.money doubleValue]];
     self.inputPasswordView.passwordTF.text = @"";

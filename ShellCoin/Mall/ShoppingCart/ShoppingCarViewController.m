@@ -204,6 +204,7 @@
         for (ShoopingCart *cart in fetchedObjects) {
             [[CoreDataShoopingCarManagement shareManageMent].persistentContainer.viewContext deleteObject:cart];
         }
+        [CoreDataShoopingCarManagement shareManageMent].isAddShopCart = NO;
         [[CoreDataShoopingCarManagement shareManageMent] saveContext];
         
     }

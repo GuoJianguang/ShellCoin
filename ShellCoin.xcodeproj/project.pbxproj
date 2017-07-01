@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		040066D81F0246F600936E85 /* MallPayResultView.m in Sources */ = {isa = PBXBuildFile; fileRef = 040066D61F0246F600936E85 /* MallPayResultView.m */; };
-		040066D91F0246F600936E85 /* MallPayResultView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 040066D71F0246F600936E85 /* MallPayResultView.xib */; };
 		0404D6631EF8BBEA00073150 /* GoodsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0404D6611EF8BBEA00073150 /* GoodsDetailViewController.m */; };
 		0404D6641EF8BBEA00073150 /* GoodsDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0404D6621EF8BBEA00073150 /* GoodsDetailViewController.xib */; };
 		0404D6661EF8C09300073150 /* GoodsDetail.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0404D6651EF8C09300073150 /* GoodsDetail.xcassets */; };
@@ -68,6 +67,7 @@
 		042C704B1EC464550035A912 /* LoanOtherTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042C70491EC464550035A912 /* LoanOtherTableViewCell.xib */; };
 		042C704F1EC465C60035A912 /* LoanOtherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042C704D1EC465C60035A912 /* LoanOtherViewController.m */; };
 		042C70501EC465C60035A912 /* LoanOtherViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042C704E1EC465C60035A912 /* LoanOtherViewController.xib */; };
+		043145F21F07892300AE5473 /* MallPayResultView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 043145F11F07892300AE5473 /* MallPayResultView.xib */; };
 		043C63D31ED6745800A6ED33 /* SureDiscoverOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 043C63D11ED6745800A6ED33 /* SureDiscoverOrderViewController.m */; };
 		043C63D41ED6745800A6ED33 /* SureDiscoverOrderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 043C63D21ED6745800A6ED33 /* SureDiscoverOrderViewController.xib */; };
 		043C63D81ED674FB00A6ED33 /* SureDiscoverOrderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 043C63D61ED674FB00A6ED33 /* SureDiscoverOrderTableViewCell.m */; };
@@ -440,7 +440,6 @@
 /* Begin PBXFileReference section */
 		040066D51F0246F600936E85 /* MallPayResultView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MallPayResultView.h; sourceTree = "<group>"; };
 		040066D61F0246F600936E85 /* MallPayResultView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MallPayResultView.m; sourceTree = "<group>"; };
-		040066D71F0246F600936E85 /* MallPayResultView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MallPayResultView.xib; sourceTree = "<group>"; };
 		0404D6601EF8BBEA00073150 /* GoodsDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsDetailViewController.h; sourceTree = "<group>"; };
 		0404D6611EF8BBEA00073150 /* GoodsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsDetailViewController.m; sourceTree = "<group>"; };
 		0404D6621EF8BBEA00073150 /* GoodsDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GoodsDetailViewController.xib; sourceTree = "<group>"; };
@@ -530,6 +529,7 @@
 		042C704C1EC465C60035A912 /* LoanOtherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoanOtherViewController.h; sourceTree = "<group>"; };
 		042C704D1EC465C60035A912 /* LoanOtherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoanOtherViewController.m; sourceTree = "<group>"; };
 		042C704E1EC465C60035A912 /* LoanOtherViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoanOtherViewController.xib; sourceTree = "<group>"; };
+		043145F11F07892300AE5473 /* MallPayResultView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MallPayResultView.xib; sourceTree = "<group>"; };
 		043C63D01ED6745800A6ED33 /* SureDiscoverOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SureDiscoverOrderViewController.h; sourceTree = "<group>"; };
 		043C63D11ED6745800A6ED33 /* SureDiscoverOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SureDiscoverOrderViewController.m; sourceTree = "<group>"; };
 		043C63D21ED6745800A6ED33 /* SureDiscoverOrderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SureDiscoverOrderViewController.xib; sourceTree = "<group>"; };
@@ -1154,7 +1154,7 @@
 				04FC4D541EFA18FF0023C053 /* MallSureOrderViewController.xib */,
 				040066D51F0246F600936E85 /* MallPayResultView.h */,
 				040066D61F0246F600936E85 /* MallPayResultView.m */,
-				040066D71F0246F600936E85 /* MallPayResultView.xib */,
+				043145F11F07892300AE5473 /* MallPayResultView.xib */,
 				0404D6651EF8C09300073150 /* GoodsDetail.xcassets */,
 			);
 			path = GoodsDetail;
@@ -2481,6 +2481,7 @@
 				04FE72E11EF3812E00DB838E /* Mall.xcassets in Resources */,
 				BCA17DDB1E8BB2AD00B4AFDA /* Bill.xcassets in Resources */,
 				04196AFF1ED68261005F64C2 /* AddressTableViewCell.xib in Resources */,
+				043145F21F07892300AE5473 /* MallPayResultView.xib in Resources */,
 				BCFE20921E77E206002BC28C /* ForgetPasswordOneViewController.xib in Resources */,
 				BC2E531F1E94FEB400F7A99C /* BankInfoCollectionViewCell.xib in Resources */,
 				0445BABF1ED52C08009226BD /* DiscoverRootTableViewCell.xib in Resources */,
@@ -2520,7 +2521,6 @@
 				04610D1F1EF264DD007D8EF5 /* SureReceivingView.xib in Resources */,
 				BCB9A7C51E89F4B600F3E966 /* Public.xcassets in Resources */,
 				0445BAC41ED55A85009226BD /* DiscoverCollectionViewCell.xib in Resources */,
-				040066D91F0246F600936E85 /* MallPayResultView.xib in Resources */,
 				040DCAB11EEA91BF00E78125 /* RecommendMerchantView.xib in Resources */,
 				BC9B3DDF1E7688AD003DC241 /* PersonCenterTableViewCell.xib in Resources */,
 				BCFE20941E77E206002BC28C /* ForgetPasswordTwoViewController.xib in Resources */,

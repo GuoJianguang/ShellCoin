@@ -20,6 +20,14 @@
     model.price = NullToSpace(dic[@"price"]);
     model.saleCount = NullToNumber(dic[@"saleCount"]);
     model.recommend = NullToNumber(dic[@"recommend"]);
+    
+    model.cashAmount = NullToNumber(dic[@"cashAmount"]);
+    model.commentCount = NullToNumber(dic[@"commentCount"]);
+    model.expectAmount = NullToNumber(dic[@"expectAmount"]);
+    model.consumeAmount = NullToNumber(dic[@"consumeAmount"]);
+    model.mchCode = NullToSpace(dic[@"mchCode"]);
+    model.freight = NullToNumber(dic[@"freight"]);
+
     return model;
 }
 

@@ -19,6 +19,13 @@
     self = [super init];
     if (self) {
         self = [[NSBundle mainBundle]loadNibNamed:@"MallPayResultView" owner:nil options:nil][0];
+        self.autResultTitleLabel.textColor = MacoColor;
+        self.autResultTitleLabel.adjustsFontSizeToFitWidth = YES;
+        self.autResultLabel.textColor = MacoDetailColor;
+        [self.checkBill setTitleColor:MacoTitleColor forState:UIControlStateNormal];
+        [self.backBtn setTitleColor:MacoTitleColor forState:UIControlStateNormal];
+        self.backgroundColor = [UIColor colorFromHexString:@"#faf8f6"];
+
     }
     return  self;
 }
@@ -26,14 +33,15 @@
 - (void)awakeFromNib
 {
     [super awakeFromNib];
-    self.autResultLabel.textColor = self.successLabel.textColor = MacoTitleColor;
     self.autResultLabel.adjustsFontSizeToFitWidth = YES;
     self.autResultLabel.numberOfLines = 2;
     
     if (TWitdh > 320) {
-        self.ViewHeight.constant = (TWitdh-100)*(550/520.);
+        self.leading.constant = 40;
+        self.trailing.constant = 40;
     }else{
-        self.ViewHeight.constant = (TWitdh-100)*(650/520.);
+        self.leading.constant = 40;
+        self.trailing.constant = 40;
     }
 }
 
@@ -45,36 +53,18 @@
 
 - (IBAction)checkBill:(id)sender {
     MyorderViewController *billVC = [[MyorderViewController alloc]init];
+    billVC.orderType = Myorder_type_waitSendGoods;
+    billVC.isFormMall = YES;
     [self.viewController.navigationController pushViewController:billVC animated:YES];
-    [self removeFromSuperview];
+//    [self removeFromSuperview];20
+    
 }
 
-- (IBAction)sureBtn:(UIButton *)sender {
-    
-    
-    [self.viewController.navigationController popViewControllerAnimated:YES];
-    [self removeFromSuperview];
-}
 
 - (void)setPayType:(Mall_PayTYpe )payType
 {
     _payType = payType;
-    switch (payType) {
-        case Mall_PayTYpe_wechat:
-            self.lineView.hidden=self.backBtn.hidden = self.checkBill.hidden = NO;
-            [self.sureBtn setTitle:@"" forState:UIControlStateNormal];
-            break;
-        case Mall_PayTYpe_alipay:
-            self.lineView.hidden=self.backBtn.hidden = self.checkBill.hidden = NO;
-            [self.sureBtn setTitle:@"" forState:UIControlStateNormal];
-            break;
-        case Mall_PayTYpe_blance:
-            self.lineView.hidden=self.backBtn.hidden = self.checkBill.hidden = NO;
-            [self.sureBtn setTitle:@"" forState:UIControlStateNormal];
-            break;
-        default:
-            break;
-    }
+
 }
 
 @end

@@ -79,6 +79,7 @@
 }
 - (void)setGoodsModel:(MallGoodsModel *)goodsModel{
     _goodsModel = goodsModel;
+    self.goodsNum.text = @"1";
 }
 
 #pragma mark - 获取商品规格
@@ -124,6 +125,7 @@
             [self.orderPrams setObject:NullToNumber(self.goodsNum.text) forKey:@"quantity"];
             sureVC.orderArry = [NSMutableArray arrayWithArray:@[self.orderPrams]];
             [self.viewController.navigationController pushViewController:sureVC animated:YES];
+            [self removeFromSuperview];
         }
             break;
         default:
@@ -145,7 +147,7 @@
         }
         
         for (int i = 0; i < guigeArray.count; i ++) {
-            TypeView *view = [[TypeView alloc]initWithFrame:CGRectMake(0, 35, TWitdh, 50) andDatasource:guigeArray[i][@"typeValue"] :guigeArray[i][@"typeName"]];
+            TypeView *view = [[TypeView alloc]initWithFrame:CGRectMake(0, 0, TWitdh, 50) andDatasource:guigeArray[i][@"typeValue"] :guigeArray[i][@"typeName"]];
             view.sepecId = guigeArray[i][@"typeValue"][0][@"id"];
             view.typeName = guigeArray[i][@"typeName"];
             view.specVal = guigeArray[i][@"typeValue"][0][@"specVal"];
@@ -156,14 +158,16 @@
             if (i>0) {
                 CGFloat viewY = CGRectGetMaxY([self.scrollContentView viewWithTag:view.tag-1].frame);
                 view.frame = CGRectMake(0, viewY, TWitdh, view.height);
+            }else{
+                view.frame = CGRectMake(0, 0, TWitdh, view.height);
+
             }
-            view.bounds = CGRectMake(0, 0, TWitdh, view.height);
             numbertop += view.height;
         }
         if (numbertop == 0) {
             return;
         }
-        self.numberViewTop.constant = numbertop + 15;
+        self.numberViewTop.constant = numbertop;
         self.scrollviewContentHeight.constant = numbertop + TWitdh*(30/75.) + 50;
 //        self.scrollView.contentSize = CGSizeMake(TWitdh, numbertop + TWitdh*(20/75.) + 50);
         
@@ -234,6 +238,10 @@
             self.goodsPrice.text = [NSString stringWithFormat:@"¥ %.2f",[NullToNumber(jsonObject[@"data"][@"cashAmount"]) doubleValue] +[NullToNumber(jsonObject[@"data"][@"expectAmount"]) doubleValue]];
             self.cartPrice =[NullToNumber(jsonObject[@"data"][@"cashAmount"]) doubleValue] +[NullToNumber(jsonObject[@"data"][@"expectAmount"]) doubleValue];
             self.sureBtn.enabled = YES;
+            self.goodsModel.cashAmount = NullToNumber(jsonObject[@"data"][@"cashAmount"]);
+            self.goodsModel.expectAmount = NullToNumber(jsonObject[@"data"][@"expectAmount"]);
+            self.goodsModel.consumeAmount = NullToNumber(jsonObject[@"data"][@"consumeAmount"]);
+
             [self.sureBtn setTitle:@"确认" forState:UIControlStateNormal];
             [self.sureBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
             self.sureBtn.backgroundColor = MacoColor;
@@ -279,56 +287,40 @@
 
 - (void)addShopCart
 {
-    NSData *data = [NSJSONSerialization dataWithJSONObject:[NSMutableArray arrayWithArray:@[self.orderPrams]] options:NSJSONWritingPrettyPrinted error:nil];
-    NSString *json = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
-    NSDictionary *prams = @{@"reqData":json,
-                            @"token":[ShellCoinUserInfo shareUserInfos].token};
-    [SVProgressHUD showWithStatus:@"正在请求数据..." maskType:SVProgressHUDMaskTypeBlack];
-    [HttpClient POST:@"shop/order/settleAmount/get" parameters:prams success:^(NSURLSessionDataTask *operation, id jsonObject) {
-        [SVProgressHUD dismiss];
-        if (IsRequestTrue) {
-            //查询是否已经有该规格商品
-            NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-            NSEntityDescription *entity = [NSEntityDescription entityForName:@"ShoopingCart" inManagedObjectContext:[CoreDataShoopingCarManagement shareManageMent].persistentContainer.viewContext];
-            [fetchRequest setEntity:entity];
-            // Specify criteria for filtering which objects to fetch
-            //谓词搜索
-            NSPredicate *predicate = [NSPredicate predicateWithFormat:@"goodsId=%@&&goodsSpec=%@&&account=%@",self.goodsModel.goodsId,self.specDetail,[ShellCoinUserInfo shareUserInfos].userid];
-            [fetchRequest setPredicate:predicate];
-            
-            NSError *error = nil;
-            NSArray *fetchedObjects = [[CoreDataShoopingCarManagement shareManageMent].persistentContainer.viewContext executeFetchRequest:fetchRequest error:&error];
-            if (fetchedObjects &&fetchedObjects.count > 0) {
-                ((ShoopingCart *)fetchedObjects[0]).goodsNum = ((ShoopingCart *)fetchedObjects[0]).goodsNum + [self.goodsNum.text intValue];
-                [[CoreDataShoopingCarManagement shareManageMent].persistentContainer.viewContext updatedObjects];
-                [[JAlertViewHelper shareAlterHelper]showTint:@"成功加入购物车" duration:2.];
-                return ;
-            }
-            //建立一个实体描述文件
-            NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"ShoopingCart" inManagedObjectContext:[CoreDataShoopingCarManagement shareManageMent].persistentContainer.viewContext];
-            //通过描述文件创建一个实体
-            ShoopingCart * goods = [[ShoopingCart alloc]initWithEntity: entityDescription insertIntoManagedObjectContext:[CoreDataShoopingCarManagement shareManageMent].persistentContainer.viewContext];
-            goods.account = [ShellCoinUserInfo shareUserInfos].userid;
-            goods.goodsId = self.goodsModel.goodsId;
-            goods.goodsName = self.goodsModel.name;
-            goods.goodsNum = (int)[self.goodsNum.text integerValue];
-            goods.goodsImage = self.goodsModel.coverImage;
-            goods.goodsSpec  =self.specDetail;
-            goods.goodsPrice = self.cartPrice;
-            goods.priceId = NullToSpace(self.orderPrams[@"priceId"]);
-            goods.goodsFreight = [self.goodsFreight doubleValue];
-            goods.cash = [NullToNumber(jsonObject[@"data"][@"totalCashAmount"]) doubleValue];
-            goods.coupons = [NullToNumber(jsonObject[@"data"][@"totalConsumeAmount"]) doubleValue];
-            goods.shellCoin = [NullToNumber(jsonObject[@"data"][@"totalExpectAmount"]) doubleValue];
-            
-            [[CoreDataShoopingCarManagement shareManageMent]saveContext];
-            [[JAlertViewHelper shareAlterHelper]showTint:@"成功加入购物车" duration:2.];
-
-        }
-    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
-        [SVProgressHUD dismiss];
-        [[JAlertViewHelper shareAlterHelper]showTint:@"加入购物车失败，请重试" duration:2.];
-    }];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"ShoopingCart" inManagedObjectContext:[CoreDataShoopingCarManagement shareManageMent].persistentContainer.viewContext];
+    [fetchRequest setEntity:entity];
+    // Specify criteria for filtering which objects to fetch
+    //谓词搜索
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"goodsId=%@&&goodsSpec=%@&&account=%@",self.goodsModel.goodsId,self.specDetail,[ShellCoinUserInfo shareUserInfos].userid];
+    [fetchRequest setPredicate:predicate];
+    
+    NSError *error = nil;
+    NSArray *fetchedObjects = [[CoreDataShoopingCarManagement shareManageMent].persistentContainer.viewContext executeFetchRequest:fetchRequest error:&error];
+    if (fetchedObjects &&fetchedObjects.count > 0) {
+        ((ShoopingCart *)fetchedObjects[0]).goodsNum = ((ShoopingCart *)fetchedObjects[0]).goodsNum + [self.goodsNum.text intValue];
+        [[CoreDataShoopingCarManagement shareManageMent].persistentContainer.viewContext updatedObjects];
+        [[JAlertViewHelper shareAlterHelper]showTint:@"成功加入购物车" duration:2.];
+        return ;
+    }
+    //建立一个实体描述文件
+    NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"ShoopingCart" inManagedObjectContext:[CoreDataShoopingCarManagement shareManageMent].persistentContainer.viewContext];
+    //通过描述文件创建一个实体
+    ShoopingCart * goods = [[ShoopingCart alloc]initWithEntity: entityDescription insertIntoManagedObjectContext:[CoreDataShoopingCarManagement shareManageMent].persistentContainer.viewContext];
+    goods.account = [ShellCoinUserInfo shareUserInfos].userid;
+    goods.goodsId = self.goodsModel.goodsId;
+    goods.goodsName = self.goodsModel.name;
+    goods.goodsNum = (int)[self.goodsNum.text integerValue];
+    goods.goodsImage = self.goodsModel.coverImage;
+    goods.goodsSpec  =self.specDetail;
+    goods.goodsPrice = self.cartPrice;
+    goods.priceId = NullToSpace(self.orderPrams[@"priceId"]);
+    goods.goodsFreight = [self.goodsModel.freight doubleValue];
+    goods.cash = [self.goodsModel.cashAmount doubleValue];
+    goods.coupons = [self.goodsModel.consumeAmount doubleValue];
+    goods.shellCoin = [self.goodsModel.expectAmount doubleValue];
+    [CoreDataShoopingCarManagement shareManageMent].isAddShopCart = YES;
+    [[CoreDataShoopingCarManagement shareManageMent]saveContext];
 
 }
 
