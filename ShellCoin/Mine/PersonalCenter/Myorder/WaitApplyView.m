@@ -30,7 +30,7 @@
         self.alerResultImageView.image = [UIImage imageNamed:@"pic8_personal"];
         [self.backBtn setBackgroundImage:[UIImage imageNamed:@"pic9_personal"] forState:UIControlStateNormal];
         [self.backBtn setTitle:@"取消申请" forState:UIControlStateNormal];
-        self.autResultLabel.text = @"买家正在处理您的申请，请耐心等待。若卖家48小时内未处理，您可通过投诉入口申请帮助。";
+        self.autResultLabel.text = @"卖家正在处理您的申请，请耐心等待。若卖家48小时内未处理，您可通过投诉入口申请帮助。";
     }
     return self;
 }

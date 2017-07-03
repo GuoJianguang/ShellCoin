@@ -77,8 +77,16 @@
 {
     NSData *data = [NSJSONSerialization dataWithJSONObject:self.orderArry options:NSJSONWritingPrettyPrinted error:nil];
     NSString *json = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
-    NSDictionary *prams = @{@"reqData":json,
-                            @"token":[ShellCoinUserInfo shareUserInfos].token};
+    NSDictionary *prams = [NSDictionary dictionary];
+   
+    if (self.isFormWaitPayOrder) {
+        prams = @{@"reqData":json,
+                  @"token":[ShellCoinUserInfo shareUserInfos].token,
+                  @"orderId":NullToSpace(self.waiPayOrderDic[@"data"][@"orderId"])};
+    }else{
+        prams = @{@"reqData":json,
+                  @"token":[ShellCoinUserInfo shareUserInfos].token};
+    }
     [SVProgressHUD showWithStatus:@"正在加载..." maskType:SVProgressHUDMaskTypeBlack];
     [HttpClient POST:@"shop/order/settleAmount/get" parameters:prams success:^(NSURLSessionDataTask *operation, id jsonObject) {
         [SVProgressHUD dismiss];
@@ -284,6 +292,10 @@
     [HttpClient POST:@"shop/order/add" parameters:prams success:^(NSURLSessionDataTask *operation, id jsonObject) {
         [SVProgressHUD dismiss];
         if (IsRequestTrue) {
+            if (self.isFormShoppingCart) {
+                [[NSNotificationCenter defaultCenter]postNotificationName:@"afterPayDeletOrder" object:self.yetSelectarray];
+                
+            }
             switch (self.payType) {
                 case MallPay_blance:
                 {
@@ -484,9 +496,9 @@
     [self.resultView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view).insets(insets);
     }];
-    if (self.isFormShoppingCart) {
-        [[NSNotificationCenter defaultCenter]postNotificationName:@"afterPayDeletOrder" object:self.yetSelectarray];
-        
-    }
+//    if (self.isFormShoppingCart) {
+//        [[NSNotificationCenter defaultCenter]postNotificationName:@"afterPayDeletOrder" object:self.yetSelectarray];
+//        
+//    }
 }
 @end

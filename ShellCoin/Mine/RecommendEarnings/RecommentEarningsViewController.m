@@ -37,6 +37,12 @@
         [weak_self getRequest:NO];
 
     }];
+    if (TWitdh == 320) {
+        self.height.constant = TWitdh*(33/75.);
+    }else{
+        self.height.constant = TWitdh*(30/75.);
+
+    }
     [self.talbeView noDataSouce];
     [self.talbeView.mj_header beginRefreshing];
 }

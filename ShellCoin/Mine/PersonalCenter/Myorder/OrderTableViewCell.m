@@ -18,7 +18,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     self.statusBtn.titleLabel.adjustsFontSizeToFitWidth = self.goodsNumber.adjustsFontSizeToFitWidth = self.goodsDetail.adjustsFontSizeToFitWidth = YES;
-    self.goodsName.textColor = self.goodsNumber.textColor =MacoTitleColor;
+    self.goodsName.textColor = self.goodsNumber.textColor =self.storeName.textColor =MacoTitleColor;
     self.goodsDetail.textColor = MacoDetailColor;
     [self.acitonBtn setTitleColor:MacoColor forState:UIControlStateNormal];
     
@@ -245,6 +245,13 @@
             self.sortImgaeView.image = [UIImage imageNamed:@"bg_status_label_red"];
         }
             break;
+        case 4:
+        {
+            [self.acitonBtn setTitle:@"售后中" forState:UIControlStateNormal];
+            self.enterImage.hidden = YES;
+            self.acitonBtn.enabled = NO;
+        }
+            break;
         default:
             break;
     }
@@ -252,45 +259,6 @@
 
 
 
-//switch ([self.dataModel.state integerValue]) {
-//    case 5://已退款
-//    {
-//        AfterSalesDetailViewController *afterDetailVC =[[AfterSalesDetailViewController alloc]init];
-//        afterDetailVC.dataModel = self.dataModel;
-//        [self.viewController.navigationController pushViewController:afterDetailVC animated:YES];
-//    }
-//        break;
-//    case 3://已完成
-//    {
-//        UIAlertController *alertcontroller = [UIAlertController alertControllerWithTitle:@"重要提示" message:@"您是否确认要删除该订单" preferredStyle:UIAlertControllerStyleAlert];
-//        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"点错了" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
-//        }];
-//        UIAlertAction *otherAction = [UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-//            //取消订单
-//            NSDictionary *parms = @{@"orderId":self.dataModel.orderId,
-//                                    @"token":[ShellCoinUserInfo shareUserInfos].token};
-//            [HttpClient POST:@"shop/order/delete" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
-//                if (IsRequestTrue) {
-//                    [[JAlertViewHelper shareAlterHelper]showTint:@"删除订单成功" duration:2.];
-//                    [[NSNotificationCenter defaultCenter]postNotificationName:@"cancelOrder" object:nil];
-//                }
-//                
-//            } failure:^(NSURLSessionDataTask *operation, NSError *error) {
-//                [[JAlertViewHelper shareAlterHelper]showTint:@"取消失败，请重试" duration:2.];
-//                
-//            }];
-//            
-//        }];
-//        [alertcontroller addAction:cancelAction];
-//        [alertcontroller addAction:otherAction];
-//        [self.viewController presentViewController:alertcontroller animated:YES completion:NULL];
-//        
-//    }
-//        break;
-//        
-//    default:
-//        break;
-//}
 
 
 @end

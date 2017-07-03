@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RecommentEarningsViewController">
             <connections>
                 <outlet property="backBtn" destination="Bo1-tC-aC1" id="07h-fy-Aa0"/>
+                <outlet property="height" destination="OdH-Pc-nMO" id="KQi-Af-GPo"/>
                 <outlet property="qrcodeBtn" destination="H0F-1D-934" id="JuB-Yo-1cQ"/>
                 <outlet property="recommendLabel" destination="TEy-d8-dpy" id="OXY-gx-JwD"/>
                 <outlet property="talbeView" destination="12y-cT-VCo" id="zBi-vA-DV6"/>
@@ -150,10 +151,10 @@
                         <constraint firstAttribute="bottom" secondItem="tPv-uM-EZg" secondAttribute="bottom" id="CxS-Qw-Wxb"/>
                         <constraint firstAttribute="trailing" secondItem="tPv-uM-EZg" secondAttribute="trailing" id="DwM-F0-e63"/>
                         <constraint firstItem="ttb-lV-lsv" firstAttribute="leading" secondItem="u30-fR-wo4" secondAttribute="leading" id="NWO-vZ-74D"/>
+                        <constraint firstAttribute="height" constant="150" id="OdH-Pc-nMO"/>
                         <constraint firstItem="1bX-lk-QVK" firstAttribute="top" secondItem="u30-fR-wo4" secondAttribute="top" constant="20" id="R3W-kC-Mx8"/>
                         <constraint firstAttribute="trailing" secondItem="ttb-lV-lsv" secondAttribute="trailing" id="Rya-W7-Qfe"/>
                         <constraint firstAttribute="bottom" secondItem="ttb-lV-lsv" secondAttribute="bottom" id="bD3-hM-VhO"/>
-                        <constraint firstAttribute="width" secondItem="u30-fR-wo4" secondAttribute="height" multiplier="75:30" id="cHs-0r-rit"/>
                         <constraint firstAttribute="trailing" secondItem="1bX-lk-QVK" secondAttribute="trailing" id="eNU-n5-xm8"/>
                         <constraint firstItem="ttb-lV-lsv" firstAttribute="top" secondItem="u30-fR-wo4" secondAttribute="top" id="nHv-v7-gaG"/>
                         <constraint firstItem="tPv-uM-EZg" firstAttribute="top" secondItem="1bX-lk-QVK" secondAttribute="bottom" id="oho-7P-GcK"/>
@@ -188,7 +189,7 @@
                 <constraint firstItem="u30-fR-wo4" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="tz4-FH-dKo"/>
                 <constraint firstAttribute="trailing" secondItem="12y-cT-VCo" secondAttribute="trailing" id="yxQ-eE-5m3"/>
             </constraints>
-            <point key="canvasLocation" x="321" y="-331"/>
+            <point key="canvasLocation" x="278" y="-420"/>
         </view>
     </objects>
     <resources>

@@ -166,7 +166,7 @@
     }else{
         self.goodsSpec.text =[NSString stringWithFormat:@"邮费:%.2f元",_dataModel.goodsFreight];
     }
-    self.goodsDetail.text = [NSString stringWithFormat:@"现金:%.2f元／贝壳币:%.2f个/优惠券:%.2f元",_dataModel.cash, _dataModel.shellCoin,_dataModel.coupons];
+    self.goodsDetail.text = [NSString stringWithFormat:@"现金:%.2f元／贝壳币:%.2f个/购物券:%.2f元",_dataModel.cash, _dataModel.shellCoin,_dataModel.coupons];
     [self.goodsImage sd_setImageWithURL:[NSURL URLWithString:_dataModel.pic] placeholderImage:LoadingErrorDefaultImageSquare];
     
     self.price.text = [NSString stringWithFormat:@"¥%.2f",(_dataModel.goodsPrice *_dataModel.goodsNum) + _dataModel.goodsFreight];

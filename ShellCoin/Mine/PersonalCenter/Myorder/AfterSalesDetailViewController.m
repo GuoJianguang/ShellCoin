@@ -25,6 +25,8 @@
     [self setLayerWithbor:self.view4];
     
     self.label1.textColor = self.label2.textColor = self.label3.textColor = self.label4.textColor = MacoDetailColor;
+    self.shellCoinLabel.textColor = self.shellCoin.textColor = self.buyCardLabel.textColor = self.buyCard.textColor = self.payWay.textColor = self.payWayLabel.textColor = self.backTotalLabel.textColor = self.aderessLabel.textColor = self.storeNameTF.textColor = self.backWayTF.textColor = self.resonTF.textColor = self.expainTF.textColor = MacoTitleColor;
+    self.backTotal.textColor = MacoColor;
     
     self.scrollView.bounces = YES;
     

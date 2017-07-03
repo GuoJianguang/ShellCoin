@@ -99,17 +99,40 @@
 #pragma mark - 确认收货输入支付密码
 - (void)goinputPassword:(NSNotification *)notfication
 {
-    [self.view addSubview:self.passwordView];
-    self.passwordView.passwordTF.text = @"";
-    self.passwordView.orderId = self.orderModel.orderId;
-    UIEdgeInsets insets = UIEdgeInsetsMake(0, 0, 0, 0);
-    [self.passwordView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self.view).insets(insets);
+    UIAlertController *alertcontroller = [UIAlertController alertControllerWithTitle:@"重要提示" message:@"是否确认收货？" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"点错了" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
     }];
-    self.passwordView.itemView.frame = CGRectMake(0, THeight , TWitdh, TWitdh*(260/375.));
-    [UIView animateWithDuration:0.5 animations:^{
-        self.passwordView.itemView.frame = CGRectMake(0, THeight - (TWitdh*(260/375.)), TWitdh, TWitdh*(260/375.));
+    UIAlertAction *otherAction = [UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        NSDictionary *prams = @{@"orderId":self.orderModel.orderId,
+                                @"token":[ShellCoinUserInfo shareUserInfos].token};
+        [SVProgressHUD showWithStatus:@"正在发送请求"];
+        [HttpClient POST:@"shop/order/confirm" parameters:prams success:^(NSURLSessionDataTask *operation, id jsonObject) {
+            [SVProgressHUD dismiss];
+            if (IsRequestTrue) {
+                [[NSNotificationCenter defaultCenter]postNotificationName:@"yetsureReceiving" object:nil];
+                [self.navigationController popViewControllerAnimated:YES];
+            }
+        } failure:^(NSURLSessionDataTask *operation, NSError *error) {
+            [SVProgressHUD dismiss];
+            [[JAlertViewHelper shareAlterHelper]showTint:@"确认收货失败，请重试" duration:2.0];
+        }];
+        
     }];
+    [alertcontroller addAction:cancelAction];
+    [alertcontroller addAction:otherAction];
+    [self presentViewController:alertcontroller animated:YES completion:NULL];
+    return;
+//    [self.view addSubview:self.passwordView];
+//    self.passwordView.passwordTF.text = @"";
+//    self.passwordView.orderId = self.orderModel.orderId;
+//    UIEdgeInsets insets = UIEdgeInsetsMake(0, 0, 0, 0);
+//    [self.passwordView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.edges.equalTo(self.view).insets(insets);
+//    }];
+//    self.passwordView.itemView.frame = CGRectMake(0, THeight , TWitdh, TWitdh*(260/375.));
+//    [UIView animateWithDuration:0.5 animations:^{
+//        self.passwordView.itemView.frame = CGRectMake(0, THeight - (TWitdh*(260/375.)), TWitdh, TWitdh*(260/375.));
+//    }];
 }
 
 #pragma mark - 确认收货成功
