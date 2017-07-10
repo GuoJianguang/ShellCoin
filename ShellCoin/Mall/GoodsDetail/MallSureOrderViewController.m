@@ -338,7 +338,6 @@
 }
 
 
-
 - (void)getBalancePayInfomation:(NSDictionary *)jsonObject
 {
     if ([[ShellCoinUserInfo shareUserInfos].payPassword isEqualToString:@""]) {
@@ -390,7 +389,6 @@
     self.balanceLabel.text = [NSString stringWithFormat:@"可用金额%.2f元",[[ShellCoinUserInfo shareUserInfos].aviableBalance doubleValue]];
     [[NSNotificationCenter defaultCenter]postNotificationName:@"orderPayComplete" object:nil];
     [self paySuccess];
-    
 }
 
 #pragma mark - 支付结果

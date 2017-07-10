@@ -20,7 +20,11 @@
 
 - (void)saveContext;
 
+/**
+   22  管理对象上下文
+   23  */
+@property (readonly, strong) NSManagedObjectContext *moc;
 
-- (BOOL)iscanModifythedata:(NSString *)goodsId withSpec:(NSString *)specDetail withNumber:(int)num;
+
 
 @end

@@ -16,9 +16,8 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view alpha="0.84999999999999998" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NKK-9z-DJc">
+                <view alpha="0.84999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NKK-9z-DJc">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IFI-L2-c8r">
@@ -232,15 +231,20 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="FZw-EE-san" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="5eA-Yk-bvh"/>
+                <constraint firstAttribute="trailing" secondItem="NKK-9z-DJc" secondAttribute="trailing" id="8d7-hP-7jQ"/>
                 <constraint firstAttribute="trailing" secondItem="5bn-HO-ddF" secondAttribute="trailing" id="D89-5t-BXG"/>
                 <constraint firstAttribute="bottom" secondItem="5bn-HO-ddF" secondAttribute="bottom" id="DM0-hn-V86"/>
+                <constraint firstItem="NKK-9z-DJc" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="FDu-vq-S4g"/>
                 <constraint firstAttribute="trailing" secondItem="IFI-L2-c8r" secondAttribute="trailing" id="Fnq-ho-Fkv"/>
+                <constraint firstItem="NKK-9z-DJc" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="N3e-Aq-XSO"/>
                 <constraint firstItem="IFI-L2-c8r" firstAttribute="top" secondItem="FZw-EE-san" secondAttribute="bottom" id="THi-2J-9MI"/>
                 <constraint firstItem="5bn-HO-ddF" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="UQr-58-lZ2"/>
+                <constraint firstAttribute="bottom" secondItem="NKK-9z-DJc" secondAttribute="bottom" id="XrU-zl-dhD"/>
                 <constraint firstItem="IFI-L2-c8r" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="bvr-A7-knP"/>
                 <constraint firstItem="5bn-HO-ddF" firstAttribute="top" secondItem="IFI-L2-c8r" secondAttribute="bottom" id="hI7-Kf-aZq"/>
                 <constraint firstAttribute="trailing" secondItem="FZw-EE-san" secondAttribute="trailing" id="wst-aN-WQa"/>
             </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="addBtn" destination="ah8-Va-EBP" id="ytU-2E-8Cf"/>
                 <outlet property="backView" destination="NKK-9z-DJc" id="Mta-4I-s9Q"/>

@@ -47,7 +47,7 @@
     
     //查询是否已经有该规格商品
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"ShoopingCart" inManagedObjectContext:[CoreDataShoopingCarManagement shareManageMent].persistentContainer.viewContext];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"ShoopingCart" inManagedObjectContext:[CoreDataShoopingCarManagement shareManageMent].moc];
     [fetchRequest setEntity:entity];
     // Specify criteria for filtering which objects to fetch
     //谓词搜索
@@ -56,7 +56,7 @@
     [fetchRequest setPredicate:predicate];
     
     NSError *error = nil;
-    NSArray *fetchedObjects = [[CoreDataShoopingCarManagement shareManageMent].persistentContainer.viewContext executeFetchRequest:fetchRequest error:&error];
+    NSArray *fetchedObjects = [[CoreDataShoopingCarManagement shareManageMent].moc executeFetchRequest:fetchRequest error:&error];
     if (fetchedObjects &&fetchedObjects.count > 0) {
         ((ShoopingCart *)fetchedObjects[0]).goodsNum = count;
         [CoreDataShoopingCarManagement shareManageMent].isAddShopCart = NO;
@@ -83,7 +83,7 @@
     
     //查询是否已经有该规格商品
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"ShoopingCart" inManagedObjectContext:[CoreDataShoopingCarManagement shareManageMent].persistentContainer.viewContext];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"ShoopingCart" inManagedObjectContext:[CoreDataShoopingCarManagement shareManageMent].moc];
     [fetchRequest setEntity:entity];
     // Specify criteria for filtering which objects to fetch
     //谓词搜索
@@ -92,7 +92,7 @@
     [fetchRequest setPredicate:predicate];
     
     NSError *error = nil;
-    NSArray *fetchedObjects = [[CoreDataShoopingCarManagement shareManageMent].persistentContainer.viewContext executeFetchRequest:fetchRequest error:&error];
+    NSArray *fetchedObjects = [[CoreDataShoopingCarManagement shareManageMent].moc executeFetchRequest:fetchRequest error:&error];
     if (fetchedObjects &&fetchedObjects.count > 0) {
         ((ShoopingCart *)fetchedObjects[0]).goodsNum = count;
         [CoreDataShoopingCarManagement shareManageMent].isAddShopCart = NO;
@@ -110,7 +110,7 @@
     UIAlertAction *otherAction = [UIAlertAction actionWithTitle:@"删除" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         //查询是否已经有该规格商品
         NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-        NSEntityDescription *entity = [NSEntityDescription entityForName:@"ShoopingCart" inManagedObjectContext:[CoreDataShoopingCarManagement shareManageMent].persistentContainer.viewContext];
+        NSEntityDescription *entity = [NSEntityDescription entityForName:@"ShoopingCart" inManagedObjectContext:[CoreDataShoopingCarManagement shareManageMent].moc];
         [fetchRequest setEntity:entity];
         // Specify criteria for filtering which objects to fetch
         //谓词搜索
@@ -118,9 +118,9 @@
         [fetchRequest setPredicate:predicate];
         
         NSError *error = nil;
-        NSArray *fetchedObjects = [[CoreDataShoopingCarManagement shareManageMent].persistentContainer.viewContext executeFetchRequest:fetchRequest error:&error];
+        NSArray *fetchedObjects = [[CoreDataShoopingCarManagement shareManageMent].moc executeFetchRequest:fetchRequest error:&error];
         for (ShoopingCart *cart in fetchedObjects) {
-            [[CoreDataShoopingCarManagement shareManageMent].persistentContainer.viewContext deleteObject:cart];
+            [[CoreDataShoopingCarManagement shareManageMent].moc deleteObject:cart];
         }
         [CoreDataShoopingCarManagement shareManageMent].isAddShopCart = NO;
         [[CoreDataShoopingCarManagement shareManageMent] saveContext];

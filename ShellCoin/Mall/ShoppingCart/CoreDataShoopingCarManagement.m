@@ -11,8 +11,12 @@
 
 static CoreDataShoopingCarManagement *instance;
 
+
 @implementation CoreDataShoopingCarManagement
 
+#pragma mark - Core Data stack
+// 如果重写了只读属性的 getter 方法，编译器不再提供 _成员变量
+@synthesize moc = _moc;
 
 + (CoreDataShoopingCarManagement *)shareManageMent
 {
@@ -73,36 +77,43 @@ static CoreDataShoopingCarManagement *instance;
 
     }
 }
-
-
-- (BOOL)iscanModifythedata:(NSString *)goodsId withSpec:(NSString *)specDetail withNumber:(int)num
-{
-    //查询数据
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"ShoopingCart" inManagedObjectContext:instance.persistentContainer.viewContext];
-    [fetchRequest setEntity:entity];
-    // Specify criteria for filtering which objects to fetch
-    //谓词搜索
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"goodsId=%@&&goodsSpec=%@",goodsId,specDetail];
-    [fetchRequest setPredicate:predicate];
-    // Specify how the fetched objects should be sorted
-    //排序方法（这里为按照年龄升序排列）
-//    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"age" ascending:YES];
-//    [fetchRequest setSortDescriptors:[NSArray arrayWithObjects:sortDescriptor, nil]];
+/**
+ 19  为了低版本的兼容
+ 20  */
+- (NSManagedObjectContext *)moc {
     
-    NSError *error = nil;
-    NSArray *fetchedObjects = [instance.persistentContainer.viewContext executeFetchRequest:fetchRequest error:&error];
-//    if (fetchedObjects == nil) {
-//        NSLog(@"数据查询错误%@",error);
-//    }else{
-//        if (fetchedObjects.count != 0) {
-//            ((ShoopingCart *)fetchedObjects[0]).goodsNum = ((ShoopingCart *)fetchedObjects[0]).goodsNum+ num ;
-//        }
-//        [self saveContext];
-//        return NO;
-//    }
-
-        return YES;
-}
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 10.0) {
+        return instance.persistentContainer.viewContext;
+    }
+    if (_moc != nil) {
+         return _moc;
+     }
+     // 互斥锁，应该锁定的代码尽量少！
+     @synchronized (self) {
+         // 1. 实例化管理上下文
+         _moc = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
+         // 2. 管理对象模型（实体）
+         NSManagedObjectModel *mom = [NSManagedObjectModel mergedModelFromBundles:nil];
+         // 3. 持久化存储调度器
+         NSPersistentStoreCoordinator *psc = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:mom];
+         // 4. 添加数据库
+         /**
+          1> 数据存储类型
+          3> 保存 SQLite 数据库文件的 URL
+          4> 设置数据库选项
+          */
+         NSString *cacheDir = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES).lastObject;
+         NSString *path = [cacheDir stringByAppendingPathComponent:@"ys.db"];
+         // 将本地文件的完整路径转换成 文件 URL
+         NSURL *url = [NSURL fileURLWithPath:path];
+         NSDictionary *options = @{NSMigratePersistentStoresAutomaticallyOption: @(YES),
+                                   NSInferMappingModelAutomaticallyOption: @(YES)};
+         [psc addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:url options:options error:NULL];
+         // 5. 给管理上下文指定存储调度器
+         _moc.persistentStoreCoordinator = psc;
+     }
+    
+     return _moc;
+ }
 
 @end

@@ -288,7 +288,9 @@
 - (void)addShopCart
 {
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"ShoopingCart" inManagedObjectContext:[CoreDataShoopingCarManagement shareManageMent].persistentContainer.viewContext];
+//    NSEntityDescription *entity = [NSEntityDescription entityForName:@"ShoopingCart" inManagedObjectContext:[CoreDataShoopingCarManagement shareManageMent].moc];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"ShoopingCart" inManagedObjectContext:[CoreDataShoopingCarManagement shareManageMent].moc];
+
     [fetchRequest setEntity:entity];
     // Specify criteria for filtering which objects to fetch
     //谓词搜索
@@ -296,17 +298,20 @@
     [fetchRequest setPredicate:predicate];
     
     NSError *error = nil;
-    NSArray *fetchedObjects = [[CoreDataShoopingCarManagement shareManageMent].persistentContainer.viewContext executeFetchRequest:fetchRequest error:&error];
+    NSArray *fetchedObjects = [[CoreDataShoopingCarManagement shareManageMent].moc executeFetchRequest:fetchRequest error:&error];
     if (fetchedObjects &&fetchedObjects.count > 0) {
         ((ShoopingCart *)fetchedObjects[0]).goodsNum = ((ShoopingCart *)fetchedObjects[0]).goodsNum + [self.goodsNum.text intValue];
-        [[CoreDataShoopingCarManagement shareManageMent].persistentContainer.viewContext updatedObjects];
+        [[CoreDataShoopingCarManagement shareManageMent].moc updatedObjects];
         [[JAlertViewHelper shareAlterHelper]showTint:@"成功加入购物车" duration:2.];
         return ;
     }
     //建立一个实体描述文件
-    NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"ShoopingCart" inManagedObjectContext:[CoreDataShoopingCarManagement shareManageMent].persistentContainer.viewContext];
+//    NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"ShoopingCart" inManagedObjectContext:[CoreDataShoopingCarManagement shareManageMent].moc];
+    NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"ShoopingCart" inManagedObjectContext:[CoreDataShoopingCarManagement shareManageMent].moc];
+
     //通过描述文件创建一个实体
-    ShoopingCart * goods = [[ShoopingCart alloc]initWithEntity: entityDescription insertIntoManagedObjectContext:[CoreDataShoopingCarManagement shareManageMent].persistentContainer.viewContext];
+//    ShoopingCart * goods = [[ShoopingCart alloc]initWithEntity: entityDescription insertIntoManagedObjectContext:[CoreDataShoopingCarManagement shareManageMent].moc];
+    ShoopingCart * goods = [[ShoopingCart alloc]initWithEntity: entityDescription insertIntoManagedObjectContext:[CoreDataShoopingCarManagement shareManageMent].moc];
     goods.account = [ShellCoinUserInfo shareUserInfos].userid;
     goods.goodsId = self.goodsModel.goodsId;
     goods.goodsName = self.goodsModel.name;
